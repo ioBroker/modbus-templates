@@ -22,3 +22,12 @@ We start the following:
     * input-register.tsv
     * holding-register.tsv
   3. If relevant we could also have a settings.jpg or such
+
+## How to getmy exports in here?
+In fact there are two options
+
+### Create a Pull request
+You can use the GitHub Web editor to create a fork, add folders and files and provide a Pull Request
+
+### Create an Issue with all Files attached
+If you find this whole GitHub stuff too complicated then create an issue cin this repository and add all infos and tsv Files as attachements (please not inline as text!) there. Then we take it over
