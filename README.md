@@ -12,10 +12,10 @@ What if only one user needs to make this work to collect all registers and field
 
 We are now just at the beginning, so we need to find the best way together.
 We start the following:
-* In the repository we have folders for "device categories" (We build then as we add devices when we find out that a new device do not match to extisting categories
-* For each device we add another folder wuthj the device name
+* In the repository we have folders for "device categories" (We build then as we add devices when we find out that a new device do not match to existing categories
+* For each device we add another folder with the device name
 * In there we have some files
-  1. **device.md**: AN md File with more information to the defice, the Full name, potential other compataible devices and specialsettings. Lets try to fnd a template structure together
+  1. **device.md**: AN md File with more information to the device, the Full name, potential other compatible devices and special settings. Let's try to fnd a template structure together
   2. **TYPE.tsv**: this is the Exported TSV File with the register definitions for the device by relevant register type (if relevant)
     * discrete-inputs.tsv
     * discrete-outputs.tsv
@@ -23,11 +23,11 @@ We start the following:
     * holding-register.tsv
   3. If relevant we could also have a settings.jpg or such
 
-## How to getmy exports in here?
+## How to get my exports in here?
 In fact there are two options
 
 ### Create a Pull request
 You can use the GitHub Web editor to create a fork, add folders and files and provide a Pull Request
 
 ### Create an Issue with all Files attached
-If you find this whole GitHub stuff too complicated then create an issue cin this repository and add all infos and tsv Files as attachements (please not inline as text!) there. Then we take it over
+If you find this whole GitHub stuff too complicated then create an issue cin this repository and add all infos and tsv Files as attachments (please not inline as text!) there. Then we take it over
