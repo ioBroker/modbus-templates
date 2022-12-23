@@ -15,7 +15,7 @@ We start the following:
 * In the repository we have folders for "device categories" (We build then as we add devices when we find out that a new device do not match to existing categories
 * For each device we add another folder with the device name
 * In there we have some files
-  1. **details.md**: AN md File with more information to the device, the Full name, potential other compatible devices and special settings. Let's try to fnd a template structure together
+  1. **README.md**: AN md File with more information to the device, the Full name, potential other compatible devices and special settings. Let's try to fnd a template structure together
   2. **TYPE.tsv**: this is the Exported TSV File with the register definitions for the device by relevant register type (if relevant)
     * discrete-inputs.tsv
     * discrete-outputs.tsv
