@@ -23,5 +23,5 @@
 
 ## Einstellungen im Modbus-Adapter:
 
-![Unbenannt](https://user-images.githubusercontent.com/38273154/207982763-34709e36-e280-49e4-9943-6b3d9ab22201.PNG)
-![Unbenannt1](https://user-images.githubusercontent.com/38273154/207982772-a458dd00-75b5-4d54-bf97-0156e2f4c997.PNG)
+![Unbenannt](sungrow1.png)
+![Unbenannt1](sungrow2.png)
