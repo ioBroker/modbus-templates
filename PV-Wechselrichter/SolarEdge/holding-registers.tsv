@@ -1,0 +1,42 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+40001	SunSpecID	C_SunSpec_ID		uint32be	2	1	0		state		true			
+40003	SunSpecDID	C_SunSpec_DID		uint16be	1	1	0		state		true			
+40004	SunSpecLength	C_SunSpec_Length		uint16be	1	1	0		state		true			
+40005	Manufacturer	C_Manufacturer		string	16	1	0		state		true			
+40021	Model	C_Model		string	16	1	0		state		true			
+40045	Version	C_Version		string	8	1	0		state		true			
+40053	SerialNumber	C_SerialNumber		string	16	1	0		state		true			
+40069	DeviceAddress	C_DeviceAddress		uint16be	1	1	0		state		true			
+40070	PhaseTypes	C_SunSpec_DID		uint16be	1	1	0		state		true			
+40071	SunSpecLength	C_SunSpec_Length		uint16be	1	1	0		state		true			
+40072	TotalCurrent	I_AC_Current	A	uint16be	1	1	0		value		true			
+40073	TotalCurrentL1	I_AC_CurrentA	A	uint16be	1	1	0		value		true			
+40074	TotalCurrentL2	I_AC_CurrentB	A	uint16be	1	1	0		value		true			
+40075	TotalCurrentL3	I_AC_CurrentC	A	uint16be	1	1	0		value		true			
+40076	TotalCurrentSF	I_AC_Current_SF		int16be	1	1	0		state		true			
+40080	VoltageL1N	I_AC_VoltageAN	V	uint16be	1	1	0		value		true			
+40081	VoltageL2N	I_AC_VoltageBN	V	uint16be	1	1	0		value		true			
+40082	VoltageL3N	I_AC_VoltageCN	V	uint16be	1	1	0		value		true			
+40083	VoltageSF	I_AC_Voltage_SF		int16be	1	1	0		state		true			
+40084	Power	I_AC_Power	W	uint16be	1	1	0		value		true			
+40085	PowerSF	I_AC_Power_SF		int16be	1	1	0		state		true			
+40086	Frequency	I_AC_Frequency	Hz	uint16be	1	1	0		value		true			
+40087	FrequencySF	I_AC_Frequency_SF		int16be	1	1	0		state		true			
+40088	VA	I_AC_VA	VA	int16be	1	1	0		value		true			
+40089	VASF	I_AC_VA_SF		int16be	1	1	0		state		true			
+40090	VAR	I_AC_VAR	VAR	int16be	1	1	0		value		true			
+40091	VARSF	I_AC_VAR_SF		int16be	1	1	0		state		true			
+40092	PF	I_AC_PF	%	int16be	1	1	0		value		true			
+40093	PFSF	I_AC_PF_SF		int16be	1	1	0		state		true			
+40094	TotalEnergy	I_AC_Energy_WH	Wh	uint32be	2	1	0		value		true			
+40096	TotalEnergySF	I_AC_Energy_WH_SF		int16be	1	1	0		state		true			
+40097	DCCurrent	I_DC_Current	A	uint16be	1	1	0		value		true			
+40098	DCCurrentSF	I_DC_Current_SF		int16be	1	1	0		state		true			
+40099	DCVoltage	I_DC_Voltage	V	uint16be	1	1	0		value		true			
+40100	DCVoltageSF	I_DC_Voltage_SF		int16be	1	1	0		state		true			
+40101	DCPower	I_DC_Power	W	int16be	1	1	0		value		true			
+40102	DCPowerSF	I_DC_Power_SF		int16be	1	1	0		state		true			
+40104	Temp	I_Temp_SF		int16be	1	1	0		state		true			
+40107	TempSF	I_Temp_Sink	°C	int16be	1	1	0		value		true			
+40108	Status	I_Status		uint16be	1	1	0		state		true			
+40109	StatusVendor	I_Status_Vendor		uint16be	1	1	0		state		true			
