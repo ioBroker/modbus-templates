@@ -2,7 +2,7 @@
 
 ---------------------------------------------------------
 
-## Weitere kompatible Sungrow Wechselrichter:
+## Weitere kompatible SolarEdge Wechselrichter:
 
 - SE3K
 - SE4K
