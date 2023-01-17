@@ -1,0 +1,81 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+40001	SunSpecID	C_SunSpec_ID		uint32be	2	1	0		state		true	false	false	false
+40003	SunSpecDID	C_SunSpec_DID		uint16be	1	1	0		state		true	false	false	false
+40004	SunSpecLength	C_SunSpec_Length		uint16be	1	1	0		state		true	false	false	false
+40005	Manufacturer	C_Manufacturer		string	16	1	0		state		true	false	false	false
+40021	Model	C_Model		string	16	1	0		state		true	false	false	false
+40045	Version	C_Version		string	8	1	0		state		true	false	false	false
+40053	SerialNumber	C_SerialNumber		string	16	1	0		state		true	false	false	false
+40069	DeviceAddress	C_DeviceAddress		uint16be	1	1	0		state		true	false	false	false
+40070	PhaseTypes	C_SunSpec_DID		uint16be	1	1	0		state		true	false	false	false
+40071	SunSpecLength	C_SunSpec_Length		uint16be	1	1	0		state		true	false	false	false
+40072	CurrentTotal	I_AC_Current	A	uint16be	1	1	0		value		true	false	false	false
+40073	CurrentL1	I_AC_CurrentA	A	uint16be	1	1	0		value		true	false	false	false
+40074	CurrentL2	I_AC_CurrentB	A	uint16be	1	1	0		value		true	false	false	false
+40075	CurrentL3	I_AC_CurrentC	A	uint16be	1	1	0		value		true	false	false	false
+40076	CurrentSF	I_AC_Current_SF		int16be	1	1	0		state		true	false	false	false
+40080	VoltageL1N	I_AC_VoltageAN	V	uint16be	1	1	0		value		true	false	false	false
+40081	VoltageL2N	I_AC_VoltageBN	V	uint16be	1	1	0		value		true	false	false	false
+40082	VoltageL3N	I_AC_VoltageCN	V	uint16be	1	1	0		value		true	false	false	false
+40083	VoltageSF	I_AC_Voltage_SF		int16be	1	1	0		state		true	false	false	false
+40084	Power	I_AC_Power	W	uint16be	1	1	0		value		true	false	false	false
+40085	PowerSF	I_AC_Power_SF		int16be	1	1	0		state		true	false	false	false
+40086	Frequency	I_AC_Frequency	Hz	uint16be	1	1	0		value		true	false	false	false
+40087	FrequencySF	I_AC_Frequency_SF		int16be	1	1	0		state		true	false	false	false
+40088	VA	I_AC_VA	VA	int16be	1	1	0		value		true	false	false	false
+40089	VASF	I_AC_VA_SF		int16be	1	1	0		state		true	false	false	false
+40090	VAR	I_AC_VAR	VAR	int16be	1	1	0		value		true	false	false	false
+40091	VARSF	I_AC_VAR_SF		int16be	1	1	0		state		true	false	false	false
+40092	PF	I_AC_PF	%	int16be	1	1	0		value		true	false	false	false
+40093	PFSF	I_AC_PF_SF		int16be	1	1	0		state		true	false	false	false
+40094	TotalEnergy	I_AC_Energy_WH	Wh	uint32be	2	1	0		value		true	false	false	false
+40096	TotalEnergySF	I_AC_Energy_WH_SF		int16be	1	1	0		state		true	false	false	false
+40097	DCCurrent	I_DC_Current	A	uint16be	1	1	0		value		true	false	false	false
+40098	DCCurrentSF	I_DC_Current_SF		int16be	1	1	0		state		true	false	false	false
+40099	DCVoltage	I_DC_Voltage	V	uint16be	1	1	0		value		true	false	false	false
+40100	DCVoltageSF	I_DC_Voltage_SF		int16be	1	1	0		state		true	false	false	false
+40101	DCPower	I_DC_Power	W	int16be	1	1	0		value		true	false	false	false
+40102	DCPowerSF	I_DC_Power_SF		int16be	1	1	0		state		true	false	false	false
+40104	Temp	I_Temp_SF		int16be	1	1	0		state		true	false	false	false
+40107	TempSF	I_Temp_Sink	°C	int16be	1	1	0		value		true	false	false	false
+40108	Status	I_Status		uint16be	1	1	0		state		true	false	false	false
+40109	StatusVendor	I_Status_Vendor		uint16be	1	1	0		state		true	false	false	false
+40140	MeterModel	M_C_Model		string	16	1	0		state		true	false	false	false
+40164	MeterVersion	M_C_Version		string	8	1	0		state		true	false	false	false
+40172	MeterSerialNumber	M_C_SerialNumber		string	16	1	0		state		true	false	false	false
+40191	MeterCurrentTotal	M_AC_Current	A	int16be	1	1	0		value		true	false	false	false
+40192	MeterCurrentL1	M_AC_Current_A	A	int16be	1	1	0		value		true	false	false	false
+40193	MeterCurrentL2	M_AC_Current_B	A	int16be	1	1	0		value		true	false	false	false
+40194	MeterCurrentL3	M_AC_Current_C	A	int16be	1	1	0		value		true	false	false	false
+40195	MeterCurrentSF	M_AC_Current_SF		int16be	1	1	0		state		true	false	false	false
+40196	MeterVoltageLN	M_AC_Voltage_L_N	V	int16be	1	1	0		value		true	false	false	false
+40197	MeterVoltageL1N	M_AC_Voltage_A_N	V	int16be	1	1	0		value		true	false	false	false
+40198	MeterVoltageL2N	M_AC_Voltage_B_N	V	int16be	1	1	0		value		true	false	false	false
+40199	MeterVoltageL3N	M_AC_Voltage_C_N	V	int16be	1	1	0		value		true	false	false	false
+40204	MeterVoltageSF	M_AC_Voltage_SF		int16be	1	1	0		state		true	false	false	false
+40205	MeterFrequency	M_AC_Freq	Hz	int16be	1	1	0		value		true	false	false	false
+40206	MeterFrequencySF	M_AC_Freq_SF		int16be	1	1	0		state		true	false	false	false
+40207	MeterPowerTotal	M_AC_Power	W	int16be	1	1	0		value		true	false	false	false
+40208	MeterPowerL1	M_AC_Power_A	W	int16be	1	1	0		value		true	false	false	false
+40209	MeterPowerL2	M_AC_Power_B	W	int16be	1	1	0		value		true	false	false	false
+40210	MeterPowerL3	M_AC_Power_C	W	int16be	1	1	0		value		true	false	false	false
+40211	MeterPowerSF	M_AC_Power_SF		int16be	1	1	0		state		true	false	false	false
+40212	MeterApparentPowerTotal	M_AC_VA	VA	int16be	1	1	0		value		true	false	false	false
+40213	MeterApparentPowerL1	M_AC_VA_A	VA	int16be	1	1	0		value		true	false	false	false
+40214	MeterApparentPowerL2	M_AC_VA_B	VA	int16be	1	1	0		value		true	false	false	false
+40215	MeterApparentPowerL3	M_AC_VA_C	VA	int16be	1	1	0		value		true	false	false	false
+40216	MeterApparentPowerSF	M_AC_VA_SF		int16be	1	1	0		state		true	false	false	false
+40217	MeterReactivePowerTotal	M_AC_VAR	VAR	int16be	1	1	0		value		true	false	false	false
+40218	MeterReactivePowerL1	M_AC_VAR_A	VAR	int16be	1	1	0		value		true	false	false	false
+40219	MeterReactivePowerL2	M_AC_VAR_B	VAR	int16be	1	1	0		value		true	false	false	false
+40220	MeterReactivePowerL3	M_AC_VAR_C	VAR	int16be	1	1	0		value		true	false	false	false
+40221	MeterReactivePowerSF	M_AC_VAR_SF		int16be	1	1	0		state		true	false	false	false
+40227	MeterEnergyExportedTotal	M_Exported	Wh	uint32be	2	1	0		value		true	false	false	false
+40229	MeterEnergyExportedL1	M_Exported_A	Wh	uint32be	2	1	0		value		true	false	false	false
+40231	MeterEnergyExportedL2	M_Exported_B	Wh	uint32be	2	1	0		value		true	false	false	false
+40233	MeterEnergyExportedL3	M_Exported_C	Wh	uint32be	2	1	0		value		true	false	false	false
+40235	MeterEnergyImportedTotal	M_Imported	Wh	uint32be	2	1	0		value		true	false	false	false
+40237	MeterEnergyImportedL1	M_Imported_A	Wh	uint32be	2	1	0		value		true	false	false	false
+40239	MeterEnergyImportedL2	M_Imported_B	Wh	uint32be	2	1	0		value		true	false	false	false
+40241	MeterEnergyImportedL3	M_Imported_C	Wh	uint32be	2	1	0		value		true	false	false	false
+40243	MeterEnergySF	M_Energy_W_SF		int16be	1	1	0		state		true	false	false	false
