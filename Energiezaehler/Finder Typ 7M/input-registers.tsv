@@ -1,0 +1,94 @@
+_address	deviceId	name	description	unit	type	len	factor	offset	formula	role	room	cw	isScale
+30002	33	 Model Number	Model-Nummer		string	8	1	0				false	false
+30010	33	Serial Nummer	Seriennummer		string	8	1	0				false	false
+30025	33	Com Typ	0 = keine, 2 = RS485		uint16be	1	1	0				false	false
+30029	33	Memory type	0=No memory,3=8MB,4=16MB Flash		uint16be	1	1	0				false	false
+30077	33	MID lock status	0=unlocked, 1=locked		uint16be	1	1	0				false	false
+30104	33	Run Time	seconds		uint32be	2	1	0				false	false
+30107	33	Frequency	Frequenz (Hz)	Hz	uint16be	1	0.01	0				false	false
+30109	33	U1	Spannung L1 (V)	V	uint16be	1	0.1	0				false	false
+30111	33	U2	Spannung L2 (V)	V	uint16be	1	0.1	0				false	false
+30113	33	U3	Spannung L3 (V)	V	uint16be	1	0.1	0				false	false
+30115	33	Uavg (phase to neutral)	Spannung L gegen N	V	int16be	1	0.1	0				false	false
+30116	33	j12 (angle between U1 and U2)	Phasenverschiebungswinkel U1 und U2	°	int16be	1	0.01	0				false	false
+30117	33	j23 (angle between U2 and U3)	Phasenverschiebungswinkel U2 und U3	°	int16be	1	0.01	0				false	false
+30118	33	j31 (angle between U3 and U1)	Phasenverschiebungswinkel U3 und U1	°	int16be	1	0.01	0				false	false
+30120	33	U12	Spannung L12 (V)	V	uint16be	1	0.1	0				false	false
+30122	33	U23	Spannung L23 (V)	V	uint16be	1	0.1	0				false	false
+30124	33	U31	Spannung L31 (V)	V	uint16be	1	0.1	0				false	false
+30128	33	I1 mA	Strom I1 (mA)	mA	uint16be	1	1	0				false	false
+30130	33	I2 mA	Strom I2 (mA)	mA	uint16be	1	1	0				false	false
+30132	33	I3 mA	Strom I3 (mA)	mA	uint16be	1	1	0				false	false
+30138	33	Ivag	Strom ...	mA	uint16be	1	1	0				false	false
+30140	33	S I	Ströme addiert	mA	uint16be	1	1	0				false	false
+30142	33	Active Power Total (Pt)		W	int16be	1	0.1	0				false	false
+30144	33	Active Power Phase L1	Leistung L1 (W)	W	int16be	1	0.1	0				false	false
+30146	33	Active Power Phase L2	Leistung L2 (W)	W	int16be	1	0.1	0				false	false
+30148	33	Active Power Phase L3	Leistung L3 (W)	W	int16be	1	0.1	0				false	false
+30150	33	Reactive Power Total (Qt)		var	int16be	1	0.1	0				false	false
+30152	33	Reactive Power Phase L1 (Q1)		var	int16be	1	0.1	0				false	false
+30154	33	Reactive Power Phase L2 (Q2)		var	int16be	1	0.1	0				false	false
+30156	33	Reactive Power Phase L3 (Q3)		var	uint16be	1	0.1	0				false	false
+30158	33	Apparent Power Total (St)		VA	uint16be	1	0.1	0				false	false
+30160	33	Apparent Power Phase L1 (S1)		VA	uint16be	1	0.1	0				false	false
+30162	33	Apparent Power Phase L2 (S2)		VA	uint16be	1	0.1	0				false	false
+30164	33	Apparent Power Phase L3 (S3)		VA	uint16be	1	0.1	0				false	false
+30166	33	Power Factor Total (PFt)		PFt	uint16be	1	0.0001	0				false	false
+30168	33	Power Factor Phase 1 (PF1)		PF1	uint16be	1	0.0001	0				false	false
+30170	33	Power Factor Phase 2 (PF2)		PF2	uint16be	1	0.0001	0				false	false
+30172	33	Power Factor Phase 3 (PF3)		PF3	uint16be	1	0.0001	0				false	false
+30173	33	Power Angle Total  (atan2(Pt,Qt))		°	int16be	1	0.01	0				false	false
+30174	33	 j1 (angle between U1 and I1)		°	int16be	1	0.01	0				false	false
+30175	33	j2 (angle between U2 and I2)		°	int16be	1	0.01	0				false	false
+30176	33	j3 (angle between U3 and I3)		°	int16be	1	0.01	0				false	false
+30183	33	U1 THD%	THD der Spannung U1	%	uint16be	1	0.01	0				false	false
+30184	33	U2 THD%	THD der Spannung U2	%	uint16be	1	0.01	0				false	false
+30185	33	U3 THD%	THD der Spannung U3	%	uint16be	1	0.01	0				false	false
+30189	33	I1 THD%	THD des Stroms I1	%	uint16be	1	0.01	0				false	false
+30190	33	I2 THD%	THD des Stroms I2	%	uint16be	1	0.01	0				false	false
+30191	33	I3 THD%	THD des Stroms I3	%	uint16be	1	0.01	0				false	false
+30407	33	Energy Counter n1	Wirkenergie +Q1 -Q4 (A.I.0 = 1.8.0)	kWh	uint32be	2	0.1	0				false	false
+30409	33	Energy Counter n2	Wirkenergie +Q2 -Q3 (A.E.0 =2.8.0)	kWh	uint32be	2	0.1	0				false	false
+30411	33	Energy Counter n3	Blindenergie -Q1 +Q2 (r.I.0 = 3.8.0)	kvarh	uint32be	2	0.1	0				false	false
+30413	33	Energy Counter n4	Blindenergie-Q3 +Q4 (r.E.0 = 4.8.0)	kvarh	uint32be	2	0.1	0				false	false
+30416	33	Energy Counter 1	Wirkenergie +Q1 -Q4 (A.I.0 = 1.8.0)	kWh	uint16be	1	0.1	0				false	false
+30418	33	Energy Counter 2	Blindenergie -Q1 +Q2 (r.I.0 = 3.8.0)	kvarh	uint16be	1	0.1	0				false	false
+30420	33	Energy Counter 3	Scheinenergie (S.A.0 = 9.8.0)	kVAh	uint16be	1	0.1	0				false	false
+30422	33	Energy Counter 4	Wirkenergie +Q1 -Q4 (A.I.0 = 1.8.0)	kWh	uint16be	1	0.1	0				false	false
+30424	33	Energy Counter 5	Wirkenergie +Q2 -Q3 (A.E.0 =2.8.0)	kWh	uint16be	1	0.1	0				false	false
+30426	33	Energy Counter 6	Blindenergie-Q3 +Q4 (r.E.0 = 4.8.0)	kvarh	uint16be	1	0.1	0				false	false
+30428	33	Energy Counter 7	Scheinenergie (S.A.0 = 9.8.0)	kVAh	uint16be	1	0.1	0				false	false
+30430	33	Energy Counter 8		kWh	uint16be	1	0.1	0				false	false
+30432	33	Energy Counter 9			uint16be	1	0.1	0				false	false
+30434	33	Energy Counter 10			uint16be	1	0.1	0				false	false
+30463	33	1000 x Energy Counter n1	Wirkenergie +Q1 -Q4 (A.I.0 = 1.8.0)	Wh	int32be	2	0.1	0				false	false
+30465	33	1000 x Energy Counter n2	Wirkenergie +Q2 -Q3 (A.E.0 =2.8.0)?	Wh	int32be	2	0.1	0				false	false
+30467	33	1000 x Energy Counter n3	Blindenergie -Q1 +Q2 (r.I.0 = 3.8.0)	varh	int32be	2	0.1	0				false	false
+30469	33	1000 x Energy Counter n4	Blindenergie-Q3 +Q4 (r.E.0 = 4.8.0)	varh	int32be	2	0.1	0				false	false
+30471	33	1000 x Energy Counter 1	Wirkenergie +Q1 -Q4 (A.I.0 = 1.8.0)	Wh	int32be	2	0.1	0				false	false
+32481	33	Float Run Time	Run Time [Float]		floatbe	2	1	0				false	false
+32499	33	Float  Frequency	Frequenz [Float]	Hz	floatbe	2	1	0				false	false
+32501	33	Float U1	Spannung U1 [Float]	V	floatbe	2	1	0				false	false
+32503	33	Float U2	Spannung U2 [Float]	V	floatbe	2	1	0				false	false
+32505	33	Float U3	Spannung U3 [Float]	V	floatbe	2	1	0				false	false
+32509	33	Float U12	Spannung U12 [Float]	V	floatbe	2	1	0				false	false
+32511	33	Float U23	Spannung U23 [Float]	V	floatbe	2	1	0				false	false
+32513	33	Float U31	Spannung U31 [Float]	V	floatbe	2	1	0				false	false
+32517	33	Float I1	Strom I1 [Float]	A	floatbe	2	1	0				false	false
+32519	33	Float I2	Strom I2 [Float]	A	floatbe	2	1	0				false	false
+32521	33	Float I3	Strom I3 [Float]	A	floatbe	2	1	0				false	false
+32561	33	Float Power Factor Total (PFt) 		PFt	floatbe	2	1	0				false	false
+32563	33	Float CAP/IND P. F. Phase 1 (PF1)	[Float]	PF1	floatbe	2	1	0				false	false
+32565	33	Float CAP/IND P. F. Phase 2 (PF2)	[Float]	PF2	floatbe	2	1	0				false	false
+32567	33	Float CAP/IND P. F. Phase 3 (PF3)	[Float]	PF3	floatbe	2	1	0				false	false
+32569	33	Float CAP/IND P. F. Total (PFt)	[Float]	PFt	floatbe	2	1	0				false	false
+32571	33	j1 (angle between U1 and I1)	[Float]	°	floatbe	2	1	0				false	false
+32573	33	 j2 (angle between U2 and I2)	[Float]	°	floatbe	2	1	0				false	false
+32575	33	j3 (angle between U3 and I3)	[Float]	°	floatbe	2	1	0				false	false
+32577	33	Power Angle Total  (atan2(Pt,Qt))	[Float]	°	floatbe	2	1	0				false	false
+32639	33	Float Energy Counter n1	Wirkenergie +Q1 -Q4 (A.I.0 = 1.8.0) [Float]	Wh	floatbe	2	1	0				false	false
+32641	33	Float Energy Counter n2	Wirkenergie +Q2 -Q3 (A.E.0 =2.8.0) [Float]	Wh	floatbe	2	1	0				false	false
+32643	33	Float Energy Counter n3	[Float]	varh	floatbe	2	1	0				false	false
+32645	33	Float Energy Counter n4	[Float]	varh	floatbe	2	1	0				false	false
+32659	33	Float Internal Temperature	Gerätetemperatur [Float]	°C	floatbe	2	1	0				false	false
+32751	33	Float Aktiv Tariff			floatbe	2	1	0				false	false
