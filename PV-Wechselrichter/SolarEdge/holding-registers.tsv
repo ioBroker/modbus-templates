@@ -1,42 +1,50 @@
 _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
-40001	SunSpecID	C_SunSpec_ID		uint32be	2	1	0		state		true			
-40003	SunSpecDID	C_SunSpec_DID		uint16be	1	1	0		state		true			
-40004	SunSpecLength	C_SunSpec_Length		uint16be	1	1	0		state		true			
-40005	Manufacturer	C_Manufacturer		string	16	1	0		state		true			
-40021	Model	C_Model		string	16	1	0		state		true			
-40045	Version	C_Version		string	8	1	0		state		true			
-40053	SerialNumber	C_SerialNumber		string	16	1	0		state		true			
-40069	DeviceAddress	C_DeviceAddress		uint16be	1	1	0		state		true			
-40070	PhaseTypes	C_SunSpec_DID		uint16be	1	1	0		state		true			
-40071	SunSpecLength	C_SunSpec_Length		uint16be	1	1	0		state		true			
-40072	TotalCurrent	I_AC_Current	A	uint16be	1	1	0		value		true			
-40073	TotalCurrentL1	I_AC_CurrentA	A	uint16be	1	1	0		value		true			
-40074	TotalCurrentL2	I_AC_CurrentB	A	uint16be	1	1	0		value		true			
-40075	TotalCurrentL3	I_AC_CurrentC	A	uint16be	1	1	0		value		true			
-40076	TotalCurrentSF	I_AC_Current_SF		int16be	1	1	0		state		true			
-40080	VoltageL1N	I_AC_VoltageAN	V	uint16be	1	1	0		value		true			
-40081	VoltageL2N	I_AC_VoltageBN	V	uint16be	1	1	0		value		true			
-40082	VoltageL3N	I_AC_VoltageCN	V	uint16be	1	1	0		value		true			
-40083	VoltageSF	I_AC_Voltage_SF		int16be	1	1	0		state		true			
-40084	Power	I_AC_Power	W	uint16be	1	1	0		value		true			
-40085	PowerSF	I_AC_Power_SF		int16be	1	1	0		state		true			
-40086	Frequency	I_AC_Frequency	Hz	uint16be	1	1	0		value		true			
-40087	FrequencySF	I_AC_Frequency_SF		int16be	1	1	0		state		true			
-40088	VA	I_AC_VA	VA	int16be	1	1	0		value		true			
-40089	VASF	I_AC_VA_SF		int16be	1	1	0		state		true			
-40090	VAR	I_AC_VAR	VAR	int16be	1	1	0		value		true			
-40091	VARSF	I_AC_VAR_SF		int16be	1	1	0		state		true			
-40092	PF	I_AC_PF	%	int16be	1	1	0		value		true			
-40093	PFSF	I_AC_PF_SF		int16be	1	1	0		state		true			
-40094	TotalEnergy	I_AC_Energy_WH	Wh	uint32be	2	1	0		value		true			
-40096	TotalEnergySF	I_AC_Energy_WH_SF		int16be	1	1	0		state		true			
-40097	DCCurrent	I_DC_Current	A	uint16be	1	1	0		value		true			
-40098	DCCurrentSF	I_DC_Current_SF		int16be	1	1	0		state		true			
-40099	DCVoltage	I_DC_Voltage	V	uint16be	1	1	0		value		true			
-40100	DCVoltageSF	I_DC_Voltage_SF		int16be	1	1	0		state		true			
-40101	DCPower	I_DC_Power	W	int16be	1	1	0		value		true			
-40102	DCPowerSF	I_DC_Power_SF		int16be	1	1	0		state		true			
-40104	Temp	I_Temp_SF		int16be	1	1	0		state		true			
-40107	TempSF	I_Temp_Sink	°C	int16be	1	1	0		value		true			
-40108	Status	I_Status		uint16be	1	1	0		state		true			
-40109	StatusVendor	I_Status_Vendor		uint16be	1	1	0		state		true			
+40000	C_SunSpec_ID	"Wert = ""SunS"" (0x53756e53). Identifiziert dies eindeutig als eine SunSpec Modbus-Karte"		uint32be	2	1	0				true	false	false	false
+40002	C_SunSpec_DID	Wert = 0x0001. Identifiziert dies eindeutig als einen SunSpec “Common Block“		uint16be	1	1	0				true	false	false	false
+40003	C_SunSpec_Länge	65 = Länge eines Blocks in 16-bit Registern		uint16be	1	1	0				true	false	false	false
+40004	C_Hersteller	"Bei SunSpec eingetragener Wert = ""SolarEdge"""		string	16	1	0				true	false	false	false
+40020	C_Modell	Spezifischer SolarEdge Wert		string	16	1	0				true	false	false	false
+40044	C_Version	Spezifischer SolarEdge Wert		string	8	1	0				true	false	false	false
+40052	C_Seriennummer	Eindeutiger SolarEdge Wert		string	16	1	0				true	false	false	false
+40068	C_DeviceAddress 	MODBUS Unit ID		uint16be	1	1	0				true	false	false	false
+40069	C_SunSpec_DID	101 = Einphasig, 102 = Spaltphase, 103 = Dreiphasig		uint16be	1	1	0				true	false	false	false
+40071	I_AC_Strom	AC-Gesamtstromwert	A	uint16be	1	1	0	x * Math.pow(10, sf['40075'])			true	false	false	false
+40072	I_AC_StromA	AC-Phase A (L1) Stromwert	A	uint16be	1	1	0	x * Math.pow(10, sf['40075'])			true	false	false	false
+40073	I_AC_StromB	AC-Phase B (L2) Stromwert	A	uint16be	1	1	0	x * Math.pow(10, sf['40075'])			true	false	false	false
+40074	I_AC_StromC	AC-Phase C (L3) Stromwert	A	uint16be	1	1	0	x * Math.pow(10, sf['40075'])			true	false	false	false
+40075	I_AC_Strom_SF	AC-Strom Skalierungsfaktor	SF	int16be	1	1	0				true	false	false	true
+40083	I_AC_Leistung	AC-Leistungswert	W	uint16be	1	1	0	x * Math.pow(10, sf['40084'])			true	false	false	false
+40084	I_AC_Leistung_SF	AC-Leistung Skalierungsfaktor	SF	int16be	1	1	0				true	false	false	true
+40087	I_AC_VA	Scheinleistung	VA	uint16be	1	1	0	x * Math.pow(10, sf['40088'])			true	false	false	false
+40088	I_AC_VA_SF	Scheinleistung Skalierungsfaktor	SF	int16be	1	1	0				true	false	false	true
+40089	I_AC_VAR	Blindleistung	VAR	uint16be	1	1	0	x * Math.pow(10, sf['40090'])			true	false	false	false
+40090	I_AC_VAR_SF	Blindleistung Skalierungsfaktor	SF	int16be	1	1	0				true	false	false	true
+40091	I_AC_PF	Leistungsfaktor	%	uint16be	1	1	0	x * Math.pow(10, sf['40092'])			true	false	false	false
+40092	I_AC_PF_SF	Leistungsfaktor Skalierungsfaktor	SF	int16be	1	1	0				true	false	false	true
+40093	I_AC_Energie_WH	AC Gesamt-Energieproduktion	kWh	uint32be	2	1	0	x * Math.pow(10, sf['40095'] - 3)			true	false	false	false
+40095	I_AC_Energie_WH_SF	AC Gesamtenergie Skalierungsfaktor	SF	uint16be	1	1	0				true	false	false	true
+40096	I_DC_Strom	DC-Stromwert	A	uint16be	1	1	0	x * Math.pow(10, sf['40097'])			true	false	false	false
+40097	I_DC_Strom_SF	DC-Strom Skalierungsfaktor	SF	int16be	1	1	0				true	false	false	true
+40098	I_DC_Spannung	DC-Spannungswert	V	uint16be	1	1	0	x * Math.pow(10, sf['40099'])			true	false	false	false
+40099	I_DC_Spannung_SF	DC-Spannung Skalierungsfaktor	SF	int16be	1	1	0				true	false	false	true
+40100	I_DC_Leistung	DC-Leistungswert	W	uint16be	1	1	0	x * Math.pow(10, sf['40101'])			true	false	false	false
+40101	I_DC_Leistung_SF	DC-Leistung Skalierungsfaktor	SF	int16be	1	1	0				true	false	false	true
+40103	I_Temp_Kühler	Kühlkörpertemperatur	°C	uint16be	1	1	0	x * Math.pow(10, sf['40106'])			true	false	false	false
+40106	I_Temp_SF	Kühlkörpertemperatur Skalierungsfaktor	SF	int16be	1	1	0				true	false	false	true
+40107	I_Status	Betriebszustand (1 = Aus, 2 = Schlafen (Automatisches Herunterfahren) – Nachtmodus, 3 = Aufwachen/Starten, 4 = Wechselrichter ist AN und wandelt Energie, 5 = Begrenzte Produktion, 6 = Herunterfahren, 7 = Fehler, 8 = Wartung/Setup)		uint16be	1	1	0				true	false	false	false
+40108	I_Status_Anbieter	Anbieter-spezifischer Betriebszustand sowie Fehlercodes: 1 = Aus, 2 = Schlafen (Automatisches Herunterfahren) – Nachtmodus, 3 = Aufwachen/Starten, 4 = Wechselrichter ist AN und wandelt Energie, 5 = Begrenzte Produktion, 6 = Herunterfahren, 7 = Fehler, 8 = Wartung/Setup		uint16be	1	1	0				true	false	false	false
+40123	C_Manufacturer	Meter manufacturer		string	32	1	0				true	false	false	false
+40139	C_Model	Meter model		string	32	1	0				true	false	false	false
+40155	C_Option	Export + Import, Production, consumption		string	16	1	0				true	false	false	false
+40190	M_AC_Current	AC Current (sum of active phases)	A	uint16be	1	1	0	x * Math.pow(10, sf['40194'])			true	false	false	false
+40191	M_AC_Current_A	Phase A AC Current	A	uint16be	1	1	0	x * Math.pow(10, sf['40194'])			true	false	false	false
+40192	M_AC_Current_B	Phase B AC Current	A	uint16be	1	1	0	x * Math.pow(10, sf['40194'])			true	false	false	false
+40193	M_AC_Current_C	Phase C AC Current	A	uint16be	1	1	0	x * Math.pow(10, sf['40194'])			true	false	false	false
+40194	M_AC_Current_S F	AC Current Scale Factor	SF	int16be	1	1	0				true	false	false	true
+40206	M_AC_Power	Total Real Power (sum of active phases)	W	int16be	1	1	0	x * Math.pow(10, sf['40210'])			true	false	false	false
+40210	M_AC_Power_SF	AC Real Power Scale Factor	SF	int16be	1	1	0				true	false	false	true
+40221	M_AC_PF	Average Power Factor (average of active phases)	%	uint16be	1	1	0	x * Math.pow(10, sf['40225'])			true	false	false	false
+40225	M_AC_PF_SF	AC Power Factor Scale Factor	SF	int16be	1	1	0				true	false	false	true
+40226	M_Exported	Total Exported Real Energy	kWh	uint32be	2	1	0	x * Math.pow(10, sf['40242'] - 3)			true	false	false	false
+40234	M_Imported	Total Imported Real Energy	kWh	uint32be	2	1	0	x * Math.pow(10, sf['40242'] - 3)			true	false	false	false
+40242	M_Energy_W_SF	Real Energy Scale Factor	SF	int16be	1	1	0				true	false	false	true
