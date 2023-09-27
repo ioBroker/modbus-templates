@@ -1,0 +1,80 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+2	MODBUS Enable	MODBUS Enable		uint8be	1	1	0		value		true	false	false	false
+4	MODBUS Unit-ID	MODBUS Unit-ID		uint16be	1	1	0		value		true	false	false	false
+6	Inverter article number	Inverter article number		string	4	1	0		value		true	false	false	false
+30	Number of bidirectional converter	Number of bidirectional converter		uint16be	1	1	0		value		true	false	false	false
+32	Number of AC phases	Number of AC phases		uint16be	1	1	0		value		true	false	false	false
+34	Number of PV strings	Number of PV strings		uint16be	1	1	0		value		true	false	false	false
+54	Power-ID	Power-ID		uint32be	2	1	0		level		true	false	false	false
+56	Inverter state	Inverter state		uint32be	2	1	0		state		true	false	false	false
+100	Total DC power	Total DC power	W	floatbe	2	1	0		value		true	false	false	false
+104	State of energy manager	State of energy manager		floatbe	2	1	0		state		true	false	false	false
+106	Home own consumption from battery	Home own consumption from battery	W	floatbe	2	1	0		value		false	false	false	false
+108	Home own consumption from grid	Home own consumption from grid	W	floatbe	2	1	0		value		true	false	false	false
+110	Total home consumption Battery	Total home consumption Battery	Wh	floatbe	2	1	0		value		false	false	false	false
+112	Total home consumption Grid	Total home consumption Grid	Wh	floatbe	2	1	0		value		true	false	false	false
+114	Total home consumption PV	Total home consumption PV	Wh	floatbe	2	1	0		value		true	false	false	false
+116	Home own consumption from PV	Home own consumption from PV	W	floatbe	2	1	0		value		true	false	false	false
+118	Total home consumption	Total home consumption	Wh	floatbe	2	1	0		value		true	false	false	false
+120	Isolation resistance	Isolation resistance	Ohm	floatbe	2	1	0		value		true	false	false	false
+122	Power limit from EVU	Power limit from EVU	%	floatbe	2	1	0		value		true	false	false	false
+124	Total home consumption rate	Total home consumption rate	%	floatbe	2	1	0		value		true	false	false	false
+144	Worktime	Worktime	s	floatbe	2	1	0		value		true	false	false	false
+150	Actual cos	Actual cos		floatbe	2	1	0		value		true	false	false	false
+152	Grid frequency	Grid frequency	Hz	floatbe	2	1	0		value		true	false	false	false
+154	Current Phase 1	Current Phase 1	A	floatbe	2	1	0		value		true	false	false	false
+156	Active power Phase 1	Active power Phase 1	W	floatbe	2	1	0		value		true	false	false	false
+158	Voltage Phase 1	Voltage Phase 1	V	floatbe	2	1	0		value		true	false	false	false
+160	Current Phase 2	Current Phase 2	A	floatbe	2	1	0		value		true	false	false	false
+162	Active power Phase 2	Active power Phase 2	W	floatbe	2	1	0		value		true	false	false	false
+164	Voltage Phase 2	Voltage Phase 2	V	floatbe	2	1	0		value		true	false	false	false
+166	Current Phase 3	Current Phase 3	A	floatbe	2	1	0		value		true	false	false	false
+168	Active power Phase 3	Active power Phase 3	W	floatbe	2	1	0		value		true	false	false	false
+170	Voltage Phase 3	Voltage Phase 3	V	floatbe	2	1	0		value		true	false	false	false
+172	Total AC active power	Total AC active power	W	floatbe	2	1	0		value		true	false	false	false
+174	Total AC reactive power	Total AC reactive power	Var	floatbe	2	1	0		value		true	false	false	false
+178	Total AC apparent power	Total AC apparent power	VA	floatbe	2	1	0		value		true	false	false	false
+190	Battery charge current	Battery charge current	A	floatbe	2	1	0		value		true	false	false	false
+194	Number of battery cycles	Number of battery cycles		floatbe	2	1	0		value		true	false	false	false
+200	Actual battery charge	Actual battery charge	A	floatbe	2	1	0		value		true	false	false	false
+202	PSSB fuse state	PSSB fuse state_6		floatbe	2	1	0		value		true	false	false	false
+208	Battery ready flag	Battery ready flag		floatbe	2	1	0		value		true	false	false	false
+210	Act. state of charge	Act. state of charge	%	floatbe	2	1	0		value		true	false	false	false
+212	Battery state	Battery state_5	-	floatbe	2	1	0		value		true	false	false	false
+214	Battery temperature	Battery temperature	Â°C	floatbe	2	1	0		value		true	false	false	false
+216	Battery voltage	Battery voltage	V	floatbe	2	1	0		value		true	false	false	false
+218	Cos (powermeter)	Cos (powermeter)	-	floatbe	2	1	0		value		true	false	false	false
+220	Frequency (powermeter)	Frequency (powermeter)	Hz	floatbe	2	1	0		value		true	false	false	false
+222	Current phase 1 (powermeter)	Current phase 1 (powermeter)	A	floatbe	2	1	0		value		true	false	false	false
+224	Active power phase 1 (powermeter)	Active power phase 1 (powermeter)	W	floatbe	2	1	0		value		true	false	false	false
+226	Reactive power phase 1 (powermeter)	Reactive power phase 1 (powermeter)	Var	floatbe	2	1	0		value		true	false	false	false
+228	Apparent power phase 1 (powermeter)	Apparent power phase 1 (powermeter)	VA	floatbe	2	1	0		value		true	false	false	false
+230	Voltage phase 1 (powermeter)	Voltage phase 1 (powermeter)	V	floatbe	2	1	0		value		true	false	false	false
+232	Current phase 2 (powermeter)	Current phase 2 (powermeter)	A	floatbe	2	1	0		value		true	false	false	false
+234	Active power phase 2 (powermeter)	Active power phase 2 (powermeter)	W	floatbe	2	1	0		value		true	false	false	false
+236	Reactive power phase 2 (powermeter)	Reactive power phase 2 (powermeter)	Var	floatbe	2	1	0		value		true	false	false	false
+238	Apparent power phase 2 (powermeter)	Apparent power phase 2 (powermeter)	VA	floatbe	2	1	0		value		true	false	false	false
+240	Voltage phase 2 (powermeter)	Voltage phase 2 (powermeter)	V	floatbe	2	1	0		value		true	false	false	false
+242	Current phase 3 (powermeter)	Current phase 3 (powermeter)	A	floatbe	2	1	0		value		true	false	false	false
+244	Active power phase 3 (powermeter)	Active power phase 3 (powermeter)	W	floatbe	2	1	0		value		true	false	false	false
+246	Reactive power phase 3 (powermeter)	Reactive power phase 3 (powermeter)	Var	floatbe	2	1	0		value		true	false	false	false
+248	Apparent power phase 3 (powermeter)	Apparent power phase 3 (powermeter)	VA	floatbe	2	1	0		value		true	false	false	false
+250	Voltage phase 3 (powermeter)	Voltage phase 3 (powermeter)	V	floatbe	2	1	0		value		true	false	false	false
+252	Total active power 	Total active power	W	floatbe	2	1	0		value		true	false	false	false
+254	Total reactive power	Total reactive power	Var	floatbe	2	1	0		value		true	false	false	false
+256	Total apparent power	Total apparent power	VA	floatbe	2	1	0		value		true	false	false	false
+258	Current DC1	Current DC1	A	floatbe	2	1	0		value		true	false	false	false
+260	Power DC1	Power DC1	W	floatbe	2	1	0		value		true	false	false	false
+266	Voltage DC1	Voltage DC1	V	floatbe	2	1	0		value		true	false	false	false
+268	Current DC2	Current DC2	A	floatbe	2	1	0		value		true	false	false	false
+270	Power DC2	Power DC2	W	floatbe	2	1	0		value		true	false	false	false
+276	Voltage DC2	Voltage DC2	V	floatbe	2	1	0		value		true	false	false	false
+278	Current DC3	Current DC3	A	floatbe	2	1	0		value		true	false	false	false
+280	Power DC3	Power DC3	W	floatbe	2	1	0		value		true	false	false	false
+286	Voltage DC3	Voltage DC3	V	floatbe	2	1	0		value		true	false	false	false
+320	Total yield	Total yield	Wh	floatbe	2	1	0		value		true	false	false	false
+322	Daily yield	Daily yield	Wh	floatbe	2	1	0		value		true	false	false	false
+324	Yearly yield	Yearly yield	Wh	floatbe	2	1	0		value		true	false	false	false
+326	Monthly yield	Monthly yield	Wh	floatbe	2	1	0		value		true	false	false	false
+514	Battery actual SOC	Battery actual SOC	%	uint16be	1	1	0		value		true	false	false	false
+531	Inverter Max Power	Inverter Max Power	W	uint16be	1	1	0		value		true	false	false	false
