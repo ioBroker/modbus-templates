@@ -1,0 +1,45 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+16	Total energyfeed to grid (Grid Meter)	0x010 Gesamte Einspeisung ins Netz (Netzzähler)	kWh	uint32be	2	0.01	0		value		true	false	false	
+18	Total energy consume from grid (Grid Meter)	0x012 Gesamter Netzbezug (Netzzähler)	kWh	uint32be	2	0.01	0		value		true	false	false	
+20	V_L1	0x14	V	uint16be	1	0.1	0		value		true	false	false	
+21	V_L2	0x15	V	uint16be	1	0.1	0		value		true	false	false	
+22	V_L3	0x16	V	uint16be	1	0.1	0		value		true	false	false	
+27	Active power of A phase (Grid Meter)	0x01B Wirkleistung der Phase A (Netzzähler)	W	int32be	2	1	0		value		true	false	false	
+29	Active power of B phase (Grid Meter)	0x01D Wirkleistung der Phase B (Netzzähler)	W	int32be	2	1	0		value		true	false	false	
+31	Active power of C phase (Grid Meter)	0x01F Wirkleistung der Phase C (Netzzähler)	W	int32be	2	1	0		value		true	false	false	
+33	Total Active power (Grid Meter)	0x021 Gesamtwirkleistung (Netzzähler)	W	int32be	2	1	0		value		true	false	false	
+144	Total energy feed to grid (PVMeter)	0x090 Gesamte Einspeisung ins Netz (PV-Zähler)	kWh	uint32be	2	0.01	0		value		true	false	false	
+161	Total Active power (PVMeter)	0x0A1 Gesamtwirkleistung (PV-Zähler)	W	int32be	2	1	0		value		true	false	false	
+256	Battery voltage	0x100 Batteriespannung	V	uint16be	1	0.1	0		value		true	false	false	
+257	Battery current	0x101 Batteriestrom	A	int16be	1	0.1	0		value		true	false	false	
+258	BatterySOC	0x102 Batterie SOC	%	uint16be	1	0.1	0		value		true	false	false	
+272	Max cell temperature 	Max cell temperature 	°C	int16be	1	0.1	0		value		true	false	false	
+281	Battery capacity	0x119 Batteriekapazität	kWh	uint16be	1	0.1	0		value		true	false	false	
+283	Battery SOH	0x11B Batterie Restkapazität	%	uint16be	1	0.1	0		value		true	false	false	
+288	Battery charge energy	0x120 Batterieladeenergie	kWh	uint32be	2	0.1	0		value		true	false	false	
+290	Battery discharge energy	0x122 Batterieentladeenergie	kWh	uint32be	2	0.1	0		value		true	false	false	
+292	Battery energy charge from grid	0x124 Batterieladung aus Netz	kWh	uint32be	2	0.1	0		value		true	false	false	
+294	Battery Power	0x126 Batterieleistung	W	int16be	1	1	0		value		true	false	false	
+1024	Inverter_Voltage_L1	0x400 WR-Spannung L1	V	uint16be	1	0.1	0		value		true	false	false	
+1025	Inverter_Voltage_L2	0x401 WR-Spannung L2	V	uint16be	1	0.1	0		value		true	false	false	
+1026	Inverter_Voltage_L3	0x402 WR-Spannung L3	V	uint16be	1	0.1	0		value		true	false	false	
+1027	Inverter_Current_L1	0x403 WR-Strom L1	A	int16be	1	0.1	0		value		true	false	false	
+1028	Inverter_Current_L2	0x404 WR-Strom L2	A	int16be	1	0.1	0		value		true	false	false	
+1029	Inverter_Current_L3	0x404 WR-Strom L3	A	int16be	1	0.1	0		value		true	false	false	
+1036	Inverter_Power_Total	0x40C WR-Gesamtleistung	W	uint32be	2	1	0		value		true	false	false	
+1050	Inverter_Backup_Power_Total	0x41A WR-Gesamtbackupleis- tung	W	int16be	1	1	0		value		true	false	false	
+1052	Inverter Grid Frequency	0x41C WR-Netzfreqzenz	Hz	uint16be	1	0.01	0		value		true	false	false	
+1053	PV1 Voltage	0x41D  PV1-Spannung	V	uint16be	1	0.1	0		value		true	false	false	
+1054	PV1 Current	0x41E PV1-Strom	A	uint16be	1	0.1	0		value		true	false	false	
+1055	PV1 power	0x41F PV1-Leistung	W	int32be	2	1	0		value		true	false	false	
+1057	PV2 Voltage	0x421 PV2-Spannung	V	uint16be	1	0.1	0		value		true	false	false	
+1058	PV2 Current	0x422 PV2-Strom	A	uint16be	1	0.1	0		value		true	false	false	
+1059	PV2 power	0x423 PV2-Leistung	W	int32be	2	1	0		value		true	false	false	
+1063	PV3 power	0x427 PV3-Leistung	W	int32be	2	1	0		value		true	false	false	
+1086	Total PV Energy	0x43E PV-Gesamtenergie	kWh	uint32be	2	0.1	0		value		true	false	false	
+1088	Inverter work mode	0x440 WR-Arbeitsmodus		uint16be	1	1	0		value		true	false	false	
+1793	System fault	0x701 Systemfehler		uint16be	1	1	0		value		true	false	false	
+1810	UPS Reserve Soc tut nicht	0x712 USV Reserve	%	uint16be	1	0.1	0		value		true	false	false	
+1824	PV Inverter Total PV Energy	0x720 PV-WR PV-Gesamtenergie	kWh	uint16be	1	0.1	0		value		true	false	false	
+2048	MAX Feed into grid percent	0x800 	%	uint16be	1	1	0		value		true	false	false	
+2128	UPS Reserve Soc	0x850 USV Reserve	%	uint16be	1	1	0		value		true	false	false	
