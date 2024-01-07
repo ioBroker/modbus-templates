@@ -1,45 +1,80 @@
 _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
-16	Total energyfeed to grid (Grid Meter)	0x010 Gesamte Einspeisung ins Netz (Netzzähler)	kWh	uint32be	2	0.01	0		value		true	false	false	
-18	Total energy consume from grid (Grid Meter)	0x012 Gesamter Netzbezug (Netzzähler)	kWh	uint32be	2	0.01	0		value		true	false	false	
-20	V_L1	0x14	V	uint16be	1	0.1	0		value		true	false	false	
-21	V_L2	0x15	V	uint16be	1	0.1	0		value		true	false	false	
-22	V_L3	0x16	V	uint16be	1	0.1	0		value		true	false	false	
-27	Active power of A phase (Grid Meter)	0x01B Wirkleistung der Phase A (Netzzähler)	W	int32be	2	1	0		value		true	false	false	
-29	Active power of B phase (Grid Meter)	0x01D Wirkleistung der Phase B (Netzzähler)	W	int32be	2	1	0		value		true	false	false	
-31	Active power of C phase (Grid Meter)	0x01F Wirkleistung der Phase C (Netzzähler)	W	int32be	2	1	0		value		true	false	false	
-33	Total Active power (Grid Meter)	0x021 Gesamtwirkleistung (Netzzähler)	W	int32be	2	1	0		value		true	false	false	
-144	Total energy feed to grid (PVMeter)	0x090 Gesamte Einspeisung ins Netz (PV-Zähler)	kWh	uint32be	2	0.01	0		value		true	false	false	
-161	Total Active power (PVMeter)	0x0A1 Gesamtwirkleistung (PV-Zähler)	W	int32be	2	1	0		value		true	false	false	
-256	Battery voltage	0x100 Batteriespannung	V	uint16be	1	0.1	0		value		true	false	false	
-257	Battery current	0x101 Batteriestrom	A	int16be	1	0.1	0		value		true	false	false	
-258	BatterySOC	0x102 Batterie SOC	%	uint16be	1	0.1	0		value		true	false	false	
-272	Max cell temperature 	Max cell temperature 	°C	int16be	1	0.1	0		value		true	false	false	
-281	Battery capacity	0x119 Batteriekapazität	kWh	uint16be	1	0.1	0		value		true	false	false	
-283	Battery SOH	0x11B Batterie Restkapazität	%	uint16be	1	0.1	0		value		true	false	false	
-288	Battery charge energy	0x120 Batterieladeenergie	kWh	uint32be	2	0.1	0		value		true	false	false	
-290	Battery discharge energy	0x122 Batterieentladeenergie	kWh	uint32be	2	0.1	0		value		true	false	false	
-292	Battery energy charge from grid	0x124 Batterieladung aus Netz	kWh	uint32be	2	0.1	0		value		true	false	false	
-294	Battery Power	0x126 Batterieleistung	W	int16be	1	1	0		value		true	false	false	
-1024	Inverter_Voltage_L1	0x400 WR-Spannung L1	V	uint16be	1	0.1	0		value		true	false	false	
-1025	Inverter_Voltage_L2	0x401 WR-Spannung L2	V	uint16be	1	0.1	0		value		true	false	false	
-1026	Inverter_Voltage_L3	0x402 WR-Spannung L3	V	uint16be	1	0.1	0		value		true	false	false	
-1027	Inverter_Current_L1	0x403 WR-Strom L1	A	int16be	1	0.1	0		value		true	false	false	
-1028	Inverter_Current_L2	0x404 WR-Strom L2	A	int16be	1	0.1	0		value		true	false	false	
-1029	Inverter_Current_L3	0x404 WR-Strom L3	A	int16be	1	0.1	0		value		true	false	false	
-1036	Inverter_Power_Total	0x40C WR-Gesamtleistung	W	uint32be	2	1	0		value		true	false	false	
-1050	Inverter_Backup_Power_Total	0x41A WR-Gesamtbackupleis- tung	W	int16be	1	1	0		value		true	false	false	
-1052	Inverter Grid Frequency	0x41C WR-Netzfreqzenz	Hz	uint16be	1	0.01	0		value		true	false	false	
-1053	PV1 Voltage	0x41D  PV1-Spannung	V	uint16be	1	0.1	0		value		true	false	false	
-1054	PV1 Current	0x41E PV1-Strom	A	uint16be	1	0.1	0		value		true	false	false	
-1055	PV1 power	0x41F PV1-Leistung	W	int32be	2	1	0		value		true	false	false	
-1057	PV2 Voltage	0x421 PV2-Spannung	V	uint16be	1	0.1	0		value		true	false	false	
-1058	PV2 Current	0x422 PV2-Strom	A	uint16be	1	0.1	0		value		true	false	false	
-1059	PV2 power	0x423 PV2-Leistung	W	int32be	2	1	0		value		true	false	false	
-1063	PV3 power	0x427 PV3-Leistung	W	int32be	2	1	0		value		true	false	false	
-1086	Total PV Energy	0x43E PV-Gesamtenergie	kWh	uint32be	2	0.1	0		value		true	false	false	
-1088	Inverter work mode	0x440 WR-Arbeitsmodus		uint16be	1	1	0		value		true	false	false	
-1793	System fault	0x701 Systemfehler		uint16be	1	1	0		value		true	false	false	
-1810	UPS Reserve Soc tut nicht	0x712 USV Reserve	%	uint16be	1	0.1	0		value		true	false	false	
-1824	PV Inverter Total PV Energy	0x720 PV-WR PV-Gesamtenergie	kWh	uint16be	1	0.1	0		value		true	false	false	
-2048	MAX Feed into grid percent	0x800 	%	uint16be	1	1	0		value		true	false	false	
-2128	UPS Reserve Soc	0x850 USV Reserve	%	uint16be	1	1	0		value		true	false	false	
+0	Grid-Meter CT enable	0x000 Grid-Meter CT enable		uint16be	1	1	0		state		true	false	false	false
+1	Grid-Meter CT Rate	0x001Grid-Meter CT Rate		uint16be	1	1	0		value		true	false	false	false
+16	Total energyfeed to grid (Grid Meter)	0x010 Gesamte Einspeisung ins Netz (Netzzähler)	kWh	uint32be	2	0.01	0		value		true	false	false	false
+18	Total energy consume from grid (Grid Meter)	0x012 Gesamter Netzbezug (Netzzähler)	kWh	uint32be	2	0.01	0		value		true	false	false	false
+20	V_L1	0x14 Spannung Phase L1	V	uint16be	1	0.1	0		value		true	false	false	false
+21	V_L2	0x15 Spannung Phase L2	V	uint16be	1	0.1	0		value		true	false	false	false
+22	V_L3	0x16 Spannung Phase L3	V	uint16be	1	0.1	0		value		true	false	false	false
+27	Active power of A phase (Grid Meter)	0x01B Wirkleistung der Phase A (Netzzähler)	W	int32be	2	1	0		value		true	false	false	false
+29	Active power of B phase (Grid Meter)	0x01D Wirkleistung der Phase B (Netzzähler)	W	int32be	2	1	0		value		true	false	false	false
+31	Active power of C phase (Grid Meter)	0x01F Wirkleistung der Phase C (Netzzähler)	W	int32be	2	1	0		value		true	false	false	false
+33	Total Active power (Grid Meter)	0x021 Gesamtwirkleistung (Netzzähler)	W	int32be	2	1	0		value		true	false	false	false
+144	Total energy feed to grid (PVMeter)	0x090 Gesamte Einspeisung ins Netz (PV-Zähler)	kWh	uint32be	2	0.01	0		value		true	false	false	false
+151	Current of L1 phase(PV)	0x097 I L1 PV (Hybrid)	A	int16be	1	0,1	0		value		true	false	false	false
+152	Current of L2 phase(PV)	0x098 I L2 PV Garten	A	int16be	1	0,1	0		value		true	false	false	false
+153	Current of L2 phase(PV)	0x099 I L3 PV (Hybrid)	A	int16be	1	0,1	0		value		true	false	false	false
+155	Active power of L1 phase(PV)	0x09B P L1 PV (Hybrid)	W	int32be	2	1	0		value		true	false	false	false
+157	Active power of L2 phase(PV)	0x09D P L2 PV Garten	W	int32be	2	1			value		true	false	false	false
+159	Active power of L3 phase(PV)	0x09F P L3 PV (Hybrid)	W	int32be	2	1	0		value		true	false	false	false
+161	Total Active power (PVMeter)	0x0A1 Gesamtwirkleistung (PV-Zähler)	W	int32be	2	1	0		value		true	false	false	false
+256	Battery voltage	0x100 Batteriespannung	V	uint16be	1	0.1	0		value		true	false	false	false
+257	Battery current	0x101 Batteriestrom	A	int16be	1	0.1	0		value		true	false	false	false
+258	BatterySOC	0x102 Batterie SOC	%	uint16be	1	0.1	0		value		true	false	false	false
+269	MIN_Cell_Temperature	0x10D Min Cell Temperature	°C	int16be	1	0,1	0		value		true	false	false	false
+272	Max cell temperature 	0x110 Max cell temperature 	°C	int16be	1	0.1	0		value		true	false	false	false
+277	BMU_Software_Version	0x115 BMU_Sw_Version		uint16be	1	1	0		state		true	false	false	false
+278	LMU_Software_Version	0x116 LMU_Sw_Version		uint16be	1	1	0		state		true	false	false	false
+279	ISO_Software_Version	0c117 ISO_Sw_Version		uint16be	1	1	0		state		true	false	false	false
+281	Battery capacity	0x119 Batteriekapazität	kWh	uint16be	1	0.1	0		value		true	false	false	false
+282	Battery typ	0x110 Battery typ		uint16be	1	1	0		state		true	false	false	false
+283	Battery SOH	0x11B Batterie Restkapazität	%	uint16be	1	0.1	0		value		true	false	false	false
+284	Battery Warning	0x11C Batterie Warnunug		uint32be	2	1	0		state		true	false	false	false
+286	Battery Fault	0x11E Batterie Fehler		uint32be	2	1	0		state		true	false	false	false
+288	Battery charge energy	0x120 Batterieladeenergie	kWh	uint32be	2	0.1	0		value		true	false	false	false
+290	Battery discharge energy	0x122 Batterieentladeenergie	kWh	uint32be	2	0.1	0		value		true	false	false	false
+292	Battery energy charge from grid	0x124 Batterieladung aus Netz	kWh	uint32be	2	0.1	0		value		true	false	false	false
+294	Battery Power	0x126 Batterieleistung	W	int16be	1	1	0		value		true	false	false	false
+303	Battery SOC Calibration	0x012F Battery SOC Calibration		uint16be	1	1	0		state		true	false	false	false
+1024	Inverter_Voltage_L1	0x400 WR-Spannung L1	V	uint16be	1	0.1	0		value		true	false	false	false
+1025	Inverter_Voltage_L2	0x401 WR-Spannung L2	V	uint16be	1	0.1	0		value		true	false	false	false
+1026	Inverter_Voltage_L3	0x402 WR-Spannung L3	V	uint16be	1	0.1	0		value		true	false	false	false
+1027	Inverter_Current_L1	0x403 WR-Strom L1	A	int16be	1	0.1	0		value		true	false	false	false
+1028	Inverter_Current_L2	0x404 WR-Strom L2	A	int16be	1	0.1	0		value		true	false	false	false
+1029	Inverter_Current_L3	0x404 WR-Strom L3	A	int16be	1	0.1	0		value		true	false	false	false
+1030	Inverter_Power_L1	0x406 Inverter P L1	W	int32be	2	1	0		value		true	false	false	false
+1036	Inverter_Power_Total	0x40C WR-Gesamtleistung	W	uint32be	2	1	0		value		true	false	false	false
+1038	Inverter_Backup_Voltage_L1	0x40E Inverter_Backup_Voltage_L1	V	uint16be	1	0,1	0		value		true	false	false	false
+1041	Inverter_Backup_Current_L1	0x411 Inverter_Backup_Current_L 1	A	int16be	1	0,1	0		value		true	false	false	false
+1044	Inverter_Backup_Power_L1	0x414 Inverter_Backup_Power_L1	W	int32be	2	1	0		value		true	false	false	false
+1050	Inverter_Backup_Power_Total	0x41A WR-Gesamtbackupleis- tung	W	int16be	1	1	0		value		true	false	false	false
+1052	Inverter Grid Frequency	0x41C WR-Netzfreqzenz	Hz	uint16be	1	0.01	0		value		true	false	false	false
+1053	PV1 Voltage	0x41D  PV1-Spannung	V	uint16be	1	0.1	0		value		true	false	false	false
+1054	PV1 Current	0x41E PV1-Strom	A	uint16be	1	0.1	0		value		true	false	false	false
+1055	PV1 power	0x41F PV1-Leistung	W	int32be	2	1	0		value		true	false	false	false
+1057	PV2 Voltage	0x421 PV2-Spannung	V	uint16be	1	0.1	0		value		true	false	false	false
+1058	PV2 Current	0x422 PV2-Strom	A	uint16be	1	0.1	0		value		true	false	false	false
+1059	PV2 power	0x423 PV2-Leistung	W	int32be	2	1	0		value		true	false	false	false
+1063	PV3 power	0x427 PV3-Leistung	W	int32be	2	1	0		value		true	false	false	false
+1082	Inverter Fault 1	0x43A INV Fehler 1		uint32be	2	1	0		state		true	false	false	false
+1084	Inverter Fault 2	0x43C INV Fehler 2		uint32be	2	1	0		state		true	false	false	false
+1086	Total PV Energy	0x43E PV-Gesamtenergie	kWh	uint32be	2	0.1	0		value		true	false	false	false
+1088	Inverter work mode	0x440 WR-Arbeitsmodus		uint16be	1	1	0		value		true	false	false	false
+1099	Inverter Fault extend 1	0x44B INV erweit. Fehler1		uint32be	2	1	0		state		true	false	false	false
+1101	Inverter Fault extend 2	0x44D INV erweit. Fehler2		uint32be	2	1	0		state		true	false	false	false
+1600	Inverter_Master_Software_Version	0x640 INV_Master_Sw_Version		string	5	1	0		state		true	false	false	false
+1605	Inverter_Slave_Software_Version	0x645 INV_Slave_Sw_Version		string	5	1	0		state		true	false	false	false
+1610	Inverter_SN	0x64A INV_SN		string	10	1	0		state		true	false	false	false
+1867	EMS_Ver_High	0x74B EMS_Ver_High		uint16be	1	1	0		state		true	false	false	false
+1868	EMS_Ver_Mid	0x74C EMS_Ver_Mid		uint16be	1	1	0		state		true	false	false	false
+1869	EMS_Ver_Low	0x74D EMS_Ver_Low		uint16be	1	1	0		state		true	false	false	false
+2048	MAX Feed into grid percent	0x800 Einspeisebegrenzung 	%	uint16be	1	1	0		value		true	false	false	false
+2049	PV Capacity Storage	0x801 PV Capacity Storage	W	uint32be	2	1	0		value		true	false	false	false
+2051	PV Capacity of Grid Inverter 	0x803 PV Capacity of Grid Inverter 	W	uint32be	2	1	0		value		true	false	false	false
+2053	System mode	0x805 System mode		uint16be	1	1	0		state		true	false	false	false
+2127	Time period control flag	0x84F Status Zeitkontrolle		uint16be	1	1	0		switch		true	false	false	false
+2128	UPS Reserve Soc	0x850 USV Reserve	%	uint16be	1	1	0		value		true	false	false	false
+2133	Max Battery SOC	0x855 Obere Batterie-Ladegrenze	%	uint16be	1	1	0		value		true	false	false	false
+2256	PV Inverter energy	0x8D0 PV Inverter Energie	kWh	uint32be	2	0,1	0		value		true	false	false	false
+2258	The system total PV energy	0x8D2 The system total PV energy	kWh	uint32be	2	0,1	0		value		true	false	false	false
+2260	System fault	0x8D4 System-Fehler		uint32be	2	1			state		true	false	false	false
