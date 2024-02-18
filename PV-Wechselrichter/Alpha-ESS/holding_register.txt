@@ -12,10 +12,10 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 33	Total Active power (Grid Meter)	0x021 Gesamtwirkleistung (Netzzähler)	W	int32be	2	1	0		value		true	false	false	false
 144	Total energy feed to grid (PVMeter)	0x090 Gesamte Einspeisung ins Netz (PV-Zähler)	kWh	uint32be	2	0.01	0		value		true	false	false	false
 151	Current of L1 phase(PV)	0x097 I L1 PV (Hybrid)	A	int16be	1	0,1	0		value		true	false	false	false
-152	Current of L2 phase(PV)	0x098 I L2 PV Garten	A	int16be	1	0,1	0		value		true	false	false	false
-153	Current of L2 phase(PV)	0x099 I L3 PV (Hybrid)	A	int16be	1	0,1	0		value		true	false	false	false
+152	Current of L2 phase(PV)	0x098 I L2 PV (Hybrid)	A	int16be	1	0,1	0		value		true	false	false	false
+153	Current of L3 phase(PV)	0x099 I L3 PV (Hybrid)	A	int16be	1	0,1	0		value		true	false	false	false
 155	Active power of L1 phase(PV)	0x09B P L1 PV (Hybrid)	W	int32be	2	1	0		value		true	false	false	false
-157	Active power of L2 phase(PV)	0x09D P L2 PV Garten	W	int32be	2	1			value		true	false	false	false
+157	Active power of L2 phase(PV)	0x09D P L2 PV (Hybrid)	W	int32be	2	1			value		true	false	false	false
 159	Active power of L3 phase(PV)	0x09F P L3 PV (Hybrid)	W	int32be	2	1	0		value		true	false	false	false
 161	Total Active power (PVMeter)	0x0A1 Gesamtwirkleistung (PV-Zähler)	W	int32be	2	1	0		value		true	false	false	false
 256	Battery voltage	0x100 Batteriespannung	V	uint16be	1	0.1	0		value		true	false	false	false
