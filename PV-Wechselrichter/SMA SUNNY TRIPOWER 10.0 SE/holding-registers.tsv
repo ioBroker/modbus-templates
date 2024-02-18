@@ -1,0 +1,7 @@
+_address	deviceId	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+40149	3	Wirkleistungvorgabe		W	int32be	2	1	0		level		false	false	false	false
+40151	3	Kommunikation			uint32be	2	1	0		state		false	false	false	false
+40189	3	max Ladeleistung BatWR		W	uint32be	2	1	0		level		true	false	false	false
+40191	3	max Entladeleistung BatWR		W	uint32be	2	1	0		level		true	false	false	false
+40795	3	Maximale Batterieladeleistung		W	uint32be	2	1	0		level		false	false	false	false
+40799	3	Maximale Batterieentladeleistung		W	uint32be	2	1	0		level		false	false	false	false
