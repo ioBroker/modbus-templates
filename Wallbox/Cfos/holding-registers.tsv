@@ -1,0 +1,46 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+8000	vendor_id	r Eindeutige Hersteller-Id, 0xcf05		uint32be	2	1	0		level		true	false	false	false
+8002	product_id	r Produkt-Id, 1		uint16be	1	1	0		level		true	false	false	false
+8003	device_id	r GerÃ¤te-Id im Produkt, 0x100		uint16be	1	1	0		level		true	false	false	false
+8004	product_version	r Produktversion, major.minor		uint16be	1	1	0		level		true	false	false	false
+8005	product_build	r Produkt-Build-Nummer		uint16be	1	1	0		level		true	false	false	false
+8006	mapping_version	r major.minor Version dieser Registerzuordnung		uint16be	1	1	0		level		true	false	false	false
+8007	padding_1	r Reserviert		uint16be	1	1	0		level		true	false	false	false
+8008	serial_no	r Seriennummer als Text		string	8		0		level		true	false	false	false
+8016	name	"r Produktname, ""cFos Power Brain"""		string	16		0		level		true	false	false	false
+8040	slave_id	rw Modbus Slave ID		uint16be	1	1	0		level		true	false	false	false
+8041	input	Reserviert		uint16be	1		0		level		true	false	false	false
+8042	pulsesperkwh	Impulse pro kWh für S0-Eingang		uint16be	2		0		level		true	false	false	false
+8044	phases	Bitmaske der simulierten Phasen, Bit 0 = L1, Bit 1 = L2, Bit 2 = L3		uint16be	1		0		level		true	false	false	false
+8045	voltage_l1	Nominelle Spannung L1 [V]	V	uint16be	1		0		level		true	false	false	false
+8046	voltage_l2	Nominelle Spannung L2 [V]	V	uint16be	1		0		level		true	false	false	false
+8047	voltage_l3	Nominelle Spannung L3 [V]	V	uint16be	1		0		level		true	false	false	false
+8050	pulses	Absolute Anzahl der Pulse auf dem S0-Eingang		uint16be	4		0		level		true	false	false	false
+8054	timeperpulse	Zeit zwischen den letzten zwei Pulsen auf dem S0-Eingang [ms]		uint16be	2		0		level		true	false	false	false
+8056	level	Momentaner Eingangswert auf dem S0-Eingang 0 = Strom fließt, 1 = Strom fließt nicht		uint16be	1		0		level		true	false	false	false
+8057	meter_flags	bit 0: 1=has individual phases		uint16be	1		0		level		true	false	false	false
+8058	energy	Aktiver Import [Wh]		uint16be	4		0		level		true	false	false	false
+8062	power	Aktive Leistung [W]		uint16be	2		0		level		true	false	false	false
+8064	current_l1	Momentaner Strom L1 [0.1 A]	A	uint16be	2	0.1	0		level		true	false	false	false
+8066	current_l2	Momentaner Strom L2 [0.1 A]	A	uint16be	2	0.1	0		level		true	false	false	false
+8068	current_l3	Momentaner Strom L3 [0.1 A]	A	uint16be	2	0.1	0		level		true	false	false	false
+8070	reset_pulses	Pulszähler zurücksetzen [1]		uint16be	1		0		level		true	false	false	false
+8071	reset_energy	Energie zurücksetzen [1]		uint16be	1		0		level		true	false	false	false
+8080	def_fixed_current	rw Standardwert reg_cable_current [0.1 A]	A	uint16be	1	0.1	0		level		true	false	false	false
+8081	def_charg_cur_limit	rw Standardwert Ladestrom-Limit [0.1 A] 6-63	A	uint16be	1	0.1	0		level		true	false	false	false
+8082	def_charging_enable	"rw Standardwert ""Laden mÃ¶glich"" [0/1]"		uint16be	1	1	0		level		true	false	false	false
+8083	fail_safe_duration	rw Anzahl der Sekunden ohne Lesen/Schreiben, bevor charging_cur_limit und charging_enable wiederhergestellt werden. Default-Wert ist 300 (5 Minuten)	sek	uint32be	2	1	0		level		true	false	false	false
+8085	fail_safe_current	rw Strom bei InaktivitÃ¤t, 0 = Laden deaktivieren	A	uint16be	1	0.1	0		level		true	false	false	false
+8086	disconnect_cp	Schreiben: Anzahl Sekunden der Abschaltung CP, Lesen: Verbleibende Sekunden		uint32be	1		0		level		true	false	false	false
+8087	relay_select	Schreiben: 0=3-Phasenschütz, 1=1-Phasenschütz, bei Wallboxen, die das unterstützen (mindestens controller Rev. F)		uint16be	1		0		level		true	false	false	false
+8088	relay2	Schreiben: 0=Relais 2 aus, 1=Relais 2 an (nur wenn Relais 1 aus ist), bei Wallboxen, die das unterstützen (mindestens controller Rev. F)		uint32be	1		0		level		true	false	false	false
+8090	cable_current	r PP: Maximaler Kabel-Strom [0.1 A], 0: kein Kabel	A	uint16be	1	0.1	0		level		true	false	false	false
+8091	fixed_current	rw Ãœberschreibe cable_current [0.1 A]	A	uint16be	1	0.1	0		level		true	false	false	false
+8092	charge_pilot_state	r CP: 0 = A (warten), 1 = B (Fahrzeug erkannt), 2 = C (laden), 3 = D (laden mit KÃ¼hlung), 4 = E (kein Strom), 5 = F (Fehler)		uint16be	1	1	0		level		true	false	false	false
+8093	charging_cur_limit	rw Ladestrom-Limit [0.1 A] 6-63A, kann wegen modellbedingter EinschrÃ¤nkungen begrenzt sein (z.B. fÃ¼r Power Brain 11kW ist es auf 16A begrenzt)	A	uint16be	1	0.1	0		level		true	false	false	false
+8094	charging_enable	rw Laden mÃ¶glich [0/1] 0 = ausgeschaltet, 1 = eingeschaltet		uint16be	1	1	0		level		true	false	false	false
+8095	charging_current	r Ladestrom [0.1 A] 6-63	A	uint16be	1	0.1	0		level		true	false	false	false
+8096	last_rfid	r Letzte erkannte RFID (hex-string)		string	16		0		level		true	false	false	false
+8111	detected_rfids	r Anzahl der RFID Eingaben		uint16be	1	1	0		level		true	false	false	false
+8112	has_meter	r 1, falls ein ZÃ¤hler angeheften (dann sind die Register 8058-8068 lesbar), andernfalls 0		uint16be	1	1	0		level		true	false	false	false
+8120	count_restart	rw Anzahl der Hardware-Neustarts		uint32be	2	1	0		level		true	false	false	false
