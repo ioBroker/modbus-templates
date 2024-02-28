@@ -43,7 +43,7 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 1028	Inverter_Current_L2	0x404 WR-Strom L2	A	int16be	1	0.1	0		value		true	false	false	false
 1029	Inverter_Current_L3	0x404 WR-Strom L3	A	int16be	1	0.1	0		value		true	false	false	false
 1030	Inverter_Power_L1	0x406 Inverter P L1	W	int32be	2	1	0		value		true	false	false	false
-1036	Inverter_Power_Total	0x40C WR-Gesamtleistung	W	uint32be	2	1	0		value		true	false	false	false
+1036	Inverter_Power_Total	0x40C WR-Gesamtleistung	W	int32be	2	1	0		value		true	false	false	false
 1038	Inverter_Backup_Voltage_L1	0x40E Inverter_Backup_Voltage_L1	V	uint16be	1	0,1	0		value		true	false	false	false
 1041	Inverter_Backup_Current_L1	0x411 Inverter_Backup_Current_L 1	A	int16be	1	0,1	0		value		true	false	false	false
 1044	Inverter_Backup_Power_L1	0x414 Inverter_Backup_Power_L1	W	int32be	2	1	0		value		true	false	false	false
