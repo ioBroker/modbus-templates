@@ -1,0 +1,26 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	cw	isScale
+0	GridVoltage	Netz Spannung	V	uint16be	1	0.1	0		value			
+1	GridCurrent	Netz Strom	A	int16be	1	0.1	0		value			
+2	GridPower	Netz Leistung	W	int16be	1	1	0		value			
+3	PvVoltage1	PV Spannung String 1	V	uint16be	1	0.1	0		value			
+5	PvCurrent1	PV Strom String 1	A	uint16be	1	0.1	0		value			
+7	GridFrequency	Netz Frequenz	Hz	uint16be	1	0.01	0		value			
+8	Temperature	Temperatur	°C	int16be	1	1	0		value			
+9	RunMode	Betriebsmodus		uint16be	1	1	0		value			
+10	Powerdc1	DC-Leistung String 1	W	uint16be	1	1	0		value			
+20	BatVoltage_Charge1	Batterie Ladespannung	V	int16be	1	0.1	0		value			
+21	BatCurrent_Charge1	Batterie Ladestrom	A	int16be	1	0.1	0		value			
+22	Batpower_Charge1	Batterie Ladeleistung	W	int16be	1	1	0		value			
+23	BMS_Connect_State	0:Disconnected 1:Connected		uint16be	1	1	0		state			
+24	TemperatureBat	Batterie Temperatur	°C	int16be	1	1	0		value			
+28	BatteryCapacity	Batterie Ladezustand (SoC)	%	uint16be	1	1	0		level			
+35	InputEnergy_Charge_today	Ladung Tag	kWh	uint16be	1	0.1	0		value			
+70	feedin_power	Bezug/Einspeisung (+/-)	W	int32sw	2	1	0		value			
+72	feedin_energy_total	Einspeisung	kW	uint32sw	2	0.01	0		value			
+74	consum_energy_total	Bezug	kW	uint32sw	2	0.01	0		value			
+80	Etoday_togrid	Einspeisung Tag	kWh	uint16be	1	0.1	0		value			
+82	Etotal_togrid	Einspeisung Gesamt	kWh	uint32sw	2	0.1	0		value			
+148	SolarEnergyTotal	Solarertrag Gesamt	kWh	uint32sw	2	0.1	0		value			
+150	SolarEnergyToday	Solarertrag Tag	kWh	uint16be	1	0.1	0		value			
+152	feedin_energy_today	Einspeisung Tag	kWh	uint32sw	2	0.01	0		value			
+154	consum_energy_today	Bezug Tag	kWh	uint32sw	2	0.01	0		value			

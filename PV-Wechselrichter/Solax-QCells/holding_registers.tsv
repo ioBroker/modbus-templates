@@ -1,0 +1,7 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+0	InverterSN	Seriennummer WR		string	7	1	0				true			
+7	FactoryName	Hersteller		string	7	1	0				true			
+139	SolarChargerUseMode	Ladestrategie: 0 = Self use mode, 1 = Feedin Priority, 2 = Back up mode, 3 = Manual mode		uint16be	1	1	0				true			
+141	wBattery1_Type	Batterietyp: 0 = Blei/Säure, 1 = Lithium 		uint16be	1	1	0				true			
+170	RegistrationCode	Registrierungsnummer Dongle		string	5	1	0				true			
+186	inverterType	WR Typ	W	uint16be	1	1	0				true			
