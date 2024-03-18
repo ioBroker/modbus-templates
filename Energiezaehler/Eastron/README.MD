@@ -12,7 +12,7 @@
 
 ## compatible Eastron Energy Meter
 
-- SDM630Modbus V3-> `holding-registers_sdm630Modbus.tsv` 
+- SDM630Modbus V3-> `input-registers_sdm630Modbus.tsv` 
 
 ## Info
 
