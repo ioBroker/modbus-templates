@@ -1,0 +1,100 @@
+_address	deviceId	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+97345	1	Export_Control_Mode	Export Control Mode		uint16be	1	1	0		level		true	false	false	
+97347	1	Export_Control_Site_Limit	Export Control Site Limit	W	floatsw	2	1	0		level		true	false	false	
+97709	1	Battery_1_Average_Temperature	Battery 1 Average Temperature	C°	floatsw	2	1	0		level		true	false	false	
+97711	1	Battery_1_Max_Temperature	Battery 1 Max Temperature	C°	floatsw	2	1	0		level		false	false	false	
+97713	1	Battery_1_Instantaneous_Voltage	Battery 1 Instantaneous Voltage	V	floatsw	2	1	0		level		true	false	false	
+97717	1	Battery_1_Instantaneous_Power	Battery 1 Instantaneous Power	W	floatsw	2	1	0		level		true	false	false	
+97719	1	Battery_1_Lifetime_Export_Energy_Counter	Battery 1 Lifetime Export Energy Counter	Wh	uint32sw	2	1	0		level		true	false	false	
+97723	1	Battery_1_Lifetime_Import_Energy_Counter	Battery 1 Lifetime Import Energy Counter	Wh	uint32sw	2	1	0		level		true	false	false	
+97731	1	Battery_1_State_of_Health	Battery 1 State of Health (SOH)	%	floatsw	2	1	0		level		false	false	false	
+97733	1	Battery_1_State_of_Energy	Battery 1 State of Energy (SOE)	%	floatsw	2	1	0		level		true	false	false	
+97735	1	Battery_1_Status	Battery 1 Status		uint32sw	2	1	0		level		true	false	false	
+97737	1	Battery_1_Status_Internal	Battery 1 Status Internal		uint32sw	2	1	0		level		true	false	false	
+101441	1	RRCR_State	RRCR State		uint16be	1	1	0		level		true	false	false	
+101442	1	Active_Power_Limit	Active Power Limit	%	uint16be	1	1	0		level		true	true	false	
+101697	1	Commit_Power_Control_Settings	Commit Power Control Settings		int16be	1	1	0		level		true	true	false	
+101701	1	ReactivePwrConfig	Reactive Power Config		int32sw	2	1	0		level		true	true	false	
+101763	1	AdvancedPwrControlEn	Advanced Power Control Enable		int32sw	2	1	0		level		true	false	false	
+40005	1	C_Manufacturer	Inverter Manufacturer		string	16	1	0		level		false	false	false	
+40021	1	C_Model	Inverter Model		string	16	1	0		level		false	false	false	
+40045	1	C_Version	Inverter Version		string	8	1	0		level		true	false	false	
+40053	1	C_SerialNumber	Inverter Serial Number		string	16	1	0		level		false	false	false	
+40069	1	C_DeviceAddress	MODBUS Unit ID		uint16be	1	1	0		level		false	false	false	
+40070	1	C_SunSpec_DID	Phases		uint16be	1	1	0		level		false	false	false	
+40072	1	I_AC_Current	AC Current	A	uint16be	1	1	0		level		false	false	false	
+40073	1	I_AC_CurrentA	AC Phase A Current value	A	uint16be	1	1	0		level		false	false	false	
+40074	1	I_AC_CurrentB	AC Phase B Current value	A	uint16be	1	1	0		level		false	false	false	
+40075	1	I_AC_CurrentC	AC Phase C Current value	A	uint16be	1	1	0		level		false	false	false	
+40076	1	I_AC_Current_SF	AC Current scale factor		int16be	1	1	0		level		false	false	false	
+40080	1	I_AC_VoltageAN	AC Voltage Phase A to N value	V	uint16be	1	1	0		level		false	false	false	
+40081	1	I_AC_VoltageBN	AC Voltage Phase B to N value	V	uint16be	1	1	0		level		false	false	false	
+40082	1	I_AC_VoltageCN	AC Voltage Phase C to N value	V	uint16be	1	1	0		level		false	false	false	
+40083	1	I_AC_Voltage_SF	AC Voltage scale factor		int16be	1	1	0		level		false	false	false	
+40084	1	I_AC_Power	AC Power value	W	int16be	1	1	0	x*Math.pow(10,sf['40085'])	level		true	false	false	
+40085	1	I_AC_Power_SF	AC Power scale factor		int16be	1	1	0		level		true	false	false	true
+40086	1	I_AC_Frequency	AC Frequency value	Hz	uint16be	1	1	0		level		false	false	false	
+40087	1	I_AC_Frequency_SF	AC Frequency scale factor		int16be	1	1	0		level		false	false	false	
+40088	1	I_AC_VA	Apparent Power value	VA	int16be	1	1	0		level		false	false	false	
+40089	1	I_AC_VA_SF	Apparent Power scale factor		int16be	1	1	0		level		false	false	false	
+40090	1	I_AC_VAR	Reactive Power	VAR	int16be	1	1	0		level		false	false	false	
+40091	1	I_AC_VAR_SF	Reactive Power scale factor		int16be	1	1	0		level		false	false	false	
+40092	1	I_AC_PF	Power Factor	%	int16be	1	1	0		level		false	false	false	
+40093	1	I_AC_PF_SF	Power Factor scale factor		int16be	1	1	0		level		false	false	false	
+40094	1	I_AC_Energy_WH	AC Lifetime Energy production	Wh	uint32be	2	1	0		level		true	false	false	
+40096	1	I_AC_Energy_WH_SF	AC Lifetime Energy Scale factor		int16be	1	1	0		level		true	false	false	
+40097	1	I_DC_Current	DC Current value	A	uint16be	1	1	0		level		false	false	false	
+40098	1	I_DC_Current_SF	DC Current scale factor		int16be	1	1	0		level		false	false	false	
+40099	1	I_DC_Voltage	DC Voltage value	V	uint16be	1	1	0		level		false	false	false	
+40100	1	I_DC_Voltage_SF	DC Voltage scale factor		int16be	1	1	0		level		false	false	false	
+40101	1	I_DC_Power	DC Power value	W	int16be	1	1	0	x*Math.pow(10,sf['40102'])	level		true	false	false	
+40102	1	I_DC_Power_SF	DC Power scale factor		int16be	1	1	0		level		true	false	false	true
+40104	1	I_Temp_Sink	Heat Sink Temperature	C°	int16be	1	1	0	x*Math.pow(10,sf['40107'])	level		true	false	false	
+40107	1	I_Temp_SF	Heat Sink Temperature scale factor		int16be	1	1	0		level		true	false	false	true
+40108	1	I_Status	Operating State		uint16be	1	1	0		level		true	false	false	
+40109	1	I_Status_Vendor	Vendor-defined operating state and error codes		uint16be	1	1	0		level		true	false	false	
+40207	1	M_AC_Power	Total Real Power	W	int16be	1	1	0	x*Math.pow(10,sf['40211'])	level		true	false	false	
+40208	1	M_AC_Power_A		W	int16be	1	1	0	x*Math.pow(10,sf['40211'])	level		true	false	false	
+40209	1	M_AC_Power_B		W	int16be	1	1	0	x*Math.pow(10,sf['40211'])	level		true	false	false	
+40210	1	M_AC_Power_C		W	int16be	1	1	0	x*Math.pow(10,sf['40211'])	level		true	false	false	
+40211	1	M_AC_Power_SF	Total Real Power scale factor		int16be	1	1	0		level		true	false	false	true
+40227	1	M_Exported		W	uint32be	2	1	0		level		true	false	false	
+40235	1	M_Imported		W	uint32be	2	1	0		level		true	false	false	
+40243	1	M_Energy_W_SF	Real Energy Scale Factor		int16be	1	1	0		level		true	false	false	
+40005	2	C_Manufacturer	Inverter Manufacturer		string	16	1	0		level		false	false	false	
+40021	2	C_Model	Inverter Model		string	16	1	0		level		false	false	false	
+40045	2	C_Version	Inverter Version		string	8	1	0		level		true	false	false	
+40053	2	C_SerialNumber	Inverter Serial Number		string	16	1	0		level		false	false	false	
+40069	2	C_DeviceAddress	MODBUS Unit ID		uint16be	1	1	0		level		false	false	false	
+40070	2	C_SunSpec_DID	Phases		uint16be	1	1	0		level		false	false	false	
+40072	2	I_AC_Current	AC Current	A	uint16be	1	1	0		level		false	false	false	
+40073	2	I_AC_CurrentA	AC Phase A Current value	A	uint16be	1	1	0		level		false	false	false	
+40074	2	I_AC_CurrentB	AC Phase B Current value	A	uint16be	1	1	0		level		false	false	false	
+40075	2	I_AC_CurrentC	AC Phase C Current value	A	uint16be	1	1	0		level		false	false	false	
+40076	2	I_AC_Current_SF	AC Current scale factor		int16be	1	1	0		level		false	false	false	
+40080	2	I_AC_VoltageAN	AC Voltage Phase A to N value		uint16be	1	1	0		level		false	false	false	
+40081	2	I_AC_VoltageBN	AC Voltage Phase B to N value		uint16be	1	1	0		level		false	false	false	
+40082	2	I_AC_VoltageCN	AC Voltage Phase C to N value		uint16be	1	1	0		level		false	false	false	
+40083	2	I_AC_Voltage_SF	AC Voltage scale factor		int16be	1	1	0		level		false	false	false	
+40084	2	I_AC_Power	AC Power value	W	int16be	1	1	0	x*Math.pow(10,sf['40085'])	level		true	false	false	
+40085	2	I_AC_Power_SF	AC Power scale factor		int16be	1	1	0		level		true	false	false	true
+40086	2	I_AC_Frequency	AC Frequency value	Hz	uint16be	1	1	0		level		false	false	false	
+40087	2	I_AC_Frequency_SF	AC Frequency scale factor		int16be	1	1	0		level		false	false	false	
+40088	2	I_AC_VA	Apparent Power value	VA	int16be	1	1	0		level		false	false	false	
+40089	2	I_AC_VA_SF	Apparent Power scale factor		int16be	1	1	0		level		false	false	false	
+40090	2	I_AC_VAR	Reactive Power	VAR	int16be	1	1	0		level		false	false	false	
+40091	2	I_AC_VAR_SF	Reactive Power scale factor		int16be	1	1	0		level		false	false	false	
+40092	2	I_AC_PF	Power Factor	%	int16be	1	1	0		level		false	false	false	
+40093	2	I_AC_PF_SF	Power Factor scale factor		int16be	1	1	0		level		false	false	false	
+40094	2	I_AC_Energy_WH	AC Lifetime Energy production	Wh	uint32be	2	1	0		level		true	false	false	
+40096	2	I_AC_Energy_WH_SF	AC Lifetime Energy production scale factor		uint16be	1	1	0		level		true	false	false	
+40097	2	I_DC_Current	DC Current value	A	uint16be	1	1	0		level		false	false	false	
+40098	2	I_DC_Current_SF	DC Current scale factor		int16be	1	1	0		level		false	false	false	
+40099	2	I_DC_Voltage	DC Voltage value	V	uint16be	1	1	0		level		false	false	false	
+40100	2	I_DC_Voltage_SF	DC Voltage scale factor		int16be	1	1	0		level		false	false	false	
+40101	2	I_DC_Power	DC Power value	W	int16be	1	1	0	x*Math.pow(10,sf['40102'])	level		true	false	false	
+40102	2	I_DC_Power_SF	DC Power scale factor		int16be	1	1	0		level		true	false	false	true
+40104	2	I_Temp_Sink	Heat Sink Temperature	C°	int16be	1	1	0	x*Math.pow(10,sf['40107'])	level		true	false	false	
+40107	2	I_Temp_SF	Heat Sink Temperature scale factor		int16be	1	1	0		level		true	false	false	true
+40108	2	I_Status	Operating State		uint16be	1	1	0		level		true	false	false	
+40109	2	I_Status_Vendor	Vendor-defined operating state and error codes		uint16be	1	1	0		level		true	false	false	
