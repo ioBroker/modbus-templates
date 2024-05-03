@@ -1,0 +1,53 @@
+_address	deviceId	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+40004	1	Mn	Manufacturer		string	16	1	0				true	false	false	false
+40020	1	Md	Device model		string	16	1	0				true	false	false	false
+40044	1	Vr	SW version of inverter		string	8	1	0				true	false	false	false
+40071	1	A	AC Current	A	uint16be	1	1		x * Math.pow(10, sf['40075'])			true	false	false	false
+40072	1	AphA	AC Phase-A Current value	A	uint16be	1	1	0	x * Math.pow(10, sf['40075'])			true	false	false	false
+40073	1	AphB	AC Phase-B Current value	A	uint16be	1	1	0	x * Math.pow(10, sf['40075'])			true	false	false	false
+40074	1	AphC	AC Phase-C Current value	A	uint16be	1	1	0	x * Math.pow(10, sf['40075'])			true	false	false	false
+40075	1	A_SF			int16be	1	1					true	false	false	true
+40083	1	W	AC Power	W	uint16be	1	1		x * Math.pow(10, sf['40084'])			true	false	false	false
+40084	1	W_SF			int16be	1	1					true	false	false	true
+40100	1	DCW	DC Power value	W	uint16be	1	1		x * Math.pow(10, sf['40101'])			true	false	false	false
+40101	1	DCW_SF			int16be	1	1					true	false	false	true
+40255	1	DCA_SF			int16be	1	1					true	false	false	true
+40256	1	DCV_SF			int16be	1	1					true	false	false	true
+40257	1	DCW_SF			int16be	1	1					true	false	false	true
+40272	1	MPPT1_DCA	DC Current	A	uint16be	1	1		x * Math.pow(10, sf['40255'])			true	false	false	false
+40273	1	MPPT1_DCV	DC Voltage	V	uint16be	1	1		x * Math.pow(10, sf['40256'])			true	false	false	false
+40274	1	MPPT1_DCW	DC Power 	W	uint16be	1	1		x * Math.pow(10, sf['40257'])			true	false	false	false
+40292	1	MPPT2_DCA	DC Current	A	uint16be	1	1		x * Math.pow(10, sf['40255'])			true	false	false	false
+40293	1	MPPT2_DCV	DC Voltage	V	uint16be	1	1		x * Math.pow(10, sf['40256'])			true	false	false	false
+40294	1	MPPT2_DCW	DC Power 	W	uint16be	1	1		x * Math.pow(10, sf['40257'])			true	false	false	false
+40312	1	Battery_DCA	DC Current	A	uint16be	1	1		x * Math.pow(10, sf['40255'])			true	false	false	false
+40313	1	Battery_DCV	DC Voltage	V	uint16be	1	1		x * Math.pow(10, sf['40256'])			true	false	false	false
+40314	1	Battery_DCW	DC Power	W	uint16be	1	1		x * Math.pow(10, sf['40257'])			true	false	false	false
+40345	1	WChaMax	Setpoint for maximum charg	W	uint16be	1	1		x * Math.pow(10, sf['40361'])			true	false	false	false
+40348	1	StorCtl_Mod	Activate hold/discharge/charge storage control mode		uint16be	1	1					true	true	false	false
+40350	1	MinRsvPct	Setpoint for minimum reserve for storage as a percentage of the nominal maximum storage.	%	uint16be	1	1		x * Math.pow(10, sf['40364'])			true	true	false	false
+40351	1	ChaState	Currently available energy as a percent of the capacity rating.	%	uint16be	1	1		x * Math.pow(10, sf['40365'])			true	false	false	false
+40354	1	ChaSt	Charge status of storage device		uint16be	1	1					true	false	false	false
+40355	1	OutWRte	Percent of max discharge rate	%	uint16be	1	1		x * Math.pow(10, sf['40368'])			true	true	false	false
+40356	1	InWRte	Percent of max charging rate	%	uint16be	1	1		x * Math.pow(10, sf['40368'])			true	true	false	false
+40361	1	WChaMax_SF			int16be	1	1					true	false	false	true
+40364	1	MinRsvPct_SF			int16be	1	1					true	false	false	true
+40365	1	ChaState_SF			int16be	1	1					true	false	false	true
+40368	1	InOutWRte_SF			int16be	1	1					true	false	false	true
+40004	200	Mn	Manufacturer		string	16	1	0				true	false	false	false
+40020	200	Md	Device model		string	16	1	0				true	false	false	false
+40036	200	Opt	Options		string	8	1	0				true	false	false	false
+40044	200	Vr	SW version of meter		string	8	1	0				true	false	false	false
+40071	200	A	Total AC Current	A	int16be	1	1	0	x * Math.pow(10, sf['40075'])			true	false	false	false
+40072	200	AphA	Phase A Current	A	int16be	1	1	0	x * Math.pow(10, sf['40075'])			true	false	false	false
+40073	200	AphB	Phase B Current	A	int16be	1	1	0	x * Math.pow(10, sf['40075'])			true	false	false	false
+40074	200	AphC	Phase C Current	A	int16be	1	1	0	x * Math.pow(10, sf['40075'])			true	false	false	false
+40075	200	A_SF			int16be	1	1	0				true	false	false	true
+40087	200	W	Total Real Power	W	int16be	1	1	0	x * Math.pow(10, sf['40091'])			true	false	false	false
+40088	200	WphA	Watts phase A	W	int16be	1	1	0	x * Math.pow(10, sf['40091'])			true	false	false	false
+40089	200	WphB	Watts phase B	W	int16be	1	1	0	x * Math.pow(10, sf['40091'])			true	false	false	false
+40090	200	WphC	Watts phase C	W	int16be	1	1	0	x * Math.pow(10, sf['40091'])			true	false	false	false
+40091	200	W_SF			int16be	1	1	0				true	false	false	true
+40108	200	TotWhExp	Total Watt-hours Exported	Wh	int32sw	2	1	0				true	false	false	false
+40114	200	TotWhImp	Total Watt-hours Imported	Wh	int32sw	2	1	0				true	false	false	false
+40124	200	TotWh_SF			int16be	1	1	0				true	false	false	true
