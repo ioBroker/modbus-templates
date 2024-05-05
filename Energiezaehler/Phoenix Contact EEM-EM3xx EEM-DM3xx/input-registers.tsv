@@ -1,0 +1,185 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	cw	isScale
+4096	U L1-N	Leiterspannung (L1<->N) 	V	floatbe	2		0		level		false	false
+4098	U L2-N	Leiterspannung (L2<->N) 	V	floatbe	2		0		level		false	false
+4100	U L3-N	Leiterspannung (L3<->N) 	V	floatbe	2		0		level		false	false
+4102	U L1-L2	Leiterspannung (L1<->L2)	V	floatbe	2		0		level		false	false
+4104	U L2-L3	Leiterspannung (L2<->L3)	V	floatbe	2		0		level		false	false
+4106	U L3-L1	Leiterspannung (L3<->L1)	V	floatbe	2		0		level		false	false
+4108	U-SYS	Mittelwert der Leiterspannungen (U12 + U23 + U31) / 3	V	floatbe	2		0		level		false	false
+4110	I-L1	Strom L1	A	floatbe	2		0		level		false	false
+4112	I-L2	Strom L2	A	floatbe	2		0		level		false	false
+4114	I-L3	Strom L3	A	floatbe	2		0		level		false	false
+4116	I-N	Strom N	A	floatbe	2		0		level		false	false
+4118	I-SYS	Mittelwert der Ströme (I1 + I2 + I3) / 3	A	floatbe	2		0		level		false	false
+4120	PF-L1	Leistungsfaktor L1 -: kapazitiv und +: induktiv		floatbe	2		0		level		false	false
+4122	PF-L2	Leistungsfaktor L3 -: kapazitiv und +: induktiv		floatbe	2		0		level		false	false
+4124	PF-L3	Leistungsfaktor L3 -: kapazitiv und +: induktiv		floatbe	2		0		level		false	false
+4126	ΣPF	Summe Leistungsfaktor -: kapazitiv und +: induktiv		floatbe	2		0		level		false	false
+4128	P-L1	Wirkleistung L1 +/-	W	floatbe	2		0		level		false	false
+4130	P-L2	Wirkleistung L2 +/-	W	floatbe	2		0		level		false	false
+4132	P-L3	Wirkleistung L3 +/-	W	floatbe	2		0		level		false	false
+4134	ΣP	Summe Wirkleistung +/-	W	floatbe	2		0		level		false	false
+4136	S-L1	Scheinleistung L1 +/-	VA	floatbe	2		0		level		false	false
+4138	S-L2	Scheinleistung L2 +/-	VA	floatbe	2		0		level		false	false
+4140	S-L3	Scheinleistung L3 +/-	VA	floatbe	2		0		level		false	false
+4142	ΣS	Summe Scheinleistung +/-	VA	floatbe	2		0		level		false	false
+4144	Q-L1	Blindleistung L1 +/-	var	floatbe	2		0		level		false	false
+4146	Q-L2	Blindleistung L2 +/-	var	floatbe	2		0		level		false	false
+4148	Q-L3	Blindleistung L3 +/-	var	floatbe	2		0		level		false	false
+4150	ΣQ	Summe Blindleistung +/-	var	floatbe	2		0		level		false	false
+4152	F	Frequenz	Hz	floatbe	2		0		level		false	false
+4154	Phasenfolge	0,123: (CCW / rechts Drehend) 0,132: (CW / links Drehend) 0: Nicht verfügbar		floatbe	2		0		level		false	false
+4352	Z P+-L1	Zähler gesamte Wirkarbeit Bezug L1 (nicht zurücksetzbar)	Wh	floatbe	2		0		level		false	false
+4354	Z P+-L2	Zähler gesamte Wirkarbeit Bezug L2 (nicht zurücksetzbar)	Wh	floatbe	2		0		level		false	false
+4356	Z P+-L3	Zähler gesamte Wirkarbeit Bezug L3 (nicht zurücksetzbar)	Wh	floatbe	2		0		level		false	false
+4358	Z ΣP+	Zähler gesamte Wirkarbeit Bezug Σ (nicht zurücksetzbar)	Wh	floatbe	2		0		level		false	false
+4360	Z P--L1	Zähler gesamte Wirkarbeit Abgabe L1 (nicht zurücksetzbar)	Wh	floatbe	2		0		level		false	false
+4362	Z P--L2	Zähler gesamte Wirkarbeit Abgabe L2 (nicht zurücksetzbar)	Wh	floatbe	2		0		level		false	false
+4364	Z P--L3	Zähler gesamte Wirkarbeit Abgabe L3 (nicht zurücksetzbar)	Wh	floatbe	2		0		level		false	false
+4366	Z ΣP-	Zähler gesamte Wirkarbeit Abgabe Σ (nicht zurücksetzbar)	Wh	floatbe	2		0		level		false	false
+4368	Z S+i-L1	Zähler gesamte Scheinarbeit Bezug induktiv L1 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4370	Z S+i-L2	Zähler gesamte Scheinarbeit Bezug induktiv L2 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4372	Z S+i-L3	Zähler gesamte Scheinarbeit Bezug induktiv L3 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4374	Z ΣS+i	Zähler gesamte Scheinarbeit Bezug induktiv Σ (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4376	Z S-i-L1	Zähler gesamte Scheinarbeit Abgabe induktiv L1 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4378	Z S-i-L2	Zähler gesamte Scheinarbeit Abgabe induktiv L2 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4380	Z S-i-L3	Zähler gesamte Scheinarbeit Abgabe induktiv L3 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4382	Z ΣS-i	Zähler gesamte Scheinarbeit Abgabe induktiv Σ (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4384	Z S+k-L1	Zähler gesamte Scheinarbeit Bezug kapazitiv L1 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4386	Z S+k-L2	Zähler gesamte Scheinarbeit Bezug kapazitiv L2 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4388	Z S+k-L3	Zähler gesamte Scheinarbeit Bezug kapazitiv L3 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4390	Z ΣS+k	Zähler gesamte Scheinarbeit Bezug kapazitiv Σ (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4392	Z S-k-L1	Zähler gesamte Scheinarbeit Abgabe kapazitiv L1 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4394	Z S-k-L2	Zähler gesamte Scheinarbeit Abgabe kapazitiv L2 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4396	Z S-k-L3	Zähler gesamte Scheinarbeit Abgabe kapazitiv L3 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4398	Z ΣS-k	Zähler gesamte Scheinarbeit Abgabe kapazitiv Σ (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4400	Z Q+i-L1	Zähler gesamte Blindarbeit Bezug induktiv L1 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4402	Z Q+i-L2	Zähler gesamte Blindarbeit Bezug induktiv L2 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4404	Z Q+i-L3	Zähler gesamte Blindarbeit Bezug induktiv L3 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4406	Z ΣQ+i	Zähler gesamte Blindarbeit Bezug induktiv Σ (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4408	Z Q-i-L1	Zähler gesamte Blindarbeit Abgabe induktiv L1 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4410	Z Q-i-L2	Zähler gesamte Blindarbeit Abgabe induktiv L2 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4412	Z Q-i-L3	Zähler gesamte Blindarbeit Abgabe induktiv L3 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4414	Z ΣSQ-i	Zähler gesamte Blindarbeit Abgabe induktiv Σ (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4416	Z Q+k-L1	Zähler gesamte Blindarbeit Bezug kapazitiv L1 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4418	Z Q+k-L2	Zähler gesamte Blindarbeit Bezug kapazitiv L2 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4420	Z Q+k-L3	Zähler gesamte Blindarbeit Bezug kapazitiv L3 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4422	Z ΣQ+k	Zähler gesamte Blindarbeit Bezug kapazitiv Σ (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4424	Z Q-k-L1	Zähler gesamte Blindarbeit Abgabe kapazitiv L1 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4426	Z Q-k-L2	Zähler gesamte Blindarbeit Abgabe kapazitiv L2 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4428	Z Q-k-L3	Zähler gesamte Blindarbeit Abgabe kapazitiv L3 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4430	Z ΣQ-k	Zähler gesamte Blindarbeit Abgabe kapazitiv Σ (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+5120	T ΣP+	Teilenergiezähler Wirkarbeit System Bezug	Wh	floatbe	2		0		level		false	false
+5122	T ΣP-	Teilenergiezähler Wirkarbeit System Abgabe	Wh	floatbe	2		0		level		false	false
+5124	T ΣS+i	Teilenergiezähler Scheinarbeit induktiv System Bezug	VAh	floatbe	2		0		level		false	false
+5126	T ΣS-i	Teilenergiezähler Scheinarbeit induktiv System Abgabe	VAh	floatbe	2		0		level		false	false
+5128	T ΣS+k	Teilenergiezähler Scheinarbeit kapazitiv System Bezug	VAh	floatbe	2		0		level		false	false
+5130	T ΣS-k	Teilenergiezähler Scheinarbeit kapazitiv System Abgabe	VAh	floatbe	2		0		level		false	false
+5132	T ΣQ+i	Teilenergiezähler Blindarbeit induktiv System Bezug	varh	floatbe	2		0		level		false	false
+5134	T ΣQ-i	Teilenergiezähler Blindarbeit induktiv System Abgabe	varh	floatbe	2		0		level		false	false
+5136	T ΣQ+k	Teilenergiezähler Blindarbeit kapazitiv System Bezug	varh	floatbe	2		0		level		false	false
+5138	T ΣQ-k	Teilenergiezähler Blindarbeit kapazitiv System Abgabe	varh	floatbe	2		0		level		false	false
+5140	 B ΣP	Bilanzierender Energiezähler Wirkarbeit System	Wh	floatbe	2		0		level		false	false
+5142	B ΣSii	BilBanzierender Energiezähler Scheinarbeit System induktiv	VAh	floatbe	2		0		level		false	false
+5144	B ΣSk	Bilanzierender Energiezähler Scheinarbeit System kapazitiv	VAh	floatbe	2		0		level		false	false
+5146	B ΣQi	Bilanzierender Energiezähler Blindarbeit System induktiv	varh	floatbe	2		0		level		false	false
+5148	B ΣQk	Bilanzierender Energiezähler Blindarbeit System kapazitiv	varh	floatbe	2		0		level		false	false
+5376	D U L1-L2	Durchschnitt Leiterspannung (L1<->L2)	V	floatbe	2		0		level		false	false
+5378	D U L2-L3	Durchschnitt Leiterspannung (L2<->L3)	V	floatbe	2		0		level		false	false
+5380	D U L3-L1	Durchschnitt Leiterspannung (L3<->L1)	V	floatbe	2		0		level		false	false
+5382	D U L1-N	Durchschnitt Leiterspannung (L1<->N) 	V	floatbe	2		0		level		false	false
+5384	D U L2-N	Durchschnitt Leiterspannung (L2<->N) 	V	floatbe	2		0		level		false	false
+5386	D U L3-N	Durchschnitt Leiterspannung (L3<->N) 	V	floatbe	2		0		level		false	false
+5388	D F	Durchschnitt Frequenz	Hz	floatbe	2		0		level		false	false
+5390	D I-L1	Durchschnitt Strom L1	A	floatbe	2		0		level		false	false
+5392	D I-L2	Durchschnitt Strom L2	A	floatbe	2		0		level		false	false
+5394	D I-L3	Durchschnitt Strom L3	A	floatbe	2		0		level		false	false
+5396	D I-N	Durchschnitt Strom N	A	floatbe	2		0		level		false	false
+5398	D I-SYS	Durchschnitt Strom I-SYS	A	floatbe	2		0		level		false	false
+5400	D P+L1	Durchschnitt Wirkleistung Bezug L1	W	floatbe	2		0		level		false	false
+5402	D P-L1	Durchschnitt Wirkleistung Abgabe L1	W	floatbe	2		0		level		false	false
+5404	D P+L2	Durchschnitt Wirkleistung Bezug L2	W	floatbe	2		0		level		false	false
+5406	D P-L2	Durchschnitt Wirkleistung Abgabe L2	W	floatbe	2		0		level		false	false
+5408	D P+L3	Durchschnitt Wirkleistung Bezug L3	W	floatbe	2		0		level		false	false
+5410	D P-L3	Durchschnitt Wirkleistung Abgabe L3	W	floatbe	2		0		level		false	false
+5412	D ΣP+	Durchschnitt Wirkleistung Bezug System	W	floatbe	2		0		level		false	false
+5414	D ΣP-	Durchschnitt Wirkleistung Abgabe System	W	floatbe	2		0		level		false	false
+5416	D B ΣP	Bilanzierter Durchschnitt Wirkleistung System	W	floatbe	2		0		level		false	false
+5418	D S+L1	Durchschnitt Scheinleistung Bezug L1	VA	floatbe	2		0		level		false	false
+5420	D S-L1	Durchschnitt Scheinleistung Abgabe L1	VA	floatbe	2		0		level		false	false
+5422	D S+L2	Durchschnitt Scheinleistung Bezug L2	VA	floatbe	2		0		level		false	false
+5424	D S-L2	Durchschnitt Scheinleistung Abgabe L2	VA	floatbe	2		0		level		false	false
+5426	D S+L3	Durchschnitt Scheinleistung Bezug L3	VA	floatbe	2		0		level		false	false
+5428	D S-L3	Durchschnitt Scheinleistung Abgabe L3	VA	floatbe	2		0		level		false	false
+5430	D ΣS+	Durchschnitt Scheinleistung Bezug System	VA	floatbe	2		0		level		false	false
+5432	D ΣS-	Durchschnitt Scheinleistung Abgabe System	VA	floatbe	2		0		level		false	false
+5434	D B ΣS	Bilanzierter Durchschnitt Scheinleistung System	VA	floatbe	2		0		level		false	false
+5436	D Q+L1	Durchschnitt Blindleistung Bezug L1	var	floatbe	2		0		level		false	false
+5438	D Q-L1	Durchschnitt Blindleistung Abgabe L1	var	floatbe	2		0		level		false	false
+5440	D Q+L2	Durchschnitt Blindleistung Bezug L2	var	floatbe	2		0		level		false	false
+5442	D Q-L2	Durchschnitt Blindleistung Abgabe L2	var	floatbe	2		0		level		false	false
+5444	D Q+L3	Durchschnitt Blindleistung Bezug L3	var	floatbe	2		0		level		false	false
+5446	D Q-L3	Durchschnitt Blindleistung Abgabe L3	var	floatbe	2		0		level		false	false
+5448	D ΣQ+	Durchschnitt Blindleistung Bezug System	var	floatbe	2		0		level		false	false
+5450	D ΣQ-	Durchschnitt Blindleistung Abgabe System	var	floatbe	2		0		level		false	false
+5452	D B ΣQ	Bilanzierter Durchschnitt Blindleistung System	var	floatbe	2		0		level		false	false
+5454	D PFi-L1	Durchschnitt Leistungsfaktor L1 induktiv		floatbe	2		0		level		false	false
+5456	D PFk-L1	Durchschnitt Leistungsfaktor L1 kapazitiv		floatbe	2		0		level		false	false
+5458	D PFi-L2	Durchschnitt Leistungsfaktor L2 induktiv		floatbe	2		0		level		false	false
+5460	D PFk-L2	Durchschnitt Leistungsfaktor L2 kapazitiv		floatbe	2		0		level		false	false
+5462	D PFi-L3	Durchschnitt Leistungsfaktor L3 induktiv		floatbe	2		0		level		false	false
+5464	D PFk-L3	Durchschnitt Leistungsfaktor L3 kapazitiv		floatbe	2		0		level		false	false
+5466	D ΣPFi	Durchschnitt Leistungsfaktor System induktiv		floatbe	2		0		level		false	false
+5468	D ΣPFk	Durchschnitt Leistungsfaktor System kapazitiv		floatbe	2		0		level		false	false
+50512	Hour	Betriebsstundenzähler 	h	uint32be	2	0,01	0		level			false
+50514	U L1-L2	Leiterspannung (L1<->L2)	V	uint32be	2	0,01	0		level			false
+50516	U L2-L3	Leiterspannung (L2<->L3)	V	uint32be	2	0,01	0		level			false
+50518	U L3-L1	Leiterspannung (L3<->L1)	V	uint32be	2	0,01	0		level			false
+50520	U L1-N	Leiterspannung (L1<->N) 	V	uint32be	2	0,01	0		level			false
+50522	U L2-N	Leiterspannung (L2<->N) 	V	uint32be	2	0,01	0		level			false
+50524	U L3-N	Leiterspannung (L3<->N) 	V	uint32be	2	0,01	0		level			false
+50526	F	Frequenz	Hz	uint32be	2	0,01	0		level			false
+50528	I-L1	Strom L1	A	uint32be	2	0,001	0		level			false
+50530	I-L2	Strom L2	A	uint32be	2	0,001	0		level			false
+50532	I-L3	Strom L3	A	uint32be	2	0,001	0		level			false
+50534	I-N	Strom N	A	uint32be	2	0,001	0		level			false
+50536	ΣP	Summe Wirkleistung +/-	W	int32be	2	10	0		level			false
+50538	ΣQ	Summe Blindleistung +/-	var	int32be	2	10	0		level			false
+50540	ΣS	Summe Scheinleistung +/-	VA	int32be	2	10	0		level			false
+50542	ΣPF	Summe Leistungsfaktor -: kapazitiv und +: induktiv		int32be	2	0,001	0		level			false
+50544	P-L1	Wirkleistung L1 +/-	W	int32be	2	10	0		level			false
+50546	P-L2	Wirkleistung L2 +/-	W	int32be	2	10	0		level			false
+50548	P-L3	Wirkleistung L3 +/-	W	int32be	2	10	0		level			false
+50550	Q-L1	Blindleistung L1 +/-	var	int32be	2	10	0		level			false
+50552	Q-L2	Blindleistung L2 +/-	var	int32be	2	10	0		level			false
+50554	Q-L3	Blindleistung L3 +/-	var	int32be	2	10	0		level			false
+50556	S-L1	Scheinleistung L1 +/-	VA	int32be	2	10	0		level			false
+50558	S-L2	Scheinleistung L2 +/-	VA	int32be	2	10	0		level			false
+50560	S-L3	Scheinleistung L3 +/-	VA	int32be	2	10	0		level			false
+50562	PF-L1	Leistungsfaktor L1 -: kapazitiv und +: induktiv		int32be	2	0,001	0		level			false
+50564	PF-L2	Leistungsfaktor L3 -: kapazitiv und +: induktiv		int32be	2	0,001	0		level			false
+50566	PF-L3	Leistungsfaktor L3 -: kapazitiv und +: induktiv		int32be	2	0,001	0		level			false
+50568	I-SYS	Mittelwert der Ströme (I1 + I2 + I3) / 3	A	uint32be	2	0,001	0		level			false
+50570	U-SYS	Mittelwert der Leiterspannungen (U12 + U23 + U31) / 3	V	uint32be	2	0,01	0		level			false
+50572	V-SYS	Mittelwert der Leiterspannungen gegen N (V1 + V2 + V3) / 3	V	uint32be	2	0,01	0		level			false
+50768	Hour	Betriebsstundenzähler	h	uint32be	2	0,01	0		level			false
+50770	ΣP+	Gesamt Wirkarbeit System Bezug	kWh	uint32be	2	1	0		level			false
+50772	ΣQi	Gesamt Blindarbeit System induktiv 	kvarh	uint32be	2	1	0		level			false
+50774	ΣS	Gesamt Scheinarbeit System	kVAh	uint32be	2	1	0		level			false
+50776	ΣP-	Gesamt Wirkarbeit System Abgabe 	kWh	uint32be	2	1	0		level			false
+50778	ΣQk	Gesamt Blindenergie System kapazitiv	kvarh	uint32be	2	1	0		level			false
+50780	T ΣP+	Teilenergiezähler Wirkarbeit System Bezug	kWh	uint32be	2	1	0		level			false
+50782	T ΣQi	Teilenergiezähler Blindarbeit System induktiv	kvarh	uint32be	2	1	0		level			false
+50784	T ΣS	Teilenergiezähler Scheinarbeit System	kVAh	uint32be	2	1	0		level			false
+50786	T ΣP-	Teilenergiezähler Wirkarbeit System Abgabe	kWh	uint32be	2	1	0		level			false
+50788	T ΣQk	Teilenergiezähler Blindarbeit System kapazitiv	kvarh	uint32be	2	1	0		level			false
+51070	Dmax I-L1	max Durchschnitt Strom L1	A	uint32be	2	0,001	0		level		false	false
+51072	Dmax I-L2	max Durchschnitt Strom L2	A	uint32be	2	0,001	0		level		false	false
+51074	Dmax I-L3	max Durchschnitt Strom L3	A	uint32be	2	0,001	0		level		false	false
+51076	Dmax I-N	max Durchschnitt Strom N	A	uint32be	2	0,001	0		level		false	false
+51078	Dmax ΣP+	max Durchschnitt Wirkleistung Bezug System	kW	uint32be	4	0,01	0		level		false	false
+51080	Dmax ΣP-	max Durchschnitt Wirkleistung Abgabe System	kW	uint32be	4	0,01	0		level		false	false
+51082	Dmax ΣQ+	max Durchschnitt Blindleistung Bezug System	kvar	uint32be	4	0,01	0		level		false	false
+51084	Dmax ΣQ-	max Durchschnitt Blindleistung Abgabe System	kvar	uint32be	4	0,01	0		level		false	false
+51086	Dmax ΣS+	max Durchschnitt Scheinleistung Bezug System	kVA	uint32be	4	0,01	0		level		false	false
+51088	Dmax ΣS-	max Durchschnitt Scheinleistung Abgabe System	kVA	uint32be	4	0,01	0		level		false	false
