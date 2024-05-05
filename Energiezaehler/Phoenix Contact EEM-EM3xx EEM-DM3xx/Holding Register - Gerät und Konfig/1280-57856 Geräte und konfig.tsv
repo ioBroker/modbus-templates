@@ -3,15 +3,15 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 1290	Firmware version rEL1	R/o		uint32be	2	0,01	0		level		true	false	false	false
 1292	Hardwareversion	R/o		uint32be	2	1	0		level		true	false	false	false
 1296	Aktiver Tarifzähler	R/o 1 = Tarif 1 aktiv, 2 = Tarif 2 aktiv		uint32be	2	1	0		level		true	false	false	false
-1300	Fehlercode	R/o 0 = kein Fehler, 1 = Phasenfolgefehler, 2 = Speicherfehler, 4 = Echtzeituhr verloren (nur R/W Ethernet)		uint32be	2	1	0		level		true	false	false	false
-1302	PrimärstR/om	R/o	A	uint32be	2	1	0		level		true	false	false	false
-1306	SekundärnennstR/om	R/o	A	uint32be	2	1	0		level		true	false	false	false
+1300	Fehlercode	R/o 0 = kein Fehler, 1 = Phasenfolgefehler, 2 = Speicherfehler, 4 = Echtzeituhr verloren (nur Ethernet)		uint32be	2	1	0		level		true	false	false	false
+1302	Primärstrom	R/o	A	uint32be	2	1	0		level		true	false	false	false
+1306	Sekundärnennstrom	R/o	A	uint32be	2	1	0		level		true	false	false	false
 1308	Netzart	R/o 5: 3 Phasen, 4 Leiter, 3 Ströme; 3: 3 Phasen, 3 Leiter, 3 Ströme; 2: 3 Phasen, 3 Leiter, 2 Ströme		uint32be	2	1	0		level		true	false	false	false
 1310	Modbus-Adresse	R/o		uint32be	2	1	0		level		true	false	false	false
 1314	Modbus/RTU Baud-Rate	R/o 0: 2400 Bit/s 1: 4800 Bit/s 2: 9600 Bit/s 3: 19200 Bit/s 4: 38400 Bit/s 5: 57600 Bit/s 8: 300 Bit/s 9: 1200 Bit/s		uint32be	2	1	0		level		true	false	false	false
 1318	Konfiguration der Teilenergiezähler	R/W siehe Handbuch (Seite 124) für konfiguration		uint16be	1	1	0		level		true	false	false	false
 1340	Mittelwertbildung	R/W Intervalldauer und Intervallar siehe Handbuch (Seite 117) für konfiguration	Hex	rawhex	1	1	0		level		true	false	false	false
-1341	Sync BR/oadcastbefehl	W/o Intervalldauer wird synchR/onisiert durch Schreiben von 0x0001	Hex	rawhex	1	1	0		level		false	false	false	false
+1341	Sync Broadcastbefehl	W/o Intervalldauer wird synchronisiert durch Schreiben von 0x0001	Hex	rawhex	1	1	0		level		false	false	false	false
 57616	IP-A	R/W Ethernet IP-Adresse A.B.C.D		uint16be	1	1	0		level		true	false	false	false
 57617	IP-B	R/W Ethernet IP-Adresse A.B.C.D		uint16be	1	1	0		level		true	false	false	false
 57618	IP-C	R/W Ethernet IP-Adresse A.B.C.D		uint16be	1	1	0		level		true	false	false	false
@@ -30,4 +30,4 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 57634	Modbus/RTU Stoppbit	R/W 0: 1 Bit; 1: 2 Bits		uint16be	1	1	0		level		true	false	false	false
 57636	Modbus/RTU Slave-Adresse	R/W bei Modbus/TCP fixiert auf 255		uint16be	1	1	0		level		true	false	false	false
 57636	Modbus Slave-Adresse	R/W Modbus/TCP = 255		uint8be	1	1	0		level		true	false	false	false
-57856	Speichern / Neustart der Konfiguration	W/o 161: Zwischenspeicherung in den EEPR/oM; 178: Konfiguration laden aus dem EEPR/oM		uint16be	1	1	0		level		false	false	false	false
+57856	Speichern / Neustart der Konfiguration	W/o 161: Zwischenspeicherung in den EEPROM; 178: Konfiguration laden aus dem EEPROM		uint16be	1	1	0		level		false	false	false	false
