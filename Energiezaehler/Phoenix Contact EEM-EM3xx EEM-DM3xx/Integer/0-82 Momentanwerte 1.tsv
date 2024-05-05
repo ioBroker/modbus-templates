@@ -1,0 +1,31 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	cw	isScale
+0	U L1-N	Leiterspannung (L1<->N) 	V	uint32be	2	0,001	0		level		false	false
+2	U L2-N	Leiterspannung (L2<->N) 	V	uint32be	2	0,001	0		level		false	false
+4	U L3-N	Leiterspannung (L3<->N) 	V	uint32be	2	0,001	0		level		false	false
+6	U L1-L2	Leiterspannung (L1<->L2)	V	uint32be	2	0,001	0		level		false	false
+8	U L2-L3	Leiterspannung (L2<->L3)	V	uint32be	2	0,001	0		level		false	false
+10	U L3-L1	Leiterspannung (L3<->L1)	V	uint32be	2	0,001	0		level		false	false
+12	U-SYS	Mittelwert der Leiterspannungen (U12 + U23 + U31) / 3	V	uint32be	2	0,001	0		level		false	false
+14	I-L1	Strom L1	A	uint32be	2	0,001	0		level		false	false
+16	I-L2	Strom L2	A	uint32be	2	0,001	0		level		false	false
+18	I-L3	Strom L3	A	uint32be	2	0,001	0		level		false	false
+20	I-N	Strom N	A	uint32be	2	0,001	0		level		false	false
+22	I-SYS	Mittelwert der Ströme (I1 + I2 + I3) / 3	A	uint32be	2	0,001	0		level		false	false
+24	PF-L1	Leistungsfaktor L1 -: kapazitiv und +: induktiv		int32be	2	0,001	0		level		false	false
+26	PF-L2	Leistungsfaktor L3 -: kapazitiv und +: induktiv		int32be	2	0,001	0		level		false	false
+28	PF-L3	Leistungsfaktor L3 -: kapazitiv und +: induktiv		int32be	2	0,001	0		level		false	false
+30	ΣPF	Summe Leistungsfaktor -: kapazitiv und +: induktiv		int32be	2	0,001	0		level		false	false
+32	P-L1	Wirkleistung L1 +/-	W	int64be	4	0,001	0		level		false	false
+36	P-L2	Wirkleistung L2 +/-	W	int64be	4	0,001	0		level		false	false
+40	P-L3	Wirkleistung L3 +/-	W	int64be	4	0,001	0		level		false	false
+44	ΣP	Summe Wirkleistung +/-	W	int64be	4	0,001	0		level		false	false
+48	S-L1	Scheinleistung L1 +/-	VA	int64be	4	0,001	0		level		false	false
+52	S-L2	Scheinleistung L2 +/-	VA	int64be	4	0,001	0		level		false	false
+56	S-L3	Scheinleistung L3 +/-	VA	int64be	4	0,001	0		level		false	false
+60	ΣS	Summe Scheinleistung +/-	VA	int64be	4	0,001	0		level		false	false
+64	Q-L1	Blindleistung L1 +/-	var	int64be	4	0,001	0		level		false	false
+68	Q-L2	Blindleistung L2 +/-	var	int64be	4	0,001	0		level		false	false
+72	Q-L3	Blindleistung L3 +/-	var	int64be	4	0,001	0		level		false	false
+76	ΣQ	Summe Blindleistung +/-	var	int64be	4	0,001	0		level		false	false
+80	F	Frequenz	Hz	uint32be	2	0,001	0		level		false	false
+82	Phasenfolge	0: 123 (CCW / rechts Drehend) 1: 132 (CW / links Drehend) 2: Nicht verfügbar		uint32be	2	1	0		level		false	false
