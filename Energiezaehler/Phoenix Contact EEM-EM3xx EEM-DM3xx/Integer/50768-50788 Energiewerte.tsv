@@ -1,0 +1,12 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	cw	isScale
+50768	Hour	Betriebsstundenzähler	h	uint32be	2	0,01	0		level			false
+50770	ΣP+	Gesamt Wirkarbeit System Bezug	kWh	uint32be	2	1	0		level			false
+50772	ΣQi	Gesamt Blindarbeit System induktiv 	kvarh	uint32be	2	1	0		level			false
+50774	ΣS	Gesamt Scheinarbeit System	kVAh	uint32be	2	1	0		level			false
+50776	ΣP-	Gesamt Wirkarbeit System Abgabe 	kWh	uint32be	2	1	0		level			false
+50778	ΣQk	Gesamt Blindenergie System kapazitiv	kvarh	uint32be	2	1	0		level			false
+50780	T ΣP+	Teilenergiezähler Wirkarbeit System Bezug	kWh	uint32be	2	1	0		level			false
+50782	T ΣQi	Teilenergiezähler Blindarbeit System induktiv	kvarh	uint32be	2	1	0		level			false
+50784	T ΣS	Teilenergiezähler Scheinarbeit System	kVAh	uint32be	2	1	0		level			false
+50786	T ΣP-	Teilenergiezähler Wirkarbeit System Abgabe	kWh	uint32be	2	1	0		level			false
+50788	T ΣQk	Teilenergiezähler Blindarbeit System kapazitiv	kvarh	uint32be	2	1	0		level			false
