@@ -1,0 +1,41 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	cw	isScale
+4352	Z P+-L1	Zähler gesamte Wirkarbeit Bezug L1 (nicht zurücksetzbar)	Wh	floatbe	2		0		level		false	false
+4354	Z P+-L2	Zähler gesamte Wirkarbeit Bezug L2 (nicht zurücksetzbar)	Wh	floatbe	2		0		level		false	false
+4356	Z P+-L3	Zähler gesamte Wirkarbeit Bezug L3 (nicht zurücksetzbar)	Wh	floatbe	2		0		level		false	false
+4358	Z ΣP+	Zähler gesamte Wirkarbeit Bezug Σ (nicht zurücksetzbar)	Wh	floatbe	2		0		level		false	false
+4360	Z P--L1	Zähler gesamte Wirkarbeit Abgabe L1 (nicht zurücksetzbar)	Wh	floatbe	2		0		level		false	false
+4362	Z P--L2	Zähler gesamte Wirkarbeit Abgabe L2 (nicht zurücksetzbar)	Wh	floatbe	2		0		level		false	false
+4364	Z P--L3	Zähler gesamte Wirkarbeit Abgabe L3 (nicht zurücksetzbar)	Wh	floatbe	2		0		level		false	false
+4366	Z ΣP-	Zähler gesamte Wirkarbeit Abgabe Σ (nicht zurücksetzbar)	Wh	floatbe	2		0		level		false	false
+4368	Z S+i-L1	Zähler gesamte Scheinarbeit Bezug induktiv L1 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4370	Z S+i-L2	Zähler gesamte Scheinarbeit Bezug induktiv L2 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4372	Z S+i-L3	Zähler gesamte Scheinarbeit Bezug induktiv L3 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4374	Z ΣS+i	Zähler gesamte Scheinarbeit Bezug induktiv Σ (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4376	Z S-i-L1	Zähler gesamte Scheinarbeit Abgabe induktiv L1 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4378	Z S-i-L2	Zähler gesamte Scheinarbeit Abgabe induktiv L2 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4380	Z S-i-L3	Zähler gesamte Scheinarbeit Abgabe induktiv L3 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4382	Z ΣS-i	Zähler gesamte Scheinarbeit Abgabe induktiv Σ (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4384	Z S+k-L1	Zähler gesamte Scheinarbeit Bezug kapazitiv L1 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4386	Z S+k-L2	Zähler gesamte Scheinarbeit Bezug kapazitiv L2 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4388	Z S+k-L3	Zähler gesamte Scheinarbeit Bezug kapazitiv L3 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4390	Z ΣS+k	Zähler gesamte Scheinarbeit Bezug kapazitiv Σ (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4392	Z S-k-L1	Zähler gesamte Scheinarbeit Abgabe kapazitiv L1 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4394	Z S-k-L2	Zähler gesamte Scheinarbeit Abgabe kapazitiv L2 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4396	Z S-k-L3	Zähler gesamte Scheinarbeit Abgabe kapazitiv L3 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4398	Z ΣS-k	Zähler gesamte Scheinarbeit Abgabe kapazitiv Σ (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4400	Z Q+i-L1	Zähler gesamte Blindarbeit Bezug induktiv L1 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4402	Z Q+i-L2	Zähler gesamte Blindarbeit Bezug induktiv L2 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4404	Z Q+i-L3	Zähler gesamte Blindarbeit Bezug induktiv L3 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4406	Z ΣQ+i	Zähler gesamte Blindarbeit Bezug induktiv Σ (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4408	Z Q-i-L1	Zähler gesamte Blindarbeit Abgabe induktiv L1 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4410	Z Q-i-L2	Zähler gesamte Blindarbeit Abgabe induktiv L2 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4412	Z Q-i-L3	Zähler gesamte Blindarbeit Abgabe induktiv L3 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4414	Z ΣSQ-i	Zähler gesamte Blindarbeit Abgabe induktiv Σ (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4416	Z Q+k-L1	Zähler gesamte Blindarbeit Bezug kapazitiv L1 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4418	Z Q+k-L2	Zähler gesamte Blindarbeit Bezug kapazitiv L2 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4420	Z Q+k-L3	Zähler gesamte Blindarbeit Bezug kapazitiv L3 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4422	Z ΣQ+k	Zähler gesamte Blindarbeit Bezug kapazitiv Σ (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4424	Z Q-k-L1	Zähler gesamte Blindarbeit Abgabe kapazitiv L1 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4426	Z Q-k-L2	Zähler gesamte Blindarbeit Abgabe kapazitiv L2 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4428	Z Q-k-L3	Zähler gesamte Blindarbeit Abgabe kapazitiv L3 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4430	Z ΣQ-k	Zähler gesamte Blindarbeit Abgabe kapazitiv Σ (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
