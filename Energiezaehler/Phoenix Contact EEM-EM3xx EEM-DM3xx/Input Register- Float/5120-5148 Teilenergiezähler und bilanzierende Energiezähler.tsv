@@ -1,0 +1,16 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	cw	isScale
+5120	T ΣP+	Teilenergiezähler Wirkarbeit System Bezug	Wh	floatbe	2		0		level		false	false
+5122	T ΣP-	Teilenergiezähler Wirkarbeit System Abgabe	Wh	floatbe	2		0		level		false	false
+5124	T ΣS+i	Teilenergiezähler Scheinarbeit induktiv System Bezug	VAh	floatbe	2		0		level		false	false
+5126	T ΣS-i	Teilenergiezähler Scheinarbeit induktiv System Abgabe	VAh	floatbe	2		0		level		false	false
+5128	T ΣS+k	Teilenergiezähler Scheinarbeit kapazitiv System Bezug	VAh	floatbe	2		0		level		false	false
+5130	T ΣS-k	Teilenergiezähler Scheinarbeit kapazitiv System Abgabe	VAh	floatbe	2		0		level		false	false
+5132	T ΣQ+i	Teilenergiezähler Blindarbeit induktiv System Bezug	varh	floatbe	2		0		level		false	false
+5134	T ΣQ-i	Teilenergiezähler Blindarbeit induktiv System Abgabe	varh	floatbe	2		0		level		false	false
+5136	T ΣQ+k	Teilenergiezähler Blindarbeit kapazitiv System Bezug	varh	floatbe	2		0		level		false	false
+5138	T ΣQ-k	Teilenergiezähler Blindarbeit kapazitiv System Abgabe	varh	floatbe	2		0		level		false	false
+5140	 B ΣP	Bilanzierender Energiezähler Wirkarbeit System	Wh	floatbe	2		0		level		false	false
+5142	B ΣSii	BilBanzierender Energiezähler Scheinarbeit System induktiv	VAh	floatbe	2		0		level		false	false
+5144	B ΣSk	Bilanzierender Energiezähler Scheinarbeit System kapazitiv	VAh	floatbe	2		0		level		false	false
+5146	B ΣQi	Bilanzierender Energiezähler Blindarbeit System induktiv	varh	floatbe	2		0		level		false	false
+5148	B ΣQk	Bilanzierender Energiezähler Blindarbeit System kapazitiv	varh	floatbe	2		0		level		false	false

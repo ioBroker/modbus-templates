@@ -21,6 +21,10 @@ Use `holding-registers.tsv`.
 
 Use `holding-registers-meter1.tsv`. *Also includes all registers of the inverter.*
 
+## Battery - SolarEdge Home Battery
+
+Use `holding-registers-meter-battery.tsv`. *Includes inverter, energy meter and battery.*
+
 ## Other SolarEdge inverters and Home Battery
 
 - SE10K-RWB48

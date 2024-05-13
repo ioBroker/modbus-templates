@@ -1,0 +1,41 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	cw	isScale
+4608	Z1 P+-L1	Zählertarif 1 Wirkarbeit Bezug L1 (nicht zurücksetzbar)	Wh	floatbe	2		0		level		false	false
+4610	Z1 P+-L2	Zählertarif 1 Wirkarbeit Bezug L2 (nicht zurücksetzbar)	Wh	floatbe	2		0		level		false	false
+4612	Z1 P+-L3	Zählertarif 1 Wirkarbeit Bezug L3 (nicht zurücksetzbar)	Wh	floatbe	2		0		level		false	false
+4614	Z1 ΣP+	Zählertarif 1 Wirkarbeit Bezug Σ (nicht zurücksetzbar)	Wh	floatbe	2		0		level		false	false
+4616	Z1 P--L1	Zählertarif 1 Wirkarbeit Abgabe L1 (nicht zurücksetzbar)	Wh	floatbe	2		0		level		false	false
+4618	Z1 P--L2	Zählertarif 1 Wirkarbeit Abgabe L2 (nicht zurücksetzbar)	Wh	floatbe	2		0		level		false	false
+4620	Z1 P--L3	Zählertarif 1 Wirkarbeit Abgabe L3 (nicht zurücksetzbar)	Wh	floatbe	2		0		level		false	false
+4622	Z1 ΣP-	Zählertarif 1 Wirkarbeit Abgabe Σ (nicht zurücksetzbar)	Wh	floatbe	2		0		level		false	false
+4624	Z1 S+i-L1	Zählertarif 1 Scheinarbeit Bezug induktiv L1 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4626	Z1 S+i-L2	Zählertarif 1 Scheinarbeit Bezug induktiv L2 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4628	Z1 S+i-L3	Zählertarif 1 Scheinarbeit Bezug induktiv L3 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4630	Z1 ΣS+i	Zählertarif 1 Scheinarbeit Bezug induktiv Σ (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4632	Z1 S-i-L1	Zählertarif 1 Scheinarbeit Abgabe induktiv L1 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4634	Z1 S-i-L2	Zählertarif 1 Scheinarbeit Abgabe induktiv L2 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4636	Z1 S-i-L3	Zählertarif 1 Scheinarbeit Abgabe induktiv L3 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4638	Z1 ΣS-i	Zählertarif 1 Scheinarbeit Abgabe induktiv Σ (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4640	Z1 S+k-L1	Zählertarif 1 Scheinarbeit Bezug kapazitiv L1 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4642	Z1 S+k-L2	Zählertarif 1 Scheinarbeit Bezug kapazitiv L2 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4644	Z1 S+k-L3	Zählertarif 1 Scheinarbeit Bezug kapazitiv L3 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4646	Z1 ΣS+k	Zählertarif 1 Scheinarbeit Bezug kapazitiv Σ (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4648	Z1 S-k-L1	Zählertarif 1 Scheinarbeit Abgabe kapazitiv L1 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4650	Z1 S-k-L2	Zählertarif 1 Scheinarbeit Abgabe kapazitiv L2 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4652	Z1 S-k-L3	Zählertarif 1 Scheinarbeit Abgabe kapazitiv L3 (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4654	Z1 ΣS-k	Zählertarif 1 Scheinarbeit Abgabe kapazitiv Σ (nicht zurücksetzbar)	VAh	floatbe	2		0		level		false	false
+4656	Z1 Q+i-L1	Zählertarif 1 Blindarbeit Bezug induktiv L1 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4658	Z1 Q+i-L2	Zählertarif 1 Blindarbeit Bezug induktiv L2 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4660	Z1 Q+i-L3	Zählertarif 1 Blindarbeit Bezug induktiv L3 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4662	Z1 ΣQ+i	Zählertarif 1 Blindarbeit Bezug induktiv Σ (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4664	Z1 Q-i-L1	Zählertarif 1 Blindarbeit Abgabe induktiv L1 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4666	Z1 Q-i-L2	Zählertarif 1 Blindarbeit Abgabe induktiv L2 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4668	Z1 Q-i-L3	Zählertarif 1 Blindarbeit Abgabe induktiv L3 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4670	Z1 ΣSQ-i	Zählertarif 1 Blindarbeit Abgabe induktiv Σ (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4672	Z1 Q+k-L1	Zählertarif 1 Blindarbeit Bezug kapazitiv L1 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4674	Z1 Q+k-L2	Zählertarif 1 Blindarbeit Bezug kapazitiv L2 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4676	Z1 Q+k-L3	Zählertarif 1 Blindarbeit Bezug kapazitiv L3 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4678	Z1 ΣQ+k	Zählertarif 1 Blindarbeit Bezug kapazitiv Σ (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4680	Z1 Q-k-L1	Zählertarif 1 Blindarbeit Abgabe kapazitiv L1 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4682	Z1 Q-k-L2	Zählertarif 1 Blindarbeit Abgabe kapazitiv L2 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4684	Z1 Q-k-L3	Zählertarif 1 Blindarbeit Abgabe kapazitiv L3 (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false
+4686	Z1 ΣQ-k	Zählertarif 1 Blindarbeit Abgabe kapazitiv Σ (nicht zurücksetzbar)	varh	floatbe	2		0		level		false	false

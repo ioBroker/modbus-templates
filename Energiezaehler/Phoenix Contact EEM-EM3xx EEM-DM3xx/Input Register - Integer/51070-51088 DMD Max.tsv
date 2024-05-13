@@ -1,0 +1,11 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	cw	isScale
+51070	Dmax I-L1	max Durchschnitt Strom L1	A	uint32be	2	0,001	0		level		false	false
+51072	Dmax I-L2	max Durchschnitt Strom L2	A	uint32be	2	0,001	0		level		false	false
+51074	Dmax I-L3	max Durchschnitt Strom L3	A	uint32be	2	0,001	0		level		false	false
+51076	Dmax I-N	max Durchschnitt Strom N	A	uint32be	2	0,001	0		level		false	false
+51078	Dmax ΣP+	max Durchschnitt Wirkleistung Bezug System	kW	uint32be	4	0,01	0		level		false	false
+51080	Dmax ΣP-	max Durchschnitt Wirkleistung Abgabe System	kW	uint32be	4	0,01	0		level		false	false
+51082	Dmax ΣQ+	max Durchschnitt Blindleistung Bezug System	kvar	uint32be	4	0,01	0		level		false	false
+51084	Dmax ΣQ-	max Durchschnitt Blindleistung Abgabe System	kvar	uint32be	4	0,01	0		level		false	false
+51086	Dmax ΣS+	max Durchschnitt Scheinleistung Bezug System	kVA	uint32be	4	0,01	0		level		false	false
+51088	Dmax ΣS-	max Durchschnitt Scheinleistung Abgabe System	kVA	uint32be	4	0,01	0		level		false	false

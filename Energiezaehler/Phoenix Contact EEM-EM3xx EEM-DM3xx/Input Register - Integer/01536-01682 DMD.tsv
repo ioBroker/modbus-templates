@@ -1,0 +1,48 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	cw	isScale
+1536	D U L1-L2	Durchschnitt Leiterspannung (L1<->L2)	V	uint32be	2	0,001	0		level		false	false
+1538	D U L2-L3	Durchschnitt Leiterspannung (L2<->L3)	V	uint32be	2	0,001	0		level		false	false
+1540	D U L3-L1	Durchschnitt Leiterspannung (L3<->L1)	V	uint32be	2	0,001	0		level		false	false
+1542	D U L1-N	Durchschnitt Leiterspannung (L1<->N) 	V	uint32be	2	0,001	0		level		false	false
+1544	D U L2-N	Durchschnitt Leiterspannung (L2<->N) 	V	uint32be	2	0,001	0		level		false	false
+1546	D U L3-N	Durchschnitt Leiterspannung (L3<->N) 	V	uint32be	2	0,001	0		level		false	false
+1548	D F	Durchschnitt Frequenz	Hz	uint32be	2	0,001	0		level		false	false
+1550	D I-L1	Durchschnitt Strom L1	A	uint32be	2	0,001	0		level		false	false
+1552	D I-L2	Durchschnitt Strom L2	A	uint32be	2	0,001	0		level		false	false
+1554	D I-L3	Durchschnitt Strom L3	A	uint32be	2	0,001	0		level		false	false
+1556	D I-N	Durchschnitt Strom N	A	uint32be	2	0,001	0		level		false	false
+1558	D I-SYS	Durchschnitt Strom I-SYS	A	uint32be	2	0,001	0		level		false	false
+1560	D P+L1	Durchschnitt Wirkleistung Bezug L1	W	uint64be	4	0,001	0		level		false	false
+1564	D P-L1	Durchschnitt Wirkleistung Abgabe L1	W	uint64be	4	0,001	0		level		false	false
+1568	D P+L2	Durchschnitt Wirkleistung Bezug L2	W	uint64be	4	0,001	0		level		false	false
+1572	D P-L2	Durchschnitt Wirkleistung Abgabe L2	W	uint64be	4	0,001	0		level		false	false
+1576	D P+L3	Durchschnitt Wirkleistung Bezug L3	W	uint64be	4	0,001	0		level		false	false
+1580	D P-L3	Durchschnitt Wirkleistung Abgabe L3	W	uint64be	4	0,001	0		level		false	false
+1584	D ΣP+	Durchschnitt Wirkleistung Bezug System	W	uint64be	4	0,001	0		level		false	false
+1588	D ΣP-	Durchschnitt Wirkleistung Abgabe System	W	uint64be	4	0,001	0		level		false	false
+1592	D B ΣP	Bilanzierter Durchschnitt Wirkleistung System	W	int64be	4	0,001	0		level		false	false
+1596	D S+L1	Durchschnitt Scheinleistung Bezug L1	VA	uint64be	4	0,001	0		level		false	false
+1600	D S-L1	Durchschnitt Scheinleistung Abgabe L1	VA	uint64be	4	0,001	0		level		false	false
+1604	D S+L2	Durchschnitt Scheinleistung Bezug L2	VA	uint64be	4	0,001	0		level		false	false
+1608	D S-L2	Durchschnitt Scheinleistung Abgabe L2	VA	uint64be	4	0,001	0		level		false	false
+1612	D S+L3	Durchschnitt Scheinleistung Bezug L3	VA	uint64be	4	0,001	0		level		false	false
+1616	D S-L3	Durchschnitt Scheinleistung Abgabe L3	VA	uint64be	4	0,001	0		level		false	false
+1620	D ΣS+	Durchschnitt Scheinleistung Bezug System	VA	uint64be	4	0,001	0		level		false	false
+1624	D ΣS-	Durchschnitt Scheinleistung Abgabe System	VA	uint64be	4	0,001	0		level		false	false
+1628	D B ΣS	Bilanzierter Durchschnitt Scheinleistung System	VA	uint64be	4	0,001	0		level		false	false
+1632	D Q+L1	Durchschnitt Blindleistung Bezug L1	var	uint64be	4	0,001	0		level		false	false
+1636	D Q-L1	Durchschnitt Blindleistung Abgabe L1	var	uint64be	4	0,001	0		level		false	false
+1640	D Q+L2	Durchschnitt Blindleistung Bezug L2	var	uint64be	4	0,001	0		level		false	false
+1644	D Q-L2	Durchschnitt Blindleistung Abgabe L2	var	uint64be	4	0,001	0		level		false	false
+1648	D Q+L3	Durchschnitt Blindleistung Bezug L3	var	uint64be	4	0,001	0		level		false	false
+1652	D Q-L3	Durchschnitt Blindleistung Abgabe L3	var	uint64be	4	0,001	0		level		false	false
+1656	D ΣQ+	Durchschnitt Blindleistung Bezug System	var	uint64be	4	0,001	0		level		false	false
+1660	D ΣQ-	Durchschnitt Blindleistung Abgabe System	var	uint64be	4	0,001	0		level		false	false
+1664	D B ΣQ	Bilanzierter Durchschnitt Blindleistung System	var	int64be	4	0,001	0		level		false	false
+1668	D PFi-L1	Durchschnitt Leistungsfaktor L1 induktiv		uint32be	2	0,001	0		level		false	false
+1670	D PFk-L1	Durchschnitt Leistungsfaktor L1 kapazitiv		uint32be	2	0,001	0		level		false	false
+1672	D PFi-L2	Durchschnitt Leistungsfaktor L2 induktiv		uint32be	2	0,001	0		level		false	false
+1674	D PFk-L2	Durchschnitt Leistungsfaktor L2 kapazitiv		uint32be	2	0,001	0		level		false	false
+1676	D PFi-L3	Durchschnitt Leistungsfaktor L3 induktiv		uint32be	2	0,001	0		level		false	false
+1678	D PFk-L3	Durchschnitt Leistungsfaktor L3 kapazitiv		uint32be	2	0,001	0		level		false	false
+1680	D ΣPFi	Durchschnitt Leistungsfaktor System induktiv		uint32be	2	0,001	0		level		false	false
+1682	D ΣPFk	Durchschnitt Leistungsfaktor System kapazitiv		uint32be	2	0,001	0		level		false	false
