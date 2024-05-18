@@ -80,7 +80,7 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	cw	isSca
 5136	T ΣQ+k	Teilenergiezähler Blindarbeit kapazitiv System Bezug	varh	floatbe	2		0		level		false	false
 5138	T ΣQ-k	Teilenergiezähler Blindarbeit kapazitiv System Abgabe	varh	floatbe	2		0		level		false	false
 5140	 B ΣP	Bilanzierender Energiezähler Wirkarbeit System	Wh	floatbe	2		0		level		false	false
-5142	B ΣSii	Bilanzierender Energiezähler Scheinarbeit System induktiv	VAh	floatbe	2		0		level		false	false
+5142	B ΣSi	Bilanzierender Energiezähler Scheinarbeit System induktiv	VAh	floatbe	2		0		level		false	false
 5144	B ΣSk	Bilanzierender Energiezähler Scheinarbeit System kapazitiv	VAh	floatbe	2		0		level		false	false
 5146	B ΣQi	Bilanzierender Energiezähler Blindarbeit System induktiv	varh	floatbe	2		0		level		false	false
 5148	B ΣQk	Bilanzierender Energiezähler Blindarbeit System kapazitiv	varh	floatbe	2		0		level		false	false
