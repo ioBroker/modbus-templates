@@ -50,4 +50,24 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 45007	Heating1_OperatingMode	Heating 1 operating mode		int16be	1	1	0		level		true	true		
 45051	Heating1_OffsetFlowLineTemp	Heating 1 setting for flow line temperature setpoint offset	K	int16be	1	1	0	x * 0.1	level		true	true		
 45052	Heating1_RoomHeatingTemp	Heating 1 setting for heating mode room setpoint temperature	°C	int16be	1	1	0	x * 0.1	level		true	true		
-45053	Heating1_RoomCoolingTemp	Heating 1 setting for cooling mode room setpoint temperature	°C	int16be	1	1	0	x * 0.1	level		true	true		
+45053	Heating1_RoomCoolingTemp	Heating 1 setting for cooling mode room setpoint temperature	°C	int16be	1	1	0	x * 0.1	level		true	true
+45101	Heating2_Error	Heating 2 error number		int16be	1	1	0		level		true	false
+45102	Heating2_OperatingState	Heating 2 operating state		uint16be	1	1	0		level		true	false
+45103	Heating2_T_Flow	Heating 2 actual temperature flow line sensor	°C	int16be	1	1	0	x * 0.1	level		true	false
+45104	Heating2_T_Return	Heating 2 actual temperature return line sensor	°C	int16be	1	1	0	x * 0.1	level		true	false
+45105	Heating2_RoomTemp	Heating 2 actual temperature room device sensor	°C	int16be	1	1	0	x * 0.1	level		true	true
+45106	Heating2_RequestT_Flow	Heating 2 setpoint temperature flow line	°C	int16be	1	1	0	x * 0.1	level		true	true
+45107	Heating2_OperatingMode	Heating 2 operating mode		int16be	1	1	0		level		true	true
+45151	Heating2_OffsetFlowLineTemp	Heating 2 setting for flow line temperature setpoint offset	K	int16be	1	1	0	x * 0.1	level		true	true
+45152	Heating2_RoomHeatingTemp	Heating 2 setting for heating mode room setpoint temperature	°C	int16be	1	1	0	x * 0.1	level		true	true
+45153	Heating2_RoomCoolingTemp	Heating 2 setting for cooling mode room setpoint temperature	°C	int16be	1	1	0	x * 0.1	level		true	true
+45201	Heating3_Error	Heating 3 error number		int16be	1	1	0		level		true	false
+45202	Heating3_OperatingState	Heating 3 operating state		uint16be	1	1	0		level		true	false
+45203	Heating3_T_Flow	Heating 3 actual temperature flow line sensor	°C	int16be	1	1	0	x * 0.1	level		true	false
+45204	Heating3_T_Return	Heating 3 actual temperature return line sensor	°C	int16be	1	1	0	x * 0.1	level		true	false
+45205	Heating3_RoomTemp	Heating 3 actual temperature room device sensor	°C	int16be	1	1	0	x * 0.1	level		true	true
+45206	Heating3_RequestT_Flow	Heating 3 setpoint temperature flow line	°C	int16be	1	1	0	x * 0.1	level		true	true
+45207	Heating3_OperatingMode	Heating 3 operating mode		int16be	1	1	0		level		true	true
+45251	Heating3_OffsetFlowLineTemp	Heating 3 setting for flow line temperature setpoint offset	K	int16be	1	1	0	x * 0.1	level		true	true
+45252	Heating3_RoomHeatingTemp	Heating 3 setting for heating mode room setpoint temperature	°C	int16be	1	1	0	x * 0.1	level		true	true
+45253	Heating3_RoomCoolingTemp	Heating 3 setting for cooling mode room setpoint temperature	°C	int16be	1	1	0	x * 0.1	level		true	true
