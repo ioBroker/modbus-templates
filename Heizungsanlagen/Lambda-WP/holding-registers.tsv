@@ -1,9 +1,9 @@
 _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
 40001	Ambient_Error	General Ambient error number		int16be	1	1	0		level		true			
 40002	Ambient_State	General Ambient Operating State		uint16be	1	1	0		level		true			
-40003	Ambient_Temp	General Ambient actual ambient temperature	°C	int16be	1	1	0	x * 0.1	level		true	true		
-40004	Ambient_1h_Temp	General Ambient average ambient temp. 1h 	°C	int16be	1	1	0	x * 0.1	level		true			
-40005	Ambient_Calculated_Temp	General Ambient calculated ambient temp. 	°C	int16be	1	1	0	x * 0.1	level		true			
+40003	Ambient_Temp	General Ambient actual ambient temperature	°C	int16be	1	0.1	0		level		true	true		
+40004	Ambient_1h_Temp	General Ambient average ambient temp. 1h 	°C	int16be	1	0.1	0		level		true			
+40005	Ambient_Calculated_Temp	General Ambient calculated ambient temp. 	°C	int16be	1	0.1	0		level		true			
 40101	E_Manager_Error	E-Manager error number		int16be	1	1	0		level		true			
 40102	E_Manager_State	E-Manager Operating state 		uint16be	1	1	0		level		true			
 40103	E-Manager_ExcessPower	E-Manager actual PV excess power	W	int16be	1	1	0		level		true	true	false	
@@ -13,41 +13,61 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 41002	HP1_Error	Heatpump 1 error number		int16be	1	1	0		level		true			
 41003	HP1_State	Heatpump 1 state		uint16be	1	1	0		level		true			
 41004	HP1_OperatingState	Heatpump 1 operating state		uint16be	1	1	0		level		true			
-41005	HP1_T_Flow	Heatpump 1 flow line temperature	°C	int16be	1	1	0	x * 0.01	level		true			
-41006	HP1_T_Return	Heatpump 1 return line temperature	°C	int16be	1	1	0	x * 0.01	level		true			
+41005	HP1_T_Flow	Heatpump 1 flow line temperature	°C	int16be	1	0.01	0		level		true			
+41006	HP1_T_Return	Heatpump 1 return line temperature	°C	int16be	1	0.01	0		level		true			
 41007	HP1_Vol_Sink	Heatpump 1 volume flow heat sink	l/h	int16be	1	1	0		level		true			
-41008	HP1_T_EQin	Heatpump 1 energy source inlet temperature	°C	int16be	1	1	0	x * 0.01	level		true			
-41009	HP1_T_EQout	Heatpump 1 energy sorurce outlet temperature	°C	int16be	1	1	0	x * 0.01	level		true			
+41008	HP1_T_EQin	Heatpump 1 energy source inlet temperature	°C	int16be	1	0.01	0		level		true			
+41009	HP1_T_EQout	Heatpump 1 energy sorurce outlet temperature	°C	int16be	1	0.01	0		level		true			
 41010	HP1_Vol_Source	Heatpump 1 volume flow energy source	l/h	int16be	1	1	0		level		true			
-41011	HP1_CompressorRating	Heatpump 1 compressor unit rating	%	uint16be	1	1	0	x * 0,01	level		true			
-41012	HP1_QpHeating	Heatpump 1 actual heating capacity	kW	int16be	1	1	0	x * 0,1	level		true			
+41011	HP1_CompressorRating	Heatpump 1 compressor unit rating	%	uint16be	1	0.01	0		level		true			
+41012	HP1_QpHeating	Heatpump 1 actual heating capacity	kW	int16be	1	0.1	0		level		true			
 41013	HP1_FI_PowerConsumption	Heatpump 1 frequency inverter actual power consumption	W	int16be	1	1	0		level		true			
-41014	HP1_COP	Heatpump 1 coefficient of performance		int16be	1	1	0	x * 0.01	level		true			
+41014	HP1_COP	Heatpump 1 coefficient of performance		int16be	1	0.01	0		level		true			
 41015	HP1_ReleasePassword	Heatpump 1 password register to release modbus request registers		uint16be	1	1	0		level		true	true		
 41016	HP1_RequestType	Heatpump 1 request type		int16be	1	1	0		level		true	true		
-41017	HP1_RequestT_Flow	Heatpump 1 requested flow line temperature	°C	int16be	1	1	0	x * 0.1	level		true	true		
-41018	HP1_RequestT_Return	Heatpump 1 requested return line temperature	°C	int16be	1	1	0	x * 0.1	level		true	true		
-41019	HP1_RequestT_Diff	Heatpump 1 requested temperature difference between flow line and return line	K	int16be	1	1	0	x * 0.1	level		true	true		
+41017	HP1_RequestT_Flow	Heatpump 1 requested flow line temperature	°C	int16be	1	0.1	0		level		true	true		
+41018	HP1_RequestT_Return	Heatpump 1 requested return line temperature	°C	int16be	1	0.1	0		level		true	true		
+41019	HP1_RequestT_Diff	Heatpump 1 requested temperature difference between flow line and return line	K	int16be	1	0.1	0		level		true	true		
 41020	HP1_RelaisState	Heatpump 1 relais state for 2nd heating stage		int16be	1	1	0		level		true			
-41021	HP1_VdA_E	Heatpump 1 accumulated electrical energy consumption of compressor unit since last statistic reset	kWh	int32be	2	1	0	x * 0.001	level		true			
-41023	HP1_VdA_Q	Heatpump 1 accumulated thermal energy output of compressor unit since last statistic reset	kWh	int32be	2	1	0	x * 0.001	level		true			
+41021	HP1_VdA_E	Heatpump 1 accumulated electrical energy consumption of compressor unit since last statistic reset	kWh	int32be	2	0.001	0		level		true			
+41023	HP1_VdA_Q	Heatpump 1 accumulated thermal energy output of compressor unit since last statistic reset	kWh	int32be	2	0.001	0		level		true			
 41051	HP1_SetErrorQuitt	Heatpump 1 quit all active heat pump errors 		uint16be	1	1	0		level		true	true		
 42002	Boiler1_OperatingState	Boiler 1 operating state		uint16be	1	1	0		level		true	false		
-42003	Boiler1_ActualHighTemp	Boiler 1 actual temperature boiler high sensor	°C	int16be	1	1	0	x * 0.1	level		true	false		
-42004	Boiler1_ActualLowTemp	Boiler 1 actual temperature boiler low sensor	°C	int16be	1	1	0	x * 0.1	level		true	false		
-42051	Boiler1_MaximumTemp	Boiler 1 setting for maximum boiler temperature	°C	int16be	1	1	0	x * 0.1	level		true	true		
+42003	Boiler1_ActualHighTemp	Boiler 1 actual temperature boiler high sensor	°C	int16be	1	0.1	0		level		true	false		
+42004	Boiler1_ActualLowTemp	Boiler 1 actual temperature boiler low sensor	°C	int16be	1	0.1	0		level		true	false		
+42051	Boiler1_MaximumTemp	Boiler 1 setting for maximum boiler temperature	°C	int16be	1	0.1	0		level		true	true		
 43001	Buffer1_Error	Buffer 1 error number		int16be	1	1	0		level		true	false		
 43002	Buffer1_OperatingState	Buffer 1 operating state		uint16be	1	1	0		level		true	false		
-43003	Buffer1_ActualHighTemp	Buffer 1 actual temperature buffer high sensor	°C	uint16be	1	1	0	x * 0.1	level		true	false		
-43004	Buffer1_ActualLowTemp	Buffer 1 actual temperature buffer low sensor	°C	uint16be	1	1	0	x * 0.1	level		true	false		
-43051	Buffer1_MaximumTemp	Buffer 1 setting for maximum buffer temperature		uint16be	1	1	0	x * 0.1	level		true	true		
+43003	Buffer1_ActualHighTemp	Buffer 1 actual temperature buffer high sensor	°C	uint16be	1	0.1	0		level		true	false		
+43004	Buffer1_ActualLowTemp	Buffer 1 actual temperature buffer low sensor	°C	uint16be	1	0.1	0		level		true	false		
+43051	Buffer1_MaximumTemp	Buffer 1 setting for maximum buffer temperature		uint16be	1	0.1	0		level		true	true		
 45001	Heating1_Error	Heating 1 error number		int16be	1	1	0		level		true	false		
 45002	Heating1_OperatingState	Heating 1 operating state		uint16be	1	1	0		level		true	false		
-45003	Heating1_T_Flow	Heating 1 actual temperature flow line sensor	°C	int16be	1	1	0	x * 0.1	level		true	false		
-45004	Heating1_T_Return	Heating 1 actual temperature return line sensor	°C	int16be	1	1	0	x * 0.1	level		true	false		
-45005	Heating1_RoomTemp	Heating 1 actual temperature room device sensor	°C	int16be	1	1	0	x * 0.1	level		true	true		
-45006	Heating1_RequestT_Flow	Heating 1 setpoint temperature flow line	°C	int16be	1	1	0	x * 0.1	level		true	true		
+45003	Heating1_T_Flow	Heating 1 actual temperature flow line sensor	°C	int16be	1	0.1	0		level		true	false		
+45004	Heating1_T_Return	Heating 1 actual temperature return line sensor	°C	int16be	1	0.1	0		level		true	false		
+45005	Heating1_RoomTemp	Heating 1 actual temperature room device sensor	°C	int16be	1	0.1	0		level		true	true		
+45006	Heating1_RequestT_Flow	Heating 1 setpoint temperature flow line	°C	int16be	1	0.1	0		level		true	true		
 45007	Heating1_OperatingMode	Heating 1 operating mode		int16be	1	1	0		level		true	true		
-45051	Heating1_OffsetFlowLineTemp	Heating 1 setting for flow line temperature setpoint offset	K	int16be	1	1	0	x * 0.1	level		true	true		
-45052	Heating1_RoomHeatingTemp	Heating 1 setting for heating mode room setpoint temperature	°C	int16be	1	1	0	x * 0.1	level		true	true		
-45053	Heating1_RoomCoolingTemp	Heating 1 setting for cooling mode room setpoint temperature	°C	int16be	1	1	0	x * 0.1	level		true	true		
+45051	Heating1_OffsetFlowLineTemp	Heating 1 setting for flow line temperature setpoint offset	K	int16be	1	0.1	0		level		true	true		
+45052	Heating1_RoomHeatingTemp	Heating 1 setting for heating mode room setpoint temperature	°C	int16be	1	0.1	0		level		true	true		
+45053	Heating1_RoomCoolingTemp	Heating 1 setting for cooling mode room setpoint temperature	°C	int16be	1	0.1	0		level		true	true		
+45101	Heating2_Error	Heating 2 error number		int16be	1	1	0		level		true	false		
+45102	Heating2_OperatingState	Heating 2 operating state		uint16be	1	1	0		level		true	false		
+45103	Heating2_T_Flow	Heating 2 actual temperature flow line sensor	°C	int16be	1	0.1	0		level		true	false		
+45104	Heating2_T_Return	Heating 2 actual temperature return line sensor	°C	int16be	1	0.1	0		level		true	false		
+45105	Heating2_RoomTemp	Heating 2 actual temperature room device sensor	°C	int16be	1	0.1	0		level		true	true		
+45106	Heating2_RequestT_Flow	Heating 2 setpoint temperature flow line	°C	int16be	1	0.1	0		level		true	true		
+45107	Heating2_OperatingMode	Heating 2 operating mode		int16be	1	1	0		level		true	true		
+45151	Heating2_OffsetFlowLineTemp	Heating 2 setting for flow line temperature setpoint offset	K	int16be	1	0.1	0		level		true	true		
+45152	Heating2_RoomHeatingTemp	Heating 2 setting for heating mode room setpoint temperature	°C	int16be	1	0.1	0		level		true	true		
+45153	Heating2_RoomCoolingTemp	Heating 2 setting for cooling mode room setpoint temperature	°C	int16be	1	0.1	0		level		true	true		
+45201	Heating3_Error	Heating 3 error number		int16be	1	1	0		level		true	false		
+45202	Heating3_OperatingState	Heating 3 operating state		uint16be	1	1	0		level		true	false		
+45203	Heating3_T_Flow	Heating 3 actual temperature flow line sensor	°C	int16be	1	0.1	0		level		true	false		
+45204	Heating3_T_Return	Heating 3 actual temperature return line sensor	°C	int16be	1	0.1	0		level		true	false		
+45205	Heating3_RoomTemp	Heating 3 actual temperature room device sensor	°C	int16be	1	0.1	0		level		true	true		
+45206	Heating3_RequestT_Flow	Heating 3 setpoint temperature flow line	°C	int16be	1	0.1	0		level		true	true		
+45207	Heating3_OperatingMode	Heating 3 operating mode		int16be	1	1	0		level		true	true		
+45251	Heating3_OffsetFlowLineTemp	Heating 3 setting for flow line temperature setpoint offset	K	int16be	1	0.1	0		level		true	true		
+45252	Heating3_RoomHeatingTemp	Heating 3 setting for heating mode room setpoint temperature	°C	int16be	1	0.1	0		level		true	true		
+45253	Heating3_RoomCoolingTemp	Heating 3 setting for cooling mode room setpoint temperature	°C	int16be	1	0.1	0		level		true	true		
