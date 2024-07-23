@@ -36,8 +36,8 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 40100	DCVoltageSF	I_DC_Voltage_SF		int16be	1	1	0		state		true	false	false	true
 40101	DCPower	I_DC_Power	W	int16be	1	1	0	x * Math.pow(10, sf['40102'])	value		true	false	false	false
 40102	DCPowerSF	I_DC_Power_SF		int16be	1	1	0		state		true	false	false	true
-40104	Temp	I_Temp_SF		int16be	1	1	0	x * Math.pow(10, sf['40107'])	state		true	false	false	false
-40107	TempSF	I_Temp_Sink	°C	int16be	1	1	0		value		true	false	false	true
+40104	Temp	I_Temp_Sink	°C	int16be	1	1	0	x * Math.pow(10, sf['40107'])	state		true	false	false	false
+40107	TempSF	I_Temp_SF		int16be	1	1	0		value		true	false	false	true
 40108	Status	I_Status		uint16be	1	1	0		state		true	false	false	false
 40109	StatusVendor	I_Status_Vendor		uint16be	1	1	0		state		true	false	false	false
 40140	MeterModel	M_C_Model		string	16	1	0		state		true	false	false	false
@@ -79,10 +79,10 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 40239	MeterEnergyImportedL2	M_Imported_B	Wh	uint32be	2	1	0	x * Math.pow(10, sf['40243'])	value		true	false	false	false
 40241	MeterEnergyImportedL3	M_Imported_C	Wh	uint32be	2	1	0	x * Math.pow(10, sf['40243'])	value		true	false	false	false
 40243	MeterEnergySF	M_Energy_W_SF		int16be	1	1	0		state		true	false	false	true
-97601	Batt1_Manufacturer			string	8	1	0				true	false	false	false
-97617	Batt1_Model			string	16	1	0				true	false	false	false
-97633	Batt1_Firmware			string	16	1	0				true	false	false	false
-97649	Batt1_Serial			string	16	1	0				true	false	false	false
+97601	Batt1_Manufacturer	Battery manufacturer		string	8	1	0				true	false	false	false
+97617	Batt1_Model	Battery model		string	16	1	0				true	false	false	false
+97633	Batt1_Firmware	Battery firmware		string	16	1	0				true	false	false	false
+97649	Batt1_Serial	Battery serial no		string	16	1	0				true	false	false	false
 97665	Batt1_ID	Device ID		uint16be	1	1	0				true	false	false	false
 97667	Batt1_RatedEnergy	Nennenergie	kWh	floatsw	2	1	0	x * Math.pow(10, -3)			true	false	false	false
 97669	Batt1_MaxChargeConPower	Max. Ladeleistung Fortlaufend	W	floatsw	2	1	0				true	false	false	false
@@ -107,7 +107,7 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 101701	ReactivePwrConfig	ReactivePwrConfig		uint32sw	2	1	0		level		true	false	false	false
 101763	AdvancedPwrControlEn	AdvancedPwrControlEn		uint32sw	2	1	0		level		true	false	false	false
 103237	StCtrlMode	Storage Control Mode		uint16be	1	1	0		level		true	false	false	false
-103238	Storage_AC_Charge_Policy_RW	0 â€“ Disable, 1 â€“ Always allowed , 2 â€“ Fixed Energy Limit â€“		uint16be	1	1	0		level		true	false	false	false
+103238	Storage_AC_Charge_Policy_RW	0 - Disable, 1 - Always allowed , 2 - Fixed Energy Limit		uint16be	1	1	0		level		true	false	false	false
 103241	Storage_Backup_Reserved_Setting_RW			floatsw	2	1	0		level		true	false	false	false
 103243	StChDisChMode	Storage Charge/Discharge Default Mode		uint16be	1	1	0		level		true	false	false	false
 103244	Timeout	Timout	sec	uint32sw	2	1	0		level		true	false	false	false
