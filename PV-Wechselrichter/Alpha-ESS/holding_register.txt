@@ -73,8 +73,25 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 2051	PV Capacity of Grid Inverter 	0x803 PV Capacity of Grid Inverter 	W	uint32be	2	1	0		value		true	false	false	false
 2053	System mode	0x805 System mode		uint16be	1	1	0		state		true	false	false	false
 2127	Time period control flag	0x84F Status Zeitkontrolle		uint16be	1	1	0		switch		true	false	false	false
+2127	Time period control flag	0x084F Time period control flag		uint16be	1	1	0		value		true	false	false	false
 2128	UPS Reserve Soc	0x850 USV Reserve	%	uint16be	1	1	0		value		true	false	false	false
+2129	Time discharge start time1 (hour)	0x0851 Time discharge start time1 (hour)	h	uint16be	1	1	0		value		true	false	false	false
+2130	Time discharge stop time1 (hour)	0x0852 Time discharge stop time1 (hour)	h	uint16be	1	1	0		value		true	false	false	false
+2131	Time discharge start time2 (hour)	0x0853 Time discharge start time2 (hour)	h	uint16be	1	1	0		value		true	false	false	false
+2132	Time discharge stop time2 (hour)	0x0854 Time discharge stop time2 (hour)	h	uint16be	1	1	0		value		true	false	false	false
 2133	Max Battery SOC	0x855 Obere Batterie-Ladegrenze	%	uint16be	1	1	0		value		true	false	false	false
+2134	Time charge start time1 (hour)	0x0856 Time charge start time1 (hour) 	h	uint16be	1	1	0		value		true	false	false	false
+2135	Time charge stop time1 (hour)	0x0857 Time charge stop time1 (hour)	h	uint16be	1	1	0		value		true	false	false	false
+2136	Time charge start time2 (hour)	0x0858 Time charge start time2 (hour)	h	uint16be	1	1	0		value		true	false	false	false
+2137	Time charge stop time2 (hour)	0x0859 Time charge stop time2 (hour)	h	uint16be	1	1	0		value		true	false	false	false
+2138	Time discharge start time1 (minute)	0x085A Time discharge start time1 (minute)	m	uint16be	1	1	0		value		true	false	false	false
+2139	Time discharge stop time1 (minute)	0x085B Time discharge stop time1 (minute)	m	uint16be	1	1	0		value		true	false	false	false
+2140	Time discharge start time2 (minute)	0x085C Time discharge start time2 (minute)	m	uint16be	1	1	0		value		true	false	false	false
+2141	Time discharge stop time2 (minute)	0x085D Time discharge stop time2 (minute)	m	uint16be	1	1	0		value		true	false	false	false
+2142	Time charge start time1 (minute)	0x085E Time charge start time1 (minute)	m	uint16be	1	1	0		value		true	false	false	false
+2143	Time charge stop time1 (minute)	0x085F Time charge stop time1 (minute)	m	uint16be	1	1	0		value		true	false	false	false
+2144	Time charge start time2 (minute)	0x0860 Time charge start time2 (minute)	m	uint16be	1	1	0		value		true	false	false	false
+2145	Time charge stop time2 (minute)	0x0861 Time charge stop time2 (minute)	m	uint16be	1	1	0		value		true	false	false	false
 2256	PV Inverter energy	0x8D0 PV Inverter Energie	kWh	uint32be	2	0,1	0		value		true	false	false	false
 2258	The system total PV energy	0x8D2 The system total PV energy	kWh	uint32be	2	0,1	0		value		true	false	false	false
 2260	System fault	0x8D4 System-Fehler		uint32be	2	1			state		true	false	false	false
