@@ -1,0 +1,46 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+40004	Mn	Manufacturer		string	30	0	0		level		true	false	false	false
+40020	Md	Model		string	30	0	0		level		true	false	false	false
+40044	Vr	Version		string	30	0	0		level		true	false	false	false
+40052	SN	Serial Number		string	30	0	0		level		true	false	false	false
+40072	A	Amps	A	uint16be	1	0.01	0		level		true	false	false	false
+40073	AphA	Amps PhaseA	A	uint16be	1	0.01	0		level		true	false	false	false
+40074	AphB	Amps PhaseB	A	uint16be	1	0.01	0		level		true	false	false	false
+40075	AphC	Amps PhaseC	A	uint16be	1	0.01			level		true	false	false	false
+40077	PPVphAB	Phase Voltage AB	V	uint16be	1	0.1	0		level		true	false	false	false
+40078	PPVphBC	Phase Voltage BC	V	uint16be	1	0.1	0		level		true	false	false	false
+40079	PPVphCA	Phase Voltage CA	V	uint16be	1	0.1	0		level		true	false	false	false
+40080	PhVphA	Phase Voltage AN	V	uint16be	1	0.1	0		level		true	false	false	false
+40081	PhVphB	Phase Voltage BN	V	uint16be	1	0.1	0		level		true	false	false	false
+40082	PhVphC	Phase Voltage CN	V	uint16be	1	0.1	0		level		true	false	false	false
+40084	W	Watts	W	uint16be	1	10	0		level		true	false	false	false
+40086	Hz	Hz	Hz	uint16be	1	0.01	0		level		true	false	false	false
+40088	VA	VA	VA	uint16be	1	10	0		level		true	false	false	false
+40092	PF	Power Factor	%	uint16be	1	0.0001	0		level		true	false	false	false
+40094	WH	WattHours	Wh	uint32be	2	1	0		level		true	false	false	false
+40277	TotWhInj	Total Energy Injected	Wh	uint32be	2	1	0		level		true	false	false	false
+40294	TmpCab	Cabinet Temperature	°C	uint16be	1	0.1	0		level		true	false	false	false
+40295	TmpSnk	Heat Sink Temperature	°C	uint16be	1	0.1	0		level		true	false	false	false
+40299	WL1	Watts L1	W	uint16be	1	10	0		level		true	false	false	false
+40300	VAL1	VA L1	VA	uint16be	1	0	0		level		true	false	false	false
+40303	AL1	Amps L1	A	uint16be	1	0.01	0		level		true	false	false	false
+40304	V1L2	Phase Voltage L1-L2	V	uint16be	1	0.1	0		level		true	false	false	false
+40305	VL1	Phase Voltage L1-N	V	uint16be	1	0	0		level		true	false	false	false
+40322	WL2	Watts L2	W	uint16be	1	10	0		level		true	false	false	false
+40323	VAL2	VA L2	VA	uint16be	1	0	0		level		true	false	false	false
+40326	AL2	Amps L1	A	uint16be	1	0.01	0		level		true	false	false	false
+40327	V2L3	Phase Voltage L2-L3	V	uint16be	1	0.1	0		level		true	false	false	false
+40328	VL1	Phase Voltage L2-N	V	uint16be	1	0	0		level		true	false	false	false
+40345	WL3	Watts L3	W	uint16be	1	10	0		level		true	false	false	false
+40346	VAL3	VA L3	VA	uint16be	1	10	0		level		true	false	false	false
+40349	AL3	Amps L3	A	uint16be	1	0.01	0		level		true	false	false	false
+40350	V2L3	Phase Voltage L3-L1	V	uint16be	1	0.1	0		level		true	false	false	false
+40351	VL1	Phase Voltage L3-N	V	uint16be	1	0.1	0		level		true	false	false	false
+40562	DCA1	DC Current String 1	A	uint16be	1	0.01	0		level		true	false	false	false
+40563	DCV1	DC Voltage String 1	V	uint16be	1	0.1	0		level		true	false	false	false
+40564	DCW1	DC Power String 1	W	uint16be	1	10	0		level		true	false	false	false
+40573	Tmp1	DC Port Temperatur 1	°C	uint16be	1	0	0		level		true	false	false	false
+40587	DCA2	DC Current String 2	A	uint16be	1	0.01	0		level		true	false	false	false
+40588	DCV2	DC Voltage String 2	V	uint16be	1	0.1	0		level		true	false	false	false
+40589	DCW2	DC Power String 2	W	uint16be	1	10	0		level		true	false	false	false
+40598	Tmp2	DC Port Temperature 2	°C	uint16be	1	0	0		level		true	false	false	false

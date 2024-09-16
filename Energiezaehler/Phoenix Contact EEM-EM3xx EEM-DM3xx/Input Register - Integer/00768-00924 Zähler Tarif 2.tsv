@@ -1,0 +1,41 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	cw	isScale
+768	Z2 P+-L1	Zählertarif 2 Wirkarbeit Bezug L1 (nicht zurücksetzbar)	kWh	uint64be	4	0,0001	0		level		false	false
+772	Z2 P+-L2	Zählertarif 2 Wirkarbeit Bezug L2 (nicht zurücksetzbar)	kWh	uint64be	4	0,0001	0		level		false	false
+776	Z2 P+-L3	Zählertarif 2 Wirkarbeit Bezug L3 (nicht zurücksetzbar)	kWh	uint64be	4	0,0001	0		level		false	false
+780	Z2 ΣP+	Zählertarif 2 Wirkarbeit Bezug Σ (nicht zurücksetzbar)	kWh	uint64be	4	0,0001	0		level		false	false
+784	Z2 P--L1	Zählertarif 2 Wirkarbeit Abgabe L1 (nicht zurücksetzbar)	kWh	uint64be	4	0,0001	0		level		false	false
+788	Z2 P--L2	Zählertarif 2 Wirkarbeit Abgabe L2 (nicht zurücksetzbar)	kWh	uint64be	4	0,0001	0		level		false	false
+792	Z2 P--L3	Zählertarif 2 Wirkarbeit Abgabe L3 (nicht zurücksetzbar)	kWh	uint64be	4	0,0001	0		level		false	false
+796	Z2 ΣP-	Zählertarif 2 Wirkarbeit Abgabe Σ (nicht zurücksetzbar)	kWh	uint64be	4	0,0001	0		level		false	false
+800	Z2 S+i-L1	Zählertarif 2 Scheinarbeit Bezug induktiv L1 (nicht zurücksetzbar)	kVAh	uint64be	4	0,0001	0		level		false	false
+804	Z2 S+i-L2	Zählertarif 2 Scheinarbeit Bezug induktiv L2 (nicht zurücksetzbar)	kVAh	uint64be	4	0,0001	0		level		false	false
+808	Z2 S+i-L3	Zählertarif 2 Scheinarbeit Bezug induktiv L3 (nicht zurücksetzbar)	kVAh	uint64be	4	0,0001	0		level		false	false
+812	Z2 ΣS+i	Zählertarif 2 Scheinarbeit Bezug induktiv Σ (nicht zurücksetzbar)	kVAh	uint64be	4	0,0001	0		level		false	false
+816	Z2 S-i-L1	Zählertarif 2 Scheinarbeit Abgabe induktiv L1 (nicht zurücksetzbar)	kVAh	uint64be	4	0,0001	0		level		false	false
+820	Z2 S-i-L2	Zählertarif 2 Scheinarbeit Abgabe induktiv L2 (nicht zurücksetzbar)	kVAh	uint64be	4	0,0001	0		level		false	false
+824	Z2 S-i-L3	Zählertarif 2 Scheinarbeit Abgabe induktiv L3 (nicht zurücksetzbar)	kVAh	uint64be	4	0,0001	0		level		false	false
+828	Z2 ΣS-i	Zählertarif 2 Scheinarbeit Abgabe induktiv Σ (nicht zurücksetzbar)	kVAh	uint64be	4	0,0001	0		level		false	false
+832	Z2 S+k-L1	Zählertarif 2 Scheinarbeit Bezug kapazitiv L1 (nicht zurücksetzbar)	kVAh	uint64be	4	0,0001	0		level		false	false
+836	Z2 S+k-L2	Zählertarif 2 Scheinarbeit Bezug kapazitiv L2 (nicht zurücksetzbar)	kVAh	uint64be	4	0,0001	0		level		false	false
+840	Z2 S+k-L3	Zählertarif 2 Scheinarbeit Bezug kapazitiv L3 (nicht zurücksetzbar)	kVAh	uint64be	4	0,0001	0		level		false	false
+844	Z2 ΣS+k	Zählertarif 2 Scheinarbeit Bezug kapazitiv Σ (nicht zurücksetzbar)	kVAh	uint64be	4	0,0001	0		level		false	false
+848	Z2 S-k-L1	Zählertarif 2 Scheinarbeit Abgabe kapazitiv L1 (nicht zurücksetzbar)	kVAh	uint64be	4	0,0001	0		level		false	false
+852	Z2 S-k-L2	Zählertarif 2 Scheinarbeit Abgabe kapazitiv L2 (nicht zurücksetzbar)	kVAh	uint64be	4	0,0001	0		level		false	false
+856	Z2 S-k-L3	Zählertarif 2 Scheinarbeit Abgabe kapazitiv L3 (nicht zurücksetzbar)	kVAh	uint64be	4	0,0001	0		level		false	false
+860	Z2 ΣS-k	Zählertarif 2 Scheinarbeit Abgabe kapazitiv Σ (nicht zurücksetzbar)	kVAh	uint64be	4	0,0001	0		level		false	false
+864	Z2 Q+i-L1	Zählertarif 2 Blindarbeit Bezug induktiv L1 (nicht zurücksetzbar)	kvarh	uint64be	4	0,0001	0		level		false	false
+868	Z2 Q+i-L2	Zählertarif 2 Blindarbeit Bezug induktiv L2 (nicht zurücksetzbar)	kvarh	uint64be	4	0,0001	0		level		false	false
+872	Z2 Q+i-L3	Zählertarif 2 Blindarbeit Bezug induktiv L3 (nicht zurücksetzbar)	kvarh	uint64be	4	0,0001	0		level		false	false
+876	Z2 ΣQ+i	Zählertarif 2 Blindarbeit Bezug induktiv Σ (nicht zurücksetzbar)	kvarh	uint64be	4	0,0001	0		level		false	false
+880	Z2 Q-i-L1	Zählertarif 2 Blindarbeit Abgabe induktiv L1 (nicht zurücksetzbar)	kvarh	uint64be	4	0,0001	0		level		false	false
+884	Z2 Q-i-L2	Zählertarif 2 Blindarbeit Abgabe induktiv L2 (nicht zurücksetzbar)	kvarh	uint64be	4	0,0001	0		level		false	false
+888	Z2 Q-i-L3	Zählertarif 2 Blindarbeit Abgabe induktiv L3 (nicht zurücksetzbar)	kvarh	uint64be	4	0,0001	0		level		false	false
+892	Z2 ΣSQ-i	Zählertarif 2 Blindarbeit Abgabe induktiv Σ (nicht zurücksetzbar)	kvarh	uint64be	4	0,0001	0		level		false	false
+896	Z2 Q+k-L1	Zählertarif 2 Blindarbeit Bezug kapazitiv L1 (nicht zurücksetzbar)	kvarh	uint64be	4	0,0001	0		level		false	false
+900	Z2 Q+k-L2	Zählertarif 2 Blindarbeit Bezug kapazitiv L2 (nicht zurücksetzbar)	kvarh	uint64be	4	0,0001	0		level		false	false
+904	Z2 Q+k-L3	Zählertarif 2 Blindarbeit Bezug kapazitiv L3 (nicht zurücksetzbar)	kvarh	uint64be	4	0,0001	0		level		false	false
+908	Z2 ΣQ+k	Zählertarif 2 Blindarbeit Bezug kapazitiv Σ (nicht zurücksetzbar)	kvarh	uint64be	4	0,0001	0		level		false	false
+912	Z2 Q-k-L1	Zählertarif 2 Blindarbeit Abgabe kapazitiv L1 (nicht zurücksetzbar)	kvarh	uint64be	4	0,0001	0		level		false	false
+916	Z2 Q-k-L2	Zählertarif 2 Blindarbeit Abgabe kapazitiv L2 (nicht zurücksetzbar)	kvarh	uint64be	4	0,0001	0		level		false	false
+920	Z2 Q-k-L3	Zählertarif 2 Blindarbeit Abgabe kapazitiv L3 (nicht zurücksetzbar)	kvarh	uint64be	4	0,0001	0		level		false	false
+924	Z2 ΣQ-k	Zählertarif 2 Blindarbeit Abgabe kapazitiv Σ (nicht zurücksetzbar)	kvarh	uint64be	4	0,0001	0		level		false	false

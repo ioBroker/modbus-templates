@@ -1,7 +1,7 @@
 _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
 8000	vendor_id	r Eindeutige Hersteller-Id, 0xcf05		uint32be	2	1	0		level		true	false	false	false
 8002	product_id	r Produkt-Id, 1		uint16be	1	1	0		level		true	false	false	false
-8003	device_id	r GerÃ¤te-Id im Produkt, 0x100		uint16be	1	1	0		level		true	false	false	false
+8003	device_id	r Geräte-Id im Produkt, 0x100		uint16be	1	1	0		level		true	false	false	false
 8004	product_version	r Produktversion, major.minor		uint16be	1	1	0		level		true	false	false	false
 8005	product_build	r Produkt-Build-Nummer		uint16be	1	1	0		level		true	false	false	false
 8006	mapping_version	r major.minor Version dieser Registerzuordnung		uint16be	1	1	0		level		true	false	false	false
@@ -28,19 +28,19 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 8071	reset_energy	Energie zurücksetzen [1]		uint16be	1		0		level		true	false	false	false
 8080	def_fixed_current	rw Standardwert reg_cable_current [0.1 A]	A	uint16be	1	0.1	0		level		true	false	false	false
 8081	def_charg_cur_limit	rw Standardwert Ladestrom-Limit [0.1 A] 6-63	A	uint16be	1	0.1	0		level		true	false	false	false
-8082	def_charging_enable	"rw Standardwert ""Laden mÃ¶glich"" [0/1]"		uint16be	1	1	0		level		true	false	false	false
+8082	def_charging_enable	"rw Standardwert ""Laden möglich"" [0/1]"		uint16be	1	1	0		level		true	false	false	false
 8083	fail_safe_duration	rw Anzahl der Sekunden ohne Lesen/Schreiben, bevor charging_cur_limit und charging_enable wiederhergestellt werden. Default-Wert ist 300 (5 Minuten)	sek	uint32be	2	1	0		level		true	false	false	false
-8085	fail_safe_current	rw Strom bei InaktivitÃ¤t, 0 = Laden deaktivieren	A	uint16be	1	0.1	0		level		true	false	false	false
+8085	fail_safe_current	rw Strom bei Inaktivität, 0 = Laden deaktivieren	A	uint16be	1	0.1	0		level		true	false	false	false
 8086	disconnect_cp	Schreiben: Anzahl Sekunden der Abschaltung CP, Lesen: Verbleibende Sekunden		uint32be	1		0		level		true	false	false	false
 8087	relay_select	Schreiben: 0=3-Phasenschütz, 1=1-Phasenschütz, bei Wallboxen, die das unterstützen (mindestens controller Rev. F)		uint16be	1		0		level		true	false	false	false
 8088	relay2	Schreiben: 0=Relais 2 aus, 1=Relais 2 an (nur wenn Relais 1 aus ist), bei Wallboxen, die das unterstützen (mindestens controller Rev. F)		uint32be	1		0		level		true	false	false	false
 8090	cable_current	r PP: Maximaler Kabel-Strom [0.1 A], 0: kein Kabel	A	uint16be	1	0.1	0		level		true	false	false	false
-8091	fixed_current	rw Ãœberschreibe cable_current [0.1 A]	A	uint16be	1	0.1	0		level		true	false	false	false
-8092	charge_pilot_state	r CP: 0 = A (warten), 1 = B (Fahrzeug erkannt), 2 = C (laden), 3 = D (laden mit KÃ¼hlung), 4 = E (kein Strom), 5 = F (Fehler)		uint16be	1	1	0		level		true	false	false	false
-8093	charging_cur_limit	rw Ladestrom-Limit [0.1 A] 6-63A, kann wegen modellbedingter EinschrÃ¤nkungen begrenzt sein (z.B. fÃ¼r Power Brain 11kW ist es auf 16A begrenzt)	A	uint16be	1	0.1	0		level		true	false	false	false
-8094	charging_enable	rw Laden mÃ¶glich [0/1] 0 = ausgeschaltet, 1 = eingeschaltet		uint16be	1	1	0		level		true	false	false	false
+8091	fixed_current	rw Überschreibe cable_current [0.1 A]	A	uint16be	1	0.1	0		level		true	false	false	false
+8092	charge_pilot_state	r CP: 0 = A (warten), 1 = B (Fahrzeug erkannt), 2 = C (laden), 3 = D (laden mit Kühlung), 4 = E (kein Strom), 5 = F (Fehler)		uint16be	1	1	0		level		true	false	false	false
+8093	charging_cur_limit	rw Ladestrom-Limit [0.1 A] 6-63A, kann wegen modellbedingter Einschränkungen begrenzt sein (z.B. für Power Brain 11kW ist es auf 16A begrenzt)	A	uint16be	1	0.1	0		level		true	false	false	false
+8094	charging_enable	rw Laden möglich [0/1] 0 = ausgeschaltet, 1 = eingeschaltet		uint16be	1	1	0		level		true	false	false	false
 8095	charging_current	r Ladestrom [0.1 A] 6-63	A	uint16be	1	0.1	0		level		true	false	false	false
 8096	last_rfid	r Letzte erkannte RFID (hex-string)		string	16		0		level		true	false	false	false
 8111	detected_rfids	r Anzahl der RFID Eingaben		uint16be	1	1	0		level		true	false	false	false
-8112	has_meter	r 1, falls ein ZÃ¤hler angeheften (dann sind die Register 8058-8068 lesbar), andernfalls 0		uint16be	1	1	0		level		true	false	false	false
+8112	has_meter	r 1, falls ein Zähler angeheften (dann sind die Register 8058-8068 lesbar), andernfalls 0		uint16be	1	1	0		level		true	false	false	false
 8120	count_restart	rw Anzahl der Hardware-Neustarts		uint32be	2	1	0		level		true	false	false	false

@@ -1,0 +1,48 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	cw	isScale
+5376	D U L1-L2	Durchschnitt Leiterspannung (L1<->L2)	V	floatbe	2		0		level		false	false
+5378	D U L2-L3	Durchschnitt Leiterspannung (L2<->L3)	V	floatbe	2		0		level		false	false
+5380	D U L3-L1	Durchschnitt Leiterspannung (L3<->L1)	V	floatbe	2		0		level		false	false
+5382	D U L1-N	Durchschnitt Leiterspannung (L1<->N) 	V	floatbe	2		0		level		false	false
+5384	D U L2-N	Durchschnitt Leiterspannung (L2<->N) 	V	floatbe	2		0		level		false	false
+5386	D U L3-N	Durchschnitt Leiterspannung (L3<->N) 	V	floatbe	2		0		level		false	false
+5388	D F	Durchschnitt Frequenz	Hz	floatbe	2		0		level		false	false
+5390	D I-L1	Durchschnitt Strom L1	A	floatbe	2		0		level		false	false
+5392	D I-L2	Durchschnitt Strom L2	A	floatbe	2		0		level		false	false
+5394	D I-L3	Durchschnitt Strom L3	A	floatbe	2		0		level		false	false
+5396	D I-N	Durchschnitt Strom N	A	floatbe	2		0		level		false	false
+5398	D I-SYS	Durchschnitt Strom I-SYS	A	floatbe	2		0		level		false	false
+5400	D P+L1	Durchschnitt Wirkleistung Bezug L1	W	floatbe	2		0		level		false	false
+5402	D P-L1	Durchschnitt Wirkleistung Abgabe L1	W	floatbe	2		0		level		false	false
+5404	D P+L2	Durchschnitt Wirkleistung Bezug L2	W	floatbe	2		0		level		false	false
+5406	D P-L2	Durchschnitt Wirkleistung Abgabe L2	W	floatbe	2		0		level		false	false
+5408	D P+L3	Durchschnitt Wirkleistung Bezug L3	W	floatbe	2		0		level		false	false
+5410	D P-L3	Durchschnitt Wirkleistung Abgabe L3	W	floatbe	2		0		level		false	false
+5412	D ΣP+	Durchschnitt Wirkleistung Bezug System	W	floatbe	2		0		level		false	false
+5414	D ΣP-	Durchschnitt Wirkleistung Abgabe System	W	floatbe	2		0		level		false	false
+5416	D B ΣP	Bilanzierter Durchschnitt Wirkleistung System	W	floatbe	2		0		level		false	false
+5418	D S+L1	Durchschnitt Scheinleistung Bezug L1	VA	floatbe	2		0		level		false	false
+5420	D S-L1	Durchschnitt Scheinleistung Abgabe L1	VA	floatbe	2		0		level		false	false
+5422	D S+L2	Durchschnitt Scheinleistung Bezug L2	VA	floatbe	2		0		level		false	false
+5424	D S-L2	Durchschnitt Scheinleistung Abgabe L2	VA	floatbe	2		0		level		false	false
+5426	D S+L3	Durchschnitt Scheinleistung Bezug L3	VA	floatbe	2		0		level		false	false
+5428	D S-L3	Durchschnitt Scheinleistung Abgabe L3	VA	floatbe	2		0		level		false	false
+5430	D ΣS+	Durchschnitt Scheinleistung Bezug System	VA	floatbe	2		0		level		false	false
+5432	D ΣS-	Durchschnitt Scheinleistung Abgabe System	VA	floatbe	2		0		level		false	false
+5434	D B ΣS	Bilanzierter Durchschnitt Scheinleistung System	VA	floatbe	2		0		level		false	false
+5436	D Q+L1	Durchschnitt Blindleistung Bezug L1	var	floatbe	2		0		level		false	false
+5438	D Q-L1	Durchschnitt Blindleistung Abgabe L1	var	floatbe	2		0		level		false	false
+5440	D Q+L2	Durchschnitt Blindleistung Bezug L2	var	floatbe	2		0		level		false	false
+5442	D Q-L2	Durchschnitt Blindleistung Abgabe L2	var	floatbe	2		0		level		false	false
+5444	D Q+L3	Durchschnitt Blindleistung Bezug L3	var	floatbe	2		0		level		false	false
+5446	D Q-L3	Durchschnitt Blindleistung Abgabe L3	var	floatbe	2		0		level		false	false
+5448	D ΣQ+	Durchschnitt Blindleistung Bezug System	var	floatbe	2		0		level		false	false
+5450	D ΣQ-	Durchschnitt Blindleistung Abgabe System	var	floatbe	2		0		level		false	false
+5452	D B ΣQ	Bilanzierter Durchschnitt Blindleistung System	var	floatbe	2		0		level		false	false
+5454	D PFi-L1	Durchschnitt Leistungsfaktor L1 induktiv		floatbe	2		0		level		false	false
+5456	D PFk-L1	Durchschnitt Leistungsfaktor L1 kapazitiv		floatbe	2		0		level		false	false
+5458	D PFi-L2	Durchschnitt Leistungsfaktor L2 induktiv		floatbe	2		0		level		false	false
+5460	D PFk-L2	Durchschnitt Leistungsfaktor L2 kapazitiv		floatbe	2		0		level		false	false
+5462	D PFi-L3	Durchschnitt Leistungsfaktor L3 induktiv		floatbe	2		0		level		false	false
+5464	D PFk-L3	Durchschnitt Leistungsfaktor L3 kapazitiv		floatbe	2		0		level		false	false
+5466	D ΣPFi	Durchschnitt Leistungsfaktor System induktiv		floatbe	2		0		level		false	false
+5468	D ΣPFk	Durchschnitt Leistungsfaktor System kapazitiv		floatbe	2		0		level		false	false
