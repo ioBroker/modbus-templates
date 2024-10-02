@@ -3,7 +3,7 @@ Bit Number	Diagnose Info	Description	Type
 31			
 30			
 29			
-28	SOCProtectOff	SOC protect Off	Other
+28	SOCProtectOff	SOC protect Off	
 27			
 26	RealPowerLimit	Active power value is set	Other
 25	PFValueSet	PF value is set	Other
@@ -12,7 +12,7 @@ Bit Number	Diagnose Info	Description	Type
 22	OffgridSOCLow	SOC is low under off-grid statues	Other
 21	BatterySelfDischarge	Battery discharge at low current for long time, continuously over 30% of battery	Other
 20	SOCDeltaOverRange	SOC Jumps abnormally	Other
-19	SelfUseOff	Self-use mode turned off	???
+19	SelfUseOff	Self-use mode turned off	Affect discharge
 18	BMSChargeDisable	BMS does not allow charge	Affect charging
 17	BMSOvercharge	Lithium battery overcharged or an individual cell voltage is higher	Affect charging
 16	BMSOverTemperature	Lithium battery over temperature	Affect charging
