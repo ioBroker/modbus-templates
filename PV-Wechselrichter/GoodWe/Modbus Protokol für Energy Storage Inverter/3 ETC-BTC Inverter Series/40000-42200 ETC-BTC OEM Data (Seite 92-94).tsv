@@ -1,0 +1,15 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+40000	OEM SN	R/W inverter serial		string	8	1	0		level		true	false	false	false
+40008	EMS Check Status	R/o 0:checking 1:Normal 2:Fault		uint16be	1	1	0		level		true	false	false	false
+40009	FPCurve_Safety Status	R/o 		uint16be	1	1	0		level		true	false	false	false
+40010	FPCurve_Safety Power	R/o 	W	int32be	2	1	0		level		true	false	false	false
+42000	EMS Power Mode	R/W For BTC/ETC		uint16be	1	1	0		level		true	false	false	false
+42001	EMS Power Set	R/W For BTC/ETC		uint32be	2	1	0		level		true	false	false	false
+42003	Feed Power Enable	R/W 0:Disable 1:Enable Used together with register 42004		uint16be	1	1	0		level		true	false	false	false
+42004	Feed Power Allowable On Grid Power	R/W (-50000 W - 50000 W)	W	int32be	2	1	0		level		true	false	false	false
+42006	3 Phase Feed Power Enable	R/W For BTC/ETC		uint16be	1	1	0		level		true	false	false	false
+42007	R Phase Feed Power Parameter	R/W For BTC/ETC (-20000 W - 20000 W)	W	int32be	2	1	0		level		true	false	false	false
+42009	S Phase Feed Power Parameter	R/W For BTC/ETC (-20000 W - 20000 W)	W	int32be	2	1	0		level		true	false	false	false
+42011	T Phase Feed Power Parameter	R/W For BTC/ETC (-20000 W - 20000 W)	W	int32be	2	1	0		level		true	false	false	false
+42101	Remote Comm Loss Time	R/W Config Remote Communication Loss Time 0: Disable	s	uint16be	1	1	0		level		true	false	false	false
+42200	STS Module Installed	R/W Config 0:STS module not installed 1:STS module installed		uint16be	1	1	0		level		true	false	false	false

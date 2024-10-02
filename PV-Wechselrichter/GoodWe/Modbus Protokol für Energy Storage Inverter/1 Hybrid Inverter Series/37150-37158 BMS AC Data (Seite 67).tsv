@@ -1,0 +1,10 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+37150	Air conditioner status	R/o 0x00: Shutdown 0x01: Blowing 0x02: Cooling 0x03: Warming 0x04: Arefaction 0xFFFF: Unsupport		uint16be	1	1	0		level		true			
+37151	Coil temperature	R/o outlet air temperature	°C	uint16be	1	0,1	0		level		true			
+37152	Condensing temperature	R/o 	°C	uint16be	1	0,1	0		level		true			
+37153	Room temperature	R/o 	°C	uint16be	1	0,1	0		level		true			
+37154	Room RH	R/o 	%	uint16be	1	1	0		level		true			
+37155	AC Voltage	R/o 	V	uint16be	1	0,1	0		level		true			
+37156	Frost temperature	R/o 	°C	uint16be	1	0,1	0		level		true			
+37157	Internal Fan Speed	R/o 	r/min	uint16be	1	1	0		level		true			
+37158	External Fan Speed	R/o 	r/min	uint16be	1	1	0		level		true			

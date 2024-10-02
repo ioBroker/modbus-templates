@@ -1,0 +1,203 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+39499	LG battery type	R/o 0: LV BAT 1:HV BAT		uint16be	1	1	0		level		true	false	false	false
+39500	LG Wakeup Data analyze Flag	R/o 		uint16be	1	1	0		level		true	false	false	false
+39501	LG Running Data analyze Flag	R/o 		uint16be	1	1	0		level		true	false	false	false
+39502	LG Fault Data analyze Flag	R/o 		uint16be	1	1	0		level		true	false	false	false
+39503	BMS1 Battery state	R/o 		uint16be	1	1	0		level		true	false	false	false
+39504	BMS1 DC Bus voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+39505	BMS1 Real-time power	R/o 	W	int16be	1	1	0		level		true	false	false	false
+39506	BMS1 Full pack energy available	R/o 	Wh	uint16be	1	1	0		level		true	false	false	false
+39507	BMS1 Energy remaining	R/o 	Wh	uint16be	1	1	0		level		true	false	false	false
+39508	BMS1 Lifetime energy charged	R/o 	Wh	uint32be	2	1	0		level		true	false	false	false
+39510	BMS1 Lifetime energy discharged	R/o 	Wh	uint32be	2	1	0		level		true	false	false	false
+39512	BMS1 Pack max available charge power	R/o 	W	uint16be	1	1	0		level		true	false	false	false
+39513	BMS1 Pack max available discharge power	R/o 	W	uint16be	1	1	0		level		true	false	false	false
+39514	BMS1 Battery voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+39515	BMS1 Battery current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39516	BMS1 Battery max temperature	R/o 	°C	int16be	1	0,1	0		level		true	false	false	false
+39517	BMS1 Battery min temperature	R/o 	°C	int16be	1	0,1	0		level		true	false	false	false
+39518	BMS1 DC Bus current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39519	BMS1 State of charge	R/o 	%	uint16be	1	0,1	0		level		true	false	false	false
+39520	BMS1 State of health	R/o 	%	uint16be	1	0,1	0		level		true	false	false	false
+39521	BMS1 Charge current limit	R/o 	A	uint16be	1	0,1	0		level		true	false	false	false
+39522	BMS1 Discharge current	R/o 	A	uint16be	1	0,1	0		level		true	false	false	false
+39523	BMS1 CB status	R/o 		uint16be	1	1	0		level		true	false	false	false
+39524	BMS1 Battery diagnosis result	R/o 		uint16be	1	1	0		level		true	false	false	false
+39550	BMS2 Battery state	R/o 		uint16be	1	1	0		level		true	false	false	false
+39551	BMS2 DC Bus voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+39552	BMS2 Real-time power	R/o 	W	int16be	1	1	0		level		true	false	false	false
+39553	BMS2 Full pack energy available	R/o 	Wh	uint16be	1	1	0		level		true	false	false	false
+39554	BMS2 Energy remaining	R/o 	Wh	uint16be	1	1	0		level		true	false	false	false
+39555	BMS2 Lifetime energy charged	R/o 	Wh	uint32be	2	1	0		level		true	false	false	false
+39557	BMS2 Lifetime energy discharged	R/o 	Wh	uint32be	2	1	0		level		true	false	false	false
+39559	BMS2 Pack max available charge power	R/o 	W	uint16be	1	1	0		level		true	false	false	false
+39560	BMS2 Pack max available discharge power	R/o 	W	uint16be	1	1	0		level		true	false	false	false
+39561	BMS2 Battery voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+39562	BMS2 Battery current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39563	BMS2 Battery max temperature	R/o 	°C	int16be	1	0,1	0		level		true	false	false	false
+39564	BMS2 Battery min temperature	R/o 	°C	int16be	1	0,1	0		level		true	false	false	false
+39565	BMS2 DC Bus current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39566	BMS2 State of charge	R/o 	%	uint16be	1	0,1	0		level		true	false	false	false
+39567	BMS2 State of health	R/o 	%	uint16be	1	0,1	0		level		true	false	false	false
+39568	BMS2 Charge current limit	R/o 	A	uint16be	1	0,1	0		level		true	false	false	false
+39569	BMS2 Discharge current	R/o 	A	uint16be	1	0,1	0		level		true	false	false	false
+39570	BMS2 CB status	R/o 		uint16be	1	1	0		level		true	false	false	false
+39571	BMS2 Battery diagnosis result	R/o 		uint16be	1	1	0		level		true	false	false	false
+39600	BMS1 Protocol version number	R/o 		uint16be	1	1	0		level		true	false	false	false
+39601	BMS1 Battery serial number	R/o 		uint32be	2	1	0		level		true	false	false	false
+39603	BMS1 DC/DC FW version1	R/o 		uint16be	1	1	0		level		true	false	false	false
+39604	BMS1 DC/DC FW version2	R/o 		uint16be	1	1	0		level		true	false	false	false
+39605	BMS1 FW version	R/o 		uint32be	2	1	0		level		true	false	false	false
+39607	BMS1 Inverter type	R/o 		uint16be	1	1	0		level		true	false	false	false
+39608	BMS1 Nameplate energy	R/o 		uint16be	1	1	0		level		true	false	false	false
+39630	BMS2 Protocol version number	R/o 		uint16be	1	1	0		level		true	false	false	false
+39631	BMS2 Battery serial number	R/o 		uint32be	2	1	0		level		true	false	false	false
+39633	BMS2 DC/DC FW version1	R/o 		uint16be	1	1	0		level		true	false	false	false
+39634	BMS2 DC/DC FW version2	R/o 		uint16be	1	1	0		level		true	false	false	false
+39635	BMS2 FW version	R/o 		uint32be	2	1	0		level		true	false	false	false
+39637	BMS2 Inverter type	R/o 		uint16be	1	1	0		level		true	false	false	false
+39638	BMS2 Nameplate energy	R/o 		uint16be	1	1	0		level		true	false	false	false
+39660	BMS1 Fault 0 Count	R/o 		uint16be	1	1	0		level		true	false	false	false
+39661	BMS1 Fault 0 BMS heartbeat	R/o 		uint32be	2	1	0		level		true	false	false	false
+39663	BMS1 Fault 0 ID	R/o 		uint16be	1	1	0		level		true	false	false	false
+39664	BMS1 Fault 0 Battery internal voltage	R/o 	V	uint16be	1	0,01	0		level		true	false	false	false
+39665	BMS1 Fault 0 Battery internal current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39666	BMS1 Fault 0 Battery external voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+39667	BMS1 Fault 0 Battery external current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39668	BMS1 Fault 0 Battery maximum temperature	R/o 	°C	int16be	1	0,1	0		level		true	false	false	false
+39669	BMS1 Fault 0 BMS internal check	R/o 		uint16be	1	1	0		level		true	false	false	false
+39670	BMS1 Fault 1 Count	R/o 		uint16be	1	1	0		level		true	false	false	false
+39671	BMS1 Fault 1 BMS heartbeat	R/o 		uint32be	2	1	0		level		true	false	false	false
+39673	BMS1 Fault 1 ID	R/o 		uint16be	1	1	0		level		true	false	false	false
+39674	BMS1 Fault 1 Battery internal voltage	R/o 	V	uint16be	1	0,01	0		level		true	false	false	false
+39675	BMS1 Fault 1 Battery internal current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39676	BMS1 Fault 1 Battery external voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+39677	BMS1 Fault 1 Battery external current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39678	BMS1 Fault 1 Battery maximum temperature	R/o 	°C	int16be	1	0,1	0		level		true	false	false	false
+39679	BMS1 Fault 1 BMS internal check	R/o 		uint16be	1	1	0		level		true	false	false	false
+39680	BMS1 Fault 2 Count	R/o 		uint16be	1	1	0		level		true	false	false	false
+39681	BMS1 Fault 2 BMS  heartbeat	R/o 		uint32be	2	1	0		level		true	false	false	false
+39683	BMS1 Fault 2 ID	R/o 		uint16be	1	1	0		level		true	false	false	false
+39684	BMS1 Fault 2 Battery internal voltage	R/o 	V	uint16be	1	0,01	0		level		true	false	false	false
+39685	BMS1 Fault 2 Battery  internal current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39686	BMS1 Fault 2 Battery  external voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+39687	BMS1 Fault 2 Battery  external current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39688	BMS1 Fault 2 Battery  maximum temperature	R/o 	°C	int16be	1	0,1	0		level		true	false	false	false
+39689	BMS1 Fault 2 BMS internal check	R/o 		uint16be	1	1	0		level		true	false	false	false
+39690	BMS1 Fault 3 Count	R/o 		uint16be	1	1	0		level		true	false	false	false
+39691	BMS1 Fault 3 BMS heartbeat	R/o 		uint32be	2	1	0		level		true	false	false	false
+39693	BMS1 Fault 3 ID	R/o 		uint16be	1	1	0		level		true	false	false	false
+39694	BMS1 Fault 3 Battery internal voltage	R/o 	V	uint16be	1	0,01	0		level		true	false	false	false
+39695	BMS1 Fault 3 Battery  internal current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39696	BMS1 Fault 3 Battery  external voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+39697	BMS1 Fault 3 Battery  external current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39698	BMS1 Fault 3 Battery  maximum temperature	R/o 	°C	int16be	1	0,1	0		level		true	false	false	false
+39699	BMS1 Fault 3 BMS internal check	R/o 		uint16be	1	1	0		level		true	false	false	false
+39700	BMS1 Fault 4 Count	R/o 		uint16be	1	1	0		level		true	false	false	false
+39701	BMS1 Fault 4 BMS heartbeat	R/o 		uint32be	2	1	0		level		true	false	false	false
+39703	BMS1 Fault 4 ID	R/o 		uint16be	1	1	0		level		true	false	false	false
+39704	BMS1 Fault 4 Battery internal voltage	R/o 	V	uint16be	1	0,01	0		level		true	false	false	false
+39705	BMS1 Fault 4 Battery  internal current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39706	BMS1 Fault 4 Battery  external voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+39707	BMS1 Fault 4 Battery  external current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39708	BMS1 Fault 4 Battery  maximum temperature	R/o 	°C	int16be	1	0,1	0		level		true	false	false	false
+39709	BMS1 Fault 4 BMS internal check	R/o 		uint16be	1	1	0		level		true	false	false	false
+39710	BMS1 Fault 5 Count	R/o 		uint16be	1	1	0		level		true	false	false	false
+39711	BMS1 Fault 5 BMS heartbeat	R/o 		uint32be	2	1	0		level		true	false	false	false
+39713	BMS1 Fault 5 ID	R/o 		uint16be	1	1	0		level		true	false	false	false
+39714	BMS1 Fault 5 Battery internal voltage	R/o 	V	uint16be	1	0,01	0		level		true	false	false	false
+39715	BMS1 Fault 5 Battery  internal current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39716	BMS1 Fault 5 Battery  external voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+39717	BMS1 Fault 5 Battery  external current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39718	BMS1 Fault 5 Battery  maximum temperature	R/o 	°C	int16be	1	0,1	0		level		true	false	false	false
+39719	BMS1 Fault 5 BMS internal check	R/o 		uint16be	1	1	0		level		true	false	false	false
+39720	BMS1 Fault 6 Count	R/o 		uint16be	1	1	0		level		true	false	false	false
+39721	BMS1 Fault 6 BMS heartbeat	R/o 		uint32be	2	1	0		level		true	false	false	false
+39723	BMS1 Fault 6 ID	R/o 		uint16be	1	1	0		level		true	false	false	false
+39724	BMS1 Fault 6 Battery internal voltage	R/o 	V	uint16be	1	0,01	0		level		true	false	false	false
+39725	BMS1 Fault 6 Battery  internal current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39726	BMS1 Fault 6 Battery  external voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+39727	BMS1 Fault 6 Battery  external current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39728	BMS1 Fault 6 Battery  maximum temperature	R/o 	°C	int16be	1	0,1	0		level		true	false	false	false
+39729	BMS1 Fault 6 BMS internal check	R/o 		uint16be	1	1	0		level		true	false	false	false
+39730	BMS1 Fault 7 Count	R/o 		uint16be	1	1	0		level		true	false	false	false
+39731	BMS1 Fault 7 BMS heartbeat	R/o 		uint32be	2	1	0		level		true	false	false	false
+39733	BMS1 Fault 7 ID	R/o 		uint16be	1	1	0		level		true	false	false	false
+39734	BMS1 Fault 7 Battery internal voltage	R/o 	V	uint16be	1	0,01	0		level		true	false	false	false
+39735	BMS1 Fault 7 Battery  internal current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39736	BMS1 Fault 7 Battery  external voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+39737	BMS1 Fault 7 Battery  external current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39738	BMS1 Fault 7 Battery  maximum temperature	R/o 	°C	int16be	1	0,1	0		level		true	false	false	false
+39739	BMS1 Fault 7 BMS internal check	R/o 		uint16be	1	1	0		level		true	false	false	false
+39760	BMS2 Fault 0 Count	R/o 		uint16be	1	1	0		level		true	false	false	false
+39761	BMS2 Fault 0 BMS heartbeat	R/o 		uint32be	2	1	0		level		true	false	false	false
+39763	BMS2 Fault 0 ID	R/o 		uint16be	1	1	0		level		true	false	false	false
+39764	BMS2 Fault 0 Battery internal voltage	R/o 	V	uint16be	1	0,01	0		level		true	false	false	false
+39765	BMS2 Fault 0 Battery internal current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39766	BMS2 Fault 0 Battery external voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+39767	BMS2 Fault 0 Battery external current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39768	BMS2 Fault 0 Battery maximum temperature	R/o 	°C	int16be	1	0,1	0		level		true	false	false	false
+39769	BMS2 Fault 0 BMS internal check	R/o 		uint16be	1	1	0		level		true	false	false	false
+39770	BMS2 Fault 1 Count	R/o 		uint16be	1	1	0		level		true	false	false	false
+39771	BMS2 Fault 1 BMS heartbeat	R/o 		uint32be	2	1	0		level		true	false	false	false
+39773	BMS2 Fault 1 ID	R/o 		uint16be	1	1	0		level		true	false	false	false
+39774	BMS2 Fault 1 Battery internal voltage	R/o 	V	uint16be	1	0,01	0		level		true	false	false	false
+39775	BMS2 Fault 1 Battery internal current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39776	BMS2 Fault 1 Battery external voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+39777	BMS2 Fault 1 Battery external current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39778	BMS2 Fault 1 Battery maximum temperature	R/o 	°C	int16be	1	0,1	0		level		true	false	false	false
+39779	BMS2 Fault 1 BMS internal check	R/o 		uint16be	1	1	0		level		true	false	false	false
+39780	BMS2 Fault 2 Count	R/o 		uint16be	1	1	0		level		true	false	false	false
+39781	BMS2 Fault 2 BMS  heartbeat	R/o 		uint32be	2	1	0		level		true	false	false	false
+39783	BMS2 Fault 2 ID	R/o 		uint16be	1	1	0		level		true	false	false	false
+39784	BMS2 Fault 2 Battery internal voltage	R/o 	V	uint16be	1	0,01	0		level		true	false	false	false
+39785	BMS2 Fault 2 Battery  internal current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39786	BMS2 Fault 2 Battery  external voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+39787	BMS2 Fault 2 Battery  external current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39788	BMS2 Fault 2 Battery  maximum temperature	R/o 	°C	int16be	1	0,1	0		level		true	false	false	false
+39789	BMS2 Fault 2 BMS internal check	R/o 		uint16be	1	1	0		level		true	false	false	false
+39790	BMS2 Fault 3 Count	R/o 		uint16be	1	1	0		level		true	false	false	false
+39791	BMS2 Fault 3 BMS heartbeat	R/o 		uint32be	2	1	0		level		true	false	false	false
+39793	BMS2 Fault 3 ID	R/o 		uint16be	1	1	0		level		true	false	false	false
+39794	BMS2 Fault 3 Battery internal voltage	R/o 	V	uint16be	1	0,01	0		level		true	false	false	false
+39795	BMS2 Fault 3 Battery  internal current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39796	BMS2 Fault 3 Battery  external voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+39797	BMS2 Fault 3 Battery  external current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39798	BMS2 Fault 3 Battery  maximum temperature	R/o 	°C	int16be	1	0,1	0		level		true	false	false	false
+39799	BMS2 Fault 3 BMS internal check	R/o 		uint16be	1	1	0		level		true	false	false	false
+39800	BMS2 Fault 4 Count	R/o 		uint16be	1	1	0		level		true	false	false	false
+39801	BMS2 Fault 4 BMS heartbeat	R/o 		uint32be	2	1	0		level		true	false	false	false
+39803	BMS2 Fault 4 ID	R/o 		uint16be	1	1	0		level		true	false	false	false
+39804	BMS2 Fault 4 Battery internal voltage	R/o 	V	uint16be	1	0,01	0		level		true	false	false	false
+39805	BMS2 Fault 4 Battery  internal current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39806	BMS2 Fault 4 Battery  external voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+39807	BMS2 Fault 4 Battery  external current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39808	BMS2 Fault 4 Battery  maximum temperature	R/o 	°C	int16be	1	0,1	0		level		true	false	false	false
+39809	BMS2 Fault 4 BMS internal check	R/o 		uint16be	1	1	0		level		true	false	false	false
+39810	BMS2 Fault 5 Count	R/o 		uint16be	1	1	0		level		true	false	false	false
+39811	BMS2 Fault 5 BMS heartbeat	R/o 		uint32be	2	1	0		level		true	false	false	false
+39813	BMS2 Fault 5 ID	R/o 		uint16be	1	1	0		level		true	false	false	false
+39814	BMS2 Fault 5 Battery internal voltage	R/o 	V	uint16be	1	0,01	0		level		true	false	false	false
+39815	BMS2 Fault 5 Battery  internal current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39816	BMS2 Fault 5 Battery  external voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+39817	BMS2 Fault 5 Battery  external current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39818	BMS2 Fault 5 Battery  maximum temperature	R/o 	°C	int16be	1	0,1	0		level		true	false	false	false
+39819	BMS2 Fault 5 BMS internal check	R/o 		uint16be	1	1	0		level		true	false	false	false
+39820	BMS2 Fault 6 Count	R/o 		uint16be	1	1	0		level		true	false	false	false
+39821	BMS2 Fault 6 BMS heartbeat	R/o 		uint32be	2	1	0		level		true	false	false	false
+39823	BMS2 Fault 6 ID	R/o 		uint16be	1	1	0		level		true	false	false	false
+39824	BMS2 Fault 6 Battery internal voltage	R/o 	V	uint16be	1	0,01	0		level		true	false	false	false
+39825	BMS2 Fault 6 Battery  internal current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39826	BMS2 Fault 6 Battery  external voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+39827	BMS2 Fault 6 Battery  external current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39828	BMS2 Fault 6 Battery  maximum temperature	R/o 	°C	int16be	1	0,1	0		level		true	false	false	false
+39829	BMS2 Fault 6 BMS internal check	R/o 		uint16be	1	1	0		level		true	false	false	false
+39830	BMS2 Fault 7 Count	R/o 		uint16be	1	1	0		level		true	false	false	false
+39831	BMS2 Fault 7 BMS heartbeat	R/o 		uint32be	2	1	0		level		true	false	false	false
+39833	BMS2 Fault 7 ID	R/o 		uint16be	1	1	0		level		true	false	false	false
+39834	BMS2 Fault 7 Battery internal voltage	R/o 	V	uint16be	1	0,01	0		level		true	false	false	false
+39835	BMS2 Fault 7 Battery  internal current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39836	BMS2 Fault 7 Battery  external voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+39837	BMS2 Fault 7 Battery  external current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39838	BMS2 Fault 7 Battery  maximum temperature	R/o 	°C	int16be	1	0,1	0		level		true	false	false	false
+39839	BMS2 Fault 7 BMS internal check	R/o 		uint16be	1	1	0		level		true	false	false	false

@@ -1,0 +1,29 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+47000	App Work Mode Index	R/W 0:selfuse mode  1:off gird mode   2:backup mode 3:economic mode  4:peakshaving   5:Advanced self-use		uint16be	1	1	0		level		true	false	false	false
+47001	Meter Check Value	R/o Phase status 0X0TSR 1: Correct connection 2:  Connection reserved (CT) 4: Incorrect connection 8: Wrong  phase for CT and voltage sampling 0: Not detected	Hex	rawhex	1	1	0		level		true	false	false	false
+47002	Meter Connect Check Flag	R/W 0: Not open test/end test 1: Being  test  2: Wait for test		uint16be	1	1	0		level		true	false	false	false
+47005	Log Data Enable switch	R/W Breakpoint Resume for Data transfering. Activated as deFault, time interval 5 minutes.		uint16be	1	1	0		level		true	false	false	false
+47006	Data Send Interval	R/W Time interval for data send to cloud or EMS, default is 1 minute.	s	uint16be	1	1	0	x * 5	level		true	false	false	false
+47007	DRED command	R/W Only for Australia, Refer to Table 8-22		uint16be	1	1	0		level		true	false	false	false
+47009	WiFi or Lan Switch	W/o 4:WiFi  5:Lan		uint16be	1	1	0		level		false	false	false	false
+47012	Led Blink Time	R/W	s	uint16be	1	1	0		level		true	false	false	false
+47013	WiFi Led State	R/W 1: off 2: on 3: flash1x 4: flash2x 5: flash4x		uint16be	1	1	0		level		true	false	false	false
+47014	Communication Led State	R/W 1 - 5		uint16be	1	1	0		level		true	false	false	false
+47015	Meter CT1 Reverse Enable	R/W 1:on  0:off ony for single phase Smart meter		uint16be	1	1	0		level		true	false	false	false
+47016	Error Log Read Page	R/W 0 - 255		uint16be	1	1	0		level		true	false	false	false
+47017	Modbus TCP Without Internet	R/W 1: on 0: off If not connect to Internet, please set 1		uint16be	1	1	0		level		true	false	false	false
+47018	Backup Led	R/W 1:off 2:on 3:flash1x 4:flash2x  5:flash4x		uint16be	1	1	0		level		true	false	false	false
+47019	Grid Led	R/W 1 - 5		uint16be	1	1	0		level		true	false	false	false
+47020	SOC Led 1	R/W 1 - 5		uint16be	1	1	0		level		true	false	false	false
+47021	SOC Led 2	R/W 1 - 5		uint16be	1	1	0		level		true	false	false	false
+47022	SOC Led 3	R/W 1 - 5		uint16be	1	1	0		level		true	false	false	false
+47023	SOC Led 4	R/W 1 - 5		uint16be	1	1	0		level		true	false	false	false
+47024	Battery Led	R/W 1 - 5		uint16be	1	1	0		level		true	false	false	false
+47025	System Led	R/W 1 - 5		uint16be	1	1	0		level		true	false	false	false
+47026	Fault Led	R/W 1 - 5		uint16be	1	1	0		level		true	false	false	false
+47027	Energy Led	R/W 1 - 5		uint16be	1	1	0		level		true	false	false	false
+47028	Led External Control	R/W		uint16be	1	1	0		level		true	false	false	false
+47038	Off Grid Set Save	R/W 1 Enable, restart the inverter After that, save the settings		uint16be	1	1	0		level		true	false	false	false
+47040	WIFI Modbus TCP Enable switch	R/W		uint16be	1	1	0		level		true	false	false	false
+47120	Meter Target Power Offset	R/W negative Watt: center on import; positive Watt: center on export  maybe only ET (15-30 kW) Serie	W	int16be	1	1	0		level		true	false	false	false
+47464	Extern Meter Enable Flag	R/W 0(Default): Internal Meter 1: External Meter		uint16be	1	1	0		level		true	false	false	false

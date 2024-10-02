@@ -1,0 +1,39 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+10400	Inverter Quantity	R/o 1：Single inverter system ＞1：Parallel system		uint16be	1	1	0		level		true	false	false	false
+10401	Firmware Version ARM	R/o Refer to 35020 		uint16be	1	1	0		level		true	false	false	false
+10402	Firmware Version DSP Master 	R/o Refer to 35016 		uint16be	1	1	0		level		true	false	false	false
+10403	Firmware	R/o Refer to 35017		uint16be	1	1	0		level		true	false	false	false
+10404	Online Quantity	R/o 		uint16be	1	1	0		level		true	false	false	false
+10405	APP Mode	R/o Refer to 47000		uint16be	1	1	0		level		true	false	false	false
+10406	Safety Country	R/o Refer to 45244		uint16be	1	1	0		level		true	false	false	false
+10407	Work Mode	R/o Refer to 35187		uint16be	1	1	0		level		true	false	false	false
+10408	Meter comm status	R/o Refer to 36003		uint16be	1	1	0		level		true	false	false	false
+10409	BackUp Enable	R/o Refer to 45252		uint16be	1	1	0		level		true	false	false	false
+10410	Controller Status Code	R/o 		uint16be	1	1	0		level		true	false	false	false
+10412	PV Total Power	R/o Master DSP add up all  PV power	W	uint32be	2	1	0		level		true	false	false	false
+10414	Battery Total power	R/o Refer to 35182-35183	W	int32be	2	1	0		level		true	false	false	false
+10416	Total Back-Up Load Power	R/o Refer to 35169-35170	W	int32be	2	1	0		level		true	false	false	false
+10418	Meter Power	R/o Refer to 36025-36026	W	int32be	2	1	0		level		true	false	false	false
+10420	Total Inverter Power	R/o Refer to 35137-35138	W	int32be	2	1	0		level		true	false	false	false
+10422	R Phase Inverter Power	R/o Refer to 35124-35125	W	int32be	2	1	0		level		true	false	false	false
+10424	S Phase Inverter Power	R/o Refer to 35129-35130	W	int32be	2	1	0		level		true	false	false	false
+10426	T Phase Inverter Power	R/o Refer to 35134-35135	W	int32be	2	1	0		level		true	false	false	false
+10428	R Phase Backup Active Power	R/o Refer to 35149-35150	W	int32be	2	1	0		level		true	false	false	false
+10430	S Phase Backup Active Power	R/o Refer to 35155-35156	W	int32be	2	1	0		level		true	false	false	false
+10432	T Phase Backup Active Power	R/o Refer to 35161-35162	W	int32be	2	1	0		level		true	false	false	false
+10434	Meter Frequence	R/o Refer to 36014	Hz	uint16be	1	0,01	0		level		true	false	false	false
+10435	Battery Mode	R/o Refer to 35184		uint16be	1	1	0		level		true	false	false	false
+10436	Battery Voltage 1	R/o Refer to 35180	V	uint16be	1	0,1	0		level		true	false	false	false
+10437	Battery Voltage 2	R/o Refer to 35262	V	uint16be	1	0,1	0		level		true	false	false	false
+10438	Total Inverter Power	R/o Refer to 35001	W	uint32be	2	1	0		level		true	false	false	false
+10470	Meter Check Value	R/o Refer to 47001		uint16be	1	1	0		level		true	false	false	false
+10471	Meter Connect Check Flag	R/o Refer to 47002		uint16be	1	1	0		level		true	false	false	false
+10472	SOC	R/o The cloud board calculates the average value based on each machine's SOC and obtains each machine's register 37007	%	uint16be	1	1	0		level		true	false	false	false
+10473	Battery Capacity	R/o 		uint16be	1	1	0		level		true	false	false	false
+10474	Battery Communication	R/o 		uint16be	1	1	0		level		true	false	false	false
+10476	Battery Charge Allow Kilowatt-Hour Sum	R/o 	W/h	uint32be	2	1	0		level		true	false	false	false
+10478	Battery Disharge Allow Kilowatt-Hour Sum	R/o 	W/h	uint32be	2	1	0		level		true	false	false	false
+10480	AbleBalanceFlag	R/o 0: Need to be averaged 1: No need to be averaged		uint16be	1	1	0		level		true	false	false	false
+10481	Meter Active Power R	R/o Refer to 36127	W	int32be	2	1	0		level		true	false	false	false
+10483	Meter Active Power S	R/o Refer to 36129	W	int32be	2	1	0		level		true	false	false	false
+10485	Meter Active Power T	R/o Refer to 36131	W	int32be	2	1	0		level		true	false	false	false

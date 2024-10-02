@@ -1,0 +1,65 @@
+Application scenarios	MODE	COMMAND		PV	Grid	Battery
+		EMSPowerMode	EMSPowerSet	Power priority (Green is the control object)		
+System shutdown	Stopped	0x00FF	NA			
+	Note :Stop working and switch to wait mode					
+						
+Self-use	Auto	0x0001	NA			
+	Note: PBattery =PInv - Pmeter – Ppv (Discharge/Charge)					
+	The battery power is controlled by the meter power when the meter communication is normal.					
+						
+"Control the battery to 
+keep charging"	Charge-PV	0x0002	Xmax [2]	High	Low [1]	Energy In
+	Note :PBattery =Xmax + PV (Charge)					
+	Xmax is to allow the power to be taken from the grid, and PV power is preferred. When set to 0, only PV power is used.					
+						
+"Control the battery to 
+keep discharging"	Dischg+PV	0x0003	Xmax	High	Energy Out	Low
+	Note : PBattery = Xmax (Discharge)					
+	Xmax is the allowable discharge power of the battery. When the power fed into the grid is limited, PV power will be used.					
+						
+"The inverter is used as 
+a unit for power grid 
+energy scheduling"	Import-AC	0x0004	Xset [3]	Low	High	Energy In
+	Note :PBattery = Xset + PV (Charge)					
+	Xset refers to the power purchased from the power grid. The power purchased from the grid is preferred. If the PV power …					
+	Export-AC	0x0005	Xset	High	Energy Out	Low
+	Note : PBattery = Xset (Discharge)					
+	Xset is to sell power to the grid. PV power is preferred. When PV energy is insufficient, the battery will discharge. PV …					
+						
+"Off-grid reservation 
+mode"	Conserve	0x0006	NA			
+	Note : PBattery = PV (Charge)					
+	In on-grid mode, the battery is continuously charged, and only PV power (AC Couple model takes 10% of the rated power …					
+						
+Off-Grid Mode	Off-Grid	0x0007	NA			
+	Note : PBattery =Pbackup – Ppv (Charge/Discharge)					
+	Forced off-grid operation (Disconnect from grid)					
+						
+"No battery mode for 
+hybrid  inverter"	Battery standby	0x0008	NA			
+	Note : PBattery =0 (Standby)					
+	The battery does not charge and discharge					
+						
+"Regional energy 
+management"	Buy Power	0x0009	Xset	Low	High	Energy In / Out
+	Note :PBattery = PInv – (Pmeter + Xset)– Ppv (Charge/Discharge)					
+	When the meter communication is normal, the power purchased from the power grid is controlled as Xset. When the PV …					
+	Sell Power	0x000A	Xset	High	Energy Out	Low
+	Note : PBattery = PInv – (Pmeter – Xset) – Ppv (Charge/Discharge)					
+	When the communication of electricity meter is normal, the power sold from the power grid is controlled as Xset, PV …					
+						
+"Force the battery to 
+work at set power value"	Charge-BAT	0x000B	Xset	High	Low	Energy In
+	Note : PBattery = Xset (Charge)					
+	Xset is the charging power of the battery. PV power is preferred. When PV power is insufficient, it will buy power from the …					
+	Discharge-BAT	0x000C	Xset	Low	Energy In	High
+	Note : PBattery = Xset (Discharge)					
+	Xset is the discharge power of the battery, and the battery discharge has priority. If the PV power is too large, MPPT will …					
+						
+"Note:
+[1] for low-priority energy sources, when the battery charging power is limited or the rated output power of the inverter is limited, the load shall be ...
+[2] Xmax represents the upper limit of the power control value, and the actual power will be adjusted according to the working condition.
+[3] Xset represents the target value of power control, and the actual power must reach the set value."						
+						
+						
+						

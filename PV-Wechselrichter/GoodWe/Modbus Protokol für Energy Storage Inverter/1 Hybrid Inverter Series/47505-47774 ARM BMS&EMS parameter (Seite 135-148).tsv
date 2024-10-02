@@ -1,0 +1,199 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+47505	Manufacturer Code	"R/W If using EMS, must set to ""2"""		uint16be	1	1	0		level		true	false	false	false
+47509	Anti-backflow switch	R/W if inverter is >30K or in parallel, use 42004 (S32) to set maximum allowd grid output power		uint16be	1	1	0		level		true	false	false	false
+47510	Anti-reverse flow allowed grid-connected power	R/W 0W - 10000W	W	int16be	1	1	0		level		true	false	false	false
+47511	EMS Power Mode	R/W		uint16be	1	1	0		level		true	false	false	false
+47512	EMS Power Setting	R/W 0 - 10000		uint16be	1	1	0		level		true	false	false	false
+47514	Battery1 Protocol	R/W Refer to 8-33	Hex	rawhex	1	1	0		level		true	false	false	false
+47515	Start Time_1	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true	false	false	false
+47516	End Time_1	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true	false	false	false
+47517	Battery Power Percentage_1	R/W -100% - 100%	%	int16be	1	1	0		level		true	false	false	false
+47518	Work Week_1	R/W High byte FF; Low byte 0 -> 6bit means Sunday -> Saturday	Hex	rawhex	1	1	0		level		true	false	false	false
+47519	Start Time_2	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true	false	false	false
+47520	End Time_2	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true	false	false	false
+47521	Battery Power Percentage_2	R/W -100% - 100%	%	int16be	1	1	0		level		true	false	false	false
+47522	Work Week_2	R/W High byte FF; Low byte 0 -> 6bit means Sunday -> Saturday	Hex	rawhex	1	1	0		level		true	false	false	false
+47523	Start Time_3	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true	false	false	false
+47524	End Time_3	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true	false	false	false
+47525	Battery Power Percentage_3	R/W -100% - 100%	%	int16be	1	1	0		level		true	false	false	false
+47526	Work Week_3	R/W High byte FF; Low byte 0 -> 6bit means Sunday -> Saturday	Hex	rawhex	1	1	0		level		true	false	false	false
+47527	Start Time_4	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true	false	false	false
+47528	End Time_4	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true	false	false	false
+47529	Battery Power Percentage_4	R/W -100% - 100%	%	int16be	1	1	0		level		true	false	false	false
+47530	Work Week_4	R/W High byte FF; Low byte 0 -> 6bit means Sunday -> Saturday	Hex	rawhex	1	1	0		level		true	false	false	false
+47531	SOC at the start of forced charging	R/W 0% - 100%	%	uint16be	1	1	0		level		true	false	false	false
+47532	SOC at the stop of forced charging	R/W 0% - 100%	%	uint16be	1	1	0		level		true	false	false	false
+47533	Clear battery time settings	W/o 1: Clear all economic mode settings (47515-47530) and enter self-use mode		uint16be	1	1	0		level		false	false	false	false
+47539	Wifi Reset	W/o 1		uint16be	1	1	0		level		false	false	false	false
+47540	Wifi Reload	W/o 1		uint16be	1	1	0		level		false	false	false	false
+47542	Peak Shaving Power Limit	R/W to set the threshold of importing power, where peak-shaving acts.	W	uint32be	2	1	0		level		true	false	false	false
+47544	Peak Shaving min SOC	R/W to set the mimum Battery SOC, where peak-shaving acts.	%	uint16be	1	1	0		level		true	false	false	false
+47545	Fast Charge Enable switch	R/W		uint16be	1	1	0		level		true	false	false	false
+47546	Fast Charge Stop SOC	R/W 0% - 100%	%	uint16be	1	1	0		level		true	false	false	false
+47547	Start Time_1	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true	false	false	false
+47548	End Time_1	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true	false	false	false
+47549	Work Week_1	R/W High byte FF; Low byte 0 -> 6bit means Sunday -> Saturday	Hex	rawhex	1	1	0		level		true	false	false	false
+47550	Parameter1_1	R/W ???		uint16be	1	1	0		level		true	false	false	false
+47551	Parameter1_2	R/W ???		uint16be	1	1	0		level		true	false	false	false
+47552	Parameter1_3	R/W 0xFF:each month	Hex	rawhex	1	1	0		level		true	false	false	false
+47553	Start Time_2	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true	false	false	false
+47554	End Time_2	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true	false	false	false
+47555	Work Week_2	R/W High byte FF; Low byte 0 -> 6bit means Sunday -> Saturday	Hex	rawhex	1	1	0		level		true	false	false	false
+47556	Parameter2_1	R/W ???		uint16be	1	1	0		level		true	false	false	false
+47557	Parameter2_2	R/W ???		uint16be	1	1	0		level		true	false	false	false
+47558	Parameter2_3	R/W 0xFF:each month	Hex	rawhex	1	1	0		level		true	false	false	false
+47559	Start Time_3	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true	false	false	false
+47560	End Time_3	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true	false	false	false
+47561	Work Week_3	R/W High byte FF; Low byte 0 -> 6bit means Sunday -> Saturday	Hex	rawhex	1	1	0		level		true	false	false	false
+47562	Parameter3_1	R/W ???		uint16be	1	1	0		level		true	false	false	false
+47563	Parameter3_2	R/W ???		uint16be	1	1	0		level		true	false	false	false
+47564	Parameter3_3	R/W ???		uint16be	1	1	0		level		true	false	false	false
+47565	Start Time_4	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true	false	false	false
+47566	End Time_4	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true	false	false	false
+47567	Work Week_4	R/W High byte FF; Low byte 0 -> 6bit means Sunday -> Saturday	Hex	rawhex	1	1	0		level		true	false	false	false
+47568	Parameter4_1	R/W ???		uint16be	1	1	0		level		true	false	false	false
+47569	Parameter4_2	R/W ???		uint16be	1	1	0		level		true	false	false	false
+47570	Parameter4_3	R/W ???		uint16be	1	1	0		level		true	false	false	false
+47571	Start Time_5	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true	false	false	false
+47572	End Time_5	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true	false	false	false
+47573	Work Week_5	R/W High byte FF; Low byte 0 -> 6bit means Sunday -> Saturday	Hex	rawhex	1	1	0		level		true	false	false	false
+47574	Parameter5_1	R/W ???		uint16be	1	1	0		level		true	false	false	false
+47575	Parameter5_2	R/W ???		uint16be	1	1	0		level		true	false	false	false
+47576	Parameter5_3	R/W ???		uint16be	1	1	0		level		true	false	false	false
+47577	Start Time_6	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true	false	false	false
+47578	End Time_6	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true	false	false	false
+47579	Work Week_6	R/W High byte FF; Low byte 0 -> 6bit means Sunday -> Saturday	Hex	rawhex	1	1	0		level		true	false	false	false
+47580	Parameter6_1	R/W ???		uint16be	1	1	0		level		true	false	false	false
+47581	Parameter6_2	R/W ???		uint16be	1	1	0		level		true	false	false	false
+47582	Parameter6_3	R/W ???		uint16be	1	1	0		level		true	false	false	false
+47583	Start Time_7	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true	false	false	false
+47584	End Time_7	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true	false	false	false
+47585	Work Week_7	R/W High byte FF; Low byte 0 -> 6bit means Sunday -> Saturday	Hex	rawhex	1	1	0		level		true	false	false	false
+47586	Parameter7_1	R/W ???		uint16be	1	1	0		level		true	false	false	false
+47587	Parameter7_2	R/W ???		uint16be	1	1	0		level		true	false	false	false
+47588	Parameter7_3	R/W ???		uint16be	1	1	0		level		true	false	false	false
+47589	Start Time_8	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true	false	false	false
+47590	End Time_8	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true	false	false	false
+47591	Work Week_8	R/W High byte FF; Low byte 0 -> 6bit means Sunday -> Saturday	Hex	rawhex	1	1	0		level		true	false	false	false
+47592	Parameter8_1	R/W ???		uint16be	1	1	0		level		true	false	false	false
+47593	Parameter8_2	R/W ???		uint16be	1	1	0		level		true	false	false	false
+47594	Parameter8_3	R/W ???		uint16be	1	1	0		level		true	false	false	false
+47595	Load Regulation Index	R/W 0:Disable 1:switching mode 2:Time manage mode 3:off-Grid load mode; only >ARM18		uint16be	1	1	0		level		true	false	false	false
+47596	Load Switch Status	R/W 0/1; Load Switch Status		uint16be	1	1	0		level		true	false	false	false
+47597	Backup Switch SOC Min	R/W 0% - 100% shut down the load when the battery reaches the set SOC	%	uint16be	1	1	0		level		true	false	false	false
+47599	Hardware Feed Power Disable	R/W 0/1		uint16be	1	1	0		level		true	false	false	false
+47600	PCS Powersave Mode	R/W 0/1 ischarge mode turn to wait when the SPI Battery disables discharge		uint16be	1	1	0		level		true	false	false	false
+47601	Old Meter Protocol	R/W 0/1		uint16be	1	1	0		level		true	false	false	false
+47602	DOD Holding Enable	R/W 0/1		uint16be	1	1	0		level		true	false	false	false
+47604	Load Regulation or Generator Flag	R/W 0: generator 1: load safety; Dry node function configuration, default load control >ARM18		uint16be	1	1	0		level		true	false	false	false
+47605	Backup Mode Enable	R/W 0/1		uint16be	1	1	0		level		true	false	false	false
+47606	Max Charge Power from Gird	R/W 0% - 100%	%	uint16be	1	0,1	0		level		true	false	false	false
+47609	Smart Charging Mode Enable	R/W 0/1		uint16be	1	1	0		level		true	false	false	false
+47612	ECO Mode Enable	R/W 0/1		uint16be	1	1	0		level		true	false	false	false
+47613	PV sell first	R/W		uint16be	1	1	0		level		true	false	false	false
+47614	Battery FeedPower offset	R/W	W	uint16be	1	1	0		level		true	false	false	false
+47615	Battery current coefficient	R/W 0% - 100%	%	uint16be	1	1	0		level		true	false	false	false
+47616	Parallel cluster strong charging with adjustable power ratio	R/W 0% - 100%	%	uint16be	1	0,1	0		level		true	false	false	false
+47618	Battery2 Protocol	R/W Refer to 8-33		uint16be	1	1	0		level		true	false	false	false
+47619	Feed Power Start Time_1	R/W	s	uint32be	2	1	0		level		true	false	false	false
+47621	Feed Power limit_1	R/W	W	int32be	2	1	0		level		true	false	false	false
+47623	Feed Power Period_1	R/W	s	uint16be	1	1	0		level		true	false	false	false
+47624	Feed Power Start Time_2	R/W	s	uint32be	2	1	0		level		true	false	false	false
+47626	Feed Power limit_2	R/W	W	int32be	2	1	0		level		true	false	false	false
+47628	Feed Power Period_2	R/W	s	uint16be	1	1	0		level		true	false	false	false
+47629	Feed Power Start Time_3	R/W	s	uint32be	2	1	0		level		true	false	false	false
+47631	Feed Power limit_3	R/W	W	int32be	2	1	0		level		true	false	false	false
+47633	Feed Power Period_3	R/W	s	uint16be	1	1	0		level		true	false	false	false
+47634	Feed Power Start Time_4	R/W	s	uint32be	2	1	0		level		true	false	false	false
+47636	Feed Power limit_4	R/W	W	int32be	2	1	0		level		true	false	false	false
+47638	Feed Power Period_4	R/W	s	uint16be	1	1	0		level		true	false	false	false
+47639	Feed Power Start Time_5	R/W	s	uint32be	2	1	0		level		true	false	false	false
+47641	Feed Power limit_5	R/W	W	int32be	2	1	0		level		true	false	false	false
+47643	Feed Power Period_5	R/W	s	uint16be	1	1	0		level		true	false	false	false
+47644	Feed Power Start Time_6	R/W	s	uint32be	2	1	0		level		true	false	false	false
+47646	Feed Power limit_6	R/W	W	int32be	2	1	0		level		true	false	false	false
+47648	Feed Power Period_6	R/W	s	uint16be	1	1	0		level		true	false	false	false
+47649	Feed Power Start Time_7	R/W	s	uint32be	2	1	0		level		true	false	false	false
+47651	Feed Power limit_7	R/W	W	int32be	2	1	0		level		true	false	false	false
+47653	Feed Power Period_7	R/W	s	uint16be	1	1	0		level		true	false	false	false
+47654	Feed Power Start Time_8	R/W	s	uint32be	2	1	0		level		true	false	false	false
+47656	Feed Power limit_8	R/W	W	int32be	2	1	0		level		true	false	false	false
+47658	Feed Power Period_8	R/W	s	uint16be	1	1	0		level		true	false	false	false
+47659	Feed Power Start Time_9	R/W	s	uint32be	2	1	0		level		true	false	false	false
+47661	Feed Power limit_9	R/W	W	int32be	2	1	0		level		true	false	false	false
+47663	Feed Power Period_9	R/W	s	uint16be	1	1	0		level		true	false	false	false
+47664	Feed Power Start Time_10	R/W	s	uint32be	2	1	0		level		true	false	false	false
+47666	Feed Power limit_10	R/W	W	int32be	2	1	0		level		true	false	false	false
+47668	Feed Power Period_10	R/W	s	uint16be	1	1	0		level		true	false	false	false
+47669	Feed Power Start Time_11	R/W	s	uint32be	2	1	0		level		true	false	false	false
+47671	Feed Power limit_11	R/W	W	int32be	2	1	0		level		true	false	false	false
+47673	Feed Power Period_11	R/W	s	uint16be	1	1	0		level		true	false	false	false
+47674	Feed Power Start Time_12	R/W	s	uint32be	2	1	0		level		true	false	false	false
+47676	Feed Power limit_12	R/W	W	int32be	2	1	0		level		true	false	false	false
+47678	Feed Power Period_12	R/W	s	uint16be	1	1	0		level		true	false	false	false
+47679	Feed Power Start Time_13	R/W	s	uint32be	2	1	0		level		true	false	false	false
+47681	Feed Power limit_13	R/W	W	int32be	2	1	0		level		true	false	false	false
+47683	Feed Power Period_13	R/W	s	uint16be	1	1	0		level		true	false	false	false
+47684	Feed Power Start Time_14	R/W	s	uint32be	2	1	0		level		true	false	false	false
+47686	Feed Power limit_14	R/W	W	int32be	2	1	0		level		true	false	false	false
+47688	Feed Power Period_14	R/W	s	uint16be	1	1	0		level		true	false	false	false
+47689	Feed Power Start Time_15	R/W	s	uint32be	2	1	0		level		true	false	false	false
+47691	Feed Power limit_15	R/W	W	int32be	2	1	0		level		true	false	false	false
+47693	Feed Power Period_15	R/W	s	uint16be	1	1	0		level		true	false	false	false
+47694	Feed Power Start Time_16	R/W	s	uint32be	2	1	0		level		true	false	false	false
+47696	Feed Power limit_16	R/W	W	int32be	2	1	0		level		true	false	false	false
+47698	Feed Power Period_16	R/W	s	uint16be	1	1	0		level		true	false	false	false
+47699	Feed Power Start Time_17	R/W	s	uint32be	2	1	0		level		true	false	false	false
+47701	Feed Power limit_17	R/W	W	int32be	2	1	0		level		true	false	false	false
+47703	Feed Power Period_17	R/W	s	uint16be	1	1	0		level		true	false	false	false
+47704	Feed Power Start Time_18	R/W	s	uint32be	2	1	0		level		true	false	false	false
+47706	Feed Power limit_18	R/W	W	int32be	2	1	0		level		true	false	false	false
+47708	Feed Power Period_18	R/W	s	uint16be	1	1	0		level		true	false	false	false
+47709	Feed Power Start Time_19	R/W	s	uint32be	2	1	0		level		true	false	false	false
+47711	Feed Power limit_19	R/W	W	int32be	2	1	0		level		true	false	false	false
+47713	Feed Power Period_19	R/W	s	uint16be	1	1	0		level		true	false	false	false
+47714	Feed Power Start Time_20	R/W	s	uint32be	2	1	0		level		true	false	false	false
+47716	Feed Power limit_20	R/W	W	int32be	2	1	0		level		true	false	false	false
+47718	Feed Power Period_20	R/W	s	uint16be	1	1	0		level		true	false	false	false
+47719	Feed Power Start Time_21	R/W	s	uint32be	2	1	0		level		true	false	false	false
+47721	Feed Power limit_21	R/W	W	int32be	2	1	0		level		true	false	false	false
+47723	Feed Power Period_21	R/W	s	uint16be	1	1	0		level		true	false	false	false
+47724	Feed Power Start Time_22	R/W	s	uint32be	2	1	0		level		true	false	false	false
+47726	Feed Power limit_22	R/W	W	int32be	2	1	0		level		true	false	false	false
+47728	Feed Power Period_22	R/W	s	uint16be	1	1	0		level		true	false	false	false
+47729	Feed Power Start Time_23	R/W	s	uint32be	2	1	0		level		true	false	false	false
+47731	Feed Power limit_23	R/W	W	int32be	2	1	0		level		true	false	false	false
+47733	Feed Power Period_23	R/W	s	uint16be	1	1	0		level		true	false	false	false
+47734	Feed Power Start Time_24	R/W	s	uint32be	2	1	0		level		true	false	false	false
+47736	Feed Power limit_24	R/W	W	int32be	2	1	0		level		true	false	false	false
+47738	Feed Power Period_24	R/W	s	uint16be	1	1	0		level		true	false	false	false
+47739	SAPN UP Rate	R/W	%Pn/min	uint16be	1	0,01	0		level		true	false	false	false
+47740	SAPN Down Rate	R/W	%Pn/min	uint16be	1	0,01	0		level		true	false	false	false
+47741	SAPN Feed Power Preset	R/W	W	int32be	2	1	0		level		true	false	false	false
+47743	Single Battery Paral Enable	R/W		uint16be	1	1	0		level		true	false	false	false
+47744	Battery Busbar Mode	R/W		uint16be	1	1	0		level		true	false	false	false
+47745	Generator start mode selection	R/W		uint16be	1	1	0		level		true	false	false	false
+47746	One-click enable	R/W		uint16be	1	1	0		level		true	false	false	false
+47747	Generator charge to the battery permillage	R/W 0%: Disabled 1% - 100% of rated charging power	%	uint16be	1	1	0		level		true	false	false	false
+47749	Week1	R/W High byte FF: enabled, 00: disabled, 55: not set; Low byte 0 -> 6bit means Sunday -> Saturday	Hex	rawhex	1	1	0		level		true	false	false	false
+47750	Prohibit the start time of work1	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true	false	false	false
+47751	Prohibit work end time1	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true	false	false	false
+47752	Week2	R/W High byte FF: enabled, 00: disabled, 55: not set; Low byte 0 -> 6bit means Sunday -> Saturday	Hex	rawhex	1	1	0		level		true	false	false	false
+47753	Prohibit the start time of work2	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true	false	false	false
+47754	Prohibit work end time2	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true	false	false	false
+47756	open SOC or open voltage	R/W 20% - 90% or 40V - 55V		uint16be	1	1	0		level		true	false	false	false
+47757	close SOC or close voltage	R/W 40% - 95% or 45V - 60V		uint16be	1	1	0		level		true	false	false	false
+47758	Generator max run time	R/W 0h - 240h default 8h	h	uint16be	1	0,1	0		level		true	false	false	false
+47759	Generator rated power	R/W	kW	uint16be	1	0,01	0		level		true	false	false	false
+47763	SAPN Enable switch	R/W		uint16be	1	1	0		level		true	false	false	false
+47764	lead_Acid Battery Float Charge Voltage	R/W 0V - 6553,5V	V	uint16be	1	0,1	0		level		true	false	false	false
+47765	lead_Acid Battery Absorp Charge	R/W 0V - 6553,5V	V	uint16be	1	0,1	0		level		true	false	false	false
+47766	lead_Acid Battery Equal Charge Voltage	R/W 0V - 6553,5V	V	uint16be	1	0,1	0		level		true	false	false	false
+47767	lead_Acid Battery InterRes	R/W 0mΩ - 255mΩ	mΩ	uint16be	1	1	0		level		true	false	false	false
+47768	lead_Acid Battery Equal Charge Enable switch	R/W		uint16be	1	1	0		level		true	false	false	false
+47769	lead_Acid Battery Charge Coefficient	R/W 0,00% - 1,00%	%	uint16be	1	0,01	0		level		true	false	false	false
+47770	lead_Acid Battery Max Float Charge Current	R/W 0A - 10A	A	uint16be	1	0,1	0		level		true	false	false	false
+47771	lead_Acid Battery Equal Charge cycle	R/W 0d - 365d	d	uint16be	1	1	0		level		true	false	false	false
+47772	lead_Acid Battery current threshold float charging stage	R/W 0A - 25,5A	A	uint16be	1	0,1	0		level		true	false	false	false
+47773	lead_Acid Battery Temp Compensation	R/W -20% - 20%	%	int16be	1	0,1	0		level		true	false	false	false
+47774	lead_Acid Battery float charge time	R/W 0s - 65535s	s	uint16be	1	1	0		level		true	false	false	false

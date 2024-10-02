@@ -1,0 +1,5 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+50200	R/W 0% - 100%		%	uint16be	1	0,01	0		level		true	false	false	false
+50201	R/W 0% - 100%		%	uint16be	1	0,01	0		level		true	false	false	false
+50202	R/o		rad/min	uint16be	1	1	0		level		true	false	false	false
+50203	R/o		rad/min	uint16be	1	1	0		level		true	false	false	false

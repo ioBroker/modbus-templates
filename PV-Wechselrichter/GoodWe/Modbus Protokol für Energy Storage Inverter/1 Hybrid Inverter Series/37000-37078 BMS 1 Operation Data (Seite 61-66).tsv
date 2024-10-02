@@ -1,0 +1,63 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+37000	DRM Status	R/o Demand Response Enabling Device (DRED) only for Australia		uint16be	1	1	0		level		true	false	false	false
+37001	BattTypeIndex	R/o Battery manufactor index setting		uint16be	1	1	0		level		true	false	false	false
+37002	BMS2 Status	R/o 		uint16be	1	1	0		level		true	false	false	false
+37003	BMS1 Package Temperature	R/o 	°C	uint16be	1	0,1	0		level		true	false	false	false
+37004	BMS1 Max Charge Current	R/o 	A	uint16be	1	1	0		level		true	false	false	false
+37005	BMS1 Max Discharge Current	R/o 	A	uint16be	1	1	0		level		true	false	false	false
+37006	BMS1 Error Code Low	R/o 		uint16be	1	1	0		level		true	false	false	false
+37007	BMS1 SOC	R/o Capacity of BAT1	%	uint16be	1	1	0		level		true	false	false	false
+37008	BMS1 SOH	R/o 	%	uint16be	1	1	0		level		true	false	false	false
+37009	BMS1 Battery Strings	R/o 		uint16be	1	1	0		level		true	false	false	false
+37010	BMS1 Warning Code Low	R/o 		uint16be	1	1	0		level		true	false	false	false
+37011	BMS1 Battery Protocol	R/o 		uint16be	1	1	0		level		true	false	false	false
+37012	BMS1 Error Code High	R/o 		uint16be	1	1	0		level		true	false	false	false
+37013	BMS1 Warning Code High	R/o 		uint16be	1	1	0		level		true	false	false	false
+37014	BMS1 Software Version	R/o 		uint16be	1	1	0		level		true	false	false	false
+37015	BMS1 Battery Hardware Version	R/o 		uint16be	1	1	0		level		true	false	false	false
+37016	BMS1 Maximum Cell Temperature ID	R/o Battery module ID (1 Byte) + Battery sampling point (1 Byte)	Hex	rawhex	1	1	0		level		true	false	false	false
+37017	BMS1 Minimum Cell Temperature ID	R/o Battery module ID (1 Byte) + Battery sampling point (1 Byte)	Hex	rawhex	1	1	0		level		true	false	false	false
+37018	BMS1 Maximum Cell Voltage ID	R/o Battery module ID (1 Byte) + Battery sampling point (1 Byte)	Hex	rawhex	1	1	0		level		true	false	false	false
+37019	BMS1 Minimum Cell Voltage ID	R/o Battery module ID (1 Byte) + Battery sampling point (1 Byte)	Hex	rawhex	1	1	0		level		true	false	false	false
+37020	BMS1 Maximum Cell Temperature	R/o 	°C	uint16be	1	0,1	0		level		true	false	false	false
+37021	BMS1 Minimum Cell Temperature	R/o 	°C	uint16be	1	0,1	0		level		true	false	false	false
+37022	BMS1 Maximum Cell Voltage	R/o 	mV	uint16be	1	1	0		level		true	false	false	false
+37023	BMS1 Minimum Cell Voltage	R/o 	mV	uint16be	1	1	0		level		true	false	false	false
+37024	BMS1 Pass Infomation 1	R/o (GW BAT only)BAT  system running  status 0: Init 1: Idle 2: Standby 3: Run 4:  Sleep 5: Shutdown 6: Fault 7: Update		uint16be	1	1	0		level		true	false	false	false
+37025	BMS1 Pass Infomation 2	R/o 		uint16be	1	1	0		level		true	false	false	false
+37026	BMS1 Pass Infomation 3	R/o 		uint16be	1	1	0		level		true	false	false	false
+37027	BMS1 Pass Infomation 4	R/o 		uint16be	1	1	0		level		true	false	false	false
+37028	BMS1 Pass Infomation 5	R/o 		uint16be	1	1	0		level		true	false	false	false
+37029	BMS1 Pass Infomation 6	R/o 		uint16be	1	1	0		level		true	false	false	false
+37030	BMS1 Pass Infomation 7	R/o 		uint16be	1	1	0		level		true	false	false	false
+37031	BMS1 Pass Infomation 8	R/o 		uint16be	1	1	0		level		true	false	false	false
+37032	BMS1 Pass Infomation 9	R/o 		uint16be	1	1	0		level		true	false	false	false
+37033	BMS1 Pass Infomation 10	R/o 		uint16be	1	1	0		level		true	false	false	false
+37034	BMS1 Pass Infomation 11	R/o 		uint16be	1	1	0		level		true	false	false	false
+37035	BMS1 Pass Infomation 12	R/o 		uint16be	1	1	0		level		true	false	false	false
+37036	BMS1 Pass Infomation 13	R/o 		uint16be	1	1	0		level		true	false	false	false
+37037	BMS1 Pass Infomation 14	R/o 		uint16be	1	1	0		level		true	false	false	false
+37038	BMS1 Pass Infomation 15	R/o 		uint16be	1	1	0		level		true	false	false	false
+37039	BMS1 Pass Infomation 16	R/o 		uint16be	1	1	0		level		true	false	false	false
+37040	BMS1 Pass Infomation 17	R/o 		uint16be	1	1	0		level		true	false	false	false
+37041	BMS1 Pass Infomation 18	R/o 		uint16be	1	1	0		level		true	false	false	false
+37042	BMS1 Pass Infomation 19	R/o 		uint16be	1	1	0		level		true	false	false	false
+37043	BMS1 Pass Infomation 20	R/o 		uint16be	1	1	0		level		true	false	false	false
+37044	BMS1 Pass Infomation 21	R/o 		uint16be	1	1	0		level		true	false	false	false
+37045	BMS1 Pass Infomation 22	R/o 		uint16be	1	1	0		level		true	false	false	false
+37046	BMS1 Pass Infomation 23	R/o 		uint16be	1	1	0		level		true	false	false	false
+37047	BMS1 Pass Infomation 24	R/o 		uint16be	1	1	0		level		true	false	false	false
+37048	BMS1 Pass Infomation 25	R/o 		uint16be	1	1	0		level		true	false	false	false
+37049	BMS1 Pass Infomation 26	R/o 		uint16be	1	1	0		level		true	false	false	false
+37050	BMS1 Pass Infomation 27	R/o 		uint16be	1	1	0		level		true	false	false	false
+37051	BMS1 Pass Infomation 28	R/o 		uint16be	1	1	0		level		true	false	false	false
+37052	BMS1 Pass Infomation 29	R/o 		uint16be	1	1	0		level		true	false	false	false
+37053	BMS1 Pass Infomation 30	R/o 		uint16be	1	1	0		level		true	false	false	false
+37054	BMS1 Pass Infomation 31	R/o 		uint16be	1	1	0		level		true	false	false	false
+37055	BMS1 Pass Infomation 32	R/o 		uint16be	1	1	0		level		true	false	false	false
+37056	BMS1 Battery Total Charge Energy	R/o 	kWh	uint32be	2	0,1	0		level		true	false	false	false
+37058	BMS1 Battery Total Discharge Energy	R/o 	kWh	uint32be	2	0,1	0		level		true	false	false	false
+37060	BMS1 Battery SN	R/o 		rawhex	16	1	0		level		true	false	false	false
+37076	BMS1 Rated Capacity	R/o 	kWh	uint16be	1	0,01	0		level		true	false	false	false
+37077	BMS1 Cluster NUM	R/o 		uint16be	1	1	0		level		true	false	false	false
+37078	BMS1 Cluster number	R/o Register + Online		uint16be	1	1	0		level		true	false	false	false

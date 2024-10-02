@@ -1,0 +1,22 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+10800	Total Pages	R/o 		uint16be	1	1	0		level		true	false	false	false
+10801	Current Page	R/o Auto-increment for each read; Read page can be set via 20321 to prevent read failure		uint16be	1	1	0		level		true	false	false	false
+10802	Operation Time	R/o unixtime		uint32be	2	1	0		level		true	false	false	false
+10804	Charging Mode	R/o 		uint16be	1	1	0		level		true	false	false	false
+10805	Charging Status	R/o 0:Charge start; 1:Charge end		uint16be	1	1	0		level		true	false	false	false
+10806	Operation Information	R/o Display when charging is finished u16:Current charging time u16:Current charging power		uint32be	2	1	0		level		true	false	false	false
+10808	Operation Code Count	R/o 		uint16be	1	1	0		level		true	false	false	false
+10809	Check Sum	R/o 		uint16be	1	1	0		level		true	false	false	false
+10810	Page 1	R/o Only 8 records are passed per page, one page occupies 8 registers		rawhex	8	1	0		level		true	false	false	false
+10818	Page 2	R/o Only 8 records are passed per page, one page occupies 8 registers		rawhex	8	1	0		level		true	false	false	false
+10826	Page 3	R/o Only 8 records are passed per page, one page occupies 8 registers		rawhex	8	1	0		level		true	false	false	false
+10834	Page 4	R/o Only 8 records are passed per page, one page occupies 8 registers		rawhex	8	1	0		level		true	false	false	false
+10842	Page 5	R/o Only 8 records are passed per page, one page occupies 8 registers		rawhex	8	1	0		level		true	false	false	false
+10850	Page 6	R/o Only 8 records are passed per page, one page occupies 8 registers		rawhex	8	1	0		level		true	false	false	false
+10858	Operation Time	R/o unixtime		uint32be	2	1	0		level		true	false	false	false
+10860	Charging Mode	R/o 		uint16be	1	1	0		level		true	false	false	false
+10861	Charging Status	R/o 		uint16be	1	1	0		level		true	false	false	false
+10862	Operation Information	R/o 		uint32be	2	1	0		level		true	false	false	false
+10864	Operation Code Count	R/o 		uint16be	1	1	0		level		true	false	false	false
+10865	Check Sum	R/o 		uint16be	1	1	0		level		true	false	false	false
+10866	Last Page	R/o 		uint16be	1	1	0		level		true	false	false	false

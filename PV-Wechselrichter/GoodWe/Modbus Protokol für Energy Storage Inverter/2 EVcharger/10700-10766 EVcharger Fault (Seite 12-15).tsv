@@ -1,0 +1,22 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+10700	Total Pages	R/o 		uint16be	1	1	0		level		true	false	false	false
+10701	Current Page	R/o Auto-increment for each read; Read page can be set via 20321 to prevent read failure		uint16be	1	1	0		level		true	false	false	false
+10702	Error Time	R/o unixtime		uint32be	2	1	0		level		true	false	false	false
+10704	Error Code H	R/o Siehe Tabelle (muss erstellt werden)		uint16be	1	1	0		level		true	false	false	false
+10705	Error Code L	R/o Siehe Tabelle (muss erstellt werden)		uint16be	1	1	0		level		true	false	false	false
+10706	Error Information	R/o 		uint32be	2	1	0		level		true	false	false	false
+10708	Error Code Count	R/o 		uint16be	1	1	0		level		true	false	false	false
+10709	Check Sum	R/o 		uint16be	1	1	0		level		true	false	false	false
+10710	Page 1	R/o Only 8 records are passed per page, one page occupies 8 registers		rawhex	8	1	0		level		true	false	false	false
+10718	Page 2	R/o Only 8 records are passed per page, one page occupies 8 registers		rawhex	8	1	0		level		true	false	false	false
+10726	Page 3	R/o Only 8 records are passed per page, one page occupies 8 registers		rawhex	8	1	0		level		true	false	false	false
+10734	Page 4	R/o Only 8 records are passed per page, one page occupies 8 registers		rawhex	8	1	0		level		true	false	false	false
+10742	Page 5	R/o Only 8 records are passed per page, one page occupies 8 registers		rawhex	8	1	0		level		true	false	false	false
+10750	Page 6	R/o Only 8 records are passed per page, one page occupies 8 registers		rawhex	8	1	0		level		true	false	false	false
+10758	Error Time	R/o unixtime		uint32be	2	1	0		level		true	false	false	false
+10760	Error Code H	R/o 		uint16be	1	1	0		level		true	false	false	false
+10761	Error Code L	R/o 		uint16be	1	1	0		level		true	false	false	false
+10762	Error Information	R/o 		uint32be	2	1	0		level		true	false	false	false
+10764	Error Code Count	R/o 		uint16be	1	1	0		level		true	false	false	false
+10765	Check Sum	R/o 		uint16be	1	1	0		level		true	false	false	false
+10766	Last Page	R/o 		uint16be	1	1	0		level		true	false	false	false

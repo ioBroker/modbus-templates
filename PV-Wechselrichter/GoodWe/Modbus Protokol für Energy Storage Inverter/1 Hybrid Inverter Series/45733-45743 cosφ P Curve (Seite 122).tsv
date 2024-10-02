@@ -1,0 +1,12 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+45733	voltage of Enter the curve (0.1%)	R/W 0%Vn - 140%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45734	voltage of quit the curve(0.1%)	R/W 0%Vn - 140%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45735	cos φ(P) curve response Slope	R/W 0%Vn - 140%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45736	cos φ(P) curve response Model	R/W 0: OFF 1: Slope Response 2: Low-pass filter Response		uint16be	1	1	0		level		true	false	false	false
+45737	cos φ A	R/W -1,000 bis -0,800 und 0,800 bis 1,000		int16be	1	0,001	0		level		true	false	false	false
+45738	cos φ B	R/W -1,000 bis -0,800 und 0,800 bis 1,000		int16be	1	0,001	0		level		true	false	false	false
+45739	cos φ C	R/W -1,000 bis -0,800 und 0,800 bis 1,000		int16be	1	0,001	0		level		true	false	false	false
+45740	cos φ D	R/W -1,000 bis -0,800 und 0,800 bis 1,000		int16be	1	0,001	0		level		true	false	false	false
+45741	Power E	R/W 0%Pn - 110%Pn	%Pn	uint16be	1	0,1	0		level		true	false	false	false
+45742	cos φ E	R/W -1,000 bis -0,800 und 0,800 bis 1,000		int16be	1	0,001	0		level		true	false	false	false
+45743	cos φ(P) Enter the curve condition	R/W 0/1		int16be	1	1	0		level		true	false	false	false
