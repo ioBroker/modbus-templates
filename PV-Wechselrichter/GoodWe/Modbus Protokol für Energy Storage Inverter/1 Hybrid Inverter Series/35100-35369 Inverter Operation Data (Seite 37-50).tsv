@@ -101,7 +101,7 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 35280	T-phase Max Backup Power within 1minute	R/o 	W	uint32be	2	1	0		level		true	false	false	false
 35282	Max Backup Power within 1minute	R/o 	W	uint32be	2	1	0		level		true	false	false	false
 35284	Grid Hvrt Event Times	R/o clear after restart		uint16be	1	1	0		level		true	false	false	false
-35285	Grid Lvrt Event Times	R/o "	clear after restart"		uint16be	1	1	0		level		true	false	false	false
+35285	Grid Lvrt Event Times	R/o	clear after restart"		uint16be	1	1	0		level		true	false	false	false
 35292	Offline To Online Delay Seconds	R/o 	s	uint16be	1	1	0		level		true	false	false	false
 35293	Grid Hvrt Status	R/o 		uint16be	1	1	0		level		true	false	false	false
 35294	Grid Lvrt Status	R/o 		uint16be	1	1	0		level		true	false	false	false
