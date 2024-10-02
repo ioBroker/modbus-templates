@@ -1,5 +1,5 @@
 Application scenarios	MODE	COMMAND		PV	Grid	Battery	Notes
-		EMSPowerMode	EMSPowerSet	Power priority	and the	**control object**	
+		EMSPowerMode	EMSPowerSet	Power priority	with the	**control object**	
 System shutdown	Stopped	0x00FF	NA				Stop working and switch to wait mode
 							
 Self-use	Auto	0x0001	NA				PBattery =PInv - Pmeter – Ppv (Discharge/Charge)
