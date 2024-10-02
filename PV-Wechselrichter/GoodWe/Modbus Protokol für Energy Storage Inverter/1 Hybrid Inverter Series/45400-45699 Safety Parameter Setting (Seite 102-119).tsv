@@ -170,7 +170,7 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 45572	QU curve Slope1	R/W -200%Qmax/1%Vn - 200%Qmax/1%Vn	%Qmax/1%Vn	int16be	1	0,1	0		level		true	false	false	false
 45573	QU curve Slope2	R/W -200%Qmax/1%Vn - 200%Qmax/1%Vn	%Qmax/1%Vn	int16be	1	0,1	0		level		true	false	false	false
 45574	QU curve Volt Dead	R/W 0%Vn - 100%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
-45577	AS477 Parameters	R/W Table XXX Japanese safety Parameters, corresponding to the old version 0x056D	Hex	rawhex	1	0	0		level		true	false	false	false
+45577	AS477 Parameters	R/W refere Table 8-100, Japanese safety Parameters, corresponding to the old version 0x056D	Hex	rawhex	1	0	0		level		true	false	false	false
 45578	Voltage Rise Suppression V1	R/W 0 - 6553,5 Japanese safety Parameters, corresponding to the old version 0x0591		uint16be	1	0,1	0		level		true	false	false	false
 45579	Voltage Rise Suppression Limit Power	R/W 0 - 65535 Japanese safety Parameters, corresponding to the old version 0x0592		uint16be	1	1	0		level		true	false	false	false
 45580	Anti-Island (Passive) Angle	R/W 0 - 65535 Japanese safety Parameters, corresponding to the old version 0x0593		uint16be	1	1	0		level		true	false	false	false

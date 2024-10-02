@@ -1,7 +1,7 @@
 _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
 50000	Self check Support Flag	R/o 1: Support Self-check		uint16be	1	1	0		level		true	false	false	false
 50001	Self check Function Version	R/o First version is 0		uint16be	1	1	0		level		true	false	false	false
-50002	Self check Function1	R/o Refer to 	Hex	rawhex	1	1	0		level		true	false	false	false
+50002	Self check Function1	R/o Refer to table 8-101	Hex	rawhex	1	1	0		level		true	false	false	false
 50003	Self check Function2	R/o	Hex	rawhex	1	1	0		level		true	false	false	false
 50004	Self check Function3	R/o	Hex	rawhex	1	1	0		level		true	false	false	false
 50005	Self check Function4	R/o	Hex	rawhex	1	1	0		level		true	false	false	false
@@ -89,7 +89,7 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 50087	Backup Frequency L1	R/o	Hz	uint16be	1	0,01	0		level		true	false	false	false
 50088	Backup Frequency L2	R/o	Hz	uint16be	1	0,01	0		level		true	false	false	false
 50089	Backup Frequency L3	R/o	Hz	uint16be	1	0,01	0		level		true	false	false	false
-50090	Meter Type	R/o Refer to 	Hex	rawhex	1	1	0		level		true	false	false	false
+50090	Meter Type	R/o Refer to table 8-102 	Hex	rawhex	1	1	0		level		true	false	false	false
 50091	Meter Internal / External	R/o 0: Internal 1: External		uint16be	1	1	0		level		true	false	false	false
 50092	Int Meter Communication	R/o 0: Com loss 1: Com normal		uint16be	1	1	0		level		true	false	false	false
 50093	CT Self Check Status	R/o 0: Not available 1: Available		uint16be	1	1	0		level		true	false	false	false

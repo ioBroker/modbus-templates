@@ -1,0 +1,33 @@
+Bit Number	Error message	Description
+31	Internal Communication Failure	Communication between microcontrollers is failure
+30	EEPROM R/W Failure	EEPROM cannot be read or written
+29	Fac Failure	The grid frequency is out of tolerable range
+28	DSP communication failure	Communication between ARM and DSP is failure
+27	PhaseAngleFailure	Phase angle out of range (110°~140°)
+26		
+25	Relay Check Failure	Relay check is failure
+24		
+23	Vac Consistency Failure	Different value between Master and Slave for grid voltage
+22	Fac Consistency Failure	Different value between Master and Slave for grid frequency
+21		
+20	Back-Up Over Load	
+19	DC Injection High	The DC injection to grid is too high
+18	Isolation Failure	Isolation resistance of PV-plant too low
+17	Vac Failure	Grid voltage out of tolerable range
+16	External Fan Failure	The external fan failure
+15	PV Over Voltage	Pv input voltage is over the tolerable maximum value
+14	Utility Phase Failure	Utility Phase Failure
+13	Over Temperature	Temperature is too high
+12	InternalFan Failure	The fan in case failure
+11	DC Bus High	DC bus is too high
+10	Ground I Failure	Ground current is too high
+9	Utility Loss	Utility is unavailable
+8	AC HCT Failure	AC HCT check failure 3 times
+7	Relay Device Failure	Relay check failure 3 times
+6	GFCI Device Failure	GFCI check failure 3 times
+5		
+4	GFCI Consistency	Different GFCI values on Master &Slave
+3	DCI Consistency	Different DCI value on Master and Slave
+2		
+1	AC HCT Check Failure	The output current sensor is abnormal
+0	GFCI Device Check	The GFCI detecting circuit is abnormal

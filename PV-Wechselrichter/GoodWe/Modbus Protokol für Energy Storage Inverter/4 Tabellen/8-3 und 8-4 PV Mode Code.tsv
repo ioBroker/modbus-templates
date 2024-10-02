@@ -1,0 +1,13 @@
+Hex	PV Mode Code	Description
+000000xx	00	NO PV, inverter disconnects to PV
+	01	Standby, PV does not output power
+	02	Work, PV output power
+0000xx00	00	NO PV, inverter disconnects to PV
+	01	Standby, PV does not output power
+	02	Work, PV output power
+00xx0000	00	NO PV, inverter disconnects to PV
+	01	Standby, PV does not output power
+	02	Work, PV output power
+xx000000	00	NO PV, inverter disconnects to PV
+	01	Standby, PV does not output power
+	02	Work, PV output power

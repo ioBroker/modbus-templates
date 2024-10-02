@@ -12,7 +12,7 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 47910	BMS Battery Temperature	R/W	°C	uint16be	1	0,1	0		level		true	false	false	false
 47911	BMS Warning Code	R/W Refer to 8-8	Hex	rawhex	2	1	0		level		true	false	false	false
 47913	BMS Alarm Code	R/W Refer to 8-7	Hex	rawhex	2	1	0		level		true	false	false	false
-47915	BMS Status	R/W Refer to 8-9	Hex	rawhex	1	1	0		level		true	false	false	false
+47915	BMS Status	R/W Refer to 8-9		uint16be	1	1	0		level		true	false	false	false
 47916	BMS Communication Loss Disable	R/W		uint16be	1	1	0		level		true	false	false	false
 47917	BMS Battery String Rate Voltage	R/W 20V - 200V	V	uint16be	1	0,1	0		level		true	false	false	false
 47918	BMS Version2	R/W		uint16be	1	1	0		level		true	false	false	false
@@ -28,7 +28,7 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 47928	BMS Battery2 Temperature	R/W	°C	uint16be	1	0,1	0		level		true	false	false	false
 47929	BMS2 Warning Code	R/W Refer to 8-8	Hex	rawhex	2	1	0		level		true	false	false	false
 47931	BMS2 Alarm Code	R/W Refer to 8-7	Hex	rawhex	2	1	0		level		true	false	false	false
-47933	BMS2 Status	R/W Refer to 8-9	Hex	rawhex	1	1	0		level		true	false	false	false
+47933	BMS2 Status	R/W Refer to 8-9		uint16be	1	1	0		level		true	false	false	false
 47934	BMS2 Communication Loss Disable	R/W		uint16be	1	1	0		level		true	false	false	false
 47935	BMS Battery String2 Rate Voltage	R/W 20V - 200V	V	uint16be	1	0,1	0		level		true	false	false	false
 47936	Max BMS Battery Discharge Current	R/W	A	uint16be	1	0,1	0		level		true	false	false	false

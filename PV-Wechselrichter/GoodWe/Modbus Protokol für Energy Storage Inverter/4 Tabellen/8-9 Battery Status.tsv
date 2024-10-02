@@ -1,0 +1,5 @@
+Mode Code	Message	Description
+0	No Battery, or battery disconnected	
+1	Standby	no discharging or charging
+2	Discharging	
+3	Charging	

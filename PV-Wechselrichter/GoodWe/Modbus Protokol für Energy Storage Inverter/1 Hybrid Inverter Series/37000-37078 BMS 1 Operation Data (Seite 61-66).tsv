@@ -1,5 +1,5 @@
 _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
-37000	DRM Status	R/o Demand Response Enabling Device (DRED) only for Australia		uint16be	1	1	0		level		true	false	false	false
+37000	DRM Status	R/o Demand Response Enabling Device (DRED) only for Australia, refere to table 8-15		uint16be	1	1	0		level		true	false	false	false
 37001	BattTypeIndex	R/o Battery manufactor index setting		uint16be	1	1	0		level		true	false	false	false
 37002	BMS2 Status	R/o 		uint16be	1	1	0		level		true	false	false	false
 37003	BMS1 Package Temperature	R/o 	°C	uint16be	1	0,1	0		level		true	false	false	false

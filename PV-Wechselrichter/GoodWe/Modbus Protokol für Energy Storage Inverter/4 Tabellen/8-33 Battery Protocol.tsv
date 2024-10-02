@@ -1,0 +1,11 @@
+Code	Battery Manufacture	Battery Series	Comments
+0122	GoodWe	SECU-S/LX S-H/LX F-H	
+0101	PYLONTECH	Powercube H1/Force	
+0102	BYD	BYD-Box H	
+0106	BYD	BYD-Box Premium HVS	
+0105	BYD	BYD-Box Premium HVM/HVL	
+0104	LG	RESU_HV_Type-R	
+011E	OLOID	LBS	
+011E	DYNESS	Tower	
+011E	Soluna	HV BATTERY	
+011F	EMS	Use EMS Battery	Used when there is no direct communication between inverter and battery

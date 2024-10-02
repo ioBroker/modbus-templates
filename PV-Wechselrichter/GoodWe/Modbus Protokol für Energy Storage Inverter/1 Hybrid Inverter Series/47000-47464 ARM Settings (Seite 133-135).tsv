@@ -4,7 +4,7 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 47002	Meter Connect Check Flag	R/W 0: Not open test/end test 1: Being  test  2: Wait for test		uint16be	1	1	0		level		true	false	false	false
 47005	Log Data Enable switch	R/W Breakpoint Resume for Data transfering. Activated as deFault, time interval 5 minutes.		uint16be	1	1	0		level		true	false	false	false
 47006	Data Send Interval	R/W Time interval for data send to cloud or EMS, default is 1 minute.	s	uint16be	1	1	0	x * 5	level		true	false	false	false
-47007	DRED command	R/W Only for Australia, Refer to Table 8-22		uint16be	1	1	0		level		true	false	false	false
+47007	DRED command	R/W Only for Australia, Refer to Table 8-22	Hex	rawhex	1	1	0		level		true	false	false	false
 47009	WiFi or Lan Switch	W/o 4:WiFi  5:Lan		uint16be	1	1	0		level		false	false	false	false
 47012	Led Blink Time	R/W	s	uint16be	1	1	0		level		true	false	false	false
 47013	WiFi Led State	R/W 1: off 2: on 3: flash1x 4: flash2x 5: flash4x		uint16be	1	1	0		level		true	false	false	false

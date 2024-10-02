@@ -1,0 +1,26 @@
+Bit Number	Inverter Fault Code	Inverter Detailed Error Description
+63	...	...
+...	...	...
+22	LoadRelaySwErr	Backup load Relay switch Error
+21	BypassRelaySwErr	Bypass Relay Switch Error
+20	PowerFastRetrackErr	Power fast retrack Error
+19	OffGridZeroLossErr	OffGridZero Error
+18	UpsOverLoadErr	Backup overload
+17	OffgridUpsVoltLowErr	Off-grid mode AC voltage is too high
+16	OffgridUpsVoltHighErr	Off-grid mode AC voltage is too low
+15	OffgridBattVoltLowErr	Off-grid mode battery voltage is low
+14	GridBackflowErr	Grid backflow
+13	PvBoostSoftOCErr	PV boost software overcurrent
+12	PvBoostHardOCErr	PV boost hardware overcurrent
+11	InvCurrSoftOCErr	Inverter software overcurrent
+10	InvHardOCErr	Inverter hardware overcurrent
+9	BusSampVoltTooHigh	Bus voltage is too high
+8	BusVoltTooLowErr	Bus voltage is too low
+7	BusSoftStartFailedErr	Bus voltage soft start failed
+6	OffgridBmsCurrLimitErr	Off-grid mode exceeds BMS current limit
+5	BattCurrRmsOCErr	Battery current rms overcurrent
+4	BattBMSDischgDisErr	Battery BMS discharge disable
+3	BattBMSFaultErr	Battery BMS fault
+2	BattBoostSoftOCErr	Battery boost software overcurrent
+1	BattBoostHardOCErr	Battery boost hardware overcurrent
+0	BattLLCHardOCErr	LLC hardware overcurrent

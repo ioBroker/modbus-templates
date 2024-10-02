@@ -80,7 +80,7 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 35211	Energy-Discharg-Day	R/o Not from BMS	kWh	uint16be	1	0,1	0		level		true	false	false	false
 35212	Battery Strings	R/o number of battery strings		uint16be	1	1	0		level		true	false	false	false
 35213	CPLD Warning Code	R/o only for after-sales,Refer to Table 8-17		uint16be	1	1	0		level		true	false	false	false
-35220	Diagnosis Status High	R/o Refer to Table 8-13	Hex	rawhex	2	1	0		level		true	false	false	false
+35218	Diagnosis Status High	R/o Refer to Table 8-13	Hex	rawhex	2	1	0		level		true	false	false	false
 35220	Diagnosis Status Low	R/o Refer to Table 8-14	Hex	rawhex	2	1	0		level		true	false	false	false
 35225	EH Battery Function Active	R/o 0: failure 1: Activated 2: Deactivated  3: Locked only for HER		uint16be	1	1	0		level		true	false	false	false
 35226	ARC Self Check Status	R/o 0: failure 1: Activated 2: Deactivated 3: Locked only for inverters with AFCI protection		uint16be	1	1	0		level		true	false	false	false
