@@ -52,7 +52,7 @@ Alternativ mit einem Wandler direkt am Modbus/RTU des Inverters.
 - Faktor 1
 - ein negativer Wert in Watt verschiebt den mittleren Wert von 0W weiter richtung Bezug
 - ein positiver Wert in Watt verschiebt den mittleren Wert von 0W weiter richtung Einspeisung
-- **möglicherweise nur bei ET (15-30 kW) Serie Invertern mit der Funktion verfügbar**
+- **möglicherweise nur bei ET (15-30 kW) Serie Invertern verfügbar**
 
 ## Einstellungen im Adapter für Modbus/TCP
 Als Geräte ID **darf auf keinen Fall** die in der SolarGo App verwendete eingetragen werden! Dies gilt auch für Systeme mit mehreren Goodwe Invertern (jeder hat seine individuelle ID). Dadurch kommt es sonst zu kollisionen mit dem SEMS-Portal, Datenverlust und Verbindungsabbrüchen.
