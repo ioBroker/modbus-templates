@@ -64,6 +64,7 @@ Können einzelne Register nicht gelesen werden kann testweise "Max Leseanforderu
 
 ## Quellen
 Leider sind mir die Quellen von den PDF abhanden gekommen. Vermutlich im PV-Forum gefunden.
+
 [BESS Modbus protocol Map V1.1 20231030.pdf](https://github.com/user-attachments/files/17229994/BESS.Modbus.protocol.Map.V1.1.20231030.pdf)
 
 [ARM 745, ESG2,ET30 MODBUS Protocol Map 20221231 - v1.pdf](https://github.com/user-attachments/files/17234759/ARM.745.ESG2.ET30.MODBUS.Protocol.Map.20221231.-.v1.pdf)
