@@ -1,20 +1,4 @@
 _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
-39000	BMS2 Status			uint16be	1	1	0		level		true	false	false	false
-39001	BMS2 Package Temperature		°C	uint16be	1	0,1	0		level		true	false	false	false
-39002	BMS2 Max Charge Current		A	uint16be	1	1	0		level		true	false	false	false
-39003	BMS2 Max Discharge Current		A	uint16be	1	1	0		level		true	false	false	false
-39004	BMS2 Error Code Low			uint16be	1	1	0		level		true	false	false	false
-39005	BMS2 SOC	Capacity of BAT2	%	uint16be	1	1	0		level		true	false	false	false
-39006	BMS2 SOH		%	uint16be	1	1	0		level		true	false	false	false
-39007	BMS2 Battery Strings			uint16be	1	1	0		level		true	false	false	false
-39008	BMS2 Warning Code Low			uint16be	1	1	0		level		true	false	false	false
-39009	BMS2 Battery Protocol			uint16be	1	1	0		level		true	false	false	false
-39010	BMS2 Error Code High			uint16be	1	1	0		level		true	false	false	false
-39011	BMS2 Warning Code High			uint16be	1	1	0		level		true	false	false	false
-39012	BMS2 Software Version			uint16be	1	1	0		level		true	false	false	false
-39013	BMS2 Battery Hardware Version			uint16be	1	1	0		level		true	false	false	false
-39014	BMS2 Maximum Cell Temperature ID	Battery module ID (1 Byte) + Battery sampling point (1 Byte)	Hex	uint16be	1	1	0		level		true	false	false	false
-_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
 39000	BMS2 Status	R/o 		uint16be	1	1	0		level		true	false	false	false
 39001	BMS2 Package Temperature	R/o 	°C	uint16be	1	0,1	0		level		true	false	false	false
 39002	BMS2 Max Charge Current	R/o 	A	uint16be	1	1	0		level		true	false	false	false

@@ -1,10 +1,10 @@
 _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
 47900	BMS Version	R/W		uint16be	1	1	0		level		true	false	false	false
 47901	Battery Strings	R/W		uint16be	1	1	0		level		true	false	false	false
-47902	Max BMS Battery Charge Voltage	R/W	V	uint16be	1	0,1	0		level		true	false	false	false
-47903	Max BMS Battery Charge Current	R/W	A	uint16be	1	0,1	0		level		true	false	false	false
-47904	Min BMS Battery Discharge Voltage	R/W	V	uint16be	1	0,1	0		level		true	false	false	false
-47905	Min BMS Battery Discharge Current	R/W	A	uint16be	1	0,1	0		level		true	false	false	false
+47902	Max BMS Battery Charge Voltage	R/W better use register 45352	V	uint16be	1	0,1	0		level		true	false	false	false
+47903	Max BMS Battery Charge Current	R/W better use register 45353	A	uint16be	1	0,1	0		level		true	false	false	false
+47904	Min BMS Battery Discharge Voltage	R/W better use register 45354	V	uint16be	1	0,1	0		level		true	false	false	false
+47905	Max BMS Battery Discharge Current	R/W better use register 45355	A	uint16be	1	0,1	0		level		true	false	false	false
 47906	BMS Battery Voltage	R/W	V	uint16be	1	0,1	0		level		true	false	false	false
 47907	BMS Battery Current	R/W	A	uint16be	1	0,1	0		level		true	false	false	false
 47908	BMS Battery SOC	R/W	%	uint16be	1	1	0		level		true	false	false	false
@@ -20,7 +20,7 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 47920	Max BMS Battery2 Charge Voltage	R/W	V	uint16be	1	0,1	0		level		true	false	false	false
 47921	Max BMS Battery2 Charge Current	R/W	A	uint16be	1	0,1	0		level		true	false	false	false
 47922	Min BMS Battery2 Discharge Voltage	R/W	V	uint16be	1	0,1	0		level		true	false	false	false
-47923	Min BMS Battery2 Discharge Current	R/W	A	uint16be	1	0,1	0		level		true	false	false	false
+47923	Max BMS Battery2 Discharge Current	R/W	A	uint16be	1	0,1	0		level		true	false	false	false
 47924	BMS Battery2 Voltage	R/W	V	uint16be	1	0,1	0		level		true	false	false	false
 47925	BMS Battery2 Current	R/W	A	uint16be	1	0,1	0		level		true	false	false	false
 47926	BMS Battery2 SOC	R/W	%	uint16be	1	1	0		level		true	false	false	false

@@ -38,6 +38,7 @@ Alternativ mit einem Wandler direkt am Modbus/RTU des Inverters.
 - **alle Register müssen als "Holding Register" behandelt werden!**
 - die Übersetzung wurde von mir teilweise etwas überarbeitet so lange logisch Herleitbar (Google Übersetzer)
 - Tabellen die mit "ohne Funktion" gekennzeichnet sind enthalten Register die nicht lesbar sind
+- Register die R/o oder R/W sind aber Probleme bei mir machen sind Poll "false"
 - ETC / BTC Register sind ohne passenden Inverter generell nicht lesbar
 - Register zu Funktionen die aktiviert werden müssen haben meistens einen "0" Wert
 - wenn in einem Leseblock (default 100 Register) das **erste Register** auch nicht über die SolarGo App --> Geräte Debugging gelesen werden kann blockiert das **alle Register** in dem Block
@@ -62,6 +63,7 @@ Können einzelne Register nicht gelesen werden kann testweise "Max Leseanforderu
  ![grafik](https://github.com/user-attachments/assets/a59337ea-a4b5-4454-9d30-c204fda12c73)
 
 ## Quellen
+Leider sind mir die Quellen von den PDF abhanden gekommen. Vermutlich im PV-Forum gefunden.
 [BESS Modbus protocol Map V1.1 20231030.pdf](https://github.com/user-attachments/files/17229994/BESS.Modbus.protocol.Map.V1.1.20231030.pdf)
 
 [ARM 745, ESG2,ET30 MODBUS Protocol Map 20221231 - v1.pdf](https://github.com/user-attachments/files/17234759/ARM.745.ESG2.ET30.MODBUS.Protocol.Map.20221231.-.v1.pdf)

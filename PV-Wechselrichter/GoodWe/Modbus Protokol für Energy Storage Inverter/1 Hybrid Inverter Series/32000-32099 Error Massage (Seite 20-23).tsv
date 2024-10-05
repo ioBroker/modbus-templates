@@ -19,8 +19,8 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 32032	Internal Com Module	R/o		uint16be	1	1	0		level		true	false	false	false
 32033	Sensor Abnormal Subcode	R/o		uint16be	1	1	0		level		true	false	false	false
 32034	Relay Abnormal	R/o		uint16be	1	1	0		level		true	false	false	false
-32035	Internal Fun Fault Subcode	R/o		uint16be	1	1	0		level		true	false	false	false
-32036	External Fun Fault Subcode	R/o		uint16be	1	1	0		level		true	false	false	false
+32035	Internal Fan Fault Subcode	R/o		uint16be	1	1	0		level		true	false	false	false
+32036	External Fan Fault Subcode	R/o		uint16be	1	1	0		level		true	false	false	false
 32037	Temperature Fault Subcode	R/o		uint16be	1	1	0		level		true	false	false	false
 32038	PV IGBT Short Circuit Fault Subcode	R/o		uint16be	1	1	0		level		true	false	false	false
 32039	PV IGBT Open Circuit Fault Subcode	R/o		uint16be	1	1	0		level		true	false	false	false
@@ -42,4 +42,4 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 32055	PV Hardware Single Overcurrent Subcode	R/o		uint16be	1	1	0		level		true	false	false	false
 32056	PV Software Single Overcurrent Subcode	R/o		uint16be	1	1	0		level		true	false	false	false
 32057	PV Low Energy Subcode	R/o		uint16be	1	1	0		level		true	false	false	false
-32058	Model Recognition Fault Subcode	R/o		uint16be	1	1	0		level		true	false	false	false
+32058	Model Recognition Fault Subcode	R/o		uint16be	1	1	0		level		false	false	false	false

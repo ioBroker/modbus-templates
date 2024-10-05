@@ -2,9 +2,9 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 45200	Real-Time Clock_Year  Month	R/W High Byte Year / Low Byte Month: 0D-63 / 01-0C	Hex	rawhex	1	1	0		level		true	false	false	false
 45201	Real-Time Clock_Day Hour	R/W High Byte Day/Low  Byte Hour: 01-1F / 00-17	Hex	rawhex	1	1	0		level		true	false	false	false
 45202	Real-Time Clock_Minute Second	R/W High Byte  minute/Low Byte Second: 0-3B / 0-3B	Hex	rawhex	1	1	0		level		true	false	false	false
-45216	Restore Factory Setting	"W/o Choose ""Warehouse"" safety code first and then Set ""1"""		uint16be	1	1	0		level		true	false	false	false
-45217	Clear Data	W/o Reset inverter accumulated data like E-total, E-day, error log running data etc.		uint16be	1	1	0		level		true	false	false	false
-45220	Restart	W/o Inverter will recheck and reconnect to utility again. Inverter does not shutdown.		uint16be	1	1	0		level		true	false	false	false
+45216	Restore Factory Setting	"W/o Choose ""Warehouse"" safety code first and then Set ""1"""		uint16be	1	1	0		level		false	false	false	false
+45217	Clear Data	W/o Reset inverter accumulated data like E-total, E-day, error log running data etc.		uint16be	1	1	0		level		false	false	false	false
+45220	Restart	W/o Inverter will recheck and reconnect to utility again. Inverter does not shutdown.		uint16be	1	1	0		level		false	false	false	false
 45222	PV Energy-Total	R/W total PV production energy from the installation date	kWh	uint32be	2	0,1	0		level		true	false	false	false
 45224	PV Energy-Day	R/W total PV production energy of the day	kWh	uint32be	2	0,1	0		level		true	false	false	false
 45226	Energy-Total-Sell	R/W accumulated exporting energy to Grid from the installation date	kWh	uint32be	2	0,1	0		level		true	false	false	false
@@ -32,8 +32,8 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 45263	Derate Rate(VDE)	R/W decrease the load,only can set to 70%, only for German	%	uint16be	1	1	0		level		true	false	false	false
 45264	Three Phase Unbalanced Output	"R/W set ""1"" to activate. After activated, All power needs to be turned off and restarted"		uint16be	1	1	0		level		true	false	false	false
 45266	High Impedance Mode	R/W For weak Grid area		uint16be	1	1	0		level		true	false	false	false
-45271	ARC Self Check	W/o only for inverters with AFCI function		uint16be	1	1	0		level		true	false	false	false
-45272	ARC Fault Remove	W/o 		uint16be	1	1	0		level		true	false	false	false
+45271	ARC Self Check	W/o only for inverters with AFCI function		uint16be	1	1	0		level		false	false	false	false
+45272	ARC Fault Remove	W/o 		uint16be	1	1	0		level		false	false	false	false
 45275	ISO Check Mode	R/W  0:Normal mode 1:cancel ISO test when offGrid to onGrid		uint16be	1	1	0		level		true	false	false	false
 45276	Off Grid To On Grid Delay	R/W The delay time when Grid is available	s	uint16be	1	1	0		level		true	false	false	false
 45277	Off Grid Under Voltage Protect Coefficient	R/W If set 80%, when offGrid output Voltage less than 230*80%=184V, inverter will have the error	%	uint16be	1	1	0		level		true	false	false	false

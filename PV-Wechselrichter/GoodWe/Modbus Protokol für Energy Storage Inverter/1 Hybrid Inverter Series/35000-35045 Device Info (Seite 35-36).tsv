@@ -11,6 +11,6 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 35020	Beta Version_ARM	R/o (minor version number)		uint16be	1	1	0		level		true	false	false	false
 35021	DSP Internal Firmware Ver.	R/o 		string	6	1	0		level		true	false	false	false
 35027	ARM Internal Firmware Ver.	R/o 		string	6	1	0		level		true	false	false	false
-35043	System control mode	R/o 0: Deault 1:Power fast set, without step size adjustment		uint16be	1	1	0		level		true	false	false	false
+35043	System control mode	R/o 0: Deault 1:Power fast set, without step size adjustment		uint16be	1	1	0		level		false	false	false	false
 35044	Beta Version_DSP_Slave	R/o 		uint16be	1	1	0		level		true	false	false	false
-35045	SIMCCID	R/o ID of GPRS/4G   module		string	10	1	0		level		true	false	false	false
+35045	SIMCCID	R/o ID of GPRS/4G   module		string	10	1	0		level		false	false	false	false

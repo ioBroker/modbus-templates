@@ -26,13 +26,13 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 10436	Battery Voltage 1	R/o Refer to 35180	V	uint16be	1	0,1	0		level		true	false	false	false
 10437	Battery Voltage 2	R/o Refer to 35262	V	uint16be	1	0,1	0		level		true	false	false	false
 10438	Total Inverter Power	R/o Refer to 35001	W	uint32be	2	1	0		level		true	false	false	false
-10470	Meter Check Value	R/o Refer to 47001		uint16be	1	1	0		level		true	false	false	false
-10471	Meter Connect Check Flag	R/o Refer to 47002		uint16be	1	1	0		level		true	false	false	false
-10472	SOC	R/o The cloud board calculates the average value based on each machine's SOC and obtains each machine's register 37007	%	uint16be	1	1	0		level		true	false	false	false
-10473	Battery Capacity	R/o 		uint16be	1	1	0		level		true	false	false	false
-10474	Battery Communication	R/o 		uint16be	1	1	0		level		true	false	false	false
-10476	Battery Charge Allow Kilowatt-Hour Sum	R/o 	W/h	uint32be	2	1	0		level		true	false	false	false
-10478	Battery Disharge Allow Kilowatt-Hour Sum	R/o 	W/h	uint32be	2	1	0		level		true	false	false	false
+10470	Meter Check Value	R/o Refer to 47001		uint16be	1	1	0		level		false	false	false	false
+10471	Meter Connect Check Flag	R/o Refer to 47002		uint16be	1	1	0		level		false	false	false	false
+10472	SOC	R/o The cloud board calculates the average value based on each machine's SOC and obtains each machine's register 37007	%	uint16be	1	1	0		level		false	false	false	false
+10473	Battery Capacity	R/o 		uint16be	1	1	0		level		false	false	false	false
+10474	Battery Communication	R/o 		uint16be	1	1	0		level		false	false	false	false
+10476	Battery rechargeable watt hours	R/o 	W/h	uint32be	2	1	0		level		true	false	false	false
+10478	Battery dischargeable watt hours	R/o 	W/h	uint32be	2	1	0		level		true	false	false	false
 10480	AbleBalanceFlag	R/o 0: Need to be averaged 1: No need to be averaged		uint16be	1	1	0		level		true	false	false	false
 10481	Meter Active Power R	R/o Refer to 36127	W	int32be	2	1	0		level		true	false	false	false
 10483	Meter Active Power S	R/o Refer to 36129	W	int32be	2	1	0		level		true	false	false	false

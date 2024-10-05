@@ -1,7 +1,7 @@
 _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
 37000	DRM Status	R/o Demand Response Enabling Device (DRED) only for Australia, refere to table 8-15		uint16be	1	1	0		level		true	false	false	false
 37001	BattTypeIndex	R/o Battery manufactor index setting		uint16be	1	1	0		level		true	false	false	false
-37002	BMS2 Status	R/o 		uint16be	1	1	0		level		true	false	false	false
+37002	BMS1 Status	R/o 		uint16be	1	1	0		level		true	false	false	false
 37003	BMS1 Package Temperature	R/o 	°C	uint16be	1	0,1	0		level		true	false	false	false
 37004	BMS1 Max Charge Current	R/o 	A	uint16be	1	1	0		level		true	false	false	false
 37005	BMS1 Max Discharge Current	R/o 	A	uint16be	1	1	0		level		true	false	false	false
@@ -57,7 +57,7 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 37055	BMS1 Pass Infomation 32	R/o 		uint16be	1	1	0		level		true	false	false	false
 37056	BMS1 Battery Total Charge Energy	R/o 	kWh	uint32be	2	0,1	0		level		true	false	false	false
 37058	BMS1 Battery Total Discharge Energy	R/o 	kWh	uint32be	2	0,1	0		level		true	false	false	false
-37060	BMS1 Battery SN	R/o 		rawhex	16	1	0		level		true	false	false	false
+37060	BMS1 Battery SN	R/o 		string	16	1	0		level		true	false	false	false
 37076	BMS1 Rated Capacity	R/o 	kWh	uint16be	1	0,01	0		level		true	false	false	false
 37077	BMS1 Cluster NUM	R/o 		uint16be	1	1	0		level		true	false	false	false
 37078	BMS1 Cluster number	R/o Register + Online		uint16be	1	1	0		level		true	false	false	false

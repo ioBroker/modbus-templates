@@ -1,0 +1,480 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+10418	Meter Power	R/o Refer to 36025-36026	W	int32be	2	1	0		level		true	false	false	false
+10434	Meter Frequence	R/o Refer to 36014	Hz	uint16be	1	0,01	0		level		true	false	false	false
+10476	Battery rechargeable watt hours	R/o 	W/h	uint32be	2	1	0		level		true	false	false	false
+10478	Battery dischargeable watt hours	R/o 	W/h	uint32be	2	1	0		level		true	false	false	false
+10480	AbleBalanceFlag	R/o 0: Need to be averaged 1: No need to be averaged		uint16be	1	1	0		level		true	false	false	false
+10481	Meter Active Power R	R/o Refer to 36127	W	int32be	2	1	0		level		true	false	false	false
+10483	Meter Active Power S	R/o Refer to 36129	W	int32be	2	1	0		level		true	false	false	false
+10485	Meter Active Power T	R/o Refer to 36131	W	int32be	2	1	0		level		true	false	false	false
+35000	Modbus protocol version	R/o 		uint16be	1	1	0		level		true	false	false	false
+35001	Rate Power	R/o 	W	uint16be	1	1	0		level		true	false	false	false
+35002	AC output type	R/o 0:single phase 1: three phase four wire system 2: three phase three wire system		uint16be	1	1	0		level		true	false	false	false
+35003	Inverter SN	R/o 		string	8	1	0		level		true	false	false	false
+35011	Model Name	R/o 		string	5	1	0		level		true	false	false	false
+35016	Firmware Version_DSP_Master	R/o 		uint16be	1	1	0		level		true	false	false	false
+35017	Firmware Version_DSP_Slave	R/o 		uint16be	1	1	0		level		true	false	false	false
+35018	Beta Version_DSP_Master	R/o SVN version number of the master DSP		uint16be	1	1	0		level		true	false	false	false
+35019	Firmware Version_ARM	R/o 		uint16be	1	1	0		level		true	false	false	false
+35020	Beta Version_ARM	R/o (minor version number)		uint16be	1	1	0		level		true	false	false	false
+35021	DSP Internal Firmware Ver.	R/o 		string	6	1	0		level		true	false	false	false
+35027	ARM Internal Firmware Ver.	R/o 		string	6	1	0		level		true	false	false	false
+35044	Beta Version_DSP_Slave	R/o 		uint16be	1	1	0		level		true	false	false	false
+35100	Real-Time Clock_Year  Month	R/o High Byte Year / Low Byte Month: 0D-63 / 01-0C	Hex	rawhex	1	1	0		level		true	false	false	false
+35101	Real-Time Clock_Day Hour	R/o High Byte Day/Low  Byte Hour: 01-1F / 00-17	Hex	rawhex	1	1	0		level		true	false	false	false
+35102	Real-Time Clock_Minute Second	R/o High Byte  minute/Low Byte Second: 0-3B / 0-3B	Hex	rawhex	1	1	0		level		true	false	false	false
+35103	PV1 Voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+35104	PV1 Current	R/o 	A	uint16be	1	0,1	0		level		true	false	false	false
+35105	PV1 Power	R/o 200ms Average	W	uint32be	2	1	0		level		true	false	false	false
+35107	PV2 Voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+35108	PV2 Current	R/o 	A	uint16be	1	0,1	0		level		true	false	false	false
+35109	PV2 Power	R/o 200ms Average	W	uint32be	2	1	0		level		true	false	false	false
+35111	PV3 Voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+35112	PV3 Current	R/o 	A	uint16be	1	0,1	0		level		true	false	false	false
+35113	PV3 Power	R/o 200ms Average	W	uint32be	2	1	0		level		true	false	false	false
+35115	PV4 Voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+35116	PV4 Current	R/o 	A	uint16be	1	0,1	0		level		true	false	false	false
+35117	PV4 Power	R/o 200ms Average	W	uint32be	2	1	0		level		true	false	false	false
+35119	PV Mode	R/o To check each MPPT mode, Table 8-3 & 8-4	Hex	rawhex	2	1	0		level		true	false	false	false
+35121	R Phase Inverter Voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+35122	R Phase Inverter Current	R/o 	A	uint16be	1	0,1	0		level		true	false	false	false
+35123	R Phase Inverter Frequency	R/o 	Hz	uint16be	1	0,01	0		level		true	false	false	false
+35124	R Phase Inverter Power	R/o Inverter Power 200ms Average	W	int32be	2	1	0		level		true	false	false	false
+35126	S Phase Inverter Voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+35127	S Phase Inverter Current	R/o 	A	uint16be	1	0,1	0		level		true	false	false	false
+35128	S Phase Inverter Frequency	R/o 	Hz	uint16be	1	0,01	0		level		true	false	false	false
+35129	S Phase Inverter Power	R/o Inverter Power 200ms Average	W	int32be	2	1	0		level		true	false	false	false
+35131	T Phase Inverter Voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+35132	T Phase Inverter Current	R/o 	A	uint16be	1	0,1	0		level		true	false	false	false
+35133	T Phase Inverter Frequency	R/o 	Hz	uint16be	1	0,01	0		level		true	false	false	false
+35134	T Phase Inverter Power	R/o Inverter Power 200ms Average	W	int32be	2	1	0		level		true	false	false	false
+35136	Grid Mode	R/o Grid connection status,Refer to Table 8-10		uint16be	1	1	0		level		true	false	false	false
+35137	Total Inverter Power	R/o 200ms Average	W	int32be	2	1	0		level		true	false	false	false
+35139	AC Active Power	R/o 200ms Average (Meter connection OK / not OK : is meter power / inverter on-grid port power	W	int32be	2	1	0		level		true	false	false	false
+35141	AC Reactive Power	R/o 200ms Average (Meter connection OK / not OK : is meter power / inverter on-grid port power	Var	int32be	2	1	0		level		true	false	false	false
+35143	AC Apparent Power	R/o 200ms Average (Meter connection OK / not OK : is meter power / inverter on-grid port power	VA	int32be	2	1	0		level		true	false	false	false
+35145	R Phase Load Voltage on Back-Up	R/o Use R phase data for 1-phase inverter	V	uint16be	1	0,1	0		level		true	false	false	false
+35146	R Phase Load Current of Back-Up	R/o 	A	uint16be	1	0,1	0		level		true	false	false	false
+35147	R phase Load Frequency of Back-Up	R/o 	Hz	uint16be	1	0,01	0		level		true	false	false	false
+35148	Load Mode_R	R/o Backupport: 0=on 1=off; Also used for 1-p inverter		uint16be	1	1	0		level		true	false	false	false
+35149	R Phase Load Power of Back-Up	R/o 200ms Average	W	int32be	2	1	0		level		true	false	false	false
+35151	S Phase Load Voltage on Back-Up	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+35152	S Phase Load Current of Back-Up	R/o 	A	uint16be	1	0,1	0		level		true	false	false	false
+35153	S phase Load Frequency of Back-Up	R/o 	Hz	uint16be	1	0,01	0		level		true	false	false	false
+35154	Load Mode_S	R/o Backupport: 0=on 1=off		uint16be	1	1	0		level		true	false	false	false
+35155	S Phase Load Power of Back-Up	R/o 200ms Average	W	int32be	2	1	0		level		true	false	false	false
+35157	T Phase Load Voltage on Back-Up	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+35158	T Phase Load Current of Back-Up	R/o 	A	uint16be	1	0,1	0		level		true	false	false	false
+35159	T phase Load Frequency of Back-Up	R/o 	Hz	uint16be	1	0,01	0		level		true	false	false	false
+35160	Load Mode_T	R/o Backupport: 0=on 1=off		uint16be	1	1	0		level		true	false	false	false
+35161	T Phase Load Power of Back-Up	R/o 200ms Average	W	int32be	2	1	0		level		true	false	false	false
+35163	R Phase On-Grid Load Power	R/o 200ms Average Excluding Backup load	W	int32be	2	1	0		level		true	false	false	false
+35165	S Phase On-Grid Load Power	R/o 200ms Average Excluding Backup load	W	int32be	2	1	0		level		true	false	false	false
+35167	T Phase On-Grid Load Power	R/o 200ms Average Excluding Backup load	W	int32be	2	1	0		level		true	false	false	false
+35169	Total Back-Up Load Power	R/o 200ms Average	W	int32be	2	1	0		level		true	false	false	false
+35171	Total On-Grid Load Power	R/o 200ms Average Excluding Backup load	W	int32be	2	1	0		level		true	false	false	false
+35173	UPS Load Percent	R/o BackupLoad Power / Rated power	%	uint16be	1	0,01	0		level		true	false	false	false
+35174	Air Temperature	R/o Inverter Internal Temperature	°C	uint16be	1	0,1	0		level		true	false	false	false
+35175	Model Temperature	R/o Inverter Unit Temperature	°C	uint16be	1	0,1	0		level		true	false	false	false
+35176	Heatsink Temperature 1	R/o Inverter Heat Sink Temperature	°C	uint16be	1	0,1	0		level		true	false	false	false
+35177	Function Bit Value	R/o 		uint16be	1	1	0		level		true	false	false	false
+35178	BUS Voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+35179	NBUS Voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+35180	Battery1 Voltage	R/o BMS communication OK = voltage BMS send to inverter	V	uint16be	1	0,1	0		level		true	false	false	false
+35181	Battery1 Current	R/o 	A	uint16be	1	0,1	0		level		true	false	false	false
+35182	Battery1 Power	R/o 200ms Average	W	int32be	2	1	0		level		true	false	false	false
+35184	Battery1 Mode	R/o Refer to Table 8-9		uint16be	1	1	0		level		true	false	false	false
+35185	Warning Code	R/o 		uint16be	1	1	0		level		true	false	false	false
+35186	Safety Country	R/o Refer to Table 8-21		rawhex	1	1	0		level		true	false	false	false
+35187	Work Mode	R/o Refer to Table 8-1		uint16be	1	1	0		level		true	false	false	false
+35189	Error Message	R/o Refer to Table 8-12		uint32be	2	1	0		level		true	false	false	false
+35191	PV Energy-Total	R/o PV production energy from installation date	kWh	uint32be	2	0,1	0		level		true	false	false	false
+35193	PV Energy-Day	R/o Total PV production energy of the day	kWh	uint32be	2	0,1	0		level		true	false	false	false
+35197	Operating hour counter	R/o 	h	uint32be	2	1	0		level		true	false	false	false
+35199	Energy-Day-Sell	R/o The accumulated exporting energy to grid of the day	kWh	uint16be	1	0,1	0		level		true	false	false	false
+35202	Energy-Day-Buy	R/o The accumulated exporting energy from grid of the day	kWh	uint16be	1	0,1	0		level		true	false	false	false
+35203	Energy-Total-Load	R/o From the installation date, not include backup load	kWh	uint32be	2	0,1	0		level		true	false	false	false
+35205	Energy-Load-Day	R/o Accumulated load consumption energy of the day, not include backup load	kWh	uint16be	1	0,1	0		level		true	false	false	false
+35206	Energy-Battery Charge	R/o From the installation date Not from BMS	kWh	uint32be	2	0,1	0		level		true	false	false	false
+35208	Energy-Charge-Day	R/o Not from BMS	kWh	uint16be	1	0,1	0		level		true	false	false	false
+35209	Energy-Battery Discharg	R/o From the installation date Not from BMS	kWh	uint32be	2	0,1	0		level		true	false	false	false
+35211	Energy-Discharg-Day	R/o Not from BMS	kWh	uint16be	1	0,1	0		level		true	false	false	false
+35212	Battery Strings	R/o number of battery strings		uint16be	1	1	0		level		true	false	false	false
+35213	CPLD Warning Code	R/o only for after-sales,Refer to Table 8-17		uint16be	1	1	0		level		true	false	false	false
+35218	Diagnosis Status High	R/o Refer to Table 8-13	Hex	rawhex	2	1	0		level		true	false	false	false
+35220	Diagnosis Status Low	R/o Refer to Table 8-14	Hex	rawhex	2	1	0		level		true	false	false	false
+35225	EH Battery Function Active	R/o 0: failure 1: Activated 2: Deactivated  3: Locked only for HER		uint16be	1	1	0		level		true	false	false	false
+35226	ARC Self Check Status	R/o 0: failure 1: Activated 2: Deactivated 3: Locked only for inverters with AFCI protection		uint16be	1	1	0		level		true	false	false	false
+35250	Safety Detailed Error Message	R/o Detail information of grid failure,Refer to Table 8-30		rawhex	4	1	0		level		true	false	false	false
+35268	Max Grid Frequency within 1min	R/o 	Hz	uint16be	1	0,01	0		level		true	false	false	false
+35269	Min Grid Frequency within 1min	R/o 	Hz	uint16be	1	0,01	0		level		true	false	false	false
+35270	R-phase Max Grid Voltage within 1minute	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+35271	R-phase Min Grid Voltage within 1minute	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+35272	S-phase Max Grid Voltage within 1minute	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+35273	S-phase Min Grid Voltage within 1minute	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+35274	T-phase Max Grid Voltage within 1minute	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+35275	T-phase Min Grid Voltage within 1minute	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+35276	R-phase Max Backup Power within 1minute	R/o 	W	uint32be	2	1	0		level		true	false	false	false
+35278	S-phase Max Backup Power within 1minute	R/o 	W	uint32be	2	1	0		level		true	false	false	false
+35280	T-phase Max Backup Power within 1minute	R/o 	W	uint32be	2	1	0		level		true	false	false	false
+35282	Max Backup Power within 1minute	R/o 	W	uint32be	2	1	0		level		true	false	false	false
+35284	Grid Hvrt Event Times	R/o clear after restart		uint16be	1	1	1		level		true	false	false	false
+35285	Grid Lvrt Event Times	R/o clear after restart		uint16be	1	1	1		level		true	false	false	false
+35292	Offline To Online Delay Seconds	R/o 	s	uint16be	1	1	0		level		true	false	false	false
+35293	Grid Hvrt Status	R/o 		uint16be	1	1	0		level		true	false	false	false
+35294	Grid Lvrt Status	R/o 		uint16be	1	1	0		level		true	false	false	false
+35301	PV Total Power	R/o 	W	uint32be	2	1	0		level		true	false	false	false
+35303	PV channel	R/o 		uint16be	1	1	0		level		true	false	false	false
+35304	PV5 Voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+35305	PV5 Current	R/o 	A	uint16be	1	0,1	0		level		true	false	false	false
+35306	PV6 Voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+35307	PV6 Current	R/o 	A	uint16be	1	0,1	0		level		true	false	false	false
+35330	R-phase Avg Grid Voltage within 10minute	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+35331	S-phase Avg Grid Voltage within 10minute	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+35332	T-phase Avg Grid Voltage within 10minute	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+35337	MPPT 1 Power	R/o 	W	uint16be	1	1	0		level		true	false	false	false
+35338	MPPT 2 Power	R/o 	W	uint16be	1	1	0		level		true	false	false	false
+35339	MPPT 3 Power	R/o 	W	uint16be	1	1	0		level		true	false	false	false
+35345	MPPT 1 Current	R/o 	A	uint16be	1	0,1	0		level		true	false	false	false
+35346	MPPT 2 Current	R/o 	A	uint16be	1	0,1	0		level		true	false	false	false
+35347	MPPT 3 Current	R/o 	A	uint16be	1	0,1	0		level		true	false	false	false
+35365	ISO Value	R/o 	kΩ	uint16be	1	0,1	0		level		true	false	false	false
+36000	Communication Mode	R/o 01:WIFI 02:GPRS 03:LAN 04 / 05: WIFI / LAN mode of WIFIi+LAN module 06 / 07: WIFI / LAN mode of WIFIi+LAN 2.0 module		uint16be	1	1	0		level		true	false	false	false
+36001	RSSI	R/o RSSI of wifi module		uint16be	1	1	0		level		true	false	false	false
+36002	ManufacturerCode	R/o EMS protocol code		uint16be	1	1	0		level		true	false	false	false
+36003	MeterConnectStatus	R/o 0: Not detected 1: Correct connection 2: Connection reverse (CT) 4: Incorrect connection 8: CT and voltage are out of phase 	Hex	rawhex	1	1	0		level		true	false	false	false
+36004	Meter Communication Status	R/o 1: Success 0: Failure		uint16be	1	1	0		level		true	false	false	false
+36005	R Phase Meter Active Power	R/o If ARM Version > 9, please refer to 36019~36041	W	int16be	1	1	0		level		true	false	false	false
+36006	S Phase Meter Active Power	R/o If ARM Version > 9, please refer to 36019~36041	W	int16be	1	1	0		level		true	false	false	false
+36007	T Phase Meter Active Power	R/o If ARM Version > 9, please refer to 36019~36041	W	int16be	1	1	0		level		true	false	false	false
+36008	Meter Total Active Power	R/o If ARM Version > 9, please refer to 36019~36041	W	int16be	1	1	0		level		true	false	false	false
+36009	Meter Total Reactive Power	R/o If ARM Version > 9, please refer to 36019~36041	VAR	int16be	1	1	0		level		true	false	false	false
+36010	R Phase Meter Power Factor	R/o 		int16be	1	1	0	x < 1 ? - ( x * 0.01 + 1 ) : 1 - x * 0.01	level		true	false	false	false
+36011	S Phase Meter Power Factor	R/o 		int16be	1	1		x < 1 ? - ( x * 0.01 + 1 ) : 1 - x * 0.01	level		true	false	false	false
+36012	T Phase Meter Power Factor	R/o 		int16be	1	1		x < 1 ? - ( x * 0.01 + 1 ) : 1 - x * 0.01	level		true	false	false	false
+36013	Meter Power Factor	R/o 		int16be	1	1		x < 1 ? - ( x * 0.01 + 1 ) : 1 - x * 0.01	level		true	false	false	false
+36014	Meter Frequence	R/o 	Hz	uint16be	1	0,01			level		true	false	false	false
+36015	Energy-Total-Sell	R/o Total Energy To Grid. Read from meter		floatbe	2	1			level		true	false	false	false
+36017	Energy-Total-Buy	R/o Total Energy From Grid. Read from meter		floatbe	2	1			level		true	false	false	false
+36019	R Phase Meter Active Power	R/o the address of ARM Version > 9	W	int32be	2	1			level		true	false	false	false
+36021	S Phase Meter Active Power	R/o the address of ARM Version > 9	W	int32be	2	1			level		true	false	false	false
+36023	T Phase Meter Active Power	R/o the address of ARM Version > 9	W	int32be	2	1			level		true	false	false	false
+36025	Meter Total Active Power	R/o the address of ARM Version > 9	W	int32be	2	1			level		true	false	false	false
+36027	R Phase Meter Reactive Power	R/o the address of ARM Version > 9	VAR	int32be	2	1			level		true	false	false	false
+36029	S Phase Meter Reactive Power	R/o the address of ARM Version > 9	VAR	int32be	2	1			level		true	false	false	false
+36031	T Phase Meter Reactive Power	R/o the address of ARM Version > 9	VAR	int32be	2	1			level		true	false	false	false
+36033	Meter Total Reactive Power	R/o the address of ARM Version > 9	VAR	int32be	2	1			level		true	false	false	false
+36035	R Phase Meter Apparent Power	R/o the address of ARM Version > 9	VA	int32be	2	1			level		true	false	false	false
+36037	S Phase Meter Apparent Power	R/o the address of ARM Version > 9	VA	int32be	2	1			level		true	false	false	false
+36039	T Phase Meter Apparent Power	R/o the address of ARM Version > 9	VA	int32be	2	1			level		true	false	false	false
+36041	Meter Total Apparent Power	R/o the address of ARM Version > 9	VA	int32be	2	1			level		true	false	false	false
+36043	Meter Type	R/o Only for GoodWe Smart Meter (0:Single phase 1:3P3W  2:3P4W 3:HomeKit  4:GM1000D)		uint16be	1	1			level		true	false	false	false
+36044	Meter Software Version	R/o Only for GoodWe Smart Meter		uint16be	1	1			level		true	false	false	false
+36052	R Phase Meter Voltage	R/o 	V	uint16be	1	0,1			level		true	false	false	false
+36053	S Phase Meter Voltage	R/o 	V	uint16be	1	0,1			level		true	false	false	false
+36054	T Phase Meter Voltage	R/o 	V	uint16be	1	0,1			level		true	false	false	false
+36055	R Phase Meter Current	R/o 	A	uint16be	1	0,1			level		true	false	false	false
+36056	S Phase Meter Current	R/o 	A	uint16be	1	0,1			level		true	false	false	false
+36057	T Phase Meter Current	R/o 	A	uint16be	1	0,1			level		true	false	false	false
+36065	ARC fault channel	R/o 		uint16be	1	1			level		true	false	false	false
+36067	ARC Software Version	R/o AFCI Version		uint16be	1	1			level		true	false	false	false
+36092	R Phase Active Energy Total Sell	R/o Dedicated to ARM745 and 753 platforms	kWh	uint64be	4	0,01			level		true	false	false	false
+36096	S Phase Active Energy Total Sell	R/o Dedicated to ARM745 and 753 platforms	kWh	uint64be	4	0,01			level		true	false	false	false
+36100	T Phase Active Energy Total Sell	R/o Dedicated to ARM745 and 753 platforms	kWh	uint64be	4	0,01			level		true	false	false	false
+36104	Active Energy Total Sell Total	R/o Dedicated to ARM745 and 753 platforms	kWh	uint64be	4	0,01			level		true	false	false	false
+36108	R Phase Active Energy Total Buy	R/o Dedicated to ARM745 and 753 platforms	kWh	uint64be	4	0,01			level		true	false	false	false
+36112	S Phase Active Energy Total Buy	R/o Dedicated to ARM745 and 753 platforms	kWh	uint64be	4	0,01			level		true	false	false	false
+36116	T Phase Active Energy Total Buy	R/o Dedicated to ARM745 and 753 platforms	kWh	uint64be	4	0,01			level		true	false	false	false
+36120	Active Energy Total Buy Total	R/o Dedicated to ARM745 and 753 platforms	kWh	uint64be	4	0,01			level		true	false	false	false
+36124	Real-Time Clock_Year  Month	R/o High Byte Year / Low Byte Month: 0D-63 / 01-0C	Hex	rawhex	1	1	0		level		true	false	false	false
+36125	Real-Time Clock_Day Hour	R/o High Byte Day/Low  Byte Hour: 01-1F / 00-17	Hex	rawhex	1	1	0		level		true	false	false	false
+36126	Real-Time Clock_Minute Second	R/o High Byte  minute/Low Byte Second: 0-3B / 0-3B	Hex	rawhex	1	1	0		level		true	false	false	false
+36197	Generator operating mode	R/o 0: Grid mode 1: Generator mode		uint16be	1	1	0		level		true	false	false	false
+36198	Communication Module software version	R/o 		string	10	1	0		level		true	false	false	false
+37001	BattTypeIndex	R/o Battery manufactor index setting		uint16be	1	1	0		level		true	false	false	false
+37002	BMS1 Status	R/o 		uint16be	1	1	0		level		true	false	false	false
+37003	BMS1 Package Temperature	R/o 	°C	uint16be	1	0,1	0		level		true	false	false	false
+37004	BMS1 Max Charge Current	R/o 	A	uint16be	1	1	0		level		true	false	false	false
+37005	BMS1 Max Discharge Current	R/o 	A	uint16be	1	1	0		level		true	false	false	false
+37006	BMS1 Error Code Low	R/o 		uint16be	1	1	0		level		true	false	false	false
+37007	BMS1 SOC	R/o Capacity of BAT1	%	uint16be	1	1	0		level		true	false	false	false
+37008	BMS1 SOH	R/o 	%	uint16be	1	1	0		level		true	false	false	false
+37009	BMS1 Battery Strings	R/o 		uint16be	1	1	0		level		true	false	false	false
+37010	BMS1 Warning Code Low	R/o 		uint16be	1	1	0		level		true	false	false	false
+37011	BMS1 Battery Protocol	R/o 		uint16be	1	1	0		level		true	false	false	false
+37012	BMS1 Error Code High	R/o 		uint16be	1	1	0		level		true	false	false	false
+37013	BMS1 Warning Code High	R/o 		uint16be	1	1	0		level		true	false	false	false
+37014	BMS1 Software Version	R/o 		uint16be	1	1	0		level		true	false	false	false
+37015	BMS1 Battery Hardware Version	R/o 		uint16be	1	1	0		level		true	false	false	false
+37016	BMS1 Maximum Cell Temperature ID	R/o Battery module ID (1 Byte) + Battery sampling point (1 Byte)	Hex	rawhex	1	1	0		level		true	false	false	false
+37017	BMS1 Minimum Cell Temperature ID	R/o Battery module ID (1 Byte) + Battery sampling point (1 Byte)	Hex	rawhex	1	1	0		level		true	false	false	false
+37018	BMS1 Maximum Cell Voltage ID	R/o Battery module ID (1 Byte) + Battery sampling point (1 Byte)	Hex	rawhex	1	1	0		level		true	false	false	false
+37019	BMS1 Minimum Cell Voltage ID	R/o Battery module ID (1 Byte) + Battery sampling point (1 Byte)	Hex	rawhex	1	1	0		level		true	false	false	false
+37020	BMS1 Maximum Cell Temperature	R/o 	°C	uint16be	1	0,1	0		level		true	false	false	false
+37021	BMS1 Minimum Cell Temperature	R/o 	°C	uint16be	1	0,1	0		level		true	false	false	false
+37022	BMS1 Maximum Cell Voltage	R/o 	mV	uint16be	1	1	0		level		true	false	false	false
+37023	BMS1 Minimum Cell Voltage	R/o 	mV	uint16be	1	1	0		level		true	false	false	false
+37056	BMS1 Battery Total Charge Energy	R/o 	kWh	uint32be	2	0,1	0		level		true	false	false	false
+37058	BMS1 Battery Total Discharge Energy	R/o 	kWh	uint32be	2	0,1	0		level		true	false	false	false
+37060	BMS1 Battery SN	R/o 		string	16	1	0		level		true	false	false	false
+37076	BMS1 Rated Capacity	R/o 	kWh	uint16be	1	0,01	0		level		true	false	false	false
+37077	BMS1 Cluster NUM	R/o 		uint16be	1	1	0		level		true	false	false	false
+37078	BMS1 Cluster number	R/o Register + Online		uint16be	1	1	0		level		true	false	false	false
+39000	BMS2 Status	R/o 		uint16be	1	1	0		level		true	false	false	false
+39001	BMS2 Package Temperature	R/o 	°C	uint16be	1	0,1	0		level		true	false	false	false
+39002	BMS2 Max Charge Current	R/o 	A	uint16be	1	1	0		level		true	false	false	false
+39003	BMS2 Max Discharge Current	R/o 	A	uint16be	1	1	0		level		true	false	false	false
+39004	BMS2 Error Code Low	R/o 		uint16be	1	1	0		level		true	false	false	false
+39005	BMS2 SOC	R/o Capacity of BAT2	%	uint16be	1	1	0		level		true	false	false	false
+39006	BMS2 SOH	R/o 	%	uint16be	1	1	0		level		true	false	false	false
+39007	BMS2 Battery Strings	R/o 		uint16be	1	1	0		level		true	false	false	false
+39008	BMS2 Warning Code Low	R/o 		uint16be	1	1	0		level		true	false	false	false
+39009	BMS2 Battery Protocol	R/o 		uint16be	1	1	0		level		true	false	false	false
+39010	BMS2 Error Code High	R/o 		uint16be	1	1	0		level		true	false	false	false
+39011	BMS2 Warning Code High	R/o 		uint16be	1	1	0		level		true	false	false	false
+39012	BMS2 Software Version	R/o 		uint16be	1	1	0		level		true	false	false	false
+39013	BMS2 Battery Hardware Version	R/o 		uint16be	1	1	0		level		true	false	false	false
+39014	BMS2 Maximum Cell Temperature ID	R/o Battery module ID (1 Byte) + Battery sampling point (1 Byte)	Hex	rawhex	1	1	0		level		true	false	false	false
+39015	BMS2 Minimum Cell Temperature ID	R/o Battery module ID (1 Byte) + Battery sampling point (1 Byte)	Hex	rawhex	1	1	0		level		true	false	false	false
+39016	BMS2 Maximum Cell Voltage ID	R/o Battery module ID (1 Byte) + Battery sampling point (1 Byte)	Hex	rawhex	1	1	0		level		true	false	false	false
+39017	BMS2 Minimum Cell Voltage ID	R/o Battery module ID (1 Byte) + Battery sampling point (1 Byte)	Hex	rawhex	1	1	0		level		true	false	false	false
+39018	BMS2 Maximum Cell Temperature	R/o 	°C	uint16be	1	0,1	0		level		true	false	false	false
+39019	BMS2 Minimum Cell Temperature	R/o 	°C	uint16be	1	0,1	0		level		true	false	false	false
+39020	BMS2 Maximum Cell Voltage	R/o 	mV	uint16be	1	1	0		level		true	false	false	false
+39021	BMS2 Minimum Cell Voltage	R/o 	mV	uint16be	1	1	0		level		true	false	false	false
+39054	BMS2 Battery Total Charge Energy	R/o 	kWh	uint32be	2	0,1	0		level		true	false	false	false
+39057	BMS2 Battery Total Discharge Energy	R/o 	kWh	uint32be	2	0,1	0		level		true	false	false	false
+39058	BMS2 Battery SN	R/o 		rawhex	16	1	0		level		true	false	false	false
+39074	BMS2 Rated Capacity	R/o 	kWh	uint16be	1	0,01	0		level		true	false	false	false
+39075	BMS2 Cluster NUM	R/o 		uint16be	1	1	0		level		true	false	false	false
+39076	BMS2 Cluster number	R/o Register + Online		uint16be	1	1	0		level		true	false	false	false
+45127	Modbus Address	R/W if multiple inverters are connected to the same controller, addr of each inverter must be different and not 247!!!		uint16be	1	1	0		level		true	false	false	false
+45132	Modbus Baudrate	R/W		uint32be	2	1	0		level		true	false	false	false
+45134	Modbus Protocol Type	R/W 0: goodwe 1: sunspec		string	1	1	0		level		true	false	false	false
+45200	Real-Time Clock_Year  Month	R/W High Byte Year / Low Byte Month: 0D-63 / 01-0C	Hex	rawhex	1	1	0		level		true	false	false	false
+45201	Real-Time Clock_Day Hour	R/W High Byte Day/Low  Byte Hour: 01-1F / 00-17	Hex	rawhex	1	1	0		level		true	false	false	false
+45202	Real-Time Clock_Minute Second	R/W High Byte  minute/Low Byte Second: 0-3B / 0-3B	Hex	rawhex	1	1	0		level		true	false	false	false
+45216	Restore Factory Setting	"W/o Choose ""Warehouse"" safety code first and then Set ""1"""		uint16be	1	1	0		level		false	false	false	false
+45217	Clear Data	W/o Reset inverter accumulated data like E-total, E-day, error log running data etc.		uint16be	1	1	0		level		false	false	false	false
+45220	Restart	W/o Inverter will recheck and reconnect to utility again. Inverter does not shutdown.		uint16be	1	1	0		level		false	false	false	false
+45222	PV Energy-Total	R/W total PV production energy from the installation date	kWh	uint32be	2	0,1	0		level		true	false	false	false
+45224	PV Energy-Day	R/W total PV production energy of the day	kWh	uint32be	2	0,1	0		level		true	false	false	false
+45226	Energy-Total-Sell	R/W accumulated exporting energy to Grid from the installation date	kWh	uint32be	2	0,1	0		level		true	false	false	false
+45228	Hour-Total	R/W accumulated operation hours from the installation date	h	uint32be	2	1	0		level		true	false	false	false
+45230	Energy-Day-Sell	R/W accumulated exporting energy to Grid of the day	kWh	uint16be	1	0,1	0		level		true	false	false	false
+45231	Energy-Total-Buy	R/W accumulated energy imported from Grid from the installation date	kWh	uint32be	2	0,1	0		level		true	false	false	false
+45233	Energy-Day-Buy	R/W accumulated energy imported from Grid of the day	kWh	uint16be	1	0,1	0		level		true	false	false	false
+45234	Energy-Total-Load	R/W accumulated load consumption energy from the installation date, not include backup load	kWh	uint32be	2	0,1	0		level		true	false	false	false
+45236	Energy-Load-Day	R/W accumulated load consumption energy of the day, not include backup load	kWh	uint16be	1	0,1	0		level		true	false	false	false
+45237	Energy-Battery Charge	R/W accumulated energy charged to Battery from the installation date, not from BMS	kWh	uint32be	2	0,1	0		level		true	false	false	false
+45239	Energy-Charge-Day	R/W accumulated energy charged to Battery of the day, not from BMS	kWh	uint16be	1	0,1	0		level		true	false	false	false
+45240	Energy-Battery Discharge	R/W accumulated energy Battery discharged, from the installation date, not from BMS	kWh	uint32be	2	0,1	0		level		true	false	false	false
+45242	Energy-Discharge-Day	R/W accumulated energy Battery discharged, of the day, not from BMS	kWh	uint16be	1	0,1	0		level		true	false	false	false
+45244	Safety Country	R/W safety code for inverter Refer to Table 8-21		rawhex	1	1	0		level		true	false	false	false
+45245	ISO Limit	R/W Isolation protection threshold for the inverter	kΩ	uint16be	1	1	0		level		true	false	false	false
+45246	LVRT / HVRT Enable	R/W 0:Disable (default) 1:Only Lvrt 2:Only Hvrt 3: Both Lvrt&Hvrt		uint16be	1	1	0		level		true	false	false	false
+45250	PV Start Voltage	R/W start up PV Voltage of the inverter	V	uint16be	1	0,1	0		level		true	false	false	false
+45251	Enable MPPT Shadow Scan	"R/W set ""1"" to activate ""Shadow Scan"" functtion"		uint16be	1	1	0		level		true	false	false	false
+45252	BackUp Enable	"R/W set ""0"" to deactivate ""Backup"" functtion"		uint16be	1	1	0		level		true	false	false	false
+45253	Auto Start Backup	"R/W set ""1"" to  activate ""Auto Start Backup"" functtion"		uint16be	1	1	0		level		true	false	false	false
+45254	Grid Wave Check	R/W Default: 0		uint16be	1	1	0		level		true	false	false	false
+45255	Rapid Cut Off	R/W Rapid shutdown to switch grid-connected systems to off-grid operation		uint16be	1	1	0		level		true	false	false	false
+45256	Backup Start Delay	R/W Default: 30s	s	uint16be	1	1	0	x / 50	level		true	false	false	false
+45257	UPS Standard Voltage Type	R/W 0:208V, 1:20V, 2:240V, 3:230V		uint16be	1	1	0		level		true	false	false	false
+45263	Derate Rate(VDE)	R/W decrease the load,only can set to 70%, only for German	%	uint16be	1	1	0		level		true	false	false	false
+45264	Three Phase Unbalanced Output	"R/W set ""1"" to activate. After activated, All power needs to be turned off and restarted"		uint16be	1	1	0		level		true	false	false	false
+45266	High Impedance Mode	R/W For weak Grid area		uint16be	1	1	0		level		true	false	false	false
+45271	ARC Self Check	W/o only for inverters with AFCI function		uint16be	1	1	0		level		false	false	false	false
+45272	ARC Fault Remove	W/o 		uint16be	1	1	0		level		false	false	false	false
+45275	ISO Check Mode	R/W  0:Normal mode 1:cancel ISO test when offGrid to onGrid		uint16be	1	1	0		level		true	false	false	false
+45276	Off Grid To On Grid Delay	R/W The delay time when Grid is available	s	uint16be	1	1	0		level		true	false	false	false
+45277	Off Grid Under Voltage Protect Coefficient	R/W If set 80%, when offGrid output Voltage less than 230*80%=184V, inverter will have the error	%	uint16be	1	1	0		level		true	false	false	false
+45278	Battery Mode PV Charge Enable	R/W When offGrid and the Battery SOC is low, PV charge the Battery first		uint16be	1	1	0		level		true	false	false	false
+45279	DCV Check Coefficient	R/W Default: 1 (1-20)		uint16be	1	1	0		level		true	false	false	false
+45280	Force MircoGrid Run	R/W Only for MircoGrid Function inverte		uint16be	1	1	0		level		true	false	false	false
+45281	Battery PreCharge Function	R/W For configuring whether the Battery comes with a pre-charge function		uint16be	1	1	0		level		true	false	false	false
+45286	GL Operation Mode Control Duration	R/W 	s	uint16be	1	1	0		level		true	false	false	false
+45288	PE Relay Switch	R/W offGrid 1 close 0 open		uint16be	1	1	0		level		true	false	false	false
+45289	GFCI fault remove	W/o Write 0x050A to clear GFCI Fault	Hex	rawhex	1	1	0		level		true	false	false	false
+45291	PV Connect Mode	R/W PV Connect Mode, Set 0 for each  MPPT, Set 1 for 12,34MPPT, Set 2 for 1MPPT		uint16be	1	1	0		level		true	false	false	false
+45292	GFCI Disable Check	R/W 0:Normal mode 1:cancel GFCI check		uint16be	1	1	0		level		true	false	false	false
+45293	SPD enable	R/W 		uint16be	1	1	0		level		true	false	false	false
+45294	Force MircoGrid Frequence Adjust	R/W Only for MircoGrid Function inverter		uint16be	1	1	0		level		true	false	false	false
+45295	Shadow scan cycle setting	R/W 5min - 300min	min	uint16be	1	1	0		level		true	false	false	false
+45296	PV only UPS Auto Enable	R/W 1:Enable		uint16be	1	1	0		level		true	false	false	false
+45297	Ac Phase Order Self Adaption	R/W 1:Enable		uint16be	1	1	0		level		true	false	false	false
+45298	AFCI Fault Reconnect Time	R/W Default: 300s (10s - 3600s)	s	uint16be	1	1	0		level		true	false	false	false
+45299	AFCI Fault Reconnect Count Limit	R/W Default: 5 times (0 - 1000)		uint16be	1	1	0		level		true	false	false	false
+45300	Port multiplexing mode	R/W ESC Port multiplexing mode  (default: 0) 0: generator mode 1: Large load mode 2: indicates the normal BACKUP mode		uint16be	1	1	0		level		true	false	false	false
+45301	PV charge enable	R/W 		uint16be	1	1	0		level		true	false	false	false
+45302	Battery SPS SW_TurnOff Enable	R/W ES G2		uint16be	1	1	0		level		true	false	false	false
+45303	Battery SPS TurnOff Value	R/W ES G2 (300,480)	V	uint16be	1	0,1	0		level		true	false	false	false
+45304	PX Curve Enable	R/W Three-phase inverter		uint16be	1	1	0		level		true	false	false	false
+45305	PX Curve Voltage Value	R/W Three-phase inverter (230,300)	V	uint16be	1	0,1	0		level		true	false	false	false
+45350	Lead Battery Capacity	R/W 	Ah	uint16be	1	1	0		level		true			
+45351	Battery Strings	R/W 		uint16be	1	1	0		level		true			
+45352	Battery Charge Volaget Max	R/W These register set protection parameters at the inverter side. The actual operation will still follow the battery BMS limit (e.g. register 47902).	V	uint16be	1	0,1	0		level		true			
+45353	Battery Charge Current Max	R/W These register set protection parameters at the inverter side. The actual operation will still follow the battery BMS limit (e.g. register 47903).	A	uint16be	1	0,1	0		level		true			
+45354	Battery Discharge Voltage Min	R/W These register set protection parameters at the inverter side. The actual operation will still follow the battery BMS limit (e.g. register 47904).	V	uint16be	1	0,1	0		level		true			
+45355	Battery Discharge Current Max	R/W These register set protection parameters at the inverter side. The actual operation will still follow the battery BMS limit (e.g. register 47905).	A	uint16be	1	0,1	0		level		true			
+45356	Battery SOC Min	R/W	%	uint16be	1	1	0		level		true			
+45357	Battery off-grid voltage Min	R/W	V	uint16be	1	0,1	0		level		true			
+45358	Battery off-grid SOC Min	R/W	%	uint16be	1	1	0		level		true			
+45389	Separate Battery Mode	R/W		uint16be	1	1	0		level		true			
+47000	App Work Mode Index	R/W 0:selfuse mode  1:off gird mode   2:backup mode 3:economic mode  4:peakshaving   5:Advanced self-use		uint16be	1	1	0		level		true	false	false	false
+47001	Meter Check Value	R/o Phase status 0X0TSR 1: Correct connection 2:  Connection reserved (CT) 4: Incorrect connection 8: Wrong  phase for CT and voltage sampling 0: Not detected	Hex	rawhex	1	1	0		level		true	false	false	false
+47002	Meter Connect Check Flag	R/W 0: Not open test/end test 1: Being  test  2: Wait for test		uint16be	1	1	0		level		true	false	false	false
+47005	Log Data Enable switch	R/W Breakpoint Resume for Data transfering. Activated as deFault, time interval 5 minutes.		uint16be	1	1	0		level		true	false	false	false
+47006	Data Send Interval	R/W Time interval for data send to cloud or EMS, default is 1 minute.	s	uint16be	1	1	0	x * 5	level		true	false	false	false
+47007	DRED command	R/W Only for Australia, Refer to Table 8-22	Hex	rawhex	1	1	0		level		true	false	false	false
+47009	WiFi or Lan Switch	W/o 4:WiFi  5:Lan		uint16be	1	1	0		level		false	false	false	false
+47012	Led Blink Time	R/W	s	uint16be	1	1	0		level		true	false	false	false
+47013	WiFi Led State	R/W 1: off 2: on 3: flash1x 4: flash2x 5: flash4x		uint16be	1	1	0		level		true	false	false	false
+47014	Communication Led State	R/W 1 - 5		uint16be	1	1	0		level		true	false	false	false
+47015	Meter CT1 Reverse Enable	R/W 1:on  0:off ony for single phase Smart meter		uint16be	1	1	0		level		true	false	false	false
+47016	Error Log Read Page	R/W 0 - 255		uint16be	1	1	0		level		true	false	false	false
+47017	Modbus TCP Without Internet	R/W 1: on 0: off If not connect to Internet, please set 1		uint16be	1	1	0		level		true	false	false	false
+47018	Backup Led	R/W 1:off 2:on 3:flash1x 4:flash2x  5:flash4x		uint16be	1	1	0		level		true	false	false	false
+47019	Grid Led	R/W 1 - 5		uint16be	1	1	0		level		true	false	false	false
+47020	SOC Led 1	R/W 1 - 5		uint16be	1	1	0		level		true	false	false	false
+47021	SOC Led 2	R/W 1 - 5		uint16be	1	1	0		level		true	false	false	false
+47022	SOC Led 3	R/W 1 - 5		uint16be	1	1	0		level		true	false	false	false
+47023	SOC Led 4	R/W 1 - 5		uint16be	1	1	0		level		true	false	false	false
+47024	Battery Led	R/W 1 - 5		uint16be	1	1	0		level		true	false	false	false
+47025	System Led	R/W 1 - 5		uint16be	1	1	0		level		true	false	false	false
+47026	Fault Led	R/W 1 - 5		uint16be	1	1	0		level		true	false	false	false
+47027	Energy Led	R/W 1 - 5		uint16be	1	1	0		level		true	false	false	false
+47028	Led External Control	R/W		uint16be	1	1	0		level		true	false	false	false
+47038	Off Grid Set Save	R/W 1 Enable, restart the inverter After that, save the settings		uint16be	1	1	0		level		true	false	false	false
+47040	WIFI Modbus TCP Enable switch	R/W		uint16be	1	1	0		level		true	false	false	false
+47120	Meter Target Power Offset	R/W negative Watt: center on import; positive Watt: center on export  maybe only ET (15-30 kW) Serie	W	int16be	1	1	0		level		true	false	false	false
+47464	Extern Meter Enable Flag	R/W 0(Default): Internal Meter 1: External Meter		uint16be	1	1	0		level		true	false	false	false
+47900	BMS Version	R/W		uint16be	1	1	0		level		true	false	false	false
+47901	Battery Strings	R/W		uint16be	1	1	0		level		true	false	false	false
+47902	Max BMS Battery Charge Voltage	R/W better use register 45352	V	uint16be	1	0,1	0		level		true	false	false	false
+47903	Max BMS Battery Charge Current	R/W better use register 45353	A	uint16be	1	0,1	0		level		true	false	false	false
+47904	Min BMS Battery Discharge Voltage	R/W better use register 45354	V	uint16be	1	0,1	0		level		true	false	false	false
+47905	Max BMS Battery Discharge Current	R/W better use register 45355	A	uint16be	1	0,1	0		level		true	false	false	false
+47906	BMS Battery Voltage	R/W	V	uint16be	1	0,1	0		level		true	false	false	false
+47907	BMS Battery Current	R/W	A	uint16be	1	0,1	0		level		true	false	false	false
+47908	BMS Battery SOC	R/W	%	uint16be	1	1	0		level		true	false	false	false
+47909	BMS Battery SOH	R/W	%	uint16be	1	1	0		level		true	false	false	false
+47910	BMS Battery Temperature	R/W	°C	uint16be	1	0,1	0		level		true	false	false	false
+47911	BMS Warning Code	R/W Refer to 8-8	Hex	rawhex	2	1	0		level		true	false	false	false
+47913	BMS Alarm Code	R/W Refer to 8-7	Hex	rawhex	2	1	0		level		true	false	false	false
+47915	BMS Status	R/W Refer to 8-9		uint16be	1	1	0		level		true	false	false	false
+47916	BMS Communication Loss Disable	R/W		uint16be	1	1	0		level		true	false	false	false
+47917	BMS Battery String Rate Voltage	R/W 20V - 200V	V	uint16be	1	0,1	0		level		true	false	false	false
+47918	BMS Version2	R/W		uint16be	1	1	0		level		true	false	false	false
+47919	Battery Strings2	R/W		uint16be	1	1	0		level		true	false	false	false
+47920	Max BMS Battery2 Charge Voltage	R/W	V	uint16be	1	0,1	0		level		true	false	false	false
+47921	Max BMS Battery2 Charge Current	R/W	A	uint16be	1	0,1	0		level		true	false	false	false
+47922	Min BMS Battery2 Discharge Voltage	R/W	V	uint16be	1	0,1	0		level		true	false	false	false
+47923	Max BMS Battery2 Discharge Current	R/W	A	uint16be	1	0,1	0		level		true	false	false	false
+47924	BMS Battery2 Voltage	R/W	V	uint16be	1	0,1	0		level		true	false	false	false
+47925	BMS Battery2 Current	R/W	A	uint16be	1	0,1	0		level		true	false	false	false
+47926	BMS Battery2 SOC	R/W	%	uint16be	1	1	0		level		true	false	false	false
+47927	BMS Battery2 SOH	R/W	%	uint16be	1	1	0		level		true	false	false	false
+47928	BMS Battery2 Temperature	R/W	°C	uint16be	1	0,1	0		level		true	false	false	false
+47929	BMS2 Warning Code	R/W Refer to 8-8	Hex	rawhex	2	1	0		level		true	false	false	false
+47931	BMS2 Alarm Code	R/W Refer to 8-7	Hex	rawhex	2	1	0		level		true	false	false	false
+47933	BMS2 Status	R/W Refer to 8-9		uint16be	1	1	0		level		true	false	false	false
+47934	BMS2 Communication Loss Disable	R/W		uint16be	1	1	0		level		true	false	false	false
+47935	BMS Battery String2 Rate Voltage	R/W 20V - 200V	V	uint16be	1	0,1	0		level		true	false	false	false
+47936	Max BMS Battery Discharge Current	R/W	A	uint16be	1	0,1	0		level		true	false	false	false
+47937	Max BMS Battery Discharge Current Offline2	R/W	A	uint16be	1	0,1	0		level		true	false	false	false
+50000	Self check Support Flag	R/o 1: Support Self-check		uint16be	1	1	0		level		true	false	false	false
+50001	Self check Function Version	R/o First version is 0		uint16be	1	1	0		level		true	false	false	false
+50002	Self check Function1	R/o Refer to table 8-101	Hex	rawhex	1	1	0		level		true	false	false	false
+50003	Self check Function2	R/o	Hex	rawhex	1	1	0		level		true	false	false	false
+50004	Self check Function3	R/o	Hex	rawhex	1	1	0		level		true	false	false	false
+50005	Self check Function4	R/o	Hex	rawhex	1	1	0		level		true	false	false	false
+50006	Self check Function5	R/o	Hex	rawhex	1	1	0		level		true	false	false	false
+50007	Self check Function6	R/o	Hex	rawhex	1	1	0		level		true	false	false	false
+50008	Self check Function7	R/o	Hex	rawhex	1	1	0		level		true	false	false	false
+50009	Self check Function8	R/o	Hex	rawhex	1	1	0		level		true	false	false	false
+50010	PV1 Connect Status	R/o 0: Disconnected, 1: Connected, 2: Overvoltage, 3: Reversed		uint16be	1	1	0		level		true	false	false	false
+50011	PV1 Voltage	R/o	V	int16be	1	0,1	0		level		true	false	false	false
+50012	PV1 Current	R/o	A	int16be	1	0,1	0		level		true	false	false	false
+50013	PV2 Connect Status	R/o 0: Disconnected, 1: Connected, 2: Overvoltage, 3: Reversed		uint16be	1	1	0		level		true	false	false	false
+50014	PV2 Voltage	R/o	V	int16be	1	0,1	0		level		true	false	false	false
+50015	PV2 Current	R/o	A	int16be	1	0,1	0		level		true	false	false	false
+50016	PV3 Connect Status	R/o 0: Disconnected, 1: Connected, 2: Overvoltage, 3: Reversed		uint16be	1	1	0		level		true	false	false	false
+50017	PV3 Voltage	R/o	V	int16be	1	0,1	0		level		true	false	false	false
+50018	PV3 Current	R/o	A	int16be	1	0,1	0		level		true	false	false	false
+50019	PV4 Connect Status	R/o 0: Disconnected, 1: Connected, 2: Overvoltage, 3: Reversed		uint16be	1	1	0		level		true	false	false	false
+50020	PV4 Voltage	R/o	V	int16be	1	0,1	0		level		true	false	false	false
+50021	PV4 Current	R/o	A	int16be	1	0,1	0		level		true	false	false	false
+50022	PV5 Connect Status	R/o 0: Disconnected, 1: Connected, 2: Overvoltage, 3: Reversed		uint16be	1	1	0		level		true	false	false	false
+50023	PV5 Voltage	R/o	V	int16be	1	0,1	0		level		true	false	false	false
+50024	PV5 Current	R/o	A	int16be	1	0,1	0		level		true	false	false	false
+50025	PV6 Connect Status	R/o 0: Disconnected, 1: Connected, 2: Overvoltage, 3: Reversed		uint16be	1	1	0		level		true	false	false	false
+50026	PV6 Voltage	R/o	V	int16be	1	0,1	0		level		true	false	false	false
+50027	PV6 Current	R/o	A	int16be	1	0,1	0		level		true	false	false	false
+50028	PV7 Connect Status	R/o 0: Disconnected, 1: Connected, 2: Overvoltage, 3: Reversed		uint16be	1	1	0		level		true	false	false	false
+50029	PV7 Voltage	R/o	V	int16be	1	0,1	0		level		true	false	false	false
+50030	PV7 Current	R/o	A	int16be	1	0,1	0		level		true	false	false	false
+50031	PV8 Connect Status	R/o 0: Disconnected, 1: Connected, 2: Overvoltage, 3: Reversed		uint16be	1	1	0		level		true	false	false	false
+50032	PV8 Voltage	R/o	V	int16be	1	0,1	0		level		true	false	false	false
+50033	PV8 Current	R/o	A	int16be	1	0,1	0		level		true	false	false	false
+50034	Battery1 Connect Status	R/o 0: Disconnected, 1: Connected, 2: Overvoltage, 3: Reversed		uint16be	1	1	0		level		true	false	false	false
+50035	Battery1 Communication	R/o 0: Com loss, 1: Com normal		uint16be	1	1	0		level		true	false	false	false
+50036	Battery1 Voltage	R/o	V	int16be	1	0,1	0		level		true	false	false	false
+50037	Battery1 Current	R/o	A	uint16be	1	0,1	0		level		true	false	false	false
+50038	Battery1 Type Index	R/o		uint16be	1	1	0		level		true	false	false	false
+50039	Battery1 Protocol	R/o Refer to 8-33	Hex	rawhex	1	1	0		level		true	false	false	false
+50040	Battery1 Strings	R/o		uint16be	1	1	0		level		true	false	false	false
+50041	Battery1 SOC	R/o	%	uint16be	1	0,1	0		level		true	false	false	false
+50042	Battery1 SOH	R/o	%	uint16be	1	0,1	0		level		true	false	false	false
+50043	Battery2 Connect Status	R/o 0: Disconnected, 1: Connected, 2: Overvoltage, 3: Reversed		uint16be	1	1	0		level		true	false	false	false
+50044	Battery2 Communication	R/o 0: Com loss, 1: Com normal		uint16be	1	1	0		level		true	false	false	false
+50045	Battery2 Voltage	R/o	V	int16be	1	0,1	0		level		true	false	false	false
+50046	Battery2 Current	R/o	A	uint16be	1	0,1	0		level		true	false	false	false
+50047	Battery2 Type Index	R/o		uint16be	1	1	0		level		true	false	false	false
+50048	Battery2 Protocol	R/o Refer to 8-33	Hex	rawhex	1	1	0		level		true	false	false	false
+50049	Battery2 Strings	R/o		uint16be	1	1	0		level		true	false	false	false
+50050	Battery2 SOC	R/o	%	uint16be	1	0,1	0		level		true	false	false	false
+50051	Battery2 SOH	R/o	%	uint16be	1	0,1	0		level		true	false	false	false
+50052	Battery3 Connect Status	R/o 0: Disconnected, 1: Connected, 2: Overvoltage, 3: Reversed		uint16be	1	1	0		level		true	false	false	false
+50053	Battery3 Communication	R/o 0: Com loss, 1: Com normal		uint16be	1	1	0		level		true	false	false	false
+50054	Battery3 Voltage	R/o	V	int16be	1	0,1	0		level		true	false	false	false
+50055	Battery3 Current	R/o	A	uint16be	1	0,1	0		level		true	false	false	false
+50056	Battery3 Type Index	R/o		uint16be	1	1	0		level		true	false	false	false
+50057	Battery3 Protocol	R/o Refer to 8-33	Hex	rawhex	1	1	0		level		true	false	false	false
+50058	Battery3 Strings	R/o		uint16be	1	1	0		level		true	false	false	false
+50059	Battery3 SOC	R/o	%	uint16be	1	0,1	0		level		true	false	false	false
+50060	Battery3 SOH	R/o	%	uint16be	1	0,1	0		level		true	false	false	false
+50061	Battery4 Connect Status	R/o 0: Disconnected, 1: Connected, 2: Overvoltage, 3: Reversed		uint16be	1	1	0		level		true	false	false	false
+50062	Battery4 Communication	R/o 0: Com loss, 1: Com normal		uint16be	1	1	0		level		true	false	false	false
+50063	Battery4 Voltage	R/o	V	int16be	1	0,1	0		level		true	false	false	false
+50064	Battery4 Current	R/o	A	uint16be	1	0,1	0		level		true	false	false	false
+50065	Battery4 Type Index	R/o		uint16be	1	1	0		level		true	false	false	false
+50066	Battery4 Protocol	R/o Refer to 8-33	Hex	rawhex	1	1	0		level		true	false	false	false
+50067	Battery4 Strings	R/o		uint16be	1	1	0		level		true	false	false	false
+50068	Battery4 SOC	R/o	%	uint16be	1	0,1	0		level		true	false	false	false
+50069	Battery4 SOH	R/o	%	uint16be	1	0,1	0		level		true	false	false	false
+50070	Grid Connect Status	R/o 0: Disconnetced 1: Grid normal 2: Phase Sequence Fault 3: Phase Fault 4: Grid Voltage Frequency Fault		uint16be	1	1	0		level		true	false	false	false
+50071	Device AC type	R/o 0: Single-phase 1: Split- phase 2: Three-phase, Four-wire 3: Three-phase, Three-wire		uint16be	1	1	0		level		true	false	false	false
+50072	Master Safety Code	R/o		uint16be	1	1	0		level		true	false	false	false
+50073	Slave Safety Code	R/o		uint16be	1	1	0		level		true	false	false	false
+50074	Grid Voltage L1	R/o	V	uint16be	1	0,1	0		level		true	false	false	false
+50075	Grid Voltage L2	R/o	V	uint16be	1	0,1	0		level		true	false	false	false
+50076	Grid Voltage L3	R/o	V	uint16be	1	0,1	0		level		true	false	false	false
+50077	Grid Frequency L1	R/o	Hz	uint16be	1	0,01	0		level		true	false	false	false
+50078	Grid Frequency L2	R/o	Hz	uint16be	1	0,01	0		level		true	false	false	false
+50079	Grid Frequency L3	R/o	Hz	uint16be	1	0,01	0		level		true	false	false	false
+50080	Grid Reserved1	R/o		uint16be	1	1	0		level		true	false	false	false
+50081	Grid Reserved2	R/o		uint16be	1	1	0		level		true	false	false	false
+50082	Backup Enable	R/o 0: ON 1: OFF		uint16be	1	1	0		level		true	false	false	false
+50083	Wave Check Mode	R/o 0: Full-wave 1: Half-wave 2: OFF		uint16be	1	1	0		level		true	false	false	false
+50084	Backup Voltage L1	R/o	V	uint16be	1	0,1	0		level		true	false	false	false
+50085	Backup Voltage L2	R/o	V	uint16be	1	0,1	0		level		true	false	false	false
+50086	Backup Voltage L3	R/o	V	uint16be	1	0,1	0		level		true	false	false	false
+50087	Backup Frequency L1	R/o	Hz	uint16be	1	0,01	0		level		true	false	false	false
+50088	Backup Frequency L2	R/o	Hz	uint16be	1	0,01	0		level		true	false	false	false
+50089	Backup Frequency L3	R/o	Hz	uint16be	1	0,01	0		level		true	false	false	false
+50090	Meter Type	R/o Refer to table 8-102 	Hex	rawhex	1	1	0		level		true	false	false	false
+50091	Meter Internal / External	R/o 0: Internal 1: External		uint16be	1	1	0		level		true	false	false	false
+50092	Int Meter Communication	R/o 0: Com loss 1: Com normal		uint16be	1	1	0		level		true	false	false	false
+50093	CT Self Check Status	R/o 0: Not available 1: Available		uint16be	1	1	0		level		true	false	false	false
+50094	Ext Meter Communication	R/o 0: Com loss, 1: Com normal		uint16be	1	1	0		level		true	false	false	false
