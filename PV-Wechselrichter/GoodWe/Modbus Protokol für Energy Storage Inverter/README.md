@@ -57,7 +57,7 @@ Alternativ mit einem Wandler direkt am Modbus/RTU des Inverters.
 ## Einstellungen im Adapter für Modbus/TCP
 Als Geräte ID **darf auf keinen Fall** die in der SolarGo App verwendete eingetragen werden! Dies gilt auch für Systeme mit mehreren Goodwe Invertern (jeder hat seine individuelle ID). Dadurch kommt es sonst zu kollisionen mit dem SEMS-Portal, Datenverlust und Verbindungsabbrüchen.
 
-Können einzelne Register nicht gelesen werden kann testweise "Max Leseanforderungslänge (Float)" auf 1 gesetzt werden.
+Können einzelne Register nicht gelesen werden kann testweise "Max Leseanforderungslänge (Float)" auf 1 gesetzt werden. Aber nur **mit einer reduzierten Anzahl an Registern**, da es sonst zu einer überlastung kommt.
 
 ![grafik](https://github.com/user-attachments/assets/8b54363c-555c-4620-a2d2-c542ff79c4dc)
  ![grafik](https://github.com/user-attachments/assets/a59337ea-a4b5-4454-9d30-c204fda12c73)
