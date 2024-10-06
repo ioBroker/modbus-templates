@@ -1,0 +1,16 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+32100	Device Status	R/o		uint16be	1	1	0		level		true	false	false	false
+32101	Running Mark 1	R/o		uint16be	1	1	0		level		true	false	false	false
+32102	Running Mark 2	R/o		uint16be	1	1	0		level		true	false	false	false
+32103	Running Mark 3	R/o		uint16be	1	1	0		level		true	false	false	false
+32104	Running Mark 4	R/o		uint16be	1	1	0		level		true	false	false	false
+32105	Running Mark 5	R/o		uint16be	1	1	0		level		true	false	false	false
+32106	Running Mark 6	R/o		uint16be	1	1	0		level		true	false	false	false
+32107	Running Mark 7	R/o		uint16be	1	1	0		level		true	false	false	false
+32108	Running Mark 8	R/o		uint16be	1	1	0		level		true	false	false	false
+32109	Switch Status 1	R/o		uint16be	1	1	0		level		true	false	false	false
+32110	Switch Status 2	R/o		uint16be	1	1	0		level		true	false	false	false
+32111	Switch Status 3	R/o		uint16be	1	1	0		level		true	false	false	false
+32112	Switch Status 4	R/o		uint16be	1	1	0		level		true	false	false	false
+32113	Switch Status 5	R/o		uint16be	1	1	0		level		true	false	false	false
+32114	Switch Status 6	R/o		uint16be	1	1	0		level		true	false	false	false

@@ -1,0 +1,14 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+45901	FRT Enable switch	R/W		uint16be	1	1	0		level		true	false	false	false
+45902	FRT UF1	R/W 45Hz - 60Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45903	FRT UT1	R/W 0,020s - 7200s	s	uint32be	2	0,001	0		level		true	false	false	false
+45905	FRT UF2	R/W 45Hz - 60Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45906	FRT UT2	R/W 0,020s - 7200s	s	uint32be	2	0,001	0		level		true	false	false	false
+45908	FRT UF3	R/W 45Hz - 60Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45909	FRT UT3	R/W 0,020s - 7200s	s	uint32be	2	0,001	0		level		true	false	false	false
+45911	FRT OF1	R/W 45Hz - 60Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45912	FRT OT1	R/W 0,020s - 7200s	s	uint32be	2	0,001	0		level		true	false	false	false
+45914	FRT OF2	R/W 45Hz - 60Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45915	FRT OT2	R/W 0,020s - 7200s	s	uint32be	2	0,001	0		level		true	false	false	false
+45917	FRT OF3	R/W 45Hz - 60Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45918	FRT OT3	R/W 0,020s - 7200s	s	uint32be	2	0,001	0		level		true	false	false	false

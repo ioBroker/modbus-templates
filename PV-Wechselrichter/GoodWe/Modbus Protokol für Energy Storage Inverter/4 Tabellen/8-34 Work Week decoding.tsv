@@ -1,0 +1,20 @@
+	Setting	Value
+H-byte	Not set	0x55
+xx00	ECO mode	0xFF (Enable)
+		0x00 (Disable)
+	Dry contact load mode	0xFE (Enable)
+		0x01 (Disable)
+	Dry contact smart load mode	0xFD (Enable)
+		0x02 (Disable)
+	Peak shaving function	0xFC (Enable)
+		0x03 (Disable)
+	Back-up mode	0xFB (Enable)
+		0x04 (Disable)
+		
+L-byte	Day select	Bit0 - Sunday
+00xx		Bit1 - Monday
+		Bit2 - Tuesday
+		Bit3 - Wednesday
+		Bit4 - Thursday
+		Bit5 - Friday
+		Bit6 - Saturday

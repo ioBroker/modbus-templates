@@ -1,0 +1,256 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+45400	Grid Voltage High S1	R/W 60V - 300V	V	uint16be	1	0,1	0		level		true	false	false	false
+45401	Grid Voltage High S1 Time	R/W 0,02s - 1000s	s	uint16be	1	1	0	x * 2 * 0.01	level		true	false	false	false
+45402	Grid Voltage Low S1	R/W 60V - 300V	V	uint16be	1	0,1	0		level		true	false	false	false
+45403	Grid Voltage Low S1 Time	R/W 0,02s - 1000s	s	uint16be	1	1	0	x * 2 * 0.01	level		true	false	false	false
+45404	Grid Voltage High S2	R/W 60V - 300V	V	uint16be	1	0,1	0		level		true	false	false	false
+45405	Grid Voltage High S2 Time	R/W 0,02s - 1000s	s	uint16be	1	1	0	x * 2 * 0.01	level		true	false	false	false
+45406	Grid Voltage Low S2	R/W 60V - 300V	V	uint16be	1	0,1	0		level		true	false	false	false
+45407	Grid Voltage Low S2 Time	R/W 0,02s - 1000s	s	uint16be	1	1	0	x * 2 * 0.01	level		true	false	false	false
+45408	Grid Voltage 10min	R/W 60V - 300V	V	uint16be	1	0,1	0		level		true	false	false	false
+45409	Grid Frequency High S1	R/W 30Hz - 80Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45410	Grid Frequency High S1 Time	R/W 0,02s - 1000s	s	uint16be	1	1	0	x * 2 * 0.01	level		true	false	false	false
+45411	Grid Frequency Low S1	R/W 30Hz - 80Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45412	Grid Frequency Low S1 Time	R/W 0,02s - 1000s	s	uint16be	1	1	0	x * 2 * 0.01	level		true	false	false	false
+45413	Grid Frequency High S2	R/W 30Hz - 80Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45414	Grid Frequency High S2 Time	R/W 0,02s - 1000s	s	uint16be	1	1	0	x * 2 * 0.01	level		true	false	false	false
+45415	Grid Frequency Low S2	R/W 30Hz - 80Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45416	Grid Frequency Low S2 Time	R/W 0,02s - 1000s	s	uint16be	1	1	0	x * 2 * 0.01	level		true	false	false	false
+45417	Grid Connection Voltage High	R/W 60V - 300V	V	uint16be	1	0,1	0		level		true	false	false	false
+45418	Grid Connection Voltage Low	R/W 60V - 300V	V	uint16be	1	0,1	0		level		true	false	false	false
+45419	Grid Connection Frequency High	R/W 30Hz - 80Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45420	Grid Connection Frequency Low	R/W 30Hz - 80Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45421	Grid connection waiting time	R/W 1s - 1200s	s	uint16be	1	1	0		level		true	false	false	false
+45422	Grid Voltage High Recover of Fault	R/W 60V - 300V	V	uint16be	1	0,1	0		level		true	false	false	false
+45423	Grid Voltage Low Recover of Fault	R/W 60V - 300V	V	uint16be	1	0,1	0		level		true	false	false	false
+45424	Grid Frequency High Recover of Fault	R/W 30Hz - 80Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45425	Grid Frequency Low Recover of Fault	R/W 30Hz - 80Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45426	Voltage fault condition grid connection waiting time	R/W 1s - 1200s	s	uint16be	1	1	0		level		true	false	false	false
+45427	Frequency fault condition grid connection waiting time	R/W 1s - 1200s	s	uint16be	1	1	0		level		true	false	false	false
+45428	On Grid Power Slope	R/W 1s - 1200s	s	uint16be	1	1	0		level		true	false	false	false
+45429	On Grid Power Slope of Fault Condition	R/W 1s - 1200s	s	uint16be	1	1	0		level		true	false	false	false
+45430	Power reduction slope	R/W 1s - 1200s	s	uint16be	1	1	0		level		true	false	false	false
+45431	On Grid Protect Switch	R/W		uint16be	1	1	0		level		true	false	false	false
+45432	On Grid Slope Switch	R/W		uint16be	1	1	0		level		true	false	false	false
+45433	cos φ (P) curve Switch	R/W		uint16be	1	1	0		level		true	false	false	false
+45434	Point A power	R/W -100% - 100%	%	int16be	1	0,1	0		level		true	false	false	false
+45435	A Point cos φ	R/W -100 - 100		int16be	1	1	0		level		true	false	false	false
+45436	Point B power	R/W -100% - 100%	%	int16be	1	0,1	0		level		true	false	false	false
+45437	B Point cos φ	R/W -100 - 100		int16be	1	1	0		level		true	false	false	false
+45438	Point C power	R/W -100% - 100%	%	int16be	1	0,1	0		level		true	false	false	false
+45439	C Point cos φ	R/W -100 - 100		int16be	1	1	0		level		true	false	false	false
+45440	Lock In Curve Voltage	R/W 60V - 300V	V	uint16be	1	0,1	0		level		true	false	false	false
+45441	Lock Out Curve Voltage	R/W 60V - 300V	V	uint16be	1	0,1	0		level		true	false	false	false
+45442	Lock Out Curve Power	R/W -100% - 100%	%	int16be	1	1	0		level		true	false	false	false
+45443	Over Frequency Decrese Load Curve	R/W bit0: 0=off, 1=on bit1: response mode 0:slope, 1:fstop	Hex	rawhex	1	1	0		level		true	false	false	false
+45444	Discharge mode over-frequency point	R/W 30Hz - 80Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45445	Charge mode under-frequency point	R/W 30Hz - 80Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45446	Discharge mode Frequency end point	R/W 30Hz - 80Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45447	Charge mode underfrequency end point	R/W 30Hz - 80Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45448	Over Frequency Recovery Waiting Time	R/W 0s - 12s	s	uint16be	1	0,01	0		level		true	false	false	false
+45449	Restoration frequency upper limit	R/W 30Hz - 80Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45450	Restoration frequency lower limit	R/W 30Hz - 80Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45451	Over Frequency Recovery Slope	R/W 0 - 1200		uint16be	1	1	0		level		true	false	false	false
+45452	Frequency Power Curve Configuration	R/W 0 - 65535		uint16be	1	1	0		level		true	false	false	false
+45453	Over frequency reduction slope	R/W -100%/Hz - 100%/Hz	%/Hz	int16be	1	0,1	0		level		true	false	false	false
+45454	Under frequency increasing slope	R/W -100%/Hz - 100%/Hz	%/Hz	int16be	1	0,1	0		level		true	false	false	false
+45455	Frequency recovery rate	R/W -100%/Min - 200%/Min	%/Min	int16be	1	0,1	0		level		true	false	false	false
+45456	QU Curve switch	R/W		uint16be	1	1	0		level		true	false	false	false
+45457	Lock In Curve Power	R/W -100% - 100%	%	int16be	1	0,1	0		level		true	false	false	false
+45458	Lock Out Curve Power	R/W -100% - 100%	%	int16be	1	0,1	0		level		true	false	false	false
+45459	V1 Voltage	R/W 60V - 300V	V	uint16be	1	0,1	0		level		true	false	false	false
+45460	V1 Value (var % Rated VA)	R/W -100% - 100%	%	int16be	1	0,1	0		level		true	false	false	false
+45461	V2 Voltage	R/W 60V - 300V	V	uint16be	1	0,1	0		level		true	false	false	false
+45462	V2 Value (var % Rated VA)	R/W -100% - 100%	%	int16be	1	0,1	0		level		true	false	false	false
+45463	V3 Voltage	R/W 60V - 300V	V	uint16be	1	0,1	0		level		true	false	false	false
+45464	V3 Value (var % Rated VA)	R/W -100% - 100%	%	int16be	1	0,1	0		level		true	false	false	false
+45465	V4 Voltage	R/W 60V - 300V	V	uint16be	1	0,1	0		level		true	false	false	false
+45466	V4 Value (var % Rated VA)	R/W -100% - 100%	%	int16be	1	0,1	0		level		true	false	false	false
+45467	K Value	R/W 0 - 65535		uint16be	1	1	0		level		true	false	false	false
+45468	Filter Time Constant	R/W 0 - 4096		uint16be	1	1	0		level		true	false	false	false
+45469	Miscellanea	R/W 0 - 65535		uint16be	1	1	0		level		true	false	false	false
+45470	Rated Voltage (Korea)	R/W 0 - 65535		uint16be	1	1	0		level		true	false	false	false
+45471	Response Time (Korea)	R/W 0 - 65535		uint16be	1	1	0		level		true	false	false	false
+45472	PU Curve switch	R/W		uint16be	1	1	0		level		true	false	false	false
+45473	Power Change Rate	R/W 0s - 1200s	s	uint16be	1	1	0		level		true	false	false	false
+45474	V1 Voltage	R/W 60V - 300V	V	uint16be	1	0,1	0		level		true	false	false	false
+45475	V1 Value ((P/Pn)%)	R/W -100% - 100%	%	int16be	1	0,1	0		level		true	false	false	false
+45476	V2 Voltage	R/W 60V - 300V	V	uint16be	1	0,1	0		level		true	false	false	false
+45477	V2 Value ((P/Pn)%)	R/W -100% - 100%	%	int16be	1	0,1	0		level		true	false	false	false
+45478	V3 Voltage	R/W 60V - 300V	V	uint16be	1	0,1	0		level		true	false	false	false
+45479	V3 Value ((P/Pn)%)	R/W -100% - 100%	%	int16be	1	0,1	0		level		true	false	false	false
+45480	V4 Voltage	R/W 60V - 300V	V	uint16be	1	0,1	0		level		true	false	false	false
+45481	V4 Value ((P/Pn)%)	R/W -100% - 100%	%	int16be	1	0,1	0		level		true	false	false	false
+45482	Fixed Power Factor	R/W 100 - 80= 1 - 0.8Pf , 20 - 0 = -0.8 - 1 Pf		uint16be	1	1	0		level		true	false	false	false
+45483	Fixed Reactive Power	R/W -60% - 60%	%	int16be	1	0,1	0		level		true	false	false	false
+45484	Fixed Active Power	R/W 0% - 100%	%	uint16be	1	0,1	0		level		true	false	false	false
+45485	Grid Limit By Voltage Start Voltage	R/W 0 - 65535 Only for Japan		uint16be	1	0,1	0		level		true	false	false	false
+45486	Grid Limit By Voltage Start Percent	R/W 0 - 65535 Only for Japan		uint16be	1	0,1	0		level		true	false	false	false
+45487	Grid Limit By Voltage Slope	R/W 0 - 65535 Only for Japan		uint16be	1	0,1	0		level		true	false	false	false
+45491	All Power Curve Disable switch	"R/W this must be turned off to do Meter test . ""1"" means Off"		uint16be	1	0,1	0		level		true	false	false	false
+45492	R Phase Fixed Active Power	R/W 0% - 100% 1-phase inverter use only R phase. Unbalance output function must be turned on to set different values for R/S/T phases.	%	uint16be	1	0,1	0		level		true	false	false	false
+45493	S Phase Fixed Active Power	R/W 0% - 100% 1-phase inverter use only R phase. Unbalance output function must be turned on to set different values for R/S/T phases.	%	uint16be	1	0,1	0		level		true	false	false	false
+45494	T Phase Fixed Active Power	R/W 0% - 100% 1-phase inverter use only R phase. Unbalance output function must be turned on to set different values for R/S/T phases.	%	uint16be	1	0,1	0		level		true	false	false	false
+45495	Grid Voltage High S3	R/W 220V - 299,2V Only if needed 3-stage Grid Voltage protection eg. Czech Republic	V	uint16be	1	0,1	0		level		true	false	false	false
+45496	Grid Voltage High S3 Time	R/W 0,02s - 1000s Only if needed 3-stage Grid Voltage protection eg. Czech Republic	s	uint16be	1	1	0	x * 2 * 0.01	level		true	false	false	false
+45497	Grid Voltage Low S3	R/W 33V - 220V Only if needed 3-stage Grid Voltage protection eg. Czech Republic	V	uint16be	1	0,1	0		level		true	false	false	false
+45498	Grid Voltage Low S3 Time	R/W 0,02s - 1000s Only if needed 3-stage Grid Voltage protection eg. Czech Republic	s	uint16be	1	1	0	x * 2 * 0.01	level		true	false	false	false
+45499	Zvrt Configuration	R/W 0:Disable 1:Only Lvrt 2:Only Hvrt 3: Both Lvrt&Hvrt		uint16be	1	1	0		level		true	false	false	false
+45500	Lvrt Start Voltage	R/W 0V - 230V	V	uint16be	1	0,1	0		level		true	false	false	false
+45501	Lvrt End Voltage	R/W 0V - 230V	V	uint16be	1	0,1	0		level		true	false	false	false
+45502	Lvrt Start Trip Time	R/W 0,02s - 1000s	s	uint16be	1	1	0	x * 2 * 0.01	level		true	false	false	false
+45503	Lvrt End Trip Time	R/W 0,02s - 1000s	s	uint16be	1	1	0	x * 2 * 0.01	level		true	false	false	false
+45504	Lvrt Trip Limit Voltage	R/W 0V - 230V	V	uint16be	1	0,1	0		level		true	false	false	false
+45505	Hvrt Start Voltage	R/W 100V - 300V	V	uint16be	1	0,1	0		level		true	false	false	false
+45506	Hvrt End Voltage	R/W 100V - 300V	V	uint16be	1	0,1	0		level		true	false	false	false
+45507	Hvrt Start Trip Time	R/W 0,02s - 1000s	s	uint16be	1	1	0	x * 2 * 0.01	level		true	false	false	false
+45508	Hvrt End Trip Time	R/W 0,02s - 1000s	s	uint16be	1	1	0	x * 2 * 0.01	level		true	false	false	false
+45509	Hvrt Trip Limit Voltage	R/W 230V - 300V	V	uint16be	1	0,1	0		level		true	false	false	false
+45510	PF filter time constant	R/W 0 - 4096		uint16be	1	1	0		level		true	false	false	false
+45511	Power Frequency Filter Time Constant	R/W 0 - 4096		uint16be	1	1	0		level		true	false	false	false
+45512	PU Curve Filter Time Constant	R/W 0 - 4096		uint16be	1	1	0		level		true	false	false	false
+45513	D Point Power	R/W -100% - 100%	%	int16be	1	0,1	0		level		true	false	false	false
+45514	D Point cosφ	R/W -100 - 100		int16be	1	1	0		level		true	false	false	false
+45515	Under Frequency Recovery Waiting Time	R/W 0s - 1200s	s	uint16be	1	1	0		level		true	false	false	false
+45516	Under Frequency Recovery Slope	R/W 0s - 1200s	s	uint16be	1	1	0		level		true	false	false	false
+45517	Under Frequency Power Rate	R/W -100%/Min - 200%/Min	%/Min	uint16be	1	0,1	0		level		true	false	false	false
+45518	On Grid Charging Power Slope	R/W 0s - 1200s	s	uint16be	1	1	0		level		true	false	false	false
+45519	On Grid Charging Power Slope of Fault	R/W 0s - 1200s	s	uint16be	1	1	0		level		true	false	false	false
+45520	Under Frequency Stop Charging Frequency	R/W 30Hz - 80Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45521	Over Frequency Stop Charging Frequency	R/W 30Hz - 80Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45522	Over/Under Frequency Two Step Flag	R/W 0/1		uint16be	1	1	0		level		true	false	false	false
+45523	Frequency Extension Function Bit	R/W Holu special requirements: 0:No effect 1:Enable only over frequency curve 2:Enable only under frequency curve		uint16be	1	1	0		level		true	false	false	false
+45524	Safety PF Setting Method	R/W 1: Setting method is -0.8~+0.8; not 1:Setting method is 1-20, 80-100		uint16be	1	1	0		level		true	false	false	false
+45526	PQ Curve Enable switch	R/W		uint16be	1	1	0		level		true	false	false	false
+45527	Point1 Active Power	R/W -100% - 100%	%	int16be	1	0,1	0		level		true	false	false	false
+45528	Point1 Reactive Power	R/W -100% - 100%	%	int16be	1	0,1	0		level		true	false	false	false
+45529	Point2 Active Power	R/W -100% - 100%	%	int16be	1	0,1	0		level		true	false	false	false
+45530	Point2 Reactive Power	R/W -100% - 100%	%	int16be	1	0,1	0		level		true	false	false	false
+45531	Point3 Active Power	R/W -100% - 100%	%	int16be	1	0,1	0		level		true	false	false	false
+45532	Point3 Reactive Power	R/W -100% - 100%	%	int16be	1	0,1	0		level		true	false	false	false
+45533	Point4 Active Power	R/W -100% - 100%	%	int16be	1	0,1	0		level		true	false	false	false
+45534	Point4 Reactive Power	R/W -100% - 100%	%	int16be	1	0,1	0		level		true	false	false	false
+45535	Point5 Active Power	R/W -100% - 100%	%	int16be	1	0,1	0		level		true	false	false	false
+45536	Point5 Reactive Power	R/W -100% - 100%	%	int16be	1	0,1	0		level		true	false	false	false
+45537	Point6 Active Power	R/W -100% - 100%	%	int16be	1	0,1	0		level		true	false	false	false
+45538	Point6 Reactive Power	R/W -100% - 100%	%	int16be	1	0,1	0		level		true	false	false	false
+45539	Fixed Power Factor Flag	R/W 0/1		uint16be	1	1	0		level		true	false	false	false
+45540	Fixed Power Factor	R/W 0 - 10		uint16be	1	0,01	0		level		true	false	false	false
+45541	Fixed Power Factor Over / Under switch	R/W 1: Lead; 0: Lag		uint16be	1	1	0		level		true	false	false	false
+45542	Fixed Q Power Flag	R/W 0/1		uint16be	1	1	0		level		true	false	false	false
+45543	Fixed P Power Flag	R/W 0/1		uint16be	1	1	0		level		true	false	false	false
+45544	QU Reference Voltage Adjust Flag	R/W 0/1		uint16be	1	1	0		level		true	false	false	false
+45545	QU Reference Voltage Adjust Time	R/W 300s - 5000s	s	uint16be	1	1	0		level		true	false	false	false
+45546	QU Reference Voltage Adjust Value	R/W 200V - 256V	V	uint16be	1	0,1	0		level		true	false	false	false
+45547	Over-frequency dead zone of power frequency curve	R/W 0Hz - 20Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45548	Under-frequency dead zone of power frequency curve	R/W 0Hz - 20Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45549	Power frequency curve over-frequency load reduction Slope	R/W 2,00Hz/‰ - 5,00Hz/‰	Hz/‰	uint16be	1	0,01	0		level		true	false	false	false
+45550	Power frequency curve over-frequency load increasing Slope	R/W 2,00Hz/‰ - 5,00Hz/‰	Hz/‰	uint16be	1	0,01	0		level		true	false	false	false
+45551	Power Frequency Curve Reponse Time	R/W 0ms - 100ms	ms	uint16be	1	1	0		level		true	false	false	false
+45552	FCAS Ready Enable switch	R/W		uint16be	1	1	0		level		true	false	false	false
+45553	Under Frequency Start	R/W 30Hz - 80Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45554	Over Frequency Start	R/W 30Hz - 80Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45555	Under Frequency End	R/W 30Hz - 80Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45556	Over Frequency End	R/W 30Hz - 80Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45557	Frequency Response Resolution Ratio	R/W 0,01Hz - 100Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45558	Min Discharge SOC	R/W 0% - 100%	%	uint16be	1	1	0		level		true	false	false	false
+45559	Max Charge SOC	R/W 0% - 100%	%	uint16be	1	1	0		level		true	false	false	false
+45560	Discharge Duration	R/W 0s - 65535s	s	uint16be	1	1	0		level		true	false	false	false
+45561	Discharge Max Power Delta	R/W 0W - 4600W	W	uint16be	1	1	0		level		true	false	false	false
+45562	Charge Duration	R/W 0s - 65535s	s	uint16be	1	1	0		level		true	false	false	false
+45563	Charge Max Power	R/W 0W - 4600W	W	uint16be	1	1	0		level		true	false	false	false
+45564	Battery Power Charge / Discharge Enable switch	R/W		uint16be	1	1	0		level		true	false	false	false
+45565	Battery Charge Limit	R/W 0W - 4600W	W	uint16be	1	1	0		level		true	false	false	false
+45566	Battery Discharge Limit	R/W 0W - 4600W	W	uint16be	1	1	0		level		true	false	false	false
+45567	Inverter AC Input / Output Limit	R/W 0W - 4600W	W	uint16be	1	1	0		level		true	false	false	false
+45568	Fixed Q Filter Time Constant	R/W 0s - 6000s	s	uint16be	1	0,1	0		level		true	false	false	false
+45569	uwFrtK_Value	R/W 0 - 10		uint16be	1	1	0		level		true	false	false	false
+45570	Fixed Q Over / Under	R/W  1：Lead；0：Lag		uint16be	1	1	0		level		true	false	false	false
+45571	QU curve operation mode	R/W 0: Basic Mode 1: Slope Mode		uint16be	1	1	0		level		true	false	false	false
+45572	QU curve Slope1	R/W -200%Qmax/1%Vn - 200%Qmax/1%Vn	%Qmax/1%Vn	int16be	1	0,1	0		level		true	false	false	false
+45573	QU curve Slope2	R/W -200%Qmax/1%Vn - 200%Qmax/1%Vn	%Qmax/1%Vn	int16be	1	0,1	0		level		true	false	false	false
+45574	QU curve Volt Dead	R/W 0%Vn - 100%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45577	AS477 Parameters	R/W refere Table 8-100, Japanese safety Parameters, corresponding to the old version 0x056D	Hex	rawhex	1	0	0		level		true	false	false	false
+45578	Voltage Rise Suppression V1	R/W 0 - 6553,5 Japanese safety Parameters, corresponding to the old version 0x0591		uint16be	1	0,1	0		level		true	false	false	false
+45579	Voltage Rise Suppression Limit Power	R/W 0 - 65535 Japanese safety Parameters, corresponding to the old version 0x0592		uint16be	1	1	0		level		true	false	false	false
+45580	Anti-Island (Passive) Angle	R/W 0 - 65535 Japanese safety Parameters, corresponding to the old version 0x0593		uint16be	1	1	0		level		true	false	false	false
+45581	Volt Rise Suppression V2	R/W 0 - 6553,5 Japanese safety Parameters, corresponding to the old version 0x0594		uint16be	1	0,1	0		level		true	false	false	false
+45582	Anti-Island Status	R/W 0:regular  1:standby Japanese safety Parameters, corresponding to the old version 0x7150		uint16be	1	1	0		level		true	false	false	false
+45583	On Grid Waiting Manual Recover Set	R/W Bit0:Recovery manually Japanese safety Parameters, corresponding to the old version 		uint16be	1	1	0		level		true	false	false	false
+45584	Frequency Feedback Inject Effciency	R/W 0 - 65535 0.25p.u/0.001Hz Japanese safety Parameters, corresponding to the old version 0x7152		uint16be	1	1	0		level		true	false	false	false
+45585	Action Signal Pin Setting	R/W 0:MODE0  1:MODE1  2:MODE2  Japanese safety Parameters, corresponding to the old version 0x7153		uint16be	1	1	0		level		true	false	false	false
+45586	Output Control Time Set	R/W 0:Disable 5-10:5min-10min Japanese safety Parameters		int16be	1	1	0		level		true	false	false	false
+45587	Output Control Power Set	R/W 0‰ - 1000‰ Japanese safety Parameters	‰	int16be	1	1	0		level		true	false	false	false
+45588	Number of Standby Transfer Set	R/W 0 - 65535 Japanese safety Parameters		uint16be	1	1	0		level		true	false	false	false
+45589	Recovery Cycle Setting 1	R/W 0,02s - 1000s When the Number of Standby Transfer is Less Than 2 Japanese safety Parameters	s	uint16be	1	1	0	x * 2 * 0.01	level		true	false	false	false
+45590	Recovery Cycle Setting 2	R/W 0,02s - 1000s When the Number of Standby Transfer is Less Than 3 Japanese safety Parameters	s	uint16be	1	1	0	x * 2 * 0.01	level		true	false	false	false
+45591	Lost Communication Flag	R/W 0 - 365535 Japanese safety Parameters		uint16be	1	1	0		level		true	false	false	false
+45592	Frequency Feedback Reactive Power Infection Standard Unit	R/W 0 - 2500 Japanese safety Parameters	0.0001p.u	uint16be	1	1	0		level		true	false	false	false
+45593	Upper limit of the generator operating voltage range	R/W 80V - 280V default 280V	V	uint16be	1	1	0		level		true	false	false	false
+45594	Lower limit of the generator operating voltage range	R/W 80V - 280V default 180V	V	uint16be	1	1	0		level		true	false	false	false
+45595	Upper limit of the generator operating frequency range	R/W 40Hz - 60Hz default 55Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45596	 Lower limit of the generator operating frequency range	R/W 40Hz - 60Hz default 45Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45597	Delay before load	R/W 10s - 300s default 10s	s	uint16be	1	1	0		level		true	false	false	false
+45598	Generator safety trip	R/W 1s - 65535s Generator's Safety Parameter	s	uint16be	1	1	0		level		true	false	false	false
+45600	uwPFUCurveFlag	R/W 0/1 default 0		uint16be	1	1	0		level		true	false	false	false
+45601	uwPFUV1Volt	R/W 60V - 300V default 216,2V	V	uint16be	1	0,1	0		level		true	false	false	false
+45602	 wPFUCurvePointAPf	R/W -100 - 100 default 90		int16be	1	1	0		level		true	false	false	false
+45603	uwPFUV2Volt	R/W 60V - 300V default 223,1V	V	uint16be	1	0,1	0		level		true	false	false	false
+45604	wPFUCurvePointBPf	R/W -100 - 100 default 100		int16be	1	1	0		level		true	false	false	false
+45605	uwPFUV3Volt	R/W 60V - 300V default 241,5V	V	uint16be	1	0,1	0		level		true	false	false	false
+45606	wPFUCurvePointCPf	R/W -100 - 100 default 100		int16be	1	1	0		level		true	false	false	false
+45607	uwPFUV4Volt	R/W 60V - 300V default 248,4V	V	uint16be	1	0,1	0		level		true	false	false	false
+45608	wPFUCurvePointDPf	R/W -100 - 100 default 90		int16be	1	1	0		level		true	false	false	false
+45609	wPFUTimeConstant	R/W 0s - 6000s default 0s	s	uint16be	1	0,1	0		level		true	false	false	false
+45610	wPFULockInPower	R/W  -100%Pn - 100%Pn default 200	%Pn	int16be	1	0,1	0		level		true	false	false	false
+45611	wPFULockOutPower	R/W  -100%Pn - 100%Pn default 100	%Pn	int16be	1	0,1	0		level		true	false	false	false
+45612	Output power control setting	R/W 0W - 65533W Japanese safety Parameters	W	uint16be	1	1	0		level		true	false	false	false
+45613	FIT contract type	R/W 0/1 Japanese safety Parameters		uint16be	1	1	0		level		true	false	false	false
+45614	Conversion coefficient	R/W 0 - 100 Japanese safety Parameters		uint16be	1	1	0		level		true	false	false	false
+45615	Output power restraint  status	R/W 65 - 69 Japanese safety Parameters		uint16be	1	1	0		level		true	false	false	false
+45616	System interconnection status	R/W 0 - 3 Japanese safety Parameters		uint16be	1	1	0		level		true	false	false	false
+45620	cos φ P Mode	R/W 0: Basic Mode 1: Slope Mode		uint16be	1	1	0		level		true	false	false	false
+45622	QP Curve Mode	R/W 0: Basic Mode 1: Slope Mode		uint16be	1	1	0		level		true	false	false	false
+45623	QP Curve Slope1	R/W -200Qmax/10%Pn - 200Qmax/10%Pn	Qmax/10%Pn	int16be	1	0,1	0		level		true	false	false	false
+45624	QP Curve Slope2	R/W -200Qmax/10%Pn - 200Qmax/10%Pn	Qmax/10%Pn	int16be	1	0,1	0		level		true	false	false	false
+45625	Int QP Curve Grid Volt	R/W 50%Vn - 150%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45626	Out QP Curve Grid Volt	R/W 50%Vn - 150%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45627	QP Enter the curve condition enabling switch	R/W		uint16be	1	1	0		level		true	false	false	false
+45628	QP Curve Rective Power Refer	R/W 0: Pn Rated Power 1: Ps Apparent Power 2: Po Current Power 3: Pm Max Power 4: Qm Max Reactive Power		uint16be	1	1	0		level		true	false	false	false
+45629	Soft Ware Version by Safty Country	From high bit to low bit: Master DSP, Slave DSP, ARM, Reserved	Hex	rawhex	2	1	0		level		true	false	false	false
+45647	Grid Frequency High S3	R/W 30Hz - 80Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45648	Grid Frequency Low S3	R/W 30Hz - 80Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45649	Grid Frequency High S4	R/W 30Hz - 80Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45650	Grid Frequency Low S4	R/W 30Hz - 80Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45651	VFmsEnFlag	R/o		uint16be	1	1	0		level		true	false	false	false
+45652	Undervoltage trigger first order value(0.1%)	R/W 15%Vn - 100%Vn  0(Default): Not being used If 0, data will not be displayed.	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45653	Undervoltage trigger first-order trip time	R/W 10ms - 7200000ms	ms	uint32be	2	1	0		level		true	false	false	false
+45655	Overvoltage trigger first order value(0.1%)	R/W 80%Vn - 140%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45656	Overvoltage trigger first-order trip time	R/W 10ms - 7200000ms	ms	uint32be	2	1	0		level		true	false	false	false
+45658	Undervoltage trigger second order value(0.1%)	R/W 15%Vn - 100%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45659	Undervoltage trigger second-order trip time	R/W 10ms - 7200000ms	ms	uint32be	2	1	0		level		true	false	false	false
+45661	Overvoltage trigger second order value(0.1%)	R/W 80%Vn - 140%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45662	Overvoltage trigger second-order trip time	R/W 10ms - 7200000ms	ms	uint32be	2	1	0		level		true	false	false	false
+45664	Undervoltage trigger third order value(0.1%)	R/W 15%Vn - 100%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45665	Undervoltage trigger third-order trip time	R/W 10ms - 7200000ms	ms	uint32be	2	1	0		level		true	false	false	false
+45667	Overvoltage trigger third order value(0.1%)	R/W 80%Vn - 140%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45668	Overvoltage trigger third-order trip time	R/W 10ms - 7200000ms	ms	uint32be	2	1	0		level		true	false	false	false
+45670	Undervoltage trigger forth order value(0.1%)	R/W 15%Vn - 100%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45671	Undervoltage trigger forth-order trip time	R/W 10ms - 7200000ms	ms	uint32be	2	1	0		level		true	false	false	false
+45673	Overvoltage trigger forth order value(0.1%)	R/W 80%Vn - 140%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45674	Overvoltage trigger forth-order trip time	R/W 10ms - 7200000ms	ms	uint32be	2	1	0		level		true	false	false	false
+45676	Underfrequence trigger first-order trip time	R/W 10ms - 7200000ms	ms	uint32be	2	1	0		level		true	false	false	false
+45678	Overfrequence trigger first-order trip time	R/W 10ms - 7200000ms	ms	uint32be	2	1	0		level		true	false	false	false
+45680	Underfrequence trigger second-order trip time	R/W 10ms - 7200000ms	ms	uint32be	2	1	0		level		true	false	false	false
+45682	Overfrequence trigger second-order trip time	R/W 10ms - 7200000ms	ms	uint32be	2	1	0		level		true	false	false	false
+45684	Underfrequence trigger third-order trip time	R/W 10ms - 7200000ms	ms	uint32be	2	1	0		level		true	false	false	false
+45686	Overfrequence trigger third-order trip time	R/W 10ms - 7200000ms	ms	uint32be	2	1	0		level		true	false	false	false
+45688	Underfrequence trigger forth-order trip time	R/W 10ms - 7200000ms	ms	uint32be	2	1	0		level		true	false	false	false
+45690	Overfrequence trigger forth-order trip time	R/W 10ms - 7200000ms	ms	uint32be	2	1	0		level		true	false	false	false
+45692	10min overvoltage trigger value (0.1%)	R/W 80%Vn - 140%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45693	10min trigger trip time	R/W 10ms - 7200000ms	ms	uint32be	2	1	0		level		true	false	false	false
+45695	QU Reference Voltage Regulation Time	R/W 0s - 6000s	s	uint16be	1	0,1	0		level		true	false	false	false
+45696	PU Curve OutPut Regulation Time	R/W 0s - 6000s	s	uint16be	1	0,1	0		level		true	false	false	false
+45697	cos φ(P) curve response time	R/W 0s - 6000s	s	uint16be	1	0,1	0		level		true	false	false	false
+45698	PQ Reactive power variation filter	R/W 0s - 6000s	s	uint16be	1	0,1	0		level		true	false	false	false
+45699	Power Frequency Filter Time Constant	R/W 0s - 6000s	s	uint16be	1	0,1	0		level		true	false	false	false

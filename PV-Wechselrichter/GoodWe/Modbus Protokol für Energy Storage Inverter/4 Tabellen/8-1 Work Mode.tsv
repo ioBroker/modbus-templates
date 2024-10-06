@@ -1,0 +1,7 @@
+Mode	Code	Description
+Wait	0	cut off all the connection to Inverter
+On-Grid	1	PV intputs to Inverter, Inverter outputs to Grid
+Off-Grid	2	 PV inputs to Inverter(1st),Battery inputs to Inverter(2nd),Inverter work as AC source
+Fault	3	Fault ,fault mode, something is in fault mode
+Flash	4	Inverter upgrade
+Check	5	Power on self-check of inverter

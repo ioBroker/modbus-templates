@@ -1,0 +1,17 @@
+Bit Number	Description
+Bit15	CT
+Bit14	Meter configuration and com
+Bit13	Backup output
+Bit12	Grid
+Bit11	BAT4
+Bit10	BAT3
+Bit9	BAT2
+Bit8	BAT1
+Bit7	PV8
+Bit6	PV7
+Bit5	PV6
+Bit4	PV5
+Bit3	PV4
+Bit2	PV3
+Bit1	PV2
+Bit0	PV1

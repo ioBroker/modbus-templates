@@ -1,0 +1,95 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+36000	Communication Mode	R/o 01:WIFI 02:GPRS 03:LAN 04 / 05: WIFI / LAN mode of WIFIi+LAN module 06 / 07: WIFI / LAN mode of WIFIi+LAN 2.0 module		uint16be	1	1	0		level		true	false	false	false
+36001	RSSI	R/o RSSI of wifi module		uint16be	1	1	0		level		true	false	false	false
+36002	ManufacturerCode	R/o EMS protocol code		uint16be	1	1	0		level		true	false	false	false
+36003	MeterConnectStatus	R/o 0: Not detected 1: Correct connection 2: Connection reverse (CT) 4: Incorrect connection 8: CT and voltage are out of phase 	Hex	rawhex	1	1	0		level		true	false	false	false
+36004	Meter Communication Status	R/o 1: Success 0: Failure		uint16be	1	1	0		level		true	false	false	false
+36005	R Phase Meter Active Power	R/o If ARM Version > 9, please refer to 36019~36041	W	int16be	1	1	0		level		true	false	false	false
+36006	S Phase Meter Active Power	R/o If ARM Version > 9, please refer to 36019~36041	W	int16be	1	1	0		level		true	false	false	false
+36007	T Phase Meter Active Power	R/o If ARM Version > 9, please refer to 36019~36041	W	int16be	1	1	0		level		true	false	false	false
+36008	Meter Total Active Power	R/o If ARM Version > 9, please refer to 36019~36041	W	int16be	1	1	0		level		true	false	false	false
+36009	Meter Total Reactive Power	R/o If ARM Version > 9, please refer to 36019~36041	VAR	int16be	1	1	0		level		true	false	false	false
+36010	R Phase Meter Power Factor	R/o 		int16be	1	1	0	x < 1 ? - ( x * 0.01 + 1 ) : 1 - x * 0.01	level		true	false	false	false
+36011	S Phase Meter Power Factor	R/o 		int16be	1	1		x < 1 ? - ( x * 0.01 + 1 ) : 1 - x * 0.01	level		true	false	false	false
+36012	T Phase Meter Power Factor	R/o 		int16be	1	1		x < 1 ? - ( x * 0.01 + 1 ) : 1 - x * 0.01	level		true	false	false	false
+36013	Meter Power Factor	R/o 		int16be	1	1		x < 1 ? - ( x * 0.01 + 1 ) : 1 - x * 0.01	level		true	false	false	false
+36014	Meter Frequence	R/o 	Hz	uint16be	1	0,01			level		true	false	false	false
+36015	Energy-Total-Sell	R/o Total Energy To Grid. Read from meter		floatbe	2	1			level		true	false	false	false
+36017	Energy-Total-Buy	R/o Total Energy From Grid. Read from meter		floatbe	2	1			level		true	false	false	false
+36019	R Phase Meter Active Power	R/o the address of ARM Version > 9	W	int32be	2	1			level		true	false	false	false
+36021	S Phase Meter Active Power	R/o the address of ARM Version > 9	W	int32be	2	1			level		true	false	false	false
+36023	T Phase Meter Active Power	R/o the address of ARM Version > 9	W	int32be	2	1			level		true	false	false	false
+36025	Meter Total Active Power	R/o the address of ARM Version > 9	W	int32be	2	1			level		true	false	false	false
+36027	R Phase Meter Reactive Power	R/o the address of ARM Version > 9	VAR	int32be	2	1			level		true	false	false	false
+36029	S Phase Meter Reactive Power	R/o the address of ARM Version > 9	VAR	int32be	2	1			level		true	false	false	false
+36031	T Phase Meter Reactive Power	R/o the address of ARM Version > 9	VAR	int32be	2	1			level		true	false	false	false
+36033	Meter Total Reactive Power	R/o the address of ARM Version > 9	VAR	int32be	2	1			level		true	false	false	false
+36035	R Phase Meter Apparent Power	R/o the address of ARM Version > 9	VA	int32be	2	1			level		true	false	false	false
+36037	S Phase Meter Apparent Power	R/o the address of ARM Version > 9	VA	int32be	2	1			level		true	false	false	false
+36039	T Phase Meter Apparent Power	R/o the address of ARM Version > 9	VA	int32be	2	1			level		true	false	false	false
+36041	Meter Total Apparent Power	R/o the address of ARM Version > 9	VA	int32be	2	1			level		true	false	false	false
+36043	Meter Type	R/o Only for GoodWe Smart Meter (0:Single phase 1:3P3W  2:3P4W 3:HomeKit  4:GM1000D)		uint16be	1	1			level		true	false	false	false
+36044	Meter Software Version	R/o Only for GoodWe Smart Meter		uint16be	1	1			level		true	false	false	false
+36045	Meter CT2 Active Power	R/o Only for AC Couple inverter.Detect PV inverter power	W	int32be	2	1			level		true	false	false	false
+36047	CT2-Energy-Total-Sell	R/o 	kWh	uint32be	2	0,01			level		true	false	false	false
+36049	CT2-Energy-Total-Buy	R/o 	kWh	uint32be	2	0,01			level		true	false	false	false
+36051	MTCT2 Status	R/o 		uint16be	1	1			level		true	false	false	false
+36052	R Phase Meter Voltage	R/o 	V	uint16be	1	0,1			level		true	false	false	false
+36053	S Phase Meter Voltage	R/o 	V	uint16be	1	0,1			level		true	false	false	false
+36054	T Phase Meter Voltage	R/o 	V	uint16be	1	0,1			level		true	false	false	false
+36055	R Phase Meter Current	R/o 	A	uint16be	1	0,1			level		true	false	false	false
+36056	S Phase Meter Current	R/o 	A	uint16be	1	0,1			level		true	false	false	false
+36057	T Phase Meter Current	R/o 	A	uint16be	1	0,1			level		true	false	false	false
+36065	ARC fault channel	R/o 		uint16be	1	1			level		true	false	false	false
+36066	Parallel Communication Status	R/o Bit0(Communication status between SEC1000S and inverters.) Bit1(Communication status between parallel inverters.）-- 0:NG  1:Success		rawhex	1	1			level		true	false	false	false
+36067	ARC Software Version	R/o AFCI Version		uint16be	1	1			level		true	false	false	false
+36092	R Phase Active Energy Total Sell	R/o Dedicated to ARM745 and 753 platforms	kWh	uint64be	4	0,01			level		true	false	false	false
+36096	S Phase Active Energy Total Sell	R/o Dedicated to ARM745 and 753 platforms	kWh	uint64be	4	0,01			level		true	false	false	false
+36100	T Phase Active Energy Total Sell	R/o Dedicated to ARM745 and 753 platforms	kWh	uint64be	4	0,01			level		true	false	false	false
+36104	Active Energy Total Sell Total	R/o Dedicated to ARM745 and 753 platforms	kWh	uint64be	4	0,01			level		true	false	false	false
+36108	R Phase Active Energy Total Buy	R/o Dedicated to ARM745 and 753 platforms	kWh	uint64be	4	0,01			level		true	false	false	false
+36112	S Phase Active Energy Total Buy	R/o Dedicated to ARM745 and 753 platforms	kWh	uint64be	4	0,01			level		true	false	false	false
+36116	T Phase Active Energy Total Buy	R/o Dedicated to ARM745 and 753 platforms	kWh	uint64be	4	0,01			level		true	false	false	false
+36120	Active Energy Total Buy Total	R/o Dedicated to ARM745 and 753 platforms	kWh	uint64be	4	0,01			level		true	false	false	false
+36124	Real-Time Clock_Year  Month	R/o High Byte Year / Low Byte Month: 0D-63 / 01-0C	Hex	rawhex	1	1	0		level		true	false	false	false
+36125	Real-Time Clock_Day Hour	R/o High Byte Day/Low  Byte Hour: 01-1F / 00-17	Hex	rawhex	1	1	0		level		true	false	false	false
+36126	Real-Time Clock_Minute Second	R/o High Byte  minute/Low Byte Second: 0-3B / 0-3B	Hex	rawhex	1	1	0		level		true	false	false	false
+36127	R Phase Meter Active Power	R/o used for the second channel of metering data	W	int32be	2	1	0		level		true	false	false	false
+36129	S Phase Meter Active Power	R/o used for the second channel of metering data	W	int32be	2	1	0		level		true	false	false	false
+36131	T Phase Meter Active Power	R/o used for the second channel of metering data	W	int32be	2	1	0		level		true	false	false	false
+36133	Meter Total Active Power	R/o used for the second channel of metering data	W	int32be	2	1	0		level		true	false	false	false
+36135	R Phase Active Energy Total Sell	R/o Dedicated to ARM745 and 753 platforms, used for the second channel of metering data	kWh	uint64be	4	0,01	0		level		true	false	false	false
+36139	S Phase Active Energy Total Sell	R/o Dedicated to ARM745 and 753 platforms, used for the second channel of metering data	kWh	uint64be	4	0,01	0		level		true	false	false	false
+36143	T Phase Active Energy Total Sell	R/o Dedicated to ARM745 and 753 platforms, used for the second channel of metering data	kWh	uint64be	4	0,01	0		level		true	false	false	false
+36147	Active Energy Total  Sell Total	R/o Dedicated to ARM745 and 753 platforms, used for the second channel of metering data	kWh	uint64be	4	0,01	0		level		true	false	false	false
+36151	R Phase Active Energy Total Buy	R/o Dedicated to ARM745 and 753 platforms, used for the second channel of metering data	kWh	uint64be	4	0,01	0		level		true	false	false	false
+36155	S Phase Active Energy Total Buy	R/o Dedicated to ARM745 and 753 platforms, used for the second channel of metering data	kWh	uint64be	4	0,01	0		level		true	false	false	false
+36159	T Phase Active Energy Total Buy	R/o Dedicated to ARM745 and 753 platforms, used for the second channel of metering data	kWh	uint64be	4	0,01	0		level		true	false	false	false
+36163	Active Energy Total  Buy Total	R/o Dedicated to ARM745 and 753 platforms, used for the second channel of metering data	kWh	uint64be	4	0,01	0		level		true	false	false	false
+36171	SAPN FeedPower State 1	R/o unexecuted: 0 running: 1 execution is completed: 2		uint16be	1	1	0		level		true	false	false	false
+36172	SAPN FeedPower State 2	R/o unexecuted: 0 running: 1 execution is completed: 2		uint16be	1	1	0		level		true	false	false	false
+36173	SAPN FeedPower State 3	R/o unexecuted: 0 running: 1 execution is completed: 2		uint16be	1	1	0		level		true	false	false	false
+36174	SAPN FeedPower State 4	R/o unexecuted: 0 running: 1 execution is completed: 2		uint16be	1	1	0		level		true	false	false	false
+36175	SAPN FeedPower State 5	R/o unexecuted: 0 running: 1 execution is completed: 2		uint16be	1	1	0		level		true	false	false	false
+36176	SAPN FeedPower State 6	R/o unexecuted: 0 running: 1 execution is completed: 2		uint16be	1	1	0		level		true	false	false	false
+36177	SAPN FeedPower State 7	R/o unexecuted: 0 running: 1 execution is completed: 2		uint16be	1	1	0		level		true	false	false	false
+36178	SAPN FeedPower State 8	R/o unexecuted: 0 running: 1 execution is completed: 2		uint16be	1	1	0		level		true	false	false	false
+36179	SAPN FeedPower State 9	R/o unexecuted: 0 running: 1 execution is completed: 2		uint16be	1	1	0		level		true	false	false	false
+36180	SAPN FeedPower State 10	R/o unexecuted: 0 running: 1 execution is completed: 2		uint16be	1	1	0		level		true	false	false	false
+36181	SAPN FeedPower State 11	R/o unexecuted: 0 running: 1 execution is completed: 2		uint16be	1	1	0		level		true	false	false	false
+36182	SAPN FeedPower State 12	R/o unexecuted: 0 running: 1 execution is completed: 2		uint16be	1	1	0		level		true	false	false	false
+36183	SAPN FeedPower State 13	R/o unexecuted: 0 running: 1 execution is completed: 2		uint16be	1	1	0		level		true	false	false	false
+36184	SAPN FeedPower State 14	R/o unexecuted: 0 running: 1 execution is completed: 2		uint16be	1	1	0		level		true	false	false	false
+36185	SAPN FeedPower State 15	R/o unexecuted: 0 running: 1 execution is completed: 2		uint16be	1	1	0		level		true	false	false	false
+36186	SAPN FeedPower State 16	R/o unexecuted: 0 running: 1 execution is completed: 2		uint16be	1	1	0		level		true	false	false	false
+36187	SAPN FeedPower State 17	R/o unexecuted: 0 running: 1 execution is completed: 2		uint16be	1	1	0		level		true	false	false	false
+36188	SAPN FeedPower State 18	R/o unexecuted: 0 running: 1 execution is completed: 2		uint16be	1	1	0		level		true	false	false	false
+36189	SAPN FeedPower State 19	R/o unexecuted: 0 running: 1 execution is completed: 2		uint16be	1	1	0		level		true	false	false	false
+36190	SAPN FeedPower State 20	R/o unexecuted: 0 running: 1 execution is completed: 2		uint16be	1	1	0		level		true	false	false	false
+36191	SAPN FeedPower State 21	R/o unexecuted: 0 running: 1 execution is completed: 2		uint16be	1	1	0		level		true	false	false	false
+36192	SAPN FeedPower State 22	R/o unexecuted: 0 running: 1 execution is completed: 2		uint16be	1	1	0		level		true	false	false	false
+36193	SAPN FeedPower State 23	R/o unexecuted: 0 running: 1 execution is completed: 2		uint16be	1	1	0		level		true	false	false	false
+36194	SAPN FeedPower State 24	R/o unexecuted: 0 running: 1 execution is completed: 2		uint16be	1	1	0		level		true	false	false	false
+36195	SAPN FeedPower Limit	R/o 	W	int32be	2	1	0		level		true	false	false	false
+36197	Generator operating mode	R/o 0: Grid mode 1: Generator mode		uint16be	1	1	0		level		true	false	false	false
+36198	Communication Module software version	R/o 		string	10	1	0		level		true	false	false	false

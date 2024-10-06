@@ -1,0 +1,11 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+45700	 QU curve ref	R/W 0: Pn Rated Power 1: Ps Apparent Power 2: Po Current Power 3: Pm Max Power		uint16be	1	1	0		level		true	false	false	false
+45701	QU Voltage1(0.1%)	R/W 0%Vn - 140%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45702	QU Voltage2(0.1%)	R/W 0%Vn - 140%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45703	QU Voltage3(0.1%)	R/W 0%Vn - 140%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45704	QU Voltage4(0.1%)	R/W 0%Vn - 140%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45705	QU reference voltage value	R/W 80%Vn - 120%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45706	QU Reference Voltage Autoscale Enable switch	R/W		uint16be	1	1	0		level		true	false	false	false
+45707	QU curve response slope	R/W 0%Pn/s - 6500%Pn/s	%Pn/s	uint16be	1	0,1	0		level		true	false	false	false
+45708	QU curve output regulation mode	R/W 0: OFF 1: Slope Response 2: Low-pass filter Response		uint16be	1	1	0		level		true	false	false	false
+45709	QU Enter the curve condition enabling switch	R/W		uint16be	1	1	0		level		true	false	false	false

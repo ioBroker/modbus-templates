@@ -1,0 +1,7 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+35035	Firmware  Version_DSP_DCDC	R/o Only For BTC.DCDC  module firmware  version		uint16be	1	1	0		level		true	false	false	false
+35036	Beta Version_DCDC	R/o Only For BTC.DCDC  module  beta version		uint16be	1	1	0		level		true	false	false	false
+35037	Firmware  Version_DSP_MPPT	R/o Only For BTC.MPPT  module firmware  version		uint16be	1	1	0		level		true	false	false	false
+35038	Beta Version_MPPT	R/o Only For BTC.MPPT  module  beta version		uint16be	1	1	0		level		true	false	false	false
+35039	Firmware  Version_DSP_STS	R/o Only For BTC.STS  module firmware  version		uint16be	1	1	0		level		true	false	false	false
+35040	Beta Version_STS	R/o Only For BTC.STS  module  beta version		uint16be	1	1	0		level		true	false	false	false

@@ -1,0 +1,45 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+32000	Utility Fault 1	R/o		uint16be	1	1	0		level		true	false	false	false
+32001	Utility Fault 2	R/o		uint16be	1	1	0		level		true	false	false	false
+32002	System Fault 1	R/o		uint16be	1	1	0		level		true	false	false	false
+32003	System Fault 2	R/o		uint16be	1	1	0		level		true	false	false	false
+32004	Device Fault 1	R/o		uint16be	1	1	0		level		true	false	false	false
+32005	Device Fault 2	R/o		uint16be	1	1	0		level		true	false	false	false
+32006	DC Fault 1	R/o		uint16be	1	1	0		level		true	false	false	false
+32007	PV Fault 1	R/o		uint16be	1	1	0		level		true	false	false	false
+32008	PV Fault 2	R/o		uint16be	1	1	0		level		true	false	false	false
+32009	BAT Fault 1	R/o		uint16be	1	1	0		level		true	false	false	false
+32010	BAT Fault 2	R/o		uint16be	1	1	0		level		true	false	false	false
+32011	BAT Fault 3	R/o		uint16be	1	1	0		level		true	false	false	false
+32016	Alarm 1	R/o		uint16be	1	1	0		level		true	false	false	false
+32026	wSolar Fault Summary	R/o		uint32be	2	1	0		level		true	false	false	false
+32028	wSolar Alarm Summary	R/o		uint32be	2	1	0		level		true	false	false	false
+32030	Grid Voltage Protection Subcode	R/o		uint16be	1	1	0		level		true	false	false	false
+32031	Grid Frequency Protection Subcode	R/o		uint16be	1	1	0		level		true	false	false	false
+32032	Internal Com Module	R/o		uint16be	1	1	0		level		true	false	false	false
+32033	Sensor Abnormal Subcode	R/o		uint16be	1	1	0		level		true	false	false	false
+32034	Relay Abnormal	R/o		uint16be	1	1	0		level		true	false	false	false
+32035	Internal Fan Fault Subcode	R/o		uint16be	1	1	0		level		true	false	false	false
+32036	External Fan Fault Subcode	R/o		uint16be	1	1	0		level		true	false	false	false
+32037	Temperature Fault Subcode	R/o		uint16be	1	1	0		level		true	false	false	false
+32038	PV IGBT Short Circuit Fault Subcode	R/o		uint16be	1	1	0		level		true	false	false	false
+32039	PV IGBT Open Circuit Fault Subcode	R/o		uint16be	1	1	0		level		true	false	false	false
+32040	PV HCT Fault Subcode	R/o		uint16be	1	1	0		level		true	false	false	false
+32041	PV Over Voltage	R/o		uint16be	1	1	0		level		true	false	false	false
+32042	PV Continuous Hardware Overcurrent Subcode	R/o		uint16be	1	1	0		level		true	false	false	false
+32043	PV Continuous Software Overcurrent Subcode	R/o		uint16be	1	1	0		level		true	false	false	false
+32044	FlyCap Software Overvoltage	R/o		uint16be	1	1	0		level		true	false	false	false
+32045	FlyCap Hardware Overvoltage Subcode	R/o		uint16be	1	1	0		level		true	false	false	false
+32046	FlyCap Undervoltage Subcode	R/o		uint16be	1	1	0		level		true	false	false	false
+32047	FlyCap Precharge Abnormal Subcode	R/o		uint16be	1	1	0		level		true	false	false	false
+32048	FlyCap Precharge Limit Subcode	R/o		uint16be	1	1	0		level		true	false	false	false
+32049	String Overcurrent Fault Subcode Low	R/o		uint16be	1	1	0		level		true	false	false	false
+32050	String Overcurrent Fault Subcode High	R/o		uint16be	1	1	0		level		true	false	false	false
+32051	String Reversed Fault Subcode Low	R/o		uint16be	1	1	0		level		true	false	false	false
+32052	String Reversed Fault Subcode High	R/o		uint16be	1	1	0		level		true	false	false	false
+32053	Fuse Fault Subcode Low	R/o		uint16be	1	1	0		level		true	false	false	false
+32054	Fuse Fault Subcode High	R/o		uint16be	1	1	0		level		true	false	false	false
+32055	PV Hardware Single Overcurrent Subcode	R/o		uint16be	1	1	0		level		true	false	false	false
+32056	PV Software Single Overcurrent Subcode	R/o		uint16be	1	1	0		level		true	false	false	false
+32057	PV Low Energy Subcode	R/o		uint16be	1	1	0		level		true	false	false	false
+32058	Model Recognition Fault Subcode	R/o		uint16be	1	1	0		level		false	false	false	false

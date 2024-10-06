@@ -1,0 +1,6 @@
+Code	Message	Description
+00000000	Battery Precharge Relay Off	
+10000000	Bypass relay is sticking	
+20000000	External Stop Mode Enable	DRED or ESD stop the inverter
+40000000	Battery Offgrid DOD	Battery SOC less than Offgrid DOD
+80000000	Battery SOC Adjust Enable	Only for BYD, adjust the SOC

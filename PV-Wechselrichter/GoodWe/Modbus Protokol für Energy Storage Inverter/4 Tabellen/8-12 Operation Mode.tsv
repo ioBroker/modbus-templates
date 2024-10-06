@@ -1,0 +1,5 @@
+Mode Code	Message	Description
+1	wait mode	Cut off all the connection to Inverter
+2	online mode	PV intputs to Inverter, Inverter outputs to Grid
+4	battery mode	PV inputs to Inverter(First),Battery inputs to Inverter(Second),Inverter work as AC source
+16	fault mode	something is in fault mode

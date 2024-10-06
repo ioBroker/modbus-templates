@@ -1,0 +1,8 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+45720	PU Voltage1(0.1%)	R/W 0%Vn - 140%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45721	PU Voltage2(0.1%)	R/W 0%Vn - 140%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45722	PU Voltage3(0.1%)	R/W 0%Vn - 140%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45723	PU Voltage4(0.1%)	R/W 0%Vn - 140%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45724	PU Curve OutPut Regulation Mode	R/W 0: OFF 1: Slope Response 2: Low-pass filter Response		uint16be	1	1	0		level		true	false	false	false
+45725	Slope of PU Curve power slope	R/W 0%Pn/s - 6500%Pn/s	%Pn/s	uint16be	1	0,1	0		level		true	false	false	false
+45726	PU Curve operation mode	R/W 0 - 65535		uint16be	1	1	0		level		true	false	false	false

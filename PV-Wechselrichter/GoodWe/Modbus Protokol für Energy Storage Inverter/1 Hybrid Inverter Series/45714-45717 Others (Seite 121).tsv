@@ -1,0 +1,5 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+45714	Normal condition upper limit of connection voltage(0.1%)	R/W 15%Vn - 100%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45715	Normal condition lowerer limit of connection	R/W 80%Vn - 140%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45716	Fault condition upper limit of connection	R/W 15%Vn - 100%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45717	Fault condition lowerer limit of connection voltage	R/W 80%Vn - 140%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false

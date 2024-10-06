@@ -1,0 +1,9 @@
+Value	Error message	Description
+1	PV1 Over Current HW	
+2	PV2 Over Current HW	
+3	Battery Over Current HW	
+4	Bus Over Voltage HW	
+5	R InvOverCurr HW	
+6	S InvOverCurr HW	
+7	T InvOverCurr HW	
+8	BatRelayFail	

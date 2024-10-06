@@ -1,0 +1,4 @@
+Mode Code	Message	Description
+0	Loss	inverter disconnects to Grid
+1	OK	inverter connects to Grid
+2	Fault	something is wrong

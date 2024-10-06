@@ -1,0 +1,35 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+47900	BMS Version	R/W		uint16be	1	1	0		level		true	false	false	false
+47901	Battery Strings	R/W		uint16be	1	1	0		level		true	false	false	false
+47902	Max BMS Battery Charge Voltage	R/W better use register 45352	V	uint16be	1	0,1	0		level		true	false	false	false
+47903	Max BMS Battery Charge Current	R/W better use register 45353	A	uint16be	1	0,1	0		level		true	false	false	false
+47904	Min BMS Battery Discharge Voltage	R/W better use register 45354	V	uint16be	1	0,1	0		level		true	false	false	false
+47905	Max BMS Battery Discharge Current	R/W better use register 45355	A	uint16be	1	0,1	0		level		true	false	false	false
+47906	BMS Battery Voltage	R/W	V	uint16be	1	0,1	0		level		true	false	false	false
+47907	BMS Battery Current	R/W	A	uint16be	1	0,1	0		level		true	false	false	false
+47908	BMS Battery SOC	R/W	%	uint16be	1	1	0		level		true	false	false	false
+47909	BMS Battery SOH	R/W	%	uint16be	1	1	0		level		true	false	false	false
+47910	BMS Battery Temperature	R/W	°C	uint16be	1	0,1	0		level		true	false	false	false
+47911	BMS Warning Code	R/W Refer to 8-8	Hex	rawhex	2	1	0		level		true	false	false	false
+47913	BMS Alarm Code	R/W Refer to 8-7	Hex	rawhex	2	1	0		level		true	false	false	false
+47915	BMS Status	R/W Refer to 8-9		uint16be	1	1	0		level		true	false	false	false
+47916	BMS Communication Loss Disable	R/W		uint16be	1	1	0		level		true	false	false	false
+47917	BMS Battery String Rate Voltage	R/W 20V - 200V	V	uint16be	1	0,1	0		level		true	false	false	false
+47918	BMS Version2	R/W		uint16be	1	1	0		level		true	false	false	false
+47919	Battery Strings2	R/W		uint16be	1	1	0		level		true	false	false	false
+47920	Max BMS Battery2 Charge Voltage	R/W	V	uint16be	1	0,1	0		level		true	false	false	false
+47921	Max BMS Battery2 Charge Current	R/W	A	uint16be	1	0,1	0		level		true	false	false	false
+47922	Min BMS Battery2 Discharge Voltage	R/W	V	uint16be	1	0,1	0		level		true	false	false	false
+47923	Max BMS Battery2 Discharge Current	R/W	A	uint16be	1	0,1	0		level		true	false	false	false
+47924	BMS Battery2 Voltage	R/W	V	uint16be	1	0,1	0		level		true	false	false	false
+47925	BMS Battery2 Current	R/W	A	uint16be	1	0,1	0		level		true	false	false	false
+47926	BMS Battery2 SOC	R/W	%	uint16be	1	1	0		level		true	false	false	false
+47927	BMS Battery2 SOH	R/W	%	uint16be	1	1	0		level		true	false	false	false
+47928	BMS Battery2 Temperature	R/W	°C	uint16be	1	0,1	0		level		true	false	false	false
+47929	BMS2 Warning Code	R/W Refer to 8-8	Hex	rawhex	2	1	0		level		true	false	false	false
+47931	BMS2 Alarm Code	R/W Refer to 8-7	Hex	rawhex	2	1	0		level		true	false	false	false
+47933	BMS2 Status	R/W Refer to 8-9		uint16be	1	1	0		level		true	false	false	false
+47934	BMS2 Communication Loss Disable	R/W		uint16be	1	1	0		level		true	false	false	false
+47935	BMS Battery String2 Rate Voltage	R/W 20V - 200V	V	uint16be	1	0,1	0		level		true	false	false	false
+47936	Max BMS Battery Discharge Current	R/W	A	uint16be	1	0,1	0		level		true	false	false	false
+47937	Max BMS Battery Discharge Current Offline2	R/W	A	uint16be	1	0,1	0		level		true	false	false	false

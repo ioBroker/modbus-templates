@@ -1,0 +1,24 @@
+Bit Number	Inverter Fault Code	Inverter Detailed Description
+63		
+...	...	...
+20	SafetyQUCurveUVFlag	QUCurveUnderVoltageFlag
+19	SafetyQUCurveOVFlag	QUCurveOverVoltageFlag
+18	OffGridMpptChgUpsOff	PV charge, Off backup output Flag
+17	ForceStopModeFlag	Force StopMode Flag
+16	ForceOffGridFlag	Force OffGrid Flag
+15	GridVoltSt1DrateFlag	Inverter first level overvoltage derate
+14	AutoTestEnableFlag	CEI021 selftest running
+13	GeDratePowerFlag	70% derating (Germany) has been opened
+12	ActivePowerSettingFla	Active power limit is set
+11	DREDBuyPowerLimitFl	Australian DRED purchase status
+10	DREDSellPowerLimitFl	Australian DRED electricity sale status
+9	InvOverTempFlag	Inverter over-temp. derating curve operation
+8	FixedQSettingFlag	Fixed reactive power is set
+7	FixedPFSettingFlag	Fixed PF is set
+6	SafetyPFCurveFlag	PF curve running
+5	SafetyQUCurveFlag	QU curve running
+4	SafetyPUCurveUVFlag	PU undervoltage curve running
+3	SafetyPUCurveOVFlag	PU overvoltage curve running
+2	SafetyFreqRecoCurve	Frequency curve exiting recovery
+1	SafetyUnderFreqCurve	Under frequency curve running
+0	SafetyOverFreqCurveF	Over-frequency curve running

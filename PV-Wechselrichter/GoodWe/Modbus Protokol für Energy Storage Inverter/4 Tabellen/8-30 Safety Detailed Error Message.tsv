@@ -1,0 +1,26 @@
+Bit Number	Grid Fault Code	Grid Detailed Fault Description
+63		
+...	...	...
+22	GridConnFreqLowErr	Grid connection frequency low
+21	GridConnVoltLowErr	Grid connection voltage low
+20	GridConnVoltHighErr	Grid connection voltage high
+19	GridVoltSampOverErr	Grid voltage exceeds the upper sampling limit
+18	GridHvrtErr	Grid high voltage ride-through fault
+17	GridLvrtErr	Grid low voltage ride-through fault
+16	GridLLVoltErrFlag	Grid line voltage fault flag
+15	GridWaveCheckErr	Grid waveform check fault
+14	GridFreqShiftChkErr	Grid frequency shift fault
+13	GridIslandFreqHighErr	Islanding protection overfrequency fault
+12	GridFreqHighErrSt2	Grid overfrequency second level fault
+11	GridFreqHighErrSt1	Grid overfrequency first level failure
+10	GridIslandFreqLowErr	Islanding protection underfrequency fault
+9	GridFreqLowErrSt2	Grid underfrequency second level fault
+8	GridFreqLowErrSt1	Grid underfrequency first level failure
+7	Grid10minAvgVoltErr	Grid average voltage high fault
+6	GridVoltHighErrSt3	Grid overvoltage third level fault
+5	GridVoltHighErrSt2	Grid overvoltage second level fault
+4	GridVoltHighErrSt1	Grid overvoltage first level failure
+3	GridVoltLowErrSt3	Grid undervoltage third level fault
+2	GridVoltLowErrSt2	Grid undervoltage second level fault
+1	GridVoltLowErrSt1	Grid undervoltage first level failure
+0	GridZeroLossErr	Power outage
