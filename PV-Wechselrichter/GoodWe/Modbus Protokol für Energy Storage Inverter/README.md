@@ -34,10 +34,12 @@ Es wir der zum Inverter jewails passende Dongle benötigt um Modbus/TCP freizusc
 
 Alternativ mit einem Wandler direkt am Modbus/RTU des Inverters.
 
+- Waveshare 4-CH RS485 TO POE ETH (B)
+
 ## Anmerkungen / Probleme / Fehler
 - **alle Register müssen als "Holding Register" behandelt werden!**
 - die Übersetzung wurde von mir teilweise etwas überarbeitet so lange logisch Herleitbar (Google Übersetzer)
-- Tabellen die mit "ohne Funktion" gekennzeichnet sind enthalten Register die nicht lesbar sind
+- Tabellen die mit "ohne Funktion" gekennzeichnet sind enthalten Register die aktuell nicht lesbar sind
 - Register die R/o oder R/W sind aber Probleme bei mir machen sind Poll "false"
 - ETC / BTC Register sind ohne passenden Inverter generell nicht lesbar
 - Register zu Funktionen die aktiviert werden müssen haben meistens einen "0" Wert
@@ -55,6 +57,33 @@ Alternativ mit einem Wandler direkt am Modbus/RTU des Inverters.
 - **möglicherweise nur bei ET (15-30 kW) Serie Invertern verfügbar**
 
 ## Einstellungen im Adapter für Modbus/TCP
+### Waveshare 4-CH RS485 TO POE ETH (B)
+
+#### 1. Waveshare anschließen / konfigurieren
+https://www.waveshare.com/wiki/4-CH_RS485_TO_POE_ETH_(B)
+
+- Default steht er Statisch auf 192.168.1.xxx **pro verfügbaren** RS-485 Port!
+- Default ist ab Werk kein Passwort gesetzt
+- Waveshare passend zum eigenen IP-Netz via Web-Oberfäche konfigurieren.
+- Die Baudrate (default 9600) muss nach änderung in der SolarGo App entsprechend angepasst werden.
+
+![grafik](https://github.com/user-attachments/assets/dfc687f1-b6e3-43f3-b9d2-81744960cb36)
+
+- Von einem Netzwerkkabel auf einer Seite den Stecker abschneiden und wie folgt mit dem Waveshare und EMS/PAR Port des Goodwe A zu A und B zu B verbinden
+
+![grafik](https://github.com/user-attachments/assets/4bbc66cb-e804-45dd-8bd7-71a3a52215ae)
+
+### 2. ioBroker Modbus-Adapter konfigurieren
+- Als Geräte ID **muss** die in der SolarGo App (default 247) verwendete eingetragen werden!
+- Der Datenabfrageintervall sollte je nach Datenmenge und nutzung angepasst werden
+
+![grafik](https://github.com/user-attachments/assets/2ca50f53-baad-4f7a-bedc-7476f8a762ee)
+![grafik](https://github.com/user-attachments/assets/a59337ea-a4b5-4454-9d30-c204fda12c73)
+
+
+### Wi-Fi/LAN Kit / Wi-Fi/LAN Kit-20
+**Der Wi-Fi/LAN Kit-20 (getestet mit Firmware 1.3.53) liefert nur alle ~20 Sekunden Daten!**
+
 Als Geräte ID **darf auf keinen Fall** die in der SolarGo App verwendete eingetragen werden! Dies gilt auch für Systeme mit mehreren Goodwe Invertern (jeder hat seine individuelle ID). Dadurch kommt es sonst zu kollisionen mit dem SEMS-Portal, Datenverlust und Verbindungsabbrüchen.
 
 Können einzelne Register nicht gelesen werden kann testweise "Max Leseanforderungslänge (Float)" auf 1 gesetzt werden. Aber nur **mit einer reduzierten Anzahl an Registern**, da es sonst zu einer Überlastung kommt.
