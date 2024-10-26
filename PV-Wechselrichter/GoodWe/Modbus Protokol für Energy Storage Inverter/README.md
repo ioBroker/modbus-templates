@@ -71,7 +71,8 @@ https://www.waveshare.com/wiki/4-CH_RS485_TO_POE_ETH_(B)
 
 - Von einem Netzwerkkabel auf einer Seite den Stecker abschneiden und wie folgt mit dem Waveshare und EMS/PAR Port des Goodwe A zu A und B zu B verbinden
 
-![grafik](https://github.com/user-attachments/assets/4bbc66cb-e804-45dd-8bd7-71a3a52215ae)
+![grafik](https://github.com/user-attachments/assets/cb0010d6-ce0c-419b-88ba-6af924030c95)
+
 
 ### 2. ioBroker Modbus-Adapter konfigurieren
 - Als Geräte ID **muss** die in der SolarGo App (default 247) verwendete eingetragen werden!
