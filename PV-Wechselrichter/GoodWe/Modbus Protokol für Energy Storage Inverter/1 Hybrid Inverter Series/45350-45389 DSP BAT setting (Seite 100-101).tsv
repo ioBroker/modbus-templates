@@ -1,0 +1,11 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+45350	Lead Battery Capacity	R/W 	Ah	uint16be	1	1	0		level		true			
+45351	Battery Strings	R/W 		uint16be	1	1	0		level		true			
+45352	Battery Charge Volaget Max	R/W These register set protection parameters at the inverter side. The actual operation will still follow the battery BMS limit (e.g. register 47902).	V	uint16be	1	0,1	0		level		true			
+45353	Battery Charge Current Max	R/W These register set protection parameters at the inverter side. The actual operation will still follow the battery BMS limit (e.g. register 47903).	A	uint16be	1	0,1	0		level		true			
+45354	Battery Discharge Voltage Min	R/W These register set protection parameters at the inverter side. The actual operation will still follow the battery BMS limit (e.g. register 47904).	V	uint16be	1	0,1	0		level		true			
+45355	Battery Discharge Current Max	R/W These register set protection parameters at the inverter side. The actual operation will still follow the battery BMS limit (e.g. register 47905).	A	uint16be	1	0,1	0		level		true			
+45356	Battery SOC Min	R/W	%	uint16be	1	1	0		level		true			
+45357	Battery off-grid voltage Min	R/W	V	uint16be	1	0,1	0		level		true			
+45358	Battery off-grid SOC Min	R/W	%	uint16be	1	1	0		level		true			
+45389	Separate Battery Mode	R/W		uint16be	1	1	0		level		true			

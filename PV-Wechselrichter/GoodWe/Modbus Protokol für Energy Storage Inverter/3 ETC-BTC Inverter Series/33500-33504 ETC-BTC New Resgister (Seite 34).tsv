@@ -1,0 +1,6 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+33500	Hitsink Temperature-DCDC	R/o	°C	int16be	1	0,1	0		level		true	false	false	false
+33501	Hitsink Temperature-MPPT	R/o	°C	int16be	1	0,1	0		level		true	false	false	false
+33502	Hitsink Temperature-STS	R/o	°C	int16be	1	0,1	0		level		true	false	false	false
+33503	Hitsink Temperature- DCDC2	R/o	°C	int16be	1	0,1	0		level		true	false	false	false
+33504	Hitsink Temperature-MPPT2	R/o	°C	int16be	1	0,1	0		level		true	false	false	false

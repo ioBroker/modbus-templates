@@ -1,0 +1,16 @@
+Bit Number	Description
+Bit14	Effective power
+Bit13	Reverse power prevention
+Bit12	OVR detection function
+Bit11	EMS Loss Check
+Bit10	Enable manual recovery
+Bit9	Reactive power oscillation suppression
+Bit8	Voltage imbalance detection
+Bit7	FRT
+Bit6	Passive islanding
+Bit5	Active anti-islanding
+Bit4	Step reactive power injection
+Bit3	Frequency feedback reactive power injection
+Bit2	Reserved
+Bit1	Reserved
+Bit0	Invalid power

@@ -1,0 +1,59 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+33300	Module Online Status	R/o		uint32be	2	1	0		level		true	false	false	false
+33302	DCAC Fault Code	R/o		uint32be	2	1	0		level		true	false	false	false
+33304	DCAC Warning Code	R/o		uint32be	2	1	0		level		true	false	false	false
+33306	AC Check Ready State	R/o		uint16be	1	1	0		level		true	false	false	false
+33307	AC Check Result	R/o		uint16be	1	1	0		level		true	false	false	false
+33308	AC Fault State Clear	R/o		uint16be	1	1	0		level		true	false	false	false
+33309	AC Warning State Clear	R/o		uint16be	1	1	0		level		true	false	false	false
+33310	AC Grid State	R/o		uint16be	1	1	0		level		true	false	false	false
+33311	AC Synchronous IO State	R/o		uint16be	1	1	0		level		true	false	false	false
+33312	AC Check Count State	R/o		uint16be	1	1	0		level		true	false	false	false
+33313	DCAC2 Fault	R/o		uint32be	2	1	0		level		true	false	false	false
+33315	DCAC2 Warning Code	R/o		uint32be	2	1	0		level		true	false	false	false
+33317	AC2 Check Ready State	R/o		uint16be	1	1	0		level		true	false	false	false
+33318	AC2 Check	R/o		uint16be	1	1	0		level		true	false	false	false
+33319	AC2 Fault State Clear	R/o		uint16be	1	1	0		level		true	false	false	false
+33320	AC2 Warning State Clear	R/o		uint16be	1	1	0		level		true	false	false	false
+33321	AC2 Grid State	R/o		uint16be	1	1	0		level		true	false	false	false
+33322	AC2 Synchronous IO State	R/o		uint16be	1	1	0		level		true	false	false	false
+33323	AC2 Check Count State	R/o		uint16be	1	1	0		level		true	false	false	false
+33324	AC1 Input State	R/o		uint16be	1	1	0		level		true	false	false	false
+33325	AC2 Input State	R/o		uint16be	1	1	0		level		true	false	false	false
+33335	DCDC Fault Code	R/o		uint32be	2	1	0		level		true	false	false	false
+33337	DCDC Warning Code	R/o		uint32be	2	1	0		level		true	false	false	false
+33339	DC Check Ready State	R/o		uint16be	1	1	0		level		true	false	false	false
+33340	DC Check Result	R/o		uint16be	1	1	0		level		true	false	false	false
+33341	DC Fault State Clear	R/o		uint16be	1	1	0		level		true	false	false	false
+33342	DC Warning State Clear	R/o		uint16be	1	1	0		level		true	false	false	false
+33343	DC Input State	R/o		uint16be	1	1	0		level		true	false	false	false
+33344	DC Bus State	R/o		uint16be	1	1	0		level		true	false	false	false
+33345	DCDC2 Fault	R/o		uint32be	2	1	0		level		true	false	false	false
+33347	DCDC2 Warning Code	R/o		uint32be	2	1	0		level		true	false	false	false
+33349	DC2 Check Ready State	R/o		uint16be	1	1	0		level		true	false	false	false
+33350	DC2 Check	R/o		uint16be	1	1	0		level		true	false	false	false
+33351	DC2 Fault State Clear	R/o		uint16be	1	1	0		level		true	false	false	false
+33352	DC2 Warning State Clear	R/o		uint16be	1	1	0		level		true	false	false	false
+33353	DC2 Input State	R/o		uint16be	1	1	0		level		true	false	false	false
+33354	DC2 Bus State	R/o		uint16be	1	1	0		level		true	false	false	false
+33365	MPPT Fault Code	R/o		uint32be	2	1	0		level		true	false	false	false
+33367	MPPT Warning Code	R/o		uint32be	2	1	0		level		true	false	false	false
+33369	MPPT Check Ready State	R/o		uint16be	1	1	0		level		true	false	false	false
+33370	MPPT Check Result	R/o		uint16be	1	1	0		level		true	false	false	false
+33371	MPPT Fault State Clear	R/o		uint16be	1	1	0		level		true	false	false	false
+33372	MPPT Warning State Clear	R/o		uint16be	1	1	0		level		true	false	false	false
+33373	MPPT Input State	R/o		uint16be	1	1	0		level		true	false	false	false
+33374	MPPT2 Fault	R/o		uint32be	2	1	0		level		true	false	false	false
+33376	MPPT2 Warning Code	R/o		uint32be	2	1	0		level		true	false	false	false
+33378	MPPT2 Check Ready State	R/o		uint16be	1	1	0		level		true	false	false	false
+33379	MPPT2 Check Result	R/o		uint16be	1	1	0		level		true	false	false	false
+33380	MPPT2 Fault State Clear	R/o		uint16be	1	1	0		level		true	false	false	false
+33381	MPPT2 Warning State Clear	R/o		uint16be	1	1	0		level		true	false	false	false
+33382	MPPT2 Input	R/o		uint16be	1	1	0		level		true	false	false	false
+33392	STS Fault Code	R/o		uint32be	2	1	0		level		true	false	false	false
+33394	STS Warning	R/o		uint32be	2	1	0		level		true	false	false	false
+33400	EMS Check Ready State	R/o		uint16be	1	1	0		level		true	false	false	false
+33401	EMS Fault State Clear	R/o		uint16be	1	1	0		level		true	false	false	false
+33402	EMS Warning Message	R/o		uint32be	2	1	0		level		true	false	false	false
+33404	uw Test1	R/o		uint16be	1	1	0		level		true	false	false	false
+33405	uw Test2	R/o		uint16be	1	1	0		level		true	false	false	false

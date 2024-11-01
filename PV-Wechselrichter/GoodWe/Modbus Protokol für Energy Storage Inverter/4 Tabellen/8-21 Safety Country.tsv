@@ -1,0 +1,86 @@
+Code	Description	Grid Connection Standards
+0000	Italy	ENEL (Un: 230Vac)
+0001	Czech	EN50438(CZ) (Un: 230Vac)
+0002	Germany	VDE-AR-N 4105 (Un: 230Vac)
+0003	Spain	RD1699 (Un: 230Vac)
+0004	Greece Mainland	EN50438(GR) (Un: 230Vac)
+0005	Danmark	EN50438(DK)
+0006	Belgium	C10/C11 (Un: 230Vac)
+0007	Romania	(Un: 230Vac)
+0008	G98	G83/2 G59/3 (Un: 230Vac)
+0009	Australia	AS/NZS 4777.2
+000A	France	VDE0126
+000B	China	NB-T
+000C	60Hz Grid Default	CSA
+000D	Poland	EN50438
+000E	South Africa	(Un: 230Vac)
+000F	Australia L	AS/NZS 4777.2
+0010	Brazil	(Un: 220Vac)
+0011	Thailand MEA	MEA
+0012	Thailand PEA	PEA
+0013	Mauritius	(Un: 230Vac)
+0014	Holland	EN50438
+0015	G99	Northern Ireland
+0016	China Higher	NB-T
+0017	French 50Hz	(Un: 230Vac)
+0018	French 60Hz	(Un: 230Vac)
+0019	Australia Ergon	AS/NZS 4777.2
+001A	Australia Energex	AS/NZS 4777.2
+001B	Holland	16/20A EN50438
+001C	Korea	(Un: 220Vac)
+001D	China Station	NB-T
+001E	Austria	(Un: 230Vac)
+001F	India	IEC61727
+0020	50Hz Grid Default	Default
+0021	Warehouse	Warehouse
+0022	Philippines	Philippines
+0023	Ireland	EN50438 Ireland
+0024	Taiwan	(Un: 230Vac)
+0025	Bulgaria	EN50438
+0026	Barbados	(Un: 230Vac)
+0027	China Highest	NB-T
+0028	G99 reserve	G59/3 (Un: 230Vac)
+0029	Sweden	EN50438 (Un: 230Vac)
+002A	Chile	BISI 4.0 (Un: 220Vac)
+002B	Brazil LV	(Un: 220Vac)
+002C	New Zealand	AS/NZS 4777.2
+002D	IEEE1547	208Vac IEEE1547 (Un: 120/208Vac)
+002E	IEEE1547	220Vac IEEE1547 (Un: 127/220Vac)
+002F	IEEE1547	240Vac IEEE1547 (Un: 138.6/240Vac)
+0030	60Hz LV Default	60Hz LV Default
+0031	50Hz LV Default	50Hz LV Default
+0032	Australia Western	AS/NZS 4777.2
+0033	Australia MicroGrid	AS/NZS 4777.2
+0034	JP_50Hz	JP_50Hz
+0035	JP_60Hz	JP_60Hz
+0036	India Higher	IEC61727 (Un: 230Vac)
+0037	DEWA LV	DEWA (Un: 230Vac)
+0038	DEWA MV	DEWA (Un: 230Vac)
+0039	Slovakia	EN50438(SV) (Un: 230Vac)
+003A	GreenGrid	AS/NZS 4777.2
+003B	Hungary	(Un: 230Vac)
+003C	Sri Lanka	(Un: 230Vac)
+003D	Spain Islands	RD1699 (Un: 230Vac)
+003E	Ergon 30K	(Un: 230Vac)
+003F	Energe 30K	(Un: 230Vac)
+0040	IEEE1547_230VAC	IEEE1547 (Un: 230/400Vac)
+0041	IEC61727_60Hz	IEC61727 (Un: 230Vac)
+0042	Switzerland	VDE-AR-N 4105 (Un: 230Vac)
+0043	CEI_016	CEI-016 (Un: 230Vac)
+0044	Australia Horizon	AS/NZS 4777.2
+0045	Cyprus	(Un: 230Vac)
+0046	Australia SAPN	AS/NZS 4777.2
+0047	Australia Ausgrid	AS/NZS 4777.2
+0048	Australia Essential	AS/NZS 4777.2
+0049	Australia AS/NZS	4777.2
+004A	China Hongkong	
+004B	Poland MV	
+004C	Holland MV	
+004D	Sweden MV	
+004E	VDE4110	
+004F	Germany	
+0050	Spain MV	
+0051	Australia Endeavour	
+0052	Argentina	
+0053	Australian B	
+0054	Australian C	

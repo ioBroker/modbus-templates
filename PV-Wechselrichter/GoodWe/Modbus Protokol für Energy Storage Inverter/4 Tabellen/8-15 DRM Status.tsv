@@ -1,0 +1,11 @@
+Bit Number	DRMx	Description
+0	DRM0	Operate the disconnection device
+1	DRM1	Do not consume power
+2	DRM2	Do not consume at more than 50% of rated power
+3	DRM3	Do not consume at more than 75% of rated power and source reactive power if capable
+4	DRM4	Increase power consumption(Subjects to constraints from other active DRMs)
+5	DRM5	Do not generate power
+6	DRM6	Do not generate at more than 50% of rated power
+7	DRM7	Do not generate at more than 50% of rated power and sink reactive power if capable
+8	DRM8	Increase power generation(Subjects to constraints from other active DRMs)
+65535	No command	Disable

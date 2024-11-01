@@ -1,0 +1,4 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+35600	Heatsink Temperarure-DCDC	R/o Only For BTC	°C	int16be	1	0,1	0		level		true			
+35601	Heatsink Temperarure-MPPT	R/o Only For BTC	°C	int16be	1	0,1	0		level		true			
+35602	Heatsink Temperarure-STS	R/o Only For BTC	°C	int16be	1	0,1	0		level		true			

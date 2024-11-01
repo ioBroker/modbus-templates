@@ -1,0 +1,76 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+45821	Fault ride-through processing volume mode selection	0: Fundamental positive sequence  component Ud 1: Phase voltage reconstruction 2: Line voltage reconstruction		uint16be	1	1	0		level		true	false	false	false
+45822	Fault ride through variation machining mode enable switch	R/W		uint16be	1	1	0		level		true	false	false	false
+45823	Variation Threshold	R/W 0%Vn - 100%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45824	Reactive Current Injection Mode	R/W 0: Absolute injection 1: relative injection		uint16be	1	1	0		level		true	false	false	false
+45825	Current distribution Mode	R/W 0: Reactive power priority 1: Active power priority 2: Constant current mode		uint16be	1	1	0		level		true	false	false	false
+45826	Ride through end active power recover Model	R/W 0：OFF 1：Slope Response 2：Low Filter Mode Response		uint16be	1	1	0		level		true	false	false	false
+45827	Ride through end active power recover	R/W 0%In/s - 6500%In/s	%In/s	uint16be	1	0,1	0		level		true	false	false	false
+45828	Ride through end reactive power recover Model	R/W 0: OFF 1: Slope Response 2: Low-pass filter Response		uint16be	1	1	0		level		true	false	false	false
+45829	Ride through end reactive power recover speed	R/W 0%In/s - 6500%In/s	%In/s	uint16be	1	0,1	0		level		true	false	false	false
+45830	VRT grid voltage protection shield	R/W 0/1		uint16be	1	1	0		level		true	false	false	false
+45831	continuous ZVRT enable switch	R/W		uint16be	1	1	0		level		true	false	false	false
+45832	enter VRT silence time	R/W 0s - 655s	s	uint16be	1	0,01	0		level		true	false	false	false
+45833	exit VRT silence time	R/W 0s - 655s	s	uint16be	1	0,01	0		level		true	false	false	false
+45834	Active power recovery slope at the end of high and low wear (firstorder low-pass filtering)	R/W 0s - 36000s	s	uint32be	2	0,001	0		level		true	false	false	false
+45836	Reactive power recovery slope at the end of high and low wear (firstorder low-pass filtering)	R/W 0s - 36000s	s	uint32be	2	0,001	0		level		true	false	false	false
+45838	LVRT enable switch	R/W		uint16be	1	1	0		level		true	false	false	false
+45839	The judgment threshold of entering	R/W 0%Vn - 100%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45840	The judgment threshold of quiting	R/W 0%Vn - 100%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45841	LVRT computational benchmark	R/W 0%Vn - 100%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45842	LVRT positive active power current adjust enable switch	R/W		uint16be	1	1	0		level		true	false	false	false
+45843	LVRT positive reactive power current adjust enable switch	R/W		uint16be	1	1	0		level		true	false	false	false
+45844	LVRT negative active power current adjust enable switch	R/W		uint16be	1	1	0		level		true	false	false	false
+45845	LVRT active power current limit percentage	R/W 0%/In - 110%/In	%/In	uint16be	1	0,1	0		level		true	false	false	false
+45846	LVRT positive sequence reactive K value	R/W 0,00 - 10,00		uint16be	1	0,01	0		level		true	false	false	false
+45847	LVRT Positive sequence reactive power static error	R/W -100%/In - 100%/In	%/In	int16be	1	0,1	0		level		true	false	false	false
+45848	LVRT positive reactive power current limit percent	R/W 0%/In - 110%/In	%/In	uint16be	1	0,1	0		level		true	false	false	false
+45849	LVRT negative sequence reactive K value	R/W 0,00 - 10,00		uint16be	1	0,01	0		level		true	false	false	false
+45850	LVRT negative sequence reactive power static error	R/W -100%/In - 100%/In	%/In	int16be	1	0,1	0		level		true	false	false	false
+45851	LVRT negative reactive power current limit percent	R/W 0%/In - 110%/In	%/In	uint16be	1	0,1	0		level		true	false	false	false
+45852	LVRT null-current mode enable switch	R/W		uint16be	1	1	0		level		true	false	false	false
+45853	LVRT null-current mode enter voltage	R/W 0%Vn - 100%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45854	LVRT depth 1	R/W 0%Vn - 100%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45855	maintenance time 1	R/W 0s - 650s	s	uint16be	1	0,01	0		level		true	false	false	false
+45856	LVRT depth 2	R/W 0%Vn - 100%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45857	maintenance time 2	R/W 0s - 650s	s	uint16be	1	0,01	0		level		true	false	false	false
+45858	LVRT depth 3	R/W 0%Vn - 100%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45859	maintenance time 3	R/W 0s - 650s	s	uint16be	1	0,01	0		level		true	false	false	false
+45860	LVRT depth 4	R/W 0%Vn - 100%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45861	maintenance time 4	R/W 0s - 650s	s	uint16be	1	0,01	0		level		true	false	false	false
+45862	LVRT depth 5	R/W 0%Vn - 100%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45863	maintenance time 5	R/W 0s - 650s	s	uint16be	1	0,01	0		level		true	false	false	false
+45864	LVRT depth 6	R/W 0%Vn - 100%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45865	maintenance time 6	R/W 0s - 650s	s	uint16be	1	0,01	0		level		true	false	false	false
+45866	LVRT depth 7	R/W 0%Vn - 100%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45867	maintenance time 7	R/W 0s - 650s	s	uint16be	1	0,01	0		level		true	false	false	false
+45871	HVRT enable switch	R/W		uint16be	1	1	0		level		true	false	false	false
+45872	The judgment threshold of entering	R/W 0%Vn - 140%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45873	The judgment threshold of quiting	R/W 0%Vn - 140%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45874	HVRT computational benchmark	R/W 0%Vn - 120%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45875	HVRT positive active power adjust enable switch	R/W		uint16be	1	1	0		level		true	false	false	false
+45876	HVRT positive reactive power adjust enable switch	R/W		uint16be	1	1	0		level		true	false	false	false
+45877	HVRT negative reactive power adjust switch	R/W		uint16be	1	1	0		level		true	false	false	false
+45878	HVRT active power current limit percent	R/W 0%In - 110%In	%In	uint16be	1	0,1	0		level		true	false	false	false
+45879	HVRT positive sequence reactive K value	R/W 0,00 - 10,00		uint16be	1	0,01	0		level		true	false	false	false
+45880	HVRT Positive sequence reactive power static error	R/W -100%/In - 100%/In	%/In	int16be	1	0,1	0		level		true	false	false	false
+45881	HVRT positive reactive power current limit percentage	R/W 0%In - 110%In	%In	uint16be	1	0,1	0		level		true	false	false	false
+45882	HVRT negative sequence reactive K value	R/W 0,00 - 10,00		uint16be	1	0,01	0		level		true	false	false	false
+45883	HVRT negative sequence reactive power static error	R/W -100%/In - 100%/In	%/In	int16be	1	0,1	0		level		true	false	false	false
+45884	HVRT negative reactive power current limit percent	R/W 0%In - 110%In	%In	uint16be	1	0,1	0		level		true	false	false	false
+45885	HVRT null-current mode enable switch	R/W		uint16be	1	1	0		level		true	false	false	false
+45886	HVRT null-current mode enter voltage	R/W 100%Vn - 140%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45887	HVRT depth 1	R/W 0%Vn - 100%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45888	maintenance time 1	R/W 0s - 650s	s	uint16be	1	0,01	0		level		true	false	false	false
+45889	HVRT depth 2	R/W 0%Vn - 100%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45890	maintenance time 2	R/W 0s - 650s	s	uint16be	1	0,01	0		level		true	false	false	false
+45891	HVRT depth 3	R/W 0%Vn - 100%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45892	maintenance time 3	R/W 0s - 650s	s	uint16be	1	0,01	0		level		true	false	false	false
+45893	HVRT depth 4	R/W 0%Vn - 100%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45894	maintenance time 4	R/W 0s - 650s	s	uint16be	1	0,01	0		level		true	false	false	false
+45895	HVRT depth 5	R/W 0%Vn - 100%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45896	maintenance time 5	R/W 0s - 650s	s	uint16be	1	0,01	0		level		true	false	false	false
+45897	HVRT depth 6	R/W 0%Vn - 100%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45898	maintenance time 6	R/W 0s - 650s	s	uint16be	1	0,01	0		level		true	false	false	false
+45899	HVRT depth 7	R/W 0%Vn - 100%Vn	%Vn	uint16be	1	0,1	0		level		true	false	false	false
+45900	maintenance time 7	R/W 0s - 650s	s	uint16be	1	0,01	0		level		true	false	false	false

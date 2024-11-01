@@ -1,0 +1,14 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+33200	Firmware Version_DSP_DC DC1	R/o		uint16be	1	1	0		level		true	false	false	false
+33201	 Beta Version_DCDC1	R/o		uint16be	1	1	0		level		true	false	false	false
+33202	Firmware Version_DSP_MP PT1	R/o		uint16be	1	1	0		level		true	false	false	false
+33203	Beta Version_MPPT1	R/o		uint16be	1	1	0		level		true	false	false	false
+33204	Firmware Version_DSP_STS	R/o		uint16be	1	1	0		level		true	false	false	false
+33205	STS Beta	R/o		uint16be	1	1	0		level		true	false	false	false
+33206	Firmware Version_DSP2_Master	R/o		uint16be	1	1	0		level		true	false	false	false
+33207	Firmware Version_DSP2_Slave	R/o		uint16be	1	1	0		level		true	false	false	false
+33208	Beta Version_DSP2	R/o		uint16be	1	1	0		level		true	false	false	false
+33209	Firmware Version_DSP_DC DC2	R/o		uint16be	1	1	0		level		true	false	false	false
+33210	Beta Version_DCDC2	R/o		uint16be	1	1	0		level		true	false	false	false
+33211	Firmware Version_DSP_MPPT2	R/o		uint16be	1	1	0		level		true	false	false	false
+33212	Beta Version_MPPT2	R/o		uint16be	1	1	0		level		true	false	false	false

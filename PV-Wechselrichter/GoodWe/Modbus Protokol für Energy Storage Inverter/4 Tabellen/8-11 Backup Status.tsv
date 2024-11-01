@@ -1,0 +1,3 @@
+Mode Code	Message	Description
+0	ON	inverter connects to Load
+1	OFF	inverter disconnects to Load

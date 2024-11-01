@@ -10,7 +10,7 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	cw	isSca
 1056	T ΣQ+k	Teilenergiezähler Blindarbeit kapazitiv System Bezug	kvarh	uint64be	4	0,0001	0		level		false	false
 1060	T ΣQ-k	Teilenergiezähler Blindarbeit kapazitiv System Abgabe	kvarh	uint64be	4	0,0001	0		level		false	false
 1064	 B ΣP	Bilanzierender Energiezähler Wirkarbeit System	kWh	int64be	4	0,0001	0		level		false	false
-1068	B ΣSii	BilBanzierender Energiezähler Scheinarbeit System induktiv	kVAh	int64be	4	0,0001	0		level		false	false
+1068	B ΣSi	Bilanzierender Energiezähler Scheinarbeit System induktiv	kVAh	int64be	4	0,0001	0		level		false	false
 1072	B ΣSk	Bilanzierender Energiezähler Scheinarbeit System kapazitiv	kVAh	int64be	4	0,0001	0		level		false	false
 1076	B ΣQi	Bilanzierender Energiezähler Blindarbeit System induktiv	kvarh	int64be	4	0,0001	0		level		false	false
 1080	B ΣQk	Bilanzierender Energiezähler Blindarbeit System kapazitiv	kvarh	int64be	4	0,0001	0		level		false	false

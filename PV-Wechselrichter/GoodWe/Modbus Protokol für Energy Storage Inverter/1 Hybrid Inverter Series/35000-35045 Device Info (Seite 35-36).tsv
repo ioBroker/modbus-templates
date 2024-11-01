@@ -1,0 +1,16 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+35000	Modbus protocol version	R/o 		uint16be	1	1	0		level		true	false	false	false
+35001	Rate Power	R/o 	W	uint16be	1	1	0		level		true	false	false	false
+35002	AC output type	R/o 0:single phase 1: three phase four wire system 2: three phase three wire system		uint16be	1	1	0		level		true	false	false	false
+35003	Inverter SN	R/o 		string	8	1	0		level		true	false	false	false
+35011	Model Name	R/o 		string	5	1	0		level		true	false	false	false
+35016	Firmware Version_DSP_Master	R/o 		uint16be	1	1	0		level		true	false	false	false
+35017	Firmware Version_DSP_Slave	R/o 		uint16be	1	1	0		level		true	false	false	false
+35018	Beta Version_DSP_Master	R/o SVN version number of the master DSP		uint16be	1	1	0		level		true	false	false	false
+35019	Firmware Version_ARM	R/o 		uint16be	1	1	0		level		true	false	false	false
+35020	Beta Version_ARM	R/o (minor version number)		uint16be	1	1	0		level		true	false	false	false
+35021	DSP Internal Firmware Ver.	R/o 		string	6	1	0		level		true	false	false	false
+35027	ARM Internal Firmware Ver.	R/o 		string	6	1	0		level		true	false	false	false
+35043	System control mode	R/o 0: Deault 1:Power fast set, without step size adjustment		uint16be	1	1	0		level		false	false	false	false
+35044	Beta Version_DSP_Slave	R/o 		uint16be	1	1	0		level		true	false	false	false
+35045	SIMCCID	R/o ID of GPRS/4G   module		string	10	1	0		level		false	false	false	false

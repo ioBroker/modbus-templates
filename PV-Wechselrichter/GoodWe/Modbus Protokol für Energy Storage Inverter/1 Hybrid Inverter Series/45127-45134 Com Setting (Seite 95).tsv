@@ -1,0 +1,4 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+45127	Modbus Address	R/W if multiple inverters are connected to the same controller, addr of each inverter must be different and not 247!!!		uint16be	1	1	0		level		true			
+45132	Modbus Baudrate	R/W		uint32be	2	1	0		level		true			
+45134	Modbus Protocol Type	R/W 0: goodwe 1: sunspec		string	1	1	0		level		true			

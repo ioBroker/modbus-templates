@@ -1,0 +1,43 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+45751	P(F) Curve Eable switch	R/W 		uint16be	1	1	0		level		true	false	false	false
+45752	P(F) Curve Mode	R/W 0: slop mode 1: stop mode 2: Stop_V mode(AU)		uint16be	1	1	0		level		true	false	false	false
+45753	P(F) Curve Transition Mode switch	R/W		uint16be	1	1	0		level		true	false	false	false
+45754	silence time	R/W 0s - 1000s	s	uint16be	1	0,1	0		level		true	false	false	false
+45755	OF dereating power benchmark	R/W 0: Pn Rated Power 1: Ps Apparent Power 2: Po Current Power 3: Pm Max Power		uint16be	1	1	0		level		true	false	false	false
+45756	P(F) power slope (Slope)	R/W 0%Px/Hz - 1000%Px/Hz	%Px/Hz	uint16be	1	0,1	0		level		true	false	false	false
+45757	Hysteresis eable switch	R/W		uint16be	1	0,1	0		level		true	false	false	false
+45758	Hysteresis frequency Point	R/W 50Hz - 65Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45759	Deactivation observation time	R/W 0s - 1000s	s	uint16be	1	0,1	0		level		true	false	false	false
+45760	Power response mode	R/W 0: OFF 1: Slope Response 2: Low-pass filter Response		uint16be	1	1	0		level		true	false	false	false
+45761	Recover power slope	R/W 0%Pn/min - 6500%Pn/min	%Pn/min	uint16be	1	0,1	0		level		true	false	false	false
+45762	Into the power point	R/W 0%Pn - 110%Pn	%Pn	uint16be	1	0,1	0		level		true	false	false	false
+45763	Upper Threshold frequency	R/W 50Hz - 65Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45764	Output power lower	R/W 0%Pn - 110%Pn	%Pn	uint16be	1	0,1	0		level		true	false	false	false
+45765	uwOFRecoverPwrRef	R/W 0: Pn Rated Power 1: Ps Apparent Power 2: Po Current Power 3: Pm Max Power 4: Pd Power Difference		uint16be	1	1	0		level		true	false	false	false
+45766	Response slope	R/W 0%Pn/min - 6500%Pn/min	%Pn/min	uint16be	1	0,1	0		level		true	false	false	false
+45767	Overfrequency curve Charge Enable	R/W 0/1		uint16be	1	1	0		level		true	false	false	false
+45769	Overfrequency Pcmax flag	R/W 0/1		uint16be	1	1	0		level		true	false	false	false
+45770	Over-frequency dead zone of power frequency curve	R/W 0,00Hz - 2,00Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45771	Over frequency quit Point	R/W 50Hz - 65Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45776	Under frequency Point switch	R/W		uint16be	1	1	0		level		true	false	false	false
+45777	FP UF curve transition mode	R/W 0: slop mode 1: stop mode 2: Stop_V mode(AU)		uint16be	1	1	0		level		true	false	false	false
+45778	silence time	R/W 0s - 1000s	s	uint16be	1	0,1	0		level		true	false	false	false
+45779	Power reference Slope	R/W 0: Pn Rated Power 1: Ps Apparent Power 2: Po Current Power 3: Pm Max Power 4: Pd Power Difference		uint16be	1	1	0		level		true	false	false	false
+45780	P(F) power slope	R/W 0%Px/Hz - 1000%Px/Hz	%Px/Hz	uint16be	1	0,1	0		level		true	false	false	false
+45781	Under frequency loading hysteresis switch	R/W 0/1		uint16be	1	1	0		level		true	false	false	false
+45782	Hysteresis frequency Point	R/W 45Hz - 60Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45783	Deactivation observation time	R/W 0s - 1000s	s	uint16be	1	0,1	0		level		true	false	false	false
+45784	Power response mode	R/W 0: OFF 1: Slope Response 2: Low-pass filter Response		uint16be	1	1	0		level		true	false	false	false
+45785	Recover power slope	R/W 0%Pn/min - 6500%Pn/min	%Pn/min	uint16be	1	0,1	0		level		true	false	false	false
+45786	 Into the power point	R/W 0%Pn - 110%Pn	%Pn	uint16be	1	0,1	0		level		true	false	false	false
+45787	Lower Threshold frequency	R/W 45Hz - 60Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45789	Recover power reference	R/W 0: Pn Rated Power 1: Ps Apparent Power 2: Po Current Power 3: Pm Max Power 4: Pd Power Difference		uint16be	1	1	0		level		true	false	false	false
+45790	Response slope	R/W 0%Pn/min - 6500%Pn/min	%Pn/min	uint16be	1	0,1	0		level		true	false	false	false
+45788	Output power upper	R/W 0%Pn - 110%Pn	%Pn/min	uint16be	1	0,1	0		level		true	false	false	false
+45791	UF curve Charge	R/W 0/1		uint16be	1	1	0		level		true	false	false	false
+45793	UF Psmax flag	R/W 0/1		uint16be	1	1	0		level		true	false	false	false
+45794	Underfrequency dead zone of power frequency curve	R/W 0,00Hz - 2,00Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45795	Under frequency quit Point	R/W 45Hz - 60Hz	Hz	uint16be	1	0,01	0		level		true	false	false	false
+45800	Generate enable	R/W 0/1		uint16be	1	1	0		level		true	false	false	false
+45801	Reconnect enable	R/W 0/1		uint16be	1	1	0		level		true	false	false	false
+45802	Decrease enable	R/W 0/1		uint16be	1	1	0		level		true	false	false	false

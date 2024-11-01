@@ -1,0 +1,96 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+50000	Self check Support Flag	R/o 1: Support Self-check		uint16be	1	1	0		level		true	false	false	false
+50001	Self check Function Version	R/o First version is 0		uint16be	1	1	0		level		true	false	false	false
+50002	Self check Function1	R/o Refer to table 8-101	Hex	rawhex	1	1	0		level		true	false	false	false
+50003	Self check Function2	R/o	Hex	rawhex	1	1	0		level		true	false	false	false
+50004	Self check Function3	R/o	Hex	rawhex	1	1	0		level		true	false	false	false
+50005	Self check Function4	R/o	Hex	rawhex	1	1	0		level		true	false	false	false
+50006	Self check Function5	R/o	Hex	rawhex	1	1	0		level		true	false	false	false
+50007	Self check Function6	R/o	Hex	rawhex	1	1	0		level		true	false	false	false
+50008	Self check Function7	R/o	Hex	rawhex	1	1	0		level		true	false	false	false
+50009	Self check Function8	R/o	Hex	rawhex	1	1	0		level		true	false	false	false
+50010	PV1 Connect Status	R/o 0: Disconnected, 1: Connected, 2: Overvoltage, 3: Reversed		uint16be	1	1	0		level		true	false	false	false
+50011	PV1 Voltage	R/o	V	int16be	1	0,1	0		level		true	false	false	false
+50012	PV1 Current	R/o	A	int16be	1	0,1	0		level		true	false	false	false
+50013	PV2 Connect Status	R/o 0: Disconnected, 1: Connected, 2: Overvoltage, 3: Reversed		uint16be	1	1	0		level		true	false	false	false
+50014	PV2 Voltage	R/o	V	int16be	1	0,1	0		level		true	false	false	false
+50015	PV2 Current	R/o	A	int16be	1	0,1	0		level		true	false	false	false
+50016	PV3 Connect Status	R/o 0: Disconnected, 1: Connected, 2: Overvoltage, 3: Reversed		uint16be	1	1	0		level		true	false	false	false
+50017	PV3 Voltage	R/o	V	int16be	1	0,1	0		level		true	false	false	false
+50018	PV3 Current	R/o	A	int16be	1	0,1	0		level		true	false	false	false
+50019	PV4 Connect Status	R/o 0: Disconnected, 1: Connected, 2: Overvoltage, 3: Reversed		uint16be	1	1	0		level		true	false	false	false
+50020	PV4 Voltage	R/o	V	int16be	1	0,1	0		level		true	false	false	false
+50021	PV4 Current	R/o	A	int16be	1	0,1	0		level		true	false	false	false
+50022	PV5 Connect Status	R/o 0: Disconnected, 1: Connected, 2: Overvoltage, 3: Reversed		uint16be	1	1	0		level		true	false	false	false
+50023	PV5 Voltage	R/o	V	int16be	1	0,1	0		level		true	false	false	false
+50024	PV5 Current	R/o	A	int16be	1	0,1	0		level		true	false	false	false
+50025	PV6 Connect Status	R/o 0: Disconnected, 1: Connected, 2: Overvoltage, 3: Reversed		uint16be	1	1	0		level		true	false	false	false
+50026	PV6 Voltage	R/o	V	int16be	1	0,1	0		level		true	false	false	false
+50027	PV6 Current	R/o	A	int16be	1	0,1	0		level		true	false	false	false
+50028	PV7 Connect Status	R/o 0: Disconnected, 1: Connected, 2: Overvoltage, 3: Reversed		uint16be	1	1	0		level		true	false	false	false
+50029	PV7 Voltage	R/o	V	int16be	1	0,1	0		level		true	false	false	false
+50030	PV7 Current	R/o	A	int16be	1	0,1	0		level		true	false	false	false
+50031	PV8 Connect Status	R/o 0: Disconnected, 1: Connected, 2: Overvoltage, 3: Reversed		uint16be	1	1	0		level		true	false	false	false
+50032	PV8 Voltage	R/o	V	int16be	1	0,1	0		level		true	false	false	false
+50033	PV8 Current	R/o	A	int16be	1	0,1	0		level		true	false	false	false
+50034	Battery1 Connect Status	R/o 0: Disconnected, 1: Connected, 2: Overvoltage, 3: Reversed		uint16be	1	1	0		level		true	false	false	false
+50035	Battery1 Communication	R/o 0: Com loss, 1: Com normal		uint16be	1	1	0		level		true	false	false	false
+50036	Battery1 Voltage	R/o	V	int16be	1	0,1	0		level		true	false	false	false
+50037	Battery1 Current	R/o	A	uint16be	1	0,1	0		level		true	false	false	false
+50038	Battery1 Type Index	R/o		uint16be	1	1	0		level		true	false	false	false
+50039	Battery1 Protocol	R/o Refer to 8-33	Hex	rawhex	1	1	0		level		true	false	false	false
+50040	Battery1 Strings	R/o		uint16be	1	1	0		level		true	false	false	false
+50041	Battery1 SOC	R/o	%	uint16be	1	0,1	0		level		true	false	false	false
+50042	Battery1 SOH	R/o	%	uint16be	1	0,1	0		level		true	false	false	false
+50043	Battery2 Connect Status	R/o 0: Disconnected, 1: Connected, 2: Overvoltage, 3: Reversed		uint16be	1	1	0		level		true	false	false	false
+50044	Battery2 Communication	R/o 0: Com loss, 1: Com normal		uint16be	1	1	0		level		true	false	false	false
+50045	Battery2 Voltage	R/o	V	int16be	1	0,1	0		level		true	false	false	false
+50046	Battery2 Current	R/o	A	uint16be	1	0,1	0		level		true	false	false	false
+50047	Battery2 Type Index	R/o		uint16be	1	1	0		level		true	false	false	false
+50048	Battery2 Protocol	R/o Refer to 8-33	Hex	rawhex	1	1	0		level		true	false	false	false
+50049	Battery2 Strings	R/o		uint16be	1	1	0		level		true	false	false	false
+50050	Battery2 SOC	R/o	%	uint16be	1	0,1	0		level		true	false	false	false
+50051	Battery2 SOH	R/o	%	uint16be	1	0,1	0		level		true	false	false	false
+50052	Battery3 Connect Status	R/o 0: Disconnected, 1: Connected, 2: Overvoltage, 3: Reversed		uint16be	1	1	0		level		true	false	false	false
+50053	Battery3 Communication	R/o 0: Com loss, 1: Com normal		uint16be	1	1	0		level		true	false	false	false
+50054	Battery3 Voltage	R/o	V	int16be	1	0,1	0		level		true	false	false	false
+50055	Battery3 Current	R/o	A	uint16be	1	0,1	0		level		true	false	false	false
+50056	Battery3 Type Index	R/o		uint16be	1	1	0		level		true	false	false	false
+50057	Battery3 Protocol	R/o Refer to 8-33	Hex	rawhex	1	1	0		level		true	false	false	false
+50058	Battery3 Strings	R/o		uint16be	1	1	0		level		true	false	false	false
+50059	Battery3 SOC	R/o	%	uint16be	1	0,1	0		level		true	false	false	false
+50060	Battery3 SOH	R/o	%	uint16be	1	0,1	0		level		true	false	false	false
+50061	Battery4 Connect Status	R/o 0: Disconnected, 1: Connected, 2: Overvoltage, 3: Reversed		uint16be	1	1	0		level		true	false	false	false
+50062	Battery4 Communication	R/o 0: Com loss, 1: Com normal		uint16be	1	1	0		level		true	false	false	false
+50063	Battery4 Voltage	R/o	V	int16be	1	0,1	0		level		true	false	false	false
+50064	Battery4 Current	R/o	A	uint16be	1	0,1	0		level		true	false	false	false
+50065	Battery4 Type Index	R/o		uint16be	1	1	0		level		true	false	false	false
+50066	Battery4 Protocol	R/o Refer to 8-33	Hex	rawhex	1	1	0		level		true	false	false	false
+50067	Battery4 Strings	R/o		uint16be	1	1	0		level		true	false	false	false
+50068	Battery4 SOC	R/o	%	uint16be	1	0,1	0		level		true	false	false	false
+50069	Battery4 SOH	R/o	%	uint16be	1	0,1	0		level		true	false	false	false
+50070	Grid Connect Status	R/o 0: Disconnetced 1: Grid normal 2: Phase Sequence Fault 3: Phase Fault 4: Grid Voltage Frequency Fault		uint16be	1	1	0		level		true	false	false	false
+50071	Device AC type	R/o 0: Single-phase 1: Split- phase 2: Three-phase, Four-wire 3: Three-phase, Three-wire		uint16be	1	1	0		level		true	false	false	false
+50072	Master Safety Code	R/o		uint16be	1	1	0		level		true	false	false	false
+50073	Slave Safety Code	R/o		uint16be	1	1	0		level		true	false	false	false
+50074	Grid Voltage L1	R/o	V	uint16be	1	0,1	0		level		true	false	false	false
+50075	Grid Voltage L2	R/o	V	uint16be	1	0,1	0		level		true	false	false	false
+50076	Grid Voltage L3	R/o	V	uint16be	1	0,1	0		level		true	false	false	false
+50077	Grid Frequency L1	R/o	Hz	uint16be	1	0,01	0		level		true	false	false	false
+50078	Grid Frequency L2	R/o	Hz	uint16be	1	0,01	0		level		true	false	false	false
+50079	Grid Frequency L3	R/o	Hz	uint16be	1	0,01	0		level		true	false	false	false
+50080	Grid Reserved1	R/o		uint16be	1	1	0		level		true	false	false	false
+50081	Grid Reserved2	R/o		uint16be	1	1	0		level		true	false	false	false
+50082	Backup Enable	R/o 0: ON 1: OFF		uint16be	1	1	0		level		true	false	false	false
+50083	Wave Check Mode	R/o 0: Full-wave 1: Half-wave 2: OFF		uint16be	1	1	0		level		true	false	false	false
+50084	Backup Voltage L1	R/o	V	uint16be	1	0,1	0		level		true	false	false	false
+50085	Backup Voltage L2	R/o	V	uint16be	1	0,1	0		level		true	false	false	false
+50086	Backup Voltage L3	R/o	V	uint16be	1	0,1	0		level		true	false	false	false
+50087	Backup Frequency L1	R/o	Hz	uint16be	1	0,01	0		level		true	false	false	false
+50088	Backup Frequency L2	R/o	Hz	uint16be	1	0,01	0		level		true	false	false	false
+50089	Backup Frequency L3	R/o	Hz	uint16be	1	0,01	0		level		true	false	false	false
+50090	Meter Type	R/o Refer to table 8-102 	Hex	rawhex	1	1	0		level		true	false	false	false
+50091	Meter Internal / External	R/o 0: Internal 1: External		uint16be	1	1	0		level		true	false	false	false
+50092	Int Meter Communication	R/o 0: Com loss 1: Com normal		uint16be	1	1	0		level		true	false	false	false
+50093	CT Self Check Status	R/o 0: Not available 1: Available		uint16be	1	1	0		level		true	false	false	false
+50094	Ext Meter Communication	R/o 0: Com loss, 1: Com normal		uint16be	1	1	0		level		true	false	false	false

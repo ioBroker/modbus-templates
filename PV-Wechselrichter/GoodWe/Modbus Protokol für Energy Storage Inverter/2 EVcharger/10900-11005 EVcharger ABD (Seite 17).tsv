@@ -1,0 +1,18 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+10900	Grid Voltage RS	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+10901	Grid Voltage R	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+10902	Grid Voltage S	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+10903	Grid Frequency	R/o 	Hz	uint16be	1	0,01	0		level		true	false	false	false
+10904	Relay Status	R/o 		uint16be	1	1	0		level		true	false	false	false
+10905	Error Message	R/o bit0 +12V detect fail bit1 relay fail bit2 Utility over-voltage bit3 Utility undervoltage bit4 Utility overfrequency bit5 Utility under- frequency bit6 communication fail		rawhex	2	1	0		level		true	false	false	false
+10907	Inverter Voltage RS	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+10908	Inverter Voltage R	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+10909	Inverter Voltage S	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+10910	Inverter Frequency	R/o 	Hz	uint16be	1	0,01	0		level		true	false	false	false
+10911	Power Voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+10912	Box Com Loss	R/o 0：Com not loss 1：Com loss		uint16be	1	1	0		level		true	false	false	false
+10913	Stop Button Flag	R/o 		uint16be	1	1	0		level		true	false	false	false
+10980	Software Verion	R/o 		uint16be	1	1	0		level		true	false	false	false
+10981	ABD SN	R/o 		string	8	1	0		level		true	false	false	false
+10989	ABD Model Name	R/o 		string	16	1	0		level		true	false	false	false
+11005	git version	R/o 		uint16be	1	1	0		level		true	false	false	false

@@ -1,0 +1,61 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+45200	Real-Time Clock_Year  Month	R/W High Byte Year / Low Byte Month: 0D-63 / 01-0C	Hex	rawhex	1	1	0		level		true	false	false	false
+45201	Real-Time Clock_Day Hour	R/W High Byte Day/Low  Byte Hour: 01-1F / 00-17	Hex	rawhex	1	1	0		level		true	false	false	false
+45202	Real-Time Clock_Minute Second	R/W High Byte  minute/Low Byte Second: 0-3B / 0-3B	Hex	rawhex	1	1	0		level		true	false	false	false
+45216	Restore Factory Setting	"W/o Choose ""Warehouse"" safety code first and then Set ""1"""		uint16be	1	1	0		level		false	false	false	false
+45217	Clear Data	W/o Reset inverter accumulated data like E-total, E-day, error log running data etc.		uint16be	1	1	0		level		false	false	false	false
+45220	Restart	W/o Inverter will recheck and reconnect to utility again. Inverter does not shutdown.		uint16be	1	1	0		level		false	false	false	false
+45222	PV Energy-Total	R/W total PV production energy from the installation date	kWh	uint32be	2	0,1	0		level		true	false	false	false
+45224	PV Energy-Day	R/W total PV production energy of the day	kWh	uint32be	2	0,1	0		level		true	false	false	false
+45226	Energy-Total-Sell	R/W accumulated exporting energy to Grid from the installation date	kWh	uint32be	2	0,1	0		level		true	false	false	false
+45228	Hour-Total	R/W accumulated operation hours from the installation date	h	uint32be	2	1	0		level		true	false	false	false
+45230	Energy-Day-Sell	R/W accumulated exporting energy to Grid of the day	kWh	uint16be	1	0,1	0		level		true	false	false	false
+45231	Energy-Total-Buy	R/W accumulated energy imported from Grid from the installation date	kWh	uint32be	2	0,1	0		level		true	false	false	false
+45233	Energy-Day-Buy	R/W accumulated energy imported from Grid of the day	kWh	uint16be	1	0,1	0		level		true	false	false	false
+45234	Energy-Total-Load	R/W accumulated load consumption energy from the installation date, not include backup load	kWh	uint32be	2	0,1	0		level		true	false	false	false
+45236	Energy-Load-Day	R/W accumulated load consumption energy of the day, not include backup load	kWh	uint16be	1	0,1	0		level		true	false	false	false
+45237	Energy-Battery Charge	R/W accumulated energy charged to Battery from the installation date, not from BMS	kWh	uint32be	2	0,1	0		level		true	false	false	false
+45239	Energy-Charge-Day	R/W accumulated energy charged to Battery of the day, not from BMS	kWh	uint16be	1	0,1	0		level		true	false	false	false
+45240	Energy-Battery Discharge	R/W accumulated energy Battery discharged, from the installation date, not from BMS	kWh	uint32be	2	0,1	0		level		true	false	false	false
+45242	Energy-Discharge-Day	R/W accumulated energy Battery discharged, of the day, not from BMS	kWh	uint16be	1	0,1	0		level		true	false	false	false
+45244	Safety Country	R/W safety code for inverter Refer to Table 8-21		rawhex	1	1	0		level		true	false	false	false
+45245	ISO Limit	R/W Isolation protection threshold for the inverter	kΩ	uint16be	1	1	0		level		true	false	false	false
+45246	LVRT / HVRT Enable	R/W 0:Disable (default) 1:Only Lvrt 2:Only Hvrt 3: Both Lvrt&Hvrt		uint16be	1	1	0		level		true	false	false	false
+45250	PV Start Voltage	R/W start up PV Voltage of the inverter	V	uint16be	1	0,1	0		level		true	false	false	false
+45251	Enable MPPT Shadow Scan	"R/W set ""1"" to activate ""Shadow Scan"" functtion"		uint16be	1	1	0		level		true	false	false	false
+45252	BackUp Enable	"R/W set ""0"" to deactivate ""Backup"" functtion"		uint16be	1	1	0		level		true	false	false	false
+45253	Auto Start Backup	"R/W set ""1"" to  activate ""Auto Start Backup"" functtion"		uint16be	1	1	0		level		true	false	false	false
+45254	Grid Wave Check	R/W Default: 0		uint16be	1	1	0		level		true	false	false	false
+45255	Rapid Cut Off	R/W Rapid shutdown to switch grid-connected systems to off-grid operation		uint16be	1	1	0		level		true	false	false	false
+45256	Backup Start Delay	R/W Default: 30s	s	uint16be	1	1	0	x / 50	level		true	false	false	false
+45257	UPS Standard Voltage Type	R/W 0:208V, 1:20V, 2:240V, 3:230V		uint16be	1	1	0		level		true	false	false	false
+45263	Derate Rate(VDE)	R/W decrease the load,only can set to 70%, only for German	%	uint16be	1	1	0		level		true	false	false	false
+45264	Three Phase Unbalanced Output	"R/W set ""1"" to activate. After activated, All power needs to be turned off and restarted"		uint16be	1	1	0		level		true	false	false	false
+45266	High Impedance Mode	R/W For weak Grid area		uint16be	1	1	0		level		true	false	false	false
+45271	ARC Self Check	W/o only for inverters with AFCI function		uint16be	1	1	0		level		false	false	false	false
+45272	ARC Fault Remove	W/o 		uint16be	1	1	0		level		false	false	false	false
+45275	ISO Check Mode	R/W  0:Normal mode 1:cancel ISO test when offGrid to onGrid		uint16be	1	1	0		level		true	false	false	false
+45276	Off Grid To On Grid Delay	R/W The delay time when Grid is available	s	uint16be	1	1	0		level		true	false	false	false
+45277	Off Grid Under Voltage Protect Coefficient	R/W If set 80%, when offGrid output Voltage less than 230*80%=184V, inverter will have the error	%	uint16be	1	1	0		level		true	false	false	false
+45278	Battery Mode PV Charge Enable	R/W When offGrid and the Battery SOC is low, PV charge the Battery first		uint16be	1	1	0		level		true	false	false	false
+45279	DCV Check Coefficient	R/W Default: 1 (1-20)		uint16be	1	1	0		level		true	false	false	false
+45280	Force MircoGrid Run	R/W Only for MircoGrid Function inverte		uint16be	1	1	0		level		true	false	false	false
+45281	Battery PreCharge Function	R/W For configuring whether the Battery comes with a pre-charge function		uint16be	1	1	0		level		true	false	false	false
+45286	GL Operation Mode Control Duration	R/W 	s	uint16be	1	1	0		level		true	false	false	false
+45288	PE Relay Switch	R/W offGrid 1 close 0 open		uint16be	1	1	0		level		true	false	false	false
+45289	GFCI fault remove	W/o Write 0x050A to clear GFCI Fault	Hex	rawhex	1	1	0		level		true	false	false	false
+45291	PV Connect Mode	R/W PV Connect Mode, Set 0 for each  MPPT, Set 1 for 12,34MPPT, Set 2 for 1MPPT		uint16be	1	1	0		level		true	false	false	false
+45292	GFCI Disable Check	R/W 0:Normal mode 1:cancel GFCI check		uint16be	1	1	0		level		true	false	false	false
+45293	SPD enable	R/W 		uint16be	1	1	0		level		true	false	false	false
+45294	Force MircoGrid Frequence Adjust	R/W Only for MircoGrid Function inverter		uint16be	1	1	0		level		true	false	false	false
+45295	Shadow scan cycle setting	R/W 5min - 300min	min	uint16be	1	1	0		level		true	false	false	false
+45296	PV only UPS Auto Enable	R/W 1:Enable		uint16be	1	1	0		level		true	false	false	false
+45297	Ac Phase Order Self Adaption	R/W 1:Enable		uint16be	1	1	0		level		true	false	false	false
+45298	AFCI Fault Reconnect Time	R/W Default: 300s (10s - 3600s)	s	uint16be	1	1	0		level		true	false	false	false
+45299	AFCI Fault Reconnect Count Limit	R/W Default: 5 times (0 - 1000)		uint16be	1	1	0		level		true	false	false	false
+45300	Port multiplexing mode	R/W ESC Port multiplexing mode  (default: 0) 0: generator mode 1: Large load mode 2: indicates the normal BACKUP mode		uint16be	1	1	0		level		true	false	false	false
+45301	PV charge enable	R/W 		uint16be	1	1	0		level		true	false	false	false
+45302	Battery SPS SW_TurnOff Enable	R/W ES G2		uint16be	1	1	0		level		true	false	false	false
+45303	Battery SPS TurnOff Value	R/W ES G2 (300,480)	V	uint16be	1	0,1	0		level		true	false	false	false
+45304	PX Curve Enable	R/W Three-phase inverter		uint16be	1	1	0		level		true	false	false	false
+45305	PX Curve Voltage Value	R/W Three-phase inverter (230,300)	V	uint16be	1	0,1	0		level		true	false	false	false

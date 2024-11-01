@@ -1,0 +1,24 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+10600	CP Voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+10601	Leak Current	R/o 	mA	uint16be	1	1	0		level		true	false	false	false
+10602	CP Status	R/o 0 disconnected; 1 connected; 2 charging; 3 fault		uint16be	1	1	0		level		true	false	false	false
+10603	Solar Power for Charge	R/o 	W	uint16be	1	1	0		level		true	false	false	false
+10604	Battery Power for Charge	R/o 	W	uint16be	1	1	0		level		true	false	false	false
+10605	Grid Power for Charge	R/o 	W	uint16be	1	1	0		level		true	false	false	false
+10606	Current Charge Energy	R/o 	kWh	uint16be	1	0,1	0		level		true	false	false	false
+10607	Current Charge Time	R/o 	min	uint16be	1	1	0		level		true	false	false	false
+10608	Charge Current	R/o 	A	uint16be	1	0,1	0		level		true	false	false	false
+10609	EV Charger Status	R/o Siehe Tabelle (muss erstellt werden)		uint16be	1	1	0		level		true	false	false	false
+10610	EV Charger Error Message	R/o 		uint32be	2	1	0		level		true	false	false	false
+10612	Charging Mode	R/o 		uint16be	1	1	0		level		true	false	false	false
+10613	Max Charge Current	R/o 	A	uint16be	1	1	0		level		true	false	false	false
+10614	Current Charge Power	R/o 	W	uint16be	1	1	0		level		true	false	false	false
+10615	Total Charge Energy	R/o 	kWh	uint32be	2	0,1	0		level		true	false	false	false
+10617	Total Charge Time	R/o 	h	uint32be	2	0,1	0		level		true	false	false	false
+10619	EV Ouput Voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+10620	AC Input Voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+10621	EV Communication lost flag	R/o 0: Com not loss; 1: Com loss		uint16be	1	1	0		level		true	false	false	false
+10669	GIT Version	R/o 		uint16be	1	1	0		level		true	false	false	false
+10670	Software Version	R/o 		uint16be	1	1	0		level		true	false	false	false
+10671	EV charger SN	R/o 		string	8	1	0		level		true	false	false	false
+10679	EV Charger Model Name	R/o 		string	16	1	0		level		true	false	false	false

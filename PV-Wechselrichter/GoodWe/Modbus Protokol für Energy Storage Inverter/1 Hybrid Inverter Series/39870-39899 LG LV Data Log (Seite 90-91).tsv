@@ -1,0 +1,28 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+39870	Maximum charging voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+39871	Maximum charging current	R/o 	A	uint16be	1	0,1	0		level		true	false	false	false
+39872	Maximum Discharging current	R/o 	A	uint16be	1	0,1	0		level		true	false	false	false
+39873	Batttery Voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
+39874	Batttery Current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
+39875	Batttery Temperature	R/o 	°C	uint16be	1	0,1	0		level		true	false	false	false
+39876	Cell Voltage #1	R/o 	V	uint16be	1	0,001	0		level		true	false	false	false
+39877	Cell Voltage #2	R/o 	V	uint16be	1	0,001	0		level		true	false	false	false
+39878	Cell Voltage #3	R/o 	V	uint16be	1	0,001	0		level		true	false	false	false
+39879	Cell Voltage #4	R/o 	V	uint16be	1	0,001	0		level		true	false	false	false
+39880	Cell Voltage #5	R/o 	V	uint16be	1	0,001	0		level		true	false	false	false
+39881	Cell Voltage #6	R/o 	V	uint16be	1	0,001	0		level		true	false	false	false
+39882	Cell Voltage #7	R/o 	V	uint16be	1	0,001	0		level		true	false	false	false
+39883	Cell Voltage #8	R/o 	V	uint16be	1	0,001	0		level		true	false	false	false
+39884	Cell Voltage #9	R/o 	V	uint16be	1	0,001	0		level		true	false	false	false
+39885	Cell Voltage #10	R/o 	V	uint16be	1	0,001	0		level		true	false	false	false
+39886	Cell Voltage #11	R/o 	V	uint16be	1	0,001	0		level		true	false	false	false
+39887	Cell Voltage #12	R/o 	V	uint16be	1	0,001	0		level		true	false	false	false
+39888	Cell Voltage #13	R/o 	V	uint16be	1	0,001	0		level		true	false	false	false
+39889	Cell Voltage #14	R/o 	V	uint16be	1	0,001	0		level		true	false	false	false
+39890	BMS Serial Number	R/o 		uint32be	2	1	0		level		true	false	false	false
+39892	BMS SW Version	R/o 		uint16be	1	1	0		level		true	false	false	false
+39893	Battery series	R/o 		uint16be	1	1	0		level		true	false	false	false
+39894	BMS Warning	R/o Refer to 8-14		uint32be	2	1	0		level		true	false	false	false
+39896	BMS Alarm	R/o Refer to 8-14		uint32be	2	1	0		level		true	false	false	false
+39898	SOC	R/o 	%	uint16be	1	1	0		level		true	false	false	false
+39899	SOH	R/o 	%	uint16be	1	1	0		level		true	false	false	false

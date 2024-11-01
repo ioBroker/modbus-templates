@@ -1,0 +1,61 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+39000	BMS2 Status	R/o 		uint16be	1	1	0		level		true	false	false	false
+39001	BMS2 Package Temperature	R/o 	°C	uint16be	1	0,1	0		level		true	false	false	false
+39002	BMS2 Max Charge Current	R/o 	A	uint16be	1	1	0		level		true	false	false	false
+39003	BMS2 Max Discharge Current	R/o 	A	uint16be	1	1	0		level		true	false	false	false
+39004	BMS2 Error Code Low	R/o 		uint16be	1	1	0		level		true	false	false	false
+39005	BMS2 SOC	R/o Capacity of BAT2	%	uint16be	1	1	0		level		true	false	false	false
+39006	BMS2 SOH	R/o 	%	uint16be	1	1	0		level		true	false	false	false
+39007	BMS2 Battery Strings	R/o 		uint16be	1	1	0		level		true	false	false	false
+39008	BMS2 Warning Code Low	R/o 		uint16be	1	1	0		level		true	false	false	false
+39009	BMS2 Battery Protocol	R/o 		uint16be	1	1	0		level		true	false	false	false
+39010	BMS2 Error Code High	R/o 		uint16be	1	1	0		level		true	false	false	false
+39011	BMS2 Warning Code High	R/o 		uint16be	1	1	0		level		true	false	false	false
+39012	BMS2 Software Version	R/o 		uint16be	1	1	0		level		true	false	false	false
+39013	BMS2 Battery Hardware Version	R/o 		uint16be	1	1	0		level		true	false	false	false
+39014	BMS2 Maximum Cell Temperature ID	R/o Battery module ID (1 Byte) + Battery sampling point (1 Byte)	Hex	rawhex	1	1	0		level		true	false	false	false
+39015	BMS2 Minimum Cell Temperature ID	R/o Battery module ID (1 Byte) + Battery sampling point (1 Byte)	Hex	rawhex	1	1	0		level		true	false	false	false
+39016	BMS2 Maximum Cell Voltage ID	R/o Battery module ID (1 Byte) + Battery sampling point (1 Byte)	Hex	rawhex	1	1	0		level		true	false	false	false
+39017	BMS2 Minimum Cell Voltage ID	R/o Battery module ID (1 Byte) + Battery sampling point (1 Byte)	Hex	rawhex	1	1	0		level		true	false	false	false
+39018	BMS2 Maximum Cell Temperature	R/o 	°C	uint16be	1	0,1	0		level		true	false	false	false
+39019	BMS2 Minimum Cell Temperature	R/o 	°C	uint16be	1	0,1	0		level		true	false	false	false
+39020	BMS2 Maximum Cell Voltage	R/o 	mV	uint16be	1	1	0		level		true	false	false	false
+39021	BMS2 Minimum Cell Voltage	R/o 	mV	uint16be	1	1	0		level		true	false	false	false
+39022	BMS2 Pass Infomation 1	R/o (GW BAT only)BAT  system running  status 0: Init 1: Idle 2: Standby 3: Run 4:  Sleep 5: Shutdown 6: Fault 7: Update		uint16be	1	1	0		level		true	false	false	false
+39023	BMS2 Pass Infomation 2	R/o 		uint16be	1	1	0		level		true	false	false	false
+39024	BMS2 Pass Infomation 3	R/o 		uint16be	1	1	0		level		true	false	false	false
+39025	BMS2 Pass Infomation 4	R/o 		uint16be	1	1	0		level		true	false	false	false
+39026	BMS2 Pass Infomation 5	R/o 		uint16be	1	1	0		level		true	false	false	false
+39027	BMS2 Pass Infomation 6	R/o 		uint16be	1	1	0		level		true	false	false	false
+39028	BMS2 Pass Infomation 7	R/o 		uint16be	1	1	0		level		true	false	false	false
+39029	BMS2 Pass Infomation 8	R/o 		uint16be	1	1	0		level		true	false	false	false
+39030	BMS2 Pass Infomation 9	R/o 		uint16be	1	1	0		level		true	false	false	false
+39031	BMS2 Pass Infomation 10	R/o 		uint16be	1	1	0		level		true	false	false	false
+39032	BMS2 Pass Infomation 11	R/o 		uint16be	1	1	0		level		true	false	false	false
+39033	BMS2 Pass Infomation 12	R/o 		uint16be	1	1	0		level		true	false	false	false
+39034	BMS2 Pass Infomation 13	R/o 		uint16be	1	1	0		level		true	false	false	false
+39035	BMS2 Pass Infomation 14	R/o 		uint16be	1	1	0		level		true	false	false	false
+39036	BMS2 Pass Infomation 15	R/o 		uint16be	1	1	0		level		true	false	false	false
+39037	BMS2 Pass Infomation 16	R/o 		uint16be	1	1	0		level		true	false	false	false
+39038	BMS2 Pass Infomation 17	R/o 		uint16be	1	1	0		level		true	false	false	false
+39039	BMS2 Pass Infomation 18	R/o 		uint16be	1	1	0		level		true	false	false	false
+39040	BMS2 Pass Infomation 19	R/o 		uint16be	1	1	0		level		true	false	false	false
+39041	BMS2 Pass Infomation 20	R/o 		uint16be	1	1	0		level		true	false	false	false
+39042	BMS2 Pass Infomation 21	R/o 		uint16be	1	1	0		level		true	false	false	false
+39043	BMS2 Pass Infomation 22	R/o 		uint16be	1	1	0		level		true	false	false	false
+39044	BMS2 Pass Infomation 23	R/o 		uint16be	1	1	0		level		true	false	false	false
+39045	BMS2 Pass Infomation 24	R/o 		uint16be	1	1	0		level		true	false	false	false
+39046	BMS2 Pass Infomation 25	R/o 		uint16be	1	1	0		level		true	false	false	false
+39047	BMS2 Pass Infomation 26	R/o 		uint16be	1	1	0		level		true	false	false	false
+39048	BMS2 Pass Infomation 27	R/o 		uint16be	1	1	0		level		true	false	false	false
+39049	BMS2 Pass Infomation 28	R/o 		uint16be	1	1	0		level		true	false	false	false
+39050	BMS2 Pass Infomation 29	R/o 		uint16be	1	1	0		level		true	false	false	false
+39051	BMS2 Pass Infomation 30	R/o 		uint16be	1	1	0		level		true	false	false	false
+39052	BMS2 Pass Infomation 31	R/o 		uint16be	1	1	0		level		true	false	false	false
+39053	BMS2 Pass Infomation 32	R/o 		uint16be	1	1	0		level		true	false	false	false
+39054	BMS2 Battery Total Charge Energy	R/o 	kWh	uint32be	2	0,1	0		level		true	false	false	false
+39057	BMS2 Battery Total Discharge Energy	R/o 	kWh	uint32be	2	0,1	0		level		true	false	false	false
+39058	BMS2 Battery SN	R/o 		rawhex	16	1	0		level		true	false	false	false
+39074	BMS2 Rated Capacity	R/o 	kWh	uint16be	1	0,01	0		level		true	false	false	false
+39075	BMS2 Cluster NUM	R/o 		uint16be	1	1	0		level		true	false	false	false
+39076	BMS2 Cluster number	R/o Register + Online		uint16be	1	1	0		level		true	false	false	false

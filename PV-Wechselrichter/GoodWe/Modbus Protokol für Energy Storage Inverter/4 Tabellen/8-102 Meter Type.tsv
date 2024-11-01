@@ -1,0 +1,13 @@
+Code	Description
+00FF	Unknown
+00FE	Acrel Meter
+0505	4CTs Meter
+0001	Goodwe Single-phase Meter
+0002	Goodwe Three-phase Three-wire Meter
+0003	Goodwe Three-phase Four-wire Meter
+0004	Goodwe 2CTs Meter
+0005	Split-phase Meter
+8001	Three-phase Three-wire CT
+8002	Three-phase Four-wire CT
+8003	Single-phase One-wire CT
+8004	Three-phase Two-wire CT

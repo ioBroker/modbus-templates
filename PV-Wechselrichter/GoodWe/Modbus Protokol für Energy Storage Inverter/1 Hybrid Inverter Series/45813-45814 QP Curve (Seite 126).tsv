@@ -1,0 +1,3 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+45813	QP Reactive power variation filter	R/W 0%Pn/s - 6500%Pn/s	%Pn/s	uint16be	1	0,1	0		level		true	false	false	false
+45814	QP Reactive output   Model 	R/W 0: OFF 1: Slope Response 2: Low-pass filter Response		uint16be	1	1	0		level		true	false	false	false

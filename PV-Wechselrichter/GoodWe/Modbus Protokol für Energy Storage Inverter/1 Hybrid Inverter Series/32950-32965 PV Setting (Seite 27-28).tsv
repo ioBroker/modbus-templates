@@ -1,0 +1,17 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+32950	MPPT Number	R/o 		uint16be	1	1	0		level		true	false	false	false
+32951	MPPT1 String Number	R/o String numbers for this MPPT		uint16be	1	1	0		level		true	false	false	false
+32952	MPPT2 String Number	R/o String numbers for this MPPT		uint16be	1	1	0		level		true	false	false	false
+32953	MPPT3 String Number	R/o String numbers for this MPPT		uint16be	1	1	0		level		true	false	false	false
+32954	MPPT4 String Number	R/o String numbers for this MPPT		uint16be	1	1	0		level		true	false	false	false
+32955	MPPT5 String Number	R/o String numbers for this MPPT		uint16be	1	1	0		level		true	false	false	false
+32956	MPPT6 String Number	R/o String numbers for this MPPT		uint16be	1	1	0		level		true	false	false	false
+32957	MPPT7 String Number	R/o String numbers for this MPPT		uint16be	1	1	0		level		true	false	false	false
+32958	MPPT8 String Number	R/o String numbers for this MPPT		uint16be	1	1	0		level		true	false	false	false
+32959	MPPT9 String Number	R/o String numbers for this MPPT		uint16be	1	1	0		level		true	false	false	false
+32960	MPPT10 String Number	R/o String numbers for this MPPT		uint16be	1	1	0		level		true	false	false	false
+32961	MPPT11 String Number	R/o String numbers for this MPPT		uint16be	1	1	0		level		true	false	false	false
+32962	MPPT12 String Number	R/o String numbers for this MPPT		uint16be	1	1	0		level		true	false	false	false
+32963	MPPT13 String Number	R/o String numbers for this MPPT		uint16be	1	1	0		level		true	false	false	false
+32964	MPPT14 String Number	R/o String numbers for this MPPT		uint16be	1	1	0		level		true	false	false	false
+32965	MPPT15 String Number	R/o String numbers for this MPPT		uint16be	1	1	0		level		true	false	false	false

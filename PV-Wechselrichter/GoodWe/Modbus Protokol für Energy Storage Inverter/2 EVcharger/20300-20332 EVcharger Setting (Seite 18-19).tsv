@@ -1,0 +1,29 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+20300	Start Time_1	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true			
+20301	End Time_1	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true			
+20302	Work Week_1	R/W High byte FF; Low byte 0 -> 6bit means Sunday -> Saturday		uint16be	1	1	0		level		true			
+20303	Parameter1_1	R/W		uint16be	1	1	0		level		true			
+20304	Parameter1_2	R/W		uint16be	1	1	0		level		true			
+20305	Start Time_2	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true			
+20306	End Time_2	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true			
+20307	Work Week_2	R/W High byte FF; Low byte 0 -> 6bit means Sunday -> Saturday		uint16be	1	1	0		level		true			
+20308	Parameter2_1	R/W		uint16be	1	1	0		level		true			
+20309	Parameter2_2	R/W		uint16be	1	1	0		level		true			
+20310	Start Time_3	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true			
+20311	End Time_3	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true			
+20312	Work Week_3	R/W High byte FF; Low byte 0 -> 6bit means Sunday -> Saturday		uint16be	1	1	0		level		true			
+20313	Parameter3_1	R/W		uint16be	1	1	0		level		true			
+20314	Parameter3_2	R/W		uint16be	1	1	0		level		true			
+20315	Start Time_4	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true			
+20316	End Time_4	R/W [0-23],[0-59] hh:mm		uint16be	1	1	0		level		true			
+20317	Work Week_4	R/W		uint16be	1	1	0		level		true			
+20318	Parameter4_1	R/W		uint16be	1	1	0		level		true			
+20319	Parameter4_2	R/W		uint16be	1	1	0		level		true			
+20320	Charging Mode	R/W 0:Plug and Play 1:Appoint charging 2:PV charge only 3:Check 1 and 2 for default plug-and-charge		uint16be	1	1	0		level		true			
+20321	Error Page Set	R/W		uint16be	1	1	0		level		true			
+20322	Log Page Set	R/W		uint16be	1	1	0		level		true			
+20323	Max Charge Current	R/W	A	uint16be	1	1	0		level		true			
+20324	Real-Time Clock_Year Month	R/W High Byte Year / Low Byte Month: 13-99 / 1-12		uint16be	1	1	0		level		true			
+20325	Real-Time Clock_Day Hour	R/W High Byte Day / Low Byte Hour: 1-31 / 0-23		uint16be	1	1	0		level		true			
+20326	Real-Time Clock_Minute Second	R/W High Byte Minute / Low  Byte Second: 0-59 / 0-59		uint16be	1	1	0		level		true			
+20332	Off Grid Charge Enable	R/W 0: Disabled(default) 1: Enabled		uint16be	1	1	0		level		true			

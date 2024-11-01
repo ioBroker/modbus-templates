@@ -1,0 +1,34 @@
+Bit Number	Diagnose Info	Description	Type
+32			
+31			
+30			
+29			
+28	SOCProtectOff	SOC protect Off	
+27			
+26	RealPowerLimit	Active power value is set	Other
+25	PFValueSet	PF value is set	Other
+24	FeedPowerLimit	Export power limit is set	Other
+23	GridWaveUnstable	Grid wave is bad, switch to back-up mode frequently	Other
+22	OffgridSOCLow	SOC is low under off-grid statues	Other
+21	BatterySelfDischarge	Battery discharge at low current for long time, continuously over 30% of battery	Other
+20	SOCDeltaOverRange	SOC Jumps abnormally	Other
+19	SelfUseOff	Self-use mode turned off	Affect discharge
+18	BMSChargeDisable	BMS does not allow charge	Affect charging
+17	BMSOvercharge	Lithium battery overcharged or an individual cell voltage is higher	Affect charging
+16	BMSOverTemperature	Lithium battery over temperature	Affect charging
+15	BatteryOvercharge	BatteryOvercharge	Affect charging
+14	BatteryDisconnect	BatteryDisconnect	Affect charging
+13	DischargeBUSHigh	Battery not discharge caused by over high PV voltage	Affect discharge
+12	EMSDischargeIZero	Discharge current limit 0A from EMS	Affect discharge
+11	SelfUseLoadLight	Low load power, cannot activate battery discharge	Affect discharge
+10	MeterConnectReverse	Smart Meter connection reversed	Affect discharge
+9	MeterCommLoss	Smart Meter communication failure	Affect discharge
+8	DischargeCurrentLow	Discharge current limit is too low (from App)	Affect discharge
+7	BMSDischgCurrentLow	BMS discharge current limit is too low	Affect discharge
+6	DischargeDriveOn	Discharge driver is turned on	Affect discharge
+5	ChargeTimeOn	Charge time is set	Affect discharge
+4	DischargeTimeOn	Discharge time is set	Affect discharge
+3	BMSDischargeDisable	BMS not allow discharge	Affect discharge
+2	BatterySOCInBack	Battery SOC not recover to allow-discharge level	Affect discharge
+1	BatterySOCLow	Battery not discharge caused by low SOC	Affect discharge
+0	BatteryVoltLow	Battery not discharge caused by low battery voltage	Affect discharge

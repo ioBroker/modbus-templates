@@ -1,0 +1,31 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+32200	External Device Protection Fault	R/o bit0: Arc Fault(Subcode), bit1: DRED0 bit2: External Shutdown Signal bit3: Meter NG bit4: Meter Abnormal		uint16be	1	1	0		level		true	false	false	false
+32201	Flash Fault	R/o bit0: Generation data storage failure, Parameter info, BAT info		uint16be	1	1	0		level		true	false	false	false
+32203	Com Fault 1	R/o dsp, box, ev, commodule, ble, meter		uint16be	1	1	0		level		true	false	false	false
+32204	Com Fault 2	R/o 		uint16be	1	1	0		level		true	false	false	false
+32205	Burning Abnormal	R/o dsp, meter, afci, box, ev		uint16be	1	1	0		level		true	false	false	false
+32206	Soft Reset	R/o Watchdog, can com failure, function safe		uint16be	1	1	0		level		true	false	false	false
+32208	BMS1 Fault 1	R/o Refer to Subcode list		uint16be	1	1	0		level		true	false	false	false
+32209	BMS1 Fault 2	R/o Refer to Subcode list		uint16be	1	1	0		level		true	false	false	false
+32210	BMS2 Fault 1	R/o Refer to Subcode list		uint16be	1	1	0		level		true	false	false	false
+32211	BMS2 Fault 2	R/o Refer to Subcode list		uint16be	1	1	0		level		true	false	false	false
+32220	BAT1 Voltage Protection Subcode	R/o 		uint16be	1	1	0		level		true	false	false	false
+32221	BAT1 Current Protection Subcode	R/o 		uint16be	1	1	0		level		true	false	false	false
+32222	BAT1 Temperature Protection Subcode	R/o 		uint16be	1	1	0		level		true	false	false	false
+32223	BAT1 Unbalance Protection	R/o 		uint16be	1	1	0		level		true	false	false	false
+32224	BAT1 ISO Protection / Collecting Thread Subcode	R/o 		uint16be	1	1	0		level		true	false	false	false
+32225	BAT1 Other Protection Subcode	R/o 		uint16be	1	1	0		level		true	false	false	false
+32226	AC System Protection Subcode	R/o 		uint16be	1	1	0		level		true	false	false	false
+32227	BAT2 Voltage Protection Subcode	R/o 		uint16be	1	1	0		level		true	false	false	false
+32228	BAT2 Current Protection Subcode	R/o 		uint16be	1	1	0		level		true	false	false	false
+32229	BAT2 Temperature Protection Subcode	R/o 		uint16be	1	1	0		level		true	false	false	false
+32230	BAT2 Unbalance Protection	R/o 		uint16be	1	1	0		level		true	false	false	false
+32231	BAT2 ISO Protection / Collecting Thread Subcode	R/o 		uint16be	1	1	0		level		true	false	false	false
+32232	BAT2 Other Protection Subcode	R/o 		uint16be	1	1	0		level		true	false	false	false
+32234	Arc Fault  Subcode	R/o bit0-bit3  respectively  express four		uint16be	1	1	0		level		true	false	false	false
+32235	Function Safety Fault Subcode	R/o 		uint16be	1	1	0		level		true	false	false	false
+32236	Burning Abnormal Failure	R/o 		uint16be	1	1	0		level		true	false	false	false
+32237	DCDC1 Fault Subcode	R/o 		uint16be	1	1	0		level		true	false	false	false
+32238	DCDC1 Alarm Subcode	R/o 		uint16be	1	1	0		level		true	false	false	false
+32239	DCDC2 Fault Subcode	R/o 		uint16be	1	1	0		level		true	false	false	false
+32240	DCDC2 Alarm Subcode	R/o 		uint16be	1	1	0		level		true	false	false	false
