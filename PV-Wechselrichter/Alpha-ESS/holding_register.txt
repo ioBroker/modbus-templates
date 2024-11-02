@@ -98,3 +98,9 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 1856	System_time : (year)-(month)	0x740 Systemzeit Jahr/Monat 		uint16be	1	1	0		value		true	false	false	false
 1857	System_time : (day)-(hour)	0x741 Systemzeit Tag/Stunde		uint16be	1	1	0		value		true	false	false	false
 1858	System_time : (minute)-(second)	0x742 Systemzeit Minute/Sekunde		uint16be	1	1	0		value		true	false	false	false
+2176	Dispatch Start	0x880 Dispatch Start		uint16be	1	1	0		value		true	false	false	false
+2177	Dispatch Active Power	0x881 Dispatch Active Power		int32be	2	1	0		value		true	false	false	false
+2179	Dispatch Reactive Power	0x883 Dispatch Reactive Power		int32be	2	1	0		value		true	false	false	false
+2181	Dispatch Mode	0x885 Dispatch Mode		uint16be	1	1	0		value		true	false	false	false
+2182	Dispatch SOC	0x886 Dispatch SOC		uint16be	1	1	0		value		true	false	false	false
+2183	Dispatch Time	0x887 Dispatch Time		uint32be	2	1	0		value		true	false	false	false
