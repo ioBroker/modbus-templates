@@ -95,3 +95,6 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 2256	PV Inverter energy	0x8D0 PV Inverter Energie	kWh	uint32be	2	0,1	0		value		true	false	false	false
 2258	The system total PV energy	0x8D2 The system total PV energy	kWh	uint32be	2	0,1	0		value		true	false	false	false
 2260	System fault	0x8D4 System-Fehler		uint32be	2	1			state		true	false	false	false
+1856	System_time : (year)-(month)	0x740 Systemzeit Jahr/Monat 		uint16be	1	1	0		value		true	false	false	false
+1857	System_time : (day)-(hour)	0x741 Systemzeit Tag/Stunde		uint16be	1	1	0		value		true	false	false	false
+1858	System_time : (minute)-(second)	0x742 Systemzeit Minute/Sekunde		uint16be	1	1	0		value		true	false	false	false
