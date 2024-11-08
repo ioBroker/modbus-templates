@@ -60,7 +60,7 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 35178	BUS Voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
 35179	NBUS Voltage	R/o 	V	uint16be	1	0,1	0		level		true	false	false	false
 35180	Battery1 Voltage	R/o BMS communication OK = voltage BMS send to inverter	V	uint16be	1	0,1	0		level		true	false	false	false
-35181	Battery1 Current	R/o 	A	uint16be	1	0,1	0		level		true	false	false	false
+35181	Battery1 Current	R/o 	A	int16be	1	0,1	0		level		true	false	false	false
 35182	Battery1 Power	R/o 200ms Average	W	int32be	2	1	0		level		true	false	false	false
 35184	Battery1 Mode	R/o Refer to Table 8-9		uint16be	1	1	0		level		true	false	false	false
 35185	Warning Code	R/o 		uint16be	1	1	0		level		true	false	false	false
