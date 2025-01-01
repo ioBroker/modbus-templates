@@ -1,0 +1,51 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	cw	isScale
+30005	Parameter.Seriennummer	Seriennummer		uint32be	2				level		false	false
+30201	Measurement.Operation.Health	Zustand		uint32be	2				level		false	false
+30219	Grund der Leistungsreduzierung	Measurement.Operation.DrtStt		uint32be	2				level		false	false
+30225	Measurement.Isolation.LeakRis	Isolationswiderstand	MOhm	uint32be	2	0.000001		x<0?0:x*0.000001	level		false	false
+30513	Measurement.TotWhOut	Gesamtertrag	kWh	uint64be	4	0,001			level		false	false
+30521	Measurement.Metering.TotOpTms	Betriebszeit	s	uint64be	4				level		false	false
+30525	Einspeisezeit	Measurement.Metering.TotFeedTms	s	uint64be	4				level		false	false
+30769	Measurement.DcMs.Amp.A	DC Strom Eingang A	A	int32be	2	0,001		x<-1000?0:x*0.001	level		false	false
+30771	Measurement.DcMs.Vol.A	DC Spannung Eingang A	V	int32be	2	0,01		x<0?0:x*0.01	level		false	false
+30773	Measurement.DcMs.Watt.A	DC Leistung Eingang A	W	int32be	2				level		false	false
+30775	Measurement.GridMs.TotW	Leistung	W	int32be	2	1	0	x<0?0:x	level		false	false
+30777	Measurement.GridMs.W.phsA	Leistung L1	W	int32be	2	1		x<0?0:x	level		false	false
+30779	Measurement.GridMs.W.phsB	Leistung L2	W	int32be	2	1		x<0?0:x	level		false	false
+30781	Measurement.GridMs.W.phsC	Leistung L2	W	int32be	2	1		x<0?0:x	level		false	false
+30783	Measurement.GridMs.PhV.phsA	Netzspannung Phase L1	V	uint32be	2	0,01		x>100000?0:x*0.01	level		false	false
+30785	Measurement.GridMs.PhV.phsB	Netzspannung Phase L2	V	uint32be	2	0,01		x>100000?0:x*0.01	level		false	false
+30787	Measurement.GridMs.PhV.phsC	Netzspannung Phase L3	V	uint32be	2	0,01		x>100000?0:x*0.01	level		false	false
+30789	Measurement.GridMs.PhV.phsA2B	Netzspannung Phase L1 gegen L2	V	uint32be	2	0,01		x>100000?0:x*0.01	level		false	false
+30791	Measurement.GridMs.PhV.phsB2C	Netzspannung Phase L2 gegen L3	V	uint32be	2	0,01		x>100000?0:x*0.01	level		false	false
+30793	Measurement.GridMs.PhV.phsC2A	Netzspannung Phase L3 gegen L1	V	uint32be	2	0,01		x>100000?0:x*0.01	level		false	false
+30795	Measurement.GridMs.TotA	Netzstrom	A	uint32be	2	0,001		x>300000?0:x*0.001	level		false	false
+30797	Measurement.GridMs.A.phsA	Netzstrom L1	A	uint32be	2	0,001		x>100000?0:x*0.001	level		false	false
+30799	Measurement.GridMs.A.phsB	Netzstrom L2	A	uint32be	2	0,001		x>100000?0:x*0.001	level		false	false
+30801	Measurement.GridMs.A.phsC	Netzstrom L3	A	uint32be	2	0,001		x>100000?0:x*0.001	level		false	false
+30803	Measurement.GridMs.Hz	Netzfrequenz	Hz	uint32be	2	0,01		x>60000?0:x*0.01	level		false	false
+30805	Measurement.GridMs.TotVAr	Blindleistung	Var	int32be	2			x<-1000?0:x	level		false	false
+30807	Measurement.GridMs.VAr.phsA	Blindleistung L1	Var	int32be	2			x<-1000?0:x	level		false	false
+30809	Measurement.GridMs.VAr.phsB	Blindleistung L2	Var	int32be	2			x<-1000?0:x	level		false	false
+30811	Measurement.GridMs.VAr.phsC	Blindleistung L3	Var	int32be	2			x<-1000?0:x	level		false	false
+30813	Measurement.GridMs.TotVA	Scheinleistung	VA	int32be	2	0,01		x<0?0:x*0.01	level		false	false
+30815	Measurement.GridMs.VA.phsA	Scheinleistung L1	VA	int32be	2	0,01		x<0?0:x*0.01	level		false	false
+30817	Measurement.GridMs.VA.phsB	Scheinleistung L2	VA	int32be	2	0,01		x<0?0:x*0.01	level		false	false
+30819	Measurement.GridMs.VA.phsC	Scheinleistung L3	VA	int32be	2	0,01		x<0?0:x*0.01	level		false	false
+30953	Innentemperatur	Innentemperatur	°C	int32be	2	0,1			level		false	false
+30957	Measurement.DcMs.Amp.B	DC Strom Eingang B	A	int32be	2	0,001		x<-1000?0:x*0.001	level		false	false
+30959	Measurement.DcMs.Vol.B	DC Spannung Eingang B	V	int32be	2	0,01		x<0?0:x*0.01	level		false	false
+30961	Measurement.DcMs.Watt.B	DC Leistung Eingang B	W	int32be	2	1		x<-1000?0:x	level		false	false
+30963	Measurement.DcMs.Amp.C	DC Strom Eingang C	A	int32be	2	0,001		x<-1000?0:x*0.001	level		false	false
+30965	Measurement.DcMs.Vol.C	DC Spannung Eingang C	V	int32be	2	0,01		x<0?0:x*0.01	level		false	false
+30967	Measurement.DcMs.Watt.C	DC Leistung Eingang C	W	int32be	2	1		x<-1000?0:x	level		false	false
+30975	Measurement.Inverter.DclVol	Zwischenkreisspannung	V	int32be	2	0,01		x<-1000?0:x*0.01	level		false	false
+30977	Measurement.GridMs.A.phsA	Netzstrom Phase L1	A	int32be	2	0,001		x<-1000?0:x*0.001	level		false	false
+30979	Measurement.GridMs.A.phsB	Netzstrom Phase L2	A	int32be	2	0,001		x<-1000?0:x*0.001	level		false	false
+30981	Measurement.GridMs.A.phsC	Netzstrom Phase L3	A	int32be	2	0,001		x<-1000?0:x*0.001	level		false	false
+31247	Measurement.Isolation.FltA	Fehlerstrom DC	A	int32be	2	0,001			level		false	false
+32209	Measurement.DcMs.TotDcEnCntWh.A	DC Energie A	kWh	uint64be	4	0,001			level		false	false
+32213	Measurement.DcMs.TotDcEnCntWh.B	DC Energie B	kWh	uint64be	4	0,001			level		false	false
+32217	Measurement.DcMs.TotDcEnCntWh.C	DC Energie C	kWh	uint64be	4	0,001			level		false	false
+33001	Measurement.Operation.StandbyStt	Standby-Status		uint32be	2				level		false	false
+40029	Measurement.Operation.OpStt	Allgemeiner Betriebszustand		uint32be	2				level		false	false
