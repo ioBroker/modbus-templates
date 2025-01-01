@@ -1,0 +1,39 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+40002	ID_Code	ID-Code Anlage		uint32be	2	1	0		state		true	false	false	false
+40004	Seriennummer	Aldes Seriennummer		uint64be	4	1	0		value		true	false	false	false
+40013	Version	Software Version		uint16be	1	1	0		state		true	false	false	false
+40021	Reihenfolge_Datensicherung	Reihenfolge Datensicherung		uint16be	1	1	0		state		true	false	false	false
+40257	Regelungsmodus	Regelungsmodus		int16be	1	1	0		state		true	false	false	false
+40258	Luftgeschwindigkeit	Luftgeschwindigkeit		uint16be	1	1	0		state		true	false	false	false
+40259	Nächtliche_Durchlüftung	Nächtliche Durchlüftung		int16be	1	1	0		state		true	false	false	false
+40260	Verwaltung_Wärmetauscher_Bypass	Verwaltung Wärmetauscher-Bypass		uint16be	1	1	0		state		true	false	false	false
+40261	Regelungsverfahren	Regelungsverfahren		uint16be	1	1	0		state		true	false	false	false
+40265	Dauer_Minimal	Dauer Minimal	Min	uint16be	1	5	0		state		true	false	false	false
+40266	Dauer_Boost	Dauer Boost	Min	uint16be	1	5	0		state		true	false	false	false
+40267	Dauer_Maximal	Dauer Maximal	Min	uint16be	1	5	0		state		true	false	false	false
+40268	Lebensdauer_des_Filters	Lebensdauer des Filters	Mon	uint16be	1	1	0		state		true	false	false	false
+40269	Dauer_Aux1	Dauer Aux1	Min	uint16be	1	5	0		state		true	false	false	false
+40270	Dauer_Aux2	Dauer Aux2	Min	uint16be	1	5	0		state		true	false	false	false
+40273	Sollwert_Abluft_Fördermenge	Sollwert Abluft-Fördermenge		uint16be	1	1	0		state		true	false	false	false
+40274	Sollwert_Zuluft_Fördermenge	Sollwert Zuluft-Fördermenge		uint16be	1	1	0		state		true	false	false	false
+40275	Drucksollwert_Abluft	Drucksollwert Abluft		uint16be	1	1	0		state		true	false	false	false
+40276	Drucksollwert_Zuluft	Drucksollwert Zuluft		uint16be	1	1	0		state		true	false	false	false
+40277	Sollwert_Abluft_Geschwindigkeit	Sollwert Abluft-Geschwindigkeit		uint16be	1	1	0		state		true	false	false	false
+40278	Sollwert_Zuluft_Geschwindigkeit	Sollwert Zuluft-Geschwindigkeit		uint16be	1	1	0		state		true	false	false	false
+40279	Balance	Balance Zuluft-/Abluft-Fördermenge	%	uint16be	1	1	0		state		true	false	false	false
+40283	Sollwert_Komforttemperatur	Sollwert Komforttemperatur Sommer	°C	uint16be	1	1	0		state		true	false	false	false
+40284	Unknown	Unknown		uint16be	1	1	0		state		true	false	false	false
+40285	Parameter_U1	Parameter 0-10V U1		uint16be	1	1	0		state		true	false	false	false
+40286	Parameter_U2	Parameter 0-10V U2		uint16be	1	1	0		state		true	false	false	false
+40337	Status_Eingänge	Status der Eingänge		int16be	1	1	0		state		true	false	false	false
+40338	Versorgungsspannung	Versorgungsspannung	V	uint16be	1	0.1	0		state		true	false	false	false
+40339	Eingang_10V	Eingang 0-10V	V	uint16be	1	1	0		state		true	false	false	false
+40340	Schalterstatus	Schalterstatus		uint16be	1	1	0		state		true	false	false	false
+40347	Filterstatus	Filterstatus		uint16be	1	1	0		state		true	false	false	false
+40348	Filterstatus	Filterstatus Std	Std	uint16be	1	1	0		state		true	false	false	false
+40349	Bypass_Status	Bypass Status		uint16be	1	1	0		state		true	false	false	false
+40350	Bypass_Strom	Vom Bypass aufgenommener Strom		uint16be	1	1	0		state		true	false	false	false
+40351	Frischlufttemperatur	Frischlufttemperatur	°C	int16be	1	0.01	0		state		true	false	false	false
+40352	Innenlufttemperatur	Innenlufttemperatur	°C	int16be	1	0.01	0		state		true	false	false	false
+40385	Code_Störung	Code der aktuellen Störung		int16be	1	1	0		state		true	false	false	false
+40393	Störungscode_N4	Störungscode N-4		int16be	1	1	0		state		true	false	false	false
