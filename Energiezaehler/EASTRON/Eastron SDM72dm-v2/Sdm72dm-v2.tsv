@@ -1,0 +1,42 @@
+_address	deviceId	name	description	unit	type	len	factor	offset	formula	role	room	cw	isScale
+30001	2	Phase_1_Spannung	Phase_1_Spannung	V	floatbe	2	1	0		state		false	false
+30003	2	Phase_2_Spannung	Phase 2 Spannung	V	floatbe	2	1	0		state		false	false
+30005	2	Phase_3_Spannung	Phase 3 Spannung	V	floatbe	2	1	0		state		false	false
+30007	2	Phase_1_Ampere	Phase 1 Ampere	A	floatbe	2	1	0		state		false	false
+30009	2	Phase_2_Ampere	Phase 2 Ampere	A	floatbe	2	1	0		state		false	false
+30011	2	Phase_3_Ampere	Phase 3 Ampere	A	floatbe	2	1	0		state		false	false
+30013	2	Phase_1_Leistung	Phase 1 Leistung	W	floatbe	2	1	0		state		false	false
+30015	2	Phase_2_Leistung	Phase 2 Leistung	W	floatbe	2	1	0		state		false	false
+30017	2	Phase_3_Leistung	Phase 3 Leistung	W	floatbe	2	1	0		state		false	false
+30019	2	Phase_1_Scheinleistung	Phase 1 Scheinleistung	VA	floatbe	2	1	0		state		false	false
+30021	2	Phase_2_Scheinleistung	Phase 2 Scheinleistung	VA	floatbe	2	1	0		state		false	false
+30023	2	Phase_3_Scheinleistung	Phase 3 Scheinleistung	VA	floatbe	2	1	0		state		false	false
+30025	2	Phase_1_Blindleistung	Phase 1 Blindleistung	VAr	floatbe	2	1	0		state		false	false
+30027	2	Phase_2_Blindleistung	Phase 2 Blindleistung	VAr	floatbe	2	1	0		state		false	false
+30029	2	Phase_3_Blindleistung	Phase 3 Blindleistung	VAr	floatbe	2	1	0		state		false	false
+30031	2	Phase_1_Leistungsfaktor	Phase 1 Leistungsfaktor		floatbe	2	1	0		state		false	false
+30033	2	Phase_2_Leistungsfaktor	Phase 2 Leistungsfaktor		floatbe	2	1	0		state		false	false
+30035	2	Phase_3_Leistungsfaktor	Phase 3 Leistungsfaktor		floatbe	2	1	0		state		false	false
+30043	2	Spannung_Durchschnitt	Spannung Durchschnitt	V	floatbe	2	1	0		state		false	false
+30047	2	Stromstärke_Durchschnitt	Stromstärke Durchschnitt	A	floatbe	2	1	0		state		false	false
+30049	2	Summe_Stromstärke	Summe Stromstärke	A	floatbe	2	1	0		state		false	false
+30053	2	Gesamtleistung	Gesamtleistung	W	floatbe	2	1	0		state		false	false
+30057	2	Gesamtscheinleistung	Gesamtscheinleistung	VA	floatbe	2	1	0		state		false	false
+30061	2	Gesamtblindleistung	Gesamtblindleistung	VAr	floatbe	2	1	0		state		false	false
+30063	2	Total_system_power_factor	Total system power factor		floatbe	2	1	0		state		false	false
+30071	2	Netzfrequenz	Netzfrequenz	Hz	floatbe	2	1	0		state		false	false
+30073	2	Energie_import	Energie import	kWh	floatbe	2	1	0		state		false	false
+30075	2	Energie_Export	Energie Export	kWh	floatbe	2	1	0		state		false	false
+30201	2	Spannung_Line_1_zu_Line_2	Spannung Line 1 zu Line 2	V	floatbe	2	1	0		state		false	false
+30203	2	Spannung_Line_2_zu_Line_3	Spannung Line 2 zu Line 3	V	floatbe	2	1	0		state		false	false
+30205	2	Spannung_Line_3_zu_Line_1	Spannung Line 3 zu Line 1	V	floatbe	2	1	0		state		false	false
+30207	2	Spanung_Line_zu_Line_Durchschnitt	Spanung Line zu Line Durchschnitt	V	floatbe	2	1	0		state		false	false
+30225	2	Stromstärke_Neutralleiter	Stromstärke Neutralleiter	A	floatbe	2	1	0		state		false	false
+30343	2	Gesamtenergie_Import_Export	Gesamtenergie Import + Export	kWh	floatbe	2	1	0		state		false	false
+30345	2	Blindleistung	Blindleistung	kVArh	floatbe	2	1	0		state		false	false
+30385	2	Gesamtenergie_rücksetzbar	Gesamtenergie rücksetzbar	kWh	floatbe	2	1	0		state		false	false
+30389	2	Gesamtenergie_Import_rücksetzbar	Gesamtenergie Import rücksetzbar	kWh	floatbe	2	1	0		state		false	false
+30391	2	Gesamtenergie_Export_rücksetzbar	Gesamtenergie Export rücksetzbar	kWh	floatbe	2	1	0		state		false	false
+30397	2	Gesamtenergie_netto_Imp-Exp	Gesamtenergie netto Imp-Exp	kWh	floatbe	2	1	0		state		false	false
+31281	2	Leistung_Import	Leistung Import	W	floatbe	2	1	0		state		false	false
+31283	2	Leistung_Export	Leistung Export	W	floatbe	2	1	0		state		false	false
