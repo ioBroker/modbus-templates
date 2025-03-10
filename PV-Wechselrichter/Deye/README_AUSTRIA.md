@@ -28,8 +28,9 @@ Wichtig ist das Einstellen der Modbus-Adresse am Deye (Menü erweiterte Einstell
 
 ![03_Deye WR](https://github.com/user-attachments/assets/46b871b0-3910-4f9f-b33f-342478050baa)
 
-Mit dem Tool VirCom_en konfiguriert man den Konverter. Wichtig ist hier die Einstellung des Modbus-Gateway Types "Simple Modbus TCP to RTU" im Button "More Advanced Settings". Nach dem Speichern müsste die Link-LED im Waveshare-Adapter blau leuchten.
+Mit der Web-Oberfläche des Konverters und dem Tool VirCom_en konfiguriert man den Konverter. Wichtig ist hier die Einstellung des Modbus-Gateway Types "Simple Modbus TCP to RTU" im Button "More Advanced Settings". Nach dem Speichern müsste die Link-LED im Waveshare-Adapter blau leuchten.
 
+![image](https://github.com/user-attachments/assets/cdea9cde-0c11-4503-aa6e-c1584e258269)
 ![image](https://github.com/user-attachments/assets/d565a485-94b8-4661-bc7c-05c4280a030a)
 
 Das Konfigurieren der Modbus-Instanz im IOB verläuft wie folgt, wobei besonders die Portnummer und die Modbus-Adresse von großer Bedeutung sind.
