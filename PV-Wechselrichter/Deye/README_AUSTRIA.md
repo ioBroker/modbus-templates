@@ -31,7 +31,12 @@ Mit dem Tool VirCom_en konfiguriert man den Konverter. Wichtig ist hier die Eins
 
 Das Konfigurieren der Modbus-Instanz im IOB verläuft wie folgt, wobei besonders die Portnummer und die Modbus-Adresse von großer Bedeutung sind.
 
-![05_Modbus1](https://github.com/user-attachments/assets/ca05ef91-e1bf-4952-8eb6-322974d1f569)
+![Clipboard04](https://github.com/user-attachments/assets/8dd89a8b-8413-48c0-a56b-34ad546d2c38)
+
+In den IOB-Objekten kann man dann die Datenpunkte verwenden:
+
+![Clipboard05](https://github.com/user-attachments/assets/4e6a9ac7-2b9d-4d0b-9131-5568159cc406)
+
 
 
 
