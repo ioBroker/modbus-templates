@@ -6,7 +6,7 @@ Für Deye-Wechselrichter SUN5~12k gibt es in Österreich eine separate Firmware 
 
 usw.
 
-Die Anbindung des Wechselrichters an den IoBroker-ModBud-Adapter erfolgt z.B. mit dem ModBus-Konverter „Waveshare RS485 to Eth“.  Die Modbus-Buchse ist offenbar in Österreich inaktiv und somit unbrauchbar. Also braucht man ein gesplittetes Cat-Kabel zwischen Deye BMS-Buchse und der CAN-Buchse der Batterie. 
+Die LAN-Anbindung des Wechselrichters an den ModBus-Adapter im IoBroker erfolgt z.B. mit dem ModBus-Konverter „Waveshare RS485 to Eth“.  Die Modbus-Buchse ist offenbar in Österreich inaktiv und somit unbrauchbar. Also braucht man ein gesplittetes Cat-Kabel zwischen Deye BMS-Buchse und der CAN-Buchse der Batterie. 
 
 Dieses CAT-7-Kabel verwendet folgende Drähte:
 
