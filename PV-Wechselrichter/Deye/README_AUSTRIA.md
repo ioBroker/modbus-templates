@@ -28,7 +28,7 @@ Wichtig ist das Einstellen der Modbus-Adresse am Deye (Menü erweiterte Einstell
 
 ![03_Deye WR](https://github.com/user-attachments/assets/46b871b0-3910-4f9f-b33f-342478050baa)
 
-Mit der Waveshare-Web-Oberfläche konfiguriert man den Konverter. 
+Der Waveshare RS485-TO-ETH wird standardmßig mit der IP 192.168.1.254 geliefert, die man ans eigene Subnetz anpasst. Die Verwendung einer statischen IP-Adresse und die Verwendung des Ports 502 wird empfohlen. Mit der Waveshare-Web-Oberfläche konfiguriert man den Konverter. 
 
 ![image](https://github.com/user-attachments/assets/cdea9cde-0c11-4503-aa6e-c1584e258269)
 
