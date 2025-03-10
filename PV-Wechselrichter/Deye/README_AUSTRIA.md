@@ -3,18 +3,18 @@ Für Deye-Wechselrichter SUN5~12k gibt es in Österreich eine separate Firmware.
 40588 Battery Voltage -> 40588 minus 40001 = 587
 usw.
 
-Die Anbindung des Wechselrichters an den IoBroker-ModBud-Adapter erfolgt z.B. mit dem ModBus-Konverter „Waveshare RS485 to Eth“.  Die Modbus-Buchse ist offenbar in Österreich inaktiv und somit unbrauchbar. Also braucht man ein gesplittete Cat-Kabel zwischen Deye BMS-Buchse und der CAN-Buchse der Batterie. 
+Die Anbindung des Wechselrichters an den IoBroker-ModBud-Adapter erfolgt z.B. mit dem ModBus-Konverter „Waveshare RS485 to Eth“.  Die Modbus-Buchse ist offenbar in Österreich inaktiv und somit unbrauchbar. Also braucht man ein gesplittetes Cat-Kabel zwischen Deye BMS-Buchse und der CAN-Buchse der Batterie. 
 
 Dieses CAT-7-Kabel verwendet folgende Drähte:
 
-Deye-BMS-Kabel auftrennen und die Drähte 6, 7 und 8 verlöten:
+Deye-BMS-Kabel auftrennen und die Drähte 6, 7 und 8 mit einem neuen CAT-Kabel verlöten:
 1 = 485B
 2 = 485A
 6 = GND weiß/blau
 7 = 485A orange
 8 = 485B weiß/orange
 
-Converter RS485 to Eth-Pins mit dem Split-Kabel verbinden:
+Converter RS485 to Eth-Pins mit dem neuen CAT-Kabel verbinden:
 GND weiß/blau
 485B weiß/orange
 485A orange
