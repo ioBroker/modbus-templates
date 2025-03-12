@@ -1,0 +1,34 @@
+_address	deviceId	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+3	1	Seriennummer	Seriennummer		string	5	0	0		state		true	false	false	false
+102	1	Batteriekapazitaet	Batteriekapazitaet	kWh	int16be	1	0,05	0		level		true	false	false	false
+108	1	BatterieLadestromMax	Maximaler Ladestrom der Batterie	A	int16be	1	0	0		level		true	false	false	false
+109	1	BatterieEntladungMax	Max A Entladung	A	int16be	1	0	0		level		true	false	false	false
+122	1	GEN_Laufzeit	Gen-Cool-Time	h	int16be	1	0	0		level		true	false	false	false
+500	1	Status	Status (Standby, check, norm, altert, fault)		string	1	1	0		level		true	false	false	false
+501	1	Energie pro Tag	Power per Day	kWh	int16be	1	1	0		level		true	false	false	false
+526	1	Load_Tagesenergie	Tagesenergie Load	kWh	int16be	1	0,01	0		level		true	false	false	false
+530	1	PV1_Power pro Tag	Day_PV-1_Power kWh	kWh	int16be	1	0,1	0		level		true	false	false	false
+531	1	PV2_Power pro Tag	Day_PV-2_Power kWh	kWh	int16be	1	0,1	0		level		true	false	false	false
+541	1	AC_Temperatur	AC_Temp	°C	int16be	1	0,01	0		level		true	false	false	false
+553	1	Warnhinweis1	Warning message word 1		string	1	1	0		level		true	false	false	false
+586	1	Batterietemperatur	battery temperature	°C	int16be	1	0,01	10		level		true	false	false	false
+587	1	Batteriespannung	battery voltage	V	int16be	1	0,01	0		level		true	false	false	false
+588	1	Batteriekapazitaet SOC	battery capacity	%	int16be	1	1	0		level		true	false	false	false
+590	1	Batterieausgangsleistung	Battery output power	W	int16be	1	1	0		level		true	false	false	false
+591	1	Batterieausgangsstrom	Battery output current	A	int16be	1	0,01	0		level		true	false	false	false
+627	1	WR-Ausgangsspannung L1	Inverter output phase voltage A	V	int16be	1	0,1	0		level		true	false	false	false
+628	1	WR-Ausgangsspannung L2	Inverter output phase voltage B	V	int16be	1	0,1	0		level		true	false	false	false
+629	1	WR-Ausgangsspannung L3	Inverter output phase voltage C	V	int16be	1	0,1	0		level		true	false	false	false
+630	1	WR-Ausgangsstrom L1	Inverter output phase current A	A	int16be	1	0,01	0		level		true	false	false	false
+631	1	WR-Ausgangsstrom L2	Inverter output phase current B	A	int16be	1	0,01	0		level		true	false	false	false
+632	1	WR-Ausgangsstrom L3	Inverter output phase current C	A	int16be	1	0,01	0		level		true	false	false	false
+636	1	WR-Gesamtleistung	Inverter output total power	W	int16be	1	1	0		level		true	false	false	false
+637	1	WR-Scheinleistung gesamt	Inverter output total apparent power	W	int16be	1	1	0		level		true	false	false	false
+638	1	WR-Frequenz	Inverter frequency	Hz	int16be	1	0,01	0		level		true	false	false	false
+667	1	GEN_Gesamtleistung	Gesamtleistung des Gen-Ports	W	int16be	1	1	0		level		true	false	false	false
+672	1	PV1 Erzeugungsleistung	PV1 Erzeugungsleistung	W	int16be	1	1	0		level		true	false	false	false
+673	1	PV2 Erzeugungsleistung	PV2 Erzeugungsleistung	W	int16be	1	1	0		level		true	false	false	false
+676	1	PV1 DC Spannung	Dc voltage 1	V	int16be	1	0,1	0		level		true	false	false	false
+677	1	PV1 DC Strom	Dc current 1	A	int16be	1	0,1	0		level		true	false	false	false
+678	1	PV2 DC Spannung	Dc voltage 2	V	int16be	1	0,1	0		level		true	false	false	false
+679	1	PV2 DC Strom	Dc current 2	A	int16be	1	0,1	0		level		true	false	false	false
