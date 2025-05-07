@@ -1,0 +1,22 @@
+_address	deviceId	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+41000	2	Extract air temperature	Extract air temperature	°C	floatsw	2	1	0		value.temperature		true	false	false	false
+41002	2	Outdoor air temperature	Outdoor air temperature	°C	floatsw	2	1	0		value.temperature		true	false	false	false
+41004	2	Exhaust air temperature	Exhaust air temperature	°C	floatsw	2	1	0		value.temperature		true	false	false	false
+41006	2	Humidity extract air	Humidity, extract air	%	uint16be	1	1	0		value.humidity		true	false	false	false
+41009	2	Supply air temperature	Supply air temperature	°C	floatsw	2	1	0		value.temperature		true	false	false	false
+41011	2	Humidity supply air	Humidity, supply air	%	uint16be	1	1	0		value.humidity		true	false	false	false
+41016	2	Error message	Error message: 0 = device OK; 1 = error		uint8be	1	1	0		value		true	false	false	false
+41017	2	Air filter change indicator	Air filter change indicator: 0 = time not elapsed; 1 = elapsed		uint8be	1	1	0		indicator		true	false	false	false
+41018	2	Frost protection function	Frost protection function: 0 = not active; 1 = active		uint8be	1	1	0		value		true	false	false	false
+41020	2	Ventilation level extract air	Ventilation level for extract air	m3/h	uint8be	1	1	0		level		true	false	false	false
+41021	2	Ventilation level supply air	Ventilation level for supply air	m3/h	uint8be	1	1	0		level		true	false	false	false
+41027	2	Time until air filter change	Time until air filter change	Days	uint16be	1	1	0		value		true	false	false	false
+41030	2	Ventilation unit operating hours	Ventilation unit operating hours	h	uint16be	1	1	0		value		true	false	false	false
+41032	2	Fan motors operating hours	Fan motors operating hours	h	uint16be	1	1	0		value		true	false	false	false
+41100	2	Mode			uint8be	1	1	0		value		true	false	false	false
+41101	2	Mode Zuluft			uint8be	1	1	0		value		true	false	false	false
+41102	2	Mode Abluft			uint8be	1	1	0		value		true	false	false	false
+41120	2	setModeType	1: Off, 2: Automatic Modes, 3: Balanced Ventilation Level, 4: Unbalanced Ventilation Level		uint8be	1	1	0		value		false	false	false	false
+41121	2	setModeSubType	Automatic Modes: 112=Humidity control (F & FC units), 144=CO2 control (FC unit), 16=Automatic mode (FC unit); Balanced ventilation level: 0-200 (=0-100m³ on both fans); Unbalanced Ventilation Level: 0-200 (=0-100m³ on supply air fan)		uint8be	1	1	0		value		false	false	false	false
+41122	2	setModeExhaustFan	Only for Unbalanced Ventilation Level: 0-200 (=0-100m³ on exhaust air fan)		uint8be	1	1	0		value		false	false	false	false
+41132	2	setModeConfirmWrite	Registers 41120, 41121 (and 41122 for unbalanced ventilation) and 41132 must be written in succession. Register 41132 must always be written last		uint8be	1	1	0		value		false	false	false	false
