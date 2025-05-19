@@ -1,0 +1,12 @@
+_address	deviceId	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+42000	2	Relative humidity starting point		%	uint8be	1	1	0			true	false	false	false
+42001	2	Min ventilation level for humidity control		%	uint8be	1	1	0			true	false	false	false
+42002	2	Max ventilation level for humidity control		%	uint8be	1	1	0			true	false	false	false
+42003	2	CO2 starting point		ppm	uint8be	1	1	0		value		true	false	false	false
+42004	2	Min ventilation level for CO2 control		%	uint8be	1	1	0		value		true	false	false	false
+42005	2	Max ventilation level for CO2 control		%	uint8be	1	1	0		value		true	false	false	false
+42006	2	unknown			uint8be	1	1	0			true	false	false	false
+42007	2	Ventilation level for external control input		min	uint8be	1	1	0			true	false	false	false
+42008	2	delay for external control input		min	uint8be	1	1	0			true	false	false	false
+42009	2	Runon time for external control input		min	uint8be	1	1	0			true	false	false	false
+42010	2	unknown			uint8be	1	1	0			true	false	false	false
