@@ -1,0 +1,19 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	cw	isScale
+30001	Akt.Drehzahl ZuLuftventilator	Akt.Drehzahl ZuLuftventilator	rpm	int16be	1						false	false
+30002	Akt.Drehzahl AbLuftventilator	Akt.Drehzahl AbLuftventilator	rpm	int16be	1						false	false
+30024	Akt. Betriebsart	Akt. Betriebsart		int16be	1						false	false
+30155	Akt.Ventilator Stufe Zuluft	Akt.Ventilator Stufe Zuluft	 	int16be	1						false	false
+30156	Akt.Ventilator Spannung ZuLuft	Akt.Ventilator Spannung ZuLuft	Volt	int16be	1	0.01					false	false
+30157	Akt.Ventilator Spannung AbLuft	Akt.Ventilator Spannung AbLuft	Volt	int16be	1	0.01					false	false
+30172	Akt.Leistung: Kompressor	Akt.Leistung: Kompressor in %	%	int16be	1						false	false
+30176	T5 VorVerdampfer	T5 VorVerdampfer in Grad Celsius	°C	uint16be	1	0,01					false	false
+30177	T6 Verdampfer	T6 Verdampfer in Grad Celsius	°C	uint16be	1	0,01					false	false
+30178	T8 Nach Vorwärme	T8 Nach Vorwärme in Grad Celcius	°C	uint16be	1	0,01					false	false
+30181	T13 Kompressor	T13 Kompressor in Grad Celicus	°C	uint16be	1	0,01					false	false
+30191	Akt.Drehzahl: Kompressor	Akt.Drehzahl: Kompressor	ppm	int16be	1						false	false
+30196	Zuluft	T1 Zuluft in Grad Celsius	°C	uint16be	1	0,01					false	false
+30197	T7 Abluft	T7 Abluft in Grad Celsius	°C	uint16be	1	0,01					false	false
+30198	T4 Fortluft	T4 Fortluft in Grad Celsius	°C	uint16be	1	0,01					false	false
+30199	Frischluft	T3 Frischluft in Grad Celsius	°C	uint16be	1	0,01					false	false
+30202	Akt. Max.Leistung Kompressor	Akt. Max.Leistung Kompressor in %	%	int16be	1	0.01					false	false
+30212	Akt.Ventilator Stufe Abluft	Akt.Ventilator Stufe Abluft	 	int16be	1						false	false
