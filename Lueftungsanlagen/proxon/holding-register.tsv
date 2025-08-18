@@ -1,0 +1,9 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+40017	Betriebsart	Betriebsart (0=Aus, 1=EcoSommer, 2=EcoWinter, 9=Test)		uint16be	1	1			level	enum.rooms.home	true	false		
+40018	Geräte Modell	Geräte Modell (0=FWT, 1=P)		uint16be	1	1			level	enum.rooms.home	true	true		
+40019	Geräte Typ	Geräte typ (0=Nur Heizen, 1=Heizen und Kühlen)		uint16be	1	1			level		true	true	false	
+40023	Lüfterstufe	Lüfter stufe in ECOSommer, ECOWinter, Test (1=LS1, 2=LS2, 3=LS3, 4=LS4)		uint16be	1	1	0		level		true	false	false	
+40063	Kühlung Freigabe	Kühlung Freigabe		uint16be	1	1			level		true	false	false	
+40071	Soll Temperatur Zone 1 (EG)	Soll Temperatur Zone 1 (EG)	°C	int16be	1	0,01	0		level		true	false	false	
+40116	Zone 1 (EG) Temperatursensor	Zone 1 (EG) Temperatursensor (0=Haupt Touch Bedienteil, 1=T2.1 auf neben Platine T41)		uint16be	1				level		true	true	false	
+40134	Intensivlüftung	Intensivlüftung Zeit in Minuten		uint16be	1				level		true	false	false	
