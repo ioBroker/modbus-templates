@@ -1,0 +1,13 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	cw	isScale
+31303	E-Today of inverter	Tagesleistung	kWh	uint32be	2	0.1	0		value		false	false
+31305	E-Total of inverter	Gesamtleistung	kWh	uint32be	2	0.1	0		value		false	false
+31307	H-Total	Gesamtlaufzeit	H	uint32be	2	1	0		value		false	false
+31309	Device Status	0: Wait; 1: Normal; 2: Fault;  4: Checking 		uint16be	1	1	0		value		false	false
+31311	Air temperature	Temperatur	°C	int16be	1	0.1	0		value		false	false
+31319	PV1 voltage	MPPT1 Spannung	V	int16be	1	0.1	0		value		false	false
+31320	PV1 current	MPPT1 A	A	int16be	1	0.01	0		value		false	false
+31321	PV2 voltage	MPPT2 Spannung	V	int16be	1	0.1	0		value		false	false
+31322	PV2 current	MPPT2 A	A	int16be	1	0.01	0		value		false	false
+31371	Active Power	Aktuelle Leistung	W	uint32be	2	1	0		value		false	false
+31378	Error Message	Fehlermeldung		uint16be	1	1	0		value		false	false
+31379	Warning Message	Warnmeldung		uint16be	1	1	0		value		false	false
