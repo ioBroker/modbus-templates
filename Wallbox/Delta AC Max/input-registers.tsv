@@ -1,0 +1,8 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	cw	isScale
+100	State	Condition of the EV Charger		uint16be	1	1	0		state		false	false
+102	EVSE Count	Number of EVSEs		uint16be	1	1	0		state		false	false
+103	Charger Error	Error Code		uint16be	1	1	0		state		false	false
+110	Serial Number	Serial Number of the EV Charger 		string	20	1	0		state		false	false
+130	Model	Charge Point Model 		string	20	1	0		state		false	false
+1000	Zustand	Zustand  der  EVSE		uint16be	1	1	0		state		false	false
+1005	Ladeleistung	 Aktuelle  Ladeleistung	W	uint32be	2	1	0		state		false	false
