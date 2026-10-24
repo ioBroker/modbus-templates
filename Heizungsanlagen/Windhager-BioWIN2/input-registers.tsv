@@ -1,0 +1,5 @@
+_address	deviceId	name	description	unit	type	len	factor	offset	formula	role	room	cw	isScale	sanitize	sanitizeAction	minValidValue	maxValidValue
+2166	1	Befüllgrad Brennstoffbehälter		%	int16be	1	1	0		level		false	false				
+2167	1	Befüllgrad Lagerraum		%	int16be	1	1	0		level		false	false				
+2180	1	Anzahl der Brennerstarts			int16be	1	1	0		level		false	false				
+2181	1	Betriebsstunden		Std.	int16be	1	1	0		level		false	false				

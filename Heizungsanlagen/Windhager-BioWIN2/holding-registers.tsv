@@ -1,0 +1,16 @@
+_address	deviceId	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale	sanitize	sanitizeAction	minValidValue	maxValidValue
+1000	1	Außentemperatur		°C	int16be	1	0.1	0		value.temperature		true	false	false	false				
+1003	1	Vorlauftemperatur HK1		°C	int16be	1	0.1	0		value.temperature		true	false	false	false				
+1004	1	Vorlauftemperatur HK2		°C	int16be	1	0.1	0		value.temperature		true	false	false	false				
+1007	1	Warmwassertemperatur		°C	int16be	1	0.1	0		value.temperature		true	false	false	false				
+2017	1	Puffertemperatur TPO		°C	int16be	1	0.1	0		value.temperature		true	false	false	false				
+2018	1	Puffertemperatur TPM		°C	int16be	1	0.1	0		value.temperature		true	false	false	false				
+2100	1	Kesseltemperatur		°C	int16be	1	0.1	0		value.temperature		true	false	false	false				
+2102	1	Kesselleistung		%	int16be	1	1	0		value		true	false	false	false				
+2103	1	Abgastemperatur		°C	int16be	1	0.1	0		value.temperature		true	false	false	false				
+2104	1	Brennkammertemperatur		°C	int16be	1	0.1	0		value.temperature		true	false	false	false				
+2122	1	Betriebsphase Kessel			int16be	1		0		state		true	false	false	false				
+2160	1	Restlaufzeit der Reinigung		Std.	int16be	1	1	0		state		true	false	false	false				
+2161	1	Restlaufzeit bis Hauptreinigung		Std.	int16be	1	1	0		state		true	false	false	false				
+2162	1	Restlaufzeit bis Wartung		Std.	int16be	1	1	0		state		true	false	false	false				
+2183	1	Pelletsverbrauch gesamt		t	int16be	1	0.01	0		state		true	false	false	false				
