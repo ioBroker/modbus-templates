@@ -1,0 +1,32 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+0	ActivePower+	ActivePower+	W	uint32be	2	0.1	0		value		true	false	false	false
+2	ActivePower-	ActivePower-	W	uint32be	2	0.1	0		value		true	false	false	false
+4	ReactivePower+	ReactivePower+	var	uint32be	2	0.1	0		value		true	false	false	false
+6	ReactivePower-	ReactivePower-	var	uint32be	2	0.1	0		value		true	false	false	false
+16	ApparentPower+	ApparentPower+	VA	uint32be	2	0.1	0		value		true	false	false	false
+18	ApparentPower-	ApparentPower-	VA	uint32be	2	0.1	0		value		true	false	false	false
+26	SupplyFrequency	SupplyFrequency	Hz	uint32be	2	0.001	0		value		true	false	false	false
+40	ActivePower+ (L1)	ActivePower+ (L1)	W	uint32be	2	0.1	0		value		true	false	false	false
+42	ActivePower- (L1)	ActivePower- (L1)	W	uint32be	2	0.1	0		value		true	false	false	false
+44	ReactivePower+ (L1)	ReactivePower+ (L1)	var	uint32be	2	0.1	0		value		true	false	false	false
+46	ReactivePower- (L1)	ReactivePower- (L1)	var	uint32be	2	0.1	0		value		true	false	false	false
+56	ApparentPower+ (L1)	ApparentPower+ (L1)	VA	uint32be	2	0.1	0		value		true	false	false	false
+58	ApparentPower- (L1)	ApparentPower- (L1)	VA	uint32be	2	0.1	0		value		true	false	false	false
+60	Current (L1)	Current (L1)	A	uint32be	2	0.001	0		value		true	false	false	false
+62	Voltage (L1)	Voltage (L1)	V	uint32be	2	0.001	0		value		true	false	false	false
+80	ActivePower+ (L2)	ActivePower+ (L2)	W	uint32be	2	0.1	0		value		true	false	false	false
+82	ActivePower- (L2)	ActivePower- (L2)	W	uint32be	2	0.1	0		value		true	false	false	false
+84	ReactivePower+ (L2)	ReactivePower+ (L2)	var	uint32be	2	0.1	0		value		true	false	false	false
+86	ReactivePower- (L2)	ReactivePower- (L2)	var	uint32be	2	0.1	0		value		true	false	false	false
+96	ApparentPower+ (L2)	ApparentPower+ (L2)	VA	uint32be	2	0.1	0		value		true	false	false	false
+98	ApparentPower- (L2)	ApparentPower- (L2)	VA	uint32be	2	0.1	0		value		true	false	false	false
+100	Current (L2)	Current (L2)	A	uint32be	2	0.001	0		value		true	false	false	false
+102	Voltage (L2)	Voltage (L2)	V	uint32be	2	0.001	0		value		true	false	false	false
+120	ActivePower+ (L3)	ActivePower+ (L3)	W	uint32be	2	0.1	0		value		true	false	false	false
+122	ActivePower- (L3)	ActivePower- (L3)	W	uint32be	2	0.1	0		value		true	false	false	false
+124	ReactivePower+ (L3)	ReactivePower+ (L3)	var	uint32be	2	0.1	0		value		true	false	false	false
+126	ReactivePower- (L3)	ReactivePower- (L3)	var	uint32be	2	0.1	0		value		true	false	false	false
+136	ApparentPower+ (L3)	ApparentPower+ (L3)	VA	uint32be	2	0.1	0		value		true	false	false	false
+138	ApparentPower- (L3)	ApparentPower- (L3)	VA	uint32be	2	0.1	0		value		true	false	false	false
+140	Current (L3)	Current (L3)	A	uint32be	2	0.001	0		value		true	false	false	false
+142	Voltage (L3)	Voltage (L3)	V	uint32be	2	0.001	0		value		true	false	false	false
