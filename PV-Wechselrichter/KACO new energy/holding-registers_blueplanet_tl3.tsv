@@ -1,0 +1,4 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+40144	10kW_Erzeugung	Aktuelle Gesamt Erzeugung	W	floatbe	2	1	0		level		true	false	false	false
+40154	10kW_GesamtErtrag	WattHours	kWh	floatbe	2	0.001	0		level		true	false	false	false
+40162	10kW_Temperatur	Temperatur	C	floatbe	2	1	0		level		true	false	false	false
