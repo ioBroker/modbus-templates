@@ -1,0 +1,53 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+40001	V-L1-N	Spannung L1	V	int32sw	2	0.1	0		value		true			
+40003	V-L2-N	Spannung L2	V	int32sw	2	0.1	0		value		true			
+40005	V-L3-N	Spannung L3	V	int32sw	2	0.1	0		value		true			
+40013	A-L1	Strom L1	A	int32sw	2	0.001	0		value		true			
+40015	A-L2	Strom L2	A	int32sw	2	0.001	0		value		true			
+40017	A-L3	Strom L3	A	int32sw	2	0.001	0		value		true			
+40019	W-L1	Leistung L1	W	int32sw	2	0.1	0		value		true			
+40021	W-L2	Leistung L2	W	int32sw	2	0.1	0		value		true			
+40023	W-L3	Leistung L3	W	int32sw	2	0.1	0		value		true			
+40041	W-Sum	Leistung Gesamt	W	int32sw	2	0.1	0		value		true			
+40052	Frequency	Netzfrequenz	Hz	uint16be	1	0.1	0		value		true			
+40053	kWh-Total	Leistung Verbrauch Gesamt	kWh	int32sw	2	0.1	0		value		true			
+40007	V-L1-L2	Spannung L1-L2	V	int32sw	2	0.1	0		value		true			
+40009	V-L2-L3	Spannung L2-L3	V	int32sw	2	0.1	0		value		true			
+40011	V-L3-L1	Spannung L3-L1	V	int32sw	2	0.1	0		value		true			
+40025	VA-L1	Scheinleistung L1	VA	int32sw	2	0.1	0		value		true			
+40027	VA-L2	Scheinleistung L2	VA	int32sw	2	0.1	0		value		true			
+40029	VA-L3	Scheinleistung L3	VA	int32sw	2	0.1	0		value		true			
+40031	VAR-L1	Blindleistung L1	var	int32sw	2	0.1	0		value		true			
+40033	VAR-L2	Blindleistung L2	var	int32sw	2	0.1	0		value		true			
+40035	VAR-L3	Blindleistung L3	var	int32sw	2	0.1	0		value		true			
+40037	V-L-N-Sum	Spannung L-N Gesamt	V	int32sw	2	0.1	0		value		true			
+40039	V-L-L-Sum	Spannung L-L Gesamt	V	int32sw	2	0.1	0		value		true			
+40043	VA-Sum	Scheinleistung Gesamt	VA	int32sw	2	0.1	0		value		true			
+40045	VAR-Sum	Blindleistung Gesamt	var	int32sw	2	0.1	0		value		true			
+40047	PF-L1	Leistungsfaktor L1		int16be	1	0.001	0		value		true			
+40048	PF-L2	Leistungsfaktor L2		int16be	1	0.001	0		value		true			
+40049	PF-L3	Leistungsfaktor L3		int16be	1	0.001	0		value		true			
+40050	PF-Sum	Leistungsfaktor Gesamt		int16be	1	0.001	0		value		true			
+40051	Phase-Seq	Phasensequenz		int16be	1	1	0		value		true			
+40055	Kvarh-Total	Blindleistung Verbrauch Gesamt	kvarh	int32sw	2	0.1	0		value		true			
+40057	DMD-W-Sum	Leistung Gesamt Durchschnitt 15min	W	int32sw	2	0.1	0		value		true			
+40059	DMD-W-Max	Leistung Gesamt Maximum 15 min	W	int32sw	2	0.1	0		value		true			
+40061	KWh-plus-PAR	KWh(+) PAR	kWh	int32sw	2	0.1	0		value		true			
+40063	Kvarh-plus-PAR	Kvarh(+) PAR	kvarh	int32sw	2	0.1	0		value		true			
+40065	KWh-plus-L1	LWh(+) L1	kWh	int32sw	2	0.1	0		value		true			
+40067	KWh-plus-L2	LWh(+) L2	kWh	int32sw	2	0.1	0		value		true			
+40069	KWh-plus-L3	LWh(+) L3	kWh	int32sw	2	0.1	0		value		true			
+40071	KWh-plus-T1	KWh(+) T1	kWh	int32sw	2	0.1	0		value		true			
+40073	KWh-plus-T2	KWh(+) T2	kWh	int32sw	2	0.1	0		value		true			
+40075	KWh-plus-T3	KWh(+) T3	kWh	int32sw	2	0.1	0		value		true			
+40077	KWh-plus-T4	KWh(+) T4	kWh	int32sw	2	0.1	0		value		true			
+40079	KWh-minus-TOT	KWh(-) TOT	kWh	int32sw	2	0.1	0		value		true			
+40081	Kvarh-minus-TOT	Kvarh(-) TOT	kWh	int32sw	2	0.1	0		value		true			
+40091	Hour	Hour		int32sw	2	0.01	0		value		true			
+40111	Kvarh-plus-T1	Kvarh(+) T1	kvarh	int32sw	2	0.1	0		value		true			
+40113	Kvarh-plus-T2	Kvarh(+) T2	kvarh	int32sw	2	0.1	0		value		true			
+40115	Kvarh-plus-T3	Kvarh(+) T3	kvarh	int32sw	2	0.1	0		value		true			
+40117	Kvarh-plus-T4	Kvarh(+) T4	kvarh	int32sw	2	0.1	0		value		true			
+40119	DMD-VA-Sum	DMD VA Sum	VA	int32sw	2	0.1	0		value		true			
+40121	DMD-VA-Sum-Max	DMD VA Sum Max	VA	int32sw	2	0.1	0		value		true			
+40123	DMD-A-Max	DMD A Max	A	int32sw	2	0.001	0		value		true			
