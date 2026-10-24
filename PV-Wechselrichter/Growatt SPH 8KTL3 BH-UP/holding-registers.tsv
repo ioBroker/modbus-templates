@@ -1,0 +1,27 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+40001	Remote ON/OFF			uint16be	1	1	0		state		true			
+40004	Max Output active Power		%	uint16be	1	1	0		value		true			
+40005	Max Output reactive Power		%	int16be	1	1	0		value		true			
+40023	Baudrate	0:9600 1:38400		uint16be	1	1	0		value		true			
+40031	COM Adress			uint16be	1	1	0		value		true			
+41045	Priority	Force 0:LoadFirst 1:BatteryFirst 2:GridFirst		uint16be	1	1	0		state		true			
+41061	Backup Function Enable	0:disable 1:enable		uint16be	1	1	0		state		true			
+41062	Backup Voltage Set	0:230V 1:208V 2:240V		uint16be	1	1	0		value		true			
+41063	Backup Frequency	0:50Hz 1:60Hz		uint16be	1	1	0		state		true			
+41071	Grid First Discharge Power Rate		%	uint16be	1	1	0		value		true			
+41072	Grid First Stop SOC		%	uint16be	1	1	0		value		true			
+41091	BatFirst Charge Powerrate		%	uint16be	1	1	0		value		true			
+41092	BatFirst Stop Charge SOC		%	uint16be	1	1	0		value		true			
+41093	BatFirst AC Charge	0:Disable 1:Enable		uint16be	1	1	0		state		true			
+41101	BatFirst Starttime MM			uint8be	1	1	0		value		true			
+41101	BatFirst Starttime HH			uint8le	1	1	0		value		true			
+41102	BatFirst Stoptime MM			uint8be	1	1	0		value		true			
+41102	BatFirst Stoptime HH			uint8le	1	1	0		value		true			
+41103	Batfirst Enable	0:Disable 1:Enable		uint16be	1	1	0		state		true			
+41110	ReadLoadFirstStopSOCDischarge		%	uint16be	1	1	0		value		true			
+40609	WriteLoadFirstStopSOCDischarge		%	uint16be	1	1	0		value		true			
+41081	GridFirst Starttime MM			uint8be	1	1	0		value		true			
+41082	GridFirst Stoptime MM			uint8be	1	1	0		value		true			
+41081	GridFirst Starttime HH			uint8le	1	1	0		value		true			
+41082	GridFirst Stoptime HH			uint8le	1	1	0		value		true			
+41083	Gridfirst Enable	0:Disable 1:Enable		uint16be	1	1	0		state		true			

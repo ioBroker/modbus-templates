@@ -1,0 +1,41 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	cw	isScale
+30001	Inverter Status	0:Waiting 1:Normal 3:Fault 5:PV+Bat Online 6:BatOnline		uint16be	1	1	0		state			
+30002	Ppv	Input Power	W	uint32be	2	0.1	0		value			
+30004	Vpv1	PV1 Voltage	V	uint16be	1	0.1	0		value			
+30005	Ipv1	PV1 Current	A	uint16be	1	0.1	0		value			
+30006	Ppv1	PV1 Power	W	uint32be	2	0.1	0		value			
+30008	Vpv2	PV2 Voltage	V	uint16be	1	0.1	0		value			
+30009	Ipv2	PV2 Current	A	uint16be	1	0.1	0		value			
+30010	Ppv2	PV2 Power	W	uint32be	2	0.1	0		value			
+30036	Pac	Output Power	W	uint32be	2	0.1	0		value			
+30038	Fac	Grid Frequency	Hz	uint16be	1	0.01	0		value			
+30054	EacToday	Today Generated Energy	kWh	uint32be	2	0.1	0		value			
+30056	EacTotal	Total generated Energy	kWh	uint32be	2	0.1	0		value			
+30060	Epv1today	Today PV1 generated Energy	kWh	uint32be	2	0.1	0		value			
+30062	Epv1total	Total PV1 generated Energy	kWh	uint32be	2	0.1	0		value			
+30064	Epv2today	Today PV2 generated Energy	kWh	uint32be	2	0.1	0		value			
+30066	Epv2total	Total PV2 generated Energy	kWh	uint32be	2	0.1	0		value			
+30092	Epvtotal	Total PV gesamt generated Energy	kWh	uint32be	2	0.1	0		value			
+30119	Priority	0:Load First 1:Battery First 2:Grid First		uint16be	1	1	0		state			
+30230	FanFault	Bit0-3 Fan Fault		uint16be	1	1	0		value			
+31010	PbatDischarge	Battery Discharge Power	W	uint32be	2	0.1	0		value			
+31012	PbatCharge	Battery Charge Power	W	uint32be	2	0.1	0		value			
+31014	Vbat	Battery Voltage	V	uint16be	1	0.1	0		value			
+31015	SOCbat	Battery SOC	%	uint16be	1	1	0		value			
+31022	PactoUser	P Import aus dem Netz	W	uint32be	2	0.1	0		value			
+31030	PactoGrid	P Export in das Netz	W	uint32be	2	0.1	0		value			
+31038	PlocalLoad_Total	P Gesamtbedarf Haus	W	int32be	2	0.1	0		value			
+31041	Tbat	?Battery Temperature	°C	int16be	1	0.1	0		value			
+31095	dVbat	?Battery deltaV	mV	uint16be	1	1	0		value			
+31096	CyclesBat	Battery CycleCount		uint16be	1	1	0		value			
+31097	SOHbat	Battery SOH	%	uint16be	1	1	0		value			
+31045	Etouser_today		kWh	uint32be	2	0.1	0		value			
+31047	Etouser_total		kWh	uint32be	2	0.1	0		value			
+31049	Etogrid_today H		kWh	uint32be	2	0.1	0		value			
+31051	Etogrid _total		kWh	uint32be	2	0.1	0		value			
+31053	Edischarge1_today		kWh	uint32be	2	0.1	0		value			
+31055	Edischarge1_total		kWh	uint32be	2	0.1	0		value			
+31057	Echarge1_today		kWh	uint32be	2	0.1	0		value			
+31059	Echarge1_total 		kWh	uint32be	2	0.1	0		value			
+31061	ELocalLoad_Today		kWh	uint32be	2	0.1	0		value			
+31063	ELocalLoad_Total		kWh	uint32be	2	0.1	0		value			
