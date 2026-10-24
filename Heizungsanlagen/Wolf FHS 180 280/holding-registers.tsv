@@ -1,0 +1,12 @@
+_address	deviceId	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+40005	1	T set point			int16be	1	1	0		value		true			
+40006	1	T min			int16be	1	1	0		value		true			
+40007	1	T2 min			int16be	1	1	0		value		true			
+40013	1	H Pump Mode	0=off, 1=WP,2=EL,3=WP+EL		int16be	1	1	0		value		true			
+40016	1	Fan Oper.			int16be	1	1	0		value		true			
+40019	1	T PV WP			int16be	1	1	0		value		true			
+40020	1	T PV EL			int16be	1	1	0		value		true			
+40023	1	Boost	on/off		int16be	1	1	0		value		true			
+40025	1				uint16le	1	1	0		value		true			
+40029	1	T max	Temp Max		int16be	1	1	0		value		true			
+40118	1	Modbus Allow write			int16be	1	1	0		value		true			
