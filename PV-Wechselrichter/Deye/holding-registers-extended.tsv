@@ -1,0 +1,142 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+40001	Device type	Gerätetyp		uint16be	1	0	0		value		false	false	false	false
+40004	Seriennummer	Seriennummer		string	5	0	0		value		false	false	false	false
+40061	Fernsperre	Fernsperre		uint16be	1	0	0		value		false	false	false	false
+40081	Anschalter	0: power off 1: power on		uint16be	1	0	0		value		false	false	false	false
+40099	Battery Charge Type	0x0000 Lead-Battery, 0x0001 Lithium battery 		uint16be	1	1	0		value		false	false	false	false
+40105	ZeroExport power	ZeroExport-Regel-Zielwert	W	int16be	1	0	0		value		false	false	false	false
+40109	Max A Charge	Maximaler Ladestrom der Batterie	A	uint16be	1	0	0		value		false	false	false	false
+40110	Max A discharge	Max A Entladung	A	uint16be	1	0	0		value		false	false	false	false
+40112	Battery Type	0=V 1=% 2=no batt		int16be	1	1	0		value		true	false	false	false
+40116	ShutDown battery capacity ShutDown	Abschalten Batteriekapazität Herunterfahren	%	uint16be	1	1	0		value		false	false	false	false
+40117	Restart battery capacityRestart	Neu starten BatteriekapazitätNeustart	%	uint16be	1	1	0		value		false	false	false	false
+40118	LowBatt battery capacityLowBatt	Low Batterie Anzeige zum Abschalten der Batterie	%	uint16be	1	1	0		value		false	false	false	false
+40130	Generator is charged to enable	Generator is charged to enable		int16be	1	0	0		value		false	false	false	false
+40131	Grid is charged to enable	Grid is charged to enable		int16be	1	0	0		value		false	false	false	false
+40134	GEN Port	0=Gen, 1= Smart load; 2 = MI		uint16be	1	0,1	0		value		true	false	false	false
+40144	Max Limit Power Output Grid Connection	Begrenzen Sie die maximale Ausgangsleistung des Netzes	W	uint16be	1	0	0		value		false	false	false	false
+40145	External current sensor clamp phase	Klemmphase des externen Stromsensors	W	uint16be	1	0	0		value		false	false	false	false
+40146	Solar sell	 PV Einspeisung: 0: disable; 1: enable		uint16be	1	0	0		switch		false	false	false	false
+40149	Sell mode time point 1	Sell mode time point 1		int16be	1	0	0		value		false	false	false	false
+40150	Sell mode time point 2	Sell mode time point 2		int16be	1	0	0		value		false	false	false	false
+40151	Sell mode time point 3	Sell mode time point 3		int16be	1	0	0		value		false	false	false	false
+40152	Sell mode time point 4	Sell mode time point 4		int16be	1	0	0		value		false	false	false	false
+40153	Sell mode time point 5	Sell mode time point 5		int16be	1	0	0		value		false	false	false	false
+40154	Sell mode time point 6	Sell mode time point 6		int16be	1	0	0		value		false	false	false	false
+40155	Sell mode Watt time 1	Sell mode Watt time 1		int16be	1	0	0		value		false	false	false	false
+40156	Sell mode Watt time 2	Sell mode Watt time 2		int16be	1	0	0		value		false	false	false	false
+40157	Sell mode Watt time 3	Sell mode Watt time 3		int16be	1	0	0		value		false	false	false	false
+40158	Sell mode Watt time 4	Sell mode Watt time 4		int16be	1	0	0		value		false	false	false	false
+40159	Sell mode Watt time 5	Sell mode Watt time 5		int16be	1	0	0		value		false	false	false	false
+40160	Sell mode Watt time 6	Sell mode Watt time 6		int16be	1	0	0		value		false	false	false	false
+40167	TOF_Cell SOC 1	TOF_Cell SOC 1	%	int16be	1	0	0		value		false	false	false	false
+40168	TOF_Cell SOC 2	TOF_Cell SOC 2	%	int16be	1	0	0		value		false	false	false	false
+40169	TOF_Cell SOC 3	TOF_Cell SOC 3	%	int16be	1	0	0		value		false	false	false	false
+40170	TOF_Cell SOC 4	TOF_Cell SOC 4	%	int16be	1	0	0		value		false	false	false	false
+40171	TOF_Cell SOC 5	TOF_Cell SOC 5	%	int16be	1	0	0		value		false	false	false	false
+40172	TOF_Cell SOC 6	TOF_Cell SOC 6	%	int16be	1	0	0		value		false	false	false	false
+40173	Time point 1 charge enable	Time point 1 charge enable		int16be	1	0	0		value		false	false	false	false
+40174	Time point 2 charge enable	Time point 2 charge enable		int16be	1	0	0		value		false	false	false	false
+40175	Time point 3 charge enable	Time point 3 charge enable		int16be	1	0	0		value		false	false	false	false
+40176	Time point 4 charge enable	Time point 4 charge enable		int16be	1	0	0		value		false	false	false	false
+40177	Time point 5 charge enable	Time point 5 charge enable		int16be	1	0	0		value		false	false	false	false
+40178	Time point 6 charge enable	Time point 6 charge enable		int16be	1	0	0		value		false	false	false	false
+40229	Comm board	Piepsen: 3819=aus 3823=an		int16be	1	1	0		value		false	false	false	false
+40341	Max Solar Sell Power	Maximale Solarverkaufsleistung	W	uint16be	1	0	0		value		false	false	false	false
+40501	Status	Status (Standby, check, norm, altert, fault)		int16be	1	0	0		value		true	false	false	false
+40502	Active power generation of today	Heutige Stromerzeugung (aktuell keine Werte)	kWh	int16be	1	0,1	0		value		false	false	false	false
+40503	Reactive power generation of today	Heutige Blindleistungserzeugung (aktuell keine Werte)	kWh	int16be	1	0,1	0		value		false	false	false	false
+40504	Grid connection time of today	(aktuell keine Werte)	s	uint16be	1	1	0		value		false	false	false	false
+40505	Active power generation total low byte	Wirkleistungserzeugung Gesamt (aktuell keine Werte)	kWh	int32sw	2	0,1	0		value		false	false	false	false
+40507	Reactive power generation total low byte	Blindleistungserzeugung Gesamt (aktuell keine Werte)	kWh	int32sw	2	0,1	0		value		false	false	false	false
+40515	Today charge of the battery		kWh	uint16be	1	0,1	0		value		true	false	false	false
+40516	Today discharge of the battery		kWh	uint16be	1	0,1	0		value		true	false	false	false
+40517	Total charge of the battery low byte		kWh	uint32sw	2	0,1	0		value		true	false	false	false
+40519	Total discharge of the battery low byte		kWh	uint32sw	2	0,1	0		value		true	false	false	false
+40521	Day Grid Buy Power Wh	Tag Netzabnahme Strom Wh	kWh	uint16be	1	0,1	0		value		true	false	false	false
+40522	Day_Grid Sell_Power Wh	Tages Verkaufs leistung	kWh	uint16be	1	0,1	0		value		true	false	false	false
+40523	Total_Grid Buy_Power_low word		kWh	uint32sw	2	0,1	0		value		true	false	false	false
+40525	Total_Grid Sell_Power_low word		kWh	uint32sw	2	0,1	0		value		true	false	false	false
+40527	Day_Load_Power Wh	Tages Load Leistung	kWh	uint16be	1	0,1	0		value		false	false	false	false
+40528	Total_Load_Power Wh	Gesamt Load Leistung	kWh	uint32sw	2	0,1	0		value		false	false	false	false
+40530	Day_PV_Power Wh	PV Tagesleistung	kWh	uint16be	1	0,1	0		value		true	false	false	false
+40531	Day_PV-1_Power Wh	PV MPPT-1 Tagesleistung (Reserve, aktuell keine Werte)	kWh	uint16be	1	0,1	0		value		false	false	false	false
+40532	Day_PV-2_Power Wh	PV MPPT-2 Tagesleistung (Reserve, aktuell keine Werte)	kWh	uint16be	1	0,1	0		value		false	false	false	false
+40535	Total PV power Wh low word	Gesamt-PV-Leistung Wh	kWh	uint32sw	2	0,1	0		value		true	false	false	false
+40541	DC transformer temperature	Temperatatur DC Wandler	°C	uint16be	1	0,1	-100		value		true	false	false	false
+40542	Heat Sink Temperature	Temperetur Kühlkörper	°C	uint16be	1	0,1	-100		value		true	false	false	false
+40553	AC Relay	AC relay		uint16be	1	0	0	x < 2? 0:1	value		true	false	false	false
+40553	Ac relay 2	AC relay2		uint16be	1		0		value		true	false	false	false
+40554	Warning Message			uint16be	1	1	0		value		true	false	false	false
+40587	battery temperature	Batterietemperatur	°C	uint16be	1	0,01	0		value		false	false	false	false
+40588	battery voltage	Batteriespannung	V	uint16be	1	0,01	0		value		true	false	false	false
+40589	battery capacity	Batteriekapazität	%	uint16be	1	1	0		value		true	false	false	false
+40591	Battery output power	Ausgangsleistung der Batterie	W	int16be	1	1	0		value		true	false	false	false
+40592	Battery output current	Ausgangsstrom der Batterie	A	int16be	1	0,01	0		value		true	false	false	false
+40593	Corrected AH	AH korrigiert	AH	uint16be	1	1	0		value		false	false	false	false
+40599	Grid phase voltage A	Netzphasenspannung L1	V	uint16be	1	0,1	0		value		false	false	false	false
+40600	Grid phase voltage B	Netzphasenspannung L2	V	uint16be	1	0,1	0		value		false	false	false	false
+40601	Grid phase voltage C	Netzphasenspannung L3	V	uint16be	1	0,1	0		value		false	false	false	false
+40605	L1 phase power on the inner side of the grid	L1 Phasenleistung auf der Innenseite des Netzes	W	uint16be	1	1	0		value		false	false	false	false
+40606	L2 phase power on the inner side of the grid	L2 Phasenleistung auf der Innenseite des Netzes	W	uint16be	1	1	0		value		false	false	false	false
+40607	L3 phase power on the inner side of the grid	L3 Phasenleistung auf der Innenseite des Netzes	W	uint16be	1	1	0		value		false	false	false	false
+40608	active power from side to side of the grid	Wirkleistung von Seite zu Seite des Netzes	W	int16be	1	1	0		value		true	false	false	false
+40609	Grid side - inside total apparent power	Netzseite – innere Gesamtscheinleistung	W	uint16be	1	1	0		value		false	false	false	false
+40610	Grid-side frequency	Grid Seite Frequenz	Hz	uint16be	1	1	0		value		false	false	false	false
+40611	grid side inner current L1	netzseitiger Innenstrom L1	A	uint16be	1	0,01	0		value		false	false	false	false
+40612	grid side inner current L2	netzseitiger Innenstrom L2	A	uint16be	1	0,01	0		value		false	false	false	false
+40613	grid side inner current L3	netzseitiger Innenstrom L3	A	uint16be	1	0,01	0		value		false	false	false	false
+40614	Out-of-grid - current L1	Außerhalb des Netzes – aktuelles L1	A	uint16be	1	0,01	0		value		false	false	false	false
+40615	Out-of-grid - current L2	Außerhalb des Netzes – aktuelles L2	A	uint16be	1	0,01	0		value		false	false	false	false
+40616	Out-of-grid - current L3	Außerhalb des Netzes – aktuelles L3	A	uint16be	1	0,01	0		value		false	false	false	false
+40617	A Out-of-grid -power L1	A Außerhalb des Netzes - Strom L1	W	uint16be	1	1	0		value		false	false	false	false
+40618	A Out-of-grid -power L2	A Außerhalb des Netzes - Strom L2	W	uint16be	1	1	0		value		false	false	false	false
+40619	A Out-of-grid -power L3	A Außerhalb des Netzes - Strom L3	W	uint16be	1	1	0		value		false	false	false	false
+40620	Out-of-grid -total power	Außerhalb des Netzes – Gesamtleistung	W	uint16be	1	1	0		value		false	false	false	false
+40621	Out-of-grid -total apparent power	Außerhalb des Netzes – Gesamtscheinleistung	VA	uint16be	1	1	0		value		false	false	false	false
+40622	Grid-connected power factor PF	Netzgekoppelter Leistungsfaktor PF		uint16be	1	1	0		value		false	false	false	false
+40623	Grid side A-phase power	Netzseitiger L1-Phasen-Strom	W	int16be	1	1	0		value		false	false	false	false
+40624	Grid side B-phase power	Netzseitiger L2-Phasen-Strom	W	int16be	1	1	0		value		false	false	false	false
+40625	Grid side C-phase power	Netzseitiger L3-Phasen-Strom	W	int16be	1	1	0		value		false	false	false	false
+40626	Grid side total power	Netzseitige Gesamtleistung	W	int16be	1	1	0		value		true	false	false	false
+40628	Inverter output phase voltage A	Wechselrichter-Ausgangsphasenspannung L1	V	uint16be	1	0,1	0		value		false	false	false	false
+40629	Inverter output phase voltage B	Wechselrichter-Ausgangsphasenspannung L2	V	uint16be	1	0,1	0		value		false	false	false	false
+40630	Inverter output phase voltage C	Wechselrichter-Ausgangsphasenspannung L3	V	uint16be	1	0,1	0		value		false	false	false	false
+40631	Inverter output phase current A	Ausgangsphasenstrom des Wechselrichters L1	A	int16be	1	0,01	0		value		false	false	false	false
+40632	Inverter output phase current B	Ausgangsphasenstrom des Wechselrichters L2	A	int16be	1	0,01	0		value		false	false	false	false
+40633	Inverter output phase current C	Ausgangsphasenstrom des Wechselrichters L3	A	int16be	1	0,01	0		value		false	false	false	false
+40634	Inverter output phase power A	  Ausgangsphase des Wechselrichters Leistung L1	W	int16be	1	0	0		value		true	false	false	false
+40635	Inverter output phase power B	Ausgangsphase des Wechselrichters Leistung L2	W	int16be	1	0	0		value		true	false	false	false
+40636	Inverter output phase power C	Ausgangsphase des Wechselrichters Leistung L3	W	int16be	1	0	0		value		true	false	false	false
+40637	Inverter output total power	Gesamtleistung des Wechselrichters Leistung	W	int16be	1	0	0		value		true	false	false	false
+40638	Inverter output total apparent power	Gesamtleistung des Wechselrichters Scheinleistung	W	int16be	1	0	0		value		false	false	false	false
+40639	Inverter frequency	Wechselrichter frequenz	Hz	uint16be	1	0,01	0		value		false	false	false	false
+40641	UPS load-side phase power A	USV-lastseitige Phasenleistung L1	W	uint16be	1	1	0		value		false	false	false	false
+40642	UPS load-side phase power B	USV-lastseitige Phasenleistung L2	W	uint16be	1	1	0		value		false	false	false	false
+40643	UPS load-side phase power C	USV-lastseitige Phasenleistung L3	W	uint16be	1	1	0		value		false	false	false	false
+40644	UPS load-sidetotal power	Lastseitige Gesamtleistung der USV	W	uint16be	1	1	0		value		false	false	false	false
+40645	Load phase voltage A	Load phasenspannung L1	V	uint16be	1	0,1	0		value		false	false	false	false
+40646	Load phase voltage B	Load phasenspannung L2	V	uint16be	1	0,1	0		value		false	false	false	false
+40647	Load phase voltage C	Load phasenspannung L3	V	uint16be	1	0,1	0		value		false	false	false	false
+40648	Load phase current A	Load phasenstrom L1	A	int16be	1	0,01	0		value		false	false	false	false
+40649	Load phase current B	Load phasenstrom L2	A	int16be	1	0,01	0		value		false	false	false	false
+40650	Load phase current C	Load phasenstrom L3	A	int16be	1	0,01	0		value		false	false	false	false
+40651	Load phase power A	Load phase Leistung L1	W	int16be	1	1	0		value		false	false	false	false
+40652	Load phase power B	Load phase Leistung L2	W	int16be	1	1	0		value		false	false	false	false
+40653	Load phase power C	Load phase Leistung L3	W	int16be	1	1	0		value		false	false	false	false
+40654	Load totalpower	Load Gesamtleistung	W	int16be	1	1	0		value		false	false	false	false
+40655	Load phase apparent power	Scheinleistung der Lastphase	VA	int16be	1	1	0		value		false	false	false	false
+40656	Load frequency	Load Frequenz	Hz	uint16be	1	0,01	0		value		false	false	false	false
+40662	Phase voltage of Gen port A	Phasenspannung von Gen-Port L1	V	uint16be	1	0,1	0		value		false	false	false	false
+40663	Phase voltage of Gen port B	Phasenspannung von Gen-Port L2	V	uint16be	1	0,1	0		value		false	false	false	false
+40664	Phase voltage of Gen port C	Phasenspannung von Gen-Port L3	V	uint16be	1	0,1	0		value		false	false	false	false
+40665	Phase power of Gen port A	Phasenleistung von Gen-Port L1	W	uint16be	1	1	0		value		false	false	false	false
+40666	Phase power of Gen port B	Phasenleistung von Gen-Port L2	W	uint16be	1	1	0		value		false	false	false	false
+40667	Phase power of Gen port C	Phasenleistung von Gen-Port L3	W	uint16be	1	1	0		value		false	false	false	false
+40668	Total power of Gen port	Gesamtleistung des Gen-Ports	W	uint16be	1	1	0		value		false	false	false	false
+40673	PV1 input power	PV1 Eingangsleistung	W	uint16be	1	1	0		value		true	false	false	false
+40674	PV2 input power	PV2 Eingangsleistung	W	uint16be	1	1	0		value		true	false	false	false
+40677	Dc voltage 1	Gleichspannung 1	V	uint16be	1	0,1	0		value		true	false	false	false
+40678	Dc current 1	Gleichstrom 1	A	uint16be	1	0,1	0		value		true	false	false	false
+40679	Dc voltage 2	Gleichspannung 2	V	uint16be	1	0,1	0		value		true	false	false	false
+40680	Dc current 2	Gleichstrom 2	A	uint16be	1	0,1	0		value		true	false	false	false
