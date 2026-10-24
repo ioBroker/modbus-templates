@@ -41,6 +41,13 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 43003	Buffer1_ActualHighTemp	Buffer 1 actual temperature buffer high sensor	°C	uint16be	1	0.1	0		level		true	false		
 43004	Buffer1_ActualLowTemp	Buffer 1 actual temperature buffer low sensor	°C	uint16be	1	0.1	0		level		true	false		
 43051	Buffer1_MaximumTemp	Buffer 1 setting for maximum buffer temperature		uint16be	1	0.1	0		level		true	true		
+44001	Solar1_Error	Solar 1 error number		int16be	1	1	0		level		true	false		
+44002	Solar1_OperatingState	Solar 1 operating state		uint16be	1	1	0		level		true	false		
+44003	Solar1_CollectorTemp	Solar 1 actual temperature collector sensor	°C	int16be	1	0.1	0		level		true	false		
+44004	Solar1_BufferTemp1	Solar 1 actual temperature buffer 1 sensor	°C	int16be	1	0.1	0		level		true	false		
+44005	Solar1_BufferTemp2	Solar 1 actual temperature buffer 2 sensor	°C	int16be	1	0.1	0		level		true	false		
+44051	Solar1_MaxBufferTemp	Solar 1 setting for maximum buffer temperature (min = 25.0°C; max = 90.0°C)	°C	int16be	1	0.1	0		level		true	true		
+44052	Solar1_BufferChangeOverTemp	Solar 1 setting for buffer changeover temperature (min = 25.0°C; max = 90.0°C)	°C	int16be	1	0.1	0		level		true	true		
 45001	Heating1_Error	Heating 1 error number		int16be	1	1	0		level		true	false		
 45002	Heating1_OperatingState	Heating 1 operating state		uint16be	1	1	0		level		true	false		
 45003	Heating1_T_Flow	Heating 1 actual temperature flow line sensor	°C	int16be	1	0.1	0		level		true	false		
