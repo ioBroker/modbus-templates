@@ -1,0 +1,14 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale	sanitize	sanitizeAction	minValidValue	maxValidValue
+1	Soll_Heizung_Wasser	25-55 Grad	°C	int16be	1	1			value.temperature		true							
+2	Soll_Kühlung_Einstellung	5-22 Grad	°C	int16be	1	1	0		value.temperature		true							
+3	Betriebsart	0=Auto 1=Heat 2=Cool		int16be	1	1	0		value		true							
+4	Raumheizen/Kühlen	0: Off, 1:On		int16be	1	1	0		value		true							
+6	Room_Thermostat_HEating	12-30 Grad		int16be	1	1	0		value.temperature		true							
+7	Roome_Thermostat_Cooling	15-35 Grad		int16be	1	1	0		value.temperature		true							
+9	Flüsterbetrieb	0: Off, 1:On		int16be	1	1	0		value		true							
+10	Wasser_Reheat_Setpoing	30-60 Grad	°C	int16be	1	1	0		value.temperature		true							
+12	Warmwasser_Reheat	0: Off, 1:On		int16be	1	1	0		value		true							
+13	Warmwasser_Booster	0: Off, 1:On		int16be	1	1	0		value		true							
+53	Wetter_gefuehrt	0:Fixed,1 Wetter, 2 Fix+Sched,3 Wetter+Sched		int16be	1	1	0		value		true							
+54	Wetter_Gefuehrt_Set_Heat	+- 10Grad		int16be	1	1	0		value.temperature		true							
+55	Wetter_Gefuerht_Set_Cool	+- 10 Grad		int16be	1	1	0		value.temperature		true							
