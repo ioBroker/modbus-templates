@@ -1,0 +1,5 @@
+_address	deviceId	name	description	unit	type	len	factor	offset	formula	role	room	cw	isScale
+30001	1	Pressostat	qm		int16be	1	1	0		value			
+30002	1	Solcelle	on / off		int16be	1	1	0		value			
+30008	1	T1	Verdampfer Temp		int16be	1	1	0	x/10	value			
+30009	1	T2	Speicher Temp		int16be	1	1	0	x/10	value			

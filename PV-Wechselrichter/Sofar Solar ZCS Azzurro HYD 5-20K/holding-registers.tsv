@@ -1,0 +1,617 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale	sanitize	sanitizeAction	minValidValue	maxValidValue
+1024	AddressMask_Realtime_SysInfo1	The validity of 64 addresses a		uint64be	4		0		value		false	false	false	false				
+1028	SysState	Operating status0: waiting sta		uint16be	1		0		value		false	false	false	false				
+1029	Fault1	Fault information table 1		uint16be	1		0		value		false	false	false	false				
+1030	Fault2	Fault information table 2		uint16be	1		0		value		false	false	false	false				
+1031	Fault3	Fault information table 3		uint16be	1		0		value		false	false	false	false				
+1032	Fault4	Fault information table 4		uint16be	1		0		value		false	false	false	false				
+1033	Fault5	Fault information table 5		uint16be	1		0		value		false	false	false	false				
+1034	Fault6	Fault information table 6		uint16be	1		0		value		false	false	false	false				
+1035	Fault7	Fault information table 7		uint16be	1		0		value		false	false	false	false				
+1036	Fault8	Fault information table 8		uint16be	1		0		value		false	false	false	false				
+1037	Fault9	Fault information table 9		uint16be	1		0		value		false	false	false	false				
+1038	Fault10	Fault information table 10		uint16be	1		0		value		false	false	false	false				
+1039	Fault11	Fault information table 11		uint16be	1		0		value		false	false	false	false				
+1040	Fault12	Fault information table 12		uint16be	1		0		value		false	false	false	false				
+1041	Fault13	Fault information table 13		uint16be	1		0		value		false	false	false	false				
+1042	Fault14	Fault information table 14		uint16be	1		0		value		false	false	false	false				
+1043	Fault15	Fault information table 15		uint16be	1		0		value		false	false	false	false				
+1044	Fault16	Fault information table 16		uint16be	1		0		value		false	false	false	false				
+1045	Fault17	Fault information table 17		uint16be	1		0		value		false	false	false	false				
+1046	Fault18	Fault information table 18		uint16be	1		0		value		false	false	false	false				
+1047	Countdown	Power-on countdown	seconds	uint16be	1	1	0		value		false	false	false	false				
+1048	Temperature_Env1	Ambient temperature 1	°C	int16be	1	1	0		value		false	false	false	false				
+1049	Temperature_Env2	Ambient temperature 2	°C	int16be	1	1	0		value		false	false	false	false				
+1050	Temperature_HeatSink1	Radiator temperature 1	°C	int16be	1	1	0		value		false	false	false	false				
+1051	Temperature_HeatSink2	Radiator temperature 2	°C	int16be	1	1	0		value		false	false	false	false				
+1052	Temperature_HeatSink3	Radiator temperature 3	°C	int16be	1	1	0		value		false	false	false	false				
+1053	Temperature_HeatSink4	Radiator temperature 4	°C	int16be	1	1	0		value		false	false	false	false				
+1054	Temperature_HeatSink5	Radiator temperature 5	°C	int16be	1	1	0		value		false	false	false	false				
+1055	Temperature_HeatSink6	Radiator temperature 6	°C	int16be	1	1	0		value		false	false	false	false				
+1056	Temperature_Inv1	Module temperature 1	°C	int16be	1	1	0		value		false	false	false	false				
+1057	Temperature_Inv2	Module temperature 2	°C	int16be	1	1	0		value		false	false	false	false				
+1058	Temperature_Inv3	Module temperature 3	°C	int16be	1	1	0		value		false	false	false	false				
+1059	Temp_Rsvd1	Reserve temperature 1	°C	int16be	1	1	0		value		false	false	false	false				
+1060	Temp_Rsvd2	Reserve temperature 2	°C	int16be	1	1	0		value		false	false	false	false				
+1061	Temp_Rsvd3	Reserve temperature 3	°C	int16be	1	1	0		value		false	false	false	false				
+1062	GenerationTime_Today	Day of power generation time	Minute	uint16be	1	1	0		value		false	false	false	false				
+1063	GenerationTime_Total	Total power generation time	Minute	uint32be	2	1	0		value		false	false	false	false				
+1065	ServiceTime_Total	Total running time	Minute	uint32be	2	1	0		value		false	false	false	false				
+1067	InsulationResistance	Insulation resistance	k?	uint16be	1	1	0		value		false	false	false	false				
+1068	SysTime_Year	System time-year		uint16be	1		0		value		false	false	false	false				
+1069	SysTime_Month	System time-month		uint16be	1		0		value		false	false	false	false				
+1070	SysTime_Date	System Time-Daily Minutes		uint16be	1		0		value		false	false	false	false				
+1071	SysTime_Hour	System time-hour		uint16be	1		0		value		false	false	false	false				
+1072	SysTime_Minute	System time-minutes		uint16be	1		0		value		false	false	false	false				
+1073	SysTime_Second	System time-second		uint16be	1		0		value		false	false	false	false				
+1074	Fault19	Fault message table 19		uint16be	1		0		value		false	false	false	false				
+1075	Fault20	Fault information table 20		uint16be	1		0		value		false	false	false	false				
+1076	Fault21	Fault information table 21		uint16be	1		0		value		false	false	false	false				
+1077	Fault22	Fault information table 22		uint16be	1		0		value		false	false	false	false				
+1078	Fault23	Fault information table 23		uint16be	1		0		value		false	false	false	false				
+1079	Fault24	Fault message table 24		uint16be	1		0		value		false	false	false	false				
+1080	Fault25	Fault information table 25		uint16be	1		0		value		false	false	false	false				
+1081	Fault26	Fault message table 26		uint16be	1		0		value		false	false	false	false				
+1082	Fault27	Fault information table 27		uint16be	1		0		value		false	false	false	false				
+1088	AddressMask_Realtime_SysInfo2	Each bit of this field corresp		uint64be	4		0		value		false	false	false	false				
+1092	Production_Code	Reverse		uint16be	1		0		value		false	false	false	false				
+1093	Serial_Number0	The first and second digits of		string	2		0		value		false	false	false	false				
+1094	Serial_Number1	The 3rd and 4th digits of the 		string	2		0		value		false	false	false	false				
+1095	Serial_Number2	The 5th and 6th digits of the 		string	2		0		value		false	false	false	false				
+1096	Serial_Number3	The 7th and 8th digits of the 		string	2		0		value		false	false	false	false				
+1097	Serial_Number4	The 9th and 10th digits of the		string	2		0		value		false	false	false	false				
+1098	Serial_Number5	The 11th and 12th digits of th		string	2		0		value		false	false	false	false				
+1099	Serial_Number6	The 13th and 14th digits of th		string	2		0		value		false	false	false	false				
+1100	Serial_Number7	Reverse		string	2		0		value		false	false	false	false				
+1101	Hardware_Version0	The first and second digits of		string	2		0		value		false	false	false	false				
+1102	Hardware_Version1	The third and fourth digits of		string	2		0		value		false	false	false	false				
+1103	Software_Version_Stage_COM	Communication chip software ve		string	2		0		value		false	false	false	false				
+1104	Software_Version_Major_COM	The main version number of the		string	2		0		value		false	false	false	false				
+1105	Software_Version_Custom_COM	Communication chip software no		string	2		0		value		false	false	false	false				
+1106	Software_Version_Minor_COM	Communication chip software su		string	2		0		value		false	false	false	false				
+1107	Software_Version_Stage_Master	The main controller chip softw		string	2		0		value		false	false	false	false				
+1108	Software_Version_Major_Master	Main controller chip software 		string	2		0		value		false	false	false	false				
+1109	Software_Version_Custom_Master	The non-standard customized ve		string	2		0		value		false	false	false	false				
+1110	Software_Version_Minor_Master			string	2		0		value		false	false	false	false				
+1111	Software_Version_Stage_Slave			string	2		0		value		false	false	false	false				
+1112	Software_Version_Major_Slave			string	2		0		value		false	false	false	false				
+1113	Software_Version_Custom_Slave	Sub-controller chip software n		string	2		0		value		false	false	false	false				
+1114	Software_Version_Minor_Slave	Sub-controller chip software s		string	2		0		value		false	false	false	false				
+1115	Safety_Version_Major	Safety code main version numbe		uint16be	1		0		value		false	false	false	false				
+1116	Safety_version_Minor	Safety code vice version numbe		uint16be	1		0		value		false	false	false	false				
+1117	Boot_Version_COM			uint16be	1		0		value		false	false	false	false				
+1118	Boot_Version_Master			uint16be	1		0		value		false	false	false	false				
+1119	Boot_Version_Slave			uint16be	1		0		value		false	false	false	false				
+1120	Safety_Firmware_Version_Stage	Safety regulation certificatio		string	2		0		value		false	false	false	false				
+1121	Safety_Firmware_Version_Major	The major version number of th		string	2		0		value		false	false	false	false				
+1122	Safety_Firmware_Version_Custom	Safety regulation certificatio		string	2		0		value		false	false	false	false				
+1123	Safety_Firmware_Version_Minor	Safety regulation certificatio		string	2		0		value		false	false	false	false				
+1124	Safety_Hardware_Version0	Safety regulation certificatio		string	2		0		value		false	false	false	false				
+1125	Safety_Hardware_Version1	Safety regulation certificatio		string	2		0		value		false	false	false	false				
+1136	Serial_Number8			string	2		0		value		false	false	false	false				
+1137	Serial_Number9			string	2		0		value		false	false	false	false				
+1138	Serial_Number11_Rsvd0			string	2		0		value		false	false	false	false				
+1139	Serial_Number11_Rsvd1			string	2		0		value		false	false	false	false				
+1140	Serial_Number12_Rsvd2			string	2		0		value		false	false	false	false				
+1141	Serial_Number13_Rsvd3			string	2		0		value		false	false	false	false				
+1142	Serial_Number14_Rsvd4			string	2		0		value		false	false	false	false				
+1152	AddressMask_Realtime_GridOutput1	Each bit of this field corresp		uint64be	4		0		value		false	false	false	false				
+1156	Frequency_Grid	Grid frequency	Hz	uint16be	1	0,01	0		value		true	false	false	false				
+1157	ActivePower_Output_Total	Total active power. Discharge 	kW	int16be	1	0,01	0		value		true	false	false	false				
+1158	ReactivePower_Output_Total	Total reactive power. The inve	kW	int16be	1	0,01	0		value		true	false	false	false				
+1159	ApparentPower_Output_Total	Total apparent power. Discharg	kW	int16be	1	0,01	0		value		true	false	false	false				
+1160	ActivePower_PCC_Total	Total PCC active power. Sellin	kW	int16be	1	0,01	0		value		true	false	false	false				
+1161	ReactivePower_PCC_Total	Total PCC reactive power. The 	kW	int16be	1	0,01	0		value		true	false	false	false				
+1162	ApparentPower_PCC_Total	Total PCC apparent power. Sell	kW	int16be	1	0,01	0		value		true	false	false	false				
+1163	GridOutput_Rsvd1	Grid-connected output reserved		int16be	1		0		value		false	false	false	false				
+1164	GridOutput_Rsvd2	Grid-connected output reserved		int16be	1		0		value		false	false	false	false				
+1165	Voltage_Phase_R	R phase grid voltage	V	uint16be	1	0,1	0		value		true	false	false	false				
+1166	Current_Output_R	R-phase inverter output curren	A	uint16be	1	0,01	0		value		true	false	false	false				
+1167	ActivePower_Output_R	The R-phase inverter outputs a	kW	int16be	1	0,01	0		value		true	false	false	false				
+1168	ReactivePower_Output_R	The R-phase inverter outputs r	kW	int16be	1	0,01	0		value		true	false	false	false				
+1169	PowerFactor_Output_R	R-phase power factor. The inve	p.u.	int16be	1	0,001	0		value		true	false	false	false				
+1170	Current_PCC_R	R phase PCC current	A	uint16be	1	0,01	0		value		true	false	false	false				
+1171	ActivePower_PCC_R	R-phase PCC active power	kW	int16be	1	0,01	0		value		true	false	false	false				
+1172	ReactivePower_PCC_R	R-phase PCC reactive power. Th	kW	int16be	1	0,01	0		value		true	false	false	false				
+1173	PowerFactor_PCC_R	R-phase PCC power factor. The 	p.u.	int16be	1	0,001	0		value		true	false	false	false				
+1174	R_Rsvd1	R phase reserved 1		int16be	1		0		value		false	false	false	false				
+1175	R_Rsvd2	R phase reserved 2		int16be	1		0		value		false	false	false	false				
+1176	Voltage_Phase_S	S phase grid voltage	V	uint16be	1	0,1	0		value		true	false	false	false				
+1177	Current_Output_S	S phase inverter output curren	A	uint16be	1	0,01	0		value		true	false	false	false				
+1178	ActivePower_Output_S	The S-phase inverter outputs a	kW	int16be	1	0,01	0		value		true	false	false	false				
+1179	ReactivePower_Output_S	The S-phase inverter outputs r	kW	int16be	1	0,01	0		value		true	false	false	false				
+1180	PowerFactor_Output_S	S-phase power factor. The inve	p.u.	int16be	1	0,001	0		value		true	false	false	false				
+1181	Current_PCC_S	S phase PCC current	A	uint16be	1	0,01	0		value		true	false	false	false				
+1182	ActivePower_PCC_S	S-phase PCC active power. Disc	kW	int16be	1	0,01	0		value		true	false	false	false				
+1183	ReactivePower_PCC_S	S-phase PCC reactive power. Th	kW	int16be	1	0,01	0		value		true	false	false	false				
+1184	PowerFactor_PCC_S	S-phase PCC power factor. The 	p.u.	int16be	1	0,001	0		value		true	false	false	false				
+1185	S_Rsvd1	S phase reserved 1		int16be	1		0		value		false	false	false	false				
+1186	S_Rsvd2	S phase reserved 2		int16be	1		0		value		false	false	false	false				
+1187	Voltage_Phase_T	T phase grid voltage	V	uint16be	1	0,1	0		value		true	false	false	false				
+1188	Current_Output_T	T-phase inverter output curren	A	uint16be	1	0,01	0		value		true	false	false	false				
+1189	ActivePower_Output_T	The T-phase inverter outputs a	kW	int16be	1	0,01	0		value		true	false	false	false				
+1190	ReactivePower_Output_T	The T-phase inverter outputs r	kW	int16be	1	0,01	0		value		true	false	false	false				
+1191	PowerFactor_Output_T	T-phase power factor. The inve	p.u.	int16be	1	0,001	0		value		true	false	false	false				
+1192	Current_PCC_T	T phase PCC current	A	uint16be	1	0,01	0		value		true	false	false	false				
+1193	ActivePower_PCC_T	T-phase PCC active power. Disc	kW	int16be	1	0,01	0		value		true	false	false	false				
+1194	ReactivePower_PCC_T	T-phase PCC reactive power. Th	kW	int16be	1	0,01	0		value		true	false	false	false				
+1195	PowerFactor_PCC_T	T-phase PCC power factor. The 	p.u.	int16be	1	0,001	0		value		true	false	false	false				
+1196	T_Rsvd1	T phase reserved 1		int16be	1		0		value		false	false	false	false				
+1197	T_Rsvd2	T phase reserved 2		int16be	1		0		value		false	false	false	false				
+1198	ActivePower_PV_Ext	External power generation	kW	uint16be	1	0,01	0		value		true	false	false	false				
+1199	ActivePower_Load_Sys	System total load power	kW	uint16be	1	0,01	0		value		true	false	false	false				
+1200	Voltage_Phase_L1N	Grid L1 to N voltage effective	V	uint16be	1	0,1	0		value		true	false	false	false				
+1201	Current_Output_L1N	L1 output current effective va	A	uint16be	1	0,01	0		value		true	false	false	false				
+1202	ActivePower_Output_L1N	Active power output on L1 line	kW	int16be	1	0,01	0		value		true	false	false	false				
+1203	Current_PCC_L1N	Effective value of CT current 	A	uint16be	1	0,01	0		value		true	false	false	false				
+1204	ActivePower_PCC_L1N	PCC active power on L1 line	kW	int16be	1	0,01	0		value		true	false	false	false				
+1205	Voltage_Phase_L2N	Grid L2 to N voltage effective	V	uint16be	1	0,1	0		value		true	false	false	false				
+1206	Current_Output_L2N	L2 output current effective va	A	uint16be	1	0,01	0		value		true	false	false	false				
+1207	ActivePower_Output_L2N	Active power output on L2 line	kW	int16be	1	0,01	0		value		true	false	false	false				
+1208	Current_PCC_L2N	Effective value of CT current 	A	uint16be	1	0,01	0		value		true	false	false	false				
+1209	ActivePower_PCC_L2N	Active power output on L2 line	kW	int16be	1	0,01	0		value		true	false	false	false				
+1210	Voltage_Line_L1	L1 line voltage: voltage betwe	V	uint16be	1	0,1	0		value		true	false	false	false				
+1211	Voltage_Line_L2	L2 line voltage: voltage betwe	V	uint16be	1	0,1	0		value		true	false	false	false				
+1212	Voltage_Line_L3	L3 line voltage: voltage betwe	V	uint16be	1	0,1	0		value		true	false	false	false				
+1280	AddressMask_Realtime_EmergencyOutput1	Each bit of this field corresp		uint64be	4		0		value		false	false	false	false				
+1284	ActivePower_Load_Total	Load active power. 	kW	int16be	1	0,01	0		value		true	false	false	false				
+1285	ReactivePower_Load_Total	Load consumption is positive, 	kW	int16be	1	0,01	0		value		true	false	false	false				
+1286	ApparentPower_Load_Total	Load reactive powerApparent po	kW	int16be	1	0,01	0		value		true	false	false	false				
+1287	Frequency_Output	Output voltage frequency	Hz	uint16be	1	0,01	0		value		true	false	false	false				
+1288	ESOutput_Rsvd1	Off-grid total output reserved		int16be	1		0		value		true	false	false	false				
+1289	ESOutput_Rsvd2	Off-grid total output reserved		int16be	1		0		value		true	false	false	false				
+1290	Voltage_Output_R	R-phase inverter output voltag	V	uint16be	1	0,1	0		value		true	false	false	false				
+1291	Current_Load_R	R phase load current	A	int16be	1	0,01	0		value		true	false	false	false				
+1292	ActivePower_Load_R	R-phase load active power. Loa	kW	int16be	1	0,01	0		value		true	false	false	false				
+1293	ReactivePower_Load_R	R-phase load reactive power. T	kW	int16be	1	0,01	0		value		true	false	false	false				
+1294	ApparentPower_Load_R	Apparent power of R-phase load	kVA	int16be	1	0,01	0		value		true	false	false	false				
+1295	LoadPeakRatio_R	R phase load peak ratio	p.u.	uint16be	1	0,01	0		value		true	false	false	false				
+1296	ESR_Rsvd1	R phase reserved 1		int16be	1		0		value		false	false	false	false				
+1297	ESR_Rsvd2	R phase reserved 2		int16be	1		0		value		false	false	false	false				
+1298	Voltage_Output_S	S phase inverter output voltag	V	uint16be	1	0,1	0		value		true	false	false	false				
+1299	Current_Load_S	S phase load current	A	int16be	1	0,01	0		value		true	false	false	false				
+1300	ActivePower_Load_S	S-phase load active power. Loa	kW	int16be	1	0,01	0		value		true	false	false	false				
+1301	ReactivePower_Load_S	S-phase load reactive power. T	kW	int16be	1	0,01	0		value		true	false	false	false				
+1302	ApparentPower_Load_S	Apparent power of S-phase load	kVA	int16be	1	0,01	0		value		true	false	false	false				
+1303	LoadPeakRatio_S	S phase load peak ratio	p.u.	uint16be	1	0,01	0		value		true	false	false	false				
+1306	Voltage_Output_T	T-phase inverter output voltag	V	uint16be	1	0,1	0		value		true	false	false	false				
+1307	Current_Load_T	T phase load current	A	int16be	1	0,01	0		value		true	false	false	false				
+1308	ActivePower_Load_T	T-phase load active power. Loa	kW	int16be	1	0,01	0		value		true	false	false	false				
+1309	ReactivePower_Load_T	T-phase load reactive power. T	kW	int16be	1	0,01	0		value		true	false	false	false				
+1310	ApparentPower_Load_T	Apparent power of T-phase load	kVA	int16be	1	0,01	0		value		true	false	false	false				
+1311	LoadPeakRatio_T	T-phase load peak ratio	p.u.	uint16be	1	0,01	0		value		false	false	false	false				
+1314	Voltage_Output_L1N	Inverter L1 to N voltage effec	V	uint16be	1	0,1	0		value		false	false	false	false				
+1315	Current_Load_L1N	L1 load current effective valu	A	int16be	1	0,01	0		value		false	false	false	false				
+1316	ActivePower_Load_L1N	Load L1 to N active power	kW	int16be	1	0,01	0		value		false	false	false	false				
+1317	Voltage_Output_L2N	Effective value of inverter L2	V	uint16be	1	0,1	0		value		false	false	false	false				
+1318	Current_Load_L2N	L2 load current effective valu	A	int16be	1	0,01	0		value		false	false	false	false				
+1319	ActivePower_Load_L2N	Load L2 to N active power	kW	int16be	1	0,01	0		value		false	false	false	false				
+1412	Voltage_PV1	The first PV voltage	V	uint16be	1	0,1	0		value		true	false	false	false				
+1413	Current_PV1	The first PV current	A	uint16be	1	0,01	0		value		true	false	false	false				
+1414	Power_PV1	PV power of the first road	kW	uint16be	1	0,01	0		value		true	false	false	false				
+1415	Voltage_PV2	The second PV voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1416	Current_PV2	The second PV current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1417	Power_PV2	PV power of the 2nd road	kW	uint16be	1	0,01	0		value		false	false	false	false				
+1418	Voltage_PV3	No. 3 PV voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1419	Current_PV3	No. 3 PV current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1420	Power_PV3	No. 3 PV power	kW	uint16be	1	0,01	0		value		false	false	false	false				
+1421	Voltage_PV4	No. 4 PV voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1422	Current_PV4	No. 4 PV current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1423	Power_PV4	No. 4 PV power	kW	uint16be	1	0,01	0		value		false	false	false	false				
+1424	Voltage_PV5	No. 5 PV voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1425	Current_PV5	No. 5 PV current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1426	Power_PV5	No. 5 PV power	kW	uint16be	1	0,01	0		value		false	false	false	false				
+1427	Voltage_PV6	No. 6 PV voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1428	Current_PV6	No. 6 PV current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1429	Power_PV6	No. 6 PV power	kW	uint16be	1	0,01	0		value		false	false	false	false				
+1430	Voltage_PV7	No. 7 PV voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1431	Current_PV7	No. 7 PV current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1432	Power_PV7	No. 7 PV power	kW	uint16be	1	0,01	0		value		false	false	false	false				
+1433	Voltage_PV8	No. 8 PV voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1434	Current_PV8	No. 8 PV current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1435	Power_PV8	No. 8 PV power	kW	uint16be	1	0,01	0		value		false	false	false	false				
+1436	Voltage_PV9	No. 9 PV voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1437	Current_PV9	No. 9 PV current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1438	Power_PV9	No. 9 PV power	kW	uint16be	1	0,01	0		value		false	false	false	false				
+1439	Voltage_PV10	No. 10 PV voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1440	Current_PV10	No. 10 PV current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1441	Power_PV10	No. 10 PV power	kW	uint16be	1	0,01	0		value		false	false	false	false				
+1442	Voltage_PV11	11th PV voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1443	Current_PV11	11th PV current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1444	Power_PV11	11th PV power	kW	uint16be	1	0,01	0		value		false	false	false	false				
+1445	Voltage_PV12	12th PV voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1446	Current_PV12	12th PV current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1447	Power_PV12	12th PV power	kW	uint16be	1	0,01	0		value		false	false	false	false				
+1448	Voltage_PV13	13th PV voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1449	Current_PV13	13th PV current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1450	Power_PV13	13th PV power	kW	uint16be	1	0,01	0		value		false	false	false	false				
+1451	Voltage_PV14	No. 14 PV voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1452	Current_PV14	No. 14 PV current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1453	Power_PV14	No. 14 PV power	kW	uint16be	1	0,01	0		value		false	false	false	false				
+1454	Voltage_PV15	15th PV voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1455	Current_PV15	15th PV current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1456	Power_PV15	15th PV power	kW	uint16be	1	0,01	0		value		false	false	false	false				
+1457	Voltage_PV16	16th PV voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1458	Current_PV16	16th PV current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1459	Power_PV16	16th PV power	kW	uint16be	1	0,01	0		value		false	false	false	false				
+1472	AddressMask_Realtime_Input_PV2	Each bit of this field corresp		uint64be	4		0		value		false	false	false	false				
+1476	Power_PV_Total	Total PV power	kW	uint16be	1	0,1	0		value		true	false	false	false				
+1540	Voltage_Bat1	No. 1 battery pack voltage	V	uint16be	1	0,1	0		value		true	false	false	false				
+1541	Current_Bat1	The charging and discharging c	A	int16be	1	0,01	0		value		true	false	false	false				
+1542	Power_Bat1	The charging and discharging p	kW	int16be	1	0,01	0		value		true	false	false	false				
+1543	Temperature_Env_Bat1	Ambient temperature of the fir	°C	int16be	1	1	0		value		true	false	false	false				
+1544	SOC_Bat1	No. 1 battery pack SOC	%	uint16be	1	1	0		value		true	false	false	false				
+1545	SOH_Bat1	No. 1 battery pack SOH	%	uint16be	1	1	0		value		true	false	false	false				
+1546	ChargeCycle_Bat1	Number of cycles of the first 	cycle	uint16be	1	1	0		value		true	false	false	false				
+1590	Power_Bat8	No 8 PCK		uint16be	1		0		value		true	false	false	false				
+1668	PV_Generation_Today	Power generation of the day	kWh	uint32be	2	0,01	0		value		true	false	false	false				
+1670	PV_Generation_Total	Total power generation time	kWh	uint32be	2	0,1	0		value		true	false	false	false				
+1672	Load_Consumption_Today	Load power consumption of the 	kWh	uint32be	2	0,01	0		value		true	false	false	false				
+1674	Load_Consumption_Total	Total load power consumption	kWh	uint32be	2	0,1	0		value		true	false	false	false				
+1676	Energy_Purchase_Today	Buy electricity on the day	kWh	uint32be	2	0,01	0		value		true	false	false	false				
+1678	Energy_Purchase_Total	Total electricity purchased	kWh	uint32be	2	0,1	0		value		true	false	false	false				
+1680	Energy_Selling_Today	Electricity sold on the day	kWh	uint32be	2	0,01	0		value		true	false	false	false				
+1682	Energy_Selling_Total	Total electricity sold	kWh	uint32be	2	0,1	0		value		true	false	false	false				
+1684	Bat_Charge_Today	Battery charge capacity of the	kWh	uint32be	2	0,01	0		value		true	false	false	false				
+1686	Bat_Charge_Total	Total battery charge	kWh	uint32be	2	0,1	0		value		true	false	false	false				
+1688	Bat_Discharge_Today	Battery discharge capacity of 	kWh	uint32be	2	0,01	0		value		true	false	false	false				
+1690	Bat_Discharge_Total	Total battery discharge	kWh	uint32be	2	0,1	0		value		true	false	false	false				
+1728	AddressMask_Realtime_ClassifiedInfo1	Each bit of this field corresp		uint64be	4		0		value		false	false	false	false				
+1732	GFCI	Leakage current	mA	uint16be	1	1	0		value		false	false	false	false				
+1733	Current_Bus_Balance	Balance current	A	int16be	1	0,01	0		value		false	false	false	false				
+1734	DCI_R	R-phase current DC component	mA	int16be	1	1	0		value		false	false	false	false				
+1735	DCI_S	S-phase current DC component	mA	int16be	1	1	0		value		false	false	false	false				
+1736	DCI_T	T-phase current DC component	mA	int16be	1	1	0		value		false	false	false	false				
+1737	DCV_R	R-phase voltage DC component	mV	int16be	1	1	0		value		false	false	false	false				
+1738	DCV_S	S-phase voltage DC component	mV	int16be	1	1	0		value		false	false	false	false				
+1739	DCV_T	T-phase voltage DC component	mV	int16be	1	1	0		value		false	false	false	false				
+1740	Voltage_Bus	Total BUS voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1741	Voltage_Bus_P	BUS positive voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1742	Voltage_Bus_N	BUS negative voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1743	Voltage_Bus_LLC	LLC Bus voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1744	Current_BuckBoost	BuckBoost current	A	int16be	1	0,01	0		value		false	false	false	false				
+1745	Voltage_Bus_P_Half	BUS positive half voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1746	Voltage_Bus_N_Half	BUS negative half voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1747	FlyingCap_Voltage1	PV1 flying capacitor voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1748	FlyingCap_Voltage2	PV2 flying capacitor voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1749	FlyingCap_Voltage3	PV3 flying capacitor voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1750	FlyingCap_Voltage4	PV4 flying capacitor voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1751	FlyingCap_Voltage5	PV5 flying capacitor voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1752	FlyingCap_Voltage6	PV6 flying capacitor voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1753	FlyingCap_Voltage7	PV7 flying capacitor voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1754	FlyingCap_Voltage8	PV8 flying capacitor voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1755	FlyingCap_Voltage9	PV9 flying capacitor voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1756	FlyingCap_Voltage10	PV10 flying capacitor voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1757	FlyingCap_Voltage11	PV11 flying capacitor voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1758	FlyingCap_Voltage12	PV12 flying capacitor voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1759	FlyingCap_Voltage13	PV13 flying capacitor voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1760	FlyingCap_Voltage14	PV14 flying capacitor voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1761	FlyingCap_Voltage15	PV15 flying capacitor voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1762	FlyingCap_Voltage16	PV16 flying capacitor voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1792	AddressMask_Realtime_CombinerInfo1	Each bit of this field corresp		uint64be	4		0		value		false	false	false	false				
+1796	Voltage_Group1	The first group of bus voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1797	Current_Group1_Branch1	The first group of the first s	A	uint16be	1	0,01	0		value		false	false	false	false				
+1798	Current_Group1_Branch2	The first group and the second	A	uint16be	1	0,01	0		value		false	false	false	false				
+1799	Voltage_Group2	The second group of bus voltag	V	uint16be	1	0,1	0		value		false	false	false	false				
+1800	Current_Group2_Branch1	2nd group 1st string current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1801	Current_Group2_Branch2	2nd group 2nd string current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1802	Voltage_Group3	The third group of bus voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1803	Current_Group3_Branch1	3rd group 1st string current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1804	Current_Group3_Branch2	3rd group 2nd string current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1805	Voltage_Group4	Group 4 bus voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1806	Current_Group4_Branch1	4th group 1st string current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1807	Current_Group4_Branch2	4th group 2nd string current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1808	Voltage_Group5	Group 5 bus voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1809	Current_Group5_Branch1	5th group 1st string current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1810	Current_Group5_Branch2	5th group 2nd string current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1811	Voltage_Group6	Group 6 bus voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1812	Current_Group6_Branch1	6th group 1st string current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1813	Current_Group6_Branch2	6th group 2nd string current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1814	Voltage_Group7	Group 7 bus voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1815	Current_Group7_Branch1	7th group 1st string current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1816	Current_Group7_Branch2	7th group 2nd string current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1817	Voltage_Group8	Group 8 bus voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1818	Current_Group8_Branch1	8th group 1st string current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1819	Current_Group8_Branch2	8th group 2nd string current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1820	Voltage_Group9	Group 9 bus voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1821	Current_Group9_Branch1	9th group 1st string current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1822	Current_Group9_Branch2	9th group 2nd string current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1823	Voltage_Group10	Group 10 bus voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1824	Current_Group10_Branch1	10th group 1st string current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1825	Current_Group10_Branch2	10th group 2nd string current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1826	Voltage_Group11	Group 11 bus voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1827	Current_Group11_Branch1	11th group 1st string current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1828	Current_Group11_Branch2	11th group 2nd string current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1829	Voltage_Group12	The 12th group of bus voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1830	Current_Group12_Branch1	12th group 1st string current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1831	Current_Group12_Branch2	12th group 2nd string current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1832	Voltage_Group13	Group 13 bus voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1833	Current_Group13_Branch1	13th group 1st string current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1834	Current_Group13_Branch2	13th group 2nd string current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1835	Voltage_Group14	Group 14 bus voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1836	Current_Group14_Branch1	The 14th group and the 1st str	A	uint16be	1	0,01	0		value		false	false	false	false				
+1837	Current_Group14_Branch2	The 14th group and the 2nd str	A	uint16be	1	0,01	0		value		false	false	false	false				
+1838	Voltage_Group15	Group 15 bus voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1839	Current_Group15_Branch1	15th group 1st string current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1840	Current_Group15_Branch2	15th group 2nd string current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1841	Voltage_Group16	The 16th group of bus voltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+1842	Current_Group16_Branch1	The 16th group of the first st	A	uint16be	1	0,01	0		value		false	false	false	false				
+1843	Current_Group16_Branch2	16th group 2nd string current	A	uint16be	1	0,01	0		value		false	false	false	false				
+1856	AddressMask_Realtime_CombinerInfo2	Each bit of this field corresp		uint64be	4		0		value		false	false	false	false				
+1920	AddressMask_Realtime_ArcInfo3	Each bit of this field corresp		uint64be	4		0		value		false	false	false	false				
+1924	ArcStrength_Channel1	Real-time arc intensity monito		int16be	1	1	0		value		false	false	false	false				
+1925	ArcStrength_Channel2	Real-time arc intensity monito		int16be	1	1	0		value		false	false	false	false				
+1926	ArcStrength_Channel3	Real-time arc intensity monito		int16be	1	1	0		value		false	false	false	false				
+1927	ArcStrength_Channel4	Real-time arc intensity monito		int16be	1	1	0		value		false	false	false	false				
+1928	ArcStrength_Channel5	Real-time arc intensity monito		int16be	1	1	0		value		false	false	false	false				
+1929	ArcStrength_Channel6	Real-time arc intensity monito		int16be	1	1	0		value		false	false	false	false				
+1930	ArcStrength_Channel7	Real-time arc intensity monito		int16be	1	1	0		value		false	false	false	false				
+1931	ArcStrength_Channel8	Real-time arc intensity monito		int16be	1	1	0		value		false	false	false	false				
+1932	ArcStrength_Channel9	Real-time arc intensity monito		int16be	1	1	0		value		false	false	false	false				
+1933	ArcStrength_Channel10	Real-time arc intensity monito		int16be	1	1	0		value		false	false	false	false				
+1934	ArcStrength_Channel11	Real-time arc intensity monito		int16be	1	1	0		value		false	false	false	false				
+1935	ArcStrength_Channel12	Real-time arc intensity monito		int16be	1	1	0		value		false	false	false	false				
+1936	ArcStrength_Channel13	Real-time arc intensity monito		int16be	1	1	0		value		false	false	false	false				
+1937	ArcStrength_Channel14	Real-time arc intensity monito		int16be	1	1	0		value		false	false	false	false				
+1938	ArcStrength_Channel15	Real-time arc intensity monito		int16be	1	1	0		value		false	false	false	false				
+1939	ArcStrength_Channel16	Real-time arc intensity monito		int16be	1	1	0		value		false	false	false	false				
+1940	ArcStrength_Channel17	Real-time arc intensity monito		int16be	1	1	0		value		false	false	false	false				
+1941	ArcStrength_Channel18	Real-time arc intensity monito		int16be	1	1	0		value		false	false	false	false				
+1942	ArcStrength_Channel19	Real-time arc intensity monito		int16be	1	1	0		value		false	false	false	false				
+1943	ArcStrength_Channel20	Real-time arc intensity monito		int16be	1	1	0		value		false	false	false	false				
+1944	ArcStrength_Channel21	Real-time arc intensity monito		int16be	1	1	0		value		false	false	false	false				
+1945	ArcStrength_Channel22	Real-time arc intensity monito		int16be	1	1	0		value		false	false	false	false				
+1946	ArcStrength_Channel23	Real-time arc intensity monito		int16be	1	1	0		value		false	false	false	false				
+1947	ArcStrength_Channel24	Real-time arc intensity monito		int16be	1	1	0		value		false	false	false	false				
+1948	ArcStrength_Channel25	Real-time arc intensity monito		int16be	1	1	0		value		false	false	false	false				
+1949	ArcStrength_Channel26	Real-time arc intensity monito		int16be	1	1	0		value		false	false	false	false				
+1950	ArcStrength_Channel27	Real-time arc intensity monito		int16be	1	1	0		value		false	false	false	false				
+1951	ArcStrength_Channel28	Real-time arc intensity monito		int16be	1	1	0		value		false	false	false	false				
+1952	ArcStrength_Channel29	Channel 29 monitored real-time		int16be	1	1	0		value		false	false	false	false				
+1953	ArcStrength_Channel30	Real-time arc intensity monito		int16be	1	1	0		value		false	false	false	false				
+1954	ArcStrength_history_Channel1	Record the monitored arc inten		int16be	1	1	0		value		false	false	false	false				
+1955	ArcStrength_history_Channel2	Record the monitored arc inten		int16be	1	1	0		value		false	false	false	false				
+1956	ArcStrength_history_Channel3	Record the monitored arc inten		int16be	1	1	0		value		false	false	false	false				
+1957	ArcStrength_history_Channel4	Record the monitored arc inten		int16be	1	1	0		value		false	false	false	false				
+1958	ArcStrength_history_Channel5	Record the monitored arc inten		int16be	1	1	0		value		false	false	false	false				
+1959	ArcStrength_history_Channel6	Record the monitored arc inten		int16be	1	1	0		value		false	false	false	false				
+1960	ArcStrength_history_Channel7	Record the monitored arc inten		int16be	1	1	0		value		false	false	false	false				
+1961	ArcStrength_history_Channel8	Record the monitored arc inten		int16be	1	1	0		value		false	false	false	false				
+1962	ArcStrength_history_Channel9	Record the monitored arc inten		int16be	1	1	0		value		false	false	false	false				
+1963	ArcStrength_history_Channel10	Record the monitored arc inten		int16be	1	1	0		value		false	false	false	false				
+1964	ArcStrength_history_Channel11	Record the monitored arc inten		int16be	1	1	0		value		false	false	false	false				
+1965	ArcStrength_history_Channel12	Record the monitored arc inten		int16be	1	1	0		value		false	false	false	false				
+1966	ArcStrength_history_Channel13	Record the monitored arc inten		int16be	1	1	0		value		false	false	false	false				
+1967	ArcStrength_history_Channel14	Record the monitored arc inten		int16be	1	1	0		value		false	false	false	false				
+1968	ArcStrength_history_Channel15	Record the monitored arc inten		int16be	1	1	0		value		false	false	false	false				
+1969	ArcStrength_history_Channel16	Record the monitored arc inten		int16be	1	1	0		value		false	false	false	false				
+1970	ArcStrength_history_Channel17	Record the monitored arc inten		int16be	1	1	0		value		false	false	false	false				
+1971	ArcStrength_history_Channel18	Record the monitored arc inten		int16be	1	1	0		value		false	false	false	false				
+1972	ArcStrength_history_Channel19	Record the monitored arc inten		int16be	1	1	0		value		false	false	false	false				
+1973	ArcStrength_history_Channel20	Record the monitored arc inten		int16be	1	1	0		value		false	false	false	false				
+1974	ArcStrength_history_Channel21	Record the monitored arc inten		int16be	1	1	0		value		false	false	false	false				
+1975	ArcStrength_history_Channel22	Record the monitored arc inten		int16be	1	1	0		value		false	false	false	false				
+1976	ArcStrength_history_Channel23	Record the monitored arc inten		int16be	1	1	0		value		false	false	false	false				
+1977	ArcStrength_history_Channel24	Record the monitored arc inten		int16be	1	1	0		value		false	false	false	false				
+1978	ArcStrength_history_Channel25	Record the monitored arc inten		int16be	1	1	0		value		false	false	false	false				
+1979	ArcStrength_history_Channel26	Record the monitored arc inten		int16be	1	1	0		value		false	false	false	false				
+1980	ArcStrength_history_Channel27	Record the monitored arc inten		int16be	1	1	0		value		false	false	false	false				
+1981	ArcStrength_history_Channel28	Record the monitored arc inten		int16be	1	1	0		value		false	false	false	false				
+1982	ArcStrength_history_Channel29	Record the monitored arc inten		int16be	1	1	0		value		false	false	false	false				
+1983	ArcStrength_history_Channel30	Record the monitored arc inten		int16be	1	1	0		value		false	false	false	false				
+4096	AddressMask_Config_Basic1	Each bit of this field corresp		uint64be	4		0		value		false	false	false	false				
+4100	SysTimeConfig_Year	System time-year-The actual ye	Year	uint16be	1		0		value		false	false	false	false				
+4101	SysTimeConfig_Month	System time-month	January	uint16be	1		0		value		false	false	false	false				
+4102	SysTimeConfig_Date	System Time-Daily Minutes	Day	uint16be	1		0		value		false	false	false	false				
+4103	SysTimeConfig_Hour	System time-hour	hour	uint16be	1		0		value		false	false	false	false				
+4104	SysTimeConfig_Minute	System time-minutes	minutes	uint16be	1		0		value		false	false	false	false				
+4105	SysTimeConfig_Second	System time-second	seconds	uint16be	1		0		value		false	false	false	false				
+4106	SysTimeConfig_Control	When the written value is 1, t		uint16be	1		0		value		false	false	false	false				
+4107	RS485Config_Address	RS485 configuration-address		uint16be	1		0		value		false	false	false	false				
+4108	RS485Config_Baud	RS485??????0?4800bps1?9600bps?		uint16be	1		0		value		false	false	false	false				
+4109	RS485Config_StopBit	RS485 stop bit selection-0: 1 		uint16be	1		0		value		false	false	false	false				
+4110	RS485Config_ParityBit	RS485 check digit selection-0:		uint16be	1		0		value		false	false	false	false				
+4111	RS485Config_Control	When the written value is 1, t		uint16be	1		0		value		false	false	false	false				
+4112	PV_InputMode_Config	PV input mode selection.0: Par		uint16be	1		0		value		false	false	false	false				
+4113	InputType_Channel0_Config	Input channel 0 type selection		uint16be	1		0		value		false	false	false	false				
+4114	InputType_Channel1_Config			uint16be	1		0		value		false	false	false	false				
+4115	InputType_Channel2_Config			uint16be	1		0		value		false	false	false	false				
+4116	InputType_Channel3_Config			uint16be	1		0		value		false	false	false	false				
+4117	InputType_Channel4_Config			uint16be	1		0		value		false	false	false	false				
+4118	InputType_Channel5_Config			uint16be	1		0		value		false	false	false	false				
+4119	InputType_Channel6_Config			uint16be	1		0		value		false	false	false	false				
+4120	InputType_Channel7_Config			uint16be	1		0		value		false	false	false	false				
+4121	InputType_Channel8_Config			uint16be	1		0		value		false	false	false	false				
+4122	InputType_Channel9_Config			uint16be	1		0		value		false	false	false	false				
+4123	InputType_Channel10_Config			uint16be	1		0		value		false	false	false	false				
+4124	InputType_Channel11_Config			uint16be	1		0		value		false	false	false	false				
+4125	InputType_Channel12_Config			uint16be	1		0		value		false	false	false	false				
+4126	InputType_Channel13_Config			uint16be	1		0		value		false	false	false	false				
+4127	InputType_Channel14_Config			uint16be	1		0		value		false	false	false	false				
+4128	InputType_Channel15_Config			uint16be	1		0		value		false	false	false	false				
+4129	InputType_Control	When the written value is 1, t		uint16be	1		0		value		false	false	false	false				
+4130	SafetyUpdateFromUSB_Control	When the written value is 1, i		uint16be	1		0		value		false	false	false	false				
+4131	AntiReflux_Control	Anti-backflow enable controlWh		uint16be	1		0		value		false	false	false	false				
+4132	AntiReflux_Power	Anti-backflow power	W	uint16be	1	100	0		value		false	false	false	false				
+4133	IVCurveScan_Control	IV curve scan enable control		uint16be	1		0		value		false	false	false	false				
+4134	IVCurveScan_Period	IV curve scan period	Minutes	uint16be	1	1	0		value		false	false	false	false				
+4135	IVCurveScan_Oneshot	IV curve scan activated-When t		uint16be	1		0		value		false	false	false	false				
+4136	IVCurveScan_ReadChannel	The IV curve scan returns the 		uint16be	1		0		value		false	false	false	false				
+4137	EPS_Control	Emergency power supply enable 		uint16be	1		0		value		false	false	false	false				
+4138	EPS_WaitTime	Emergency power supply start w	seconds	uint16be	1	1	0		value		false	false	false	false				
+4139	BatteryActive_Control	Battery automatic activation e		uint16be	1		0		value		false	false	false	false				
+4140	BatteryActive_Oneshot	Battery activation-When the wr		uint16be	1		0		value		false	false	false	false				
+4141	CT_Auto_Calibrate	CT automatic correction-When t		uint16be	1		0		value		false	false	false	false				
+4144	EnergyStatistics_Date_Year	Energy statistics return date 	Year	uint16be	1	1	0		value		false	false	false	false				
+4145	EnergyStatistics_Date_Month	Energy statistics return date 	Month	uint16be	1	1	0		value		false	false	false	false				
+4146	EnergyStatistics_Date_Date	Energy statistics return date 	Date	uint16be	1	1	0		value		false	false	false	false				
+4147	EnergyStatistics_Config	Energy statistics return setti		uint16be	1		0		value		false	false	false	false				
+4148	Language	The inverter menu language num		uint16be	1		0		value		false	false	false	false				
+4149	Parallel_Control	0: Disable the parallel functi		uint16be	1		0		value		false	false	false	false				
+4150	Parallel_Master_Slave	0: The machine is configured a		uint16be	1		0		value		false	false	false	false				
+4151	Parallel_Address	Local parallel address		uint16be	1		0		value		false	false	false	false				
+4152	UnbalancedSupport_Control	3-phase 4-wire mode grid unbal		uint16be	1		0		value		false	false	false	false				
+4153	PV_Generation_Ratio	Power generation rate. The def	p.u.	uint16be	1	0,001	0		value		false	false	false	false				
+4154	Energy_Purchase_Ratio	Buy power rate. The default va	p.u.	uint16be	1	0,001	0		value		false	false	false	false				
+4155	Energy_Selling_Ratio	Selling power ratio. The defau	p.u.	uint16be	1	0,001	0		value		false	false	false	false				
+4156	Bat_Charge_Ratio	Battery Charging power rate, D	p.u.	uint16be	1	0,001	0		value		false	false	false	false				
+4157	Bat_Discharge_Ratio	Battery Discharge power rate. 	p.u.	uint16be	1	0,001	0		value		false	false	false	false				
+4160	AddressMask_Config_Basic2	Each bit of this field corresp		uint64be	4		0		value		false	false	false	false				
+4164	BatConfig_ID	Battery serial number.The seri		uint16be	1		0		value		false	false	false	false				
+4165	BatConfig_Address	Battery communication address.		uint16be	1		0		value		false	false	false	false				
+4166	BatConfig_Protocol	Battery Parameters-Communicati		uint16be	1		0		value		false	false	false	false				
+4167	BatConfig_Voltage_Over	Battery parameters-overvoltage	V	uint16be	1	0,1	0		value		false	false	false	false				
+4168	BatConfig_Voltage_Charge	Battery parameters-charging vo	V	uint16be	1	0,1	0		value		false	false	false	false				
+4169	BatConfig_Voltage_Lack	Battery parameters-undervoltag	V	uint16be	1	0,1	0		value		false	false	false	false				
+4170	BatConfig_Voltage_Discharge_Stop	Battery Parameter-Lowest disch	V	uint16be	1	0,1	0		value		true	false	false	false				
+4171	BatConfig_Current_Charge_Limit	Battery Parameter-Maximum char	A	uint16be	1	0,01	0		value		true	false	false	false				
+4172	BatConfig_Current_Discharge_Limit	Battery Parameter-Maximum disc	A	uint16be	1	0,01	0		value		true	false	false	false				
+4173	BatConfig_Depth_of_Discharge	Dod indicates the max discharg	%	uint16be	1	1	0		value		true	false	false	false				
+4174	BatConfig_End_of_Discharge	EOD indicates the maximum off-	%	uint16be	1	1	0		value		true	false	false	false				
+4175	BatConfig_Capacity	Battery parameters-battery cap	Ah	uint16be	1	1	0		value		true	false	false	false				
+4176	BatConfig_Voltage_Nominal	Battery parameters-rated batte	V	uint16be	1	0,1	0		value		true	false	false	false				
+4177	BatConfig_Cell_Type	Battery parameters-battery cel		uint16be	1	1	0		value		true	false	false	false				
+4178	BatConfig_EPS_Buffer	Battery parameters-lead acid r	%	uint16be	1	1	0		value		true	false	false	false				
+4179	BatConfig_Control	Battery parameter write contro		uint16be	1		0		value		true	false	false	false				
+4180	BatConfig_Address2	Battery address.If multiple ba		uint16be	1		0		value		false	false	false	false				
+4181	BatConfig_Address3	Battery address.If multiple ba		uint16be	1		0		value		false	false	false	false				
+4182	BatConfig_Address4	Battery address.If multiple ba		uint16be	1		0		value		false	false	false	false				
+4192	PCCSampleMode	PCC power acquisition device c		uint16be	1		0		value		false	false	false	false				
+4224	AddressMask_Config_Basic3	Each bit of this field corresp		uint64be	4		0		value		false	false	false	false				
+4228	Arcing_Alarm_Enable	Enable arc detection function		uint16be	1		0		value		false	false	false	false				
+4229	Arcing_ChannelSelfTest_Comm	Write 1 to start self-check (s		uint16be	1		0		value		false	false	false	false				
+4230	Arcing_ChannelSelfTest_Result	bit0 indicates the self-check 		uint32be	2		0		value		false	false	false	false				
+4232	Arcing_Alarm_Threshold1	Settable arc alarm threshold (		int16be	1	1	0		value		false	false	false	false				
+4233	Arcing_Alarm_Threshold2	Settable arc alarm threshold (		int16be	1	1	0		value		false	false	false	false				
+4234	Arcing_Alarm_Threshold3	Settable arc alarm threshold (		int16be	1	1	0		value		false	false	false	false				
+4235	Arcing_Alarm_Threshold4	Settable arc alarm threshold (		int16be	1	1	0		value		false	false	false	false				
+4236	Arcing_Alarm_Clear	Write 0x1234 to clear the arc 		uint16be	1		0		value		false	false	false	false				
+4237	Arcing_Alarm_ShutDown_Threshold	DC arc alarm fault threshold: 		uint16be	1	1	0		value		false	false	false	false				
+4238	Arcing_Alarm_Counter	Current arc alarm times		uint16be	1	1	0		value		false	false	false	false				
+4256	PLC_Enable_Setting			uint16be	1		0		value		false	false	false	false				
+4257	PLC_Com_Property	bit0-bit1:0~1 corresponds to 1	NULL	uint16be	1	NULL	0		value		false	false	false	false				
+4261	BLE_Enable_Setting		NULL	uint16be	1	NULL	0		value		false	false	false	false				
+4262	BLE_Com_Property	bit0-bot1:0~1 corresponds to 1	NULL	uint16be	1	NULL	0		value		false	false	false	false				
+4272	PID_Auto_running_enable	PID start auto-run.0 means dis		uint16be	1		0		value		false	false	false	false				
+4273	PID_Working_Start_Time	PID operation start time (BCD 	Minute	uint16be	1	1	0		value		false	false	false	false				
+4274	PID_Working_Hours	PID operating duration.	Minute	uint16be	1	1	0		value		false	false	false	false				
+4275	PID_Working_PV_Threshold	PID start PV value threshold.P	V	uint16be	1	0,1	0		value		false	false	false	false				
+4276	PID_Break_Restart_Delay	Restart wait time after PID fa	Minute	uint16be	1	1	0		value		false	false	false	false				
+4352	AddressMask_Config_Remote1	Each bit of this field corresp		uint64be	4		0		value		false	false	false	false				
+4356	Remote_On_Off_Control	Remote power on/off.0x0000: Po		uint16be	1		0		value		false	false	false	false				
+4357	Power_Control	Power control.Bit0: active (ad		uint16be	1		0		value		false	false	false	false				
+4358	Active_Power_Export_Limit	Output maximum active power pe	%	uint16be	1	0,1	0		value		false	false	false	false				
+4359	Active_Power_Import_Limit	Input maximum active power per	%	uint16be	1	0,1	0		value		false	false	false	false				
+4360	Reactive_Power_Setting	Reactive power percentage.The 	%	int16be	1	0,1	0		value		false	false	false	false				
+4361	Power_Factor_Setting	Power factor.The inverter end 	p.u.	int16be	1	0,01	0		value		false	false	false	false				
+4362	Active_Power_Limit_Speed	Active power limit change rate	%	uint16be	1	1	0		value		false	false	false	false				
+4363	Reactive_Power_Response_Time	Reactive power setting respons	second	uint16be	1	0,1	0		value		false	false	false	false				
+4368	Energy_Storage_Mode_Control	Energy storage operating mode 		uint16be	1		0		value		false	false	false	false				
+4369	Timing_ID	Timed charging and discharging		uint16be	1		0		value		false	false	false	false				
+4370	Timing_On_Off_Control	Timed charge/discharge-enable 		uint16be	1		0		value		false	false	false	false				
+4371	Timing_Charge_Start	High Byte. Charging start hour	hoursminutes	uint16be	1	11	0		value		false	false	false	false				
+4372	Timing_Charge_End	High Byte. End of charge hours	hoursminutes	uint16be	1	11	0		value		false	false	false	false				
+4373	Timing_Discharge_Start	High Byte. Discharge start hou	hoursminutes	uint16be	1	11	0		value		false	false	false	false				
+4374	Timing_Discharge_End	High Byte. End of discharge ho	hoursminutes	uint16be	1	11	0		value		false	false	false	false				
+4375	Timing_Power_Charge	Timed charging and discharging	W	uint32be	2	1	0		value		false	false	false	false				
+4377	Timing_Power_Discharge	Timed charge/discharge-dischar	W	uint32be	2	1	0		value		false	false	false	false				
+4383	Timing_Control	Timing charge and discharge wr		uint16be	1		0		value		false	false	false	false				
+4384	TOU_ID	Time-sharing tariff-rule seria		uint16be	1		0		value		false	false	false	false				
+4385	TOU_On_Off_Control	time-of-use tariff-rule enable		uint16be	1		0		value		false	false	false	false				
+4386	TOU_Charge_Start	High Byte. Charging start hour	hoursminutes	uint16be	1	11	0		value		false	false	false	false				
+4387	TOU_Charge_End	High Byte. End of charge hours	hoursminutes	uint16be	1	11	0		value		false	false	false	false				
+4388	TOU_Charge_Target_SOC	Timeshare-Forced Charge Cutoff	%	uint16be	1	1	0		value		false	false	false	false				
+4389	TOU_Charge_Power	Time-sharing tariff-Forced cha	W	uint32be	2	1	0		value		false	false	false	false				
+4391	TOU_Executed_Date_Start	High Byte. Month the rule goes	monthday	uint16be	1	11	0		value		false	false	false	false				
+4392	TOU_Executed_Date_End	High Byte. Month the rule stop	monthday	uint16be	1	11	0		value		false	false	false	false				
+4393	TOU_Executed_Day_of_Week	Timeshare-Rule Effective Week.		uint16be	1		0		value		false	false	false	false				
+4399	TOU_Control	Time-of-use tariff - write con		uint16be	1		0		value		false	false	false	false				
+4400	Peak_Shaving_Discharge_Threshold	The upper limit of the power a	W	uint32be	2	1	0		value		false	false	false	false				
+4402	Peak_Shaving_Charge_Threshold	Upper limit of the power allow	W	uint32be	2	1	0		value		false	false	false	false				
+4416	AddressMask_Config_Remote2	Each bit of this field corresp		uint64be	4		0		value		false	false	false	false				
+4480	AddressMask_Config_Remote3	Each bit of this field corresp		uint64be	4		0		value		false	false	false	false				
+4484	Passive_Timeout	Passive mode-timeout control-D	seconds	uint16be	1	1	0		value		false	false	false	false				
+4485	Passive_Timeout_Action	Passive mode-timeout action-0:		uint16be	1		0		value		false	false	false	false				
+4487	Passive_Manual_Gdes	Manual mode expected grid powe	W	int32be	2	1	0		value		false	false	false	false				
+4489	Passive_Manual_Blo	Manual mode expected grid powe	W	int32be	2	1	0		value		false	false	false	false				
+4491	Passive_Manual_Bup	The maximum charge and dischar	W	int32be	2	1	0		value		false	false	false	false				
+4493	Passive_Manual_Gdzup	Manual mode allows selling ele	W	int32be	2	1	0		value		false	false	false	false				
+4495	Passive_Manual_Gdzlo	Manual mode allows to buy elec	W	int32be	2	1	0		value		false	false	false	false				
+4497	Passive_Scheduler_Gdes_Ante	Scheduler mode expected grid p	W	int32be	2	1	0		value		false	false	false	false				
+4499	Passive_Scheduler_Blo_Ante	Minimum charge and discharge p	W	int32be	2	1	0		value		false	false	false	false				
+4501	Passive_Scheduler_Bup_Ante	The maximum charge and dischar	W	int32be	2	1	0		value		false	false	false	false				
+4503	Passive_Scheduler_Gdzup_Ante	Scheduler mode allows to sell 	W	int32be	2	1	0		value		false	false	false	false				
+4505	Passive_Scheduler_Gdzlo_Ante	Scheduler mode allows to buy e	W	int32be	2	1	0		value		false	false	false	false				
+4507	Passive_Scheduler_Gdes_Post	Scheduler mode expected grid p	W	int32be	2	1	0		value		false	false	false	false				
+4509	Passive_Scheduler_Blo_Post	The minimum charge and dischar	W	int32be	2	1	0		value		false	false	false	false				
+4511	Passive_Scheduler_Bup_Post	The maximum charge and dischar	W	int32be	2	1	0		value		false	false	false	false				
+4513	Passive_Scheduler_Gdzup_Post	Scheduler mode allows selling 	W	int32be	2	1	0		value		false	false	false	false				
+4515	Passive_Scheduler_Gdzlo_Post	Scheduler mode allows to buy e	W	int32be	2	1	0		value		false	false	false	false				
+4517	Passive_Scheduler_StartTime	Scheduler mode application exp	seconds	uint32be	2	1	0		value		false	false	false	false				
+4519	Passive_Scheduler_DurationTime	Scheduler mode application exp	seconds	uint32be	2	1	0		value		false	false	false	false				
+4521	Passive_Scheduler_ManagementMode	Scheduler mode management mode		uint16be	1		0		value		false	false	false	false				
+4544	AddressMask_Config_Remote4	Each bit of this field corresp		uint64be	4		0		value		false	false	false	false				
+4864	AddressMask_Config_ReadOnly_Result1	Each bit of this field corresp		uint64be	4		0		value		false	false	false	false				
+36878	Battery_Relatime_Capacity		%	uint16be	1		0		value		false	false	false	false				
+36896	BMS_Inquire	Battery query control wordBit0		uint16be	1		0		value		false	false	false	false				
+36945	Pack_RT_Cell_Voltage1	Cell 1 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+36946	Pack_RT_Cell_Voltage2	Cell 2 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+36947	Pack_RT_Cell_Voltage3	Cell 3 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+36948	Pack_RT_Cell_Voltage4	Cell 4 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+36949	Pack_RT_Cell_Voltage5	Cell 5 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+36950	Pack_RT_Cell_Voltage6	Cell 6 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+36951	Pack_RT_Cell_Voltage7	Cell 7 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+36952	Pack_RT_Cell_Voltage8	Cell 8 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+36953	Pack_RT_Cell_Voltage9	Cell 9 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+36992	AddressMask_BMS3_Fault	Each bit of this field corresp		uint64be	4		0		value		false	false	false	false				
+36996	Pack_Fault_ID	Real-time faulty battery pack 		uint16be	1		0		value		false	false	false	false				
+36997	Pack_Fault_Timestamp	Fault data timestamp		uint32be	2		0		value		false	false	false	false				
+36999	Pack_Fault_SN0	Device serial number 0		uint16be	1		0		value		false	false	false	false				
+37000	Pack_Fault_SN1	Device serial number 1		uint16be	1		0		value		false	false	false	false				
+37001	Pack_Fault_SN2	Device serial number 2		uint16be	1		0		value		false	false	false	false				
+37002	Pack_Fault_SN3	Device serial number 3		uint16be	1		0		value		false	false	false	false				
+37003	Pack_Fault_SN4	Device serial number 4		uint16be	1		0		value		false	false	false	false				
+37004	Pack_Fault_SN5	Device serial number 5		uint16be	1		0		value		false	false	false	false				
+37005	Pack_Fault_SN6	Device serial number 6		uint16be	1		0		value		false	false	false	false				
+37006	Pack_Fault_SN7	Device serial number 7		uint16be	1		0		value		false	false	false	false				
+37007	Pack_Fault_SN8	Device serial number 8		uint16be	1		0		value		false	false	false	false				
+37008	Pack_Fault_SN9	Device serial number 9		uint16be	1		0		value		false	false	false	false				
+37009	Pack_Fault_Cell_Voltage1	Cell 1 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+37010	Pack_Fault_Cell_Voltage2	Cell 2 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+37011	Pack_Fault_Cell_Voltage3	Cell 3 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+37012	Pack_Fault_Cell_Voltage4	Cell 4 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+37013	Pack_Fault_Cell_Voltage5	Cell 5 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+37014	Pack_Fault_Cell_Voltage6	Cell 6 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+37015	Pack_Fault_Cell_Voltage7	Cell 7 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+37016	Pack_Fault_Cell_Voltage8	Cell 8 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+37017	Pack_Fault_Cell_Voltage9	Cell 9 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+37018	Pack_Fault_Cell_Voltage10	Cell 10 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+37019	Pack_Fault_Cell_Voltage11	Cell 11 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+37020	Pack_Fault_Cell_Voltage12	Cell 12 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+37021	Pack_Fault_Cell_Voltage13	Cell 13 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+37022	Pack_Fault_Cell_Voltage14	Cell 14 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+37023	Pack_Fault_Cell_Voltage15	Cell 15 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+37024	Pack_Fault_Cell_Voltage16	Cell 16 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+37025	Pack_Fault_Cell_Voltage17	Cell 17 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+37026	Pack_Fault_Cell_Voltage18	Cell 18 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+37027	Pack_Fault_Cell_Voltage19	Cell 19 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+37028	Pack_Fault_Cell_Voltage20	Cell 20 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+37029	Pack_Fault_Cell_Voltage21	Cell 21 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+37030	Pack_Fault_Cell_Voltage22	Battery 22 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+37031	Pack_Fault_Cell_Voltage23	Battery 23 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+37032	Pack_Fault_Cell_Voltage24	Cell 24 voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+37033	Pack_Fault_Cell_Max_Voltage	The highest voltage of the bat	V	uint16be	1	0,001	0		value		false	false	false	false				
+37034	Pack_Fault_Cell_Min_Voltage	Minimum battery voltage	V	uint16be	1	0,001	0		value		false	false	false	false				
+37035	Pack_Fault_Temperature1_Pack	Battery pack temperature 1	°C	int16be	1	0,1	0		value		false	false	false	false				
+37036	Pack_Fault_Temperature2_Pack	Battery pack temperature 2	°C	int16be	1	0,1	0		value		false	false	false	false				
+37037	Pack_Fault_Temperature3_Pack	Battery pack temperature 3	°C	int16be	1	0,1	0		value		false	false	false	false				
+37038	Pack_Fault_Temperature4_Pack	Battery pack temperature 4	°C	int16be	1	0,1	0		value		false	false	false	false				
+37039	Pack_Fault_Temperature_MOS	MOS tube temperature	°C	int16be	1	0,1	0		value		false	false	false	false				
+37040	Pack_Fault_Temperature_Env	Ambient temperature in the bat	°C	int16be	1	0,1	0		value		false	false	false	false				
+37041	Pack_Fault_Current	Battery pack current	A	int16be	1	0,1	0		value		false	false	false	false				
+37042	Pack_Fault_Remaining_Capacity	The remaining capacity	Ah	uint16be	1	0,1	0		value		false	false	false	false				
+37043	Pack_Fault_FullCharge_Capacity	Full charge capacity	Ah	uint16be	1	0,1	0		value		false	false	false	false				
+37044	Pack_Fault_Total_Voltage	Total voltage	V	uint16be	1	0,01	0		value		false	false	false	false				
+37045	Pack_Alarm_State	Alarm status		uint16be	1		0		value		true	false	false	false				
+37046	Pack_Protect_State	Protection status		uint16be	1		0		value		false	false	false	false				
+37047	Pack_Fault_State	Fault state		uint16be	1		0		value		false	false	false	false				

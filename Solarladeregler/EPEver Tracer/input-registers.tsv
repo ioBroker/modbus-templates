@@ -1,0 +1,11 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	cw	isScale
+12296	Charge Mode	0-disconnect 1-PWM 2-MPPT		uint16be	1	1	0		level			
+12544	PV Spannung	PV Spannung	V	uint16be	1	0.01	0		level			
+12545	PV Strom	PV Strom	A	uint16be	1	0.01	0		level			
+12546	PV Leistung	PV Leistung	W	uint32be	2	0.0000001	0		level			
+12550	Batt Ladeleistung	Batt Ladeleistung	W	uint32be	2	0.0000001	0		level			
+12560	Housing Temp	Housing Temp	°C	uint16be	1	0.01	0		level			
+12800	Bat Stat	0-norm 1-over 2-under 3-low		uint16be	1	1	0		level			
+12801	Charge Stat	1-run 0-stby 		uint16be	1	1	0		level			
+13082	Bat Volt	Bat Volt	V	uint16be	1	0.01	0		level			
+13083	Bat Amp	Bat Amp	A	uint32be	2	0.0000001	0		level			

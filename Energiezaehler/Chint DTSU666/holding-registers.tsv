@@ -1,0 +1,41 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+1	Programming password code			uint16be	1	0	0		level		false	false	false	false
+2	Electric energy zero clearing clr.e			uint16be	1	0	0		state		false	false	false	false
+6	Current transformer ratio (irat)			uint16be	1	0	0		level		false	false	false	false
+7	Potentia1 transformer ratio (urat)			uint16be	1	0	0		level		false	false	false	false
+11	Meter type (meter type)			uint16be	1	0	0		level		false	false	false	false
+47	Second			uint16be	1	0	0		state		false	false	false	false
+48	Minute			uint16be	1	0	0		level		false	false	false	false
+49	Hour			uint16be	1	0	0		level		false	false	false	false
+50	Day			uint16be	1	0	0		level		false	false	false	false
+51	Month			uint16be	1	0	0		state		false	false	false	false
+52	Year			uint16be	1	0	0		level		false	false	false	false
+8192	Line line voltage (uab)		V	floatbe	2	0.1	0		level		true	false	false	false
+8194	Line line voltage (ubc)		V	floatbe	2	0.1	0		level		true	false	false	false
+8196	Line line voltage (uca)		V	floatbe	2	0.1	0		state		true	false	false	false
+8198	Phase phase voltage (ua)		V	floatbe	2	0.1	0		level		true	false	false	false
+8200	Phase phase voltage (ub)		V	floatbe	2	0.1	0		level		true	false	false	false
+8202	Phase phase voltage (uc)		V	floatbe	2	0.1	0		level		true	false	false	false
+8204	The data of three phase current (ia)		A	floatbe	2	0.001	0		state		true	false	false	false
+8206	The data of three phase current (ib)		A	floatbe	2	0.001	0		level		true	false	false	false
+8208	The data of three phase current (ic)		A	floatbe	2	0.001	0		level		true	false	false	false
+8210	Conjunction active power		W	floatbe	2	0.1	0		level		true	false	false	false
+8212	A phase active power (pa)		W	floatbe	2	0.1	0		state		true	false	false	false
+8214	B phase active power (pb)		W	floatbe	2	0.1	0		level		true	false	false	false
+8216	C phase active power (pc)		W	floatbe	2	0.1	0		level		true	false	false	false
+8218	Conjunction reactive power (qt)		var	floatbe	2	0.1	0		level		true	false	false	false
+8220	A phase reactive power (qa)		var	floatbe	2	0.1	0		state		true	false	false	false
+8222	B phase reactive power (qb)		var	floatbe	2	0.1	0		level		true	false	false	false
+8224	C phase reactive power (qc)		var	floatbe	2	0.1	0		level		true	false	false	false
+8234	Conjunction power factor (pft)			floatbe	2	0.1	0		level		true	false	false	false
+8236	A phase power factor (invalid when three phase three wire) (pfa)			floatbe	2	0.1	0		state		true	false	false	false
+8238	B phase power factor (invalid when three phase three wire) (pfb)			floatbe	2	0.1	0		level		true	false	false	false
+8240	C phase power factor (invalid when three phase three wire) (pfc)			floatbe	2	0.1	0		level		true	false	false	false
+8260	Frequency (freq)			floatbe	2	0.01	0		level		true	false	false	false
+8272	Total active power demand (dmpt)			floatbe	2	0.1	0		state		false	false	false	false
+16414	Positive active (current, imp)			floatbe	2	0.1	0		level		false	false	false	false
+16424	Negative active total energy (current, exp)			floatbe	2	0.1	0		level		false	false	false	false
+16434	Quadrant 1 reactive total energy (current)			floatbe	2	0.1	0		level		false	false	false	false
+16444	Quadrant 2 reactive total energy (current)			floatbe	2	0.1	0		state		false	false	false	false
+16454	Quadrant 3 reactive total energy (current)			floatbe	2	0.1	0		level		false	false	false	false
+16464	Quadrant 4 reactive total energy (current)			floatbe	2	0.1	0		level		false	false	false	false

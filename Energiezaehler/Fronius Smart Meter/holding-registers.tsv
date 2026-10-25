@@ -1,0 +1,57 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+40000	SID	SID		uint32be	2	1	0		value		true		false	
+40002	ID	ID		uint16be	1	1	0		value		true		false	
+40003	L	Length of sunspace model common (1)		uint16be	1	1	0		value		true		false	
+40004	Mn	Smart meter manufacturer		string	16	1	0		value		true		false	
+40020	Md	Smart meter model		string	16	1	0		value		true		false	
+40036	Opt	Smart meter name		string	8	1	0		value		true		false	
+40044	Vr	SW version		string	8	1	0		value		true		false	
+40052	SN	Smart meter serial number		string	16	1	0		value		true		false	
+40068	DA	modes device address		uint16be	1	1	0		value		true		false	
+40069	ID	well-known value. uniquely identifies this as a sunspec model ac_meter (20x)		uint16be	1	1	0		value		true		false	
+40070	L	Length of sunspec model ac_meter (20x)		uint16be	1	1	0		value		true		false	
+40071	A	total AC current	A	uint16be	1	1	0		value		true		false	
+40072	AphA	phase A current		uint16be	1	1	0		value		true		false	
+40073	AphB	phase B current		uint16be	1	1	0		value		true		false	
+40074	AphC	Phase C current		uint16be	1	1	0		value		true		false	
+40075	A_SF	Current scale factor		int16be	1	1	0		value		true		false	
+40076	PhV	Line to Neutral AC Voltage (average of active phases)	V	uint16be	1	1	0		value		true		false	
+40077	PhVphA	Phase Voltage AN	V	uint16be	1	1	0		value		true		false	
+40078	PhVphB	Phase Voltage BN	V	uint16be	1	1	0		value		true		false	
+40079	PhVphC	Phase Voltage CN	V	uint16be	1	1	0		value		true		false	
+40080	PPV	Line to Line AC Voltage (average of active phases)	V	uint16be	1	1	0		value		true		false	
+40081	PhVphAB	Phase Voltage AB	V	uint16be	1	1	0		value		true		false	
+40082	PhVphBC	Phase Voltage BC	V	uint16be	1	1	0		value		true		false	
+40083	PhVphCA	Phase Voltage CA	V	uint16be	1	1	0		value		true		false	
+40084	V_SF	Voltage scale factor		int16be	1	1	0		value		true		false	
+40085	Hz	Frequency	Hz	uint16be	1	1	0		value		true		false	
+40086	Hz_SF	Frequency scale factor		int16be	1	1	0		value		true		false	
+40087	W	Total Real Power	W	uint16be	1	1	0		value		true		false	
+40088	WphA	Watts phase A	W	uint16be	1	1	0		value		true		false	
+40089	WphB	Watts phase B	W	uint16be	1	1	0		value		true		false	
+40090	WphC	Watts phase C	W	uint16be	1	1	0		value		true		false	
+40091	W_SF	Real Power scale factor		int16be	1	1	0		value		true		false	
+40092	VA	AC Apparent Power	VA	uint16be	1	1	0		value		true		false	
+40093	VAphA	VA phase A	VA	uint16be	1	1	0		value		true		false	
+40094	VAphB	VA phase B	VA	uint16be	1	1	0		value		true		false	
+40095	VAphC	VA phase C	VA	uint16be	1	1	0		value		true		false	
+40096	VA_SF	Apparent Power scale factor	sunssf	int16be	1	1	0		value		true		false	
+40097	VAR	Reactive Power	VAR	uint16be	1	1	0		value		true		false	
+40098	VARphA	VAR phase A	VAR	uint16be	1	1	0		value		true		false	
+40099	VARphB	VAR phase B	VAR	uint16be	1	1	0		value		true		false	
+40100	VARphC	VAR phase C	VAR	uint16be	1	1	0		value		true		false	
+40101	VAR_SF	Reactive Power scale factor		int16be	1	1	0		value		true		false	
+40102	PF	Power Factor	Pct	uint16be	1	1	0		value		true		false	
+40103	PFphA	PF phase A	Pct	uint16be	1	1	0		value		true		false	
+40104	PFphB	PF phase B	Pct	uint16be	1	1	0		value		true		false	
+40105	PFphC	PF phase C	Pct	uint16be	1	1	0		value		true		false	
+40106	PF_SF	Power Factor scale factor		int16be	1	1	0		value		true		false	
+40107	TotWhExp	Total Real Energy Exported	Wh	uint32be	2	1	0		value		true		false	
+40109	TotWhExpPhA	Total Watt-hours Exported phase A	Wh	uint32be	2	1	0		value		true		false	
+40111	TotWhExpPhB	Total Watt-hours Exported phase B	Wh	uint32be	2	1	0		value		true		false	
+40113	TotWhExpPhC	Total Watt-hours Exported phase C	Wh	uint32be	2	1	0		value		true		false	
+40115	TotWhImp	Total Real Energy Imported	Wh	uint32be	2	1	0		value		true		false	
+40117	TotWhImpPhA	Total Watt-hours Imported phase A	Wh	uint32be	2	1	0		value		true		false	
+40119	TotWhImpPhB	Total Watt-hours Imported phase B	Wh	uint32be	2	1	0		value		true		false	
+40121	TotWhImpPhC	Total Watt-hours Imported phase C	Wh	uint32be	2	1	0		value		true		false	
+40123	TotWh_SF	Real Energy scale factor		int16be	1	1	0		value		true		false	

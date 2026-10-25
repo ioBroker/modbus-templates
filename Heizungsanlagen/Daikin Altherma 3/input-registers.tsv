@@ -1,0 +1,16 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	cw	isScale	sanitize	sanitizeAction	minValidValue	maxValidValue
+21	Fehler	0: No 1: Störung 2: Warnung		int16be	1	1	0		value		false	false				
+22	Error Code			string	2		0		value		false	false				
+23	error Sub code			int16be	1	1	0		value		false	false				
+30	Zirkulation aktiv	0: Off, 1:On		int16be	1	1			value		false	false				
+31	Kompressor aktiv	0: Off 1: On		int16be	1	1	0		value		false	false				
+35	Defrost	0: Off 1: On		int16be	1	1	0		value		false	false				
+37	3-Wege-Ventil	0: Heizung 1: Warmwasser		int16be	1	1	0		value.valve		false	false				
+38	Betriebsart	Heat: 1, Cool: 2		int16be	1	1	0		level		false	false				
+40	Leaving_Water_Pre PHE	-100 - 100 Grad		int16be	1	0,01	0		value.temperature		false	false				
+41	Leav_Wat_Pre_Backup		°C	int16be	1	0,01	0		value.temperature		false	false				
+42	Rücklauf		°C	int16be	1	0,01	0		value.temperature		false	false				
+43	Heiswasser		°C	int16be	1	0,01	0		value.temperature		false	false				
+44	Aussentemperatur		°C	int16be	1	0,01	0		value.temperature		false	false				
+45	Kältemittel_Temp		°C	int16be	1	0,01	0		value.temperature		false	false				
+49	Durchfluss		L/Min	int16be	1	0,01	0		value		false	false				
