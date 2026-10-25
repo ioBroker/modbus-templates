@@ -1,4 +1,27 @@
-_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
-40144	10kW_Erzeugung	Aktuelle Gesamt Erzeugung	W	floatbe	2	1	0		level		true	false	false	false
-40154	10kW_GesamtErtrag	WattHours	kWh	floatbe	2	0.001	0		level		true	false	false	false
-40162	10kW_Temperatur	Temperatur	C	floatbe	2	1	0		level		true	false	false	false
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale	sanitize	sanitizeAction	minValidValue	maxValidValue
+40122	10kW_SunSpec_Model113	Watchdog: muss 113 sein		uint16be	1	1	0		value		true	false	false	false				
+40126	10kW_Strom_L1	AC-Strom Phase L1 (SunSpec 113 AphA)	A	floatbe	2	1	0		value.current		true	false	false	false				
+40128	10kW_Strom_L2	AC-Strom Phase L2 (SunSpec 113 AphB)	A	floatbe	2	1	0		value.current		true	false	false	false				
+40130	10kW_Strom_L3	AC-Strom Phase L3 (SunSpec 113 AphC)	A	floatbe	2	1	0		value.current		true	false	false	false				
+40138	10kW_Spannung_L1	Spannung L1-N	V	floatbe	2	1	0		value.voltage		true	false	false	false				
+40140	10kW_Spannung_L2	Spannung L2-N	V	floatbe	2	1	0		value.voltage		true	false	false	false				
+40142	10kW_Spannung_L3	Spannung L3-N	V	floatbe	2	1	0		value.voltage		true	false	false	false				
+40144	10kW_Erzeugung	Watts	W	floatbe	2	1	0		value.power		true	false	false	false				
+40146	10kW_Netzfrequenz	Netzfrequenz	Hz	floatbe	2	1	0		value.frequency		true	false	false	false				
+40154	10kW_GesamtErtrag	WattHours	kWh	floatbe	2	0.001	0		value.power.consumption		true	false	false	false				
+40160	10kW_DC-Erzeugung	Watts	W	floatbe	2	1	0		value.power		true	false	false	false				
+40162	10kW_Temperatur	Cabinet Temperature	°C	floatbe	2	1	0		value.temperature		true	false	false	false				
+40170	10kW_Betriebszustand	1=Off 2=Sleeping 3=Starting 4=MPPT 5=Throttled 6=ShuttingDown 7=Fault 8=Standby		uint16be	1	1	0		value		true	false	false	false				
+40172	10kW_Fehlercode	Event1 Bitmaske		uint32be	2	1	0		value		true	false	false	false				
+40295	10kW_Leistungsbegrenzung_Sollwert	SOLLWERT in % von WMax (10000 W). Wirkt erst wenn Freigabe=1.	%	uint16be	1	0.1	0		level		true	false	false	false				
+40297	10kW_Begrenzung_Timeout	WMaxLimPct_RvrtTms in Sekunden. Countdown startet mit Freigabe=1	s	uint16be	1	1	0		level		true	false	false	false				
+40299	10kW_Leistungsbegrenzung_Aktiv	FREIGABE: 0=aus (volle Leistung), 1=Begrenzung aktiv		uint16be	1	1	0		level		true	false	false	false				
+40858	10kW_SunSpec_Model160	Watchdog: muss 160 sein		uint16be	1	1	0		value		true	false	false	false				
+40860	10kW_DCA_SF	Skalierungsfaktor MPPT-Strom (-2)		int16be	1	1	0		value		true	false	false	false				
+40861	10kW_DCV_SF	Skalierungsfaktor MPPT-Spannung (-1)		int16be	1	1	0		value		true	false	false	false				
+40877	10kW_MPTT0_Strom	MPPT 0 Strom	A	uint16be	1	0.01	0		value.current		true	false	false	false				
+40878	10kW_MPTT0_Spannung	MPPT 0 Spannung	V	uint16be	1	0.1	0		value.voltage		true	false	false	false				
+40879	10kW_MPTT0	MPPT 0 erzeugung	W	uint16be	1	10	0		value.power		true	false	false	false				
+40897	10kW_MPTT1_Strom	MPPT 1 Strom	A	uint16be	1	0.01	0		value.current		true	false	false	false				
+40898	10kW_MPTT1_Spannung	MPPT 1 Spannung	V	uint16be	1	0.1	0		value.voltage		true	false	false	false				
+40899	10kW_MPTT1	MPPT 1 erzeugung	W	uint16be	1	10	0		value.power		true	false	false	false				
