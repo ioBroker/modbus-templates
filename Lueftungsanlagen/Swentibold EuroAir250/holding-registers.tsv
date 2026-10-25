@@ -1,50 +1,49 @@
-_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
-40001	Type_R	1 = Basis 2 = Bypass 3 = Comfort		uint16be	1	1	0		level		true			
-40002	On/Off_R/W	1 = An, 0 = Aus		uint16be	1	1	0		level		true			
-40003	Bypass open Temperatur	15.0 .. 30.0	*C	uint8be	1	0.1	0		level		true			
-40004	Rückführung Temperatur	-15.0 .. 30.0	*C	uint8be	1	0.1	0		level		true			
-40005	Comfort Temperatur	setp min .. setp max	*C	uint8be	1	0.1	0		level		true			
-40006	Inschakelvertr. Hygr	0 .. 120	min	uint16be	1	1	0		level		true			
-40007	Uitschakelvertr. Hygr	0 .. 120	min	uint16be	1	1	0		level		true			
-40008	Filter-Schmutz-Zeit	1 .. 99	Wochen	uint16be	1	1	0		level		true			
-40009	Filterzeit zurücksetzen	0 = Nein 1 = Ja		uint16be	1	1	0		level		true			
-40010	Start Montag Tag	0:00 .. 23:50, OFF	min*1	uint16be	1	1	0		level		true			
-40011	Start Montag Nacht	0:00 .. 23:50, OFF	min*1	uint16be	1	1	0		level		true			
-40012	Start Dienstag Tag	0:00 .. 23:50, OFF	min*1	uint16be	1	1	0		level		true			
-40013	Start Dienstag Nacht	0:00 .. 23:50, OFF	min*1	uint16be	1	1	0		level		true			
-40014	Start Mittwoch Tag	0:00 .. 23:50, OFF	min*1	uint16be	1	1	0		level		true			
-40015	Start Mittwoch Nacht	0:00 .. 23:50, OFF	min*1	uint16be	1	1	0		level		true			
-40016	Start Donnerstag Tag	0:00 .. 23:50, OFF	min*1	uint16be	1	1	0		level		true			
-40017	Start Donnerstag Nacht	0:00 .. 23:50, OFF	min*1	uint16be	1	1	0		level		true			
-40018	Start Freitag Tag	0:00 .. 23:50, OFF	min*1	uint16be	1	1	0		level		true			
-40019	Start Freitag Nacht	0:00 .. 23:50, OFF	min*1	uint16be	1	1	0		level		true			
-40020	Start Samstag Tag	0:00 .. 23:50, OFF	min*1	uint16be	1	1	0		level		true			
-40021	Start Samstag Nacht	0:00 .. 23:50, OFF	min*1	uint16be	1	1	0		level		true			
-40022	Start Sonntag Tag	0:00 .. 23:50, OFF	min*1	uint16be	1	1	0		level		true			
-40023	Start Sonntag Nacht	0:00 .. 23:50, OFF	min*1	uint16be	1	1	0		level		true			
-40024	Aut Som/Win Zeit	1 = Ja, 0 = Nein		uint16be	1	1	0		level		true			
-40025	Ferienmodus aktiv	1 = Ja, 0 = Nein		uint16be	1	1	0		level		true			
-40026	Betriebsstunden Stufe-low_R		Std	uint16be	1	1	0		level		true			
-40027	Betriebsstunden Stufe-mid_R		Std	uint16be	1	1	0		level		true			
-40028	Betriebsstunden Stufe-max_R		Std	uint16be	1	1	0		level		true			
-40029	Betriebsstunden-Filter_R		Std	uint16be	1	1	0		level		true			
-40030	Status_R	Bit 0 = Reserved Bit 1 = Midden vent Bit 2 = Hoog vent Bit 3 .. 16 reserved		floatbe	2	1	0		level		true			
-40031	Digin_R	Bit 0 = dp_la Bit 1 = dp_bla Bit 2 = Hygrostaat Bit 3 = Fan hoog (3- s) Bit 4 = Fan mid (3-s) Bit 5 = aan/uit Bit 6 = Lucht onderdr Bit 7 = Lucht kwal Bit 8 = reserved		floatbe	2	1	0		level		true			
-40032	Bypass status	1 = Offen, 0 = Zu		uint16be	1	1	0		level		true			
-40033	Aardkoel status_R	1 = Offen, 0 = Zu		uint16be	1	1	0		level		true			
-40034	Uhr: SEK	59	sek	uint16be	1	1	0		level		true			
-40035	Uhr: MIN	59	min	uint16be	1	1	0		level		true			
-40036	Uhr: STD	23	std	uint16be	1	1	0		level		true			
-40037	Uhr: Wochentag_R	0=Mo..6=So		uint16be	1	1	0		level		true			
-40038	Datum: Tag	1 .. 31		uint16be	1	1	0		level		true			
-40039	Datum: Monat	1 .. 12		uint16be	1	1	0		level		true			
-40040	Datum: Jahr	xxxx		uint16be	1	1	0		level		true			
-40041	Fehler status-1_R/C	Bit 0 = Reserved Bit 1 = E1 Bit 2 = E2 Bit 3 = E3 Bit 4 = E4 Bit 5 = E5 Bit 6 = Et Bit 7 = Ea Bit 8 = Ft Bit 9 = Fa Bit 10 = oO Bit 11 = Tijd Bit 12 = EP		floatbe	2	1	0		level		true			
-40042	Fehler status-2_R	Reserved		floatbe	2	1	0		level		true			
-40043	Lüfter Stufe	0 = auto 1 = min 2 = mid 3 = max		uint16be	1	1	0		level		true			
-40044	Rezirkulationsstatus_R	1 = Offen, 0 = Zu		uint16be	1	1	0		level		true			
-40045	Kühlzustand_R	1 = An, 0 = Aus		uint16be	1	1	0		level		true			
-40046	Heizstatus_R	1 = An, 0 = Aus		uint16be	1	1	0		level		true			
-40047	Kühlprozentsatz_R	0 .. 100 %	%	int16be	1	1	0		level		true			
-40048	Heizprozentsatz_R	0 .. 100 %	%	uint16be	1	1	0		level		true			
-40049	-unbekannt-			uint16be	1	1	0		level		true			
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale	sanitize	sanitizeAction	minValidValue	maxValidValue
+40001	Type_R	1 = Basis 2 = Bypass 3 = Comfort		uint16be	1	1	0		level		true							
+40002	On/Off_R/W	1 = An, 0 = Aus		uint16be	1	1	0		switch		true							
+40003	Bypass open Temperatur	15.0 .. 30.0	°C	int16be	1	0.1	0		level.temperature		true							
+40004	Rückführung Temperatur	-10.0 .. 30.0	°C	int16be	1	0.1	0		level.temperature		true							
+40005	Comfort Temperatur	setp min .. setp max	°C	int16be	1	0.1	0		level.temperature		true							
+40006	Inschakelvertr. Hygr	0 .. 120	min	uint16be	1	1	0		level		true							
+40007	Uitschakelvertr. Hygr	0 .. 120	min	uint16be	1	1	0		level		true							
+40008	Filter-Schmutz-Zeit	1 .. 99	Wochen	uint16be	1	1	0		level		true							
+40009	Filterzeit zurücksetzen	0 = Nein 1 = Ja		uint16be	1	1	0		value		true							
+40010	Start Montag Tag	0:00 .. 23:50, OFF	min*1	uint16be	1	1	0		level		true							
+40011	Start Montag Nacht	0:00 .. 23:50, OFF	min*1	uint16be	1	1	0		level		true							
+40012	Start Dienstag Tag	0:00 .. 23:50, OFF	min*1	uint16be	1	1	0		level		true							
+40013	Start Dienstag Nacht	0:00 .. 23:50, OFF	min*1	uint16be	1	1	0		level		true							
+40014	Start Mittwoch Tag	0:00 .. 23:50, OFF	min*1	uint16be	1	1	0		level		true							
+40015	Start Mittwoch Nacht	0:00 .. 23:50, OFF	min*1	uint16be	1	1	0		level		true							
+40016	Start Donnerstag Tag	0:00 .. 23:50, OFF	min*1	uint16be	1	1	0		level		true							
+40017	Start Donnerstag Nacht	0:00 .. 23:50, OFF	min*1	uint16be	1	1	0		level		true							
+40018	Start Freitag Tag	0:00 .. 23:50, OFF	min*1	uint16be	1	1	0		level		true							
+40019	Start Freitag Nacht	0:00 .. 23:50, OFF	min*1	uint16be	1	1	0		level		true							
+40020	Start Samstag Tag	0:00 .. 23:50, OFF	min*1	uint16be	1	1	0		level		true							
+40021	Start Samstag Nacht	0:00 .. 23:50, OFF	min*1	uint16be	1	1	0		level		true							
+40022	Start Sonntag Tag	0:00 .. 23:50, OFF	min*1	uint16be	1	1	0		level		true							
+40023	Start Sonntag Nacht	0:00 .. 23:50, OFF	min*1	uint16be	1	1	0		level		true							
+40024	Aut Som/Win Zeit	1 = Ja, 0 = Nein		uint16be	1	1	0		switch		true							
+40025	Ferienmodus aktiv	1 = Ja, 0 = Nein		uint16be	1	1	0		switch		true							
+40026	Betriebsstunden Stufe-low_R		Std	uint16be	1	1	0		value.interval		true							
+40027	Betriebsstunden Stufe-mid_R		Std	uint16be	1	1	0		value.interval		true							
+40028	Betriebsstunden Stufe-max_R		Std	uint16be	1	1	0		value.interval		true							
+40029	Betriebsstunden-Filter_R		Std	uint16be	1	1	0		value.interval		true							
+40030	Status_R	Bit 0 = reserved Bit 1 = middle vent Bit 2 = high vent Bit 3 . . 16 reserved		uint16be	1	1	0		level		true							
+40031	Digin_R	Bit 0 = dp_la Bit 1 = dp_bla Bit 2 = hygrostate Bit 3 = fan high (3-s) Bit 4 = fan middle (3-s) Bit 5 = on/off Bit 6 = air under press. Bit 7 = air quality Bit 8 = reserved		uint16be	1	1	0		level		true							
+40032	Bypass status	1 = Offen, 0 = Zu		uint16be	1	1	0		state		true							
+40033	Aardkoel status_R	1 = Offen, 0 = Zu		uint16be	1	1	0		state		true							
+40034	Uhr: SEK	59	sek	uint16be	1	1	0		level		true							
+40035	Uhr: MIN	59	min	uint16be	1	1	0		level		true							
+40036	Uhr: STD	23	std	uint16be	1	1	0		level		true							
+40037	Uhr: Wochentag_R	0=Mo..6=So		uint16be	1	1	0		level		true							
+40038	Datum: Tag	1 .. 31		uint16be	1	1	0		level		true							
+40039	Datum: Monat	1 .. 12		uint16be	1	1	0		level		true							
+40040	Datum: Jahr	xxxx		uint16be	1	1	0		level		true							
+40041	Fehler status-1_R/C	Bit 0 = reserved Bit 1 = E1 Bit 2 = E2 Bit 3 = E3 Bit 4 = E4 Bit 5 = E5 Bit 6 = Et Bit 7 = Ea Bit 8 = Ft Bit 9 = Fa Bit 10 = oO Bit 11 = time Bit 12 = EP		uint16be	1	1	0		state		true							
+40042	Fehler status-2_R	Reserved		uint16be	1	1	0		level		true							
+40043	Lüfter Stufe	0 = auto 1 = min 2 = mid 3 = max		uint16be	1	1	0		level		true							
+40044	Rezirkulationsstatus_R	lt. Datenblatt 0 = Offen, 1 = Zu (abweichend zu Bypass/Erdwaermetauscher!)		uint16be	1	1	0		state		true							
+40045	Kühlzustand_R	1 = An, 0 = Aus		uint16be	1	1	0		state		true							
+40046	Heizstatus_R	1 = An, 0 = Aus		uint16be	1	1	0		state		true							
+40047	Kühlprozentsatz_R	0 .. 100 %	%	int16be	1	1	0		level		true							
+40048	Heizprozentsatz_R	0 .. 100 %	%	uint16be	1	1	0		level		true							
