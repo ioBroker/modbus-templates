@@ -73,12 +73,12 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 40522	Daily Energy Sold	Netzeinspeisung heute	kWh	uint16be	1	1	0		value		true	false	false	false
 40523	Total Energy Bought	Netzbezug gesamt	kWh	uint32sw	2	1	0		value		true	false	false	false
 40525	Total Energy Sold	Netzeinspeisung gesamt	kWh	uint32sw	2	1	0		value		true	false	false	false
-40527	Daily Load Consumption	Lastverbrauch heute	kWh	uint16be	1	1	0		value		true	false	false	false
-40528	Total Load Consumption	Lastverbrauch gesamt	kWh	uint32sw	2	1	0		value		true	false	false	false
+40527	Daily Load Consumption	Lastverbrauch heute	kWh	int16be	1	1	0		value		true	false	false	false
+40528	Total Load Consumption	Lastverbrauch gesamt	kWh	int32sw	2	1	0		value		true	false	false	false
 40530	Daily Production	PV-Produktion heute	kWh	uint16be	1	1	0		value		true	false	false	false
 40535	Total Production	PV-Produktion gesamt	kWh	uint32sw	2	1	0		value		true	false	false	false
 40537	Daily Generator Production	Generatorproduktion heute	kWh	uint16be	1	1	0		value		true	false	false	false
-40538	Total Generator Production	Generatorproduktion gesamt	kWh	uint16be	1	1	0		value		true	false	false	false
+40538	Total Generator Production	Generatorproduktion gesamt	kWh	uint32sw	2	1	0		value		true	false	false	false
 40541	DC Temperature	DC-Temperatur (Kühlkörper)	°C	int16be	1	0,1	-100		value		true	false	false	false
 40542	AC Temperature	AC-Temperatur	°C	int16be	1	0,1	-100		value		true	false	false	false
 40553	AC relays status	Status AC-Relais		uint16be	1	1	0		value		true	false	false	false
