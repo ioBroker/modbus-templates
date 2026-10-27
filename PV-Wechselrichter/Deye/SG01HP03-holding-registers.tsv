@@ -1,0 +1,162 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+40063	System time year	Systemzeit Jahr (High-Byte Reg. 62)		uint16be	1	1	0	Math.floor(x/256)+2000	value		false	false	false	false
+40063	System time month	Systemzeit Monat (Low-Byte Reg. 62)		uint16be	1	1	0	x%256	value		false	false	false	false
+40064	System time day	Systemzeit Tag (High-Byte Reg. 63)		uint16be	1	1	0	Math.floor(x/256)	value		false	false	false	false
+40064	System time hour	Systemzeit Stunde (Low-Byte Reg. 63)		uint16be	1	1	0	x%256	value		false	false	false	false
+40065	System time minute	Systemzeit Minute (High-Byte Reg. 64)		uint16be	1	1	0	Math.floor(x/256)	value		false	false	false	false
+40065	System time second	Systemzeit Sekunde (Low-Byte Reg. 64)		uint16be	1	1	0	x%256	value		false	false	false	false
+40081	Power on/off	Ein/Aus (0=aus/Standby, 1=ein); kein Watchdog, bleibt aus bis 1 geschrieben wird; Neustart mit Selbsttest		uint16be	1	1	0		level		true	true	false	false
+40109	Maximum battery charge current	Maximaler Batterieladestrom (0-240)	A	uint16be	1	1	0		level		true	true	false	false
+40110	Maximum battery discharge current	Maximaler Batterieentladestrom (0-240)	A	uint16be	1	1	0		level		true	true	false	false
+40129	Maximum battery grid charge current	Maximaler Netzladestrom der Batterie (0-240)	A	uint16be	1	1	0		level		true	true	false	false
+40131	Grid charge enabled	Laden aus dem Netz (0=aus, 1=ein)		uint16be	1	1	0		level		true	true	false	false
+40143	Work mode	Arbeitsmodus (0=Selling first, 1=Zero export to load, 2=Zero export to CT)		uint16be	1	1	0		level		true	true	false	false
+40144	Max solar sell power	Maximale Einspeiseleistung Solar	W	uint16be	1	10	0		level		true	true	false	false
+40146	Solar sell enabled	Solar-Einspeisung (0=aus, 1=ein)		uint16be	1	1	0		level		true	true	false	false
+40147	Time of use weekly selling schedule	Time of Use Wochentage (Bit7=Mo ... Bit1=So, Bit0=TOU ein/aus)		uint16be	1	1	0		level		true	true	false	false
+40149	Time of use time 1	Time of Use Startzeit Slot 1 (HHMM, 0000-2359)		uint16be	1	1	0		level		true	true	false	false
+40150	Time of use time 2	Time of Use Startzeit Slot 2 (HHMM, 0000-2359)		uint16be	1	1	0		level		true	true	false	false
+40151	Time of use time 3	Time of Use Startzeit Slot 3 (HHMM, 0000-2359)		uint16be	1	1	0		level		true	true	false	false
+40152	Time of use time 4	Time of Use Startzeit Slot 4 (HHMM, 0000-2359)		uint16be	1	1	0		level		true	true	false	false
+40153	Time of use time 5	Time of Use Startzeit Slot 5 (HHMM, 0000-2359)		uint16be	1	1	0		level		true	true	false	false
+40154	Time of use time 6	Time of Use Startzeit Slot 6 (HHMM, 0000-2359)		uint16be	1	1	0		level		true	true	false	false
+40155	Time of use power 1	Time of Use Leistung Slot 1	W	uint16be	1	10	0		level		true	true	false	false
+40156	Time of use power 2	Time of Use Leistung Slot 2	W	uint16be	1	10	0		level		true	true	false	false
+40157	Time of use power 3	Time of Use Leistung Slot 3	W	uint16be	1	10	0		level		true	true	false	false
+40158	Time of use power 4	Time of Use Leistung Slot 4	W	uint16be	1	10	0		level		true	true	false	false
+40159	Time of use power 5	Time of Use Leistung Slot 5	W	uint16be	1	10	0		level		true	true	false	false
+40160	Time of use power 6	Time of Use Leistung Slot 6	W	uint16be	1	10	0		level		true	true	false	false
+40161	Time of use voltage 1	Time of Use Batteriespannung Slot 1	V	uint16be	1	0,1	0		level		true	true	false	false
+40162	Time of use voltage 2	Time of Use Batteriespannung Slot 2	V	uint16be	1	0,1	0		level		true	true	false	false
+40163	Time of use voltage 3	Time of Use Batteriespannung Slot 3	V	uint16be	1	0,1	0		level		true	true	false	false
+40164	Time of use voltage 4	Time of Use Batteriespannung Slot 4	V	uint16be	1	0,1	0		level		true	true	false	false
+40165	Time of use voltage 5	Time of Use Batteriespannung Slot 5	V	uint16be	1	0,1	0		level		true	true	false	false
+40166	Time of use voltage 6	Time of Use Batteriespannung Slot 6	V	uint16be	1	0,1	0		level		true	true	false	false
+40167	Time of use SOC 1	Time of Use Ziel-SOC Slot 1	%	uint16be	1	1	0		level		true	true	false	false
+40168	Time of use SOC 2	Time of Use Ziel-SOC Slot 2	%	uint16be	1	1	0		level		true	true	false	false
+40169	Time of use SOC 3	Time of Use Ziel-SOC Slot 3	%	uint16be	1	1	0		level		true	true	false	false
+40170	Time of use SOC 4	Time of Use Ziel-SOC Slot 4	%	uint16be	1	1	0		level		true	true	false	false
+40171	Time of use SOC 5	Time of Use Ziel-SOC Slot 5	%	uint16be	1	1	0		level		true	true	false	false
+40172	Time of use SOC 6	Time of Use Ziel-SOC Slot 6	%	uint16be	1	1	0		level		true	true	false	false
+40173	Time of use charge enable 1	Time of Use Ladequelle Slot 1 (Bit-Flags: 1=Netz, 2=Generator, 32=Verkauf)		uint16be	1	1	0		level		true	true	false	false
+40174	Time of use charge enable 2	Time of Use Ladequelle Slot 2 (Bit-Flags: 1=Netz, 2=Generator, 32=Verkauf)		uint16be	1	1	0		level		true	true	false	false
+40175	Time of use charge enable 3	Time of Use Ladequelle Slot 3 (Bit-Flags: 1=Netz, 2=Generator, 32=Verkauf)		uint16be	1	1	0		level		true	true	false	false
+40176	Time of use charge enable 4	Time of Use Ladequelle Slot 4 (Bit-Flags: 1=Netz, 2=Generator, 32=Verkauf)		uint16be	1	1	0		level		true	true	false	false
+40177	Time of use charge enable 5	Time of Use Ladequelle Slot 5 (Bit-Flags: 1=Netz, 2=Generator, 32=Verkauf)		uint16be	1	1	0		level		true	true	false	false
+40178	Time of use charge enable 6	Time of Use Ladequelle Slot 6 (Bit-Flags: 1=Netz, 2=Generator, 32=Verkauf)		uint16be	1	1	0		level		true	true	false	false
+40211	BMS1 Charging Voltage	BMS 1 Ladespannung	V	uint16be	1	0,1	0		value		true	false	false	false
+40212	BMS1 Discharge Voltage	BMS 1 Entladespannung	V	uint16be	1	0,1	0		value		true	false	false	false
+40213	BMS1 Charge Current Limit	BMS 1 Ladestromgrenze	A	uint16be	1	1	0		value		true	false	false	false
+40214	BMS1 Discharge Current Limit	BMS 1 Entladestromgrenze	A	uint16be	1	1	0		value		true	false	false	false
+40215	BMS1 SOC	BMS 1 Ladezustand	%	uint16be	1	1	0		value		true	false	false	false
+40216	BMS1 Voltage	BMS 1 Spannung	V	uint16be	1	0,1	0		value		true	false	false	false
+40217	BMS1 Current	BMS 1 Strom	A	int16be	1	0,1	0		value		true	false	false	false
+40218	BMS1 Temp	BMS 1 Temperatur	°C	int16be	1	0,1	-100		value		true	false	false	false
+40219	BMS1 Charging Max Current	BMS 1 maximaler Ladestrom	A	int16be	1	1	0		value		true	false	false	false
+40220	BMS1 Discharge Max Current	BMS 1 maximaler Entladestrom	A	int16be	1	1	0		value		true	false	false	false
+40242	BMS2 Charging Voltage	BMS 2 Ladespannung	V	uint16be	1	0,1	0		value		false	false	false	false
+40243	BMS2 Discharge Voltage	BMS 2 Entladespannung	V	uint16be	1	0,1	0		value		false	false	false	false
+40244	BMS2 Charge Current Limit	BMS 2 Ladestromgrenze	A	uint16be	1	1	0		value		false	false	false	false
+40245	BMS2 Discharge Current Limit	BMS 2 Entladestromgrenze	A	uint16be	1	1	0		value		false	false	false	false
+40246	BMS2 SOC	BMS 2 Ladezustand	%	uint16be	1	1	0		value		false	false	false	false
+40247	BMS2 Voltage	BMS 2 Spannung	V	uint16be	1	0,1	0		value		false	false	false	false
+40248	BMS2 Current	BMS 2 Strom	A	int16be	1	0,1	0		value		false	false	false	false
+40249	BMS2 Temp	BMS 2 Temperatur	°C	int16be	1	0,1	-100		value		false	false	false	false
+40250	BMS2 Charging Max Current	BMS 2 maximaler Ladestrom	A	int16be	1	1	0		value		false	false	false	false
+40251	BMS2 Discharge Max Current	BMS 2 maximaler Entladestrom	A	int16be	1	1	0		value		false	false	false	false
+40501	Running status	Betriebsstatus		uint16be	1	1	0		value		true	false	false	false
+40515	Daily Battery Charge	Batterieladung heute	kWh	uint16be	1	1	0		value		true	false	false	false
+40516	Daily Battery Discharge	Batterieentladung heute	kWh	uint16be	1	1	0		value		true	false	false	false
+40517	Total Battery Charge	Batterieladung gesamt	kWh	uint32sw	2	1	0		value		true	false	false	false
+40519	Total Battery Discharge	Batterieentladung gesamt	kWh	uint32sw	2	1	0		value		true	false	false	false
+40521	Daily Energy Bought	Netzbezug heute	kWh	uint16be	1	1	0		value		true	false	false	false
+40522	Daily Energy Sold	Netzeinspeisung heute	kWh	uint16be	1	1	0		value		true	false	false	false
+40523	Total Energy Bought	Netzbezug gesamt	kWh	uint32sw	2	1	0		value		true	false	false	false
+40525	Total Energy Sold	Netzeinspeisung gesamt	kWh	uint32sw	2	1	0		value		true	false	false	false
+40527	Daily Load Consumption	Lastverbrauch heute	kWh	uint16be	1	1	0		value		true	false	false	false
+40528	Total Load Consumption	Lastverbrauch gesamt	kWh	uint32sw	2	1	0		value		true	false	false	false
+40530	Daily Production	PV-Produktion heute	kWh	uint16be	1	1	0		value		true	false	false	false
+40535	Total Production	PV-Produktion gesamt	kWh	uint32sw	2	1	0		value		true	false	false	false
+40537	Daily Generator Production	Generatorproduktion heute	kWh	uint16be	1	1	0		value		true	false	false	false
+40538	Total Generator Production	Generatorproduktion gesamt	kWh	uint16be	1	1	0		value		true	false	false	false
+40541	DC Temperature	DC-Temperatur (Kühlkörper)	°C	int16be	1	0,1	-100		value		true	false	false	false
+40542	AC Temperature	AC-Temperatur	°C	int16be	1	0,1	-100		value		true	false	false	false
+40553	AC relays status	Status AC-Relais		uint16be	1	1	0		value		true	false	false	false
+40554	Warning word 1	Warnmeldung Wort 1 (Bit-Feld; Bit1=Lüfter, Bit2=Netzphase falsch, Bit3=Zähler-Kommunikation)		uint16be	1	1	0		value		true	false	false	false
+40555	Warning word 2	Warnmeldung Wort 2 (Bit-Feld; Bit14=Batterie nicht erkannt, Bit15=Parallel-Kommunikation)		uint16be	1	1	0		value		true	false	false	false
+40556	Fault word 1	Fehlermeldung Wort 1 (Bit n = Fehler F(n+1), F01-F16; z. B. Bit6=F07 DC/DC-Softstart, Bit12=F13 Arbeitsmodus geändert)		uint16be	1	1	0		value		true	false	false	false
+40557	Fault word 2	Fehlermeldung Wort 2 (Bit n = Fehler F(n+17), F17-F32; z. B. Bit1=F18 AC-Überstrom, Bit3=F20 DC-Überstrom, Bit6=F23 Leckstrom)		uint16be	1	1	0		value		true	false	false	false
+40558	Fault word 3	Fehlermeldung Wort 3 (Bit n = Fehler F(n+33), F33-F48)		uint16be	1	1	0		value		true	false	false	false
+40559	Fault word 4	Fehlermeldung Wort 4 (Bit n = Fehler F(n+49), F49-F64)		uint16be	1	1	0		value		true	false	false	false
+40587	Battery1 Temperature	Batterie 1 Temperatur	°C	uint16be	1	0,1	-100		value		true	false	false	false
+40588	Battery1 Voltage	Batterie 1 Spannung	V	uint16be	1	0,1	0		value		true	false	false	false
+40589	Battery1 SOC	Batterie 1 Ladezustand	%	uint16be	1	1	0		value		true	false	false	false
+40590	Battery2 SOC	Batterie 2 Ladezustand	%	uint16be	1	1	0		value		false	false	false	false
+40591	Battery1 Power	Batterie 1 Leistung	W	int16be	1	10	0		value		true	false	false	false
+40592	Battery1 Current	Batterie 1 Strom	A	int16be	1	0,01	0		value		true	false	false	false
+40594	Battery2 Voltage	Batterie 2 Spannung	V	uint16be	1	0,1	0		value		false	false	false	false
+40595	Battery2 Current	Batterie 2 Strom	A	int16be	1	0,01	0		value		false	false	false	false
+40596	Battery2 Power	Batterie 2 Leistung	W	int16be	1	10	0		value		false	false	false	false
+40597	Battery2 Temperature	Batterie 2 Temperatur	°C	int16be	1	0,1	-100		value		false	false	false	false
+40599	Grid Voltage L1	Netzspannung L1	V	uint16be	1	0,1	0		value		true	false	false	false
+40600	Grid Voltage L2	Netzspannung L2	V	uint16be	1	0,1	0		value		true	false	false	false
+40601	Grid Voltage L3	Netzspannung L3	V	uint16be	1	0,1	0		value		true	false	false	false
+40605	Internal CT L1 Power	Interner Stromwandler Leistung L1	W	int16be	1	1	0		value		true	false	false	false
+40606	Internal CT L2 Power	Interner Stromwandler Leistung L2	W	int16be	1	1	0		value		true	false	false	false
+40607	Internal CT L3 Power	Interner Stromwandler Leistung L3	W	int16be	1	1	0		value		true	false	false	false
+40608	Total Internal Power	Interner Stromwandler Gesamtleistung	W	int16be	1	1	0		value		true	false	false	false
+40617	External CT L1 Power	Externer Stromwandler Leistung L1	W	int16be	1	1	0		value		true	false	false	false
+40618	External CT L2 Power	Externer Stromwandler Leistung L2	W	int16be	1	1	0		value		true	false	false	false
+40619	External CT L3 Power	Externer Stromwandler Leistung L3	W	int16be	1	1	0		value		true	false	false	false
+40626	Total Grid Power	Netzleistung gesamt	W	int16be	1	1	0		value		true	false	false	false
+40631	Current L1	Wechselrichter Strom L1	A	int16be	1	0,01	0		value		true	false	false	false
+40632	Current L2	Wechselrichter Strom L2	A	int16be	1	0,01	0		value		true	false	false	false
+40633	Current L3	Wechselrichter Strom L3	A	int16be	1	0,01	0		value		true	false	false	false
+40634	Inverter L1 Power	Wechselrichter Leistung L1	W	int16be	1	1	0		value		true	false	false	false
+40635	Inverter L2 Power	Wechselrichter Leistung L2	W	int16be	1	1	0		value		true	false	false	false
+40636	Inverter L3 Power	Wechselrichter Leistung L3	W	int16be	1	1	0		value		true	false	false	false
+40645	Load Voltage L1	Lastspannung L1	V	uint16be	1	0,1	0		value		true	false	false	false
+40646	Load Voltage L2	Lastspannung L2	V	uint16be	1	0,1	0		value		true	false	false	false
+40647	Load Voltage L3	Lastspannung L3	V	uint16be	1	0,1	0		value		true	false	false	false
+40651	Load L1 Power	Lastleistung L1	W	int16be	1	1	0		value		true	false	false	false
+40652	Load L2 Power	Lastleistung L2	W	int16be	1	1	0		value		true	false	false	false
+40653	Load L3 Power	Lastleistung L3	W	int16be	1	1	0		value		true	false	false	false
+40654	Total Load Power	Lastleistung gesamt	W	int16be	1	1	0		value		true	false	false	false
+40662	Gen port voltage L1	Generator-Port Spannung L1	V	uint16be	1	0,1	0		value		false	false	false	false
+40663	Gen port voltage L2	Generator-Port Spannung L2	V	uint16be	1	0,1	0		value		false	false	false	false
+40664	Gen port voltage L3	Generator-Port Spannung L3	V	uint16be	1	0,1	0		value		false	false	false	false
+40665	Gen port power L1	Generator-Port Leistung L1	W	int16be	1	1	0		value		false	false	false	false
+40666	Gen port power L2	Generator-Port Leistung L2	W	int16be	1	1	0		value		false	false	false	false
+40667	Gen port power L3	Generator-Port Leistung L3	W	int16be	1	1	0		value		false	false	false	false
+40668	Total Power of Gen Ports	Generator-Port Leistung gesamt	W	int16be	1	1	0		value		false	false	false	false
+40673	PV1 Power	PV1 Leistung	W	uint16be	1	10	0		value		true	false	false	false
+40674	PV2 Power	PV2 Leistung	W	uint16be	1	10	0		value		true	false	false	false
+40675	PV3 Power	PV3 Leistung	W	uint16be	1	10	0		value		true	false	false	false
+40676	PV4 Power	PV4 Leistung	W	uint16be	1	10	0		value		true	false	false	false
+40677	PV1 Voltage	PV1 Spannung	V	uint16be	1	0,1	0		value		true	false	false	false
+40678	PV1 Current	PV1 Strom	A	uint16be	1	0,1	0		value		true	false	false	false
+40679	PV2 Voltage	PV2 Spannung	V	uint16be	1	0,1	0		value		true	false	false	false
+40680	PV2 Current	PV2 Strom	A	uint16be	1	0,1	0		value		true	false	false	false
+40681	PV3 Voltage	PV3 Spannung	V	uint16be	1	0,1	0		value		true	false	false	false
+40682	PV3 Current	PV3 Strom	A	uint16be	1	0,1	0		value		true	false	false	false
+40683	PV4 Voltage	PV4 Spannung	V	uint16be	1	0,1	0		value		true	false	false	false
+40684	PV4 Current	PV4 Strom	A	uint16be	1	0,1	0		value		true	false	false	false
+41101	Remote mode	Remote-Modus (0=aus, 1=ein; 2/3 laut Protokoll weitere Remote-Modi, nicht dokumentiert). Erst 41102 schreiben und Rücklesen abwarten, sonst zählt der Watchdog nicht		uint16be	1	1	0		level		true	true	false	false
+41102	Remote mode watchdog time	Remote-Modus Watchdog-Zeit (10-18000 s, 65535=aus [Standard]); zählt nach dem Aktivieren herunter, bei 0 verlässt der WR den Remote-Modus und setzt 65535	s	uint16be	1	1	0		level		true	true	false	false
+41105	Inverter output power control mode	Steuerungsart (0=AC-seitig, 1=batterieseitig, 2=netzseitig)		uint16be	1	1	0		level		true	true	false	false
+41106	Battery side control	Batteriesteuerung (2=Leistung über 1109, 3=SOC über 1110, 4=Spannung+Strom, 5=Leistung+SOC; 0/1 reserviert); PV läuft frei		uint16be	1	1	0		level		true	true	false	false
+41107	AC power control mode	AC-Leistungssteuerung (0=alle Phasen gemeinsam über 1111, 1=je Phase über 1112-1114)		uint16be	1	1	0		level		true	true	false	false
+41108	Battery constant voltage	Batterie Konstantspannung (0-1000 V)	V	uint16be	1	0,1	0		level		true	true	false	false
+41109	Battery constant current	Batterie Konstantstrom (0-200 A)	A	uint16be	1	0,1	0		level		true	true	false	false
+41110	Battery constant power	Batterieleistung in % der Nennleistung (-120 bis +120; negativ=laden, positiv=entladen)	%	int16be	1	0,1	0		level		true	true	false	false
+41111	Battery target SOC	Batterie Ziel-SOC (0-100 %; über aktuellem SOC=laden, darunter=entladen)	%	uint16be	1	0,1	0		level		true	true	false	false
+41112	Inverter output power 3-phase	WR-Ausgangsleistung gesamt in % der Nennleistung (-120 bis +120; positiv=Abgabe, negativ=Aufnahme)	%	int16be	1	0,1	0		level		true	true	false	false
+41113	Inverter output power L1	WR-Ausgangsleistung L1 in % der Nennleistung/3 (-120 bis +120)	%	int16be	1	0,1	0		level		true	true	false	false
+41114	Inverter output power L2	WR-Ausgangsleistung L2 in % der Nennleistung/3 (-120 bis +120)	%	int16be	1	0,1	0		level		true	true	false	false
+41115	Inverter output power L3	WR-Ausgangsleistung L3 in % der Nennleistung/3 (-120 bis +120)	%	int16be	1	0,1	0		level		true	true	false	false
+41116	Max solar power	Maximale PV-Leistung in % der Nennleistung (0-200)	%	uint16be	1	0,1	0		level		true	true	false	false
+41118	Reactive power mode	Blindleistungsmodus (0=aus, 1=PF, 2=Var %)		uint16be	1	1	0		level		true	true	false	false
+41119	Reactive power setpoint 3-phase	Blindleistungs-Sollwert gesamt, Rohwert (PF: -800..800 = 0,001; Var: -436..436 = 0,1 %)		int16be	1	1	0		level		true	true	false	false
+41120	Reactive power setpoint L1	Blindleistungs-Sollwert L1, Rohwert (Skalierung wie 1118)		int16be	1	1	0		level		true	true	false	false
+41121	Reactive power setpoint L2	Blindleistungs-Sollwert L2, Rohwert (Skalierung wie 1118)		int16be	1	1	0		level		true	true	false	false
+41122	Reactive power setpoint L3	Blindleistungs-Sollwert L3, Rohwert (Skalierung wie 1118)		int16be	1	1	0		level		true	true	false	false
