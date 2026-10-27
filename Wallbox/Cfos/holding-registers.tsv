@@ -1,5 +1,5 @@
 _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale	sanitize	sanitizeAction	minValidValue	maxValidValue
-8000	vendor_id	Eindeutige Hersteller-Id (0xcf05)		uint32be	2	1	0		value		false	false	false	false				
+8000	vendor_id	Eindeutige Hersteller-Id (0xCF05 im High-Word)		uint32be	2	1	0		value		false	false	false	false				
 8002	product_id	Produkt-Id (1)		uint16be	1	1	0		value		false	false	false	false				
 8003	device_id	Geräte-Id im Produkt (0x100)		uint16be	1	1	0		value		false	false	false	false				
 8004	product_version	Produktversion major.minor		uint16be	1	1	0		value		true	false	false	false				
@@ -19,17 +19,21 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 8054	timeperpulse	Zeit zwischen zwei Pulsen (S0)	ms	uint32be	2	1	0		value.interval		true	false	false	false				
 8056	level	Momentaner Eingangswert (S0)		uint16be	1	1	0		value		true	false	false	false				
 8057	meter_flags	Faehigkeits-Flags des Zaehlers		uint16be	1	1	0		value		true	false	false	false				
-8058	meter_energy	Angehaengter Zaehler: Aktiver Import (Ladeenergie)	Wh	uint64be	4	1	0		value.power.consumption		true	false	false	false				
-8062	meter_power	Angehaengter Zaehler: Aktive Leistung (Ladeleistung)	W	uint32be	2	1	0		value.power		true	false	false	false				
+8058	energy	Angehaengter Zaehler: Aktiver Import (Ladeenergie)	Wh	uint64be	4	1	0		value.power.consumption		true	false	false	false				
+8062	power	Angehaengter Zaehler: Aktive Leistung (Ladeleistung)	W	uint32be	2	1	0		value.power		true	false	false	false				
 8064	current_l1	Momentaner Strom L1	A	uint32be	2	0.1	0		value		true	false	false	false				
 8066	current_l2	Momentaner Strom L2	A	uint32be	2	0.1	0		value		true	false	false	false				
 8068	current_l3	Momentaner Strom L3	A	uint32be	2	0.1	0		value		true	false	false	false				
+8070	reset_pulses	Pulszaehler zuruecksetzen (1 schreiben)		uint16be	1	1	0		level		false	false	false	false				
+8071	reset_energy	Energie zuruecksetzen (1 schreiben)		uint16be	1	1	0		level		false	false	false	false				
 8080	def_fixed_current	Standardwert reg_cable_current	A	uint16be	1	0.1	0		value		true	false	false	false				
 8081	def_charg_cur_limit	Standardwert Ladestrom-Limit 6-63	A	uint16be	1	0.1	0		value		true	false	false	false				
 8082	def_charging_enable	Standardwert Laden möglich (0/1)		uint16be	1	1	0		switch		true	false	false	false				
 8083	fail_safe_duration	Sekunden inaktiv bevor Limits greifen	s	uint32be	2	1	0		value		true	false	false	false				
 8085	fail_safe_current	Strom bei Inaktivität (0 = deaktiviert)	A	uint16be	1	0.1	0		value		true	false	false	false				
-8086	disconnect_cp	CP-Trennung in Sekunden (Fahrzeug aufwecken / Ladung neu anstossen)	s	uint16be	1	1	0		level		true	false	false	false				
+8086	disconnect_cp	CP-Trennung: Schreiben = Sekunden der Abschaltung (Fahrzeug aufwecken / Ladung neu anstossen), Lesen = verbleibende Sekunden	s	uint16be	1	1	0		level		true	false	false	false				
+8087	relay_select	Phasenumschaltung: 0=3-phasig, 1=1-phasig (nur Wallboxen ab Controller Rev. F)		uint16be	1	1	0		level		false	false	false	false				
+8088	relay2	Relais 2: 0=aus, 1=an (nur wenn Relais 1 aus ist; nur Wallboxen ab Controller Rev. F)		uint16be	1	1	0		level		false	false	false	false				
 8090	cable_current	PP: Maximaler Kabel-Strom (0 = kein Kabel)	A	uint16be	1	0.1	0		value		true	false	false	false				
 8091	fixed_current	Überschreibe cable_current	A	uint16be	1	0.1	0		level		true	false	false	false				
 8092	charge_pilot_state	CP: 0=A 1=B 2=C 3=D 4=E 5=F		uint16be	1	1	0		value		true	false	false	false				
