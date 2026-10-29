@@ -14,8 +14,8 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 40170	Betriebszustand	1=Off 2=Sleeping 3=Starting 4=MPPT 5=Throttled 6=ShuttingDown 7=Fault 8=Standby		uint16be	1	1	0		value		true	false	false	false				
 40172	Fehlercode	Event1 Bitmaske		uint32be	2	1	0		value		true	false	false	false				
 40295	Leistungsbegrenzung_Sollwert	SOLLWERT in % von WMax (Nennleistung). Wirkt erst wenn Freigabe=1.	%	uint16be	1	0.1	0		level		true	false	false	false				
-40297	Begrenzung_Timeout	WMaxLimPct_RvrtTms in Sekunden. Countdown startet mit Freigabe=1	s	uint16be	1	1	0		level		true	false	false	false				
-40299	Leistungsbegrenzung_Aktiv	FREIGABE: 0=aus (volle Leistung), 1=Begrenzung aktiv		uint16be	1	1	0		level		true	false	false	false				
+40297	Begrenzung_Timeout	WMaxLimPct_RvrtTms in Sekunden. Countdown startet mit Freigabe=1. Der WR setzt das Register selbst zurueck, bei jedem Setzen mitschreiben	s	uint16be	1	1	0		level		true	false	false	false				
+40299	Leistungsbegrenzung_Aktiv	FREIGABE: 1=Begrenzung anwenden. 0 hebt eine aktive Begrenzung NICHT auf, dafuer Sollwert 100 schreiben		uint16be	1	1	0		level		true	false	false	false				
 40858	SunSpec_Model160	Watchdog: muss 160 sein		uint16be	1	1	0		value		true	false	false	false				
 40860	DCA_SF	Skalierungsfaktor MPPT-Strom (-2)		int16be	1	1	0		value		true	false	false	false				
 40861	DCV_SF	Skalierungsfaktor MPPT-Spannung (-1)		int16be	1	1	0		value		true	false	false	false				
