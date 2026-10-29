@@ -1,13 +1,13 @@
-_address	name	description	unit	type	len	factor	offset	formula	role	room	cw	isScale
-30001	Fortluft nach aussen		°C	uint8be	1	0.1			level			
-30002	fresh air temperature (Zuluft)		°C	uint8be	1	0.1			level			
-30003	 exhausted air temperature (Abluft)		°C	uint8be	1	0.1			level			
-30004	 outdoor air temperature (Aussenluft)		°C	uint8be	1	0.1			level			
-30005	 outdoor temperature		°C	uint8be	1	0.1			level			
-30006	 room temperature		°C	uint8be	1	0.1			level			
-30007	 rotational speed fresh air (Zuluft)		rpm	uint16be	1	10			level			
-30008	otational speed exhausted air (Abluft)		rpm	uint16be	1	10			level			
-30009	 Setpoint rpm fresh air (Zuluft)		rpm	uint16be	1	10			level			
-30010	 Setpoint rpm exhausted air (Abluft)		rpm	uint16be	1	10			level			
-30011	speedcontrol fresh air (Zuluft)		%	uint16be	1	0.1			level			
-30012	 speedcontrol exhaused air (Abluft)		%	uint16be	1	0.1			level			
+_address	name	description	unit	type	len	factor	offset	formula	role	room	cw	isScale	sanitize	sanitizeAction	minValidValue	maxValidValue
+30001	Fortluft nach aussen		°C	int16be	1	0.1			value.temperature							
+30002	fresh air temperature (Zuluft)		°C	int16be	1	0.1			value.temperature							
+30003	 exhausted air temperature (Abluft)		°C	int16be	1	0.1			value.temperature							
+30004	 outdoor air temperature (Aussenluft)		°C	int16be	1	0.1			value.temperature							
+30005	 outdoor temperature		°C	int16be	1	0.1			value.temperature							
+30006	 room temperature		°C	int16be	1	0.1			value.temperature							
+30007	 rotational speed fresh air (Zuluft)		rpm	uint16be	1	10			value							
+30008	rotational speed exhausted air (Abluft)		rpm	uint16be	1	10			value							
+30009	 Setpoint rpm fresh air (Zuluft)		rpm	uint16be	1	10			value		false					
+30010	 Setpoint rpm exhausted air (Abluft)		rpm	uint16be	1	10			value		false					
+30011	speedcontrol fresh air (Zuluft)		%	uint16be	1	0.1			value							
+30012	 speedcontrol exhaused air (Abluft)		%	uint16be	1	0.1			value							
