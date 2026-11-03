@@ -25,6 +25,10 @@ Server listens on port 502
 
 ## Power limitation (blueplanet TL3)
 
-1. Write the setpoint to `40295` (`Leistungsbegrenzung_Sollwert`, % of rated power)
-2. Write the timeout to `40297` (`Begrenzung_Timeout`, seconds)
-3. Write `1` to `40299` (`Leistungsbegrenzung_Aktiv`) to enable the limit; `0` = full power
+1. Write the timeout to `40297` (`Begrenzung_Timeout`, seconds). The inverter resets this register itself, so write it every time.
+2. Write the setpoint to `40295` (`Leistungsbegrenzung_Sollwert`, % of rated power)
+3. Write `1` to `40299` (`Leistungsbegrenzung_Aktiv`) to apply the limit
+
+To remove the limit, write `100` (%) to `40295` (keep `40299` = 1). Writing `0` to `40299` does **not** lift an active limit; the inverter keeps it until the timeout expires. To keep a limit active, rewrite it before the timeout runs out.
+
+All values above are the ioBroker state values. `40295` uses factor `0.1`, so the state is in % and the raw register value is 10x higher (state `100` % = raw `1000`, state `50` % = raw `500`). If you write the register directly without the factor, use the raw value, otherwise `100` would mean 10 %.
