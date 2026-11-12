@@ -60,3 +60,26 @@ Template: [SG01HP03-holding-registers.tsv](SG01HP03-holding-registers.tsv) für 
     - Für Dauersteuerung 1101 vor Ablauf nachschreiben (Heartbeat); fällt ioBroker aus, kehrt der WR nach der eingestellten Zeit in den Normalbetrieb zurück.
   - Nicht übernommen: 1102/1103/1116 (im Protokoll nicht belegt) und die abweichende Belegung aus dem PR-Entwurf.
 - **Systemzeit** (40063–40065) liegt byteweise vor und wird per `formula` in Jahr/Monat/Tag/Stunde/Minute/Sekunde zerlegt (nur lesend, standardmäßig nicht gepollt).
+
+---------------------------------------------------------
+
+# Vollständige Registerlisten aus ha-solarman (automatisch erzeugt)
+
+- [ha-solarman-SG04LP3.tsv](ha-solarman-SG04LP3.tsv): SUN-5…12K-SG04LP3 (Niedervolt-Batterie)
+- [ha-solarman-SG01HP3.tsv](ha-solarman-SG01HP3.tsv): SUN-5…25K-SG01HP3-EU-AM2 (Hochvolt-Batterie)
+
+Die Dateien werden von der GitHub Action aus der Definition
+[deye_p3.yaml](https://github.com/davidrapan/ha-solarman/blob/main/custom_components/solarman/inverter_definitions/deye_p3.yaml)
+von [ha-solarman](https://github.com/davidrapan/ha-solarman) (MIT, © David Rapan and contributors) erzeugt und
+wöchentlich aktualisiert (Eintrag `generate` in `template.json`, `mod` 0 = SG04LP3, 1 = SG01HP3). Bitte die TSV-Dateien
+nicht von Hand ändern, sie werden überschrieben.
+
+- Rohadressen (Register 586 = 40587 in den Dateien oben). Beim Import rechnet der Adapter sie auf die Einstellung
+  „Use aliases“ der Instanz um.
+- Alle Register sind gepollt (`poll = true`). Nicht benötigte Register vor dem Speichern abwählen, das verkürzt den
+  Lesezyklus.
+- Leistungen der großen Modelle haben das High-Word in einem anderen Register (z. B. Netzleistung 625 und 690). Der
+  Adapter liest nur das Low-Word, das reicht bis ±32767 W; die Beschreibung nennt das Register des High-Words.
+- **Abweichung SG01HP3:** ha-solarman rechnet die Energiezähler (514–538) mit Faktor 0,1. Laut der getesteten Liste
+  [SG01HP03-holding-registers.tsv](SG01HP03-holding-registers.tsv) zählen sie ab Firmware 1098 in ganzen kWh (Faktor 1).
+  Bei neuer Firmware die Faktoren nach dem Import auf 1 ändern oder die getestete Liste verwenden.

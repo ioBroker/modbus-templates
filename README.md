@@ -179,6 +179,8 @@ per function code is written: `holding-registers.tsv` (0x03) and `input-register
 * `--mod <n>`: some values differ between the models of a definition (e.g. `scale: [0.01, 0.1]` for LV and HV
   batteries). The script uses the element `n` (default 0), as the setting "mod" of ha-solarman
 * computed values (`sensors`) are left out, the script lists them as warnings
+* a value with the high word in another block (e.g. the power of large Deye models, `[0x0271, 0x02B2]`) is read
+  as 16-bit low word only, the description names the register of the high word
 
 If no address is below 40001 (30001 for input registers), the script prints the `template.json` entry with
 `"addressing": "raw"`. Please check the result with the data sheet and mention the source in the README of the device.
@@ -214,9 +216,9 @@ generates the files after the merge, commits them, and updates them once a week 
 ```
 
 * `solarman`: `definition` is the name in ha-solarman, `ref` a branch, tag or commit (default `main`; with a tag the
-  file changes only when you change the tag), `mod` as `--mod`, `files` other file names
-  (`{ "holdingRegs": "inverter.tsv", "inputRegs": "meter.tsv" }`, default `holding-registers.tsv` and
-  `input-registers.tsv`)
+  file changes only when you change the tag), `mod` as `--mod`, `files` the file names
+  (`{ "holdingRegs": "inverter.tsv", "inputRegs": "meter.tsv" }`, only these register types are written; default
+  `holding-registers.tsv` and `input-registers.tsv`)
 * `sunspec`: the layout as above, `file` the file name (default `holding-registers.tsv`)
 * `skip`: names of registers to leave out
 * the files get `"addressing": "raw"` automatically

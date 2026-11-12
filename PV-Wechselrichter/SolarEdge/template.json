@@ -27,6 +27,76 @@
         },
         "holding-registers-S10KRWB-SE30K-Battery.tsv": {
             "addressing": "raw"
+        },
+        "sunspec-inverter-1phase.tsv": {
+            "title": "Inverter single phase (SunSpec 101), generated"
+        },
+        "sunspec-inverter-3phase.tsv": {
+            "title": "Inverter three phase (SunSpec 103), generated"
+        },
+        "sunspec-meter1.tsv": {
+            "title": "Meter 1 (SunSpec 203), generated"
         }
-    }
+    },
+    "generate": [
+        {
+            "source": "sunspec",
+            "file": "sunspec-inverter-1phase.tsv",
+            "marker": 40000,
+            "models": [
+                {
+                    "id": 1,
+                    "address": 40002,
+                    "prefix": "C_",
+                    "skip": [
+                        "Pad"
+                    ]
+                },
+                {
+                    "id": 101,
+                    "address": 40069,
+                    "prefix": "I_"
+                }
+            ]
+        },
+        {
+            "source": "sunspec",
+            "file": "sunspec-inverter-3phase.tsv",
+            "marker": 40000,
+            "models": [
+                {
+                    "id": 1,
+                    "address": 40002,
+                    "prefix": "C_",
+                    "skip": [
+                        "Pad"
+                    ]
+                },
+                {
+                    "id": 103,
+                    "address": 40069,
+                    "prefix": "I_"
+                }
+            ]
+        },
+        {
+            "source": "sunspec",
+            "file": "sunspec-meter1.tsv",
+            "models": [
+                {
+                    "id": 1,
+                    "address": 40121,
+                    "prefix": "M1_C_",
+                    "skip": [
+                        "Pad"
+                    ]
+                },
+                {
+                    "id": 203,
+                    "address": 40188,
+                    "prefix": "M1_"
+                }
+            ]
+        }
+    ]
 }

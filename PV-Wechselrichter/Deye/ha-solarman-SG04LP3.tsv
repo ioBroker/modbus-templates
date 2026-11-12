@@ -1,0 +1,588 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale	sanitize	sanitizeAction	minValidValue	maxValidValue
+0	Device	0=Unknown, 2/512=String Inverter, 3/768=Single-Phase Hybrid Inverter, 4/1024=Microinverter, 5/1280=LV 3-Phase Hybrid Inverter, 6=HV 3-Phase Hybrid Inverter, 7/1536=HV 3-Phase Inverter 6-15kw, 8/1537=HV 3-Phase Inverter 20-50kw, 259=Off-Grid Inverter, 260=Energy Storage System		uint16be	1	1	0		value		true	false	false	false	false			
+1	Device Modbus Address			uint16be	1	1	0		value		true	false	false	false	false			
+2	Device Protocol Version			rawhex	1	1	0		state		true	false	false	false	false			
+3	Device Serial Number			string	5	1	0		state		true	false	false	false	false			
+10	Device MCU Board Version			rawhex	1	1	0		state		true	false	false	false	false			
+12	Device AFCI Version			rawhex	1	1	0		state		true	false	false	false	false			
+13	Device MCU Version			rawhex	1	1	0		state		true	false	false	false	false			
+20	Device Rated Power		W	int32sw	2	0,1	0		value		true	false	false	false	true	keepLastValid	1	24000
+22	Device MPPTs			uint16be	1	1	0	Math.floor((x & 0xF00) / 256)	value		true	false	false	false	true	keepLastValid	1	12
+22	Device Phases			uint16be	1	1	0	(x & 0xF)	value		true	false	false	false	true	keepLastValid	3	3
+36	Device Self-check	0=Disabled, 1=Enabled		uint16be	1	1	0		value		true	false	false	false	false			
+61	Self-check time		s	uint16be	1	1	0		level		true	false	false	false	false			
+62	Date & Time			rawhex	3	1	0		state		true	false	false	false	false			
+80	Control switch			uint16be	1	1	0		level		true	false	false	false	false			
+98	Battery Control Mode	0=Lead-Battery, four-stage charging method, 1=Lithium		uint16be	1	1	0		level		true	false	false	false	false			
+99	Battery Equalization		V	uint16be	1	0,01	0		level		true	false	false	false	false			
+100	Battery Absorption		V	uint16be	1	0,01	0		level		true	false	false	false	false			
+101	Battery Float		V	uint16be	1	0,01	0		level		true	false	false	false	false			
+102	Battery Capacity		Ah	uint16be	1	1	0		level		true	false	false	false	false			
+103	Battery Empty		V	uint16be	1	0,01	0		level		true	false	false	false	false			
+104	Zero Export power		W	int16be	1	1	0		level		true	false	false	false	false			
+105	Battery Equalization Cycle		d	uint16be	1	1	0		level		true	false	false	false	false			
+106	Battery Equalization Time		h	uint16be	1	0,5	0		level		true	false	false	false	false			
+107	Battery Temperature Compensation		mV/*C	int16be	1	1	0		level		true	false	false	false	false			
+108	Battery Max Charging Current		A	uint16be	1	1	0		level		true	false	false	false	false			
+109	Battery Max Discharging Current		A	uint16be	1	1	0		level		true	false	false	false	false			
+111	Battery Operation Mode	0=Voltage, 1=Capacity, 2=No Battery		uint16be	1	1	0		level		true	false	false	false	false			
+113	Battery Resistance		mΩ	uint16be	1	1	0		level		true	false	false	false	false			
+114	Battery Charging efficiency		%	uint16be	1	0,1	0		level		true	false	false	false	true	keepLastValid	0	100
+115	Battery Shutdown SOC		%	uint16be	1	1	0		level		true	false	false	false	false			
+116	Battery Restart SOC		%	uint16be	1	1	0		level		true	false	false	false	false			
+117	Battery Low SOC		%	uint16be	1	1	0		level		true	false	false	false	false			
+118	Battery Shutdown Voltage		V	uint16be	1	0,01	0		level		true	false	false	false	false			
+119	Battery Restart Voltage		V	uint16be	1	0,01	0		level		true	false	false	false	false			
+120	Battery Low Voltage		V	uint16be	1	0,01	0		level		true	false	false	false	false			
+121	Generator Operating Time		h	uint16be	1	0,1	0		level		true	false	false	false	false			
+122	Generator Cooling Time		h	uint16be	1	0,1	0		level		true	false	false	false	false			
+123	Battery Generator Charging Start Voltage		V	uint16be	1	0,01	0		level		true	false	false	false	false			
+124	Battery Generator Charging Start		%	uint16be	1	1	0		level		true	false	false	false	false			
+125	Battery Generator Charging Current		A	uint16be	1	1	0		level		true	false	false	false	false			
+126	Battery Grid Charging Start Voltage		V	uint16be	1	0,01	0		level		true	false	false	false	false			
+127	Battery Grid Charging Start		%	uint16be	1	1	0		level		true	false	false	false	false			
+128	Battery Grid Charging Current		A	uint16be	1	1	0		level		true	false	false	false	false			
+129	Battery Wake Up			uint16be	1	1	0		level		true	false	false	false	false			
+129	Battery Generator Charging			uint16be	1	1	0		level		true	false	false	false	false			
+130	Battery Grid Charging			uint16be	1	1	0		level		true	false	false	false	false			
+132	Generator			uint16be	1	1	0		level		true	false	false	false	false			
+133	IO Mode	The Generator/SmartLoad/Microinverter input-output mode: 0=Generator, 1=SmartLoad, 2=Microinverter		uint16be	1	1	0		level		true	false	false	false	false			
+134	SmartLoad Off Voltage		V	uint16be	1	0,01	0		level		true	false	false	false	false			
+135	SmartLoad Off		%	uint16be	1	1	0		level		true	false	false	false	false			
+136	SmartLoad On Voltage		V	uint16be	1	0,01	0		level		true	false	false	false	false			
+137	SmartLoad On		%	uint16be	1	1	0		level		true	false	false	false	false			
+138	Grid Voltage	0=LN:220VAC LL:380VAC, 1=LN:230VAC LL:398VAC, 2=LN:240VAC LL:415VAC, 3=LN:120VAC LL:208VAC, 4=LN:133VAC LL:220VAC, 5=LN:100VAC LL:173VAC		uint16be	1	1	0		level		true	false	false	false	false			
+139	Generator Min PV Power		W	uint16be	1	1	0		level		true	false	false	false	false			
+140	Charging Signal	0=Normal, 1=Grid, 2=Generator, 3=Both		uint16be	1	1	0		level		true	false	false	false	false			
+141	Energy Pattern	0=Battery First, 1=Load First		uint16be	1	1	0		level		true	false	false	false	false			
+142	Work Mode	0=Export First, 1=Zero Export To Load, 2=Zero Export To CT		uint16be	1	1	0		level		true	false	false	false	false			
+143	Export Surplus Power		W	uint16be	1	1	0		level		true	false	false	false	false			
+145	Export Surplus			uint16be	1	1	0		level		true	false	false	false	false			
+146	Time of Use	0=Disabled, 3=Monday, 5=Tuesday, 9=Wednesday, 17=Thursday, 33=Friday, 65=Saturday, 129=Sunday, 63=Weekdays, 193=Weekend, 253=Week -Monday, 251=Week -Tuesday, 247=Week -Wednesday, 239=Week -Thursday, 223=Week -Friday, 191=Week -Saturday, 127=Week -Sunday, 255=Week, =Enabled		uint16be	1	1	0		level		true	false	false	false	false			
+148	Program 1 Time	time as HHMM		uint16be	1	1	0		level		true	false	false	false	false			
+149	Program 2 Time	time as HHMM		uint16be	1	1	0		level		true	false	false	false	false			
+150	Program 3 Time	time as HHMM		uint16be	1	1	0		level		true	false	false	false	false			
+151	Program 4 Time	time as HHMM		uint16be	1	1	0		level		true	false	false	false	false			
+152	Program 5 Time	time as HHMM		uint16be	1	1	0		level		true	false	false	false	false			
+153	Program 6 Time	time as HHMM		uint16be	1	1	0		level		true	false	false	false	false			
+154	Program 1 Power		W	uint16be	1	1	0		level		true	false	false	false	false			
+155	Program 2 Power		W	uint16be	1	1	0		level		true	false	false	false	false			
+156	Program 3 Power		W	uint16be	1	1	0		level		true	false	false	false	false			
+157	Program 4 Power		W	uint16be	1	1	0		level		true	false	false	false	false			
+158	Program 5 Power		W	uint16be	1	1	0		level		true	false	false	false	false			
+159	Program 6 Power		W	uint16be	1	1	0		level		true	false	false	false	false			
+160	Program 1 Voltage		V	uint16be	1	0,01	0		level		true	false	false	false	false			
+161	Program 2 Voltage		V	uint16be	1	0,01	0		level		true	false	false	false	false			
+162	Program 3 Voltage		V	uint16be	1	0,01	0		level		true	false	false	false	false			
+163	Program 4 Voltage		V	uint16be	1	0,01	0		level		true	false	false	false	false			
+164	Program 5 Voltage		V	uint16be	1	0,01	0		level		true	false	false	false	false			
+165	Program 6 Voltage		V	uint16be	1	0,01	0		level		true	false	false	false	false			
+166	Program 1 SOC		%	uint16be	1	1	0		level		true	false	false	false	false			
+167	Program 2 SOC		%	uint16be	1	1	0		level		true	false	false	false	false			
+168	Program 3 SOC		%	uint16be	1	1	0		level		true	false	false	false	false			
+169	Program 4 SOC		%	uint16be	1	1	0		level		true	false	false	false	false			
+170	Program 5 SOC		%	uint16be	1	1	0		level		true	false	false	false	false			
+171	Program 6 SOC		%	uint16be	1	1	0		level		true	false	false	false	false			
+172	Program 1 Charging	0=Disabled, 1=Grid, 2=Generator, 3=Both		uint16be	1	1	0		level		true	false	false	false	false			
+173	Program 2 Charging	0=Disabled, 1=Grid, 2=Generator, 3=Both		uint16be	1	1	0		level		true	false	false	false	false			
+174	Program 3 Charging	0=Disabled, 1=Grid, 2=Generator, 3=Both		uint16be	1	1	0		level		true	false	false	false	false			
+175	Program 4 Charging	0=Disabled, 1=Grid, 2=Generator, 3=Both		uint16be	1	1	0		level		true	false	false	false	false			
+176	Program 5 Charging	0=Disabled, 1=Grid, 2=Generator, 3=Both		uint16be	1	1	0		level		true	false	false	false	false			
+177	Program 6 Charging	0=Disabled, 1=Grid, 2=Generator, 3=Both		uint16be	1	1	0		level		true	false	false	false	false			
+178	Microinverter Export cut-off			uint16be	1	1	0		level		true	false	false	false	false			
+178	Generator Peak shaving			uint16be	1	1	0		level		true	false	false	false	false			
+178	Grid Peak shaving			uint16be	1	1	0		level		true	false	false	false	false			
+178	Generator On-Grid	On Grid always on		uint16be	1	1	0		level		true	false	false	false	false			
+179	Off Grid			uint16be	1	1	0		level		true	false	false	false	false			
+180	Grid reconnection time		s	uint16be	1	1	0		level		true	false	false	false	false			
+183	Grid frequency	0=50 Hz, 1=60 Hz		uint16be	1	1	0		level		true	false	false	false	false			
+185	Grid voltage protection - high		V	uint16be	1	0,1	0		level		true	false	false	false	false			
+186	Grid voltage protection - low		V	uint16be	1	0,1	0		level		true	false	false	false	false			
+187	Grid frequency protection - high		Hz	uint16be	1	0,01	0		level		true	false	false	false	false			
+188	Grid frequency protection - low		Hz	uint16be	1	0,01	0		level		true	false	false	false	false			
+189	Generator Grid side	The generator is connected to the grid input		uint16be	1	1	0		level		true	false	false	false	false			
+190	Generator Peak shaving (Work Mode)		W	uint16be	1	1	0		level		true	false	false	false	false			
+191	Grid Peak shaving (Work Mode)		W	uint16be	1	1	0		level		true	false	false	false	false			
+210	Battery BMS Charging Voltage		V	uint16be	1	0,01	0		value		true	false	false	false	false			
+211	Battery BMS Discharging Voltage		V	uint16be	1	0,01	0		value		true	false	false	false	false			
+212	Battery BMS Charging Current		A	uint16be	1	1	0		value		true	false	false	false	false			
+213	Battery BMS Discharging Current		A	uint16be	1	1	0		value		true	false	false	false	false			
+214	Battery BMS SOC		%	uint16be	1	1	0		value		true	false	false	false	true	keepLastValid	0	101
+215	Battery BMS Voltage		V	uint16be	1	0,01	0		value		true	false	false	false	false			
+216	Battery BMS Current		A	int16be	1	1	0		value		true	false	false	false	false			
+218	Battery BMS Max Charging Current		A	uint16be	1	1	0		value		true	false	false	false	false			
+219	Battery BMS Max Discharging Current		A	uint16be	1	1	0		value		true	false	false	false	false			
+220	Battery Alarm			uint16be	1	1	0		value		true	false	false	false	false			
+221	Battery Fault			uint16be	1	1	0		value		true	false	false	false	false			
+222	Battery BMS Other Symbol			uint16be	1	1	0		value		true	false	false	false	false			
+223	Battery BMS Type	0=PYLON, 1=Tianbangda, 2=KOK, 3=Keith, 4=Toppai, 5=Peneng 485, 6=Jeris 485, 7=Sunwoda 485, 8=Xinrui 485, 9=Tianbangda 485, 10=Shenggao Electric CAN		uint16be	1	1	0		level		true	false	false	false	false			
+231	Grid Max Export power		W	uint16be	1	10	0		level		true	false	false	false	false			
+233	Grid Max Import power		W	uint16be	1	10	0		level		true	false	false	false	false			
+234	AC Coupling	Couple inverters and batteries using AC lines: 0=Disabled, =Grid, =Load		uint16be	1	1	0		level		true	false	false	false	false			
+237	Export Asymmetry			uint16be	1	1	0		level		true	false	false	false	false			
+340	PV Power	Max PV power limiter	W	uint16be	1	1	0		level		true	false	false	false	false			
+341	MPPT multi-point scanning	Find the MPP even when there are partial shading conditions on the solar panels		uint16be	1	1	0		level		true	false	false	false	false			
+500	Device State	0=Standby, 1=Self-test, 2=Normal, 3=Alarm, 4=Fault		uint16be	1	1	0		value		true	false	false	false	false			
+514	Today Battery Charge		kWh	uint16be	1	0,1	0		value		true	false	false	false	false			
+515	Today Battery Discharge		kWh	uint16be	1	0,1	0		value		true	false	false	false	false			
+516	Total Battery Charge		kWh	uint32sw	2	0,1	0		value		true	false	false	false	true	keepLastValid	0.1	
+518	Total Battery Discharge		kWh	uint32sw	2	0,1	0		value		true	false	false	false	true	keepLastValid	0.1	
+520	Today Energy Import	Today's energy imported from the grid	kWh	uint16be	1	0,1	0		value		true	false	false	false	false			
+521	Today Energy Export	Today's energy exported/returned to the grid	kWh	uint16be	1	0,1	0		value		true	false	false	false	false			
+522	Total Energy Import	Total energy imported from the grid	kWh	uint32sw	2	0,1	0		value		true	false	false	false	true	keepLastValid	0.1	
+524	Total Energy Export	Total energy exported/returned to the grid	kWh	uint32sw	2	0,1	0		value		true	false	false	false	true	keepLastValid	0.1	
+526	Today Load Consumption		kWh	uint16be	1	0,1	0		value		true	false	false	false	false			
+527	Total Load Consumption		kWh	uint32sw	2	0,1	0		value		true	false	false	false	true	keepLastValid	0.1	
+529	Today Production		kWh	uint16be	1	0,1	0		value		true	false	false	false	false			
+534	Total Production		kWh	uint32sw	2	0,1	0		value		true	false	false	false	true	keepLastValid	0.1	
+536	Generator Energy - today		kWh	uint16be	1	0,1	0		value		true	false	false	false	false			
+537	Generator Energy		kWh	uint32sw	2	0,1	0		value		true	false	false	false	true	keepLastValid	0.1	
+540	DC Temperature		°C	int16be	1	0,1	-100		value.temperature		true	false	false	false	false			
+541	Temperature		°C	int16be	1	0,1	-100		value.temperature		true	false	false	false	false			
+551	State binary_sensor			uint16be	1	1	0		value		true	false	false	false	false			
+552	Device Relay	0=Off, 1/3=Inverter, 4/6=Grid, 5/7=Inverter-Grid, 8=Generator, 9/11=Inverter-Gen, 12/14=Grid-Generator, 13/15=Inv-Grid-Gen, default=Power Supply		uint16be	1	1	0		value		true	false	false	false	false			
+552	Grid			uint16be	1	1	0	((x >> 2) & 1)	value		true	false	false	false	false			
+552	Generator (State)			uint16be	1	1	0	((x >> 3) & 1)	value		true	false	false	false	false			
+553	Device Alarm	0=OK, =Fan failure, =Grid phase failure, =Meter communication failure, =Battery loss, =Parallel communication quality, default=Problem		uint32sw	2	1	0		value		true	false	false	false	false			
+586	Battery Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+587	Battery Voltage		V	uint16be	1	0,01	0		value		true	false	false	false	false			
+588	Battery		%	uint16be	1	1	0		value.battery		true	false	false	false	true	keepLastValid	0	101
+590	Battery Power		W	int16be	1	1	0		value		true	false	false	false	false			
+592	Battery Corrected Capacity		Ah	uint16be	1	1	0		value		true	false	false	false	false			
+598	Grid L1 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+599	Grid L2 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+600	Grid L3 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+604	Internal CT1 Power	low word only, the high word for values above 32767 is in register 700 (0x2BC)	W	int16be	1	1	0		value		true	false	false	false	false			
+605	Internal CT2 Power	low word only, the high word for values above 32767 is in register 701 (0x2BD)	W	int16be	1	1	0		value		true	false	false	false	false			
+606	Internal CT3 Power	low word only, the high word for values above 32767 is in register 702 (0x2BE)	W	int16be	1	1	0		value		true	false	false	false	false			
+607	Internal Power	low word only, the high word for values above 32767 is in register 703 (0x2BF)	W	int16be	1	1	0		value		true	false	false	false	false			
+609	Grid Frequency		Hz	uint16be	1	0,01	0		value		true	false	false	false	false			
+610	Internal CT1 Current		A	int16be	1	0,01	0		value		true	false	false	false	false			
+611	Internal CT2 Current		A	int16be	1	0,01	0		value		true	false	false	false	false			
+612	Internal CT3 Current		A	int16be	1	0,01	0		value		true	false	false	false	false			
+613	External CT1 Current		A	int16be	1	0,01	0		value		true	false	false	false	false			
+614	External CT2 Current		A	int16be	1	0,01	0		value		true	false	false	false	false			
+615	External CT3 Current		A	int16be	1	0,01	0		value		true	false	false	false	false			
+616	External CT1 Power	low word only, the high word for values above 32767 is in register 705 (0x2C1)	W	int16be	1	1	0		value		true	false	false	false	false			
+617	External CT2 Power	low word only, the high word for values above 32767 is in register 706 (0x2C2)	W	int16be	1	1	0		value		true	false	false	false	false			
+618	External CT3 Power	low word only, the high word for values above 32767 is in register 707 (0x2C3)	W	int16be	1	1	0		value		true	false	false	false	false			
+619	External Power	low word only, the high word for values above 32767 is in register 708 (0x2C4)	W	int16be	1	1	0		value		true	false	false	false	false			
+621	Grid Power Factor		%	uint16be	1	0,1	0		value		true	false	false	false	true	keepLastValid	0	100
+622	Grid L1 Power	low word only, the high word for values above 32767 is in register 687 (0x2AF)	W	int16be	1	1	0		value		true	false	false	false	false			
+623	Grid L2 Power	low word only, the high word for values above 32767 is in register 688 (0x2B0)	W	int16be	1	1	0		value		true	false	false	false	false			
+624	Grid L3 Power	low word only, the high word for values above 32767 is in register 689 (0x2B1)	W	int16be	1	1	0		value		true	false	false	false	false			
+625	Grid Power	Combined power of all three phases, low word only, the high word for values above 32767 is in register 690 (0x2B2)	W	int16be	1	1	0		value		true	false	false	false	false			
+627	Output L1 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+628	Output L2 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+629	Output L3 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+630	Output L1 Current		A	int16be	1	0,01	0		value		true	false	false	false	false			
+631	Output L2 Current		A	int16be	1	0,01	0		value		true	false	false	false	false			
+632	Output L3 Current		A	int16be	1	0,01	0		value		true	false	false	false	false			
+633	Output L1 Power	low word only, the high word for values above 32767 is in register 691 (0x2B3)	W	int16be	1	1	0		value		true	false	false	false	false			
+634	Output L2 Power	low word only, the high word for values above 32767 is in register 692 (0x2B4)	W	int16be	1	1	0		value		true	false	false	false	false			
+635	Output L3 Power	low word only, the high word for values above 32767 is in register 693 (0x2B5)	W	int16be	1	1	0		value		true	false	false	false	false			
+636	Power	low word only, the high word for values above 32767 is in register 694 (0x2B6)	W	int16be	1	1	0		value		true	false	false	false	false			
+638	Output Frequency		Hz	uint16be	1	0,01	0		value		true	false	false	false	false			
+640	Load UPS L1 Power	low word only, the high word for values above 32767 is in register 696 (0x2B8)	W	int16be	1	1	0		value		true	false	false	false	false			
+641	Load UPS L2 Power	low word only, the high word for values above 32767 is in register 697 (0x2B9)	W	int16be	1	1	0		value		true	false	false	false	false			
+642	Load UPS L3 Power	low word only, the high word for values above 32767 is in register 698 (0x2BA)	W	int16be	1	1	0		value		true	false	false	false	false			
+643	Load UPS Power	low word only, the high word for values above 32767 is in register 699 (0x2BB)	W	int16be	1	1	0		value		true	false	false	false	false			
+644	Load L1 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+645	Load L2 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+646	Load L3 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+650	Load Consumption L1 Power	low word only, the high word for values above 32767 is in register 656 (0x290)	W	int16be	1	1	0		value		true	false	false	false	false			
+651	Load Consumption L2 Power	low word only, the high word for values above 32767 is in register 657 (0x291)	W	int16be	1	1	0		value		true	false	false	false	false			
+652	Load Consumption L3 Power	low word only, the high word for values above 32767 is in register 658 (0x292)	W	int16be	1	1	0		value		true	false	false	false	false			
+653	Load Consumption Power	Combined power of all three phases, low word only, the high word for values above 32767 is in register 659 (0x293)	W	int16be	1	1	0		value		true	false	false	false	false			
+655	Load Frequency		Hz	uint16be	1	0,01	0		value		true	false	false	false	false			
+661	Generator L1 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+662	Generator L2 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+663	Generator L3 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+664	Generator L1 Power	low word only, the high word for values above 32767 is in register 668 (0x29C)	W	int16be	1	1	0		value		true	false	false	false	false			
+665	Generator L2 Power	low word only, the high word for values above 32767 is in register 669 (0x29D)	W	int16be	1	1	0		value		true	false	false	false	false			
+666	Generator L3 Power	low word only, the high word for values above 32767 is in register 670 (0x29E)	W	int16be	1	1	0		value		true	false	false	false	false			
+667	Generator Power	Combined power of all three phases, low word only, the high word for values above 32767 is in register 671 (0x29F)	W	int16be	1	1	0		value		true	false	false	false	false			
+672	PV1 Power		W	uint16be	1	1	0		value		true	false	false	false	false			
+673	PV2 Power		W	uint16be	1	1	0		value		true	false	false	false	false			
+674	PV3 Power		W	uint16be	1	1	0		value		true	false	false	false	false			
+675	PV4 Power		W	uint16be	1	1	0		value		true	false	false	false	false			
+676	PV1 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+677	PV1 Current		A	uint16be	1	0,1	0		value		true	false	false	false	false			
+678	PV2 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+679	PV2 Current		A	uint16be	1	0,1	0		value		true	false	false	false	false			
+680	PV3 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+681	PV3 Current		A	uint16be	1	0,1	0		value		true	false	false	false	false			
+682	PV4 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+683	PV4 Current		A	uint16be	1	0,1	0		value		true	false	false	false	false			
+719	PV5 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+720	PV6 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+721	PV7 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+722	PV8 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+723	PV5 Current		A	uint16be	1	0,1	0		value		true	false	false	false	false			
+724	PV6 Current		A	uint16be	1	0,1	0		value		true	false	false	false	false			
+725	PV7 Current		A	uint16be	1	0,1	0		value		true	false	false	false	false			
+726	PV8 Current		A	uint16be	1	0,1	0		value		true	false	false	false	false			
+727	PV5 Power		W	uint16be	1	1	0		value		true	false	false	false	false			
+728	PV6 Power		W	uint16be	1	1	0		value		true	false	false	false	false			
+729	PV7 Power		W	uint16be	1	1	0		value		true	false	false	false	false			
+730	PV8 Power		W	uint16be	1	1	0		value		true	false	false	false	false			
+10032	Battery 1 Serial Number			stringle	8	1	0		state		true	false	false	false	false			
+10040	Battery 1 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+10041	Battery 1 Current		A	int16be	1	0,1	0		value		true	false	false	false	false			
+10042	Battery 1 Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10043	Battery 1 Max Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10044	Battery 1 Min Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10045	Battery 1 MOS Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10047	Battery 1		%	uint16be	1	0,1	0		value.battery		true	false	false	false	true	keepLastValid	0	101
+10048	Battery 1 SOH		%	uint16be	1	0,1	0		value		true	false	false	false	false			
+10050	Battery 1 Capacity		Ah	uint16be	1	0,1	0		value		true	false	false	false	false			
+10054	Battery 1 Max Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10055	Battery 1 Min Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10056	Battery 1 Cycles			uint16be	1	1	0		value		true	false	false	false	false			
+10057	Battery 1 MOS			uint16be	1	1	0		value		true	false	false	false	false			
+10058	Battery 1 Alarm			uint32sw	2	1	0		value		true	false	false	false	false			
+10060	Battery 1 Fault			uint32sw	2	1	0		value		true	false	false	false	false			
+10062	Battery 1 Software Version			rawhex	1	1	0		state		true	false	false	false	false			
+10063	Battery 1 Hardware Version			rawhex	1	1	0		state		true	false	false	false	false			
+10070	Battery 2 Serial Number			stringle	8	1	0		state		true	false	false	false	false			
+10078	Battery 2 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+10079	Battery 2 Current		A	int16be	1	0,1	0		value		true	false	false	false	false			
+10080	Battery 2 Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	1	99
+10081	Battery 2 Max Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10082	Battery 2 Min Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10083	Battery 2 MOS Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10085	Battery 2		%	uint16be	1	0,1	0		value.battery		true	false	false	false	true	keepLastValid	0	101
+10086	Battery 2 SOH		%	uint16be	1	0,1	0		value		true	false	false	false	false			
+10088	Battery 2 Capacity		Ah	uint16be	1	0,1	0		value		true	false	false	false	false			
+10092	Battery 2 Max Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10093	Battery 2 Min Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10094	Battery 2 Cycles			uint16be	1	1	0		value		true	false	false	false	false			
+10095	Battery 2 MOS			uint16be	1	1	0		value		true	false	false	false	false			
+10096	Battery 2 Alarm			uint32sw	2	1	0		value		true	false	false	false	false			
+10098	Battery 2 Fault			uint32sw	2	1	0		value		true	false	false	false	false			
+10100	Battery 2 Software Version			rawhex	1	1	0		state		true	false	false	false	false			
+10101	Battery 2 Hardware Version			rawhex	1	1	0		state		true	false	false	false	false			
+10108	Battery 3 Serial Number			stringle	8	1	0		state		true	false	false	false	false			
+10116	Battery 3 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+10117	Battery 3 Current		A	int16be	1	0,1	0		value		true	false	false	false	false			
+10118	Battery 3 Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10119	Battery 3 Max Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10120	Battery 3 Min Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10121	Battery 3 MOS Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10123	Battery 3		%	uint16be	1	0,1	0		value.battery		true	false	false	false	true	keepLastValid	0	101
+10124	Battery 3 SOH		%	uint16be	1	0,1	0		value		true	false	false	false	false			
+10126	Battery 3 Capacity		Ah	uint16be	1	0,1	0		value		true	false	false	false	false			
+10130	Battery 3 Max Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10131	Battery 3 Min Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10132	Battery 3 Cycles			uint16be	1	1	0		value		true	false	false	false	false			
+10133	Battery 3 MOS			uint16be	1	1	0		value		true	false	false	false	false			
+10134	Battery 3 Alarm			uint32sw	2	1	0		value		true	false	false	false	false			
+10136	Battery 3 Fault			uint32sw	2	1	0		value		true	false	false	false	false			
+10138	Battery 3 Software Version			rawhex	1	1	0		state		true	false	false	false	false			
+10139	Battery 3 Hardware Version			rawhex	1	1	0		state		true	false	false	false	false			
+10146	Battery 4 Serial Number			stringle	8	1	0		state		true	false	false	false	false			
+10154	Battery 4 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+10155	Battery 4 Current		A	int16be	1	0,1	0		value		true	false	false	false	false			
+10156	Battery 4 Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10157	Battery 4 Max Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10158	Battery 4 Min Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10159	Battery 4 MOS Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10161	Battery 4		%	uint16be	1	0,1	0		value.battery		true	false	false	false	true	keepLastValid	0	101
+10162	Battery 4 SOH		%	uint16be	1	0,1	0		value		true	false	false	false	false			
+10164	Battery 4 Capacity		Ah	uint16be	1	0,1	0		value		true	false	false	false	false			
+10168	Battery 4 Max Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10169	Battery 4 Min Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10170	Battery 4 Cycles			uint16be	1	1	0		value		true	false	false	false	false			
+10171	Battery 4 MOS			uint16be	1	1	0		value		true	false	false	false	false			
+10172	Battery 4 Alarm			uint32sw	2	1	0		value		true	false	false	false	false			
+10174	Battery 4 Fault			uint32sw	2	1	0		value		true	false	false	false	false			
+10176	Battery 4 Software Version			rawhex	1	1	0		state		true	false	false	false	false			
+10177	Battery 4 Hardware Version			rawhex	1	1	0		state		true	false	false	false	false			
+10184	Battery 5 Serial Number			stringle	8	1	0		state		true	false	false	false	false			
+10192	Battery 5 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+10193	Battery 5 Current		A	int16be	1	0,1	0		value		true	false	false	false	false			
+10194	Battery 5 Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10195	Battery 5 Max Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10196	Battery 5 Min Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10197	Battery 5 MOS Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10199	Battery 5		%	uint16be	1	0,1	0		value.battery		true	false	false	false	true	keepLastValid	0	101
+10200	Battery 5 SOH		%	uint16be	1	0,1	0		value		true	false	false	false	false			
+10202	Battery 5 Capacity		Ah	uint16be	1	0,1	0		value		true	false	false	false	false			
+10206	Battery 5 Max Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10207	Battery 5 Min Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10208	Battery 5 Cycles			uint16be	1	1	0		value		true	false	false	false	false			
+10209	Battery 5 MOS			uint16be	1	1	0		value		true	false	false	false	false			
+10210	Battery 5 Alarm			uint32sw	2	1	0		value		true	false	false	false	false			
+10212	Battery 5 Fault			uint32sw	2	1	0		value		true	false	false	false	false			
+10214	Battery 5 Software Version			rawhex	1	1	0		state		true	false	false	false	false			
+10215	Battery 5 Hardware Version			rawhex	1	1	0		state		true	false	false	false	false			
+10222	Battery 6 Serial Number			stringle	8	1	0		state		true	false	false	false	false			
+10230	Battery 6 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+10231	Battery 6 Current		A	int16be	1	0,1	0		value		true	false	false	false	false			
+10232	Battery 6 Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10233	Battery 6 Max Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10234	Battery 6 Min Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10235	Battery 6 MOS Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10237	Battery 6		%	uint16be	1	0,1	0		value.battery		true	false	false	false	true	keepLastValid	0	101
+10238	Battery 6 SOH		%	uint16be	1	0,1	0		value		true	false	false	false	false			
+10240	Battery 6 Capacity		Ah	uint16be	1	0,1	0		value		true	false	false	false	false			
+10244	Battery 6 Max Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10245	Battery 6 Min Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10246	Battery 6 Cycles			uint16be	1	1	0		value		true	false	false	false	false			
+10247	Battery 6 MOS			uint16be	1	1	0		value		true	false	false	false	false			
+10248	Battery 6 Alarm			uint32sw	2	1	0		value		true	false	false	false	false			
+10250	Battery 6 Fault			uint32sw	2	1	0		value		true	false	false	false	false			
+10252	Battery 6 Software Version			rawhex	1	1	0		state		true	false	false	false	false			
+10253	Battery 6 Hardware Version			rawhex	1	1	0		state		true	false	false	false	false			
+10260	Battery 7 Serial Number			stringle	8	1	0		state		true	false	false	false	false			
+10268	Battery 7 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+10269	Battery 7 Current		A	int16be	1	0,1	0		value		true	false	false	false	false			
+10270	Battery 7 Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10271	Battery 7 Max Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10272	Battery 7 Min Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10273	Battery 7 MOS Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10275	Battery 7		%	uint16be	1	0,1	0		value.battery		true	false	false	false	true	keepLastValid	0	101
+10276	Battery 7 SOH		%	uint16be	1	0,1	0		value		true	false	false	false	false			
+10278	Battery 7 Capacity		Ah	uint16be	1	0,1	0		value		true	false	false	false	false			
+10282	Battery 7 Max Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10283	Battery 7 Min Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10284	Battery 7 Cycles			uint16be	1	1	0		value		true	false	false	false	false			
+10285	Battery 7 MOS			uint16be	1	1	0		value		true	false	false	false	false			
+10286	Battery 7 Alarm			uint32sw	2	1	0		value		true	false	false	false	false			
+10288	Battery 7 Fault			uint32sw	2	1	0		value		true	false	false	false	false			
+10290	Battery 7 Software Version			rawhex	1	1	0		state		true	false	false	false	false			
+10291	Battery 7 Hardware Version			rawhex	1	1	0		state		true	false	false	false	false			
+10298	Battery 8 Serial Number			stringle	8	1	0		state		true	false	false	false	false			
+10306	Battery 8 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+10307	Battery 8 Current		A	int16be	1	0,1	0		value		true	false	false	false	false			
+10308	Battery 8 Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10309	Battery 8 Max Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10310	Battery 8 Min Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10311	Battery 8 MOS Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10313	Battery 8		%	uint16be	1	0,1	0		value.battery		true	false	false	false	true	keepLastValid	0	101
+10314	Battery 8 SOH		%	uint16be	1	0,1	0		value		true	false	false	false	false			
+10316	Battery 8 Capacity		Ah	uint16be	1	0,1	0		value		true	false	false	false	false			
+10320	Battery 8 Max Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10321	Battery 8 Min Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10322	Battery 8 Cycles			uint16be	1	1	0		value		true	false	false	false	false			
+10323	Battery 8 MOS			uint16be	1	1	0		value		true	false	false	false	false			
+10324	Battery 8 Alarm			uint32sw	2	1	0		value		true	false	false	false	false			
+10326	Battery 8 Fault			uint32sw	2	1	0		value		true	false	false	false	false			
+10328	Battery 8 Software Version			rawhex	1	1	0		state		true	false	false	false	false			
+10329	Battery 8 Hardware Version			rawhex	1	1	0		state		true	false	false	false	false			
+10336	Battery 9 Serial Number			stringle	8	1	0		state		true	false	false	false	false			
+10344	Battery 9 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+10345	Battery 9 Current		A	int16be	1	0,1	0		value		true	false	false	false	false			
+10346	Battery 9 Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10347	Battery 9 Max Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10348	Battery 9 Min Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10349	Battery 9 MOS Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10351	Battery 9		%	uint16be	1	0,1	0		value.battery		true	false	false	false	true	keepLastValid	0	101
+10352	Battery 9 SOH		%	uint16be	1	0,1	0		value		true	false	false	false	false			
+10354	Battery 9 Capacity		Ah	uint16be	1	0,1	0		value		true	false	false	false	false			
+10358	Battery 9 Max Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10359	Battery 9 Min Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10360	Battery 9 Cycles			uint16be	1	1	0		value		true	false	false	false	false			
+10361	Battery 9 MOS			uint16be	1	1	0		value		true	false	false	false	false			
+10362	Battery 9 Alarm			uint32sw	2	1	0		value		true	false	false	false	false			
+10364	Battery 9 Fault			uint32sw	2	1	0		value		true	false	false	false	false			
+10366	Battery 9 Software Version			rawhex	1	1	0		state		true	false	false	false	false			
+10367	Battery 9 Hardware Version			rawhex	1	1	0		state		true	false	false	false	false			
+10374	Battery 10 Serial Number			stringle	8	1	0		state		true	false	false	false	false			
+10382	Battery 10 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+10383	Battery 10 Current		A	int16be	1	0,1	0		value		true	false	false	false	false			
+10384	Battery 10 Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10385	Battery 10 Max Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10386	Battery 10 Min Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10387	Battery 10 MOS Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10389	Battery 10		%	uint16be	1	0,1	0		value.battery		true	false	false	false	true	keepLastValid	0	101
+10390	Battery 10 SOH		%	uint16be	1	0,1	0		value		true	false	false	false	false			
+10392	Battery 10 Capacity		Ah	uint16be	1	0,1	0		value		true	false	false	false	false			
+10396	Battery 10 Max Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10397	Battery 10 Min Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10398	Battery 10 Cycles			uint16be	1	1	0		value		true	false	false	false	false			
+10399	Battery 10 MOS			uint16be	1	1	0		value		true	false	false	false	false			
+10400	Battery 10 Alarm			uint32sw	2	1	0		value		true	false	false	false	false			
+10402	Battery 10 Fault			uint32sw	2	1	0		value		true	false	false	false	false			
+10404	Battery 10 Software Version			rawhex	1	1	0		state		true	false	false	false	false			
+10405	Battery 10 Hardware Version			rawhex	1	1	0		state		true	false	false	false	false			
+10412	Battery 11 Serial Number			stringle	8	1	0		state		true	false	false	false	false			
+10420	Battery 11 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+10421	Battery 11 Current		A	int16be	1	0,1	0		value		true	false	false	false	false			
+10422	Battery 11 Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10423	Battery 11 Max Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10424	Battery 11 Min Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10425	Battery 11 MOS Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10427	Battery 11		%	uint16be	1	0,1	0		value.battery		true	false	false	false	true	keepLastValid	0	101
+10428	Battery 11 SOH		%	uint16be	1	0,1	0		value		true	false	false	false	false			
+10430	Battery 11 Capacity		Ah	uint16be	1	0,1	0		value		true	false	false	false	false			
+10434	Battery 11 Max Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10435	Battery 11 Min Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10436	Battery 11 Cycles			uint16be	1	1	0		value		true	false	false	false	false			
+10437	Battery 11 MOS			uint16be	1	1	0		value		true	false	false	false	false			
+10438	Battery 11 Alarm			uint32sw	2	1	0		value		true	false	false	false	false			
+10440	Battery 11 Fault			uint32sw	2	1	0		value		true	false	false	false	false			
+10442	Battery 11 Software Version			rawhex	1	1	0		state		true	false	false	false	false			
+10443	Battery 11 Hardware Version			rawhex	1	1	0		state		true	false	false	false	false			
+10450	Battery 12 Serial Number			stringle	8	1	0		state		true	false	false	false	false			
+10458	Battery 12 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+10459	Battery 12 Current		A	int16be	1	0,1	0		value		true	false	false	false	false			
+10460	Battery 12 Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10461	Battery 12 Max Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10462	Battery 12 Min Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10463	Battery 12 MOS Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10465	Battery 12		%	uint16be	1	0,1	0		value.battery		true	false	false	false	true	keepLastValid	0	101
+10466	Battery 12 SOH		%	uint16be	1	0,1	0		value		true	false	false	false	false			
+10468	Battery 12 Capacity		Ah	uint16be	1	0,1	0		value		true	false	false	false	false			
+10472	Battery 12 Max Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10473	Battery 12 Min Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10474	Battery 12 Cycles			uint16be	1	1	0		value		true	false	false	false	false			
+10475	Battery 12 MOS			uint16be	1	1	0		value		true	false	false	false	false			
+10476	Battery 12 Alarm			uint32sw	2	1	0		value		true	false	false	false	false			
+10478	Battery 12 Fault			uint32sw	2	1	0		value		true	false	false	false	false			
+10480	Battery 12 Software Version			rawhex	1	1	0		state		true	false	false	false	false			
+10481	Battery 12 Hardware Version			rawhex	1	1	0		state		true	false	false	false	false			
+10488	Battery 13 Serial Number			stringle	8	1	0		state		true	false	false	false	false			
+10496	Battery 13 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+10497	Battery 13 Current		A	int16be	1	0,1	0		value		true	false	false	false	false			
+10498	Battery 13 Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10499	Battery 13 Max Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10500	Battery 13 Min Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10501	Battery 13 MOS Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10503	Battery 13		%	uint16be	1	0,1	0		value.battery		true	false	false	false	true	keepLastValid	0	101
+10504	Battery 13 SOH		%	uint16be	1	0,1	0		value		true	false	false	false	false			
+10506	Battery 13 Capacity		Ah	uint16be	1	0,1	0		value		true	false	false	false	false			
+10510	Battery 13 Max Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10511	Battery 13 Min Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10512	Battery 13 Cycles			uint16be	1	1	0		value		true	false	false	false	false			
+10513	Battery 13 MOS			uint16be	1	1	0		value		true	false	false	false	false			
+10514	Battery 13 Alarm			uint32sw	2	1	0		value		true	false	false	false	false			
+10516	Battery 13 Fault			uint32sw	2	1	0		value		true	false	false	false	false			
+10518	Battery 13 Software Version			rawhex	1	1	0		state		true	false	false	false	false			
+10519	Battery 13 Hardware Version			rawhex	1	1	0		state		true	false	false	false	false			
+10526	Battery 14 Serial Number			stringle	8	1	0		state		true	false	false	false	false			
+10534	Battery 14 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+10535	Battery 14 Current		A	int16be	1	0,1	0		value		true	false	false	false	false			
+10536	Battery 14 Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10537	Battery 14 Max Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10538	Battery 14 Min Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10539	Battery 14 MOS Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10541	Battery 14		%	uint16be	1	0,1	0		value.battery		true	false	false	false	true	keepLastValid	0	101
+10542	Battery 14 SOH		%	uint16be	1	0,1	0		value		true	false	false	false	false			
+10544	Battery 14 Capacity		Ah	uint16be	1	0,1	0		value		true	false	false	false	false			
+10548	Battery 14 Max Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10549	Battery 14 Min Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10550	Battery 14 Cycles			uint16be	1	1	0		value		true	false	false	false	false			
+10551	Battery 14 MOS			uint16be	1	1	0		value		true	false	false	false	false			
+10552	Battery 14 Alarm			uint32sw	2	1	0		value		true	false	false	false	false			
+10554	Battery 14 Fault			uint32sw	2	1	0		value		true	false	false	false	false			
+10556	Battery 14 Software Version			rawhex	1	1	0		state		true	false	false	false	false			
+10557	Battery 14 Hardware Version			rawhex	1	1	0		state		true	false	false	false	false			
+10564	Battery 15 Serial Number			stringle	8	1	0		state		true	false	false	false	false			
+10572	Battery 15 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+10573	Battery 15 Current		A	int16be	1	0,1	0		value		true	false	false	false	false			
+10574	Battery 15 Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10575	Battery 15 Max Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10576	Battery 15 Min Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10577	Battery 15 MOS Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10579	Battery 15		%	uint16be	1	0,1	0		value.battery		true	false	false	false	true	keepLastValid	0	101
+10580	Battery 15 SOH		%	uint16be	1	0,1	0		value		true	false	false	false	false			
+10582	Battery 15 Capacity		Ah	uint16be	1	0,1	0		value		true	false	false	false	false			
+10586	Battery 15 Max Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10587	Battery 15 Min Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10588	Battery 15 Cycles			uint16be	1	1	0		value		true	false	false	false	false			
+10589	Battery 15 MOS			uint16be	1	1	0		value		true	false	false	false	false			
+10590	Battery 15 Alarm			uint32sw	2	1	0		value		true	false	false	false	false			
+10592	Battery 15 Fault			uint32sw	2	1	0		value		true	false	false	false	false			
+10594	Battery 15 Software Version			rawhex	1	1	0		state		true	false	false	false	false			
+10595	Battery 15 Hardware Version			rawhex	1	1	0		state		true	false	false	false	false			
+10602	Battery 16 Serial Number			stringle	8	1	0		state		true	false	false	false	false			
+10610	Battery 16 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+10611	Battery 16 Current		A	int16be	1	0,1	0		value		true	false	false	false	false			
+10612	Battery 16 Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10613	Battery 16 Max Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10614	Battery 16 Min Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10615	Battery 16 MOS Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10617	Battery 16		%	uint16be	1	0,1	0		value.battery		true	false	false	false	true	keepLastValid	0	101
+10618	Battery 16 SOH		%	uint16be	1	0,1	0		value		true	false	false	false	false			
+10620	Battery 16 Capacity		Ah	uint16be	1	0,1	0		value		true	false	false	false	false			
+10624	Battery 16 Max Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10625	Battery 16 Min Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10626	Battery 16 Cycles			uint16be	1	1	0		value		true	false	false	false	false			
+10627	Battery 16 MOS			uint16be	1	1	0		value		true	false	false	false	false			
+10628	Battery 16 Alarm			uint32sw	2	1	0		value		true	false	false	false	false			
+10630	Battery 16 Fault			uint32sw	2	1	0		value		true	false	false	false	false			
+10632	Battery 16 Software Version			rawhex	1	1	0		state		true	false	false	false	false			
+10633	Battery 16 Hardware Version			rawhex	1	1	0		state		true	false	false	false	false			
+10640	Battery 17 Serial Number			stringle	8	1	0		state		true	false	false	false	false			
+10648	Battery 17 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+10649	Battery 17 Current		A	int16be	1	0,1	0		value		true	false	false	false	false			
+10650	Battery 17 Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10651	Battery 17 Max Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10652	Battery 17 Min Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10653	Battery 17 MOS Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10655	Battery 17		%	uint16be	1	0,1	0		value.battery		true	false	false	false	true	keepLastValid	0	101
+10656	Battery 17 SOH		%	uint16be	1	0,1	0		value		true	false	false	false	false			
+10658	Battery 17 Capacity		Ah	uint16be	1	0,1	0		value		true	false	false	false	false			
+10662	Battery 17 Max Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10663	Battery 17 Min Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10664	Battery 17 Cycles			uint16be	1	1	0		value		true	false	false	false	false			
+10665	Battery 17 MOS			uint16be	1	1	0		value		true	false	false	false	false			
+10666	Battery 17 Alarm			uint32sw	2	1	0		value		true	false	false	false	false			
+10668	Battery 17 Fault			uint32sw	2	1	0		value		true	false	false	false	false			
+10670	Battery 17 Software Version			rawhex	1	1	0		state		true	false	false	false	false			
+10671	Battery 17 Hardware Version			rawhex	1	1	0		state		true	false	false	false	false			
+10678	Battery 18 Serial Number			stringle	8	1	0		state		true	false	false	false	false			
+10686	Battery 18 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+10687	Battery 18 Current		A	int16be	1	0,1	0		value		true	false	false	false	false			
+10688	Battery 18 Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10689	Battery 18 Max Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10690	Battery 18 Min Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10691	Battery 18 MOS Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10693	Battery 18		%	uint16be	1	0,1	0		value.battery		true	false	false	false	true	keepLastValid	0	101
+10694	Battery 18 SOH		%	uint16be	1	0,1	0		value		true	false	false	false	false			
+10696	Battery 18 Capacity		Ah	uint16be	1	0,1	0		value		true	false	false	false	false			
+10700	Battery 18 Max Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10701	Battery 18 Min Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10702	Battery 18 Cycles			uint16be	1	1	0		value		true	false	false	false	false			
+10703	Battery 18 MOS			uint16be	1	1	0		value		true	false	false	false	false			
+10704	Battery 18 Alarm			uint32sw	2	1	0		value		true	false	false	false	false			
+10706	Battery 18 Fault			uint32sw	2	1	0		value		true	false	false	false	false			
+10708	Battery 18 Software Version			rawhex	1	1	0		state		true	false	false	false	false			
+10709	Battery 18 Hardware Version			rawhex	1	1	0		state		true	false	false	false	false			
+10716	Battery 19 Serial Number			stringle	8	1	0		state		true	false	false	false	false			
+10724	Battery 19 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+10725	Battery 19 Current		A	int16be	1	0,1	0		value		true	false	false	false	false			
+10726	Battery 19 Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10727	Battery 19 Max Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10728	Battery 19 Min Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10729	Battery 19 MOS Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10731	Battery 19		%	uint16be	1	0,1	0		value.battery		true	false	false	false	true	keepLastValid	0	101
+10732	Battery 19 SOH		%	uint16be	1	0,1	0		value		true	false	false	false	false			
+10734	Battery 19 Capacity		Ah	uint16be	1	0,1	0		value		true	false	false	false	false			
+10738	Battery 19 Max Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10739	Battery 19 Min Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10740	Battery 19 Cycles			uint16be	1	1	0		value		true	false	false	false	false			
+10741	Battery 19 MOS			uint16be	1	1	0		value		true	false	false	false	false			
+10742	Battery 19 Alarm			uint32sw	2	1	0		value		true	false	false	false	false			
+10744	Battery 19 Fault			uint32sw	2	1	0		value		true	false	false	false	false			
+10746	Battery 19 Software Version			rawhex	1	1	0		state		true	false	false	false	false			
+10747	Battery 19 Hardware Version			rawhex	1	1	0		state		true	false	false	false	false			
+10754	Battery 20 Serial Number			stringle	8	1	0		state		true	false	false	false	false			
+10762	Battery 20 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+10763	Battery 20 Current		A	int16be	1	0,1	0		value		true	false	false	false	false			
+10764	Battery 20 Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10765	Battery 20 Max Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10766	Battery 20 Min Cell Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10767	Battery 20 MOS Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
+10769	Battery 20		%	uint16be	1	0,1	0		value.battery		true	false	false	false	false			
+10770	Battery 20 SOH		%	uint16be	1	0,1	0		value		true	false	false	false	false			
+10772	Battery 20 Capacity		Ah	uint16be	1	0,1	0		value		true	false	false	false	false			
+10776	Battery 20 Max Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10777	Battery 20 Min Cell Voltage		V	uint16be	1	0,001	0		value		true	false	false	false	false			
+10778	Battery 20 Cycles			uint16be	1	1	0		value		true	false	false	false	false			
+10779	Battery 20 MOS			uint16be	1	1	0		value		true	false	false	false	false			
+10780	Battery 20 Alarm			uint32sw	2	1	0		value		true	false	false	false	false			
+10782	Battery 20 Fault			uint32sw	2	1	0		value		true	false	false	false	false			
+10784	Battery 20 Software Version			rawhex	1	1	0		state		true	false	false	false	false			
+10785	Battery 20 Hardware Version			rawhex	1	1	0		state		true	false	false	false	false			
