@@ -1,0 +1,7 @@
+{
+    "files": {
+        "holding-registers.tsv": {
+            "addressing": "alias"
+        }
+    }
+}

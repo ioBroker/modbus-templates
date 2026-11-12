@@ -1,0 +1,13 @@
+{
+    "files": {
+        "holding-registers_blueplanet_nx3_m2-multidevice.tsv": {
+            "addressing": "raw"
+        },
+        "holding-registers_blueplanet_nx3_m2.tsv": {
+            "addressing": "raw"
+        },
+        "holding-registers_blueplanet_tl3.tsv": {
+            "addressing": "raw"
+        }
+    }
+}

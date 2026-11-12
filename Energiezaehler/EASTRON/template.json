@@ -1,0 +1,10 @@
+{
+    "files": {
+        "Eastron SDM72dm-v2/Sdm72dm-v2.tsv": {
+            "addressing": "alias"
+        },
+        "input-registers_sdm630Modbus.tsv": {
+            "addressing": "alias"
+        }
+    }
+}

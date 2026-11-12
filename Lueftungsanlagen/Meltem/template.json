@@ -1,0 +1,16 @@
+{
+    "files": {
+        "meltem_default_F.tsv": {
+            "addressing": "raw"
+        },
+        "meltem_default_FC.tsv": {
+            "addressing": "raw"
+        },
+        "meltem_default.tsv": {
+            "addressing": "raw"
+        },
+        "meltem_optional_config.tsv": {
+            "addressing": "raw"
+        }
+    }
+}

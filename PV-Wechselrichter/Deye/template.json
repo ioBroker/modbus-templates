@@ -1,0 +1,13 @@
+{
+    "files": {
+        "holding-registers-extended.tsv": {
+            "addressing": "alias"
+        },
+        "holding-registers.tsv": {
+            "addressing": "alias"
+        },
+        "SG01HP03-holding-registers.tsv": {
+            "addressing": "alias"
+        }
+    }
+}
