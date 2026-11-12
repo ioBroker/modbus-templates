@@ -63,7 +63,8 @@
           "path": "Energiezaehler/Carlo Gavazzi EM24/holding-registers.tsv",
           "title": "holding-registers",
           "registerType": "holdingRegs",
-          "registers": 52
+          "registers": 52,
+          "addressing": "alias"
         }
       ]
     },
@@ -94,6 +95,7 @@
           "title": "Eastron SDM72dm-v2/Sdm72dm-v2",
           "registerType": "inputRegs",
           "registers": 41,
+          "addressing": "alias",
           "deviceIds": [
             2
           ],
@@ -104,6 +106,7 @@
           "title": "input-registers_sdm630Modbus",
           "registerType": "inputRegs",
           "registers": 85,
+          "addressing": "alias",
           "deviceIds": [
             1
           ]
@@ -121,6 +124,7 @@
           "title": "input-registers",
           "registerType": "inputRegs",
           "registers": 85,
+          "addressing": "alias",
           "deviceIds": [
             1
           ],
@@ -138,6 +142,7 @@
           "title": "input-registers",
           "registerType": "inputRegs",
           "registers": 93,
+          "addressing": "alias",
           "deviceIds": [
             33
           ],
@@ -365,7 +370,8 @@
           "path": "Heizungsanlagen/Lambda-WP/holding-registers.tsv",
           "title": "holding-registers",
           "registerType": "holdingRegs",
-          "registers": 79
+          "registers": 79,
+          "addressing": "alias"
         }
       ]
     },
@@ -433,6 +439,7 @@
           "title": "Aldes Inspir Air Home SC370/Aldes",
           "registerType": "holdingRegs",
           "registers": 38,
+          "addressing": "alias",
           "warnings": 2
         }
       ]
@@ -448,6 +455,7 @@
           "title": "meltem_default_F",
           "registerType": "holdingRegs",
           "registers": 21,
+          "addressing": "raw",
           "deviceIds": [
             2
           ],
@@ -458,6 +466,7 @@
           "title": "meltem_default_FC",
           "registerType": "holdingRegs",
           "registers": 23,
+          "addressing": "raw",
           "deviceIds": [
             2
           ],
@@ -468,6 +477,7 @@
           "title": "meltem_default",
           "registerType": "holdingRegs",
           "registers": 19,
+          "addressing": "raw",
           "deviceIds": [
             2
           ],
@@ -478,6 +488,7 @@
           "title": "meltem_optional_config",
           "registerType": "holdingRegs",
           "registers": 11,
+          "addressing": "raw",
           "deviceIds": [
             2
           ],
@@ -488,26 +499,22 @@
     {
       "id": "Lueftungsanlagen/Proxon",
       "category": "Lueftungsanlagen",
-      "name": "Proxon",
+      "name": "Proxon FWT",
+      "manufacturer": "Zimmermann",
       "files": [
+        {
+          "path": "Lueftungsanlagen/Proxon/holding-register.tsv",
+          "title": "holding-register",
+          "registerType": "holdingRegs",
+          "registers": 8,
+          "addressing": "alias"
+        },
         {
           "path": "Lueftungsanlagen/Proxon/input-register.tsv",
           "title": "input-register",
           "registerType": "inputRegs",
-          "registers": 18
-        }
-      ]
-    },
-    {
-      "id": "Lueftungsanlagen/proxon",
-      "category": "Lueftungsanlagen",
-      "name": "proxon",
-      "files": [
-        {
-          "path": "Lueftungsanlagen/proxon/holding-register.tsv",
-          "title": "holding-register",
-          "registerType": "holdingRegs",
-          "registers": 8
+          "registers": 18,
+          "addressing": "alias"
         }
       ]
     },
@@ -521,13 +528,15 @@
           "path": "Lueftungsanlagen/Swentibold EuroAir250/holding-registers.tsv",
           "title": "holding-registers",
           "registerType": "holdingRegs",
-          "registers": 48
+          "registers": 48,
+          "addressing": "alias"
         },
         {
           "path": "Lueftungsanlagen/Swentibold EuroAir250/input-registers.tsv",
           "title": "input-registers",
           "registerType": "inputRegs",
           "registers": 12,
+          "addressing": "alias",
           "warnings": 8
         }
       ]
@@ -559,6 +568,7 @@
           "title": "holding-registers-extended",
           "registerType": "holdingRegs",
           "registers": 141,
+          "addressing": "alias",
           "warnings": 45
         },
         {
@@ -577,6 +587,7 @@
           "title": "holding-registers",
           "registerType": "holdingRegs",
           "registers": 120,
+          "addressing": "alias",
           "warnings": 47
         },
         {
@@ -584,6 +595,7 @@
           "title": "SG01HP03-holding-registers",
           "registerType": "holdingRegs",
           "registers": 161,
+          "addressing": "alias",
           "warnings": 3
         }
       ]
@@ -598,6 +610,7 @@
           "title": "Gen24 register",
           "registerType": "holdingRegs",
           "registers": 52,
+          "addressing": "raw",
           "deviceIds": [
             1,
             200
@@ -978,6 +991,7 @@
           "title": "holding-registers",
           "registerType": "holdingRegs",
           "registers": 26,
+          "addressing": "alias",
           "warnings": 4
         },
         {
@@ -985,6 +999,7 @@
           "title": "input-registers",
           "registerType": "inputRegs",
           "registers": 40,
+          "addressing": "alias",
           "warnings": 1
         }
       ]
@@ -1000,6 +1015,7 @@
           "title": "holding-registers_blueplanet_nx3_m2-multidevice",
           "registerType": "holdingRegs",
           "registers": 48,
+          "addressing": "raw",
           "deviceIds": [
             3
           ],
@@ -1010,6 +1026,7 @@
           "title": "holding-registers_blueplanet_nx3_m2",
           "registerType": "holdingRegs",
           "registers": 48,
+          "addressing": "raw",
           "warnings": 15
         },
         {
@@ -1017,6 +1034,7 @@
           "title": "holding-registers_blueplanet_tl3",
           "registerType": "holdingRegs",
           "registers": 26,
+          "addressing": "raw",
           "warnings": 15
         }
       ]
@@ -1186,7 +1204,8 @@
           "path": "PV-Wechselrichter/Solplanet Aiswei/input-registers.tsv",
           "title": "input-registers",
           "registerType": "inputRegs",
-          "registers": 12
+          "registers": 12,
+          "addressing": "alias"
         }
       ]
     },
