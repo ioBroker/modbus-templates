@@ -58,6 +58,27 @@
       "category": "Energiezaehler",
       "name": "Carlo Gavazzi EM24",
       "readme": "Energiezaehler/Carlo Gavazzi EM24/README.md",
+      "detect": {
+        "probes": [
+          {
+            "registerType": "holdingRegs",
+            "address": 11,
+            "type": "uint16",
+            "oneOf": [
+              71,
+              72,
+              73,
+              1648,
+              1649,
+              1650,
+              1651,
+              1652,
+              1653
+            ]
+          }
+        ],
+        "note": "Carlo Gavazzi identification code at 000Bh: 71-73 EM24-DIN, 1648-1653 EM24 Ethernet"
+      },
       "files": [
         {
           "path": "Energiezaehler/Carlo Gavazzi EM24/holding-registers.tsv",
@@ -136,6 +157,17 @@
       "id": "Energiezaehler/Finder Typ 7M",
       "category": "Energiezaehler",
       "name": "Finder Typ 7M",
+      "detect": {
+        "probes": [
+          {
+            "registerType": "inputRegs",
+            "address": 9000,
+            "type": "uint16",
+            "equals": 5
+          }
+        ],
+        "note": "Register 39000 'Device group' = 5 (7M)"
+      },
       "files": [
         {
           "path": "Energiezaehler/Finder Typ 7M/input-registers.tsv",
@@ -382,6 +414,21 @@
       "manufacturer": "Stiebel Eltron",
       "description": "Wärmepumpen über das Internet Service Gateway (ISG web / ISG plus), Modbus TCP",
       "readme": "Heizungsanlagen/StiebelEltron-ISG/README.md",
+      "detect": {
+        "probes": [
+          {
+            "registerType": "inputRegs",
+            "address": 5001,
+            "type": "uint16",
+            "oneOf": [
+              390,
+              391,
+              449
+            ]
+          }
+        ],
+        "note": "Reglerkennung (35002): 390 WPM 3, 391 WPM 3i, 449 WPMsystem"
+      },
       "files": [
         {
           "path": "Heizungsanlagen/StiebelEltron-ISG/holding-registers.tsv",
@@ -586,6 +633,23 @@
       "category": "PV-Wechselrichter",
       "name": "Deye",
       "readme": "PV-Wechselrichter/Deye/README.md",
+      "detect": {
+        "probes": [
+          {
+            "registerType": "holdingRegs",
+            "address": 0,
+            "type": "uint16",
+            "oneOf": [
+              768,
+              1280,
+              1536,
+              1537
+            ]
+          }
+        ],
+        "weak": true,
+        "note": "Register 0 device type: 0x0300 single phase hybrid, 0x0500 three phase LV hybrid, 0x0600/0x0601 three phase HV hybrid"
+      },
       "files": [
         {
           "path": "PV-Wechselrichter/Deye/holding-registers-extended.tsv",
@@ -628,6 +692,25 @@
       "id": "PV-Wechselrichter/Fronius",
       "category": "PV-Wechselrichter",
       "name": "Fronius",
+      "detect": {
+        "probes": [
+          {
+            "registerType": "holdingRegs",
+            "address": 40000,
+            "type": "string",
+            "len": 2,
+            "equals": "SunS"
+          },
+          {
+            "registerType": "holdingRegs",
+            "address": 40004,
+            "type": "string",
+            "len": 16,
+            "startsWith": "Fronius"
+          }
+        ],
+        "note": "SunSpec common model: 'SunS' at 40000, manufacturer at 40004"
+      },
       "files": [
         {
           "path": "PV-Wechselrichter/Fronius/Gen24 register.tsv",
@@ -1033,6 +1116,25 @@
       "category": "PV-Wechselrichter",
       "name": "KACO new energy",
       "readme": "PV-Wechselrichter/KACO new energy/README.md",
+      "detect": {
+        "probes": [
+          {
+            "registerType": "holdingRegs",
+            "address": 40000,
+            "type": "string",
+            "len": 2,
+            "equals": "SunS"
+          },
+          {
+            "registerType": "holdingRegs",
+            "address": 40004,
+            "type": "string",
+            "len": 16,
+            "startsWith": "KACO"
+          }
+        ],
+        "note": "SunSpec common model, manufacturer 'KACO new energy'"
+      },
       "files": [
         {
           "path": "PV-Wechselrichter/KACO new energy/holding-registers_blueplanet_nx3_m2-multidevice.tsv",
@@ -1159,6 +1261,25 @@
       "category": "PV-Wechselrichter",
       "name": "SolarEdge",
       "readme": "PV-Wechselrichter/SolarEdge/README.md",
+      "detect": {
+        "probes": [
+          {
+            "registerType": "holdingRegs",
+            "address": 40000,
+            "type": "string",
+            "len": 2,
+            "equals": "SunS"
+          },
+          {
+            "registerType": "holdingRegs",
+            "address": 40004,
+            "type": "string",
+            "len": 16,
+            "startsWith": "SolarEdge"
+          }
+        ],
+        "note": "SunSpec common model, C_Manufacturer 'SolarEdge'"
+      },
       "files": [
         {
           "path": "PV-Wechselrichter/SolarEdge/holding-registers-meter-battery.tsv",
