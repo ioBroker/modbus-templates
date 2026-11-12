@@ -652,6 +652,22 @@
       },
       "files": [
         {
+          "path": "PV-Wechselrichter/Deye/ha-solarman-SG01HP3.tsv",
+          "title": "SG01HP3 (HV), all registers from ha-solarman",
+          "registerType": "holdingRegs",
+          "registers": 587,
+          "addressing": "raw",
+          "warnings": 8
+        },
+        {
+          "path": "PV-Wechselrichter/Deye/ha-solarman-SG04LP3.tsv",
+          "title": "SG04LP3 (LV), all registers from ha-solarman",
+          "registerType": "holdingRegs",
+          "registers": 587,
+          "addressing": "raw",
+          "warnings": 8
+        },
+        {
           "path": "PV-Wechselrichter/Deye/holding-registers-extended.tsv",
           "title": "holding-registers-extended",
           "registerType": "holdingRegs",
@@ -1315,6 +1331,27 @@
           "registers": 49,
           "addressing": "raw",
           "warnings": 4
+        },
+        {
+          "path": "PV-Wechselrichter/SolarEdge/sunspec-inverter-1phase.tsv",
+          "title": "Inverter single phase (SunSpec 101), generated",
+          "registerType": "holdingRegs",
+          "registers": 54,
+          "addressing": "raw"
+        },
+        {
+          "path": "PV-Wechselrichter/SolarEdge/sunspec-inverter-3phase.tsv",
+          "title": "Inverter three phase (SunSpec 103), generated",
+          "registerType": "holdingRegs",
+          "registers": 54,
+          "addressing": "raw"
+        },
+        {
+          "path": "PV-Wechselrichter/SolarEdge/sunspec-meter1.tsv",
+          "title": "Meter 1 (SunSpec 203), generated",
+          "registerType": "holdingRegs",
+          "registers": 82,
+          "addressing": "raw"
         }
       ]
     },
