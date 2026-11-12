@@ -1263,6 +1263,13 @@
       "readme": "PV-Wechselrichter/Sofar Solar ZCS Azzurro HYD 5-20K/README.md",
       "files": [
         {
+          "path": "PV-Wechselrichter/Sofar Solar ZCS Azzurro HYD 5-20K/ha-solarman-g3hyd.tsv",
+          "title": "All registers from ha-solarman (sofar_g3hyd)",
+          "registerType": "holdingRegs",
+          "registers": 129,
+          "addressing": "raw"
+        },
+        {
           "path": "PV-Wechselrichter/Sofar Solar ZCS Azzurro HYD 5-20K/holding-registers.tsv",
           "title": "holding-registers",
           "registerType": "holdingRegs",
@@ -1373,6 +1380,41 @@
           "title": "input_registers",
           "registerType": "inputRegs",
           "registers": 25,
+          "addressing": "raw"
+        }
+      ]
+    },
+    {
+      "id": "PV-Wechselrichter/Solis",
+      "category": "PV-Wechselrichter",
+      "name": "Solis Hybrid (RHI)",
+      "manufacturer": "Solis",
+      "models": [
+        "RHI-1P3~6K-48ES-5G",
+        "RHI-3P5~10K-HVES-5G"
+      ],
+      "description": "Hybrid inverters, RS485 (Modbus RTU) or data logger with Modbus TCP",
+      "readme": "PV-Wechselrichter/Solis/README.md",
+      "files": [
+        {
+          "path": "PV-Wechselrichter/Solis/RHI-1P-ES-5G-holding-registers.tsv",
+          "title": "RHI-1P…-48ES-5G (single phase) holding registers",
+          "registerType": "holdingRegs",
+          "registers": 30,
+          "addressing": "raw"
+        },
+        {
+          "path": "PV-Wechselrichter/Solis/RHI-1P-ES-5G-input-registers.tsv",
+          "title": "RHI-1P…-48ES-5G (single phase) input registers",
+          "registerType": "inputRegs",
+          "registers": 57,
+          "addressing": "raw"
+        },
+        {
+          "path": "PV-Wechselrichter/Solis/RHI-3P-HVES-5G-input-registers.tsv",
+          "title": "RHI-3P…-HVES-5G (three phase) input registers",
+          "registerType": "inputRegs",
+          "registers": 60,
           "addressing": "raw"
         }
       ]
