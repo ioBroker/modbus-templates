@@ -1,0 +1,18 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale	sanitize	sanitizeAction	minValidValue	maxValidValue
+41501	Betriebsart	Betriebsart		uint16be	1	1	0		value		true	true	false	false				
+41502	Komfort-Temperatur-HK1	Komfort-Temperatur - Heizkreis 1	°C	int16be	1	0.1	0		level.temperature		true	true	false	false				
+41503	ECO-Temperatur-HK1	ECO-Temperatur - Heizkreis 1	°C	int16be	1	0.1	0		level.temperature		true	true	false	false				
+41504	Steigung-Heizkurve-HK1	Steigung Heizkurve - Heizkreis 1		int16be	1	0.01	0		level		true	true	false	false				
+41508	Festwertbetrieb	Festwertbetrieb (-2867,2 = AUS, 20-70 °C = aktiv)	°C	int16be	1	0.1	0		level.temperature		true	true	false	false				
+41509	Bivalenztemp-HZG	Bivalenztemperatur Heizung	°C	int16be	1	0.1	0		level.temperature		true	true	false	false				
+41510	Komfort-Temperatur-WW	Komfort-Temperatur - Warmwasser	°C	int16be	1	0.1	0		level.temperature		true	true	false	false				
+41511	ECO-Temperatur-WW	ECO-Temperatur - Warmwasser 	°C	int16be	1	0.1	0		level.temperature		true	true	false	false				
+41513	Bivalenztemp-WW	Bivalenztemperatur Warmwasser	°C	int16be	1	0.1	0		level.temperature		true	true	false	false				
+41514	Vorlaufsolltemp-FK	Vorlaufsolltemperatur Flächenkühlung	°C	int16be	1	0.1	0		level.temperature		true	true	false	false				
+41515	Hysterese-Vorlautemp-FK	Hystere Vorlauftemperatur Flächenkühlen	K	int16be	1	0.1	0		value.temperature		true	true	false	false				
+41516	Raumsolltemp-FK	Raumsolltemperatur Flächenkühlung	°C	int16be	1	0.1	0		level.temperature		true	true	false	false				
+41520	Reset	ACHTUNG 1 = WERKSRESET! 2 = Fehlerliste, 3 = Wärmepumpe		uint16be	1	1	0		value		false	true	false	false				
+41521	Restart-ISG	ISG Neustart		uint16be	1	1	0		button		false	true	false	false				
+44001	SG_Ready_Status	SG Ready ein-/ausschalten		uint16be	1	1	0		switch		true	true	false	false				
+44002	SG_Ready_Eingang1	SG Ready - Eingang 1		uint16be	1	1	0		switch		true	true	false	false				
+44003	SG_Ready_Eingang2	SG Ready - Eingang 2		uint16be	1	1	0		switch		true	true	false	false				
