@@ -77,6 +77,32 @@ If it is missing for such a file, the adapter asks the user.
 }
 ```
 
+### Optional: device detection
+
+With a `detect` block in `template.json` the adapter can recognize the device ("Detect device" in the template
+dialog). The adapter reads the probes from the connected device and offers the template if **all** probes match.
+
+```json
+{
+    "detect": {
+        "probes": [
+            { "registerType": "holdingRegs", "address": 40000, "type": "string", "len": 2, "equals": "SunS" },
+            { "registerType": "holdingRegs", "address": 40004, "type": "string", "len": 16, "startsWith": "Fronius" }
+        ],
+        "note": "SunSpec common model"
+    }
+}
+```
+
+* `registerType`: `holdingRegs` (function code 3) or `inputRegs` (function code 4). Only read requests are sent.
+* `address`: always the **raw** address (as on the wire, without alias offset), independent of `addressing`.
+* `type`: `string` (2 characters per register, `len` = number of registers, trailing `\0` and spaces are removed),
+  `uint16`, `int16`, `uint32`, `int32` (big endian, high word first).
+* exactly one of `equals`, `startsWith` (strings only), `oneOf` (list) or `range` (`[min, max]`).
+* at most 5 probes. Use registers that identify the device: a type code, a model string, a SunSpec header.
+* `"weak": true` if the probes could also match other devices. The adapter then shows the device as "possible".
+* `note`: where the values come from (data sheet), for reviewers.
+
 ### Check your files before the pull request
 Every pull request is validated automatically. You can do the same locally with Node.js 18 or newer:
 

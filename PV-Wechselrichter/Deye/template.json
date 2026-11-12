@@ -9,5 +9,22 @@
         "SG01HP03-holding-registers.tsv": {
             "addressing": "alias"
         }
+    },
+    "detect": {
+        "probes": [
+            {
+                "registerType": "holdingRegs",
+                "address": 0,
+                "type": "uint16",
+                "oneOf": [
+                    768,
+                    1280,
+                    1536,
+                    1537
+                ]
+            }
+        ],
+        "weak": true,
+        "note": "Register 0 device type: 0x0300 single phase hybrid, 0x0500 three phase LV hybrid, 0x0600/0x0601 three phase HV hybrid"
     }
 }

@@ -3,5 +3,16 @@
         "input-registers.tsv": {
             "addressing": "alias"
         }
+    },
+    "detect": {
+        "probes": [
+            {
+                "registerType": "inputRegs",
+                "address": 9000,
+                "type": "uint16",
+                "equals": 5
+            }
+        ],
+        "note": "Register 39000 'Device group' = 5 (7M)"
     }
 }

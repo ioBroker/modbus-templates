@@ -3,5 +3,24 @@
         "Gen24 register.tsv": {
             "addressing": "raw"
         }
+    },
+    "detect": {
+        "probes": [
+            {
+                "registerType": "holdingRegs",
+                "address": 40000,
+                "type": "string",
+                "len": 2,
+                "equals": "SunS"
+            },
+            {
+                "registerType": "holdingRegs",
+                "address": 40004,
+                "type": "string",
+                "len": 16,
+                "startsWith": "Fronius"
+            }
+        ],
+        "note": "SunSpec common model: 'SunS' at 40000, manufacturer at 40004"
     }
 }

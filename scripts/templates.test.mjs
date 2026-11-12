@@ -78,3 +78,29 @@ test('directAddresses is only kept for bit registers with alias addresses', () =
     const r4 = validateFile('A/B/coils.tsv', Buffer.from(coils), { addressing: 'alias', directAddresses: 'yes' });
     assert.equal(r4.kind, 'invalid');
 });
+
+test('detect block', async () => {
+    const { validateDetect } = await import('./templates.mjs');
+    const sunspec = {
+        probes: [
+            { registerType: 'holdingRegs', address: 40000, type: 'string', len: 2, equals: 'SunS' },
+            { registerType: 'holdingRegs', address: 40004, type: 'string', len: 16, startsWith: 'Fronius' },
+        ],
+    };
+    assert.deepEqual(validateDetect(sunspec), []);
+    assert.deepEqual(validateDetect({ probes: [{ registerType: 'inputRegs', address: 9000, type: 'uint16', equals: 5 }], weak: true }), []);
+    assert.deepEqual(validateDetect({ probes: [{ registerType: 'holdingRegs', address: 11, type: 'uint16', oneOf: [71, 72] }] }), []);
+    const bad = validateDetect({
+        probes: [
+            { registerType: 'coils', address: 70000, type: 'string', equals: 'x' },
+            { registerType: 'holdingRegs', address: 1, type: 'uint16', startsWith: 'x' },
+            { registerType: 'holdingRegs', address: 1, type: 'uint16', equals: 1, oneOf: [1] },
+        ],
+    }).join('\n');
+    assert.match(bad, /registerType/);
+    assert.match(bad, /raw address/);
+    assert.match(bad, /len \(registers\)/);
+    assert.match(bad, /startsWith is only for strings/);
+    assert.match(bad, /exactly one of/);
+    assert.match(validateDetect([]).join(), /must be an object/);
+});
