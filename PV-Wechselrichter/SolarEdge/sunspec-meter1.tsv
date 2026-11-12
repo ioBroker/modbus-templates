@@ -1,0 +1,83 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+40121	M1_C_ID	Model identifier		uint16be	1	1	0		value		true	false	false	false
+40122	M1_C_L	Model length		uint16be	1	1	0		value		true	false	false	false
+40123	M1_C_Mn	Manufacturer: Well known value registered with SunSpec for compliance		string	16	1	0		state		true	false	false	false
+40139	M1_C_Md	Model: Manufacturer specific value (32 chars)		string	16	1	0		state		true	false	false	false
+40155	M1_C_Opt	Options: Manufacturer specific value (16 chars)		string	8	1	0		state		true	false	false	false
+40163	M1_C_Vr	Version: Manufacturer specific value (16 chars)		string	8	1	0		state		true	false	false	false
+40171	M1_C_SN	Serial Number: Manufacturer specific value (32 chars)		string	16	1	0		state		true	false	false	false
+40187	M1_C_DA	Device Address: Modbus device address		uint16be	1	1	0		level		true	false	false	false
+40188	M1_ID	Model identifier		uint16be	1	1	0		value		true	false	false	false
+40189	M1_L	Model length		uint16be	1	1	0		value		true	false	false	false
+40190	M1_A	Amps: Total AC Current	A	int16be	1	1	0	x * Math.pow(10, sf['40194'])	value		true	false	false	false
+40191	M1_AphA	Amps PhaseA: Phase A Current	A	int16be	1	1	0	x * Math.pow(10, sf['40194'])	value		true	false	false	false
+40192	M1_AphB	Amps PhaseB: Phase B Current	A	int16be	1	1	0	x * Math.pow(10, sf['40194'])	value		true	false	false	false
+40193	M1_AphC	Amps PhaseC: Phase C Current	A	int16be	1	1	0	x * Math.pow(10, sf['40194'])	value		true	false	false	false
+40194	M1_A_SF	Current scale factor		int16be	1	1	0		value		true	false	false	true
+40195	M1_PhV	Voltage LN: Line to Neutral AC Voltage (average of active phases)	V	int16be	1	1	0	x * Math.pow(10, sf['40203'])	value		true	false	false	false
+40196	M1_PhVphA	Phase Voltage AN	V	int16be	1	1	0	x * Math.pow(10, sf['40203'])	value		true	false	false	false
+40197	M1_PhVphB	Phase Voltage BN	V	int16be	1	1	0	x * Math.pow(10, sf['40203'])	value		true	false	false	false
+40198	M1_PhVphC	Phase Voltage CN	V	int16be	1	1	0	x * Math.pow(10, sf['40203'])	value		true	false	false	false
+40199	M1_PPV	Voltage LL: Line to Line AC Voltage (average of active phases)	V	int16be	1	1	0	x * Math.pow(10, sf['40203'])	value		true	false	false	false
+40200	M1_PhVphAB	Phase Voltage AB	V	int16be	1	1	0	x * Math.pow(10, sf['40203'])	value		true	false	false	false
+40201	M1_PhVphBC	Phase Voltage BC	V	int16be	1	1	0	x * Math.pow(10, sf['40203'])	value		true	false	false	false
+40202	M1_PhVphCA	Phase Voltage CA	V	int16be	1	1	0	x * Math.pow(10, sf['40203'])	value		true	false	false	false
+40203	M1_V_SF	Voltage scale factor		int16be	1	1	0		value		true	false	false	true
+40204	M1_Hz	Hz: Frequency	Hz	int16be	1	1	0	x * Math.pow(10, sf['40205'])	value		true	false	false	false
+40205	M1_Hz_SF	Frequency scale factor		int16be	1	1	0		value		true	false	false	true
+40206	M1_W	Watts: Total Real Power	W	int16be	1	1	0	x * Math.pow(10, sf['40210'])	value		true	false	false	false
+40207	M1_WphA	Watts phase A	W	int16be	1	1	0	x * Math.pow(10, sf['40210'])	value		true	false	false	false
+40208	M1_WphB	Watts phase B	W	int16be	1	1	0	x * Math.pow(10, sf['40210'])	value		true	false	false	false
+40209	M1_WphC	Watts phase C	W	int16be	1	1	0	x * Math.pow(10, sf['40210'])	value		true	false	false	false
+40210	M1_W_SF	Real Power scale factor		int16be	1	1	0		value		true	false	false	true
+40211	M1_VA	VA: AC Apparent Power	VA	int16be	1	1	0	x * Math.pow(10, sf['40215'])	value		true	false	false	false
+40212	M1_VAphA	VA phase A	VA	int16be	1	1	0	x * Math.pow(10, sf['40215'])	value		true	false	false	false
+40213	M1_VAphB	VA phase B	VA	int16be	1	1	0	x * Math.pow(10, sf['40215'])	value		true	false	false	false
+40214	M1_VAphC	VA phase C	VA	int16be	1	1	0	x * Math.pow(10, sf['40215'])	value		true	false	false	false
+40215	M1_VA_SF	Apparent Power scale factor		int16be	1	1	0		value		true	false	false	true
+40216	M1_VAR	VAR: Reactive Power	var	int16be	1	1	0	x * Math.pow(10, sf['40220'])	value		true	false	false	false
+40217	M1_VARphA	VAR phase A	var	int16be	1	1	0	x * Math.pow(10, sf['40220'])	value		true	false	false	false
+40218	M1_VARphB	VAR phase B	var	int16be	1	1	0	x * Math.pow(10, sf['40220'])	value		true	false	false	false
+40219	M1_VARphC	VAR phase C	var	int16be	1	1	0	x * Math.pow(10, sf['40220'])	value		true	false	false	false
+40220	M1_VAR_SF	Reactive Power scale factor		int16be	1	1	0		value		true	false	false	true
+40221	M1_PF	PF: Power Factor	Pct	int16be	1	1	0	x * Math.pow(10, sf['40225'])	value		true	false	false	false
+40222	M1_PFphA	PF phase A	Pct	int16be	1	1	0	x * Math.pow(10, sf['40225'])	value		true	false	false	false
+40223	M1_PFphB	PF phase B	Pct	int16be	1	1	0	x * Math.pow(10, sf['40225'])	value		true	false	false	false
+40224	M1_PFphC	PF phase C	Pct	int16be	1	1	0	x * Math.pow(10, sf['40225'])	value		true	false	false	false
+40225	M1_PF_SF	Power Factor scale factor		int16be	1	1	0		value		true	false	false	true
+40226	M1_TotWhExp	Total Watt-hours Exported: Total Real Energy Exported	Wh	uint32be	2	1	0	x * Math.pow(10, sf['40242'])	value		true	false	false	false
+40228	M1_TotWhExpPhA	Total Watt-hours Exported phase A	Wh	uint32be	2	1	0	x * Math.pow(10, sf['40242'])	value		true	false	false	false
+40230	M1_TotWhExpPhB	Total Watt-hours Exported phase B	Wh	uint32be	2	1	0	x * Math.pow(10, sf['40242'])	value		true	false	false	false
+40232	M1_TotWhExpPhC	Total Watt-hours Exported phase C	Wh	uint32be	2	1	0	x * Math.pow(10, sf['40242'])	value		true	false	false	false
+40234	M1_TotWhImp	Total Watt-hours Imported: Total Real Energy Imported	Wh	uint32be	2	1	0	x * Math.pow(10, sf['40242'])	value		true	false	false	false
+40236	M1_TotWhImpPhA	Total Watt-hours Imported phase A	Wh	uint32be	2	1	0	x * Math.pow(10, sf['40242'])	value		true	false	false	false
+40238	M1_TotWhImpPhB	Total Watt-hours Imported phase B	Wh	uint32be	2	1	0	x * Math.pow(10, sf['40242'])	value		true	false	false	false
+40240	M1_TotWhImpPhC	Total Watt-hours Imported phase C	Wh	uint32be	2	1	0	x * Math.pow(10, sf['40242'])	value		true	false	false	false
+40242	M1_TotWh_SF	Real Energy scale factor		int16be	1	1	0		value		true	false	false	true
+40243	M1_TotVAhExp	Total VA-hours Exported: Total Apparent Energy Exported	VAh	uint32be	2	1	0	x * Math.pow(10, sf['40259'])	value		true	false	false	false
+40245	M1_TotVAhExpPhA	Total VA-hours Exported phase A	VAh	uint32be	2	1	0	x * Math.pow(10, sf['40259'])	value		true	false	false	false
+40247	M1_TotVAhExpPhB	Total VA-hours Exported phase B	VAh	uint32be	2	1	0	x * Math.pow(10, sf['40259'])	value		true	false	false	false
+40249	M1_TotVAhExpPhC	Total VA-hours Exported phase C	VAh	uint32be	2	1	0	x * Math.pow(10, sf['40259'])	value		true	false	false	false
+40251	M1_TotVAhImp	Total VA-hours Imported: Total Apparent Energy Imported	VAh	uint32be	2	1	0	x * Math.pow(10, sf['40259'])	value		true	false	false	false
+40253	M1_TotVAhImpPhA	Total VA-hours Imported phase A	VAh	uint32be	2	1	0	x * Math.pow(10, sf['40259'])	value		true	false	false	false
+40255	M1_TotVAhImpPhB	Total VA-hours Imported phase B	VAh	uint32be	2	1	0	x * Math.pow(10, sf['40259'])	value		true	false	false	false
+40257	M1_TotVAhImpPhC	Total VA-hours Imported phase C	VAh	uint32be	2	1	0	x * Math.pow(10, sf['40259'])	value		true	false	false	false
+40259	M1_TotVAh_SF	Apparent Energy scale factor		int16be	1	1	0		value		true	false	false	true
+40260	M1_TotVArhImpQ1	Total VAR-hours Imported Q1: Total Reactive Energy Imported Quadrant 1	varh	uint32be	2	1	0	x * Math.pow(10, sf['40292'])	value		true	false	false	false
+40262	M1_TotVArhImpQ1PhA	Total VAr-hours Imported Q1 phase A	varh	uint32be	2	1	0	x * Math.pow(10, sf['40292'])	value		true	false	false	false
+40264	M1_TotVArhImpQ1PhB	Total VAr-hours Imported Q1 phase B	varh	uint32be	2	1	0	x * Math.pow(10, sf['40292'])	value		true	false	false	false
+40266	M1_TotVArhImpQ1PhC	Total VAr-hours Imported Q1 phase C	varh	uint32be	2	1	0	x * Math.pow(10, sf['40292'])	value		true	false	false	false
+40268	M1_TotVArhImpQ2	Total VAr-hours Imported Q2: Total Reactive Power Imported Quadrant 2	varh	uint32be	2	1	0	x * Math.pow(10, sf['40292'])	value		true	false	false	false
+40270	M1_TotVArhImpQ2PhA	Total VAr-hours Imported Q2 phase A	varh	uint32be	2	1	0	x * Math.pow(10, sf['40292'])	value		true	false	false	false
+40272	M1_TotVArhImpQ2PhB	Total VAr-hours Imported Q2 phase B	varh	uint32be	2	1	0	x * Math.pow(10, sf['40292'])	value		true	false	false	false
+40274	M1_TotVArhImpQ2PhC	Total VAr-hours Imported Q2 phase C	varh	uint32be	2	1	0	x * Math.pow(10, sf['40292'])	value		true	false	false	false
+40276	M1_TotVArhExpQ3	Total VAr-hours Exported Q3: Total Reactive Power Exported Quadrant 3	varh	uint32be	2	1	0	x * Math.pow(10, sf['40292'])	value		true	false	false	false
+40278	M1_TotVArhExpQ3PhA	Total VAr-hours Exported Q3 phase A	varh	uint32be	2	1	0	x * Math.pow(10, sf['40292'])	value		true	false	false	false
+40280	M1_TotVArhExpQ3PhB	Total VAr-hours Exported Q3 phase B	varh	uint32be	2	1	0	x * Math.pow(10, sf['40292'])	value		true	false	false	false
+40282	M1_TotVArhExpQ3PhC	Total VAr-hours Exported Q3 phase C	varh	uint32be	2	1	0	x * Math.pow(10, sf['40292'])	value		true	false	false	false
+40284	M1_TotVArhExpQ4	Total VAr-hours Exported Q4: Total Reactive Power Exported Quadrant 4	varh	uint32be	2	1	0	x * Math.pow(10, sf['40292'])	value		true	false	false	false
+40286	M1_TotVArhExpQ4PhA	Total VAr-hours Exported Q4 Imported phase A	varh	uint32be	2	1	0	x * Math.pow(10, sf['40292'])	value		true	false	false	false
+40288	M1_TotVArhExpQ4PhB	Total VAr-hours Exported Q4 Imported phase B	varh	uint32be	2	1	0	x * Math.pow(10, sf['40292'])	value		true	false	false	false
+40290	M1_TotVArhExpQ4PhC	Total VAr-hours Exported Q4 Imported phase C	varh	uint32be	2	1	0	x * Math.pow(10, sf['40292'])	value		true	false	false	false
+40292	M1_TotVArh_SF	Reactive Energy scale factor		int16be	1	1	0		value		true	false	false	true
+40293	M1_Evt	Events: Meter Event Flags		uint32be	2	1	0		value		true	false	false	false

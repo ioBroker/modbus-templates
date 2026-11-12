@@ -70,7 +70,7 @@ test('validation of the generate block', () => {
         generatedFiles({ generate: [{ source: 'solarman', definition: 'x', files: { inputRegs: 'meter.tsv' } }] }).map(
             g => `${g.registerType}:${g.file}`,
         ),
-        ['holdingRegs:holding-registers.tsv', 'inputRegs:meter.tsv'],
+        ['inputRegs:meter.tsv'],
     );
 });
 
@@ -94,14 +94,14 @@ test('sunspec entry with skip', async () => {
 
 test('device: solarman files are validated, errors keep the old files', async () => {
     const manifest = {
-        generate: [{ source: 'solarman', definition: 'test', ref: 'v1', files: { inputRegs: 'meter-input.tsv' } }],
+        generate: [{ source: 'solarman', definition: 'test', ref: 'v1', files: { holdingRegs: 'inverter.tsv', inputRegs: 'meter-input.tsv' } }],
         files: {},
     };
     const ok = await generateDevice('Inverter/Test', manifest, loaders);
     assert.deepEqual(ok.errors, []);
     assert.deepEqual(
         ok.files.map(f => `${f.path} ${f.rows}`),
-        ['Inverter/Test/holding-registers.tsv 2', 'Inverter/Test/meter-input.tsv 1'],
+        ['Inverter/Test/inverter.tsv 2', 'Inverter/Test/meter-input.tsv 1'],
     );
     assert.match(ok.files[0].content, /^_address\tname/);
 

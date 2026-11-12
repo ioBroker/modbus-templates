@@ -149,6 +149,16 @@ function layout(item) {
             if (n === 4 && descending) {
                 return { address: start, type: signed ? 'int64be' : 'uint64be', len: 4 };
             }
+            // e.g. the power of the large Deye models: low word in one block, high word in another one.
+            // The adapter cannot combine them, the low word alone is right up to 32767 (signed) or 65535.
+            if (n === 2) {
+                return {
+                    address: regs[0],
+                    type: signed ? 'int16be' : 'uint16be',
+                    len: 1,
+                    note: `low word only, the high word for values above ${signed ? 32767 : 65535} is in register ${regs[1]} (${hex(regs[1])})`,
+                };
+            }
             return { error: `${n} registers in the order ${regs.map(hex).join(', ')} are not supported` };
         case 5:
             if (!ascending) {
@@ -188,6 +198,7 @@ export function convertDefinition(definition, options = {}) {
         code: readCode(r.code ?? r.mb_functioncode),
     }));
     const names = new Set();
+    const lowWordOnly = [];
     let skipped = 0;
 
     for (const group of definition.parameters || []) {
@@ -265,6 +276,10 @@ export function convertDefinition(definition, options = {}) {
             if (item.lookup) {
                 description = [description, describeLookup(item.lookup)].filter(Boolean).join(': ');
             }
+            if (result.note) {
+                description = [description, result.note].filter(Boolean).join(', ');
+                lowWordOnly.push(item.name);
+            }
             if (item.rule === 9) {
                 description = [description, 'time as HHMM'].filter(Boolean).join(', ');
             }
@@ -307,6 +322,11 @@ export function convertDefinition(definition, options = {}) {
 
     for (const rows of Object.values(files)) {
         rows.sort((a, b) => a._address - b._address);
+    }
+    if (lowWordOnly.length) {
+        warnings.push(
+            `${lowWordOnly.length} values have the high word in another register, only the low word is read: ${lowWordOnly.slice(0, 5).join(', ')}${lowWordOnly.length > 5 ? ', ...' : ''}`,
+        );
     }
     if (variantNames.length) {
         warnings.push(

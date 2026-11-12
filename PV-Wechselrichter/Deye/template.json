@@ -8,6 +8,12 @@
         },
         "SG01HP03-holding-registers.tsv": {
             "addressing": "alias"
+        },
+        "ha-solarman-SG04LP3.tsv": {
+            "title": "SG04LP3 (LV), all registers from ha-solarman"
+        },
+        "ha-solarman-SG01HP3.tsv": {
+            "title": "SG01HP3 (HV), all registers from ha-solarman"
         }
     },
     "detect": {
@@ -26,5 +32,23 @@
         ],
         "weak": true,
         "note": "Register 0 device type: 0x0300 single phase hybrid, 0x0500 three phase LV hybrid, 0x0600/0x0601 three phase HV hybrid"
-    }
+    },
+    "generate": [
+        {
+            "source": "solarman",
+            "definition": "deye_p3",
+            "mod": 0,
+            "files": {
+                "holdingRegs": "ha-solarman-SG04LP3.tsv"
+            }
+        },
+        {
+            "source": "solarman",
+            "definition": "deye_p3",
+            "mod": 1,
+            "files": {
+                "holdingRegs": "ha-solarman-SG01HP3.tsv"
+            }
+        }
+    ]
 }

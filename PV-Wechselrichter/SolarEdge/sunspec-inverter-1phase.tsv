@@ -1,0 +1,55 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+40000	SunSpec_ID	"SunSpec marker ""SunS"""		string	2	1	0		state		false	false	false	false
+40002	C_ID	Model identifier		uint16be	1	1	0		value		true	false	false	false
+40003	C_L	Model length		uint16be	1	1	0		value		true	false	false	false
+40004	C_Mn	Manufacturer: Well known value registered with SunSpec for compliance		string	16	1	0		state		true	false	false	false
+40020	C_Md	Model: Manufacturer specific value (32 chars)		string	16	1	0		state		true	false	false	false
+40036	C_Opt	Options: Manufacturer specific value (16 chars)		string	8	1	0		state		true	false	false	false
+40044	C_Vr	Version: Manufacturer specific value (16 chars)		string	8	1	0		state		true	false	false	false
+40052	C_SN	Serial Number: Manufacturer specific value (32 chars)		string	16	1	0		state		true	false	false	false
+40068	C_DA	Device Address: Modbus device address		uint16be	1	1	0		level		true	false	false	false
+40069	I_ID	Model identifier		uint16be	1	1	0		value		true	false	false	false
+40070	I_L	Model length		uint16be	1	1	0		value		true	false	false	false
+40071	I_A	Amps: AC Current	A	uint16be	1	1	0	x * Math.pow(10, sf['40075'])	value		true	false	false	false
+40072	I_AphA	Amps PhaseA: Phase A Current	A	uint16be	1	1	0	x * Math.pow(10, sf['40075'])	value		true	false	false	false
+40073	I_AphB	Amps PhaseB: Phase B Current	A	uint16be	1	1	0	x * Math.pow(10, sf['40075'])	value		true	false	false	false
+40074	I_AphC	Amps PhaseC: Phase C Current	A	uint16be	1	1	0	x * Math.pow(10, sf['40075'])	value		true	false	false	false
+40075	I_A_SF			int16be	1	1	0		value		true	false	false	true
+40076	I_PPVphAB	Phase Voltage AB	V	uint16be	1	1	0	x * Math.pow(10, sf['40082'])	value		true	false	false	false
+40077	I_PPVphBC	Phase Voltage BC	V	uint16be	1	1	0	x * Math.pow(10, sf['40082'])	value		true	false	false	false
+40078	I_PPVphCA	Phase Voltage CA	V	uint16be	1	1	0	x * Math.pow(10, sf['40082'])	value		true	false	false	false
+40079	I_PhVphA	Phase Voltage AN	V	uint16be	1	1	0	x * Math.pow(10, sf['40082'])	value		true	false	false	false
+40080	I_PhVphB	Phase Voltage BN	V	uint16be	1	1	0	x * Math.pow(10, sf['40082'])	value		true	false	false	false
+40081	I_PhVphC	Phase Voltage CN	V	uint16be	1	1	0	x * Math.pow(10, sf['40082'])	value		true	false	false	false
+40082	I_V_SF			int16be	1	1	0		value		true	false	false	true
+40083	I_W	Watts: AC Power	W	int16be	1	1	0	x * Math.pow(10, sf['40084'])	value		true	false	false	false
+40084	I_W_SF			int16be	1	1	0		value		true	false	false	true
+40085	I_Hz	Hz: Line Frequency	Hz	uint16be	1	1	0	x * Math.pow(10, sf['40086'])	value		true	false	false	false
+40086	I_Hz_SF			int16be	1	1	0		value		true	false	false	true
+40087	I_VA	VA: AC Apparent Power	VA	int16be	1	1	0	x * Math.pow(10, sf['40088'])	value		true	false	false	false
+40088	I_VA_SF			int16be	1	1	0		value		true	false	false	true
+40089	I_VAr	VAr: AC Reactive Power	var	int16be	1	1	0	x * Math.pow(10, sf['40090'])	value		true	false	false	false
+40090	I_VAr_SF			int16be	1	1	0		value		true	false	false	true
+40091	I_PF	PF: AC Power Factor	Pct	int16be	1	1	0	x * Math.pow(10, sf['40092'])	value		true	false	false	false
+40092	I_PF_SF			int16be	1	1	0		value		true	false	false	true
+40093	I_WH	WattHours: AC Energy	Wh	uint32be	2	1	0	x * Math.pow(10, sf['40095'])	value		true	false	false	false
+40095	I_WH_SF			int16be	1	1	0		value		true	false	false	true
+40096	I_DCA	DC Amps: DC Current	A	uint16be	1	1	0	x * Math.pow(10, sf['40097'])	value		true	false	false	false
+40097	I_DCA_SF			int16be	1	1	0		value		true	false	false	true
+40098	I_DCV	DC Voltage	V	uint16be	1	1	0	x * Math.pow(10, sf['40099'])	value		true	false	false	false
+40099	I_DCV_SF			int16be	1	1	0		value		true	false	false	true
+40100	I_DCW	DC Watts: DC Power	W	int16be	1	1	0	x * Math.pow(10, sf['40101'])	value		true	false	false	false
+40101	I_DCW_SF			int16be	1	1	0		value		true	false	false	true
+40102	I_TmpCab	Cabinet Temperature	C	int16be	1	1	0	x * Math.pow(10, sf['40106'])	value		true	false	false	false
+40103	I_TmpSnk	Heat Sink Temperature	C	int16be	1	1	0	x * Math.pow(10, sf['40106'])	value		true	false	false	false
+40104	I_TmpTrns	Transformer Temperature	C	int16be	1	1	0	x * Math.pow(10, sf['40106'])	value		true	false	false	false
+40105	I_TmpOt	Other Temperature	C	int16be	1	1	0	x * Math.pow(10, sf['40106'])	value		true	false	false	false
+40106	I_Tmp_SF			int16be	1	1	0		value		true	false	false	true
+40107	I_St	Operating state (1=OFF, 2=SLEEPING, 3=STARTING, 4=MPPT, 5=THROTTLED, 6=SHUTTING_DOWN, 7=FAULT, 8=STANDBY)		uint16be	1	1	0		value		true	false	false	false
+40108	I_StVnd	Vendor Operating State: Vendor specific operating state code		uint16be	1	1	0		value		true	false	false	false
+40109	I_Evt1	Event1: Event fields		uint32be	2	1	0		value		true	false	false	false
+40111	I_Evt2	Event Bitfield 2: Reserved for future use		uint32be	2	1	0		value		true	false	false	false
+40113	I_EvtVnd1	Vendor Event Bitfield 1: Vendor defined events		uint32be	2	1	0		value		true	false	false	false
+40115	I_EvtVnd2	Vendor Event Bitfield 2: Vendor defined events		uint32be	2	1	0		value		true	false	false	false
+40117	I_EvtVnd3	Vendor Event Bitfield 3: Vendor defined events		uint32be	2	1	0		value		true	false	false	false
+40119	I_EvtVnd4	Vendor Event Bitfield 4: Vendor defined events		uint32be	2	1	0		value		true	false	false	false

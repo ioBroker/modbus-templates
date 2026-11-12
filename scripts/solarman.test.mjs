@@ -60,6 +60,10 @@ parameters:
         uom: "W"
         rule: 4
         registers: [0x00BE, 0x00BD]
+      - name: "Grid Power"
+        uom: "W"
+        rule: 2
+        registers: [0x0271, 0x02B2]
       - name: "Battery Max Charge Current"
         uom: "A"
         rule: 1
@@ -118,6 +122,12 @@ test('rules, word order, scale, offset, mask and lookup', () => {
     assert.equal(holding['Total Battery Charge']._address, String(0xb4));
     assert.equal(holding['Battery Power'].type, 'int32be');
     assert.equal(holding['Battery Power']._address, String(0xbd));
+
+    // high word in another block: only the low word
+    assert.equal(holding['Grid Power'].type, 'int16be');
+    assert.equal(holding['Grid Power']._address, String(0x271));
+    assert.equal(holding['Grid Power'].description, 'low word only, the high word for values above 32767 is in register 690 (0x2B2)');
+    assert.ok(warnings.some(w => w.startsWith('1 values have the high word in another register')));
 
     assert.equal(holding['Battery Max Charge Current'].role, 'level');
     assert.equal(holding['Battery switch'].role, 'level');

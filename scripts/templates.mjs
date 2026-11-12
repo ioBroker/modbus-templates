@@ -699,10 +699,8 @@ const GENERATE_SOURCES = {
     },
     solarman: {
         keys: ['source', 'definition', 'ref', 'mod', 'files', 'skip'],
-        files: entry => ({
-            holdingRegs: entry.files?.holdingRegs || 'holding-registers.tsv',
-            inputRegs: entry.files?.inputRegs || 'input-registers.tsv',
-        }),
+        // with "files" only the register types listed there are written
+        files: entry => entry.files || { holdingRegs: 'holding-registers.tsv', inputRegs: 'input-registers.tsv' },
     },
 };
 
@@ -751,9 +749,15 @@ export function validateGenerate(generate) {
             if (entry.mod !== undefined && (!Number.isInteger(entry.mod) || entry.mod < 0)) {
                 errors.push(`${at}.mod must be 0, 1, 2, ...`);
             }
-            for (const key of Object.keys(entry.files || {})) {
-                if (key !== 'holdingRegs' && key !== 'inputRegs') {
-                    errors.push(`${at}.files: unknown register type "${key}" (holdingRegs, inputRegs)`);
+            if (entry.files !== undefined) {
+                if (typeof entry.files !== 'object' || entry.files === null || !Object.keys(entry.files).length) {
+                    errors.push(`${at}.files must be { "holdingRegs": "file.tsv", "inputRegs": "file.tsv" }`);
+                } else {
+                    for (const key of Object.keys(entry.files)) {
+                        if (key !== 'holdingRegs' && key !== 'inputRegs') {
+                            errors.push(`${at}.files: unknown register type "${key}" (holdingRegs, inputRegs)`);
+                        }
+                    }
                 }
             }
         }

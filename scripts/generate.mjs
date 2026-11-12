@@ -12,7 +12,7 @@
  *
  * - sunspec: the layout as for scripts/sunspec.mjs, written to `file` (default holding-registers.tsv)
  * - solarman: `definition` in ha-solarman, `ref` branch/tag/commit (default main), `mod` model variant,
- *   `files` other file names ({ "holdingRegs": "...", "inputRegs": "..." })
+ *   `files` the file names ({ "holdingRegs": "...", "inputRegs": "..." }), only these register types are written
  * - `skip`: names of registers to leave out
  *
  * The GitHub Action runs this after every merge into main and once a week (so changes of the sources arrive) and
