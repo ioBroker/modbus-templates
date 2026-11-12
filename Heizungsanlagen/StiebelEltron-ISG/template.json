@@ -9,5 +9,20 @@
         "holding-registers.tsv": {
             "addressing": "alias"
         }
+    },
+    "detect": {
+        "probes": [
+            {
+                "registerType": "inputRegs",
+                "address": 5001,
+                "type": "uint16",
+                "oneOf": [
+                    390,
+                    391,
+                    449
+                ]
+            }
+        ],
+        "note": "Reglerkennung (35002): 390 WPM 3, 391 WPM 3i, 449 WPMsystem"
     }
 }

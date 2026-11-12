@@ -1,0 +1,21 @@
+{
+    "detect": {
+        "probes": [
+            {
+                "registerType": "holdingRegs",
+                "address": 40000,
+                "type": "string",
+                "len": 2,
+                "equals": "SunS"
+            },
+            {
+                "registerType": "holdingRegs",
+                "address": 40004,
+                "type": "string",
+                "len": 16,
+                "startsWith": "SolarEdge"
+            }
+        ],
+        "note": "SunSpec common model, C_Manufacturer 'SolarEdge'"
+    }
+}

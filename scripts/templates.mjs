@@ -608,6 +608,87 @@ export function validateFile(relPath, buffer, manifestEntry) {
 // ---------------------------------------------------------------------------------------------------------------------
 // whole repository
 
+// ---------------------------------------------------------------------------------------------------------------------
+// device detection
+
+const DETECT_TYPES = { string: 0, uint16: 1, int16: 1, uint32: 2, int32: 2 };
+const DETECT_MATCHERS = ['equals', 'startsWith', 'oneOf', 'range'];
+
+/**
+ * Checks the "detect" block of a template.json. The adapter reads the probes (raw addresses, function code 3 or 4)
+ * and offers the device if all of them match.
+ *
+ * @returns error messages, empty if valid
+ */
+export function validateDetect(detect) {
+    const errors = [];
+    if (typeof detect !== 'object' || detect === null || Array.isArray(detect)) {
+        return ['detect must be an object with "probes"'];
+    }
+    for (const key of Object.keys(detect)) {
+        if (!['probes', 'weak', 'note'].includes(key)) {
+            errors.push(`detect: unknown key "${key}"`);
+        }
+    }
+    if (detect.weak !== undefined && typeof detect.weak !== 'boolean') {
+        errors.push('detect.weak must be true or false');
+    }
+    if (!Array.isArray(detect.probes) || !detect.probes.length) {
+        errors.push('detect.probes must be a non-empty list');
+        return errors;
+    }
+    if (detect.probes.length > 5) {
+        errors.push('detect.probes: at most 5 probes, every probe is a request to the device');
+    }
+    detect.probes.forEach((probe, i) => {
+        const at = `detect.probes[${i}]`;
+        for (const key of Object.keys(probe)) {
+            if (!['registerType', 'address', 'type', 'len', ...DETECT_MATCHERS].includes(key)) {
+                errors.push(`${at}: unknown key "${key}"`);
+            }
+        }
+        if (probe.registerType !== 'holdingRegs' && probe.registerType !== 'inputRegs') {
+            errors.push(`${at}.registerType must be "holdingRegs" or "inputRegs"`);
+        }
+        if (!Number.isInteger(probe.address) || probe.address < 0 || probe.address > 65535) {
+            errors.push(`${at}.address must be the raw address 0..65535 (no alias offset)`);
+        }
+        if (!(probe.type in DETECT_TYPES)) {
+            errors.push(`${at}.type must be one of ${Object.keys(DETECT_TYPES).join(', ')}`);
+            return;
+        }
+        if (probe.type === 'string') {
+            if (!Number.isInteger(probe.len) || probe.len < 1 || probe.len > 32) {
+                errors.push(`${at}.len (registers) must be 1..32 for strings`);
+            }
+        } else if (probe.len !== undefined && probe.len !== DETECT_TYPES[probe.type]) {
+            errors.push(`${at}.len must be ${DETECT_TYPES[probe.type]} for ${probe.type} or omitted`);
+        }
+        const matchers = DETECT_MATCHERS.filter(m => probe[m] !== undefined);
+        if (matchers.length !== 1) {
+            errors.push(`${at}: exactly one of ${DETECT_MATCHERS.join(', ')} is required`);
+            return;
+        }
+        const value = probe[matchers[0]];
+        const isString = probe.type === 'string';
+        const okValue = v => (isString ? typeof v === 'string' && v.length > 0 : Number.isFinite(v));
+        if (matchers[0] === 'startsWith' && !isString) {
+            errors.push(`${at}.startsWith is only for strings`);
+        } else if (matchers[0] === 'range') {
+            if (isString || !Array.isArray(value) || value.length !== 2 || !value.every(okValue) || value[0] > value[1]) {
+                errors.push(`${at}.range must be [min, max] with numbers`);
+            }
+        } else if (matchers[0] === 'oneOf') {
+            if (!Array.isArray(value) || !value.length || !value.every(okValue)) {
+                errors.push(`${at}.oneOf must be a non-empty list of ${isString ? 'strings' : 'numbers'}`);
+            }
+        } else if (!okValue(value)) {
+            errors.push(`${at}.${matchers[0]} must be a ${isString ? 'non-empty string' : 'number'}`);
+        }
+    });
+    return errors;
+}
+
 function loadManifests(files, issues) {
     const manifests = {};
     for (const f of files.filter(f => basename(f) === MANIFEST_FILE)) {
@@ -620,7 +701,12 @@ function loadManifests(files, issues) {
         if (!json) {
             continue;
         }
-        const allowedKeys = ['name', 'manufacturer', 'models', 'description', 'files', 'ignore'];
+        const allowedKeys = ['name', 'manufacturer', 'models', 'description', 'files', 'ignore', 'detect'];
+        if (json.detect !== undefined) {
+            for (const message of validateDetect(json.detect)) {
+                issues.push({ file: f, level: 'error', message });
+            }
+        }
         for (const key of Object.keys(json)) {
             if (!allowedKeys.includes(key)) {
                 issues.push({ file: f, level: 'warning', message: `Unknown key "${key}"` });
@@ -761,6 +847,7 @@ function buildIndex(scanResult) {
                 ...(manifest.models ? { models: manifest.models } : {}),
                 ...(manifest.description ? { description: manifest.description } : {}),
                 ...(readme ? { readme } : {}),
+                ...(manifest.detect && !validateDetect(manifest.detect).length ? { detect: manifest.detect } : {}),
                 files: [],
             });
         }

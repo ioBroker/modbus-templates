@@ -9,5 +9,24 @@
         "holding-registers_blueplanet_tl3.tsv": {
             "addressing": "raw"
         }
+    },
+    "detect": {
+        "probes": [
+            {
+                "registerType": "holdingRegs",
+                "address": 40000,
+                "type": "string",
+                "len": 2,
+                "equals": "SunS"
+            },
+            {
+                "registerType": "holdingRegs",
+                "address": 40004,
+                "type": "string",
+                "len": 16,
+                "startsWith": "KACO"
+            }
+        ],
+        "note": "SunSpec common model, manufacturer 'KACO new energy'"
     }
 }
