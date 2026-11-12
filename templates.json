@@ -977,6 +977,21 @@
       ]
     },
     {
+      "id": "PV-Wechselrichter/M-TEC Energy Butler GEN3",
+      "category": "PV-Wechselrichter",
+      "name": "M-TEC Energy Butler GEN3",
+      "readme": "PV-Wechselrichter/M-TEC Energy Butler GEN3/README.md",
+      "files": [
+        {
+          "path": "PV-Wechselrichter/M-TEC Energy Butler GEN3/holding-registers.tsv",
+          "title": "holding-registers",
+          "registerType": "holdingRegs",
+          "registers": 95,
+          "addressing": "raw"
+        }
+      ]
+    },
+    {
       "id": "PV-Wechselrichter/SMA",
       "category": "PV-Wechselrichter",
       "name": "SMA Sunny Tripower X",
