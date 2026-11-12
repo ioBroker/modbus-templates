@@ -1,0 +1,14 @@
+{
+    "manufacturer": "Phoenix Contact",
+    "files": {
+        "Input Register - Integer/50512-50572 Momentanwerte 2.tsv": {
+            "addressing": "raw"
+        },
+        "Input Register - Integer/50768-50788 Energiewerte.tsv": {
+            "addressing": "raw"
+        },
+        "Input Register - Integer/51070-51088 DMD Max.tsv": {
+            "addressing": "raw"
+        }
+    }
+}
