@@ -1,0 +1,7 @@
+{
+    "files": {
+        "input-registers.tsv": {
+            "addressing": "alias"
+        }
+    }
+}

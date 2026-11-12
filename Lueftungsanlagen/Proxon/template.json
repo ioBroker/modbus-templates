@@ -1,0 +1,12 @@
+{
+    "name": "Proxon FWT",
+    "manufacturer": "Zimmermann",
+    "files": {
+        "input-register.tsv": {
+            "addressing": "alias"
+        },
+        "holding-register.tsv": {
+            "addressing": "alias"
+        }
+    }
+}
