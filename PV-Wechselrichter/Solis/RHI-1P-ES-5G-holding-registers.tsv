@@ -1,0 +1,31 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale	sanitize	sanitizeAction	minValidValue	maxValidValue
+43000	Date & Time			rawhex	6	1	0		state		true	false	false	false	false			
+43011	Overdischarge SOC		%	uint16be	1	1	0		value		true	false	false	false	false			
+43024	Backup Mode SOC		%	uint16be	1	1	0		level		true	false	false	false	false			
+43110	Storage Control Mode	0=Disabled, 33=Self Use, 34=Optimized Revenue, 35=Time of Use, 36=Off-Grid, 40=Battery Wake-Up, 49=Backup, 51=Optimized Revenue & Backup, 96=Feed-In Priority		uint16be	1	1	0		level		true	false	false	false	false			
+43141	Timed Charge Current		A	uint16be	1	0,1	0		level		true	false	false	false	false			
+43142	Timed Discharge Current		A	uint16be	1	0,1	0		level		true	false	false	false	false			
+43143	Timed Charge Start hour			uint16be	1	1	0		level		true	false	false	false	false			
+43144	Timed Charge Start minute			uint16be	1	1	0		level		true	false	false	false	false			
+43145	Timed Charge End hour			uint16be	1	1	0		level		true	false	false	false	false			
+43146	Timed Charge End minute			uint16be	1	1	0		level		true	false	false	false	false			
+43147	Timed Discharge Start hour			uint16be	1	1	0		level		true	false	false	false	false			
+43148	Timed Discharge Start minute			uint16be	1	1	0		level		true	false	false	false	false			
+43149	Timed Discharge End hour			uint16be	1	1	0		level		true	false	false	false	false			
+43150	Timed Discharge End minute			uint16be	1	1	0		level		true	false	false	false	false			
+43153	Timed Charge 2 Start hour			uint16be	1	1	0		level		true	false	false	false	false			
+43154	Timed Charge 2 Start minute			uint16be	1	1	0		level		true	false	false	false	false			
+43155	Timed Charge 2 End hour			uint16be	1	1	0		level		true	false	false	false	false			
+43156	Timed Charge 2 End minute			uint16be	1	1	0		level		true	false	false	false	false			
+43157	Timed Discharge 2 Start hour			uint16be	1	1	0		level		true	false	false	false	false			
+43158	Timed Discharge 2 Start minute			uint16be	1	1	0		level		true	false	false	false	false			
+43159	Timed Discharge 2 End hour			uint16be	1	1	0		level		true	false	false	false	false			
+43160	Timed Discharge 2 End minute			uint16be	1	1	0		level		true	false	false	false	false			
+43163	Timed Charge 3 Start hour			uint16be	1	1	0		level		true	false	false	false	false			
+43164	Timed Charge 3 Start minute			uint16be	1	1	0		level		true	false	false	false	false			
+43165	Timed Charge 3 End hour			uint16be	1	1	0		level		true	false	false	false	false			
+43166	Timed Charge 3 End minute			uint16be	1	1	0		level		true	false	false	false	false			
+43167	Timed Discharge 3 Start hour			uint16be	1	1	0		level		true	false	false	false	false			
+43168	Timed Discharge 3 Start minute			uint16be	1	1	0		level		true	false	false	false	false			
+43169	Timed Discharge 3 End hour			uint16be	1	1	0		level		true	false	false	false	false			
+43170	Timed Discharge 3 End minute			uint16be	1	1	0		level		true	false	false	false	false			

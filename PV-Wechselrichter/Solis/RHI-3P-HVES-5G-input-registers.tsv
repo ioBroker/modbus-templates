@@ -1,0 +1,61 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	cw	isScale	sanitize	sanitizeAction	minValidValue	maxValidValue
+33029	Total Production		kWh	uint32be	2	1	0		value		false	false	true	keepLastValid	0.1	
+33031	Monthly Production		kWh	uint32be	2	1	0		value		false	false	false			
+33035	Today Production		kWh	uint16be	1	0,1	0		value		false	false	false			
+33037	Yearly Production		kWh	uint32be	2	1	0		value		false	false	false			
+33049	PV1 Voltage		V	uint16be	1	0,1	0		value		false	false	false			
+33050	PV1 Current		A	uint16be	1	0,1	0		value		false	false	false			
+33051	PV2 Voltage		V	uint16be	1	0,1	0		value		false	false	false			
+33052	PV2 Current		A	uint16be	1	0,1	0		value		false	false	false			
+33057	Inverter DC Power		W	uint32be	2	1	0		value		false	false	false			
+33073	Inverter Voltage		V	uint16be	1	0,1	0		value		false	false	false			
+33076	Inverter Current		A	uint16be	1	0,1	0		value		false	false	false			
+33079	Inverter Active Power		W	int32be	2	1	0		value		false	false	false			
+33082	Inverter Reactive Power		var	int16be	1	1	0		value		false	false	false			
+33083	Inverter Apparent Power		VA	int32be	2	1	0		value		false	false	false			
+33093	Inverter Temperature		°C	int16be	1	0,1	0		value.temperature		false	false	false			
+33094	Inverter Frequency		Hz	uint16be	1	0,01	0		value		false	false	false			
+33095	Inverter Status	0=Waiting State, 1=Open Loop Operation, 2=Soft Start, 3=On Grid/Generating, 4100=Grid OverVoltage, 4112=Grid UnderVoltage, 4114=Grid OverFrequency, 4115=Grid UnderFrequency, 4116=Grid Imp too large, 4117=No Grid, 4118=Grid Imbalance, 4119=Grid Freq Jitter, 4120=Grid Overcurrent, 4121=Grid Tracking Fault, 4128=DC OverVoltage, 4129=DC Bus Overvoltage, 4130=DC Bus Uneven Voltage, 4132=DC Bus Uneven Voltage2, 4133=DC A path OverCurrent, 4134=DC B path OverCurrent, 4135=DC Input Disturbance, 4144=Grid Disturbance, 4145=DSP Initialization Protection, 4146=Over Temp Protection, 4147=PV Insulation Fault, 4148=Leakage Current Protection, 4149=Relay Detection Protection, 4150=DSP_B Protection, 4151=DC Component too Large, 4152=12v UnderVoltage Protection, 4153=Under Temperature Protection, 4160=Arc Self-Test Protection, 4161=Arc Protection, 4162=DSP on-chip SRAM exception, 4163=DSP on-chip FLASH exception, 4164=DSP on-chip PC pointer is abnormal, 4165=DSP key register exception, 4166=Grid disturbance 02, 4167=Grid current sampling abnormality, 4168=IGBT overcurrent, 4176=Network current transient overcurrent, 4177=Battery overvoltage hardware failure, 4178=LLC hardware overcurrent, 4179=Battery overvoltage detection, 4180=Battery undervoltage detection, 4181=Battery no connected, 4182=Bypass overvoltage fault, 4183=Bypass overload fault		uint16be	1	1	0		value		false	false	false			
+33116	Grid Fault Status	0=No Fault, 1=No Grid, 2=Grid OverVoltage, 4=Grid UnderVoltage, 8=Grid OverFrequency, 16=Grid UnderFrequency, 32=Grid Imbalance, 64=Grid Frequncy Jitter, 128=Grid Impedence too Large, 256=Grid Tracking Fault, 512=Meter Comm Failure, 1024=Failsafe		uint16be	1	1	0		value		false	false	false			
+33117	Backup Load Fault Status	0=No Fault, 1=Bypass OverVoltage Fault, 2=Bypass Overload Fault		uint16be	1	1	0		value		false	false	false			
+33118	Battery Fault Status	0=No Fault, 1=Battery Not Connected, 2=Battery OverVoltage Detection, 4=Battery UnderVoltage Detection		uint16be	1	1	0		value		false	false	false			
+33119	Fault Status 04 (Device)	0=No Fault, 1=DC OverVoltage, 2=DC Bus OverVoltage, 4=DC Bus Uneven Voltage, 8=DC Bus UnderVoltage, 16=DC Bus2 Uneven Voltage, 32=DC A path OverCurrent, 64=DC B path OverCurrent, 128=DC Input Disturbance, 256=Grid OverCurrent, 512=IGBT OverCurrent, 1024=Grid Disturbance 2, 2048=Arc Self-Test Protection, 4096=Arc Fault Reservation, 8192=Grid Current Sample Abnormality		uint16be	1	1	0		value		false	false	false			
+33120	Fault Status 05 (Device)	0=No Fault, 1=Grid Disturbance, 2=DC Component Too Large, 4=Over Temp Protection, 8=Relay Detection Protection, 16=Under Temp Protection, 32=PV Insulation Fault, 64=12V UnderVoltage Protection, 128=Leakage Current Protection, 256=Leakage Current Self-Test, 512=DSP Initialization Protect, 1024=DSP B Protection, 2048=Battery Overvoltage H/W Failure, 4096=LLC Hardware OverCurrent, 8192=Network Side Transient OverCurrent, 16384=CAN Communication Failed, 32768=DSP Communication Failed		uint16be	1	1	0		value		false	false	false			
+33121	Operating Status	1793=Normal Operation, 1794=Initial Standby, 1796=Control Shutdown, 1800=Downtime, 1808=Standby, 1824=Derating Operation, 1856=Limit Operation, 1920=Bypass Overload		uint16be	1	1	0		value		false	false	false			
+33132	Storage Control Mode	33=Self Use, 34=Optimized Revenue, 35=Time of Use, 36=Off-Grid Storage, 40=Battery Wake-Up, 96=Feed-In Priority		uint16be	1	1	0		value		false	false	false			
+33133	Battery Voltage		V	uint16be	1	0,1	0		value		false	false	false			
+33134	Battery Current		A	int16be	1	0,1	0		value		false	false	false			
+33135	Battery State	0=charging, 1=discharging, default=idle		uint16be	1	1	0		value		false	false	false			
+33139	Battery		%	uint16be	1	1	0		value.battery		false	false	false			
+33140	Battery SOH		%	uint16be	1	1	0		value		false	false	false			
+33141	BMS Battery Voltage		V	uint16be	1	0,01	0		value		false	false	false			
+33142	BMS Battery Current		A	int16be	1	0,1	0		value		false	false	false			
+33143	BMS Battery Charge Current Limit		A	uint16be	1	0,1	0		value		false	false	false			
+33144	BMS Battery Discharge Current Limit		A	uint16be	1	0,1	0		value		false	false	false			
+33147	House Load Power		W	uint16be	1	1	0		value		false	false	false			
+33148	Backup Load Power		W	uint16be	1	1	0		value		false	false	false			
+33149	Battery Power		W	int32be	2	1	0		value		false	false	false			
+33151	Inverter AC Power		W	int32be	2	1	0		value		false	false	false			
+33157	Inverting/Rectifing Power		W	int16be	1	10	0		value		false	false	false			
+33161	Total Battery Charge		kWh	uint32be	2	1	0		value		false	false	true	keepLastValid	0.1	
+33163	Today Battery Charge		kWh	uint16be	1	0,1	0		value		false	false	false			
+33165	Total Battery Discharge		kWh	uint32be	2	1	0		value		false	false	true	keepLastValid	0.1	
+33167	Today Battery Discharge		kWh	uint16be	1	0,1	0		value		false	false	false			
+33169	Total Energy Import		kWh	uint32be	2	1	0		value		false	false	true	keepLastValid	0.1	
+33171	Today Energy Import		kWh	uint16be	1	0,1	0		value		false	false	false			
+33173	Total Energy Export		kWh	uint32be	2	1	0		value		false	false	true	keepLastValid	0.1	
+33175	Today Energy Export		kWh	uint16be	1	0,1	0		value		false	false	false			
+33177	Total Load Consumption		kWh	uint32be	2	1	0		value		false	false	true	keepLastValid	0.1	
+33179	Today Load Consumption		kWh	uint16be	1	0,1	0		value		false	false	false			
+33206	Battery Charge Current Limit		A	uint16be	1	0,1	0		value		false	false	false			
+33207	Battery Discharge Current Limit		A	uint16be	1	0,1	0		value		false	false	false			
+33251	Meter Voltage		V	uint16be	1	0,1	0		value		false	false	false			
+33252	Meter Current		A	uint16be	1	0,01	0		value		false	false	false			
+33257	Meter Active Power Phase A		W	int32be	2	1	0		value		false	false	false			
+33259	Meter Active Power Phase B		W	int32be	2	1	0		value		false	false	false			
+33261	Meter Active Power Phase C		W	int32be	2	1	0		value		false	false	false			
+33263	Meter Active Power Total		W	int32be	2	1	0		value		false	false	false			
+33265	Meter Reactive Power		var	int32be	2	1	0		value		false	false	false			
+33273	Meter Apparent Power		VA	int32be	2	1	0		value		false	false	false			
+33281	Meter Power Factor			int16be	1	0,01	0		value		false	false	false			
+33282	Meter Frequency		Hz	uint16be	1	0,01	0		value		false	false	false			

@@ -83,6 +83,26 @@ parameters:
         platform: switch
         rule: 1
         registers: [0x0050]
+  - group: Time of Use
+    items:
+      - name: "Timed Charge Start"
+        platform: time
+        rule: 9
+        registers: [0x0094, 0x0095]
+      - name: "Time Point 1"
+        platform: time
+        rule: 9
+        registers: [0x0096]
+  - group: Alarm
+    items:
+      - name: "Device Fault"
+        rule: 3
+        registers: [0x0405, 0x0406, 0x0407, 0x0408, 0x0409, 0x040A]
+        lookup:
+          - key: 0
+            value: "OK"
+          - bit: 0
+            value: "ID01 Grid Overvoltage"
   - group: Meter
     items:
       - name: "Meter Power"
@@ -131,6 +151,17 @@ test('rules, word order, scale, offset, mask and lookup', () => {
 
     assert.equal(holding['Battery Max Charge Current'].role, 'level');
     assert.equal(holding['Battery switch'].role, 'level');
+
+    // time: one register per part, or HHMM in one register
+    assert.equal(holding['Timed Charge Start hour']._address, String(0x94));
+    assert.equal(holding['Timed Charge Start minute']._address, String(0x95));
+    assert.equal(holding['Timed Charge Start minute'].role, 'level');
+    assert.equal(holding['Time Point 1'].description, 'time as HHMM');
+
+    // fault bits in many registers: raw hex
+    assert.equal(holding['Device Fault'].type, 'rawhex');
+    assert.equal(holding['Device Fault'].len, '6');
+    assert.equal(holding['Device Fault'].description, 'bits (0..15 in the first register): 0=OK, bit 0=ID01 Grid Overvoltage');
 
     // computed values and versions in scattered registers are left out
     assert.equal(holding['Battery Losses'], undefined);

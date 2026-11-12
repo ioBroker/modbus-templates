@@ -1,0 +1,37 @@
+{
+    "name": "Solis Hybrid (RHI)",
+    "manufacturer": "Solis",
+    "models": [
+        "RHI-1P3~6K-48ES-5G",
+        "RHI-3P5~10K-HVES-5G"
+    ],
+    "description": "Hybrid inverters, RS485 (Modbus RTU) or data logger with Modbus TCP",
+    "files": {
+        "RHI-1P-ES-5G-input-registers.tsv": {
+            "title": "RHI-1P…-48ES-5G (single phase) input registers"
+        },
+        "RHI-1P-ES-5G-holding-registers.tsv": {
+            "title": "RHI-1P…-48ES-5G (single phase) holding registers"
+        },
+        "RHI-3P-HVES-5G-input-registers.tsv": {
+            "title": "RHI-3P…-HVES-5G (three phase) input registers"
+        }
+    },
+    "generate": [
+        {
+            "source": "solarman",
+            "definition": "solis_hybrid",
+            "files": {
+                "inputRegs": "RHI-1P-ES-5G-input-registers.tsv",
+                "holdingRegs": "RHI-1P-ES-5G-holding-registers.tsv"
+            }
+        },
+        {
+            "source": "solarman",
+            "definition": "solis_3p-5g",
+            "files": {
+                "inputRegs": "RHI-3P-HVES-5G-input-registers.tsv"
+            }
+        }
+    ]
+}
