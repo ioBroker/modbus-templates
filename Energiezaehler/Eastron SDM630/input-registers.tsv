@@ -170,4 +170,4 @@ _address	deviceId	name	description	unit	type	len	factor	offset	formula	role	room
 
 30379	1	L2_Total_kvarh		kvarh	floatbe	2	1	0		level			
 
-30381	1	L3_Total_kvarh		kvarh	floatbe	2	1	0		level
+30381	1	L3_Total_kvarh		kvarh	floatbe	2	1	0		level			

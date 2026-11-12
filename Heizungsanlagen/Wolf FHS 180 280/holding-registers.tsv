@@ -7,6 +7,6 @@ _address	deviceId	name	description	unit	type	len	factor	offset	formula	role	room
 40019	1	T PV WP			int16be	1	1	0		value		true			
 40020	1	T PV EL			int16be	1	1	0		value		true			
 40023	1	Boost	on/off		int16be	1	1	0		value		true			
-40025	1				uint16le	1	1	0		value		true			
+40025	1	unknown_40025	Bedeutung unbekannt		uint16le	1	1	0		value		true			
 40029	1	T max	Temp Max		int16be	1	1	0		value		true			
 40118	1	Modbus Allow write			int16be	1	1	0		value		true			

@@ -4,7 +4,6 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 40061	Fernsperre	Fernsperre		uint16be	1	0	0		level		true	false	false	false
 40081	SchalterModus	SchalterModus		uint16be	1	0	0		level		true	false	false	false
 40105	ZeroExport power	ZeroExport-Leistung	W	int16be	1	0	0		level		true	false	false	false
-40105	ZeroExport power	ZeroExport-Leistung		floatbe	2	0	0		level		true	false	false	false
 40109	Max A Charge	Maximaler Ladestrom der Batterie	A	uint16be	1	0	0		level		true	false	false	false
 40110	Max A discharge	Max A Entladung	A	uint16be	1	0	0		level		true	false	false	false
 40116	ShutDown battery capacity ShutDown	Abschalten Batteriekapazität Herunterfahren	%	uint16be	1	1	0		level		true	false	false	false

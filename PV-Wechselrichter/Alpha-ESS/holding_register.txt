@@ -73,7 +73,6 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 2051	PV Capacity of Grid Inverter 	0x803 PV Capacity of Grid Inverter 	W	uint32be	2	1	0		value		true	false	false	false
 2053	System mode	0x805 System mode		uint16be	1	1	0		state		true	false	false	false
 2127	Time period control flag	0x84F Status Zeitkontrolle		uint16be	1	1	0		switch		true	false	false	false
-2127	Time period control flag	0x084F Time period control flag		uint16be	1	1	0		value		true	false	false	false
 2128	UPS Reserve Soc	0x850 USV Reserve	%	uint16be	1	1	0		value		true	false	false	false
 2129	Time discharge start time1 (hour)	0x0851 Time discharge start time1 (hour)	h	uint16be	1	1	0		value		true	false	false	false
 2130	Time discharge stop time1 (hour)	0x0852 Time discharge stop time1 (hour)	h	uint16be	1	1	0		value		true	false	false	false

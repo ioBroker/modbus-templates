@@ -489,9 +489,9 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 4237	Arcing_Alarm_ShutDown_Threshold	DC arc alarm fault threshold: 		uint16be	1	1	0		value		false	false	false	false				
 4238	Arcing_Alarm_Counter	Current arc alarm times		uint16be	1	1	0		value		false	false	false	false				
 4256	PLC_Enable_Setting			uint16be	1		0		value		false	false	false	false				
-4257	PLC_Com_Property	bit0-bit1:0~1 corresponds to 1	NULL	uint16be	1	NULL	0		value		false	false	false	false				
-4261	BLE_Enable_Setting		NULL	uint16be	1	NULL	0		value		false	false	false	false				
-4262	BLE_Com_Property	bit0-bot1:0~1 corresponds to 1	NULL	uint16be	1	NULL	0		value		false	false	false	false				
+4257	PLC_Com_Property	bit0-bit1:0~1 corresponds to 1		uint16be	1		0		value		false	false	false	false				
+4261	BLE_Enable_Setting			uint16be	1		0		value		false	false	false	false				
+4262	BLE_Com_Property	bit0-bot1:0~1 corresponds to 1		uint16be	1		0		value		false	false	false	false				
 4272	PID_Auto_running_enable	PID start auto-run.0 means dis		uint16be	1		0		value		false	false	false	false				
 4273	PID_Working_Start_Time	PID operation start time (BCD 	Minute	uint16be	1	1	0		value		false	false	false	false				
 4274	PID_Working_Hours	PID operating duration.	Minute	uint16be	1	1	0		value		false	false	false	false				
