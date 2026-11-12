@@ -25,8 +25,8 @@ import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import YAML from 'yaml';
 
-const DEFINITIONS_URL =
-    'https://raw.githubusercontent.com/davidrapan/ha-solarman/main/custom_components/solarman/inverter_definitions';
+const REPOSITORY_URL = 'https://raw.githubusercontent.com/davidrapan/ha-solarman';
+const DEFINITIONS_PATH = 'custom_components/solarman/inverter_definitions';
 
 const COLUMNS = {
     holdingRegs: [
@@ -341,6 +341,25 @@ export function headerComment(text) {
     return lines;
 }
 
+/**
+ * Text of a definition: a local file, or the name in ha-solarman (e.g. "deye_p3"), downloaded from the branch, tag or
+ * commit `ref` (default "main").
+ */
+export async function loadDefinitionText(nameOrPath, ref = 'main') {
+    if (/\.ya?ml$/i.test(nameOrPath) && existsSync(nameOrPath)) {
+        return readFileSync(nameOrPath, 'utf8');
+    }
+    const name = nameOrPath.replace(/\.ya?ml$/i, '');
+    if (!/^[\w.-]+$/.test(name) || !/^[\w./-]+$/.test(ref)) {
+        throw new Error(`Invalid definition "${nameOrPath}" or ref "${ref}"`);
+    }
+    const res = await fetch(`${REPOSITORY_URL}/${ref}/${DEFINITIONS_PATH}/${name}.yaml`);
+    if (!res.ok) {
+        throw new Error(`ha-solarman definition ${name}@${ref}: HTTP ${res.status}`);
+    }
+    return res.text();
+}
+
 async function main(argv) {
     const args = argv.slice(2);
     const option = name => {
@@ -353,16 +372,7 @@ async function main(argv) {
         console.error('Usage: node scripts/solarman.mjs <definition.yaml | name> [--out <dir>] [--mod <n>]');
         process.exit(1);
     }
-    let text;
-    if (existsSync(args[0])) {
-        text = readFileSync(args[0], 'utf8');
-    } else {
-        const res = await fetch(`${DEFINITIONS_URL}/${args[0].replace(/\.ya?ml$/, '')}.yaml`);
-        if (!res.ok) {
-            throw new Error(`${args[0]}: HTTP ${res.status}`);
-        }
-        text = await res.text();
-    }
+    const text = existsSync(args[0]) ? readFileSync(args[0], 'utf8') : await loadDefinitionText(args[0]);
     const definition = YAML.parse(text);
     const { files, warnings, skipped } = convertDefinition(definition, { mod });
     warnings.forEach(w => console.error(`warning: ${w}`));

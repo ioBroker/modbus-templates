@@ -4,6 +4,9 @@ on:
     pull_request:
     push:
         branches: [main]
+    # once a week: take over changes of the sources of generated files (SunSpec models, ha-solarman)
+    schedule:
+        - cron: '17 4 * * 1'
     workflow_dispatch:
 
 concurrency:
@@ -26,6 +29,11 @@ jobs:
                   node-version: 22
             - run: npm ci
             - run: npm test
+            - name: Generate the files of changed template.json
+              run: |
+                  git diff --name-only -z --diff-filter=ACMR "origin/${{ github.base_ref }}...HEAD" -- '*/template.json' \
+                    | xargs -0 -r -n1 dirname -z \
+                    | xargs -0 -r node scripts/generate.mjs
             - name: Validate changed files
               run: |
                   git diff --name-only -z --diff-filter=ACMR "origin/${{ github.base_ref }}...HEAD" \
@@ -34,7 +42,7 @@ jobs:
               if: always()
               run: node scripts/templates.mjs validate --quiet || true
 
-    # main: rebuild templates.json, so contributors never have to run a script themselves
+    # main: generate files and rebuild templates.json, so contributors never have to run a script themselves
     index:
         if: github.event_name != 'pull_request'
         runs-on: ubuntu-latest
@@ -47,13 +55,17 @@ jobs:
                   node-version: 22
             - run: npm ci
             - run: npm test
+            # a file with errors is not written (the old one stays), the index is built anyway
+            - name: Generate files
+              continue-on-error: true
+              run: node scripts/generate.mjs
             - run: node scripts/templates.mjs build --quiet
-            - name: Commit templates.json
+            - name: Commit generated files and templates.json
               run: |
-                  if [ -n "$(git status --porcelain -- templates.json)" ]; then
+                  if [ -n "$(git status --porcelain)" ]; then
                     git config user.name "github-actions[bot]"
                     git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-                    git add templates.json
-                    git commit -m "chore: update templates.json [skip ci]"
+                    git add -A
+                    git commit -m "chore: update generated files and templates.json [skip ci]"
                     git push
                   fi

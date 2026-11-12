@@ -183,6 +183,55 @@ per function code is written: `holding-registers.tsv` (0x03) and `input-register
 If no address is below 40001 (30001 for input registers), the script prints the `template.json` entry with
 `"addressing": "raw"`. Please check the result with the data sheet and mention the source in the README of the device.
 
+### Generate the files automatically
+Instead of committing the generated files, you can describe the source in `template.json`. The GitHub Action then
+generates the files after the merge, commits them, and updates them once a week when the source changes:
+
+```json
+{
+    "name": "Deye SUN-xK-SG04LP3",
+    "generate": [
+        { "source": "solarman", "definition": "deye_p3", "ref": "v25.08.16", "mod": 0, "skip": ["Device"] }
+    ]
+}
+```
+
+```json
+{
+    "name": "SolarEdge SE10K",
+    "generate": [
+        {
+            "source": "sunspec",
+            "file": "holding-registers.tsv",
+            "marker": 40000,
+            "models": [
+                { "id": 1, "address": 40002, "prefix": "C_", "skip": ["Pad"] },
+                { "id": 103, "address": 40069, "prefix": "I_" }
+            ]
+        }
+    ]
+}
+```
+
+* `solarman`: `definition` is the name in ha-solarman, `ref` a branch, tag or commit (default `main`; with a tag the
+  file changes only when you change the tag), `mod` as `--mod`, `files` other file names
+  (`{ "holdingRegs": "inverter.tsv", "inputRegs": "meter.tsv" }`, default `holding-registers.tsv` and
+  `input-registers.tsv`)
+* `sunspec`: the layout as above, `file` the file name (default `holding-registers.tsv`)
+* `skip`: names of registers to leave out
+* the files get `"addressing": "raw"` automatically
+* do not edit generated files, they are overwritten. Change `template.json` instead.
+* a generated file with errors is not written, the old file stays
+
+In a pull request the files of a changed `template.json` are generated and validated. Locally:
+
+```bash
+npm install
+npm run generate                              # all devices with "generate"
+npm run generate -- "PV-Wechselrichter/Deye"  # one device
+npm run generate -- --check                   # fail if a file is not up to date
+```
+
 ## How to get my exports in here?
 In fact there are two options
 

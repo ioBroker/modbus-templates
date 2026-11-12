@@ -235,6 +235,31 @@ export async function convertLayout(layout, loadModel) {
     return { rows, warnings };
 }
 
+/**
+ * Returns `async id => model`: from `modelsDir/model_N.json` if there, otherwise downloaded from sunspec/models.
+ * Every model is loaded only once.
+ */
+export function createModelLoader(modelsDir) {
+    const cache = new Map();
+    return id => {
+        if (!cache.has(id)) {
+            const local = modelsDir && join(modelsDir, `model_${id}.json`);
+            cache.set(
+                id,
+                local && existsSync(local)
+                    ? Promise.resolve(JSON.parse(readFileSync(local, 'utf8')))
+                    : fetch(`${MODELS_URL}/model_${id}.json`).then(res => {
+                          if (!res.ok) {
+                              throw new Error(`SunSpec model ${id}: HTTP ${res.status}`);
+                          }
+                          return res.json();
+                      }),
+            );
+        }
+        return cache.get(id);
+    };
+}
+
 async function main(argv) {
     const args = argv.slice(2);
     const option = name => {
@@ -252,23 +277,7 @@ async function main(argv) {
         process.exit(1);
     }
     const layout = JSON.parse(readFileSync(args[0], 'utf8'));
-    const cache = new Map();
-    const loadModel = async id => {
-        if (!cache.has(id)) {
-            const local = modelsDir && join(modelsDir, `model_${id}.json`);
-            if (local && existsSync(local)) {
-                cache.set(id, JSON.parse(readFileSync(local, 'utf8')));
-            } else {
-                const res = await fetch(`${MODELS_URL}/model_${id}.json`);
-                if (!res.ok) {
-                    throw new Error(`SunSpec model ${id}: HTTP ${res.status}`);
-                }
-                cache.set(id, await res.json());
-            }
-        }
-        return cache.get(id);
-    };
-    const { rows, warnings } = await convertLayout(layout, loadModel);
+    const { rows, warnings } = await convertLayout(layout, createModelLoader(modelsDir));
     warnings.forEach(w => console.error(`warning: ${w}`));
     const tsv = toTsv(rows);
     if (out) {
