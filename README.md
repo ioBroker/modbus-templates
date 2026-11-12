@@ -160,6 +160,29 @@ enumerations are written to the description. The model definitions are loaded fr
 [sunspec/models](https://github.com/sunspec/models) (Apache-2.0, © SunSpec Alliance); `--models <dir>` uses local
 copies of `model_N.json` instead. Please mention the source in the README of the device.
 
+### Generate files from a Solarman definition
+[ha-solarman](https://github.com/davidrapan/ha-solarman) (MIT, © David Rapan and contributors) describes many inverters
+(Deye, Sofar, Solis, Afore, Kstar, ...) in YAML files. `scripts/solarman.mjs` converts such a definition:
+
+```bash
+npm install                                            # once, for the YAML parser
+npm run solarman -- deye_p3 --out "PV-Wechselrichter/Deye P3"
+npm run solarman -- my-definition.yaml --out out --mod 1
+```
+
+A name without `.yaml` is downloaded from `custom_components/solarman/inverter_definitions` of ha-solarman. One file
+per function code is written: `holding-registers.tsv` (0x03) and `input-registers.tsv` (0x04), with raw addresses.
+
+* `registers` lists the low word first in ha-solarman, so `[0x00B4, 0x00B5]` becomes `uint32sw` at 0x00B4
+* `scale` and `offset` become factor and offset; `mask`, `bit` and `divide` a formula
+* `lookup` (texts of the values) goes to the description, `validation` min/max to `minValidValue`/`maxValidValue`
+* `--mod <n>`: some values differ between the models of a definition (e.g. `scale: [0.01, 0.1]` for LV and HV
+  batteries). The script uses the element `n` (default 0), as the setting "mod" of ha-solarman
+* computed values (`sensors`) are left out, the script lists them as warnings
+
+If no address is below 40001 (30001 for input registers), the script prints the `template.json` entry with
+`"addressing": "raw"`. Please check the result with the data sheet and mention the source in the README of the device.
+
 ## How to get my exports in here?
 In fact there are two options
 

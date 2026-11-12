@@ -10,7 +10,11 @@
         "validate": "node scripts/templates.mjs validate",
         "build": "node scripts/templates.mjs build",
         "check": "node scripts/templates.mjs check",
-        "test": "node --test scripts/templates.test.mjs scripts/sunspec.test.mjs",
-        "sunspec": "node scripts/sunspec.mjs"
+        "test": "node --test scripts/templates.test.mjs scripts/sunspec.test.mjs scripts/solarman.test.mjs",
+        "sunspec": "node scripts/sunspec.mjs",
+        "solarman": "node scripts/solarman.mjs"
+    },
+    "devDependencies": {
+        "yaml": "^2.9.1"
     }
 }
