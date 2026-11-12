@@ -65,3 +65,16 @@ test('address format is detected where it is unambiguous', () => {
     assert.equal(check('A/B/holding-registers.tsv', [HEADER, row(40001, 'x'), row(103247, 'y')].join('\n')).addressing, 'alias');
     assert.equal(check('A/B/holding-registers.tsv', [HEADER, row(40001, 'x')].join('\n')).addressing, undefined);
 });
+
+test('directAddresses is only kept for bit registers with alias addresses', () => {
+    const coils = '_address\tname\tdescription\tformula\trole\troom\tpoll\twp\tcw\tisScale\n1\tx\t\t\tvalue\t\ttrue\tfalse\tfalse\tfalse\n17\ty\t\t\tvalue\t\ttrue\tfalse\tfalse\tfalse';
+    const r1 = validateFile('A/B/coils.tsv', Buffer.from(coils), { addressing: 'alias', directAddresses: true });
+    assert.equal(r1.directAddresses, true);
+    const r2 = validateFile('A/B/coils.tsv', Buffer.from(coils), { addressing: 'raw', directAddresses: true });
+    assert.equal(r2.directAddresses, undefined);
+    assert.match(r2.issues.map(i => i.message).join(), /no effect with raw/);
+    const r3 = validateFile('A/B/holding-registers.tsv', Buffer.from([HEADER, row(40001, 'x')].join('\n')), { directAddresses: false });
+    assert.equal(r3.directAddresses, undefined);
+    const r4 = validateFile('A/B/coils.tsv', Buffer.from(coils), { addressing: 'alias', directAddresses: 'yes' });
+    assert.equal(r4.kind, 'invalid');
+});

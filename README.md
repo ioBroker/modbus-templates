@@ -64,6 +64,19 @@ derived from the file names. All keys are optional:
 (with offset 30001/40001/10001/1, "Show aliases" on). If an address is below the offset, `raw` is detected
 automatically. Otherwise the adapter asks the user, so please set it if you know it.
 
+`directAddresses` (`true`/`false`) is only needed for **coils and discrete inputs with `"addressing": "alias"`**: it is the
+instance option "Use direct addresses by aliases" at the time of the export. It changes the bit order inside each block of
+16 bits (without it, alias 10001 is bit 15 of the first block, with it bit 0). For registers and raw addresses it has no effect.
+If it is missing for such a file, the adapter asks the user.
+
+```json
+{
+    "files": {
+        "discrete-inputs.tsv": { "addressing": "alias", "directAddresses": true }
+    }
+}
+```
+
 ### Check your files before the pull request
 Every pull request is validated automatically. You can do the same locally with Node.js 18 or newer:
 

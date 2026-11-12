@@ -578,8 +578,31 @@ export function validateFile(relPath, buffer, manifestEntry) {
         addressing = addressing === 'raw' ? addressing : 'alias';
     }
 
+    // "Direct addresses" changes the bit order of coils and discrete inputs, but only if aliases are used
+    let directAddresses = manifestEntry?.directAddresses;
+    if (directAddresses !== undefined) {
+        if (typeof directAddresses !== 'boolean') {
+            add('error', `directAddresses in ${MANIFEST_FILE} must be true or false`);
+            directAddresses = undefined;
+        } else if (registerType !== 'coils' && registerType !== 'disInputs') {
+            add('warning', `directAddresses in ${MANIFEST_FILE} is only used for coils and discrete inputs`);
+            directAddresses = undefined;
+        } else if (addressing === 'raw') {
+            add('warning', `directAddresses in ${MANIFEST_FILE} has no effect with raw addresses`);
+            directAddresses = undefined;
+        }
+    }
+
     const hasErrors = issues.some(i => i.level === 'error');
-    return { kind: hasErrors ? 'invalid' : 'registers', registerType, addressing, header, rows: dataRows, issues };
+    return {
+        kind: hasErrors ? 'invalid' : 'registers',
+        registerType,
+        addressing,
+        directAddresses,
+        header,
+        rows: dataRows,
+        issues,
+    };
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -608,7 +631,7 @@ function loadManifests(files, issues) {
                 issues.push({ file: f, level: 'error', message: `files: "${file}" does not exist` });
             }
             for (const key of Object.keys(entry)) {
-                if (!['registerType', 'title', 'addressing'].includes(key)) {
+                if (!['registerType', 'title', 'addressing', 'directAddresses'].includes(key)) {
                     issues.push({ file: f, level: 'warning', message: `files: "${file}" has unknown key "${key}"` });
                 }
             }
@@ -751,6 +774,7 @@ function buildIndex(scanResult) {
             registerType: r.registerType,
             registers: r.rows.length,
             ...(r.addressing ? { addressing: r.addressing } : {}),
+            ...(r.directAddresses !== undefined ? { directAddresses: r.directAddresses } : {}),
             ...(deviceIds.length ? { deviceIds } : {}),
             ...(r.issues.some(i => i.level === 'warning') ? { warnings: r.issues.filter(i => i.level === 'warning').length } : {}),
         });
