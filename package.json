@@ -1,0 +1,15 @@
+{
+    "name": "modbus-templates",
+    "private": true,
+    "description": "Register templates for ioBroker.modbus",
+    "license": "MIT",
+    "engines": {
+        "node": ">=18"
+    },
+    "scripts": {
+        "validate": "node scripts/templates.mjs validate",
+        "build": "node scripts/templates.mjs build",
+        "check": "node scripts/templates.mjs check",
+        "test": "node --test scripts/templates.test.mjs"
+    }
+}

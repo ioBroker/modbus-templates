@@ -1,0 +1,7 @@
+{
+    "manufacturer": "SMA",
+    "files": {
+        "eingang-registers.tsv": { "addressing": "raw" },
+        "holding-registers.tsv": { "addressing": "raw" }
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "name": "SMA Sunny Tripower X",
+    "manufacturer": "SMA",
+    "files": {
+        "Tripower X/TripowerX15.tsv": { "addressing": "raw", "title": "Tripower X 15" }
+    }
+}
