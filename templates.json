@@ -1286,7 +1286,7 @@
           "title": "holding-registers-meter-battery",
           "registerType": "holdingRegs",
           "registers": 113,
-          "addressing": "alias",
+          "addressing": "raw",
           "warnings": 1
         },
         {
@@ -1294,6 +1294,7 @@
           "title": "holding-registers-meter1",
           "registerType": "holdingRegs",
           "registers": 80,
+          "addressing": "raw",
           "warnings": 1
         },
         {
@@ -1301,7 +1302,7 @@
           "title": "holding-registers-S10KRWB-SE30K-Battery",
           "registerType": "holdingRegs",
           "registers": 99,
-          "addressing": "alias",
+          "addressing": "raw",
           "deviceIds": [
             1,
             2
