@@ -127,6 +127,39 @@ Warnings (the file is offered, but please check):
 * duplicate names, role unknown to the admin GUI, factor `0`
 * register type not visible in the file name
 
+### Generate a file for a SunSpec device
+Many inverters, meters and batteries (SolarEdge, Fronius, SMA, Kostal, ...) implement the
+[SunSpec](https://sunspec.org) models. `scripts/sunspec.mjs` creates the register file from the official model
+definitions, so nothing has to be typed from the data sheet. Only the start address of each model is needed. You find
+it in the data sheet of the device: the register with the model ID (e.g. `1` for "common", `103` for a three phase
+inverter, `203` for a meter) is the start.
+
+```json
+{
+    "marker": 40000,
+    "models": [
+        { "id": 1, "address": 40002, "prefix": "C_", "skip": ["Pad"] },
+        { "id": 103, "address": 40069, "prefix": "I_" },
+        { "id": 1, "address": 40121, "prefix": "M1_C_", "skip": ["Pad"] },
+        { "id": 203, "address": 40188, "prefix": "M1_" }
+    ]
+}
+```
+
+```bash
+npm run sunspec -- layout.json --out holding-registers.tsv
+```
+
+* `marker`: address of `SunS` (optional, adds this register)
+* `prefix`: put in front of every name, needed if a model is used more than once (e.g. common model of the meter)
+* `repeat`: number of repetitions of a repeating group, e.g. `{ "module": 2 }` for 2 MPPT trackers of model 160
+* `skip`: names of points to leave out
+
+The addresses are raw, the scale factors are converted to formulas (`x * Math.pow(10, sf['40084'])`) and the values of
+enumerations are written to the description. The model definitions are loaded from
+[sunspec/models](https://github.com/sunspec/models) (Apache-2.0, © SunSpec Alliance); `--models <dir>` uses local
+copies of `model_N.json` instead. Please mention the source in the README of the device.
+
 ## How to get my exports in here?
 In fact there are two options
 
