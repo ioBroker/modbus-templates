@@ -111,6 +111,24 @@
       ]
     },
     {
+      "id": "Energiezaehler/Eastron SDM630",
+      "category": "Energiezaehler",
+      "name": "Eastron SDM630",
+      "readme": "Energiezaehler/Eastron SDM630/README.md",
+      "files": [
+        {
+          "path": "Energiezaehler/Eastron SDM630/input-registers.tsv",
+          "title": "input-registers",
+          "registerType": "inputRegs",
+          "registers": 85,
+          "deviceIds": [
+            1
+          ],
+          "warnings": 1
+        }
+      ]
+    },
+    {
       "id": "Energiezaehler/Finder Typ 7M",
       "category": "Energiezaehler",
       "name": "Finder Typ 7M",
@@ -386,6 +404,15 @@
       "readme": "Heizungsanlagen/Wolf FHS 180 280/README.md",
       "files": [
         {
+          "path": "Heizungsanlagen/Wolf FHS 180 280/holding-registers.tsv",
+          "title": "holding-registers",
+          "registerType": "holdingRegs",
+          "registers": 11,
+          "deviceIds": [
+            1
+          ]
+        },
+        {
           "path": "Heizungsanlagen/Wolf FHS 180 280/input-registers.tsv",
           "title": "input-registers",
           "registerType": "inputRegs",
@@ -445,6 +472,16 @@
             2
           ],
           "warnings": 1
+        },
+        {
+          "path": "Lueftungsanlagen/Meltem/meltem_optional_config.tsv",
+          "title": "meltem_optional_config",
+          "registerType": "holdingRegs",
+          "registers": 11,
+          "deviceIds": [
+            2
+          ],
+          "warnings": 2
         }
       ]
     },
@@ -496,6 +533,22 @@
       ]
     },
     {
+      "id": "PV-Wechselrichter/Alpha-ESS",
+      "category": "PV-Wechselrichter",
+      "name": "Alpha-ESS",
+      "readme": "PV-Wechselrichter/Alpha-ESS/README.md",
+      "files": [
+        {
+          "path": "PV-Wechselrichter/Alpha-ESS/holding_register.txt",
+          "title": "holding_register",
+          "registerType": "holdingRegs",
+          "registers": 104,
+          "addressing": "raw",
+          "warnings": 3
+        }
+      ]
+    },
+    {
       "id": "PV-Wechselrichter/Deye",
       "category": "PV-Wechselrichter",
       "name": "Deye",
@@ -518,6 +571,13 @@
             1
           ],
           "warnings": 4
+        },
+        {
+          "path": "PV-Wechselrichter/Deye/holding-registers.tsv",
+          "title": "holding-registers",
+          "registerType": "holdingRegs",
+          "registers": 120,
+          "warnings": 47
         },
         {
           "path": "PV-Wechselrichter/Deye/SG01HP03-holding-registers.tsv",
@@ -1033,6 +1093,22 @@
           "deviceIds": [
             3
           ]
+        }
+      ]
+    },
+    {
+      "id": "PV-Wechselrichter/Sofar Solar ZCS Azzurro HYD 5-20K",
+      "category": "PV-Wechselrichter",
+      "name": "Sofar Solar ZCS Azzurro HYD 5-20K",
+      "readme": "PV-Wechselrichter/Sofar Solar ZCS Azzurro HYD 5-20K/README.md",
+      "files": [
+        {
+          "path": "PV-Wechselrichter/Sofar Solar ZCS Azzurro HYD 5-20K/holding-registers.tsv",
+          "title": "holding-registers",
+          "registerType": "holdingRegs",
+          "registers": 616,
+          "addressing": "raw",
+          "warnings": 33
         }
       ]
     },
