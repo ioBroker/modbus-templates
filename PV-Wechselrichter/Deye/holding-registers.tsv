@@ -47,7 +47,7 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 40535	Total PV power Wh low word	Gesamt-PV-Leistung Wh niedriges Wort	kwh	uint16be	1	0,1	0		level		true	false	false	false
 40553	AC Relay	AC relay		uint16be	1	0	0	x < 2? 0:1	level		true	false	false	false
 40553	Ac relay 2	AC relay2		uint16be	1		0		level		true	false	false	false
-40587	battery temperature	Batterietemperatur	°C	uint16be	1	0,01	0		level		true	false	false	false
+40587	battery temperature	Batterietemperatur	°C	uint16be	1	0,1	-100		level		true	false	false	false
 40588	battery voltage	Batteriespannung	V	uint16be	1	0,01	0		level		true	false	false	false
 40589	battery capacity	Batteriekapazität	%	uint16be	1	1	0		level		true	false	false	false
 40591	Battery output power	Ausgangsleistung der Batterie	W	int16be	1	1	0		level		true	false	false	false
@@ -71,8 +71,8 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 40617	A Out-of-grid -power L1	A Außerhalb des Netzes - Strom L1	W	uint16be	1	1	0		level		true	false	false	false
 40618	A Out-of-grid -power L2	A Außerhalb des Netzes - Strom L2	W	uint16be	1	1	0		level		true	false	false	false
 40619	A Out-of-grid -power L3	A Außerhalb des Netzes - Strom L3	W	uint16be	1	1	0		level		true	false	false	false
-40620	Out-of-grid –total power	Außerhalb des Netzes – Gesamtleistung	W	uint16be	1	1	0		level		true	false	false	false
-40621	Out-of-grid –total apparent power	Außerhalb des Netzes – Gesamtscheinleistung	VA	uint16be	1	1	0		level		true	false	false	false
+40620	Out-of-grid - total power	Außerhalb des Netzes – Gesamtleistung	W	uint16be	1	1	0		level		true	false	false	false
+40621	Out-of-grid - total apparent power	Außerhalb des Netzes – Gesamtscheinleistung	VA	uint16be	1	1	0		level		true	false	false	false
 40622	Grid-connected power factor PF	Netzgekoppelter Leistungsfaktor PF		uint16be	1	1	0		level		true	false	false	false
 40623	Grid side A-phase power	Netzseitiger L1-Phasen-Strom	W	uint16be	1	1	0		level		true	false	false	false
 40624	Grid side B-phase power	Netzseitiger L2-Phasen-Strom	W	uint16be	1	1	0		level		true	false	false	false
