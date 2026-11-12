@@ -17,5 +17,16 @@
             }
         ],
         "note": "SunSpec common model, C_Manufacturer 'SolarEdge'"
+    },
+    "files": {
+        "holding-registers-meter1.tsv": {
+            "addressing": "raw"
+        },
+        "holding-registers-meter-battery.tsv": {
+            "addressing": "raw"
+        },
+        "holding-registers-S10KRWB-SE30K-Battery.tsv": {
+            "addressing": "raw"
+        }
     }
 }

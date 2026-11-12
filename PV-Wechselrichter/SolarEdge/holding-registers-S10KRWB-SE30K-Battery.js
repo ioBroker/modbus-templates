@@ -102,21 +102,21 @@ createState('SolarEdge.Battery1.SOE', {
 // Beim Start die Variablen mit den aktuellen Werten füllen
 //
 // Batterie:
-tempState = getState('modbus.0.holdingRegisters.1.97733_Battery_1_State_of_Energy').val;
+tempState = getState('modbus.0.holdingRegisters.1.57732_Battery_1_State_of_Energy').val;
 last_Battery1_SOE = precisionRound((tempState >= 0 && tempState <= 100) ? tempState : 0, 1);
 setState('SolarEdge.Battery1.SOE', last_Battery1_SOE, true);
-last_Battery1_InstantaneousPower = getState('modbus.0.holdingRegisters.1.97717_Battery_1_Instantaneous_Power').val;
+last_Battery1_InstantaneousPower = getState('modbus.0.holdingRegisters.1.57716_Battery_1_Instantaneous_Power').val;
 
 // Wechselrichter SE10K-RWB48
-last_SE10K_I_DC_Power = getState('modbus.0.holdingRegisters.1.40101_I_DC_Power').val;
-last_SE10K_I_AC_Power = Math.round(getState('modbus.0.holdingRegisters.1.40084_I_AC_Power').val);
+last_SE10K_I_DC_Power = getState('modbus.0.holdingRegisters.1.40100_I_DC_Power').val;
+last_SE10K_I_AC_Power = Math.round(getState('modbus.0.holdingRegisters.1.40083_I_AC_Power').val);
 
 // Wechselrichter SE30K
-last_SE30K_I_DC_Power = getState('modbus.0.holdingRegisters.2.40101_I_DC_Power').val;
-last_SE30K_I_AC_Power = Math.round(getState('modbus.0.holdingRegisters.2.40084_I_AC_Power').val);
+last_SE30K_I_DC_Power = getState('modbus.0.holdingRegisters.2.40100_I_DC_Power').val;
+last_SE30K_I_AC_Power = Math.round(getState('modbus.0.holdingRegisters.2.40083_I_AC_Power').val);
 
 // Einspeise/Bezugszähler
-last_M_AC_Power = getState('modbus.0.holdingRegisters.1.40207_M_AC_Power').val;
+last_M_AC_Power = getState('modbus.0.holdingRegisters.1.40206_M_AC_Power').val;
 
 //
 // Änderungen erkennen und in die Variablen schreiben
@@ -125,22 +125,22 @@ last_M_AC_Power = getState('modbus.0.holdingRegisters.1.40207_M_AC_Power').val;
 on({id:/^modbus\.0\.holdingRegisters\.[1-2]\.40084_I_AC_Power$/, change:'ne'}, function(obj) {
 
     switch(obj.id) {
-        case 'modbus.0.holdingRegisters.1.40084_I_AC_Power':
+        case 'modbus.0.holdingRegisters.1.40083_I_AC_Power':
             last_SE10K_I_AC_Power = Math.round(obj.state.val);
             break;
-        case 'modbus.0.holdingRegisters.2.40084_I_AC_Power':
+        case 'modbus.0.holdingRegisters.2.40083_I_AC_Power':
             last_SE30K_I_AC_Power = Math.round(obj.state.val);
             break;
     }
 });
 
 // Batterieleistung
-on({id:'modbus.0.holdingRegisters.1.97717_Battery_1_Instantaneous_Power', change:'ne'}, function(obj){
+on({id:'modbus.0.holdingRegisters.1.57716_Battery_1_Instantaneous_Power', change:'ne'}, function(obj){
     last_Battery1_InstantaneousPower = obj.state.val;
 });
 
 // Batterie State of Energy
-on({id:'modbus.0.holdingRegisters.1.97733_Battery_1_State_of_Energy', change:'ne'}, function(obj){
+on({id:'modbus.0.holdingRegisters.1.57732_Battery_1_State_of_Energy', change:'ne'}, function(obj){
     var temp = precisionRound((obj.state.val >= 0 && obj.state.val <= 100) ? obj.state.val : -1, 1);
     if (temp >= 0){
         last_Battery1_SOE = temp;
@@ -151,17 +151,17 @@ on({id:'modbus.0.holdingRegisters.1.97733_Battery_1_State_of_Energy', change:'ne
 // DC-Leistung der Wechselrichter
 on({id:/^modbus\.0\.holdingRegisters\.[1-2]\.40101_I_DC_Power$/, change:'ne'}, function(obj) {
     switch(obj.id) {
-        case 'modbus.0.holdingRegisters.1.40101_I_DC_Power':
+        case 'modbus.0.holdingRegisters.1.40100_I_DC_Power':
             last_SE10K_I_DC_Power = obj.state.val;
             break;
-        case 'modbus.0.holdingRegisters.2.40101_I_DC_Power':
+        case 'modbus.0.holdingRegisters.2.40100_I_DC_Power':
             last_SE30K_I_DC_Power = obj.state.val;
             break;
     }
 });
 
 // Wieviel Leistung wird aktuell aus dem Netz bezogen?
-on({id:'modbus.0.holdingRegisters.1.40207_M_AC_Power', change:'ne'}, function(obj) {
+on({id:'modbus.0.holdingRegisters.1.40206_M_AC_Power', change:'ne'}, function(obj) {
     last_M_AC_Power = obj.state.val;
 });
 

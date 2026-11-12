@@ -11,7 +11,7 @@ _address	deviceId	name	description	unit	type	len	factor	offset	formula	role	room
 531	1	PV2_Power pro Tag	Day_PV-2_Power kWh	kWh	int16be	1	0,1	0		level		true	false	false	false
 541	1	AC_Temperatur	AC_Temp	°C	int16be	1	0,01	0		level		true	false	false	false
 553	1	Warnhinweis1	Warning message word 1		string	1	1	0		level		true	false	false	false
-586	1	Batterietemperatur	battery temperature	°C	int16be	1	0,01	10		level		true	false	false	false
+586	1	Batterietemperatur	battery temperature	°C	int16be	1	0,1	-100		level		true	false	false	false
 587	1	Batteriespannung	battery voltage	V	int16be	1	0,01	0		level		true	false	false	false
 588	1	Batteriekapazitaet SOC	battery capacity	%	int16be	1	1	0		level		true	false	false	false
 590	1	Batterieausgangsleistung	Battery output power	W	int16be	1	1	0		level		true	false	false	false
