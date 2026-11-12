@@ -58,7 +58,7 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 142	Work Mode	0=Export First, 1=Zero Export To Load, 2=Zero Export To CT		uint16be	1	1	0		level		true	false	false	false	false			
 143	Export Surplus Power		W	uint16be	1	10	0		level		true	false	false	false	false			
 145	Export Surplus			uint16be	1	1	0		level		true	false	false	false	false			
-146	Time of Use	0=Disabled, 3=Monday, 5=Tuesday, 9=Wednesday, 17=Thursday, 33=Friday, 65=Saturday, 129=Sunday, 63=Weekdays, 193=Weekend, 253=Week -Monday, 251=Week -Tuesday, 247=Week -Wednesday, 239=Week -Thursday, 223=Week -Friday, 191=Week -Saturday, 127=Week -Sunday, 255=Week, =Enabled		uint16be	1	1	0		level		true	false	false	false	false			
+146	Time of Use	bits (0..15 in the first register): 0=Disabled, 3=Monday, 5=Tuesday, 9=Wednesday, 17=Thursday, 33=Friday, 65=Saturday, 129=Sunday, 63=Weekdays, 193=Weekend, 253=Week -Monday, 251=Week -Tuesday, 247=Week -Wednesday, 239=Week -Thursday, 223=Week -Friday, 191=Week -Saturday, 127=Week -Sunday, 255=Week, bit 0=Enabled		uint16be	1	1	0		level		true	false	false	false	false			
 148	Program 1 Time	time as HHMM		uint16be	1	1	0		level		true	false	false	false	false			
 149	Program 2 Time	time as HHMM		uint16be	1	1	0		level		true	false	false	false	false			
 150	Program 3 Time	time as HHMM		uint16be	1	1	0		level		true	false	false	false	false			
@@ -118,7 +118,7 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 223	Battery BMS Type	0=PYLON, 1=Tianbangda, 2=KOK, 3=Keith, 4=Toppai, 5=Peneng 485, 6=Jeris 485, 7=Sunwoda 485, 8=Xinrui 485, 9=Tianbangda 485, 10=Shenggao Electric CAN		uint16be	1	1	0		level		true	false	false	false	false			
 231	Grid Max Export power		W	uint16be	1	10	0		level		true	false	false	false	false			
 233	Grid Max Import power		W	uint16be	1	10	0		level		true	false	false	false	false			
-234	AC Coupling	Couple inverters and batteries using AC lines: 0=Disabled, =Grid, =Load		uint16be	1	1	0		level		true	false	false	false	false			
+234	AC Coupling	Couple inverters and batteries using AC lines: bits (0..15 in the first register): 0=Disabled, bit 0=Grid, bit 1=Load		uint16be	1	1	0		level		true	false	false	false	false			
 237	Export Asymmetry			uint16be	1	1	0		level		true	false	false	false	false			
 340	PV Power	Max PV power limiter	W	uint16be	1	10	0		level		true	false	false	false	false			
 341	MPPT multi-point scanning	Find the MPP even when there are partial shading conditions on the solar panels		uint16be	1	1	0		level		true	false	false	false	false			
@@ -143,7 +143,7 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 552	Device Relay	0=Off, 1/3=Inverter, 4/6=Grid, 5/7=Inverter-Grid, 8=Generator, 9/11=Inverter-Gen, 12/14=Grid-Generator, 13/15=Inv-Grid-Gen, default=Power Supply		uint16be	1	1	0		value		true	false	false	false	false			
 552	Grid			uint16be	1	1	0	((x >> 2) & 1)	value		true	false	false	false	false			
 552	Generator (State)			uint16be	1	1	0	((x >> 3) & 1)	value		true	false	false	false	false			
-553	Device Alarm	0=OK, =Fan failure, =Grid phase failure, =Meter communication failure, =Battery loss, =Parallel communication quality, default=Problem		uint32sw	2	1	0		value		true	false	false	false	false			
+553	Device Alarm	bits (0..15 in the first register): 0=OK, bit 1=Fan failure, bit 2=Grid phase failure, bit 3=Meter communication failure, bit 30=Battery loss, bit 31=Parallel communication quality, default=Problem		uint32sw	2	1	0		value		true	false	false	false	false			
 586	Battery Temperature		°C	uint16be	1	0,1	-100		value.temperature		true	false	false	false	true	keepLastValid	-99	99
 587	Battery Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
 588	Battery		%	uint16be	1	1	0		value.battery		true	false	false	false	true	keepLastValid	0	101

@@ -14,6 +14,8 @@
  * - solarman: `definition` in ha-solarman, `ref` branch/tag/commit (default main), `mod` model variant,
  *   `files` the file names ({ "holdingRegs": "...", "inputRegs": "..." }), only these register types are written
  * - `skip`: names of registers to leave out
+ * - `override`: corrections of the source, e.g. [{ "name": "^ReactivePower_", "unit": "var" }]: the columns are set
+ *   in all registers whose name matches the regular expression (numbers with a dot are written with a comma)
  *
  * The GitHub Action runs this after every merge into main and once a week (so changes of the sources arrive) and
  * commits the files. A generated file with errors is not written, the old one stays.
@@ -68,11 +70,31 @@ export async function generateEntry(entry, loaders) {
         throw new Error(`Unknown source "${entry.source}"`);
     }
 
+    const overrides = (entry.override || []).map(o => ({ ...o, re: new RegExp(o.name), used: false }));
+    const fix = row => {
+        for (const o of overrides) {
+            if (o.re.test(row.name)) {
+                o.used = true;
+                for (const [key, value] of Object.entries(o)) {
+                    if (!['name', 're', 'used'].includes(key)) {
+                        row[key] = typeof value === 'number' ? String(value).replace('.', ',') : String(value);
+                    }
+                }
+            }
+        }
+        return row;
+    };
+
     const files = [];
     for (const [registerType, all] of Object.entries(rowsByType)) {
-        const rows = keep(all);
+        const rows = keep(all).map(fix);
         if (rows.length && names[registerType]) {
             files.push({ file: names[registerType], registerType, content: toTsv(rows, registerType), rows: rows.length });
+        }
+    }
+    for (const o of overrides) {
+        if (!o.used) {
+            warnings.push(`override: "${o.name}" matches no register`);
         }
     }
     for (const name of skip) {

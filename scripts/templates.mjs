@@ -694,11 +694,11 @@ export function validateDetect(detect) {
 
 const GENERATE_SOURCES = {
     sunspec: {
-        keys: ['source', 'file', 'marker', 'models', 'skip'],
+        keys: ['source', 'file', 'marker', 'models', 'skip', 'override'],
         files: entry => ({ holdingRegs: entry.file || 'holding-registers.tsv' }),
     },
     solarman: {
-        keys: ['source', 'definition', 'ref', 'mod', 'files', 'skip'],
+        keys: ['source', 'definition', 'ref', 'mod', 'files', 'skip', 'override'],
         // with "files" only the register types listed there are written
         files: entry => entry.files || { holdingRegs: 'holding-registers.tsv', inputRegs: 'input-registers.tsv' },
     },
@@ -729,6 +729,29 @@ export function validateGenerate(generate) {
         }
         if (entry.skip !== undefined && (!Array.isArray(entry.skip) || !entry.skip.every(s => typeof s === 'string'))) {
             errors.push(`${at}.skip must be a list of names`);
+        }
+        if (entry.override !== undefined) {
+            if (!Array.isArray(entry.override)) {
+                errors.push(`${at}.override must be a list of { "name": "regular expression", "column": "value" }`);
+            } else {
+                entry.override.forEach((o, j) => {
+                    try {
+                        new RegExp(o?.name);
+                        if (typeof o?.name !== 'string' || !o.name) {
+                            throw new Error('empty');
+                        }
+                    } catch {
+                        errors.push(`${at}.override[${j}].name must be a regular expression for the names`);
+                    }
+                    for (const [key, value] of Object.entries(o || {})) {
+                        if (key !== 'name' && (!KNOWN_COLUMNS.has(key) || key === '_address' || key === 'deviceId')) {
+                            errors.push(`${at}.override[${j}]: "${key}" is not a column that can be changed`);
+                        } else if (!['string', 'number', 'boolean'].includes(typeof value)) {
+                            errors.push(`${at}.override[${j}].${key} must be a text, number or true/false`);
+                        }
+                    }
+                });
+            }
         }
         if (entry.source === 'sunspec') {
             if (!Array.isArray(entry.models) || !entry.models.length) {

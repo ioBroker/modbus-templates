@@ -1,0 +1,30 @@
+{
+    "files": {
+        "ha-solarman-g3hyd.tsv": {
+            "title": "All registers from ha-solarman (sofar_g3hyd)"
+        }
+    },
+    "generate": [
+        {
+            "source": "solarman",
+            "definition": "sofar_g3hyd",
+            "files": {
+                "holdingRegs": "ha-solarman-g3hyd.tsv"
+            },
+            "override": [
+                {
+                    "name": "^ReactivePower_",
+                    "unit": "var"
+                },
+                {
+                    "name": "^ApparentPower_(Output|Load)",
+                    "factor": "10"
+                },
+                {
+                    "name": "^ApparentPower_PCC",
+                    "factor": "-10"
+                }
+            ]
+        }
+    ]
+}

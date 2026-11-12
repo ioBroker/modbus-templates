@@ -59,12 +59,17 @@ function describeLookup(lookup) {
     if (!Array.isArray(lookup)) {
         return '';
     }
-    return lookup
+    const text = lookup
         .map(entry => {
+            // "bit": the text of a set bit (bit 0..15 in the first register, 16..31 in the second, ...)
+            if (entry.bit !== undefined) {
+                return `bit ${entry.bit}=${entry.value}`;
+            }
             const keys = Array.isArray(entry.key) ? entry.key : [entry.key];
             return `${keys.join('/')}=${entry.value}`;
         })
         .join(', ');
+    return lookup.some(entry => entry.bit !== undefined) ? `bits (0..15 in the first register): ${text}` : text;
 }
 
 function bounds(validation) {
@@ -149,6 +154,10 @@ function layout(item) {
             if (n === 4 && descending) {
                 return { address: start, type: signed ? 'int64be' : 'uint64be', len: 4 };
             }
+            // e.g. fault bits in many registers
+            if (n > 4 && ascending) {
+                return { address: start, type: 'rawhex', len: n };
+            }
             // e.g. the power of the large Deye models: low word in one block, high word in another one.
             // The adapter cannot combine them, the low word alone is right up to 32767 (signed) or 65535.
             if (n === 2) {
@@ -175,7 +184,14 @@ function layout(item) {
         case 10:
             return ascending ? { address: start, type: 'rawhex', len: n } : { error: 'registers that do not follow each other' };
         case 9:
-            return n === 1 ? { address: start, type: 'uint16be', len: 1 } : { error: 'time in several registers' };
+            if (n === 1) {
+                return { address: start, type: 'uint16be', len: 1 };
+            }
+            // one register per part, as try_parse_time of ha-solarman
+            if (n <= 3 && ascending) {
+                return { address: start, type: 'uint16be', len: 1, parts: ['hour', 'minute', 'second'].slice(0, n) };
+            }
+            return { error: `time in ${n} registers ${regs.map(hex).join(', ')} is not supported` };
         default:
             return { error: `rule ${item.rule} is not supported` };
     }
@@ -280,43 +296,47 @@ export function convertDefinition(definition, options = {}) {
                 description = [description, result.note].filter(Boolean).join(', ');
                 lowWordOnly.push(item.name);
             }
-            if (item.rule === 9) {
-                description = [description, 'time as HHMM'].filter(Boolean).join(', ');
+            if (item.rule === 9 && !result.parts) {
+                const format = item.hex !== undefined ? 'time as hex 0xHHMM' : 'time as HHMM';
+                description = [description, format].filter(Boolean).join(', ');
             }
 
             // an empty name gives the entity the name of the device in Home Assistant (e.g. the on/off switch)
-            let name = String(item.name ?? '').trim() || `${group.group} ${item.platform || 'state'}`;
-            if (names.has(`${regType}/${name}`)) {
-                name = `${name} (${group.group})`;
-            }
-            if (names.has(`${regType}/${name}`)) {
-                warnings.push(`${label}: name is used twice`);
-            }
-            names.add(`${regType}/${name}`);
-
+            const baseName = String(item.name ?? '').trim() || `${group.group} ${item.platform || 'state'}`;
             const { min, max } = bounds(item.validation);
             const sanitize = numeric && (min !== undefined || max !== undefined);
-            files[regType].push({
-                _address: String(result.address),
-                name,
-                description,
-                unit: item.uom || '',
-                type: result.type,
-                len: String(result.len),
-                factor,
-                offset,
-                formula,
-                role: role(item, result.type),
-                room: '',
-                poll: 'true',
-                wp: 'false',
-                cw: 'false',
-                isScale: 'false',
-                sanitize: sanitize ? 'true' : 'false',
-                sanitizeAction: sanitize ? 'keepLastValid' : '',
-                minValidValue: sanitize && min !== undefined ? String(round(min)) : '',
-                maxValidValue: sanitize && max !== undefined ? String(round(max)) : '',
-            });
+            for (const [i, part] of (result.parts || ['']).entries()) {
+                let name = part ? `${baseName} ${part}` : baseName;
+                if (names.has(`${regType}/${name}`)) {
+                    name = `${name} (${group.group})`;
+                }
+                if (names.has(`${regType}/${name}`)) {
+                    warnings.push(`${label}: name is used twice`);
+                }
+                names.add(`${regType}/${name}`);
+
+                files[regType].push({
+                    _address: String(result.address + i),
+                    name,
+                    description,
+                    unit: item.uom || '',
+                    type: result.type,
+                    len: String(result.len),
+                    factor,
+                    offset,
+                    formula,
+                    role: role(item, result.type),
+                    room: '',
+                    poll: 'true',
+                    wp: 'false',
+                    cw: 'false',
+                    isScale: 'false',
+                    sanitize: sanitize ? 'true' : 'false',
+                    sanitizeAction: sanitize ? 'keepLastValid' : '',
+                    minValidValue: sanitize && min !== undefined ? String(round(min)) : '',
+                    maxValidValue: sanitize && max !== undefined ? String(round(max)) : '',
+                });
+            }
         }
     }
 

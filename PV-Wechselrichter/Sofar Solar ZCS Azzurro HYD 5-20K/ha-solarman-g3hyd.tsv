@@ -1,0 +1,130 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale	sanitize	sanitizeAction	minValidValue	maxValidValue
+1028	Inverter status	0=Waiting, 1=Detection, 2=On-grid, 3=Emergency power supply, 4=Recoverable fault, 5=Permanent fault, 6=Upgrade, 7=Self-charging, 8=SVG, 9=PID		uint16be	1	1	0		value		true	false	false	false	false			
+1029	Device Fault	bits (0..15 in the first register): 0=OK, bit 0=ID01 Grid Overvoltage Protection, bit 1=ID02 Grid Undervoltage Protection, bit 2=ID03 Grid Overfrequency Protection, bit 3=ID04 Grid Underfrequency Protection, 10=LOOKUP, 14=ID03 Grid Overfrequency Protection, bit 4=ID05 Leakage current fault, bit 5=ID06 High penetration error, bit 6=ID07 Low penetration error, bit 7=ID08 Islanding error, bit 8=ID09 Grid voltage transient value overvoltage 1, bit 9=ID10 Grid voltage transient value overvoltage 2, bit 10=ID11 Grid line voltage error, bit 11=ID12 Inverter voltage error, bit 12=ID13 Anti-backflow overload, bit 13=ID14 Grid line voltage unbalance, bit 14=ID15 Inverter transient overvoltage, bit 15=ID16 Sudden grid phase change, bit 16=ID17 Grid current sampling error, bit 17=ID18 Grid current DC component sampling error (AC side), bit 18=ID19 Grid voltage sampling error (DC side), bit 19=ID20 Grid voltage sampling error (AC side), bit 20=ID21 Leakage current sampling error (DC side), bit 21=ID22 Leakage current sampling error (AC side), bit 22=ID23 Load voltage DC component sampling error, bit 23=ID24 DC input current sampling error, bit 24=ID25 DC component sampling error of grid current (DC side), bit 25=ID26 DC input branch current sampling error, bit 26=ID27 PV low impedance to ground, bit 27=ID28 PID abnormal output, bit 28=ID29 Leakage current consistency error, bit 29=ID30 Grid voltage consistency error, bit 30=ID31 DCI consistency error, bit 31=ID32 Neutral ground fault, bit 32=ID033 SPI communication error (DC side), bit 33=ID034 SPI communication error (AC side), bit 34=ID035 Chip error (DC side), bit 35=ID036 Chip error (AC side), bit 36=ID037 Auxiliary power error, bit 37=ID038 Inverter soft start failure, bit 38=ID039 Arc shutdown protection, bit 39=ID040 Weak light detection failure, bit 40=ID041 Relay detection failure, bit 41=ID042 Low insulation impedance, bit 42=ID043 Grounding error, bit 43=ID044 Input mode setting error, bit 44=ID045 CT error, bit 45=ID046 Input reversal error, bit 46=ID047 Parallel error, bit 47=ID048 Serial number error, bit 48=ID049 Battery temperature protection, bit 49=ID050 Heatsink 1 temperature protection, bit 50=ID051 Heater 2 temperature protection, bit 51=ID052 Heater 3 temperature protection, bit 52=ID053 Heatsink 4 temperature protection, bit 53=ID054 Radiator 5 temperature protection, bit 54=ID055 Radiator 6 temperature protection, bit 55=ID056 Reserved, bit 56=ID057 Ambient temperature 1 protection, bit 57=ID058 Ambient temperature 2 protection, bit 58=ID059 Module 1 temperature protection, bit 59=ID060 Module 2 temperature protection, bit 60=ID061 Module 3 temperature protection, bit 61=ID062 Module temperature difference is too large, bit 62=ID063 Reserved, bit 63=ID064 Reserved, bit 64=ID065 Bus voltage RMS unbalance, bit 65=ID066 Bus voltage transient value unbalance, bit 66=ID067 Bus undervoltage during grid connection, bit 67=ID068 Bus bar low voltage, bit 68=ID069 PV overvoltage, bit 69=ID070 Battery overvoltage, bit 70=ID071 LLC bus overvoltage protection, bit 71=ID072 Inverter bus voltage RMS software overvoltage, bit 72=ID073 Inverter bus voltage transient value software overvoltage, bit 73=ID074 Flying Cross Capacitor Overvoltage Protection, bit 74=ID075 Flying Cross capacitor undervoltage protection, bit 75=ID076 Reserved, bit 76=ID077 Reserved, bit 77=ID078 Reserved, bit 78=ID079 Reserved, bit 79=ID080 Reserved, bit 80=ID081 Battery overcurrent software protection, bit 81=ID082 DCI overcurrent protection, bit 82=ID083 Output transient current protection, bit 83=ID084 Buck-Boost software overcurrent, bit 84=ID085 Output RMS current protection, bit 85=ID086 PV instantaneous current overcurrent software protection, bit 86=ID087 PV parallel uneven current, bit 87=ID088 Output current unbalance, bit 88=ID089 PV software overcurrent protection, bit 89=ID090 Balanced circuit overcurrent protection, bit 90=ID091 Resonance protection, bit 91=ID092 Reserved, bit 92=ID093 Reserved, bit 93=ID094 Reserved, bit 94=ID095 Reserved, bit 95=ID096 Reserved, bit 96=ID097 LLC bus hardware overvoltage, bit 97=ID098 Inverter bus hardware overvoltage, bit 98=ID099 Buck-Boost hardware overcurrent, bit 99=ID100 Battery hardware overcurrent, bit 100=ID101 Reserved, bit 101=ID102 PV hardware overcurrent, bit 102=ID103 AC output hardware overcurrent, bit 103=ID104 Hardware differential overcurrent, bit 104=ID105 Meter communication error, bit 105=ID106 Serial number model error, bit 106=ID107 Hardware version mismatch, bit 107=ID108 Reserved, bit 108=ID109 Reserved, bit 109=ID110 Overload protection 1, bit 110=ID111 Overload protection 2, bit 111=ID112 Overload protection 3, bit 112=ID113 Overtemperature load shedding, bit 113=ID114 Frequency down load, bit 114=ID115 Frequency loading, bit 115=ID116 Voltage down load, bit 116=ID117 Voltage loading, bit 117=ID118 Low temperature load shedding, bit 118=ID119 Reserved, bit 119=ID120 Reserved, bit 120=ID121 Lightning protection failure (DC), bit 121=ID122 Lightning protection failure (AC), bit 122=ID123 Reserved, bit 123=ID124 Battery low voltage protection, bit 124=ID125 Battery low voltage shutdown, bit 125=ID126 Battery low voltage pre-alarm, bit 126=ID127 Reserved, bit 127=ID128 Reserved, bit 128=ID129 AC output hardware overcurrent permanent fault, bit 129=ID130 Bus overvoltage permanent fault, bit 130=ID131 Bus hardware overvoltage permanent fault, bit 131=ID132 PV uneven flow permanent fault, bit 132=ID133 Battery overcurrent permanent fault in EPS mode, bit 133=ID134 Output transient overcurrent permanent fault, bit 134=ID135 AC current unbalance permanent fault, bit 135=ID136 Inverter soft start failure fault, bit 136=ID137 Input mode setting error permanent fault, bit 137=ID138 Input overcurrent permanent fault, bit 138=ID139 Input hardware overcurrent permanent fault, bit 139=ID140 Relay permanent fault, bit 140=ID141 Bus unbalance permanent fault, bit 141=ID142 Lightning protection permanent fault (DC side), bit 142=ID143 Lightning protection permanent fault (AC side), bit 143=ID144 Grid relay fault, bit 144=ID145 USB fault, bit 145=ID146 WIFI fault, bit 146=ID147 Bluetooth fault, bit 147=ID148 RTC clock fault, bit 148=ID149 Communication board EEPROM error, bit 149=ID150 Communication board FLASH error, bit 150=ID151 The battery is partially disconnected, bit 151=ID152 Safety regulation version error, bit 152=ID153 SCI communication error (DC side), bit 153=ID154 SCI communication error (AC side), bit 154=ID155 SCI communication error (convergence board side), bit 155=ID156 Software version inconsistency, bit 156=ID157 Lithium battery 1 communication error, bit 157=ID158 Lithium battery 2 communication error, bit 158=ID159 Lithium battery 3 communication error, bit 159=ID160 Lithium battery 4 communication error, bit 160=ID161 Forced shutdown, bit 161=ID162 Remote shutdown, bit 162=ID163 Drms0 shutdown, bit 163=ID164 Power station communication failure shutdown, bit 164=ID165 Remote down load, bit 165=ID166 Logic interface down load, bit 166=ID167 Anti-Reverse Flow Downgrade, bit 167=ID168 Reserved, bit 168=ID169 Fan 1 failure, bit 169=ID170 Fan 2 failure, bit 170=ID171 Fan 3 failure, bit 171=ID172 Fan 4 failure, bit 172=ID173 Fan 5 failure, bit 173=ID174 Fan 6 failure, bit 174=ID175 Fan 7 failure, bit 175=ID176 Meter communication failure, bit 176=ID177 BMS overvoltage protection, bit 177=ID178 BMS undervoltage protection, bit 178=ID179 BMS high temperature protection, bit 179=ID180 BMS low temperature protection, bit 180=ID181 BMS overcurrent protection, bit 181=ID182 BMS short circuit protection, bit 182=ID183 BMS version inconsistency, bit 183=ID184 BMS CAN version inconsistency, bit 184=ID185 BMS CAN version is too low, bit 185=ID186 Battery discharge overtemperature protection, bit 186=ID187 Battery discharge low temperature protection, bit 187=ID188 Battery charging overtemperature protection, bit 188=ID189 Arc device communication failure, bit 189=ID190 Battery charging low temperature protection, bit 190=ID191 PID repair failed, bit 191=ID192 PLC module heartbeat loss, default=Problem		rawhex	12	1	0		state		true	false	false	false	false			
+1048	Ambient temperature 1		°C	int16be	1	1	0		value.temperature		true	false	false	false	false			
+1049	Ambient temperature 2		°C	int16be	1	1	0		value.temperature		true	false	false	false	false			
+1050	Radiator temperature 1		°C	int16be	1	1	0		value.temperature		true	false	false	false	false			
+1051	Radiator temperature 2		°C	int16be	1	1	0		value.temperature		true	false	false	false	false			
+1052	Radiator temperature 3		°C	int16be	1	1	0		value.temperature		true	false	false	false	false			
+1053	Radiator temperature 4		°C	int16be	1	1	0		value.temperature		true	false	false	false	false			
+1054	Radiator temperature 5		°C	int16be	1	1	0		value.temperature		true	false	false	false	false			
+1055	Radiator temperature 6		°C	int16be	1	1	0		value.temperature		true	false	false	false	false			
+1056	Module temperature 1		°C	int16be	1	1	0		value.temperature		true	false	false	false	false			
+1057	Module temperature 2		°C	int16be	1	1	0		value.temperature		true	false	false	false	false			
+1058	Module temperature 3		°C	int16be	1	1	0		value.temperature		true	false	false	false	false			
+1062	Production Time Today		min	uint16be	1	1	0		value		true	false	false	false	false			
+1067	Insulation resistance		kΩ	uint16be	1	1	0		value		true	false	false	false	false			
+1093	Device Serial Number			string	8	1	0		state		true	false	false	false	false			
+1101	Device Hardware Version			string	2	1	0		state		true	false	false	false	false			
+1107	Device Software Version Master			string	4	1	0		state		true	false	false	false	false			
+1111	Device Software Version Slave			string	4	1	0		state		true	false	false	false	false			
+1115	Device Safety Version			string	2	1	0		state		true	false	false	false	false			
+1120	Device Safety Firmware Version			string	4	1	0		state		true	false	false	false	false			
+1124	Device Safety Hardware Version			string	2	1	0		state		true	false	false	false	false			
+1156	Grid Frequency		Hz	uint16be	1	0,01	0		value		true	false	false	false	false			
+1157	ActivePower_Output_Total		W	int16be	1	10	0		value		true	false	false	false	false			
+1158	ReactivePower_Output_Total		var	int16be	1	10	0		value		true	false	false	false	false			
+1159	ApparentPower_Output_Total		VA	int16be	1	10	0		value		true	false	false	false	false			
+1160	ActivePower_PCC_Total		W	int16be	1	-10	0		value		true	false	false	false	false			
+1161	ReactivePower_PCC_Total		var	int16be	1	10	0		value		true	false	false	false	false			
+1162	ApparentPower_PCC_Total		VA	int16be	1	-10	0		value		true	false	false	false	false			
+1165	Voltage_Phase_R		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+1166	Current_Output_R		A	uint16be	1	0,01	0		value		true	false	false	false	false			
+1167	ActivePower_Output_R		W	int16be	1	10	0		value		true	false	false	false	false			
+1168	ReactivePower_Output_R		var	int16be	1	10	0		value		true	false	false	false	false			
+1169	PowerFactor_Output_R		%	int16be	1	0,001	0		value		true	false	false	false	false			
+1170	Current_PCC_R		A	uint16be	1	0,01	0		value		true	false	false	false	false			
+1171	ActivePower_PCC_R		W	int16be	1	10	0		value		true	false	false	false	false			
+1172	ReactivePower_PCC_R		var	int16be	1	10	0		value		true	false	false	false	false			
+1173	PowerFactor_PCC_R		%	int16be	1	0,001	0		value		true	false	false	false	false			
+1176	Voltage_Phase_S		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+1177	Current_Output_S		A	uint16be	1	0,01	0		value		true	false	false	false	false			
+1178	ActivePower_Output_S		W	int16be	1	10	0		value		true	false	false	false	false			
+1179	ReactivePower_Output_S		var	int16be	1	10	0		value		true	false	false	false	false			
+1180	PowerFactor_Output_S		%	int16be	1	0,001	0		value		true	false	false	false	false			
+1181	Current_PCC_S		A	uint16be	1	0,01	0		value		true	false	false	false	false			
+1182	ActivePower_PCC_S		W	int16be	1	10	0		value		true	false	false	false	false			
+1183	ReactivePower_PCC_S		var	int16be	1	10	0		value		true	false	false	false	false			
+1184	PowerFactor_PCC_S		%	int16be	1	0,001	0		value		true	false	false	false	false			
+1187	Voltage_Phase_T		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+1188	Current_Output_T		A	uint16be	1	0,01	0		value		true	false	false	false	false			
+1189	ActivePower_Output_T		W	int16be	1	10	0		value		true	false	false	false	false			
+1190	ReactivePower_Output_T		var	int16be	1	10	0		value		true	false	false	false	false			
+1191	PowerFactor_Output_T		%	int16be	1	0,001	0		value		true	false	false	false	false			
+1192	Current_PCC_T		A	uint16be	1	0,01	0		value		true	false	false	false	false			
+1193	ActivePower_PCC_T		W	int16be	1	10	0		value		true	false	false	false	false			
+1194	ReactivePower_PCC_T		var	int16be	1	10	0		value		true	false	false	false	false			
+1195	PowerFactor_PCC_T		%	int16be	1	0,001	0		value		true	false	false	false	false			
+1198	ActivePower_PV_Ext		W	uint16be	1	10	0		value		true	false	false	false	false			
+1199	ActivePower_Load_Sys		W	int16be	1	10	0		value		true	false	false	false	false			
+1284	ActivePower_Load_Total_EPS		W	int16be	1	10	0		value		true	false	false	false	false			
+1285	ReactivePower_Load_Total_EPS		var	int16be	1	10	0		value		true	false	false	false	false			
+1286	ApparentPower_Load_Total_EPS		VA	int16be	1	10	0		value		true	false	false	false	false			
+1287	Frequency_Output_EPS		Hz	uint16be	1	0,01	0		value		true	false	false	false	false			
+1290	Voltage_Output_R_EPS		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+1291	Current_Load_R_EPS		A	uint16be	1	0,01	0		value		true	false	false	false	false			
+1292	ActivePower_Load_R_EPS		W	int16be	1	10	0		value		true	false	false	false	false			
+1293	ReactivePower_Load_R_EPS		var	int16be	1	10	0		value		true	false	false	false	false			
+1294	ApparentPower_Load_R_EPS		VA	int16be	1	10	0		value		true	false	false	false	false			
+1295	LoadPeakRatio_R_EPS		%	int16be	1	0,01	0		value		true	false	false	false	false			
+1298	Voltage_Output_S_EPS		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+1299	Current_Load_S_EPS		A	uint16be	1	0,01	0		value		true	false	false	false	false			
+1300	ActivePower_Load_S_EPS		W	int16be	1	10	0		value		true	false	false	false	false			
+1301	ReactivePower_Load_S_EPS		var	int16be	1	10	0		value		true	false	false	false	false			
+1302	ApparentPower_Load_S_EPS		VA	int16be	1	10	0		value		true	false	false	false	false			
+1303	LoadPeakRatio_S_EPS		%	int16be	1	0,01	0		value		true	false	false	false	false			
+1306	Voltage_Output_T_EPS		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+1307	Current_Load_T_EPS		A	uint16be	1	0,01	0		value		true	false	false	false	false			
+1308	ActivePower_Load_T_EPS		W	int16be	1	10	0		value		true	false	false	false	false			
+1309	ReactivePower_Load_T_EPS		var	int16be	1	10	0		value		true	false	false	false	false			
+1310	ApparentPower_Load_T_EPS		VA	int16be	1	10	0		value		true	false	false	false	false			
+1311	LoadPeakRatio_T_EPS		%	int16be	1	0,01	0		value		true	false	false	false	false			
+1412	PV1 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+1413	PV1 Current		A	uint16be	1	0,01	0		value		true	false	false	false	false			
+1414	PV1 Power		W	uint16be	1	10	0		value		true	false	false	false	false			
+1415	PV2 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+1416	PV2 Current		A	uint16be	1	0,01	0		value		true	false	false	false	false			
+1417	PV2 Power		W	uint16be	1	10	0		value		true	false	false	false	false			
+1418	PV3 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+1419	PV3 Current		A	uint16be	1	0,01	0		value		true	false	false	false	false			
+1420	PV3 Power		W	uint16be	1	10	0		value		true	false	false	false	false			
+1421	PV4 Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+1422	PV4 Current		A	uint16be	1	0,01	0		value		true	false	false	false	false			
+1423	PV4 Power		W	uint16be	1	10	0		value		true	false	false	false	false			
+1476	PV Power		W	uint16be	1	100	0		value		true	false	false	false	true	keepLastValid	0	50000
+1540	Battery Voltage		V	uint16be	1	0,1	0		value		true	false	false	false	false			
+1541	Battery Current		A	int16be	1	0,01	0		value		true	false	false	false	false			
+1542	Battery Power		W	int16be	1	-10	0		value		true	false	false	false	false			
+1543	Battery Temperature		°C	int16be	1	1	0		value.temperature		true	false	false	false	false			
+1544	Battery		%	uint16be	1	1	0		value.battery		true	false	false	false	false			
+1545	Battery SOH		%	uint16be	1	1	0		value		true	false	false	false	false			
+1546	Battery Number of Cycles		cycle	uint16be	1	1	0		value		true	false	false	false	false			
+1668	Today Production		kWh	uint32be	2	0,01	0		value		true	false	false	false	false			
+1670	Total Production		kWh	uint32be	2	0,1	0		value		true	false	false	false	true	keepLastValid	0.1	
+1672	Today Load Consumption		kWh	uint32be	2	0,01	0		value		true	false	false	false	false			
+1674	Total Load Consumption		kWh	uint32be	2	0,1	0		value		true	false	false	false	true	keepLastValid	0.1	
+1676	Today Energy Import		kWh	uint32be	2	0,01	0		value		true	false	false	false	false			
+1678	Total Energy Import		kWh	uint32be	2	0,1	0		value		true	false	false	false	true	keepLastValid	0.1	
+1680	Today Energy Export		kWh	uint32be	2	0,01	0		value		true	false	false	false	false			
+1682	Total Energy Export		kWh	uint32be	2	0,1	0		value		true	false	false	false	true	keepLastValid	0.1	
+1684	Today Battery Charge		kWh	uint32be	2	0,01	0		value		true	false	false	false	false			
+1686	Total Battery Charge		kWh	uint32be	2	0,1	0		value		true	false	false	false	true	keepLastValid	0.1	
+1688	Today Battery Discharge		kWh	uint32be	2	0,01	0		value		true	false	false	false	false			
+1690	Total Battery Discharge		kWh	uint32be	2	0,1	0		value		true	false	false	false	true	keepLastValid	0.1	
+4131	Export Surplus Limitation	0=Disabled, 1=Enabled, 2=Balanced		uint16be	1	1	0		level		true	false	false	false	false			
+4132	Export Surplus Power		W	uint16be	1	100	0		level		true	false	false	false	false			
+4173	Battery DOD		%	uint16be	1	1	0		value		true	false	false	false	false			
+4174	Battery EOD		%	uint16be	1	1	0		value		true	false	false	false	false			
+4178	Battery EPS Buffer		%	uint16be	1	1	0		value		true	false	false	false	false			
+4368	Storage Control Mode	0=Self Use, 1=Time of Use, 2=Optimized Revenue, 3=Passive, 4=Peak Shaving, 5=Off-Grid, 6=Generator, 7=Export Priority		uint16be	1	1	0		level		true	false	false	false	false			
+4369	Timed Program			uint16be	1	1	0		level		true	false	false	false	false			
+4370	Timed Control	0=Disable, 1=Charge, 2=Discharge, 3=Both		uint16be	1	1	0		level		true	false	false	false	false			
+4371	Timed Charge Start	time as HHMM		uint16be	1	1	0		level		true	false	false	false	false			
+4372	Timed Charge End	time as HHMM		uint16be	1	1	0		level		true	false	false	false	false			
+4373	Timed Discharge Start	time as HHMM		uint16be	1	1	0		level		true	false	false	false	false			
+4374	Timed Discharge End	time as HHMM		uint16be	1	1	0		level		true	false	false	false	false			
+4375	Timed Charge Power		W	uint32be	2	1	0		level		true	false	false	false	false			
+4377	Timed Discharge Power		W	uint32be	2	1	0		level		true	false	false	false	false			
+4487	Passive: Grid power		W	int32be	2	1	0		level		true	false	false	false	false			
+4489	Passive: Minimum Battery power		W	int32be	2	1	0		level		true	false	false	false	false			
+4491	Passive: Maximum Battery power		W	int32be	2	1	0		level		true	false	false	false	false			

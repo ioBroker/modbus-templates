@@ -55,6 +55,11 @@ test('validation of the generate block', () => {
     assert.deepEqual(validateGenerate([{ source: 'sunspec', models: [{ id: 1, address: 40002 }] }]), []);
     assert.deepEqual(validateGenerate([{ source: 'solarman', definition: 'deye_p3', ref: 'main', mod: 1 }]), []);
     assert.match(validateGenerate([{ source: 'modbus' }])[0], /source must be one of sunspec, solarman/);
+    assert.match(validateGenerate([{ source: 'solarman', definition: 'x', override: [{ name: '(' }] }])[0], /regular expression/);
+    assert.match(
+        validateGenerate([{ source: 'solarman', definition: 'x', override: [{ name: 'a', _address: 1 }] }])[0],
+        /not a column/,
+    );
     assert.match(validateGenerate([{ source: 'solarman', definition: '../x' }])[0], /definition must be/);
     assert.match(validateGenerate([{ source: 'sunspec', models: [{ id: 1 }] }])[0], /numeric "id" and "address"/);
     assert.match(validateGenerate([{ source: 'sunspec', models: [{ id: 1, address: 0 }], file: '../a.tsv' }])[0], /stay in/);
@@ -74,9 +79,18 @@ test('validation of the generate block', () => {
     );
 });
 
-test('sunspec entry with skip', async () => {
+test('sunspec entry with skip and override', async () => {
     const { files, warnings } = await generateEntry(
-        { source: 'sunspec', marker: 40000, models: [{ id: 1, address: 40002 }], skip: ['ID', 'Nothing'] },
+        {
+            source: 'sunspec',
+            marker: 40000,
+            models: [{ id: 1, address: 40002 }],
+            skip: ['ID', 'Nothing'],
+            override: [
+                { name: '^(L|Mn)$', description: 'fixed', factor: 0.1 },
+                { name: '^Nothing$', unit: 'W' },
+            ],
+        },
         loaders,
     );
     assert.equal(files.length, 1);
@@ -89,7 +103,13 @@ test('sunspec entry with skip', async () => {
             .map(line => line.split('\t').slice(0, 2).join(' ')),
         ['40000 SunSpec_ID', '40003 L', '40004 Mn'],
     );
-    assert.deepEqual(warnings, ['skip: "Nothing" not found']);
+    const mn = files[0].content
+        .split('\n')
+        .find(line => line.startsWith('40004\t'))
+        .split('\t');
+    assert.equal(mn[2], 'fixed');
+    assert.equal(mn[6], '0,1');
+    assert.deepEqual(warnings, ['override: "^Nothing$" matches no register', 'skip: "Nothing" not found']);
 });
 
 test('device: solarman files are validated, errors keep the old files', async () => {

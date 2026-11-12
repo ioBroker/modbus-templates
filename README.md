@@ -181,6 +181,7 @@ per function code is written: `holding-registers.tsv` (0x03) and `input-register
 * computed values (`sensors`) are left out, the script lists them as warnings
 * a value with the high word in another block (e.g. the power of large Deye models, `[0x0271, 0x02B2]`) is read
   as 16-bit low word only, the description names the register of the high word
+* a time in several registers (hour, minute) becomes one value per register: `… hour`, `… minute`
 
 If no address is below 40001 (30001 for input registers), the script prints the `template.json` entry with
 `"addressing": "raw"`. Please check the result with the data sheet and mention the source in the README of the device.
@@ -221,6 +222,8 @@ generates the files after the merge, commits them, and updates them once a week 
   `holding-registers.tsv` and `input-registers.tsv`)
 * `sunspec`: the layout as above, `file` the file name (default `holding-registers.tsv`)
 * `skip`: names of registers to leave out
+* `override`: corrections of the source, e.g. `[{ "name": "^ReactivePower_", "unit": "var" }]`: the columns are set in
+  all registers whose name matches the regular expression (`factor: 0.1` is written as `0,1`)
 * the files get `"addressing": "raw"` automatically
 * do not edit generated files, they are overwritten. Change `template.json` instead.
 * a generated file with errors is not written, the old file stays
