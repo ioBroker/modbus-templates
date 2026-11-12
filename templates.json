@@ -376,6 +376,30 @@
       ]
     },
     {
+      "id": "Heizungsanlagen/StiebelEltron-ISG",
+      "category": "Heizungsanlagen",
+      "name": "Stiebel Eltron ISG / ISG plus",
+      "manufacturer": "Stiebel Eltron",
+      "description": "Wärmepumpen über das Internet Service Gateway (ISG web / ISG plus), Modbus TCP",
+      "readme": "Heizungsanlagen/StiebelEltron-ISG/README.md",
+      "files": [
+        {
+          "path": "Heizungsanlagen/StiebelEltron-ISG/holding-registers.tsv",
+          "title": "holding-registers",
+          "registerType": "holdingRegs",
+          "registers": 17,
+          "addressing": "alias"
+        },
+        {
+          "path": "Heizungsanlagen/StiebelEltron-ISG/input-registers.tsv",
+          "title": "input-registers",
+          "registerType": "inputRegs",
+          "registers": 56,
+          "addressing": "alias"
+        }
+      ]
+    },
+    {
       "id": "Heizungsanlagen/Windhager-BioWIN2",
       "category": "Heizungsanlagen",
       "name": "Windhager-BioWIN2",
