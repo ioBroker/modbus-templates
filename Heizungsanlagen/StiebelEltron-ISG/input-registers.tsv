@@ -1,0 +1,57 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	cw	isScale	sanitize	sanitizeAction	minValidValue	maxValidValue
+30503	Isttemperatur-FEK	Isttemperatur FEK	°C	int16be	1	0.1	0		value.temperature		false	false				
+30504	Solltemperatur-FEK	Solltemperatur FEK	°C	int16be	1	0.1	0		value.temperature		false	false				
+30505	Raumfeuchte	Raumfeuchte	%	int16be	1	0.1	0		value.humidity		false	false				
+30506	Taupunkttemperatur	Taupunkttemperatur	°C	int16be	1	0.1	0		value.temperature		false	false				
+30507	Aussentemperatur	Aussentemperatur	°C	int16be	1	0.1	0		value.temperature		false	false				
+30508	Isttemperatur-HK1	Isttemperatur-HK1	°C	int16be	1	0.1	0		value.temperature		false	false				
+30510	Solltemperatur-HK1	Solltemperatur-HK1	°C	int16be	1	0.1	0		value.temperature		false	false				
+30513	Vorlaufisttemperatur-WP	Vorlaufisttemperatur-WP	°C	int16be	1	0.1	0		value.temperature		false	false				
+30514	Vorlaufisttemperatur-NHZ	Vorlaufisttemperatur-NHZ	°C	int16be	1	0.1	0		value.temperature		false	false				
+30516	Ruecklaufisttemperatur	Rücklaufisttemperatur	°C	int16be	1	0.1	0		value.temperature		false	false				
+30517	Festwertsolltemperatur	Festwertsolltemperatur	°C	int16be	1	0.1	0		value.temperature		false	false				
+30518	Pufferisttemperatur	Pufferisttemperatur	°C	int16be	1	0.1	0		value.temperature		false	false				
+30519	Puffersolltemperatur	Puffersolltemperatur	°C	int16be	1	0.1	0		value.temperature		false	false				
+30520	Heizungsdruck	Heizungsdruck	bar	int16be	1	0.01	0		value.pressure		false	false				
+30521	Volumenstrom	Volumenstrom	l/min	int16be	1	0.01	0		value		false	false				
+30522	WW-Isttemperatur	Isttemperatur Warmwasser	°C	int16be	1	0.1	0		value.temperature		false	false				
+30523	WW-Solltemperatur	Solltemperatur Warmwasser	°C	int16be	1	0.1	0		value.temperature		false	false				
+30526	Isttemp-Flaeche	Isttemperatur Fläche	°C	int16be	1	0.1	0		value.temperature		false	false				
+30527	Solltemp-Flaeche	Solltemperatur Fläche	°C	int16be	1	0.1	0		value.temperature		false	false				
+30533	Einsatzgrenze-HZG	Einsatzgrenze Heizung	°C	int16be	1	0.1	0		value.temperature		false	false				
+30534	Einsatzgrenze-WW	Einsatzgrenze Warmwasser	°C	int16be	1	0.1	0		value.temperature		false	false				
+30536	Quellentemperatur	Quellentemperatur	°C	int16be	1	0.1	0		value.temperature		false	false				
+30537	Quellentemperatur-Min	Quellentemperatur Min	°C	int16be	1	0.1	0		value.temperature		false	false				
+30538	Quellendruck	Quellendruck	bar	int16be	1	0.01	0		value.pressure		false	false				
+30539	Heissgastemperatur	Heissgastemperatur	°C	int16be	1	0.1	0		value.temperature		false	false				
+30540	Hochdruck	Hochdruck	bar	int16be	1	0.1	0		value.pressure		false	false				
+30541	Niederdruck	Niederdruck	bar	int16be	1	0.1	0		value.pressure		false	false				
+32501	Betriebsstatus	Betriebsstatus		uint16be	1	1	0		value		false	false				
+32502	EVU-Freigabe	EVU-Freigabe		uint16be	1	1	0		value		false	false				
+32504	Fehlerstatus	Fehlerstatus		uint16be	1	1	0		value		false	false				
+32505	BUS-Status	BUS-Status		int16be	1	1	0		value		false	false				
+32507	aktiver-Fehler	Letzte Fehlernummer		uint16be	1	1	0		value		false	false				
+33501	VD-Heizen-Tag	WM-Heizen (alle WP) - Tag	kWh	uint16be	1	1	0		value		false	false				
+33502	VD-Heizen-Summe	WM-Heizen (alle WP) - Summe	kWh	uint16be	1	1	0		value		false	false				
+33503	VD-Heizen-Summe-MWh	WM-Heizen (alle WP) - Summe	MWh	uint16be	1	1	0		value		false	false				
+33504	VD-WW-Tag	WM-Warmwasser (alle WP) - Tag	kWh	uint16be	1	1	0		value		false	false				
+33505	VD-WW-Summe	WM-Warmwasser (alle WP) - Summe	kWh	uint16be	1	1	0		value		false	false				
+33506	VD-WW-Summe-MWh	WM-Warmwasser (alle WP) - Summe	MWh	uint16be	1	1	0		value		false	false				
+33507	NHZ-Heizen-Summe	NHZ-Heizen (alle WP) - Summe	kWh	uint16be	1	1	0		value		false	false				
+33508	NHZ-Heizen-Summe-MWh	NHZ-Heizen (alle WP) - Summe	MWh	uint16be	1	1	0		value		false	false				
+33509	NHZ-WW-Summe	NHZ-Warmwasser (alle WP) - Summe	kWh	uint16be	1	1	0		value		false	false				
+33510	NHZ-WW-Summe-MWh	NHZ-Warmwasser (alle WP) - Summe	MWh	uint16be	1	1	0		value		false	false				
+33511	VD-Heizen-Leistung-Tag	LA(alle WP) Heizen - Tag	kWh	uint16be	1	1	0		value.power.consumption		false	false				
+33512	VD-Heizen-Leistung-Summe	LA(alle WP) Heizen - Summe	kWh	uint16be	1	1	0		value.power.consumption		false	false				
+33513	VD-Heizen-Leistung-Summe-MWh	LA(alle WP) Heizen - Summe	MWh	uint16be	1	1	0		value.power.consumption		false	false				
+33514	VD-WW-Leistung-Tag	LA(alle WP) Warmwasser - Tag	kWh	uint16be	1	1	0		value.power.consumption		false	false				
+33515	VD-WW-Leistung-Summe	LA(alle WP) Warmwasser - Summe	kWh	uint16be	1	1	0		value.power.consumption		false	false				
+33516	VD-WW-Leistung-Summe-MWh	LA(alle WP) Warmwasser - Summe	MWh	uint16be	1	1	0		value.power.consumption		false	false				
+33517	VD-Heizen-Laufzeit	Laufzeit Verdichter - Heizen	h	uint16be	1	1	0		value		false	false				
+33518	VD-WW-Laufzeit	Laufzeit Verdichter - Warmwasser	h	uint16be	1	1	0		value		false	false				
+33519	VD-Kuehlen-Laufzeit	Laufzeit Verdichter - Kühlen	h	uint16be	1	1	0		value		false	false				
+33520	NHZ1-Laufzeit	Laufzeit NHZ 1	h	uint16be	1	1	0		value		false	false				
+33521	NHZ2-Laufzeit	Laufzeit NHZ 2	h	uint16be	1	1	0		value		false	false				
+33522	NHZ3-Laufzeit	Laufzeit NHZ 1/2	h	uint16be	1	1	0		value		false	false				
+35001	SG-Ready-Betriebszustand	SG Ready Betriebszustand (1=Sperre, 2=Normal, 3=forciert, 4=Maximal)		uint16be	1	1	0		value		false	false				
+35002	Reglerkennung	Reglerkennung (390=WPM 3, 391=WPM 3i, 449=WPMsystem)		uint16be	1	1	0		value		false	false				

@@ -1,0 +1,13 @@
+{
+    "name": "Stiebel Eltron ISG / ISG plus",
+    "manufacturer": "Stiebel Eltron",
+    "description": "Wärmepumpen über das Internet Service Gateway (ISG web / ISG plus), Modbus TCP",
+    "files": {
+        "input-registers.tsv": {
+            "addressing": "alias"
+        },
+        "holding-registers.tsv": {
+            "addressing": "alias"
+        }
+    }
+}
