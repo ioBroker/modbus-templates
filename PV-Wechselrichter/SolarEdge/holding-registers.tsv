@@ -13,7 +13,7 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 40073	I_AC_StromB	AC-Phase B (L2) Stromwert	A	uint16be	1	1	0	x * Math.pow(10, sf['40075'])			true	false	false	false
 40074	I_AC_StromC	AC-Phase C (L3) Stromwert	A	uint16be	1	1	0	x * Math.pow(10, sf['40075'])			true	false	false	false
 40075	I_AC_Strom_SF	AC-Strom Skalierungsfaktor	SF	int16be	1	1	0				true	false	false	true
-40083	I_AC_Leistung	AC-Leistungswert	W	uint16be	1	1	0	x * Math.pow(10, sf['40084'])			true	false	false	false
+40083	I_AC_Leistung	AC-Leistungswert	W	int16be	1	1	0	x * Math.pow(10, sf['40084'])			true	false	false	false
 40084	I_AC_Leistung_SF	AC-Leistung Skalierungsfaktor	SF	int16be	1	1	0				true	false	false	true
 40087	I_AC_VA	Scheinleistung	VA	uint16be	1	1	0	x * Math.pow(10, sf['40088'])			true	false	false	false
 40088	I_AC_VA_SF	Scheinleistung Skalierungsfaktor	SF	int16be	1	1	0				true	false	false	true
@@ -29,7 +29,7 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 40099	I_DC_Spannung_SF	DC-Spannung Skalierungsfaktor	SF	int16be	1	1	0				true	false	false	true
 40100	I_DC_Leistung	DC-Leistungswert	W	uint16be	1	1	0	x * Math.pow(10, sf['40101'])			true	false	false	false
 40101	I_DC_Leistung_SF	DC-Leistung Skalierungsfaktor	SF	int16be	1	1	0				true	false	false	true
-40103	I_Temp_Kühler	Kühlkörpertemperatur	°C	uint16be	1	1	0	x * Math.pow(10, sf['40106'])			true	false	false	false
+40103	I_Temp_Kühler	Kühlkörpertemperatur	°C	int16be	1	1	0	x * Math.pow(10, sf['40106'])			true	false	false	false
 40106	I_Temp_SF	Kühlkörpertemperatur Skalierungsfaktor	SF	int16be	1	1	0				true	false	false	true
 40107	I_Status	Betriebszustand (1 = Aus, 2 = Schlafen (Automatisches Herunterfahren) – Nachtmodus, 3 = Aufwachen/Starten, 4 = Wechselrichter ist AN und wandelt Energie, 5 = Begrenzte Produktion, 6 = Herunterfahren, 7 = Fehler, 8 = Wartung/Setup)		uint16be	1	1	0				true	false	false	false
 40108	I_Status_Anbieter	Anbieter-spezifischer Betriebszustand sowie Fehlercodes: 1 = Aus, 2 = Schlafen (Automatisches Herunterfahren) – Nachtmodus, 3 = Aufwachen/Starten, 4 = Wechselrichter ist AN und wandelt Energie, 5 = Begrenzte Produktion, 6 = Herunterfahren, 7 = Fehler, 8 = Wartung/Setup		uint16be	1	1	0				true	false	false	false

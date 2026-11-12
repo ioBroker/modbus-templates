@@ -18,7 +18,7 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 40080	VoltageL2N	I_AC_VoltageBN	V	uint16be	1	1	0	x * Math.pow(10, sf['40082'])	value		true	false	false	false
 40081	VoltageL3N	I_AC_VoltageCN	V	uint16be	1	1	0	x * Math.pow(10, sf['40082'])	value		true	false	false	false
 40082	VoltageSF	I_AC_Voltage_SF		int16be	1	1	0		state		true	false	false	true
-40083	Power	I_AC_Power	W	uint16be	1	1	0	x * Math.pow(10, sf['40084'])	value		true	false	false	false
+40083	Power	I_AC_Power	W	int16be	1	1	0	x * Math.pow(10, sf['40084'])	value		true	false	false	false
 40084	PowerSF	I_AC_Power_SF		int16be	1	1	0		state		true	false	false	true
 40085	Frequency	I_AC_Frequency	Hz	uint16be	1	1	0	x * Math.pow(10, sf['40086'])	value		true	false	false	false
 40086	FrequencySF	I_AC_Frequency_SF		int16be	1	1	0		state		true	false	false	true
