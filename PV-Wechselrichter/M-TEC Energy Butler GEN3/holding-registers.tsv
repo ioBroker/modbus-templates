@@ -1,0 +1,96 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale	sanitize	sanitizeAction	minValidValue	maxValidValue
+10000	Serial_Number	Inverter serial number		string	8	1	0		value		true	false	false	false		keepLastValid		
+10105	Inverter_Status	Running state: 0=wait for grid, 1=self-check, 2=on-grid, 3=fault, 4=firmware update, 5=off-grid		uint16be	1	1	0		value		true	false	false	false		keepLastValid		
+10110	Operation_Flags	Reasons for standby/off-grid/derating (bit field, see README)		uint32be	2	1	0		value		true	false	false	false		keepLastValid		
+10112	Fault_Flag1	Grid/PV faults (bit field, see README)		uint32be	2	1	0		value		true	false	false	false		keepLastValid		
+10114	Fault_Flag2	Device faults (bit field, see README)		uint32be	2	1	0		value		true	false	false	false		keepLastValid		
+10120	Fault_Flag3	System faults (bit field, see README)		uint32be	2	1	0		value		true	false	false	false		keepLastValid		
+10994	Grid_Power_L1	Grid power phase L1 at meter (positive = feed-in, negative = purchase)	W	int32be	2	1	0		value		true	false	false	false		keepLastValid		
+10996	Grid_Power_L2	Grid power phase L2 at meter (positive = feed-in, negative = purchase)	W	int32be	2	1	0		value		true	false	false	false		keepLastValid		
+10998	Grid_Power_L3	Grid power phase L3 at meter (positive = feed-in, negative = purchase)	W	int32be	2	1	0		value		true	false	false	false		keepLastValid		
+11000	Grid_Power	Grid power total at meter (positive = feed-in, negative = purchase)	W	int32be	2	1	0		value		true	false	false	false		keepLastValid		
+11002	Meter_Feed_Total	Total feed-in energy counted by the grid meter	kWh	uint32be	2	0.01	0		value		true	false	false	false		keepLastValid		
+11004	Meter_Purchase_Total	Total purchased energy counted by the grid meter	kWh	uint32be	2	0.01	0		value		true	false	false	false		keepLastValid		
+11006	AC_Voltage_L1_L2	Inverter AC line voltage L1-L2	V	uint16be	1	0.1	0		value		true	false	false	false		keepLastValid		
+11007	AC_Voltage_L2_L3	Inverter AC line voltage L2-L3	V	uint16be	1	0.1	0		value		true	false	false	false		keepLastValid		
+11008	AC_Voltage_L3_L1	Inverter AC line voltage L3-L1	V	uint16be	1	0.1	0		value		true	false	false	false		keepLastValid		
+11009	AC_Voltage_L1	Inverter AC voltage phase L1	V	uint16be	1	0.1	0		value		true	false	false	false		keepLastValid		
+11010	AC_Current_L1	Inverter AC current phase L1	A	uint16be	1	0.1	0		value		true	false	false	false		keepLastValid		
+11011	AC_Voltage_L2	Inverter AC voltage phase L2	V	uint16be	1	0.1	0		value		true	false	false	false		keepLastValid		
+11012	AC_Current_L2	Inverter AC current phase L2	A	uint16be	1	0.1	0		value		true	false	false	false		keepLastValid		
+11013	AC_Voltage_L3	Inverter AC voltage phase L3	V	uint16be	1	0.1	0		value		true	false	false	false		keepLastValid		
+11014	AC_Current_L3	Inverter AC current phase L3	A	uint16be	1	0.1	0		value		true	false	false	false		keepLastValid		
+11015	Grid_Frequency	Grid frequency	Hz	uint16be	1	0.01	0		value		true	false	false	false		keepLastValid		
+11016	Inverter_AC_Power	Inverter AC power at grid port (negative while drawing from grid)	W	int32be	2	1	0		value		true	false	false	false		keepLastValid		
+11018	AC_Energy_Day	Inverter AC energy generated today	kWh	uint32be	2	0.1	0		value		true	false	false	false		keepLastValid		
+11020	AC_Energy_Total	Inverter AC energy generated total	kWh	uint32be	2	0.1	0		value		true	false	false	false		keepLastValid		
+11022	PV_Generation_Hours	Total PV generation time	h	uint32be	2	1	0		value		true	false	false	false		keepLastValid		
+11028	PV_Power	Total PV input power	W	uint32be	2	1	0		value		true	false	false	false		keepLastValid		
+11032	Inverter_Temp1	Inverter temperature sensor 1	°C	int16be	1	0.1	0		value.temperature		true	false	false	false		keepLastValid		
+11033	Inverter_Temp2	Inverter temperature sensor 2	°C	int16be	1	0.1	0		value.temperature		true	false	false	false		keepLastValid		
+11034	Inverter_Temp3	Inverter temperature sensor 3	°C	int16be	1	0.1	0		value.temperature		true	false	false	false		keepLastValid		
+11035	Inverter_Temp4	Inverter temperature sensor 4	°C	int16be	1	0.1	0		value.temperature		true	false	false	false		keepLastValid		
+11038	PV1_Voltage	PV string 1 voltage	V	uint16be	1	0.1	0		value		true	false	false	false		keepLastValid		
+11039	PV1_Current	PV string 1 current	A	uint16be	1	0.1	0		value		true	false	false	false		keepLastValid		
+11040	PV2_Voltage	PV string 2 voltage	V	uint16be	1	0.1	0		value		true	false	false	false		keepLastValid		
+11041	PV2_Current	PV string 2 current	A	uint16be	1	0.1	0		value		true	false	false	false		keepLastValid		
+11062	PV1_Power	PV string 1 input power	W	uint32be	2	1	0		value		true	false	false	false		keepLastValid		
+11064	PV2_Power	PV string 2 input power	W	uint32be	2	1	0		value		true	false	false	false		keepLastValid		
+18000	ARM_Fault_Flag1	Control board faults: bit0=SCI, bit1=flash, bit2=meter comm, bit3=BMS comm		uint32be	2	1	0		value		true	false	false	false		keepLastValid		
+25100	Grid_Injection_Limit_Switch	RW: grid feed-in limitation 0=off, 1=on		uint16be	1	1	0		level		true	false	false	false		keepLastValid		
+25103	Grid_Injection_Limit	RW: grid feed-in limit in % of rated power (0.0-100.0)	%	uint16be	1	0.1	0		level		true	false	false	false		keepLastValid		
+30200	Backup_Voltage_L1	Backup output voltage phase L1	V	uint16be	1	0.1	0		value		true	false	false	false		keepLastValid		
+30201	Backup_Current_L1	Backup output current phase L1	A	uint16be	1	0.1	0		value		true	false	false	false		keepLastValid		
+30202	Backup_Frequency_L1	Backup output frequency phase L1	Hz	uint16be	1	0.01	0		value		true	false	false	false		keepLastValid		
+30204	Backup_Power_L1	Backup output power phase L1	W	int32be	2	1	0		value		true	false	false	false		keepLastValid		
+30210	Backup_Voltage_L2	Backup output voltage phase L2	V	uint16be	1	0.1	0		value		true	false	false	false		keepLastValid		
+30211	Backup_Current_L2	Backup output current phase L2	A	uint16be	1	0.1	0		value		true	false	false	false		keepLastValid		
+30212	Backup_Frequency_L2	Backup output frequency phase L2	Hz	uint16be	1	0.01	0		value		true	false	false	false		keepLastValid		
+30214	Backup_Power_L2	Backup output power phase L2	W	int32be	2	1	0		value		true	false	false	false		keepLastValid		
+30220	Backup_Voltage_L3	Backup output voltage phase L3	V	uint16be	1	0.1	0		value		true	false	false	false		keepLastValid		
+30221	Backup_Current_L3	Backup output current phase L3	A	uint16be	1	0.1	0		value		true	false	false	false		keepLastValid		
+30222	Backup_Frequency_L3	Backup output frequency phase L3	Hz	uint16be	1	0.01	0		value		true	false	false	false		keepLastValid		
+30224	Backup_Power_L3	Backup output power phase L3	W	int32be	2	1	0		value		true	false	false	false		keepLastValid		
+30230	Backup_Power	Backup output power total	W	int32be	2	1	0		value		true	false	false	false		keepLastValid		
+30236	Inverter_Power_L1	Inverter active power phase L1	W	int32be	2	1	0		value		true	false	false	false		keepLastValid		
+30242	Inverter_Power_L2	Inverter active power phase L2	W	int32be	2	1	0		value		true	false	false	false		keepLastValid		
+30248	Inverter_Power_L3	Inverter active power phase L3	W	int32be	2	1	0		value		true	false	false	false		keepLastValid		
+30254	Battery_Voltage	Battery voltage	V	uint16be	1	0.1	0		value		true	false	false	false		keepLastValid		
+30255	Battery_Current	Battery current	A	int16be	1	0.1	0		value		true	false	false	false		keepLastValid		
+30256	Battery_Mode	Battery mode: 0=discharge, 1=charge		uint16be	1	1	0		value		true	false	false	false		keepLastValid		
+30258	Battery_Power	Battery power (positive = discharge, negative = charge)	W	int32be	2	1	0		value		true	false	false	false		keepLastValid		
+31000	Grid_Feed_Day	Energy fed into grid today	kWh	uint16be	1	0.1	0		value		true	false	false	false		keepLastValid		
+31001	Grid_Purchase_Day	Energy purchased from grid today	kWh	uint16be	1	0.1	0		value		true	false	false	false		keepLastValid		
+31002	Backup_Energy_Day	Energy output on backup port today	kWh	uint16be	1	0.1	0		value		true	false	false	false		keepLastValid		
+31003	Battery_Charge_Day	Battery charging energy today	kWh	uint16be	1	0.1	0		value		true	false	false	false		keepLastValid		
+31004	Battery_Discharge_Day	Battery discharging energy today	kWh	uint16be	1	0.1	0		value		true	false	false	false		keepLastValid		
+31005	PV_Energy_Day	PV generation today	kWh	uint16be	1	0.1	0		value		true	false	false	false		keepLastValid		
+31006	Load_Energy_Day	Household consumption today	kWh	uint16be	1	0.1	0		value		true	false	false	false		keepLastValid		
+31102	Grid_Feed_Total	Total energy fed into grid	kWh	uint32be	2	0.1	0		value		true	false	false	false		keepLastValid		
+31104	Grid_Purchase_Total	Total energy purchased from grid	kWh	uint32be	2	0.1	0		value		true	false	false	false		keepLastValid		
+31106	Backup_Energy_Total	Total energy output on backup port	kWh	uint32be	2	0.1	0		value		true	false	false	false		keepLastValid		
+31108	Battery_Charge_Total	Total battery charging energy	kWh	uint32be	2	0.1	0		value		true	false	false	false		keepLastValid		
+31110	Battery_Discharge_Total	Total battery discharging energy	kWh	uint32be	2	0.1	0		value		true	false	false	false		keepLastValid		
+31112	PV_Energy_Total	Total PV generation	kWh	uint32be	2	0.1	0		value		true	false	false	false		keepLastValid		
+31114	Load_Energy_Total	Total household consumption	kWh	uint32be	2	0.1	0		value		true	false	false	false		keepLastValid		
+32005	BMS_Charge_Current_Max	BMS max. charge current	A	uint16be	1	0.1	0		value		true	false	false	false		keepLastValid		
+32006	BMS_Discharge_Current_Max	BMS max. discharge current	A	uint16be	1	0.1	0		value		true	false	false	false		keepLastValid		
+33000	Battery_SOC	Battery state of charge	%	uint16be	1	0.01	0		value.battery		true	false	false	false		keepLastValid		
+33001	Battery_SOH	Battery state of health	%	uint16be	1	0.01	0		value		true	false	false	false		keepLastValid		
+33002	BMS_Status	BMS status code		uint16be	1	1	0		value		true	false	false	false		keepLastValid		
+33003	Battery_Temperature	BMS pack temperature	°C	int16be	1	0.1	0		value.temperature		true	false	false	false		keepLastValid		
+33009	Battery_Cell_Temp_Max	Max. cell temperature	°C	int16be	1	0.1	0		value.temperature		true	false	false	false		keepLastValid		
+33011	Battery_Cell_Temp_Min	Min. cell temperature	°C	int16be	1	0.1	0		value.temperature		true	false	false	false		keepLastValid		
+33013	Battery_Cell_Voltage_Max	Max. cell voltage	V	uint16be	1	0.001	0		value		true	false	false	false		keepLastValid		
+33015	Battery_Cell_Voltage_Min	Min. cell voltage	V	uint16be	1	0.001	0		value		true	false	false	false		keepLastValid		
+33016	BMS_Error_Code	BMS error code		uint32be	2	1	0		value		true	false	false	false		keepLastValid		
+33018	BMS_Warning_Code	BMS warning code		uint32be	2	1	0		value		true	false	false	false		keepLastValid		
+50000	Working_Mode	RW: 257=General, 258=Economic, 259=UPS, 512=Off-grid, 769/770/771/772=EMS modes (see README)		uint16be	1	1	0		level		true	false	false	false		keepLastValid		
+50001	UPS_Function_Switch	RW: UPS function 0=off, 1=on		uint16be	1	1	0		level		true	false	false	false		keepLastValid		
+50006	Unbalanced_Output_Switch	RW: unbalanced (per-phase) on-grid output 0=off, 1=on		uint16be	1	1	0		level		true	false	false	false		keepLastValid		
+50007	Import_Limit_Switch	RW: grid import limitation (peak shaving) 0=off, 1=on		uint16be	1	1	0		level		true	false	false	false		keepLastValid		
+50009	Import_Limit	RW: max. grid import power	kW	uint16be	1	0.1	0		level		true	false	false	false		keepLastValid		
+52502	OnGrid_SOC_Protection	RW: on-grid SOC protection 0=off, 1=on		uint16be	1	1	0		level		true	false	false	false		keepLastValid		
+52503	OnGrid_End_SOC	RW: on-grid battery end-of-discharge SOC (0.0-100.0)	%	uint16be	1	0.1	0		level		true	false	false	false		keepLastValid		
+52504	OffGrid_SOC_Protection	RW: off-grid SOC protection 0=off, 1=on		uint16be	1	1	0		level		true	false	false	false		keepLastValid		
+52505	OffGrid_End_SOC	RW: off-grid battery end-of-discharge SOC (0.0-100.0)	%	uint16be	1	0.1	0		level		true	false	false	false		keepLastValid		
