@@ -612,6 +612,13 @@ function loadManifests(files, issues) {
                     issues.push({ file: f, level: 'warning', message: `files: "${file}" has unknown key "${key}"` });
                 }
             }
+            if (entry.addressing !== undefined && entry.addressing !== 'raw' && entry.addressing !== 'alias') {
+                issues.push({
+                    file: f,
+                    level: 'error',
+                    message: `files: "${file}" has addressing "${entry.addressing}", must be "raw" or "alias"`,
+                });
+            }
             if (entry.registerType && !REGISTER_TYPES[entry.registerType]) {
                 issues.push({
                     file: f,
