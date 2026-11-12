@@ -689,6 +689,106 @@ export function validateDetect(detect) {
     return errors;
 }
 
+// ---------------------------------------------------------------------------------------------------------------------
+// generated files (scripts/generate.mjs writes them, the GitHub Action commits them)
+
+const GENERATE_SOURCES = {
+    sunspec: {
+        keys: ['source', 'file', 'marker', 'models', 'skip'],
+        files: entry => ({ holdingRegs: entry.file || 'holding-registers.tsv' }),
+    },
+    solarman: {
+        keys: ['source', 'definition', 'ref', 'mod', 'files', 'skip'],
+        files: entry => ({
+            holdingRegs: entry.files?.holdingRegs || 'holding-registers.tsv',
+            inputRegs: entry.files?.inputRegs || 'input-registers.tsv',
+        }),
+    },
+};
+
+/**
+ * Checks the "generate" block of a template.json.
+ *
+ * @returns error messages, empty if valid
+ */
+export function validateGenerate(generate) {
+    if (!Array.isArray(generate) || !generate.length) {
+        return ['generate must be a non-empty list'];
+    }
+    const errors = [];
+    const outputs = new Set();
+    generate.forEach((entry, i) => {
+        const at = `generate[${i}]`;
+        const source = GENERATE_SOURCES[entry?.source];
+        if (!source) {
+            errors.push(`${at}.source must be one of ${Object.keys(GENERATE_SOURCES).join(', ')}`);
+            return;
+        }
+        for (const key of Object.keys(entry)) {
+            if (!source.keys.includes(key)) {
+                errors.push(`${at}: unknown key "${key}" for source "${entry.source}"`);
+            }
+        }
+        if (entry.skip !== undefined && (!Array.isArray(entry.skip) || !entry.skip.every(s => typeof s === 'string'))) {
+            errors.push(`${at}.skip must be a list of names`);
+        }
+        if (entry.source === 'sunspec') {
+            if (!Array.isArray(entry.models) || !entry.models.length) {
+                errors.push(`${at}.models must be a non-empty list of { "id", "address" }`);
+            } else if (!entry.models.every(m => Number.isInteger(m?.id) && Number.isInteger(m?.address))) {
+                errors.push(`${at}.models: every model needs a numeric "id" and "address"`);
+            }
+            if (entry.marker !== undefined && !Number.isInteger(entry.marker)) {
+                errors.push(`${at}.marker must be the address of "SunS"`);
+            }
+        } else {
+            if (typeof entry.definition !== 'string' || !/^[\w.-]+$/.test(entry.definition)) {
+                errors.push(`${at}.definition must be the name of a definition of ha-solarman, e.g. "deye_p3"`);
+            }
+            if (entry.ref !== undefined && (typeof entry.ref !== 'string' || !/^[\w./-]+$/.test(entry.ref))) {
+                errors.push(`${at}.ref must be a branch, tag or commit of ha-solarman`);
+            }
+            if (entry.mod !== undefined && (!Number.isInteger(entry.mod) || entry.mod < 0)) {
+                errors.push(`${at}.mod must be 0, 1, 2, ...`);
+            }
+            for (const key of Object.keys(entry.files || {})) {
+                if (key !== 'holdingRegs' && key !== 'inputRegs') {
+                    errors.push(`${at}.files: unknown register type "${key}" (holdingRegs, inputRegs)`);
+                }
+            }
+        }
+        for (const file of Object.values(source.files(entry))) {
+            if (typeof file !== 'string' || !/\.tsv$/i.test(file) || file.includes('..')) {
+                errors.push(`${at}: file name "${file}" must end with .tsv and stay in the device folder`);
+                continue;
+            }
+            if (outputs.has(file.toLowerCase())) {
+                errors.push(`${at}: "${file}" is generated twice`);
+            }
+            outputs.add(file.toLowerCase());
+        }
+    });
+    return errors;
+}
+
+/**
+ * The files a valid "generate" block writes, relative to the device folder.
+ *
+ * @returns {{ file: string, registerType: string, entry: object }[]}
+ */
+export function generatedFiles(manifest) {
+    if (!manifest?.generate || validateGenerate(manifest.generate).length) {
+        return [];
+    }
+    return manifest.generate.flatMap(entry =>
+        Object.entries(GENERATE_SOURCES[entry.source].files(entry)).map(([registerType, file]) => ({
+            file,
+            registerType,
+            entry,
+        })),
+    );
+}
+
 function loadManifests(files, issues) {
     const manifests = {};
     for (const f of files.filter(f => basename(f) === MANIFEST_FILE)) {
@@ -701,19 +801,26 @@ function loadManifests(files, issues) {
         if (!json) {
             continue;
         }
-        const allowedKeys = ['name', 'manufacturer', 'models', 'description', 'files', 'ignore', 'detect'];
+        const allowedKeys = ['name', 'manufacturer', 'models', 'description', 'files', 'ignore', 'detect', 'generate'];
         if (json.detect !== undefined) {
             for (const message of validateDetect(json.detect)) {
                 issues.push({ file: f, level: 'error', message });
             }
         }
+        if (json.generate !== undefined) {
+            for (const message of validateGenerate(json.generate)) {
+                issues.push({ file: f, level: 'error', message });
+            }
+        }
+        const generated = generatedFiles(json);
         for (const key of Object.keys(json)) {
             if (!allowedKeys.includes(key)) {
                 issues.push({ file: f, level: 'warning', message: `Unknown key "${key}"` });
             }
         }
         for (const [file, entry] of Object.entries(json.files || {})) {
-            if (!existsSync(join(ROOT, devicePath, file))) {
+            // generated files are written by the GitHub Action after the merge
+            if (!existsSync(join(ROOT, devicePath, file)) && !generated.some(g => g.file === file)) {
                 issues.push({ file: f, level: 'error', message: `files: "${file}" does not exist` });
             }
             for (const key of Object.keys(entry)) {
@@ -736,9 +843,23 @@ function loadManifests(files, issues) {
                 });
             }
         }
+        // the converters always write raw addresses
+        if (generated.length) {
+            json.files = { ...json.files };
+            for (const { file, registerType } of generated) {
+                json.files[file] = { ...json.files[file], registerType, addressing: 'raw' };
+            }
+        }
         manifests[devicePath] = json;
     }
     return manifests;
+}
+
+/** All template.json files: { "Category/Device": manifest }, with the issues found in them */
+export function loadAllManifests() {
+    const issues = [];
+    const manifests = loadManifests(walk(ROOT).sort(), issues);
+    return { root: ROOT, manifests, issues };
 }
 
 function isIgnored(manifest, inner) {
