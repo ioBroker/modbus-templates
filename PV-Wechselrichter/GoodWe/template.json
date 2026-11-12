@@ -1,0 +1,138 @@
+{
+    "manufacturer": "GoodWe",
+    "description": "Addresses as in the GoodWe Modbus protocol for energy storage inverters (file names show the address range of the data sheet)",
+    "files": {
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/10400-10485 Parallel System (Seite 8-10).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/32000-32099 Error Massage (Seite 20-23).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/32100-32119 Operation Massage (Seite 23).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/32200-32240 ARM Fault Massage (Seite 24-26).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/32950-32965 PV Setting (Seite 27-28).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/35000-35045 Device Info (Seite 35-36).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/35100-35369 Inverter Operation Data (Seite 37-50).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/36000-36198 External Data Collection (Seite 51-60).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/37000-37078 BMS 1 Operation Data (Seite 61-66).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/37150-37158 BMS AC Data (Seite 67).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/39000-39076 BMS 2 Operation Data (Seite 68-72).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/39499-39839 LG HV BAT Log (Seite 73-89).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/39870-39899 LG LV Data Log (Seite 90-91).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45127-45134 Com Setting (Seite 95).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45200-45305 Function Setting (Seite 95-100).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45350-45389 DSP BAT setting (Seite 100-101).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45400-45699 Safety Parameter Setting (Seite 102-119).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45700-45709 QU Curve (Seite 120).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45714-45717 Others (Seite 121).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45720-45726 PU Curve (Seite 121).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45733-45743 cosφ P Curve (Seite 122).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45751-45802 Frequency Curve (Seite 123-125).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45813-45814 QP Curve (Seite 126).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45821-45900 HVRT-LVRT (Seite126-131).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45901-45918 FRT (Seite 131-132).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/46903-46904 Optional Function (Seite 132) ohne Funktion.tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/47000-47464 ARM Settings (Seite 133-135).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/47117-47119 ARM Settings (Seite 133-135)ohne Funktion.tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/47505-47774 ARM BMS&EMS parameter (Seite 135-148).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/47900-47937 ARM BMS Passthrough (Seite 149-150).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/50000-50094 Self-check Parameter (Seite 151-160).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/50200-50203 Self-check Parameter (Seite 160) ohe Funktion.tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/2 EVcharger/10600-10679 EVcharger (Seite 11-12).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/2 EVcharger/10700-10766 EVcharger Fault (Seite 12-15).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/2 EVcharger/10800-10866 EVcharger Charging (Seite 15-16).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/2 EVcharger/10900-11005 EVcharger ABD (Seite 17).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/2 EVcharger/20300-20332 EVcharger Setting (Seite 18-19).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/3 ETC-BTC Inverter Series/33200-33212 ETC-BTC Massage (Seite 29-30).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/3 ETC-BTC Inverter Series/33300-33405 BTC-ETC Module Status (Seite 30-33).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/3 ETC-BTC Inverter Series/33500-33504 ETC-BTC New Resgister (Seite 34).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/3 ETC-BTC Inverter Series/35035-35040 ETC-BTC Device Info (Seite 35-36) .tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/3 ETC-BTC Inverter Series/35600-35602 BTC New Registers (Seite 51).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/3 ETC-BTC Inverter Series/40000-42200 ETC-BTC OEM Data (Seite 92-94).tsv": {
+            "addressing": "raw"
+        },
+        "Modbus Protokol für Energy Storage Inverter/holding-registers (GW25K-ET, LX F16.4-H, keine Wallbox).tsv": {
+            "addressing": "raw"
+        }
+    }
+}

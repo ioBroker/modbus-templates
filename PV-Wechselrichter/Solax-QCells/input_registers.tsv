@@ -5,14 +5,14 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	cw	isSca
 3	PvVoltage1	PV Spannung String 1	V	uint16be	1	0.1	0		value			
 5	PvCurrent1	PV Strom String 1	A	uint16be	1	0.1	0		value			
 7	GridFrequency	Netz Frequenz	Hz	uint16be	1	0.01	0		value			
-8	Temperature	Temperatur	°C	int16be	1	1	0		value			
+8	Temperature	Temperatur	Â°C	int16be	1	1	0		value			
 9	RunMode	Betriebsmodus		uint16be	1	1	0		value			
 10	Powerdc1	DC-Leistung String 1	W	uint16be	1	1	0		value			
 20	BatVoltage_Charge1	Batterie Ladespannung	V	int16be	1	0.1	0		value			
 21	BatCurrent_Charge1	Batterie Ladestrom	A	int16be	1	0.1	0		value			
 22	Batpower_Charge1	Batterie Ladeleistung	W	int16be	1	1	0		value			
 23	BMS_Connect_State	0:Disconnected 1:Connected		uint16be	1	1	0		state			
-24	TemperatureBat	Batterie Temperatur	°C	int16be	1	1	0		value			
+24	TemperatureBat	Batterie Temperatur	Â°C	int16be	1	1	0		value			
 28	BatteryCapacity	Batterie Ladezustand (SoC)	%	uint16be	1	1	0		level			
 35	InputEnergy_Charge_today	Ladung Tag	kWh	uint16be	1	0.1	0		value			
 70	feedin_power	Bezug/Einspeisung (+/-)	W	int32sw	2	1	0		value			

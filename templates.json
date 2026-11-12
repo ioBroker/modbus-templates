@@ -1,0 +1,1165 @@
+{
+  "formatVersion": 1,
+  "repository": "ioBroker/modbus-templates",
+  "branch": "main",
+  "categories": [
+    {
+      "id": "Energiezaehler",
+      "title": {
+        "en": "Energy meters",
+        "de": "Energiezähler",
+        "ru": "Счётчики электроэнергии"
+      }
+    },
+    {
+      "id": "Heizungsanlagen",
+      "title": {
+        "en": "Heating systems",
+        "de": "Heizungsanlagen",
+        "ru": "Системы отопления"
+      }
+    },
+    {
+      "id": "Lueftungsanlagen",
+      "title": {
+        "en": "Ventilation systems",
+        "de": "Lüftungsanlagen",
+        "ru": "Вентиляция"
+      }
+    },
+    {
+      "id": "PV-Wechselrichter",
+      "title": {
+        "en": "PV inverters",
+        "de": "PV-Wechselrichter",
+        "ru": "Солнечные инверторы"
+      }
+    },
+    {
+      "id": "Solarladeregler",
+      "title": {
+        "en": "Solar charge controllers",
+        "de": "Solarladeregler",
+        "ru": "Солнечные контроллеры заряда"
+      }
+    },
+    {
+      "id": "Wallbox",
+      "title": {
+        "en": "Wallboxes",
+        "de": "Wallboxen",
+        "ru": "Зарядные станции"
+      }
+    }
+  ],
+  "templates": [
+    {
+      "id": "Energiezaehler/Carlo Gavazzi EM24",
+      "category": "Energiezaehler",
+      "name": "Carlo Gavazzi EM24",
+      "readme": "Energiezaehler/Carlo Gavazzi EM24/README.md",
+      "files": [
+        {
+          "path": "Energiezaehler/Carlo Gavazzi EM24/holding-registers.tsv",
+          "title": "holding-registers",
+          "registerType": "holdingRegs",
+          "registers": 52
+        }
+      ]
+    },
+    {
+      "id": "Energiezaehler/Chint DTSU666",
+      "category": "Energiezaehler",
+      "name": "Chint DTSU666",
+      "readme": "Energiezaehler/Chint DTSU666/README.md",
+      "files": [
+        {
+          "path": "Energiezaehler/Chint DTSU666/holding-registers.tsv",
+          "title": "holding-registers",
+          "registerType": "holdingRegs",
+          "registers": 40,
+          "addressing": "raw",
+          "warnings": 11
+        }
+      ]
+    },
+    {
+      "id": "Energiezaehler/EASTRON",
+      "category": "Energiezaehler",
+      "name": "EASTRON",
+      "readme": "Energiezaehler/EASTRON/README.md",
+      "files": [
+        {
+          "path": "Energiezaehler/EASTRON/Eastron SDM72dm-v2/Sdm72dm-v2.tsv",
+          "title": "Eastron SDM72dm-v2/Sdm72dm-v2",
+          "registerType": "inputRegs",
+          "registers": 41,
+          "deviceIds": [
+            2
+          ],
+          "warnings": 1
+        },
+        {
+          "path": "Energiezaehler/EASTRON/input-registers_sdm630Modbus.tsv",
+          "title": "input-registers_sdm630Modbus",
+          "registerType": "inputRegs",
+          "registers": 85,
+          "deviceIds": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Energiezaehler/Finder Typ 7M",
+      "category": "Energiezaehler",
+      "name": "Finder Typ 7M",
+      "files": [
+        {
+          "path": "Energiezaehler/Finder Typ 7M/input-registers.tsv",
+          "title": "input-registers",
+          "registerType": "inputRegs",
+          "registers": 93,
+          "deviceIds": [
+            33
+          ],
+          "warnings": 8
+        }
+      ]
+    },
+    {
+      "id": "Energiezaehler/Fronius Smart Meter",
+      "category": "Energiezaehler",
+      "name": "Fronius Smart Meter",
+      "readme": "Energiezaehler/Fronius Smart Meter/README.md",
+      "files": [
+        {
+          "path": "Energiezaehler/Fronius Smart Meter/holding-registers.tsv",
+          "title": "holding-registers",
+          "registerType": "holdingRegs",
+          "registers": 56,
+          "addressing": "raw",
+          "warnings": 2
+        }
+      ]
+    },
+    {
+      "id": "Energiezaehler/Kostal KSEM",
+      "category": "Energiezaehler",
+      "name": "Kostal KSEM",
+      "readme": "Energiezaehler/Kostal KSEM/README.md",
+      "files": [
+        {
+          "path": "Energiezaehler/Kostal KSEM/holding-registers.tsv",
+          "title": "holding-registers",
+          "registerType": "holdingRegs",
+          "registers": 31,
+          "addressing": "raw"
+        }
+      ]
+    },
+    {
+      "id": "Energiezaehler/Phoenix Contact EEM-EM3xx EEM-DM3xx",
+      "category": "Energiezaehler",
+      "name": "Phoenix Contact EEM-EM3xx EEM-DM3xx",
+      "manufacturer": "Phoenix Contact",
+      "readme": "Energiezaehler/Phoenix Contact EEM-EM3xx EEM-DM3xx/README.md",
+      "files": [
+        {
+          "path": "Energiezaehler/Phoenix Contact EEM-EM3xx EEM-DM3xx/Coils/0-32 Alarmsignale.tsv",
+          "title": "Coils/0-32 Alarmsignale",
+          "registerType": "coils",
+          "registers": 25,
+          "addressing": "raw",
+          "warnings": 2
+        },
+        {
+          "path": "Energiezaehler/Phoenix Contact EEM-EM3xx EEM-DM3xx/discrete-outputs.tsv",
+          "title": "discrete-outputs",
+          "registerType": "coils",
+          "registers": 25,
+          "addressing": "raw",
+          "warnings": 2
+        },
+        {
+          "path": "Energiezaehler/Phoenix Contact EEM-EM3xx EEM-DM3xx/Holding Register - Gerät und Konfig/1280-57856 Geräte und konfig.tsv",
+          "title": "Holding Register - Gerät und Konfig/1280-57856 Geräte und konfig",
+          "registerType": "holdingRegs",
+          "registers": 32,
+          "addressing": "raw",
+          "warnings": 2
+        },
+        {
+          "path": "Energiezaehler/Phoenix Contact EEM-EM3xx EEM-DM3xx/holding-registers.tsv",
+          "title": "holding-registers",
+          "registerType": "holdingRegs",
+          "registers": 32,
+          "addressing": "raw",
+          "warnings": 2
+        },
+        {
+          "path": "Energiezaehler/Phoenix Contact EEM-EM3xx EEM-DM3xx/Input Register - Integer/00000-00082 Momentanwerte 1.tsv",
+          "title": "Input Register - Integer/00000-00082 Momentanwerte 1",
+          "registerType": "inputRegs",
+          "registers": 30,
+          "addressing": "raw"
+        },
+        {
+          "path": "Energiezaehler/Phoenix Contact EEM-EM3xx EEM-DM3xx/Input Register - Integer/00256-00412 Zähler.tsv",
+          "title": "Input Register - Integer/00256-00412 Zähler",
+          "registerType": "inputRegs",
+          "registers": 40,
+          "addressing": "raw"
+        },
+        {
+          "path": "Energiezaehler/Phoenix Contact EEM-EM3xx EEM-DM3xx/Input Register - Integer/00515-00668 Zähler Tarif 1.tsv",
+          "title": "Input Register - Integer/00515-00668 Zähler Tarif 1",
+          "registerType": "inputRegs",
+          "registers": 40,
+          "addressing": "raw"
+        },
+        {
+          "path": "Energiezaehler/Phoenix Contact EEM-EM3xx EEM-DM3xx/Input Register - Integer/00768-00924 Zähler Tarif 2.tsv",
+          "title": "Input Register - Integer/00768-00924 Zähler Tarif 2",
+          "registerType": "inputRegs",
+          "registers": 40,
+          "addressing": "raw"
+        },
+        {
+          "path": "Energiezaehler/Phoenix Contact EEM-EM3xx EEM-DM3xx/Input Register - Integer/01024-01080 Teilenergiezähler und bilanzierende Energiezähler.tsv",
+          "title": "Input Register - Integer/01024-01080 Teilenergiezähler und bilanzierende Energiezähler",
+          "registerType": "inputRegs",
+          "registers": 15,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "Energiezaehler/Phoenix Contact EEM-EM3xx EEM-DM3xx/Input Register - Integer/01536-01682 DMD.tsv",
+          "title": "Input Register - Integer/01536-01682 DMD",
+          "registerType": "inputRegs",
+          "registers": 47,
+          "addressing": "raw"
+        },
+        {
+          "path": "Energiezaehler/Phoenix Contact EEM-EM3xx EEM-DM3xx/Input Register - Integer/50512-50572 Momentanwerte 2.tsv",
+          "title": "Input Register - Integer/50512-50572 Momentanwerte 2",
+          "registerType": "inputRegs",
+          "registers": 31,
+          "addressing": "raw"
+        },
+        {
+          "path": "Energiezaehler/Phoenix Contact EEM-EM3xx EEM-DM3xx/Input Register - Integer/50768-50788 Energiewerte.tsv",
+          "title": "Input Register - Integer/50768-50788 Energiewerte",
+          "registerType": "inputRegs",
+          "registers": 11,
+          "addressing": "raw"
+        },
+        {
+          "path": "Energiezaehler/Phoenix Contact EEM-EM3xx EEM-DM3xx/Input Register - Integer/51070-51088 DMD Max.tsv",
+          "title": "Input Register - Integer/51070-51088 DMD Max",
+          "registerType": "inputRegs",
+          "registers": 10,
+          "addressing": "raw",
+          "warnings": 6
+        },
+        {
+          "path": "Energiezaehler/Phoenix Contact EEM-EM3xx EEM-DM3xx/Input Register- Float/4096-4154 Momentanwerte 1.tsv",
+          "title": "Input Register- Float/4096-4154 Momentanwerte 1",
+          "registerType": "inputRegs",
+          "registers": 30,
+          "addressing": "raw"
+        },
+        {
+          "path": "Energiezaehler/Phoenix Contact EEM-EM3xx EEM-DM3xx/Input Register- Float/4352-4430 Zähler.tsv",
+          "title": "Input Register- Float/4352-4430 Zähler",
+          "registerType": "inputRegs",
+          "registers": 40,
+          "addressing": "raw"
+        },
+        {
+          "path": "Energiezaehler/Phoenix Contact EEM-EM3xx EEM-DM3xx/Input Register- Float/4608-4686 Zähler Tarif 1.tsv",
+          "title": "Input Register- Float/4608-4686 Zähler Tarif 1",
+          "registerType": "inputRegs",
+          "registers": 40,
+          "addressing": "raw"
+        },
+        {
+          "path": "Energiezaehler/Phoenix Contact EEM-EM3xx EEM-DM3xx/Input Register- Float/4864-4942 Zähler Tarif 2.tsv",
+          "title": "Input Register- Float/4864-4942 Zähler Tarif 2",
+          "registerType": "inputRegs",
+          "registers": 40,
+          "addressing": "raw"
+        },
+        {
+          "path": "Energiezaehler/Phoenix Contact EEM-EM3xx EEM-DM3xx/Input Register- Float/5120-5148 Teilenergiezähler und bilanzierende Energiezähler.tsv",
+          "title": "Input Register- Float/5120-5148 Teilenergiezähler und bilanzierende Energiezähler",
+          "registerType": "inputRegs",
+          "registers": 15,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "Energiezaehler/Phoenix Contact EEM-EM3xx EEM-DM3xx/Input Register- Float/5376-5468 DMD.tsv",
+          "title": "Input Register- Float/5376-5468 DMD",
+          "registerType": "inputRegs",
+          "registers": 47,
+          "addressing": "raw"
+        },
+        {
+          "path": "Energiezaehler/Phoenix Contact EEM-EM3xx EEM-DM3xx/input-registers.tsv",
+          "title": "input-registers",
+          "registerType": "inputRegs",
+          "registers": 184,
+          "addressing": "raw",
+          "warnings": 40
+        }
+      ]
+    },
+    {
+      "id": "Heizungsanlagen/Daikin Altherma 3",
+      "category": "Heizungsanlagen",
+      "name": "Daikin Altherma 3",
+      "readme": "Heizungsanlagen/Daikin Altherma 3/README.md",
+      "files": [
+        {
+          "path": "Heizungsanlagen/Daikin Altherma 3/holding-registers.tsv",
+          "title": "holding-registers",
+          "registerType": "holdingRegs",
+          "registers": 13,
+          "addressing": "raw"
+        },
+        {
+          "path": "Heizungsanlagen/Daikin Altherma 3/input-registers.tsv",
+          "title": "input-registers",
+          "registerType": "inputRegs",
+          "registers": 15,
+          "addressing": "raw",
+          "warnings": 1
+        }
+      ]
+    },
+    {
+      "id": "Heizungsanlagen/Lambda-WP",
+      "category": "Heizungsanlagen",
+      "name": "Lambda-WP",
+      "files": [
+        {
+          "path": "Heizungsanlagen/Lambda-WP/holding-registers.tsv",
+          "title": "holding-registers",
+          "registerType": "holdingRegs",
+          "registers": 79
+        }
+      ]
+    },
+    {
+      "id": "Heizungsanlagen/Windhager-BioWIN2",
+      "category": "Heizungsanlagen",
+      "name": "Windhager-BioWIN2",
+      "readme": "Heizungsanlagen/Windhager-BioWIN2/README.md",
+      "files": [
+        {
+          "path": "Heizungsanlagen/Windhager-BioWIN2/holding-registers.tsv",
+          "title": "holding-registers",
+          "registerType": "holdingRegs",
+          "registers": 15,
+          "addressing": "raw",
+          "deviceIds": [
+            1
+          ]
+        },
+        {
+          "path": "Heizungsanlagen/Windhager-BioWIN2/input-registers.tsv",
+          "title": "input-registers",
+          "registerType": "inputRegs",
+          "registers": 4,
+          "addressing": "raw",
+          "deviceIds": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Heizungsanlagen/Wolf FHS 180 280",
+      "category": "Heizungsanlagen",
+      "name": "Wolf FHS 180 280",
+      "readme": "Heizungsanlagen/Wolf FHS 180 280/README.md",
+      "files": [
+        {
+          "path": "Heizungsanlagen/Wolf FHS 180 280/input-registers.tsv",
+          "title": "input-registers",
+          "registerType": "inputRegs",
+          "registers": 4,
+          "deviceIds": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Lueftungsanlagen/Aldes",
+      "category": "Lueftungsanlagen",
+      "name": "Aldes",
+      "files": [
+        {
+          "path": "Lueftungsanlagen/Aldes/Aldes Inspir Air Home SC370/Aldes.tsv",
+          "title": "Aldes Inspir Air Home SC370/Aldes",
+          "registerType": "holdingRegs",
+          "registers": 38,
+          "warnings": 2
+        }
+      ]
+    },
+    {
+      "id": "Lueftungsanlagen/Meltem",
+      "category": "Lueftungsanlagen",
+      "name": "Meltem",
+      "readme": "Lueftungsanlagen/Meltem/README.md",
+      "files": [
+        {
+          "path": "Lueftungsanlagen/Meltem/meltem_default_F.tsv",
+          "title": "meltem_default_F",
+          "registerType": "holdingRegs",
+          "registers": 21,
+          "deviceIds": [
+            2
+          ],
+          "warnings": 1
+        },
+        {
+          "path": "Lueftungsanlagen/Meltem/meltem_default_FC.tsv",
+          "title": "meltem_default_FC",
+          "registerType": "holdingRegs",
+          "registers": 23,
+          "deviceIds": [
+            2
+          ],
+          "warnings": 1
+        },
+        {
+          "path": "Lueftungsanlagen/Meltem/meltem_default.tsv",
+          "title": "meltem_default",
+          "registerType": "holdingRegs",
+          "registers": 19,
+          "deviceIds": [
+            2
+          ],
+          "warnings": 1
+        }
+      ]
+    },
+    {
+      "id": "Lueftungsanlagen/Proxon",
+      "category": "Lueftungsanlagen",
+      "name": "Proxon",
+      "files": [
+        {
+          "path": "Lueftungsanlagen/Proxon/input-register.tsv",
+          "title": "input-register",
+          "registerType": "inputRegs",
+          "registers": 18
+        }
+      ]
+    },
+    {
+      "id": "Lueftungsanlagen/proxon",
+      "category": "Lueftungsanlagen",
+      "name": "proxon",
+      "files": [
+        {
+          "path": "Lueftungsanlagen/proxon/holding-register.tsv",
+          "title": "holding-register",
+          "registerType": "holdingRegs",
+          "registers": 8
+        }
+      ]
+    },
+    {
+      "id": "Lueftungsanlagen/Swentibold EuroAir250",
+      "category": "Lueftungsanlagen",
+      "name": "Swentibold EuroAir250",
+      "readme": "Lueftungsanlagen/Swentibold EuroAir250/README.md",
+      "files": [
+        {
+          "path": "Lueftungsanlagen/Swentibold EuroAir250/holding-registers.tsv",
+          "title": "holding-registers",
+          "registerType": "holdingRegs",
+          "registers": 48
+        },
+        {
+          "path": "Lueftungsanlagen/Swentibold EuroAir250/input-registers.tsv",
+          "title": "input-registers",
+          "registerType": "inputRegs",
+          "registers": 12,
+          "warnings": 8
+        }
+      ]
+    },
+    {
+      "id": "PV-Wechselrichter/Deye",
+      "category": "PV-Wechselrichter",
+      "name": "Deye",
+      "readme": "PV-Wechselrichter/Deye/README.md",
+      "files": [
+        {
+          "path": "PV-Wechselrichter/Deye/holding-registers-extended.tsv",
+          "title": "holding-registers-extended",
+          "registerType": "holdingRegs",
+          "registers": 141,
+          "warnings": 45
+        },
+        {
+          "path": "PV-Wechselrichter/Deye/holding-registers-oeve.tsv",
+          "title": "holding-registers-oeve",
+          "registerType": "holdingRegs",
+          "registers": 33,
+          "addressing": "raw",
+          "deviceIds": [
+            1
+          ],
+          "warnings": 4
+        },
+        {
+          "path": "PV-Wechselrichter/Deye/SG01HP03-holding-registers.tsv",
+          "title": "SG01HP03-holding-registers",
+          "registerType": "holdingRegs",
+          "registers": 161,
+          "warnings": 3
+        }
+      ]
+    },
+    {
+      "id": "PV-Wechselrichter/Fronius",
+      "category": "PV-Wechselrichter",
+      "name": "Fronius",
+      "files": [
+        {
+          "path": "PV-Wechselrichter/Fronius/Gen24 register.tsv",
+          "title": "Gen24 register",
+          "registerType": "holdingRegs",
+          "registers": 52,
+          "deviceIds": [
+            1,
+            200
+          ],
+          "warnings": 2
+        }
+      ]
+    },
+    {
+      "id": "PV-Wechselrichter/GoodWe",
+      "category": "PV-Wechselrichter",
+      "name": "GoodWe",
+      "manufacturer": "GoodWe",
+      "description": "Addresses as in the GoodWe Modbus protocol for energy storage inverters (file names show the address range of the data sheet)",
+      "files": [
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/10400-10485 Parallel System (Seite 8-10).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/10400-10485 Parallel System (Seite 8-10)",
+          "registerType": "holdingRegs",
+          "registers": 38,
+          "addressing": "raw",
+          "warnings": 3
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/32000-32099 Error Massage (Seite 20-23).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/32000-32099 Error Massage (Seite 20-23)",
+          "registerType": "holdingRegs",
+          "registers": 44,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/32100-32119 Operation Massage (Seite 23).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/32100-32119 Operation Massage (Seite 23)",
+          "registerType": "holdingRegs",
+          "registers": 15,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/32200-32240 ARM Fault Massage (Seite 24-26).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/32200-32240 ARM Fault Massage (Seite 24-26)",
+          "registerType": "holdingRegs",
+          "registers": 30,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/32950-32965 PV Setting (Seite 27-28).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/32950-32965 PV Setting (Seite 27-28)",
+          "registerType": "holdingRegs",
+          "registers": 16,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/35000-35045 Device Info (Seite 35-36).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/35000-35045 Device Info (Seite 35-36)",
+          "registerType": "holdingRegs",
+          "registers": 15,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/35100-35369 Inverter Operation Data (Seite 37-50).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/35100-35369 Inverter Operation Data (Seite 37-50)",
+          "registerType": "holdingRegs",
+          "registers": 167,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/36000-36198 External Data Collection (Seite 51-60).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/36000-36198 External Data Collection (Seite 51-60)",
+          "registerType": "holdingRegs",
+          "registers": 94,
+          "addressing": "raw",
+          "warnings": 16
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/37000-37078 BMS 1 Operation Data (Seite 61-66).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/37000-37078 BMS 1 Operation Data (Seite 61-66)",
+          "registerType": "holdingRegs",
+          "registers": 62,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/37150-37158 BMS AC Data (Seite 67).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/37150-37158 BMS AC Data (Seite 67)",
+          "registerType": "holdingRegs",
+          "registers": 9,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/39000-39076 BMS 2 Operation Data (Seite 68-72).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/39000-39076 BMS 2 Operation Data (Seite 68-72)",
+          "registerType": "holdingRegs",
+          "registers": 60,
+          "addressing": "raw",
+          "warnings": 2
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/39499-39839 LG HV BAT Log (Seite 73-89).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/39499-39839 LG HV BAT Log (Seite 73-89)",
+          "registerType": "holdingRegs",
+          "registers": 202,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/39870-39899 LG LV Data Log (Seite 90-91).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/39870-39899 LG LV Data Log (Seite 90-91)",
+          "registerType": "holdingRegs",
+          "registers": 27,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45127-45134 Com Setting (Seite 95).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45127-45134 Com Setting (Seite 95)",
+          "registerType": "holdingRegs",
+          "registers": 3,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45200-45305 Function Setting (Seite 95-100).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45200-45305 Function Setting (Seite 95-100)",
+          "registerType": "holdingRegs",
+          "registers": 60,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45350-45389 DSP BAT setting (Seite 100-101).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45350-45389 DSP BAT setting (Seite 100-101)",
+          "registerType": "holdingRegs",
+          "registers": 10,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45400-45699 Safety Parameter Setting (Seite 102-119).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45400-45699 Safety Parameter Setting (Seite 102-119)",
+          "registerType": "holdingRegs",
+          "registers": 255,
+          "addressing": "raw",
+          "warnings": 11
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45700-45709 QU Curve (Seite 120).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45700-45709 QU Curve (Seite 120)",
+          "registerType": "holdingRegs",
+          "registers": 10,
+          "addressing": "raw",
+          "warnings": 2
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45714-45717 Others (Seite 121).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45714-45717 Others (Seite 121)",
+          "registerType": "holdingRegs",
+          "registers": 4,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45720-45726 PU Curve (Seite 121).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45720-45726 PU Curve (Seite 121)",
+          "registerType": "holdingRegs",
+          "registers": 7,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45733-45743 cosφ P Curve (Seite 122).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45733-45743 cosφ P Curve (Seite 122)",
+          "registerType": "holdingRegs",
+          "registers": 11,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45751-45802 Frequency Curve (Seite 123-125).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45751-45802 Frequency Curve (Seite 123-125)",
+          "registerType": "holdingRegs",
+          "registers": 42,
+          "addressing": "raw",
+          "warnings": 9
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45813-45814 QP Curve (Seite 126).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45813-45814 QP Curve (Seite 126)",
+          "registerType": "holdingRegs",
+          "registers": 2,
+          "addressing": "raw",
+          "warnings": 2
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45821-45900 HVRT-LVRT (Seite126-131).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45821-45900 HVRT-LVRT (Seite126-131)",
+          "registerType": "holdingRegs",
+          "registers": 75,
+          "addressing": "raw",
+          "warnings": 10
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45901-45918 FRT (Seite 131-132).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/45901-45918 FRT (Seite 131-132)",
+          "registerType": "holdingRegs",
+          "registers": 13,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/46903-46904 Optional Function (Seite 132) ohne Funktion.tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/46903-46904 Optional Function (Seite 132) ohne Funktion",
+          "registerType": "holdingRegs",
+          "registers": 2,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/47000-47464 ARM Settings (Seite 133-135).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/47000-47464 ARM Settings (Seite 133-135)",
+          "registerType": "holdingRegs",
+          "registers": 28,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/47117-47119 ARM Settings (Seite 133-135)ohne Funktion.tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/47117-47119 ARM Settings (Seite 133-135)ohne Funktion",
+          "registerType": "holdingRegs",
+          "registers": 3,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/47505-47774 ARM BMS&EMS parameter (Seite 135-148).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/47505-47774 ARM BMS&EMS parameter (Seite 135-148)",
+          "registerType": "holdingRegs",
+          "registers": 198,
+          "addressing": "raw",
+          "warnings": 13
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/47900-47937 ARM BMS Passthrough (Seite 149-150).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/47900-47937 ARM BMS Passthrough (Seite 149-150)",
+          "registerType": "holdingRegs",
+          "registers": 34,
+          "addressing": "raw",
+          "warnings": 2
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/50000-50094 Self-check Parameter (Seite 151-160).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/50000-50094 Self-check Parameter (Seite 151-160)",
+          "registerType": "holdingRegs",
+          "registers": 95,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/50200-50203 Self-check Parameter (Seite 160) ohe Funktion.tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/50200-50203 Self-check Parameter (Seite 160) ohe Funktion",
+          "registerType": "holdingRegs",
+          "registers": 4,
+          "addressing": "raw",
+          "warnings": 3
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/2 EVcharger/10600-10679 EVcharger (Seite 11-12).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/2 EVcharger/10600-10679 EVcharger (Seite 11-12)",
+          "registerType": "holdingRegs",
+          "registers": 23,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/2 EVcharger/10700-10766 EVcharger Fault (Seite 12-15).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/2 EVcharger/10700-10766 EVcharger Fault (Seite 12-15)",
+          "registerType": "holdingRegs",
+          "registers": 21,
+          "addressing": "raw",
+          "warnings": 7
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/2 EVcharger/10800-10866 EVcharger Charging (Seite 15-16).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/2 EVcharger/10800-10866 EVcharger Charging (Seite 15-16)",
+          "registerType": "holdingRegs",
+          "registers": 21,
+          "addressing": "raw",
+          "warnings": 7
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/2 EVcharger/10900-11005 EVcharger ABD (Seite 17).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/2 EVcharger/10900-11005 EVcharger ABD (Seite 17)",
+          "registerType": "holdingRegs",
+          "registers": 17,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/2 EVcharger/20300-20332 EVcharger Setting (Seite 18-19).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/2 EVcharger/20300-20332 EVcharger Setting (Seite 18-19)",
+          "registerType": "holdingRegs",
+          "registers": 28,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/3 ETC-BTC Inverter Series/33200-33212 ETC-BTC Massage (Seite 29-30).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/3 ETC-BTC Inverter Series/33200-33212 ETC-BTC Massage (Seite 29-30)",
+          "registerType": "holdingRegs",
+          "registers": 13,
+          "addressing": "raw",
+          "warnings": 2
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/3 ETC-BTC Inverter Series/33300-33405 BTC-ETC Module Status (Seite 30-33).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/3 ETC-BTC Inverter Series/33300-33405 BTC-ETC Module Status (Seite 30-33)",
+          "registerType": "holdingRegs",
+          "registers": 58,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/3 ETC-BTC Inverter Series/33500-33504 ETC-BTC New Resgister (Seite 34).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/3 ETC-BTC Inverter Series/33500-33504 ETC-BTC New Resgister (Seite 34)",
+          "registerType": "holdingRegs",
+          "registers": 5,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/3 ETC-BTC Inverter Series/35035-35040 ETC-BTC Device Info (Seite 35-36) .tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/3 ETC-BTC Inverter Series/35035-35040 ETC-BTC Device Info (Seite 35-36) ",
+          "registerType": "holdingRegs",
+          "registers": 6,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/3 ETC-BTC Inverter Series/35600-35602 BTC New Registers (Seite 51).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/3 ETC-BTC Inverter Series/35600-35602 BTC New Registers (Seite 51)",
+          "registerType": "holdingRegs",
+          "registers": 3,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/3 ETC-BTC Inverter Series/40000-42200 ETC-BTC OEM Data (Seite 92-94).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/3 ETC-BTC Inverter Series/40000-42200 ETC-BTC OEM Data (Seite 92-94)",
+          "registerType": "holdingRegs",
+          "registers": 14,
+          "addressing": "raw",
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/holding-registers (GW25K-ET, LX F16.4-H, keine Wallbox).tsv",
+          "title": "Modbus Protokol für Energy Storage Inverter/holding-registers (GW25K-ET, LX F16.4-H, keine Wallbox)",
+          "registerType": "holdingRegs",
+          "registers": 479,
+          "addressing": "raw",
+          "warnings": 44
+        }
+      ]
+    },
+    {
+      "id": "PV-Wechselrichter/Growatt SPH 8KTL3 BH-UP",
+      "category": "PV-Wechselrichter",
+      "name": "Growatt SPH 8KTL3 BH-UP",
+      "readme": "PV-Wechselrichter/Growatt SPH 8KTL3 BH-UP/README.md",
+      "files": [
+        {
+          "path": "PV-Wechselrichter/Growatt SPH 8KTL3 BH-UP/holding-registers.tsv",
+          "title": "holding-registers",
+          "registerType": "holdingRegs",
+          "registers": 26,
+          "warnings": 4
+        },
+        {
+          "path": "PV-Wechselrichter/Growatt SPH 8KTL3 BH-UP/input-registers.tsv",
+          "title": "input-registers",
+          "registerType": "inputRegs",
+          "registers": 40,
+          "warnings": 1
+        }
+      ]
+    },
+    {
+      "id": "PV-Wechselrichter/KACO new energy",
+      "category": "PV-Wechselrichter",
+      "name": "KACO new energy",
+      "readme": "PV-Wechselrichter/KACO new energy/README.md",
+      "files": [
+        {
+          "path": "PV-Wechselrichter/KACO new energy/holding-registers_blueplanet_nx3_m2-multidevice.tsv",
+          "title": "holding-registers_blueplanet_nx3_m2-multidevice",
+          "registerType": "holdingRegs",
+          "registers": 48,
+          "deviceIds": [
+            3
+          ],
+          "warnings": 15
+        },
+        {
+          "path": "PV-Wechselrichter/KACO new energy/holding-registers_blueplanet_nx3_m2.tsv",
+          "title": "holding-registers_blueplanet_nx3_m2",
+          "registerType": "holdingRegs",
+          "registers": 48,
+          "warnings": 15
+        },
+        {
+          "path": "PV-Wechselrichter/KACO new energy/holding-registers_blueplanet_tl3.tsv",
+          "title": "holding-registers_blueplanet_tl3",
+          "registerType": "holdingRegs",
+          "registers": 26,
+          "warnings": 15
+        }
+      ]
+    },
+    {
+      "id": "PV-Wechselrichter/Kostal",
+      "category": "PV-Wechselrichter",
+      "name": "Kostal",
+      "files": [
+        {
+          "path": "PV-Wechselrichter/Kostal/holding_register.txt",
+          "title": "holding_register",
+          "registerType": "holdingRegs",
+          "registers": 79,
+          "addressing": "raw",
+          "warnings": 2
+        }
+      ]
+    },
+    {
+      "id": "PV-Wechselrichter/SMA",
+      "category": "PV-Wechselrichter",
+      "name": "SMA Sunny Tripower X",
+      "manufacturer": "SMA",
+      "files": [
+        {
+          "path": "PV-Wechselrichter/SMA/Tripower X/TripowerX15.tsv",
+          "title": "Tripower X 15",
+          "registerType": "inputRegs",
+          "registers": 50,
+          "addressing": "raw",
+          "warnings": 4
+        }
+      ]
+    },
+    {
+      "id": "PV-Wechselrichter/SMA SUNNY TRIPOWER 10.0 SE",
+      "category": "PV-Wechselrichter",
+      "name": "SMA SUNNY TRIPOWER 10.0 SE",
+      "manufacturer": "SMA",
+      "files": [
+        {
+          "path": "PV-Wechselrichter/SMA SUNNY TRIPOWER 10.0 SE/eingang-registers.tsv",
+          "title": "eingang-registers",
+          "registerType": "inputRegs",
+          "registers": 33,
+          "addressing": "raw",
+          "deviceIds": [
+            3
+          ],
+          "warnings": 2
+        },
+        {
+          "path": "PV-Wechselrichter/SMA SUNNY TRIPOWER 10.0 SE/holding-registers.tsv",
+          "title": "holding-registers",
+          "registerType": "holdingRegs",
+          "registers": 6,
+          "addressing": "raw",
+          "deviceIds": [
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PV-Wechselrichter/SolarEdge",
+      "category": "PV-Wechselrichter",
+      "name": "SolarEdge",
+      "readme": "PV-Wechselrichter/SolarEdge/README.md",
+      "files": [
+        {
+          "path": "PV-Wechselrichter/SolarEdge/holding-registers-meter-battery.tsv",
+          "title": "holding-registers-meter-battery",
+          "registerType": "holdingRegs",
+          "registers": 113,
+          "addressing": "alias",
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/SolarEdge/holding-registers-meter1.tsv",
+          "title": "holding-registers-meter1",
+          "registerType": "holdingRegs",
+          "registers": 80,
+          "warnings": 1
+        },
+        {
+          "path": "PV-Wechselrichter/SolarEdge/holding-registers-S10KRWB-SE30K-Battery.tsv",
+          "title": "holding-registers-S10KRWB-SE30K-Battery",
+          "registerType": "holdingRegs",
+          "registers": 99,
+          "addressing": "alias",
+          "deviceIds": [
+            1,
+            2
+          ]
+        },
+        {
+          "path": "PV-Wechselrichter/SolarEdge/holding-registers.tsv",
+          "title": "holding-registers",
+          "registerType": "holdingRegs",
+          "registers": 49,
+          "addressing": "raw",
+          "warnings": 4
+        }
+      ]
+    },
+    {
+      "id": "PV-Wechselrichter/Solax-QCells",
+      "category": "PV-Wechselrichter",
+      "name": "Solax-QCells",
+      "readme": "PV-Wechselrichter/Solax-QCells/readme.md",
+      "files": [
+        {
+          "path": "PV-Wechselrichter/Solax-QCells/holding_registers.tsv",
+          "title": "holding_registers",
+          "registerType": "holdingRegs",
+          "registers": 6,
+          "addressing": "raw"
+        },
+        {
+          "path": "PV-Wechselrichter/Solax-QCells/input_registers.tsv",
+          "title": "input_registers",
+          "registerType": "inputRegs",
+          "registers": 25,
+          "addressing": "raw"
+        }
+      ]
+    },
+    {
+      "id": "PV-Wechselrichter/Solplanet Aiswei",
+      "category": "PV-Wechselrichter",
+      "name": "Solplanet Aiswei",
+      "readme": "PV-Wechselrichter/Solplanet Aiswei/README.md",
+      "files": [
+        {
+          "path": "PV-Wechselrichter/Solplanet Aiswei/input-registers.tsv",
+          "title": "input-registers",
+          "registerType": "inputRegs",
+          "registers": 12
+        }
+      ]
+    },
+    {
+      "id": "PV-Wechselrichter/Sungrow",
+      "category": "PV-Wechselrichter",
+      "name": "Sungrow",
+      "readme": "PV-Wechselrichter/Sungrow/README.md",
+      "files": [
+        {
+          "path": "PV-Wechselrichter/Sungrow/input-registers.tsv",
+          "title": "input-registers",
+          "registerType": "inputRegs",
+          "registers": 78,
+          "addressing": "raw",
+          "warnings": 1
+        }
+      ]
+    },
+    {
+      "id": "Solarladeregler/EPEver Tracer",
+      "category": "Solarladeregler",
+      "name": "EPEver Tracer",
+      "readme": "Solarladeregler/EPEver Tracer/README.md",
+      "files": [
+        {
+          "path": "Solarladeregler/EPEver Tracer/input-registers.tsv",
+          "title": "input-registers",
+          "registerType": "inputRegs",
+          "registers": 10,
+          "addressing": "raw"
+        }
+      ]
+    },
+    {
+      "id": "Wallbox/Cfos",
+      "category": "Wallbox",
+      "name": "Cfos",
+      "readme": "Wallbox/Cfos/README.md",
+      "files": [
+        {
+          "path": "Wallbox/Cfos/holding-registers.tsv",
+          "title": "holding-registers",
+          "registerType": "holdingRegs",
+          "registers": 46,
+          "addressing": "raw",
+          "warnings": 1
+        }
+      ]
+    },
+    {
+      "id": "Wallbox/Delta AC Max",
+      "category": "Wallbox",
+      "name": "Delta AC Max",
+      "readme": "Wallbox/Delta AC Max/README.md",
+      "files": [
+        {
+          "path": "Wallbox/Delta AC Max/input-registers.tsv",
+          "title": "input-registers",
+          "registerType": "inputRegs",
+          "registers": 7,
+          "addressing": "raw"
+        }
+      ]
+    }
+  ]
+}

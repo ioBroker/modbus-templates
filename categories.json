@@ -1,0 +1,8 @@
+{
+    "Energiezaehler": { "en": "Energy meters", "de": "Energiezähler", "ru": "Счётчики электроэнергии" },
+    "Heizungsanlagen": { "en": "Heating systems", "de": "Heizungsanlagen", "ru": "Системы отопления" },
+    "Lueftungsanlagen": { "en": "Ventilation systems", "de": "Lüftungsanlagen", "ru": "Вентиляция" },
+    "PV-Wechselrichter": { "en": "PV inverters", "de": "PV-Wechselrichter", "ru": "Солнечные инверторы" },
+    "Solarladeregler": { "en": "Solar charge controllers", "de": "Solarladeregler", "ru": "Солнечные контроллеры заряда" },
+    "Wallbox": { "en": "Wallboxes", "de": "Wallboxen", "ru": "Зарядные станции" }
+}
