@@ -522,6 +522,26 @@
       ]
     },
     {
+      "id": "Heizungsanlagen/my-PV AC ELWA 2",
+      "category": "Heizungsanlagen",
+      "name": "my-PV AC ELWA 2",
+      "manufacturer": "my-PV",
+      "models": [
+        "AC ELWA 2"
+      ],
+      "description": "Photovoltaik-Heizstab für Warmwasser, Modbus TCP",
+      "readme": "Heizungsanlagen/my-PV AC ELWA 2/README.md",
+      "files": [
+        {
+          "path": "Heizungsanlagen/my-PV AC ELWA 2/holding-registers.tsv",
+          "title": "holding-registers",
+          "registerType": "holdingRegs",
+          "registers": 25,
+          "addressing": "raw"
+        }
+      ]
+    },
+    {
       "id": "Heizungsanlagen/StiebelEltron-ISG",
       "category": "Heizungsanlagen",
       "name": "Stiebel Eltron ISG / ISG plus",
@@ -591,26 +611,29 @@
     {
       "id": "Heizungsanlagen/Wolf FHS 180 280",
       "category": "Heizungsanlagen",
-      "name": "Wolf FHS 180 280",
+      "name": "Wolf FHS 180 / FHS 280",
+      "manufacturer": "Wolf",
+      "models": [
+        "FHS-180-S-230V-e2-M2",
+        "FHS-280-S-230V-e2-M2",
+        "FHS-280-HE-230V-e2-M2"
+      ],
+      "description": "Warmwasser-Wärmepumpe, Modbus RTU (RS485)",
       "readme": "Heizungsanlagen/Wolf FHS 180 280/README.md",
       "files": [
         {
           "path": "Heizungsanlagen/Wolf FHS 180 280/holding-registers.tsv",
           "title": "holding-registers",
           "registerType": "holdingRegs",
-          "registers": 11,
-          "deviceIds": [
-            1
-          ]
+          "registers": 40,
+          "addressing": "raw"
         },
         {
           "path": "Heizungsanlagen/Wolf FHS 180 280/input-registers.tsv",
           "title": "input-registers",
           "registerType": "inputRegs",
-          "registers": 4,
-          "deviceIds": [
-            1
-          ]
+          "registers": 16,
+          "addressing": "raw"
         }
       ]
     },
