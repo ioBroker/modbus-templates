@@ -627,6 +627,28 @@ export function validateFile(relPath, buffer, manifestEntry) {
 
 const DETECT_TYPES = { string: 0, uint16: 1, int16: 1, uint32: 2, int32: 2 };
 const DETECT_MATCHERS = ['equals', 'startsWith', 'oneOf', 'range'];
+/**
+ * The admin sends the reads of all templates in one message, ioBroker.modbus accepts at most 20 (MAX_READS in
+ * src/main.ts) and refuses the whole detection otherwise. Probes with the same register type, address and length
+ * share one read.
+ */
+const MAX_DETECT_READS = 20;
+
+/** The distinct reads that the detection of all templates needs */
+export function detectReads(templates) {
+    const reads = new Map();
+    for (const t of templates) {
+        for (const probe of t.detect?.probes || []) {
+            const len = probe.type === 'string' ? probe.len : DETECT_TYPES[probe.type];
+            const key = `${probe.registerType}:${probe.address}:${len}`;
+            if (!reads.has(key)) {
+                reads.set(key, []);
+            }
+            reads.get(key).push(t.id);
+        }
+    }
+    return reads;
+}
 
 /**
  * Checks the "detect" block of a template.json. The adapter reads the probes (raw addresses, function code 3 or 4)
@@ -1032,6 +1054,15 @@ function buildIndex(scanResult) {
     const templates = [...devices.values()]
         .map(t => ({ ...t, files: t.files.sort((a, b) => collator.compare(a.path, b.path)) }))
         .sort((a, b) => collator.compare(a.id, b.id));
+
+    const reads = detectReads(templates);
+    if (reads.size > MAX_DETECT_READS) {
+        issues.push({
+            file: 'templates.json',
+            level: 'error',
+            message: `Device detection needs ${reads.size} reads, ioBroker.modbus accepts at most ${MAX_DETECT_READS}: share addresses between the probes (${[...reads.keys()].join(', ')})`,
+        });
+    }
 
     const categories = [...new Set(templates.map(t => t.category))].sort(collator.compare).map(id => ({
         id,

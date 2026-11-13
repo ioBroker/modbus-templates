@@ -1,7 +1,7 @@
 // Run with: npm test (node --test scripts/templates.test.mjs)
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { parseTsv, validateFile, registerTypeFromPath } from './templates.mjs';
+import { parseTsv, validateFile, registerTypeFromPath, detectReads, loadAllManifests } from './templates.mjs';
 
 const HEADER = '_address\tname\tdescription\tunit\ttype\tlen\tfactor\toffset\tformula\trole\troom\tpoll\twp\tcw\tisScale';
 const row = (address, name, type = 'uint16be', len = '1', factor = '1') =>
@@ -103,4 +103,13 @@ test('detect block', async () => {
     assert.match(bad, /startsWith is only for strings/);
     assert.match(bad, /exactly one of/);
     assert.match(validateDetect([]).join(), /must be an object/);
+});
+
+test('the device detection of all templates fits into one request of ioBroker.modbus', () => {
+    // ioBroker.modbus refuses more than 20 reads (MAX_READS in src/main.ts), the whole detection fails then
+    const { manifests } = loadAllManifests();
+    const templates = Object.entries(manifests).map(([id, m]) => ({ id, detect: m.detect }));
+    const reads = detectReads(templates);
+    assert.ok(reads.size > 0);
+    assert.ok(reads.size <= 20, `${reads.size} reads: ${[...reads.keys()].join(', ')}`);
 });

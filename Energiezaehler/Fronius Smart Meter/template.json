@@ -1,0 +1,36 @@
+{
+    "detect": {
+        "probes": [
+            {
+                "registerType": "holdingRegs",
+                "address": 40000,
+                "type": "string",
+                "len": 2,
+                "equals": "SunS"
+            },
+            {
+                "registerType": "holdingRegs",
+                "address": 40004,
+                "type": "string",
+                "len": 16,
+                "startsWith": "Fronius"
+            },
+            {
+                "registerType": "holdingRegs",
+                "address": 40069,
+                "type": "uint16",
+                "oneOf": [
+                    201,
+                    202,
+                    203,
+                    204,
+                    211,
+                    212,
+                    213,
+                    214
+                ]
+            }
+        ],
+        "note": "SunSpec: 'SunS' at 40000, manufacturer at 40004, meter model 201-204 (integer) or 211-214 (float) at 40069"
+    }
+}

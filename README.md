@@ -102,6 +102,9 @@ dialog). The adapter reads the probes from the connected device and offers the t
 * at most 5 probes. Use registers that identify the device: a type code, a model string, a SunSpec header.
 * `"weak": true` if the probes could also match other devices. The adapter then shows the device as "possible".
 * `note`: where the values come from (data sheet), for reviewers.
+* The adapter reads the probes of **all** templates in one request and accepts at most 20 different reads. Probes with
+  the same register type, address and length share one read, so prefer addresses that other templates already use
+  (e.g. the SunSpec header at 40000/40004, the Eastron meter code at 64514). `npm test` checks the limit.
 
 ### Check your files before the pull request
 Every pull request is validated automatically. You can do the same locally with Node.js 18 or newer:

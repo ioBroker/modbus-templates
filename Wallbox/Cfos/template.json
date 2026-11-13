@@ -1,0 +1,14 @@
+{
+    "detect": {
+        "probes": [
+            {
+                "registerType": "holdingRegs",
+                "address": 8016,
+                "type": "string",
+                "len": 16,
+                "startsWith": "cFos"
+            }
+        ],
+        "note": "Product name at 8016 ('cFos Power Brain Controller')"
+    }
+}
