@@ -1,0 +1,33 @@
+_address	deviceId	name	description	unit	type	len	factor	offset	formula	role	room	cw	isScale
+30001	1	Spannung_L1	Phase 1 Spannung	V	floatbe	2	1	0		value.voltage			
+30003	1	Spannung_L2	Phase 2 Spannung	V	floatbe	2	1	0		value.voltage			
+30005	1	Spannung_L3	Phase 3 Spannung	V	floatbe	2	1	0		value.voltage			
+30007	1	Strom_L1	Phase 1 Strom	A	floatbe	2	1	0		value.current			
+30009	1	Strom_L2	Phase 2 Strom	A	floatbe	2	1	0		value.current			
+30011	1	Strom_L3	Phase 3 Strom	A	floatbe	2	1	0		value.current			
+30013	1	Wirkleistung_L1	Phase 1 Wirkleistung	W	floatbe	2	1	0		value.power.active			
+30015	1	Wirkleistung_L2	Phase 2 Wirkleistung	W	floatbe	2	1	0		value.power.active			
+30017	1	Wirkleistung_L3	Phase 3 Wirkleistung	W	floatbe	2	1	0		value.power.active			
+30019	1	Scheinleistung_L1	Phase 1 Scheinleistung	VA	floatbe	2	1	0		value			
+30021	1	Scheinleistung_L2	Phase 2 Scheinleistung	VA	floatbe	2	1	0		value			
+30023	1	Scheinleistung_L3	Phase 3 Scheinleistung	VA	floatbe	2	1	0		value			
+30025	1	Blindleistung_L1	Phase 1 Blindleistung	VAr	floatbe	2	1	0		value.power.reactive			
+30027	1	Blindleistung_L2	Phase 2 Blindleistung	VAr	floatbe	2	1	0		value.power.reactive			
+30029	1	Blindleistung_L3	Phase 3 Blindleistung	VAr	floatbe	2	1	0		value.power.reactive			
+30031	1	Leistungsfaktor_L1	Phase 1 Leistungsfaktor		floatbe	2	1	0		value			
+30033	1	Leistungsfaktor_L2	Phase 2 Leistungsfaktor		floatbe	2	1	0		value			
+30035	1	Leistungsfaktor_L3	Phase 3 Leistungsfaktor		floatbe	2	1	0		value			
+30043	1	Spannung_Durchschnitt	Durchschnitt L-N	V	floatbe	2	1	0		value.voltage			
+30047	1	Strom_Durchschnitt	Durchschnitt Strom	A	floatbe	2	1	0		value.current			
+30049	1	Strom_Summe	Summe Strom	A	floatbe	2	1	0		value.current			
+30053	1	Gesamtwirkleistung	Gesamte Wirkleistung	W	floatbe	2	1	0		value.power.active			
+30057	1	Gesamtscheinleistung	Gesamte Scheinleistung	VA	floatbe	2	1	0		value			
+30061	1	Gesamtblindleistung	Gesamte Blindleistung	VAr	floatbe	2	1	0		value.power.reactive			
+30063	1	Leistungsfaktor_Gesamt	Gesamt Leistungsfaktor		floatbe	2	1	0		value			
+30071	1	Frequenz	Netzfrequenz	Hz	floatbe	2	1	0		value.frequency			
+30073	1	Import_kWh	Bezogene Wirkenergie	kWh	floatbe	2	1	0		value.energy.consumed			
+30075	1	Export_kWh	Eingespeiste Wirkenergie	kWh	floatbe	2	1	0		value.energy.produced			
+30077	1	Import_kVArh	Bezogene Blindenergie	kVArh	floatbe	2	1	0		value.energy.reactive			
+30079	1	Export_kVArh	Eingespeiste Blindenergie	kVArh	floatbe	2	1	0		value.energy.reactive			
+30343	1	Gesamt_kWh	Gesamte Wirkenergie	kWh	floatbe	2	1	0		value.energy.active			
+30345	1	Gesamt_kVArh	Gesamte Blindenergie	kVArh	floatbe	2	1	0		value.energy.reactive			
