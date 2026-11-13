@@ -1,0 +1,17 @@
+{
+    "name": "Eastron SDM54-M MID",
+    "manufacturer": "Eastron",
+    "models": ["SDM54-M MID"],
+    "description": "Dreiphasiger Energiezähler für die Hutschiene (4 TE), MID, Modbus RTU (RS485)",
+    "files": {
+        "input-registers.tsv": {
+            "addressing": "alias"
+        }
+    },
+    "detect": {
+        "probes": [
+            { "registerType": "holdingRegs", "address": 64514, "type": "uint16", "equals": 217 }
+        ],
+        "note": "Eastron Meter Code (Holding-Register FC02h); ein SDM54-M MID liefert 217 (0x00D9)"
+    }
+}
