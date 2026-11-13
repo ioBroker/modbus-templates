@@ -95,6 +95,20 @@ const GUI_ROLES = new Set([
     'level.temperature',
     'level.interval',
     'value.power.consumption',
+    // electrical measurement roles, in the admin GUI since ioBroker/ioBroker.modbus#852
+    'value.voltage',
+    'value.current',
+    'value.frequency',
+    'value.power',
+    'value.power.active',
+    'value.power.reactive',
+    'value.power.consumed',
+    'value.power.produced',
+    'value.energy',
+    'value.energy.active',
+    'value.energy.reactive',
+    'value.energy.consumed',
+    'value.energy.produced',
 ]);
 
 const BOOLEAN_COLUMNS = ['poll', 'wp', 'cw', 'isScale', 'sanitize'];
