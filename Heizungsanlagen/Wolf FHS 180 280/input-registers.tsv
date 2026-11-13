@@ -1,5 +1,17 @@
-_address	deviceId	name	description	unit	type	len	factor	offset	formula	role	room	cw	isScale
-30001	1	Pressostat	qm		int16be	1	1	0		value			
-30002	1	Solcelle	on / off		int16be	1	1	0		value			
-30008	1	T1	Verdampfer Temp		int16be	1	1	0	x/10	value			
-30009	1	T2	Speicher Temp		int16be	1	1	0	x/10	value			
+_address	name	description	unit	type	len	factor	offset	formula	role	room	cw	isScale
+0	DI1_Pressostat	0 = aus, 1 = an		uint16be	1	1	0		indicator		false	false
+1	DI2_Solcelle	PV-Eingang: 0 = aus, 1 = an		uint16be	1	1	0		indicator		false	false
+7	T1	Verdampfer-Temperatur	°C	int16be	1	0.1	0		value.temperature		false	false
+8	T2	Speicher-Temperatur	°C	int16be	1	0.1	0		value.temperature		false	false
+9	Relay1_Kompressor	0 = aus, 1 = an		uint16be	1	1	0		indicator		false	false
+10	Relay2_Elpatron	Heizstab: 0 = aus, 1 = an		uint16be	1	1	0		indicator		false	false
+11	Relay3_Kedel	Kessel: 0 = aus, 1 = an		uint16be	1	1	0		indicator		false	false
+12	Relay4_Magnetventil	0 = aus, 1 = an		uint16be	1	1	0		indicator		false	false
+13	Relay6_Kondensator	0 = aus, 1 = an		uint16be	1	1	0		indicator		false	false
+14	Relay7_Ventilator	0 = aus, 1 = an		uint16be	1	1	0		indicator		false	false
+15	DA0_0-10V	Ausgang 0-10 V für EC-Lüfter (Rohwert 1000 = 10 V)	V	uint16be	1	0.01	0		value.voltage		false	false
+16	Status	Statusbits		uint16be	1	1	0		value		false	false
+17	Rest_days	Resttage	d	uint16be	1	1	0		value		false	false
+18	Unit_Alarm	Alarmbits		uint16be	1	1	0		value		false	false
+19	T3	Temperatur T3	°C	int16be	1	0.1	0		value.temperature		false	false
+119	FW_Version	Firmware-Version		uint16be	1	0.1	0		value		false	false
