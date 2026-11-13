@@ -164,8 +164,7 @@
           "addressing": "alias",
           "deviceIds": [
             1
-          ],
-          "warnings": 24
+          ]
         }
       ]
     },
@@ -1211,8 +1210,7 @@
           "title": "holding-registers_blueplanet_tl3",
           "registerType": "holdingRegs",
           "registers": 26,
-          "addressing": "raw",
-          "warnings": 15
+          "addressing": "raw"
         }
       ]
     },
@@ -1511,8 +1509,7 @@
           "title": "holding-registers",
           "registerType": "holdingRegs",
           "registers": 46,
-          "addressing": "raw",
-          "warnings": 1
+          "addressing": "raw"
         }
       ]
     },
