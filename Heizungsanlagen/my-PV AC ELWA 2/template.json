@@ -1,0 +1,9 @@
+{
+    "name": "my-PV AC ELWA 2",
+    "manufacturer": "my-PV",
+    "models": ["AC ELWA 2"],
+    "description": "Photovoltaik-Heizstab für Warmwasser, Modbus TCP",
+    "files": {
+        "holding-registers.tsv": { "addressing": "raw" }
+    }
+}

@@ -1,12 +1,41 @@
-_address	deviceId	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
-40005	1	T set point			int16be	1	1	0		value		true			
-40006	1	T min			int16be	1	1	0		value		true			
-40007	1	T2 min			int16be	1	1	0		value		true			
-40013	1	H Pump Mode	0=off, 1=WP,2=EL,3=WP+EL		int16be	1	1	0		value		true			
-40016	1	Fan Oper.			int16be	1	1	0		value		true			
-40019	1	T PV WP			int16be	1	1	0		value		true			
-40020	1	T PV EL			int16be	1	1	0		value		true			
-40023	1	Boost	on/off		int16be	1	1	0		value		true			
-40025	1	unknown_40025	Bedeutung unbekannt		uint16le	1	1	0		value		true			
-40029	1	T max	Temp Max		int16be	1	1	0		value		true			
-40118	1	Modbus Allow write			int16be	1	1	0		value		true			
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+4	T_setpoint	T Soll, Solltemperatur (5..62)	°C	int16be	1	1	0		level.temperature		true	false	false	false
+5	T_min	T min (5..62)	°C	int16be	1	1	0		level.temperature		true	false	false	false
+6	T2_min	T2 min (5..62)	°C	int16be	1	1	0		level.temperature		true	false	false	false
+7	Timer	Timer: 0 = aus, 1 = an		uint16be	1	1	0		level		true	false	false	false
+8	Start_HP_Hour	h_Uhr, Start Wärmepumpe Stunde (0..23)	h	uint16be	1	1	0		level		true	false	false	false
+9	Start_HP_Min	m_Uhr, Start Wärmepumpe Minute (0..59)	min	uint16be	1	1	0		level		true	false	false	false
+10	Stop_HP_Hour	h_Stop, Stop Wärmepumpe Stunde (0..23)	h	uint16be	1	1	0		level		true	false	false	false
+11	Stop_HP_Min	m_Stop, Stop Wärmepumpe Minute (0..59)	min	uint16be	1	1	0		level		true	false	false	false
+12	H_pump	Betr.art: 0 = aus, 1 = nur WP, 2 = nur EL, 3 = WP + EL, 4 = Kessel, 5 = WP + Kessel		uint16be	1	1	0		level		true	false	false	false
+13	Legionel_Auto_function	T Legio: 0 = aus, 1 = 60 °C, 2 = 65 °C		uint16be	1	1	0		level		true	false	false	false
+14	Wwprotec	Tmin RL (5..20)	°C	int16be	1	1	0		level.temperature		true	false	false	false
+15	FanOper	WP_LS, AC-Lüfter: 0 = niedrig, 1 = hoch; EC-Lüfter: 0 = aus, 1 = EC niedrig, 2 = EC mittel, 3 = EC hoch		uint16be	1	1	0		level		true	false	false	false
+16	FanCon	KWL: 0 = aus, 1 = EC niedrig, 2 = EC mittel, 3 = EC hoch		uint16be	1	1	0		level		true	false	false	false
+17	Solacel	PV.Modus: 0 = aus, 1 = nur WP, 2 = nur EL, 3 = WP + EL		uint16be	1	1	0		level		true	false	false	false
+18	SC_HP	T.PV_WP, Solltemperatur Wärmepumpe bei PV (5..62)	°C	int16be	1	1	0		level.temperature		true	false	false	false
+19	SC_EL	T.PV_EL, Solltemperatur Heizstab bei PV (5..62)	°C	int16be	1	1	0		level.temperature		true	false	false	false
+20	Holiday	Ferien: 0 = aus, 1 = 1 Woche, 2 = 2 Wochen, 3 = 3 Wochen, 4 = 3 Tage, 5 = manuell		uint16be	1	1	0		level		true	false	false	false
+21	Man_days_set	AbwTage, Abwesenheitstage (1..99)	d	uint16be	1	1	0		level		true	false	false	false
+22	Boost	Boost: 0 = aus, 1 = an		uint16be	1	1	0		level		true	false	false	false
+23	FanPause	VenPause: 0 = aus, 1 = 30m/15s, 2 = 30m/30s, 3 = 60m/15s, 4 = 60m/30s, 5 = 90m/15s, 6 = 90m/30s		uint16be	1	1	0		level		true	false	false	false
+25	Language	Sprache: 0 = Englisch, 1 = Deutsch, 2 = Französisch, 3 = Niederländisch, 4 = Spanisch, 5 = Italienisch, 6 = Dänisch, 7 = Schwedisch, 8 = Norwegisch, 9 = Polnisch, 10 = Slowenisch, 11 = Kroatisch		uint16be	1	1	0		level		true	false	false	false
+26	Defrost	Abtauart: 0 = Luft, 1 = Gas, 2 = Tmin RF (laut Wolf bitte nicht verändern)		uint16be	1	1	0		level		true	false	false	false
+27	Anode	Anode: 0 = aus, 1 = an		uint16be	1	1	0		level		true	false	false	false
+28	T_max	T max (5..62)	°C	int16be	1	1	0		level.temperature		true	false	false	false
+29	Fan_type	VrntTyp: 0 = AC, 1 = EC		uint16be	1	1	0		level		true	false	false	false
+30	EC_Fan_Level1	EC LS1 (0..100)	%	uint16be	1	1	0		level		true	false	false	false
+31	EC_Fan_Level2	EC LS2 (0..100)	%	uint16be	1	1	0		level		true	false	false	false
+32	EC_Fan_Level3	EC LS3 (0..100)	%	uint16be	1	1	0		level		true	false	false	false
+33	Legionel_Auto_function_days	Legionellenschutz alle n Tage (3..14)	d	uint16be	1	1	0		level		true	false	false	false
+103	RTCSek	Uhr: Sekunde	s	uint16be	1	1	0		value		true	false	false	false
+104	RTCMin	Uhr: Minute	min	uint16be	1	1	0		value		true	false	false	false
+105	RTCHour	Uhr: Stunde	h	uint16be	1	1	0		value		true	false	false	false
+106	RTCDay	Uhr: Wochentag		uint16be	1	1	0		value		true	false	false	false
+107	RTCDate	Uhr: Tag		uint16be	1	1	0		value		true	false	false	false
+108	RTCMonth	Uhr: Monat		uint16be	1	1	0		value		true	false	false	false
+109	RTCYear	Uhr: Jahr		uint16be	1	1	0		value		true	false	false	false
+114	ModbusAdresse	Modbus-Adresse (1..247)		uint16be	1	1	0		level		true	false	false	false
+115	ModbusBaudrate	Modbus-Baudrate: 1 = 19200, 2 = 9600		uint16be	1	1	0		level		true	false	false	false
+116	ModbusParitaet	Modbus-Parität: 0 = keine, 1 = ungerade, 2 = gerade		uint16be	1	1	0		level		true	false	false	false
+117	ModbusAllowWrite	Schreiben über Modbus: 1 = erlaubt		uint16be	1	1	0		level		true	false	false	false

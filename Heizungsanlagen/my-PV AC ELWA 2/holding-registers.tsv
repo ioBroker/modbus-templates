@@ -1,0 +1,26 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+1000	Power	Leistung: Vorgabe und aktueller Wert (Ansteuerungstyp "Modbus TCP" nötig, Vorgabe innerhalb des Timeouts 1004 wiederholen)	W	uint16be	1	1	0		level		true	false	false	false
+1001	Temp1	Temperatur 1 (interner Fühler)	°C	int16be	1	0.1	0		value.temperature		true	false	false	false
+1002	Tmax	Zieltemperatur	°C	int16be	1	0.1	0		value.temperature		true	false	false	false
+1003	Status	1 = keine Ansteuerung, 2 = heizt, 3 = Standby, 4 = Boost heizt, 5 = Heizen fertig, 20 = Legionellen-Boost aktiv, 21 = Gerät deaktiviert, 22 = Gerät blockiert, 201 = STB ausgelöst, 202 = Übertemperatur Leistungsteil, 203 = Fehler Temperaturfühler Platine, 204 = Hardwarefehler, 205 = Fehler Temperaturfühler ELWA, 209 = Fehler Mainboard		uint16be	1	1	0		value		true	false	false	false
+1004	Power_timeout	Zeitablauf Ansteuerung (höchstens einmal am Tag schreiben)	s	uint16be	1	1	0		level		true	false	false	false
+1005	Boost_mode	Boost-Modus (höchstens einmal am Tag schreiben)		uint16be	1	1	0		level		true	false	false	false
+1012	Boost_activate	Boost manuell starten: 1 schreiben		uint16be	1	1	0		level		true	false	false	false
+1014	Max_power	maximale Leistung (500..3500) (höchstens einmal am Tag schreiben)	W	uint16be	1	1	0		level		true	false	false	false
+1015	Temp_chip	Temperatur der Steuerung	°C	int16be	1	0.1	0		value.temperature		true	false	false	false
+1016	FW_controller	Firmware Steuerung, Hauptversion		uint16be	1	1	0		value		true	false	false	false
+1017	FW_powerstage	Firmware Leistungsteil (ep...)		uint16be	1	1	0		value		true	false	false	false
+1018	Serial_number	Seriennummer		string	8	1	0		state		true	false	false	false
+1028	FW_controller_sub	Firmware Steuerung, Unterversion		uint16be	1	1	0		value		true	false	false	false
+1029	Firmware_1029	Firmware-Info (bei der AC ELWA-E: 1 = Update verfügbar)		uint16be	1	1	0		value		true	false	false	false
+1030	Temp2	Temperatur 2 (externer Fühler)	°C	int16be	1	0.1	0		value.temperature		true	false	false	false
+1058	Relay_state	Relais, Bitmaske: Bit 0 = AUX, Bit 1 = SELV		uint16be	1	1	0		value		true	false	false	false
+1061	Voltage_L1	Eingangsspannung Leistungsteil	V	uint16be	1	1	0		value.voltage		true	false	false	false
+1065	Operation_mode	Betriebsart: 1 = nur ELWA (0..3500 W), 3 = ELWA + AUX-Relais (0..6500 W)		uint16be	1	1	0		value		true	false	false	false
+1071	Pmax_abs	maximal mögliche Leistung	W	uint16be	1	1	0		value.power		true	false	false	false
+1074	Pout_1	Ausgangsleistung 1	W	uint16be	1	1	0		value.power		true	false	false	false
+1075	Pout_2	Ausgangsleistung 2	W	uint16be	1	1	0		value.power		true	false	false	false
+1077	Operation_state	Symbol im Display: 0 = Standby, 1 = heizt mit PV-Überschuss, 2 = Boost, 3 = Zieltemperatur erreicht, 4 = keine Ansteuerung, 5 = keine Ansteuerung (blinkt), 6 = blockiert		uint16be	1	1	0		value		true	false	false	false
+1081	Device_on_off	Gerät: 0 = deaktiviert, 1 = aktiviert (höchstens einmal am Tag schreiben)		uint16be	1	1	0		level		true	false	false	false
+1082	Power_total	Leistung	W	uint16be	1	1	0		value.power		true	false	false	false
+1086	FW_co_controller	Firmware Co-Controller (ec...)		uint16be	1	1	0		value		true	false	false	false

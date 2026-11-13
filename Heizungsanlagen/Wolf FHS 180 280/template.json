@@ -1,0 +1,10 @@
+{
+    "name": "Wolf FHS 180 / FHS 280",
+    "manufacturer": "Wolf",
+    "models": ["FHS-180-S-230V-e2-M2", "FHS-280-S-230V-e2-M2", "FHS-280-HE-230V-e2-M2"],
+    "description": "Warmwasser-Wärmepumpe, Modbus RTU (RS485)",
+    "files": {
+        "holding-registers.tsv": { "addressing": "raw" },
+        "input-registers.tsv": { "addressing": "raw" }
+    }
+}
