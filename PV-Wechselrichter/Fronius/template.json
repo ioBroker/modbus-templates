@@ -19,8 +19,21 @@
                 "type": "string",
                 "len": 16,
                 "startsWith": "Fronius"
+            },
+            {
+                "registerType": "holdingRegs",
+                "address": 40069,
+                "type": "uint16",
+                "oneOf": [
+                    101,
+                    102,
+                    103,
+                    111,
+                    112,
+                    113
+                ]
             }
         ],
-        "note": "SunSpec common model: 'SunS' at 40000, manufacturer at 40004"
+        "note": "SunSpec: 'SunS' at 40000, manufacturer at 40004, inverter model 101-103 (integer) or 111-113 (float) at 40069"
     }
 }

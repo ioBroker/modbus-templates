@@ -6,5 +6,19 @@
         "input-registers_sdm630Modbus.tsv": {
             "addressing": "alias"
         }
+    },
+    "detect": {
+        "probes": [
+            {
+                "registerType": "holdingRegs",
+                "address": 64514,
+                "type": "uint16",
+                "oneOf": [
+                    135,
+                    137
+                ]
+            }
+        ],
+        "note": "Eastron meter code (holding register FC02h): 135 (0x0087) SDM72D v2, 137 (0x0089) SDM72D-M v2; the SDM630 V3 of this template has no known code yet"
     }
 }

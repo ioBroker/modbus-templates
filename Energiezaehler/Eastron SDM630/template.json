@@ -3,5 +3,19 @@
         "input-registers.tsv": {
             "addressing": "alias"
         }
+    },
+    "detect": {
+        "probes": [
+            {
+                "registerType": "holdingRegs",
+                "address": 64514,
+                "type": "uint16",
+                "oneOf": [
+                    112,
+                    121
+                ]
+            }
+        ],
+        "note": "Eastron meter code (holding register FC02h): 112 (0x0070) SDM630 Modbus V2, 121 (0x0079) SDM630MCT-2T"
     }
 }

@@ -134,5 +134,17 @@
         "Modbus Protokol für Energy Storage Inverter/holding-registers (GW25K-ET, LX F16.4-H, keine Wallbox).tsv": {
             "addressing": "raw"
         }
+    },
+    "detect": {
+        "probes": [
+            {
+                "registerType": "holdingRegs",
+                "address": 35011,
+                "type": "string",
+                "len": 5,
+                "startsWith": "GW"
+            }
+        ],
+        "note": "Model name at 35011 (e.g. 'GW10K-ET')"
     }
 }

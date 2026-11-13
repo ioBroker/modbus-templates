@@ -1,0 +1,20 @@
+{
+    "detect": {
+        "probes": [
+            {
+                "registerType": "holdingRegs",
+                "address": 8192,
+                "type": "uint16",
+                "equals": 21043
+            },
+            {
+                "registerType": "holdingRegs",
+                "address": 8196,
+                "type": "string",
+                "len": 8,
+                "startsWith": "KOSTAL"
+            }
+        ],
+        "note": "KSEM PnP registers: ManufacturerID 0x5233 (TQ) at 8192, vendor name at 8196"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "detect": {
+        "probes": [
+            {
+                "registerType": "holdingRegs",
+                "address": 768,
+                "type": "string",
+                "len": 16,
+                "startsWith": "PLENTICORE"
+            }
+        ],
+        "note": "Product name at 0x300 (e.g. 'PLENTICORE plus'); needs the byte order 'big-endian (ABCD) Sunspec' as the template. PIKO IQ is not detected"
+    }
+}
