@@ -110,6 +110,20 @@
       "category": "Energiezaehler",
       "name": "EASTRON",
       "readme": "Energiezaehler/EASTRON/README.md",
+      "detect": {
+        "probes": [
+          {
+            "registerType": "holdingRegs",
+            "address": 64514,
+            "type": "uint16",
+            "oneOf": [
+              135,
+              137
+            ]
+          }
+        ],
+        "note": "Eastron meter code (holding register FC02h): 135 (0x0087) SDM72D v2, 137 (0x0089) SDM72D-M v2; the SDM630 V3 of this template has no known code yet"
+      },
       "files": [
         {
           "path": "Energiezaehler/EASTRON/Eastron SDM72dm-v2/Sdm72dm-v2.tsv",
@@ -173,6 +187,20 @@
       "category": "Energiezaehler",
       "name": "Eastron SDM630",
       "readme": "Energiezaehler/Eastron SDM630/README.md",
+      "detect": {
+        "probes": [
+          {
+            "registerType": "holdingRegs",
+            "address": 64514,
+            "type": "uint16",
+            "oneOf": [
+              112,
+              121
+            ]
+          }
+        ],
+        "note": "Eastron meter code (holding register FC02h): 112 (0x0070) SDM630 Modbus V2, 121 (0x0079) SDM630MCT-2T"
+      },
       "files": [
         {
           "path": "Energiezaehler/Eastron SDM630/input-registers.tsv",
@@ -221,6 +249,40 @@
       "category": "Energiezaehler",
       "name": "Fronius Smart Meter",
       "readme": "Energiezaehler/Fronius Smart Meter/README.md",
+      "detect": {
+        "probes": [
+          {
+            "registerType": "holdingRegs",
+            "address": 40000,
+            "type": "string",
+            "len": 2,
+            "equals": "SunS"
+          },
+          {
+            "registerType": "holdingRegs",
+            "address": 40004,
+            "type": "string",
+            "len": 16,
+            "startsWith": "Fronius"
+          },
+          {
+            "registerType": "holdingRegs",
+            "address": 40069,
+            "type": "uint16",
+            "oneOf": [
+              201,
+              202,
+              203,
+              204,
+              211,
+              212,
+              213,
+              214
+            ]
+          }
+        ],
+        "note": "SunSpec: 'SunS' at 40000, manufacturer at 40004, meter model 201-204 (integer) or 211-214 (float) at 40069"
+      },
       "files": [
         {
           "path": "Energiezaehler/Fronius Smart Meter/holding-registers.tsv",
@@ -237,6 +299,24 @@
       "category": "Energiezaehler",
       "name": "Kostal KSEM",
       "readme": "Energiezaehler/Kostal KSEM/README.md",
+      "detect": {
+        "probes": [
+          {
+            "registerType": "holdingRegs",
+            "address": 8192,
+            "type": "uint16",
+            "equals": 21043
+          },
+          {
+            "registerType": "holdingRegs",
+            "address": 8196,
+            "type": "string",
+            "len": 8,
+            "startsWith": "KOSTAL"
+          }
+        ],
+        "note": "KSEM PnP registers: ManufacturerID 0x5233 (TQ) at 8192, vendor name at 8196"
+      },
       "files": [
         {
           "path": "Energiezaehler/Kostal KSEM/holding-registers.tsv",
@@ -757,9 +837,22 @@
             "type": "string",
             "len": 16,
             "startsWith": "Fronius"
+          },
+          {
+            "registerType": "holdingRegs",
+            "address": 40069,
+            "type": "uint16",
+            "oneOf": [
+              101,
+              102,
+              103,
+              111,
+              112,
+              113
+            ]
           }
         ],
-        "note": "SunSpec common model: 'SunS' at 40000, manufacturer at 40004"
+        "note": "SunSpec: 'SunS' at 40000, manufacturer at 40004, inverter model 101-103 (integer) or 111-113 (float) at 40069"
       },
       "files": [
         {
@@ -782,6 +875,18 @@
       "name": "GoodWe",
       "manufacturer": "GoodWe",
       "description": "Addresses as in the GoodWe Modbus protocol for energy storage inverters (file names show the address range of the data sheet)",
+      "detect": {
+        "probes": [
+          {
+            "registerType": "holdingRegs",
+            "address": 35011,
+            "type": "string",
+            "len": 5,
+            "startsWith": "GW"
+          }
+        ],
+        "note": "Model name at 35011 (e.g. 'GW10K-ET')"
+      },
       "files": [
         {
           "path": "PV-Wechselrichter/GoodWe/Modbus Protokol für Energy Storage Inverter/1 Hybrid Inverter Series/10400-10485 Parallel System (Seite 8-10).tsv",
@@ -1218,6 +1323,18 @@
       "id": "PV-Wechselrichter/Kostal",
       "category": "PV-Wechselrichter",
       "name": "Kostal",
+      "detect": {
+        "probes": [
+          {
+            "registerType": "holdingRegs",
+            "address": 768,
+            "type": "string",
+            "len": 16,
+            "startsWith": "PLENTICORE"
+          }
+        ],
+        "note": "Product name at 0x300 (e.g. 'PLENTICORE plus'); needs the byte order 'big-endian (ABCD) Sunspec' as the template. PIKO IQ is not detected"
+      },
       "files": [
         {
           "path": "PV-Wechselrichter/Kostal/holding_register.txt",
@@ -1503,6 +1620,18 @@
       "category": "Wallbox",
       "name": "Cfos",
       "readme": "Wallbox/Cfos/README.md",
+      "detect": {
+        "probes": [
+          {
+            "registerType": "holdingRegs",
+            "address": 8016,
+            "type": "string",
+            "len": 16,
+            "startsWith": "cFos"
+          }
+        ],
+        "note": "Product name at 8016 ('cFos Power Brain Controller')"
+      },
       "files": [
         {
           "path": "Wallbox/Cfos/holding-registers.tsv",
