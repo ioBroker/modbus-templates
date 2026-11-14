@@ -1,5 +1,7 @@
 _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale	sanitize	sanitizeAction	minValidValue	maxValidValue
 10000	Serial_Number	Inverter serial number		string	8	1	0		value		true	false	false	false		keepLastValid		
+10008	Equipment_Info	Equipment info (raw)		rawhex	1	1	0		value		true	false	false	false	false	keepLastValid		
+10011	Firmware_Version	Firmware version (raw bytes)		rawhex	4	1	0		value		true	false	false	false	false	keepLastValid		
 10105	Inverter_Status	Running state: 0=wait for grid, 1=self-check, 2=on-grid, 3=fault, 4=firmware update, 5=off-grid		uint16be	1	1	0		value		true	false	false	false		keepLastValid		
 10110	Operation_Flags	Reasons for standby/off-grid/derating (bit field, see README)		uint32be	2	1	0		value		true	false	false	false		keepLastValid		
 10112	Fault_Flag1	Grid/PV faults (bit field, see README)		uint32be	2	1	0		value		true	false	false	false		keepLastValid		
