@@ -1,0 +1,9 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale	sanitize	sanitizeAction	minValidValue	maxValidValue
+32007	Battery_Rated_Capacity	Battery rated capacity (BMS firmware V27.52.3.0 or newer)	Wh	uint32be	2	1	0		value		true	false	false	false		keepLastValid		
+50207	EMS_Battery_Power	RW: EMS battery power set point, negative = charge, positive = discharge (only in EMS battery control mode 771, see README)	kW	int16be	1	0.01	0		level		true	false	false	false		keepLastValid		
+50208	EMS_Max_Grid_Injection	RW: EMS upper limit of inverter AC power (max. feed-in)	kW	int16be	1	0.01	0		level		true	false	false	false		keepLastValid		
+50209	EMS_Max_Grid_Purchase	RW: EMS lower limit of inverter AC power, negative = max. grid purchase	kW	int16be	1	0.01	0		level		true	false	false	false		keepLastValid		
+50210	EMS_Output_Priority	RW: EMS output priority 0=PV first, 1=battery first		uint16be	1	1	0		level		true	false	false	false		keepLastValid		
+52506	Charge_Cutoff_SOC	RW: battery charge cutoff SOC (10.0-98.0, newer firmware only)	%	uint16be	1	0.1	0		level		true	false	false	false		keepLastValid		
+52601	Charge_Current_Limit	RW: max. battery charge current (newer firmware only)	A	uint16be	1	0.1	0		level		true	false	false	false		keepLastValid		
+52603	Discharge_Current_Limit	RW: max. battery discharge current (newer firmware only)	A	uint16be	1	0.1	0		level		true	false	false	false		keepLastValid		

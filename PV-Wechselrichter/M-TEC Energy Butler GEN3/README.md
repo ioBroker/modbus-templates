@@ -84,6 +84,15 @@ If `RTU over TCP` with ID 252 gets no answer, try `TCP` with device ID `255` (us
 
 Import `holding-registers.tsv` here (import button in the table toolbar). Leave the other register tabs empty.
 
+| file | content | use it if |
+| --- | --- | --- |
+| `holding-registers.tsv` | status, power, energy, battery values and the basic writable settings | always |
+| `holding-registers-addon.tsv` | 8 extra registers: the [newer firmware only](#newer-firmware-only) registers and the EMS battery control set points (`50207`-`50210`, see [use case 6](#6-advanced-battery-power-control-by-your-own-ems)) | optional, on top of `holding-registers.tsv`, if your firmware supports them and you want to use use cases 3.1, 3.2 or 6 |
+
+Check whether the import in your adapter version adds to or replaces the existing table before importing the addon file. If it replaces, add the rows manually or merge both files into one before importing.
+
+If a register block stops updating after adding the addon registers, your firmware doesn't support them. Remove them again.
+
 ## Sign conventions
 
 | register | positive | negative |
@@ -123,20 +132,20 @@ Working mode (`50000`):
 | 771 | EMS battery control |
 | 772 | EMS off-grid mode |
 
-The EMS set points (`50202`-`50211`) only take effect in the EMS modes and are not in the template. See [use case 6](#6-advanced-battery-power-control-by-your-own-ems) for how to add and use them.
+The EMS set points (`50202`-`50211`) only take effect in the EMS modes. The battery control set points `50207`-`50210` are in `holding-registers-addon.tsv`, the others are not in the templates. See [use case 6](#6-advanced-battery-power-control-by-your-own-ems).
 
 Grid protection parameters (`28000`-`28102`) and the safety code (`25000`) are deliberately not included. Changing them can violate your grid connection rules.
 
 ### Newer firmware only
 
-These registers exist only on newer firmware. On older devices, reading them can make the whole register block fail, so they are not in the template. Add them manually if your device supports them:
+These registers exist only on newer firmware. On older devices, reading them can make the whole register block fail, so they are only in `holding-registers-addon.tsv`, not in `holding-registers.tsv`:
 
 | register | name | type | factor | unit |
 | --- | --- | --- | --- | --- |
-| `52506` | Charge cutoff SOC (RW, 10-98) | uint16be | 0.1 | % |
-| `52601` | Max. charge current (RW) | uint16be | 0.1 | A |
-| `52603` | Max. discharge current (RW) | uint16be | 0.1 | A |
-| `32007` | Battery rated capacity (BMS fw V27.52.3.0+) | uint32be | 1 | Wh |
+| `52506` | Charge_Cutoff_SOC (RW, 10-98) | uint16be | 0.1 | % |
+| `52601` | Charge_Current_Limit (RW) | uint16be | 0.1 | A |
+| `52603` | Discharge_Current_Limit (RW) | uint16be | 0.1 | A |
+| `32007` | Battery_Rated_Capacity (BMS fw V27.52.3.0+) | uint32be | 1 | Wh |
 
 ## Use cases for writable registers
 
@@ -287,7 +296,7 @@ Useful to spread charging over the day: the battery doesn't fill up by noon, and
 
 The inverter has no charge limit in watts that works in normal operation. It does have a **charge current limit in ampere**, which works in General mode, so self consumption keeps running. Convert watts to ampere with the battery voltage: `I = P / U_battery`.
 
-These registers only exist on newer firmware (see [Newer firmware only](#newer-firmware-only)). Add them in the Holding registers tab:
+These registers only exist on newer firmware (see [Newer firmware only](#newer-firmware-only)) and are included in `holding-registers-addon.tsv`:
 
 | address | name | type | len | factor | unit | role |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -330,7 +339,7 @@ M-TEC batteries are high voltage, so the current values are small: 1 kW at 400 V
 
 ### 3.2 Force battery charge with a fixed power (e.g. 2 kW)
 
-For charging from the grid in cheap hours with a defined power, instead of the uncontrolled charging of UPS mode. This uses the EMS battery control mode. Add the registers from [use case 6](#6-advanced-battery-power-control-by-your-own-ems) first.
+For charging from the grid in cheap hours with a defined power, instead of the uncontrolled charging of UPS mode. This uses the EMS battery control mode and needs the registers from [use case 6](#6-advanced-battery-power-control-by-your-own-ems), which are in `holding-registers-addon.tsv`.
 
 | register | value | meaning |
 | --- | --- | --- |
@@ -421,7 +430,7 @@ Limits how much power is drawn from the grid, e.g. for a grid-fee model that cha
 
 ### 6. Advanced: battery power control by your own EMS
 
-For full control (e.g. "charge with exactly 2 kW now"), the inverter has an EMS battery control mode. These registers are **not in the template**. Add them yourself in the Holding registers tab:
+For full control (e.g. "charge with exactly 2 kW now"), the inverter has an EMS battery control mode. These registers are only in `holding-registers-addon.tsv` (not in `holding-registers.tsv`):
 
 | address | name | type | factor | unit | meaning |
 | --- | --- | --- | --- | --- | --- |
