@@ -1,0 +1,66 @@
+_address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	cw	isScale
+30000	Modell	Inverter model, e.g. H3-10.0-E		string	16	1	0		state		true			
+30100	Modbus Protokoll Version	Modbus protocol version		uint16be	1	1	0		value		true			
+31000	PV1 Spannung	PV1 voltage	V	uint16be	1	0.1	0		value.voltage		true			
+31001	PV1 Strom	PV1 current	A	uint16be	1	0.1	0		value.current		true			
+31002	PV1 Leistung	PV1 power	W	uint16be	1	1	0		value.power		true			
+31003	PV2 Spannung	PV2 voltage	V	uint16be	1	0.1	0		value.voltage		true			
+31004	PV2 Strom	PV2 current	A	uint16be	1	0.1	0		value.current		true			
+31005	PV2 Leistung	PV2 power	W	uint16be	1	1	0		value.power		true			
+31006	Netzspannung L1	Grid voltage R	V	uint16be	1	0.1	0		value.voltage		true			
+31007	Netzspannung L2	Grid voltage S	V	uint16be	1	0.1	0		value.voltage		true			
+31008	Netzspannung L3	Grid voltage T	V	uint16be	1	0.1	0		value.voltage		true			
+31009	Wechselrichter Strom L1	Inverter current R	A	int16be	1	0.1	0		value.current		true			
+31010	Wechselrichter Strom L2	Inverter current S	A	int16be	1	0.1	0		value.current		true			
+31011	Wechselrichter Strom L3	Inverter current T	A	int16be	1	0.1	0		value.current		true			
+31012	Wechselrichter Leistung L1	Inverter power R	W	int16be	1	1	0		value.power		true			
+31013	Wechselrichter Leistung L2	Inverter power S	W	int16be	1	1	0		value.power		true			
+31014	Wechselrichter Leistung L3	Inverter power T	W	int16be	1	1	0		value.power		true			
+31015	Netzfrequenz	Grid frequency	Hz	uint16be	1	0.01	0		value.frequency		true			
+31016	Notstrom Spannung L1	EPS voltage R	V	uint16be	1	0.1	0		value.voltage		true			
+31017	Notstrom Spannung L2	EPS voltage S	V	uint16be	1	0.1	0		value.voltage		true			
+31018	Notstrom Spannung L3	EPS voltage T	V	uint16be	1	0.1	0		value.voltage		true			
+31019	Notstrom Strom L1	EPS current R	A	int16be	1	0.1	0		value.current		true			
+31020	Notstrom Strom L2	EPS current S	A	int16be	1	0.1	0		value.current		true			
+31021	Notstrom Strom L3	EPS current T	A	int16be	1	0.1	0		value.current		true			
+31022	Notstrom Leistung L1	EPS power R	W	int16be	1	1	0		value.power		true			
+31023	Notstrom Leistung L2	EPS power S	W	int16be	1	1	0		value.power		true			
+31024	Notstrom Leistung L3	EPS power T	W	int16be	1	1	0		value.power		true			
+31025	Notstrom Frequenz	EPS frequency	Hz	uint16be	1	0.01	0		value.frequency		true			
+31026	Zähler Leistung L1	Meter power R: positive = feed-in, negative = grid consumption	W	int16be	1	1	0		value.power		true			
+31027	Zähler Leistung L2	Meter power S: positive = feed-in, negative = grid consumption	W	int16be	1	1	0		value.power		true			
+31028	Zähler Leistung L3	Meter power T: positive = feed-in, negative = grid consumption	W	int16be	1	1	0		value.power		true			
+31029	Last Leistung L1	Load power R	W	int16be	1	1	0		value.power		true			
+31030	Last Leistung L2	Load power S	W	int16be	1	1	0		value.power		true			
+31031	Last Leistung L3	Load power T	W	int16be	1	1	0		value.power		true			
+31032	Wechselrichter Temperatur	Inverter temperature	°C	int16be	1	0.1	0		value.temperature		true			
+31033	Interne Temperatur	Internal (ambient) temperature	°C	int16be	1	0.1	0		value.temperature		true			
+31034	Batterie Spannung	Battery voltage	V	uint16be	1	0.1	0		value.voltage		true			
+31035	Batterie Strom	Battery current	A	int16be	1	0.1	0		value.current		true			
+31036	Batterie Leistung	Battery power: positive = discharging, negative = charging	W	int16be	1	1	0		value.power		true			
+31037	Batterie Temperatur	Battery temperature	°C	int16be	1	0.1	0		value.temperature		true			
+31038	Batterie SoC	Battery state of charge	%	uint16be	1	1	0		value.battery		true			
+31039	Maximaler Ladestrom	Maximum charge current (BMS)	A	uint16be	1	0.1	0		value.current		true			
+31040	Maximaler Entladestrom	Maximum discharge current (BMS)	A	uint16be	1	0.1	0		value.current		true			
+31041	Wechselrichter Zustand	Inverter state: 1 = self-check, 2 = on-grid, 3 = EPS, 4/5 = fault, 8 = idle		uint16be	1	1	0		value		true			
+31042	BMS Verbindungsstatus	BMS connect state		uint16be	1	1	0		value		true			
+31044	Fehlercode 1	Inverter fault 1 code		uint16be	1	1	0		value		true			
+31045	Fehlercode 2	Inverter fault 2 code		uint16be	1	1	0		value		true			
+31046	Fehlercode 3	Inverter fault 3 code		uint16be	1	1	0		value		true			
+32000	PV-Ertrag gesamt	Total PV energy	kWh	uint32be	2	0.1	0		value.energy.produced		true			
+32002	PV-Ertrag heute	Today PV energy	kWh	uint16be	1	0.1	0		value.energy.produced		true			
+32003	Batterie Ladeenergie gesamt	Total battery charge energy	kWh	uint32be	2	0.1	0		value.energy		true			
+32005	Batterie Ladeenergie heute	Today battery charge energy	kWh	uint16be	1	0.1	0		value.energy		true			
+32006	Batterie Entladeenergie gesamt	Total battery discharge energy	kWh	uint32be	2	0.1	0		value.energy		true			
+32008	Batterie Entladeenergie heute	Today battery discharge energy	kWh	uint16be	1	0.1	0		value.energy		true			
+32009	Einspeisung gesamt	Total feed-in energy	kWh	uint32be	2	0.1	0		value.energy.produced		true			
+32011	Einspeisung heute	Today feed-in energy	kWh	uint16be	1	0.1	0		value.energy.produced		true			
+32012	Netzbezug gesamt	Total grid consumption energy	kWh	uint32be	2	0.1	0		value.energy.consumed		true			
+32014	Netzbezug heute	Today grid consumption energy	kWh	uint16be	1	0.1	0		value.energy.consumed		true			
+32015	Ausgangsenergie gesamt	Total output energy (yield)	kWh	uint32be	2	0.1	0		value.energy.produced		true			
+32017	Ausgangsenergie heute	Today output energy (yield)	kWh	uint16be	1	0.1	0		value.energy.produced		true			
+32018	Eingangsenergie gesamt	Total input energy	kWh	uint32be	2	0.1	0		value.energy.consumed		true			
+32020	Eingangsenergie heute	Today input energy	kWh	uint16be	1	0.1	0		value.energy.consumed		true			
+32021	Verbrauch gesamt	Total load energy	kWh	uint32be	2	0.1	0		value.energy.consumed		true			
+32023	Verbrauch heute	Today load energy	kWh	uint16be	1	0.1	0		value.energy.consumed		true			
+41000	Arbeitsmodus	Work mode (read/write): 0 = Self Use, 1 = Feed-in First, 2 = Back-up, 4 = Peak Shaving		uint16be	1	1	0		level		true			
