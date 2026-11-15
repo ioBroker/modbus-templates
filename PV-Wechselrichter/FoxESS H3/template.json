@@ -1,0 +1,14 @@
+{
+    "name": "FoxESS H3",
+    "manufacturer": "FoxESS",
+    "models": ["H3-5.0-E", "H3-6.0-E", "H3-8.0-E", "H3-10.0-E", "H3-12.0-E", "AC3", "AIO-H3"],
+    "description": "Three phase hybrid inverter, Modbus RTU (RS485) or Modbus TCP via RS485 gateway",
+    "files": {
+        "holding-registers.tsv": { "registerType": "holdingRegs", "addressing": "raw" }
+    },
+    "detect": {
+        "probes": [{ "registerType": "holdingRegs", "address": 30000, "type": "string", "len": 16, "startsWith": "H3-" }],
+        "weak": true,
+        "note": "Holding 30000-30015 model string (e.g. H3-10.0-E), as in foxess_modbus. H3-Smart and H3-Pro also start with H3- but use the 39xxx registers"
+    }
+}
