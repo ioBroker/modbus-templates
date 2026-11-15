@@ -20,9 +20,9 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 31016	Notstrom Spannung L1	EPS voltage R	V	uint16be	1	0.1	0		value.voltage		true			
 31017	Notstrom Spannung L2	EPS voltage S	V	uint16be	1	0.1	0		value.voltage		true			
 31018	Notstrom Spannung L3	EPS voltage T	V	uint16be	1	0.1	0		value.voltage		true			
-31019	Notstrom Strom L1	EPS current R	A	uint16be	1	0.1	0		value.current		true			
-31020	Notstrom Strom L2	EPS current S	A	uint16be	1	0.1	0		value.current		true			
-31021	Notstrom Strom L3	EPS current T	A	uint16be	1	0.1	0		value.current		true			
+31019	Notstrom Strom L1	EPS current R	A	int16be	1	0.1	0		value.current		true			
+31020	Notstrom Strom L2	EPS current S	A	int16be	1	0.1	0		value.current		true			
+31021	Notstrom Strom L3	EPS current T	A	int16be	1	0.1	0		value.current		true			
 31022	Notstrom Leistung L1	EPS power R	W	int16be	1	1	0		value.power		true			
 31023	Notstrom Leistung L2	EPS power S	W	int16be	1	1	0		value.power		true			
 31024	Notstrom Leistung L3	EPS power T	W	int16be	1	1	0		value.power		true			
@@ -40,10 +40,13 @@ _address	name	description	unit	type	len	factor	offset	formula	role	room	poll	wp	
 31036	Batterie Leistung	Battery power: positive = discharging, negative = charging	W	int16be	1	1	0		value.power		true			
 31037	Batterie Temperatur	Battery temperature	°C	int16be	1	0.1	0		value.temperature		true			
 31038	Batterie SoC	Battery state of charge	%	uint16be	1	1	0		value.battery		true			
-31039	Maximaler Ladestrom	Maximum charge current (BMS), factor not verified	A	uint16be	1	0.1	0		value.current		true			
-31040	Maximaler Entladestrom	Maximum discharge current (BMS), factor not verified	A	uint16be	1	0.1	0		value.current		true			
-31041	Wechselrichter Zustand	Inverter state code		uint16be	1	1	0		value		true			
-31042	Verbindungsstatus	Connect state (BMS / meter)		uint16be	1	1	0		value		true			
+31039	Maximaler Ladestrom	Maximum charge current (BMS)	A	uint16be	1	0.1	0		value.current		true			
+31040	Maximaler Entladestrom	Maximum discharge current (BMS)	A	uint16be	1	0.1	0		value.current		true			
+31041	Wechselrichter Zustand	Inverter state: 1 = self-check, 2 = on-grid, 3 = EPS, 4/5 = fault, 8 = idle		uint16be	1	1	0		value		true			
+31042	BMS Verbindungsstatus	BMS connect state		uint16be	1	1	0		value		true			
+31044	Fehlercode 1	Inverter fault 1 code		uint16be	1	1	0		value		true			
+31045	Fehlercode 2	Inverter fault 2 code		uint16be	1	1	0		value		true			
+31046	Fehlercode 3	Inverter fault 3 code		uint16be	1	1	0		value		true			
 32000	PV-Ertrag gesamt	Total PV energy	kWh	uint32be	2	0.1	0		value.energy.produced		true			
 32002	PV-Ertrag heute	Today PV energy	kWh	uint16be	1	0.1	0		value.energy.produced		true			
 32003	Batterie Ladeenergie gesamt	Total battery charge energy	kWh	uint32be	2	0.1	0		value.energy		true			
