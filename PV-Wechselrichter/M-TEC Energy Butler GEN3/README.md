@@ -82,14 +82,18 @@ If `RTU over TCP` with ID 252 gets no answer, try `TCP` with device ID `255` (us
 
 ### Tab "Holding registers"
 
-Import `holding-registers.tsv` here (import button in the table toolbar). Leave the other register tabs empty.
+Load the registers from the template library or import `holding-registers.tsv` manually. Leave the other register tabs empty.
 
 | file | content | use it if |
 | --- | --- | --- |
 | `holding-registers.tsv` | status, power, energy, battery values and the basic writable settings | always |
 | `holding-registers-addon.tsv` | 8 extra registers: the [newer firmware only](#newer-firmware-only) registers and the EMS battery control set points (`50207`-`50210`, see [use case 6](#6-advanced-battery-power-control-by-your-own-ems)) | optional, on top of `holding-registers.tsv`, if your firmware supports them and you want to use use cases 3.1, 3.2 or 6 |
 
-Check whether the import in your adapter version adds to or replaces the existing table before importing the addon file. If it replaces, add the rows manually or merge both files into one before importing.
+> **Older firmware: untick the addon file.** The template dialog preselects all files of a device, including
+> `holding-registers-addon.tsv` ("Addon: newer firmware / EMS"). If your firmware doesn't support these registers,
+> untick it before importing, otherwise the whole register block can fail.
+
+The template dialog uses "add" by default and merges by address and name. So you can import `holding-registers.tsv` first and the addon file later on top of it: existing rows are kept, the addon rows are added.
 
 If a register block stops updating after adding the addon registers, your firmware doesn't support them. Remove them again.
 
