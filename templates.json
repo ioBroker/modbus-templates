@@ -1421,10 +1421,11 @@
       "files": [
         {
           "path": "PV-Wechselrichter/M-TEC Energy Butler GEN3/holding-registers-addon.tsv",
-          "title": "Addon: newer firmware / EMS (optional, untick on older firmware)",
+          "title": "Addon: newer firmware / EMS (not for older firmware)",
           "registerType": "holdingRegs",
           "registers": 8,
-          "addressing": "raw"
+          "addressing": "raw",
+          "optional": true
         },
         {
           "path": "PV-Wechselrichter/M-TEC Energy Butler GEN3/holding-registers.tsv",
