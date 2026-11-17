@@ -1,0 +1,16 @@
+{
+    "name": "M-TEC Energy Butler GEN3",
+    "manufacturer": "M-TEC",
+    "models": ["Energy Butler GEN3"],
+    "description": "Hybrid inverter with battery (Solinteg GEN3 platform), Modbus TCP / RS485",
+    "files": {
+        "holding-registers.tsv": {
+            "title": "Basic registers (all firmware versions)",
+            "addressing": "raw"
+        },
+        "holding-registers-addon.tsv": {
+            "title": "Addon: newer firmware / EMS (optional, untick on older firmware)",
+            "addressing": "raw"
+        }
+    }
+}
