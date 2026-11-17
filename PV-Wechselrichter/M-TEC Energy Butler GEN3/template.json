@@ -9,8 +9,9 @@
             "addressing": "raw"
         },
         "holding-registers-addon.tsv": {
-            "title": "Addon: newer firmware / EMS (optional, untick on older firmware)",
-            "addressing": "raw"
+            "title": "Addon: newer firmware / EMS (not for older firmware)",
+            "addressing": "raw",
+            "optional": true
         }
     }
 }
