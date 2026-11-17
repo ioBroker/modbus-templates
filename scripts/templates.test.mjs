@@ -79,6 +79,14 @@ test('directAddresses is only kept for bit registers with alias addresses', () =
     assert.equal(r4.kind, 'invalid');
 });
 
+test('optional files are marked in the manifests', () => {
+    const { manifests, issues } = loadAllManifests();
+    assert.deepEqual(issues.filter(i => i.level === 'error' && i.message.includes('optional')), []);
+    const mtec = manifests['PV-Wechselrichter/M-TEC Energy Butler GEN3'];
+    assert.equal(mtec.files['holding-registers-addon.tsv'].optional, true);
+    assert.equal(mtec.files['holding-registers.tsv'].optional, undefined);
+});
+
 test('detect block', async () => {
     const { validateDetect } = await import('./templates.mjs');
     const sunspec = {

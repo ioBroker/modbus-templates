@@ -77,6 +77,18 @@ If it is missing for such a file, the adapter asks the user.
 }
 ```
 
+`optional` (`true`) marks a file that does not fit every device, e.g. registers that only exist with a newer firmware.
+The template dialog of the adapter does not preselect such a file; the user ticks it if the device has these registers.
+
+```json
+{
+    "files": {
+        "holding-registers.tsv": { "title": "Basic registers" },
+        "holding-registers-addon.tsv": { "title": "Newer firmware", "optional": true }
+    }
+}
+```
+
 ### Optional: device detection
 
 With a `detect` block in `template.json` the adapter can recognize the device ("Detect device" in the template

@@ -887,7 +887,7 @@ function loadManifests(files, issues) {
                 issues.push({ file: f, level: 'error', message: `files: "${file}" does not exist` });
             }
             for (const key of Object.keys(entry)) {
-                if (!['registerType', 'title', 'addressing', 'directAddresses'].includes(key)) {
+                if (!['registerType', 'title', 'addressing', 'directAddresses', 'optional'].includes(key)) {
                     issues.push({ file: f, level: 'warning', message: `files: "${file}" has unknown key "${key}"` });
                 }
             }
@@ -897,6 +897,9 @@ function loadManifests(files, issues) {
                     level: 'error',
                     message: `files: "${file}" has addressing "${entry.addressing}", must be "raw" or "alias"`,
                 });
+            }
+            if (entry.optional !== undefined && typeof entry.optional !== 'boolean') {
+                issues.push({ file: f, level: 'error', message: `files: "${file}" has optional "${entry.optional}", must be true or false` });
             }
             if (entry.registerType && !REGISTER_TYPES[entry.registerType]) {
                 issues.push({
@@ -1047,6 +1050,7 @@ function buildIndex(scanResult) {
             ...(r.addressing ? { addressing: r.addressing } : {}),
             ...(r.directAddresses !== undefined ? { directAddresses: r.directAddresses } : {}),
             ...(deviceIds.length ? { deviceIds } : {}),
+            ...(entry?.optional === true ? { optional: true } : {}),
             ...(r.issues.some(i => i.level === 'warning') ? { warnings: r.issues.filter(i => i.level === 'warning').length } : {}),
         });
     }
